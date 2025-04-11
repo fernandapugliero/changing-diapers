@@ -25,35 +25,12 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    table {
+    iframe {
       width: 100%;
-      border-collapse: collapse;
-      background: white;
+      height: 600px;
+      border: 1px solid #ccc;
+      background: transparent;
       border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    thead {
-      background: #f0f0f0;
-    }
-    th, td {
-      padding: 12px 16px;
-      text-align: left;
-      vertical-align: top;
-    }
-    tr:nth-child(even) {
-      background: #fafafa;
-    }
-    a.site-link {
-      color: #0070f3;
-      text-decoration: none;
-    }
-    a.site-link:hover {
-      text-decoration: underline;
-    }
-    ul {
-      margin: 4px 0;
-      padding-left: 16px;
     }
   </style>
 </head>
@@ -64,46 +41,10 @@
     <a href="submit.html">Submit Info</a>
   </nav>
   <h1>View Full List</h1>
-  <table id="places-table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>City</th>
-        <th>Type</th>
-        <th>Changing Table Location</th>
-        <th>Supplies Available</th>
-        <th>Condition</th>
-        <th>Room for Stroller</th>
-        <th>Site</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-  <script>
-    fetch('places.json')
-      .then(res => res.json())
-      .then(data => {
-        const tbody = document.querySelector('#places-table tbody');
-        data
-          .filter(place => place.name && place.name.trim() !== "")
-          .forEach(place => {
-            const siteLink = place.site ? \`<a class="site-link" href="\${place.site}" target="_blank">Visit</a>\` : '';
-            const supplies = Array.isArray(place.supplies_available) ? place.supplies_available.join(", ") : '';
-            const conditions = Array.isArray(place.conditions) ? place.conditions.join(", ") : '';
-            const row = document.createElement('tr');
-            row.innerHTML = `
-              <td>\${place.name}</td>
-              <td>\${place.city || ''}</td>
-              <td>\${place.type || ''}</td>
-              <td>\${place.changing_table_location || ''}</td>
-              <td>\${supplies}</td>
-              <td>\${conditions}</td>
-              <td>\${place.room_for_stroller ? 'Yes' : 'No'}</td>
-              <td>\${siteLink}</td>
-            `;
-            tbody.appendChild(row);
-          });
-      });
-  </script>
+  <iframe class="airtable-embed"
+    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr7pWWZ2QUP1t5zT?viewControls=on"
+    frameborder="0"
+    onmousewheel=""
+    style="background: transparent; border: 1px solid #ccc;"></iframe>
 </body>
 </html>
