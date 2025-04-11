@@ -40,13 +40,15 @@ while url:
         lat = fields.get("Latitude")
         lon = fields.get("Longitude")
         address = fields.get("Full Address", "")
+        city = fields.get("City", "")
         if (not lat or not lon) and address:
-            lat, lon = geocode_address(f"{address}, Berlin, Germany")
+            search_address = f"{address}, {city}, Germany"
+            lat, lon = geocode_address(search_address)
             time.sleep(1)  # respeitar limite da API gratuita
 
         place = {
             "name": fields.get("Name", ""),
-            "city": fields.get("City", ""),
+            "city": city,
             "neighborhood": fields.get("Neighborhood", ""),
             "address": address,
             "latitude": lat,
