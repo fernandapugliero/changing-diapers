@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "name": "Zenner",
+    "city": "Berlin",
+    "neighborhood": "Treptow - Köpenick",
+    "address": "Alt Treptow 15",
+    "latitude": 52.4872491,
+    "longitude": 13.4774693,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://zenner.berlin/"
+  },
+  {
+    "name": "",
+    "city": "",
+    "neighborhood": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "type": "",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": ""
+  },
+  {
+    "name": "",
+    "city": "",
+    "neighborhood": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "type": "",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": ""
+  },
+  {
+    "name": "",
+    "city": "",
+    "neighborhood": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "type": "",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": ""
+  }
+]
