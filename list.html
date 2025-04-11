@@ -39,6 +39,7 @@
     th, td {
       padding: 12px 16px;
       text-align: left;
+      vertical-align: top;
     }
     tr:nth-child(even) {
       background: #fafafa;
@@ -50,29 +51,9 @@
     a.site-link:hover {
       text-decoration: underline;
     }
-
-    @media (max-width: 768px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-      thead {
-        display: none;
-      }
-      tr {
-        margin-bottom: 1rem;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 1rem;
-      }
-      td {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px 0;
-      }
-      td::before {
-        content: attr(data-label);
-        font-weight: 600;
-        color: #555;
-      }
+    ul {
+      margin: 4px 0;
+      padding-left: 16px;
     }
   </style>
 </head>
@@ -88,10 +69,12 @@
       <tr>
         <th>Name</th>
         <th>City</th>
-        <th>Neighborhood</th>
         <th>Type</th>
+        <th>Changing Table Location</th>
+        <th>Supplies Available</th>
+        <th>Condition</th>
+        <th>Room for Stroller</th>
         <th>Site</th>
-        <th>Changing Table</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -104,15 +87,19 @@
         data
           .filter(place => place.name && place.name.trim() !== "")
           .forEach(place => {
-            const siteLink = place.site ? \`<a class="site-link" href="\${place.site}" target="_blank">link</a>\` : '';
+            const siteLink = place.site ? \`<a class="site-link" href="\${place.site}" target="_blank">Visit</a>\` : '';
+            const supplies = Array.isArray(place.supplies_available) ? place.supplies_available.join(", ") : '';
+            const conditions = Array.isArray(place.conditions) ? place.conditions.join(", ") : '';
             const row = document.createElement('tr');
             row.innerHTML = `
-              <td data-label="Name">\${place.name}</td>
-              <td data-label="City">\${place.city || ''}</td>
-              <td data-label="Neighborhood">\${place.neighborhood || ''}</td>
-              <td data-label="Type">\${place.type || ''}</td>
-              <td data-label="Site">\${siteLink}</td>
-              <td data-label="Changing Table">\${place.changing_table_location || ''}</td>
+              <td>\${place.name}</td>
+              <td>\${place.city || ''}</td>
+              <td>\${place.type || ''}</td>
+              <td>\${place.changing_table_location || ''}</td>
+              <td>\${supplies}</td>
+              <td>\${conditions}</td>
+              <td>\${place.room_for_stroller ? 'Yes' : 'No'}</td>
+              <td>\${siteLink}</td>
             `;
             tbody.appendChild(row);
           });
