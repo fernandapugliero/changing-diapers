@@ -1,7 +1,6 @@
 import requests
 import json
 import os
-import time
 
 AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
 BASE_ID = "appjWF7WnC8DRWaXM"
@@ -10,26 +9,9 @@ HEADERS = {
     "Authorization": f"Bearer {AIRTABLE_TOKEN}"
 }
 
-def geocode_address(address):
-    try:
-        url = "https://nominatim.openstreetmap.org/search"
-        params = {
-            "q": address,
-            "format": "json",
-            "limit": 1
-        }
-        res = requests.get(url, params=params, headers={"User-Agent": "changing-diapers-mvp"})
-        data = res.json()
-        if data:
-            return float(data[0]["lat"]), float(data[0]["lon"])
-        else:
-            print(f"[!] No result for address: {address}")
-    except Exception as e:
-        print(f"[!] Error geocoding address '{address}':", e)
-    return None, None
-
 url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
 params = {"pageSize": 100}
+
 places = []
 
 while url:
@@ -37,22 +19,13 @@ while url:
     data = res.json()
     for record in data.get("records", []):
         fields = record.get("fields", {})
-        lat = fields.get("Latitude")
-        lon = fields.get("Longitude")
-        address = fields.get("Full Address", "")
-        city = fields.get("City", "")
-        if (not lat or not lon) and address:
-            search_address = f"{address}, {city}, Germany"
-            lat, lon = geocode_address(search_address)
-            time.sleep(1)  # respeitar limite da API gratuita
-
         place = {
             "name": fields.get("Name", ""),
-            "city": city,
+            "city": fields.get("City", ""),
             "neighborhood": fields.get("Neighborhood", ""),
-            "address": address,
-            "latitude": lat,
-            "longitude": lon,
+            "address": fields.get("Full Address", ""),
+            "latitude": fields.get("Latitude", 0.0),
+            "longitude": fields.get("Longitude", 0.0),
             "type": fields.get("Type", ""),
             "changing_table_location": fields.get("Changing Table Location", ""),
             "supplies_available": fields.get("Supplies Available", []),
