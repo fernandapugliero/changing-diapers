@@ -7,7 +7,7 @@ fetch('places.json')
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Mostrar apenas o registro mais recente por nome
+    // Agrupar por nome e manter só o mais recente
     const grouped = {};
     data.forEach(place => {
       if (!place.name) return;
@@ -24,7 +24,7 @@ fetch('places.json')
     Object.values(grouped).forEach(place => {
       if (!place.latitude || !place.longitude) return;
 
-      const popupContent = `<strong>\${place.name}</strong>`;
+      const popupContent = `<strong>${place.name || 'Unnamed Place'}</strong>`;
 
       L.marker([place.latitude, place.longitude])
         .addTo(map)
