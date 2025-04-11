@@ -4,7 +4,7 @@
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Changing Diapers</title>
+  <title>Changing Diapers: Baby-Friendly Places with Changing Tables in Berlin</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
@@ -12,24 +12,23 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
       padding: 2rem;
       background: #f9f9f9;
       color: #333;
     }
     nav {
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
     nav a {
       margin-right: 20px;
       text-decoration: none;
       font-weight: 600;
-      color: #0070f3;
+      color: inherit;
     }
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
+      text-align: center;
     }
     h2 {
       font-size: 1.1rem;
@@ -37,11 +36,19 @@
       color: #666;
       margin-top: 0;
       margin-bottom: 2rem;
+      text-align: center;
     }
     #map {
       height: 70vh;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: transparent;
     }
   </style>
 
@@ -52,12 +59,9 @@
     <a href="list.html">Full List</a>
     <a href="submit.html">Submit Info</a>
   </nav>
-  <h1>Submit Info</h1>
   <iframe class="airtable-embed"
     src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shrYokXRRXNQJpEWx"
     frameborder="0"
-    width="100%"
-    height="700"
-    style="background: transparent; border: 1px solid #ccc;"></iframe>
+    style="background: transparent; border: 1px solid #ccc;" height="700"></iframe>
 </body>
 </html>
