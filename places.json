@@ -15,6 +15,61 @@
       "Dirty"
     ],
     "room_for_stroller": "Yes",
-    "site": "https://zenner.berlin/"
+    "site": "https://zenner.berlin/",
+    "created_at": "2025-04-11"
+  },
+  {
+    "name": "",
+    "city": "",
+    "neighborhood": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "type": "",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-04-11"
+  },
+  {
+    "name": "Kulturhaus Insel Berlin",
+    "city": "Berlin",
+    "neighborhood": "Treptow - Köpenick",
+    "address": "Alt Treptow 6, 12435 Berlin",
+    "latitude": 52.4867977,
+    "longitude": 13.48092316557658,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.inselberlin.de/",
+    "created_at": "2025-04-11"
+  },
+  {
+    "name": "Vier Ecken",
+    "city": "Berlin",
+    "neighborhood": "Neukölln",
+    "address": "Böhmische Straße 14, 12055 Berlin",
+    "latitude": 52.47424,
+    "longitude": 13.4495345,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "both"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dusty",
+      "Cramped"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://vier-ecken.webflow.io/",
+    "created_at": "2025-04-11"
   }
 ]
