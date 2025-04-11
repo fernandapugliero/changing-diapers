@@ -7,15 +7,16 @@ fetch('places.json')
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Agrupar por nome e manter só o mais recente
+    // Mostrar apenas o registro mais recente por nome
     const grouped = {};
     data.forEach(place => {
       if (!place.name) return;
-      const existing = grouped[place.name];
       const currentDate = new Date(place.created_at || 0);
-      const existingDate = existing ? new Date(existing.created_at || 0) : null;
+      const existingDate = grouped[place.name]
+        ? new Date(grouped[place.name].created_at || 0)
+        : null;
 
-      if (!existing || currentDate > existingDate) {
+      if (!grouped[place.name] || currentDate > existingDate) {
         grouped[place.name] = place;
       }
     });
@@ -23,13 +24,7 @@ fetch('places.json')
     Object.values(grouped).forEach(place => {
       if (!place.latitude || !place.longitude) return;
 
-      const popupContent = \`
-        <strong>\${place.name}</strong><br>
-        <em>\${place.type || ''}</em><br>
-        \${place.address}<br>
-        \${place.city}<br>
-        \${place.site ? '<a href="' + place.site + '" target="_blank">Website</a>' : ''}
-      \`;
+      const popupContent = `<strong>\${place.name}</strong>`;
 
       L.marker([place.latitude, place.longitude])
         .addTo(map)
