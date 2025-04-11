@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Café Legal",
+    "city": "São Paulo",
+    "neighborhood": "Centro",
+    "address": "Rua Exemplo, 123",
+    "type": "cafe",
+    "has_changing_table": "yes",
+    "changing_table_location": "women's bathroom",
+    "supplies_available": ["toilet paper", "diapers"],
+    "conditions": ["clean", "new"],
+    "latitude": -23.561684,
+    "longitude": -46.625378
+  },
+  {
+    "name": "Livraria Bacana",
+    "city": "São Paulo",
+    "neighborhood": "Vila Mariana",
+    "address": "Avenida das Letras, 456",
+    "type": "bookstore",
+    "has_changing_table": "no",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "latitude": -23.564324,
+    "longitude": -46.629472
+  }
+]
