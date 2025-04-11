@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import time
+from datetime import datetime
 
 AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
 BASE_ID = "appjWF7WnC8DRWaXM"
@@ -45,6 +46,8 @@ for record in records:
     lon = fields.get("Longitude")
     address = fields.get("Full Address", "")
     city = fields.get("City", "")
+    created_at = fields.get("Created at")
+
     print(f"    - Processing: {fields.get('Name', 'Unnamed')} at {address}, {city}")
 
     if (not lat or not lon) and address:
@@ -64,7 +67,8 @@ for record in records:
         "supplies_available": fields.get("Available Suppllies", []),
         "conditions": fields.get("Changing Table Condition", []),
         "room_for_stroller": fields.get("Room for a stroller", False),
-        "site": fields.get("Site", "")
+        "site": fields.get("Site", ""),
+        "created_at": created_at
     }
     places.append(place)
 
