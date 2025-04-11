@@ -2,10 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Changing Diapers - List</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    thead {
+      background-color: #f0f0f0;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -32,19 +49,21 @@
       .then(res => res.json())
       .then(data => {
         const tbody = document.querySelector('#places-table tbody');
-        data.forEach(place => {
-          const siteLink = place.site ? `<a href="\${place.site}" target="_blank">link</a>` : '';
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>\${place.name}</td>
-            <td>\${place.city}</td>
-            <td>\${place.neighborhood}</td>
-            <td>\${place.type}</td>
-            <td>\${siteLink}</td>
-            <td>\${place.changing_table_location}</td>
-          `;
-          tbody.appendChild(row);
-        });
+        data
+          .filter(place => place.name && place.name.trim() !== "")
+          .forEach(place => {
+            const siteLink = place.site ? `<a href="\${place.site}" target="_blank">link</a>` : '';
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>\${place.name || ''}</td>
+              <td>\${place.city || ''}</td>
+              <td>\${place.neighborhood || ''}</td>
+              <td>\${place.type || ''}</td>
+              <td>\${siteLink}</td>
+              <td>\${place.changing_table_location || ''}</td>
+            `;
+            tbody.appendChild(row);
+          });
       });
   </script>
 </body>
