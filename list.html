@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changing Diapers - List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Map</a>
+    <a href="list.html">View Full List</a>
+    <a href="submit.html">Submit Info</a>
+  </nav>
+  <h1>View Full List</h1>
+  <table id="places-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Neighborhood</th>
+        <th>Type</th>
+        <th>Changing Table</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script>
+    fetch('places.json')
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.querySelector('#places-table tbody');
+        data.forEach(place => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${place.name}</td>
+            <td>${place.city}</td>
+            <td>${place.neighborhood}</td>
+            <td>${place.type}</td>
+            <td>${place.has_changing_table}</td>
+          `;
+          tbody.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>

@@ -4,7 +4,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-// Load JSON
 fetch('places.json')
   .then(res => res.json())
   .then(data => {
