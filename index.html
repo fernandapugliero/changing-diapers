@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changing Diapers - Find places with a baby changing station available for free</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Changing Diapers - Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    #map {
+      height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -14,10 +21,10 @@
     <a href="list.html">View Full List</a>
     <a href="submit.html">Submit Info</a>
   </nav>
-  <center><h1>Where can I change a diaper?</h1></center>
-  <center><h2>Find cafés, restaurants, bakeries and other businesses with a baby changing station available</h2></center>
+  <h1>Changing Diapers - Map</h1>
   <div id="map"></div>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
