@@ -22,8 +22,10 @@ def geocode_address(address):
         data = res.json()
         if data:
             return float(data[0]["lat"]), float(data[0]["lon"])
+        else:
+            print(f"[!] No result for address: {address}")
     except Exception as e:
-        print(f"Error geocoding address '{address}':", e)
+        print(f"[!] Error geocoding address '{address}':", e)
     return None, None
 
 url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
@@ -39,7 +41,7 @@ while url:
         lon = fields.get("Longitude")
         address = fields.get("Full Address", "")
         if (not lat or not lon) and address:
-            lat, lon = geocode_address(address)
+            lat, lon = geocode_address(f"{address}, Berlin, Germany")
             time.sleep(1)  # respeitar limite da API gratuita
 
         place = {
@@ -47,8 +49,8 @@ while url:
             "city": fields.get("City", ""),
             "neighborhood": fields.get("Neighborhood", ""),
             "address": address,
-            "latitude": lat or 0.0,
-            "longitude": lon or 0.0,
+            "latitude": lat,
+            "longitude": lon,
             "type": fields.get("Type", ""),
             "changing_table_location": fields.get("Changing Table Location", ""),
             "supplies_available": fields.get("Supplies Available", []),
