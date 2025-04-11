@@ -1,15 +1,1 @@
-[
-  {
-    "name": "Café Berlin",
-    "city": "Berlin",
-    "neighborhood": "Kreuzberg",
-    "address": "Adalbertstraße 5, 10999 Berlin",
-    "latitude": 52.4986,
-    "longitude": 13.4241,
-    "type": "cafe",
-    "has_changing_table": "yes",
-    "changing_table_location": "women's bathroom",
-    "supplies_available": ["toilet paper", "wet wipes"],
-    "conditions": ["clean", "excellent"]
-  }
-]
+[]
