@@ -30,7 +30,7 @@ def geocode_address(address):
     return None, None
 
 url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
-params = {"pageSize": 100}
+params = {"pageSize": 100, "view": "Grid view"}
 places = []
 
 print("[...] Requesting data from Airtable...")
