@@ -16,47 +16,5 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://zenner.berlin/"
-  },
-  {
-    "name": "",
-    "city": "",
-    "neighborhood": "",
-    "address": "",
-    "latitude": null,
-    "longitude": null,
-    "type": "",
-    "changing_table_location": "",
-    "supplies_available": [],
-    "conditions": [],
-    "room_for_stroller": false,
-    "site": ""
-  },
-  {
-    "name": "",
-    "city": "",
-    "neighborhood": "",
-    "address": "",
-    "latitude": null,
-    "longitude": null,
-    "type": "",
-    "changing_table_location": "",
-    "supplies_available": [],
-    "conditions": [],
-    "room_for_stroller": false,
-    "site": ""
-  },
-  {
-    "name": "",
-    "city": "",
-    "neighborhood": "",
-    "address": "",
-    "latitude": null,
-    "longitude": null,
-    "type": "",
-    "changing_table_location": "",
-    "supplies_available": [],
-    "conditions": [],
-    "room_for_stroller": false,
-    "site": ""
   }
 ]
