@@ -9,8 +9,8 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">Map view</a>
-    <a href="list.html">Full List</a>
+    <a href="index.html">Map</a>
+    <a href="list.html">View Full List</a>
     <a href="submit.html">Submit Info</a>
   </nav>
   <h1>View Full List</h1>
@@ -21,6 +21,7 @@
         <th>City</th>
         <th>Neighborhood</th>
         <th>Type</th>
+        <th>Site</th>
         <th>Changing Table</th>
       </tr>
     </thead>
@@ -32,13 +33,15 @@
       .then(data => {
         const tbody = document.querySelector('#places-table tbody');
         data.forEach(place => {
+          const siteLink = place.site ? `<a href="\${place.site}" target="_blank">link</a>` : '';
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td>${place.name}</td>
-            <td>${place.city}</td>
-            <td>${place.neighborhood}</td>
-            <td>${place.type}</td>
-            <td>${place.has_changing_table}</td>
+            <td>\${place.name}</td>
+            <td>\${place.city}</td>
+            <td>\${place.neighborhood}</td>
+            <td>\${place.type}</td>
+            <td>\${siteLink}</td>
+            <td>\${place.changing_table_location}</td>
           `;
           tbody.appendChild(row);
         });
