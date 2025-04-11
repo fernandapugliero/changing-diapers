@@ -30,7 +30,8 @@ while url:
             "changing_table_location": fields.get("Changing Table Location", ""),
             "supplies_available": fields.get("Supplies Available", []),
             "conditions": fields.get("Changing Table Condition", []),
-            "room_for_stroller": fields.get("Room for a stroller", False)
+            "room_for_stroller": fields.get("Room for a stroller", False),
+            "site": fields.get("Site", "")
         }
         places.append(place)
     url = data.get("offset")
