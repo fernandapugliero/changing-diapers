@@ -1,4 +1,4 @@
-const map = L.map('map').setView([-23.561684, -46.625378], 12); // Centered in São Paulo
+const map = L.map('map').setView([52.52, 13.405], 12); // Centered in Berlin
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
