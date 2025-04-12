@@ -11,13 +11,16 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 2rem 8rem; /* Increased lateral padding */
+      padding: 2rem 4rem; /* Increased lateral padding */
       background: white;
       color: #333;
     }
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     nav a {
       margin-right: 20px;
@@ -66,6 +69,27 @@
     footer a:hover {
       text-decoration: underline;
     }
+    .separator {
+      border-top: 1px solid #ccc;
+      margin: 2rem 0;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .left-column, .right-column {
+        flex: 0 0 100%;
+      }
+      iframe {
+        height: auto;
+      }
+      .about-text {
+        margin-top: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -93,6 +117,8 @@
       </div>
     </div>
   </div>
+
+  <div class="separator"></div> <!-- Separator line -->
 
   <footer>
     Made with ♥️ in Berlin<br />
