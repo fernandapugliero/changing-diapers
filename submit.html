@@ -11,16 +11,13 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 2rem 6rem; /* Lateral padding aumentada */
+      padding: 2rem;
       background: white;
       color: #333;
     }
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
     nav a {
       margin-right: 20px;
@@ -28,21 +25,21 @@
       font-weight: 600;
       color: inherit;
     }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      text-align: left;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
     }
     .container {
       display: flex;
       justify-content: space-between;
-      gap: 3rem;
+      gap: 2rem;
     }
     .left-column {
-      flex: 0 0 70%;
+      flex: 0 0 60%;
     }
     .right-column {
-      flex: 0 0 30%;
+      flex: 0 0 35%;
     }
     iframe {
       width: 100%;
@@ -69,28 +66,6 @@
     footer a:hover {
       text-decoration: underline;
     }
-    /* Linha separadora */
-    .separator {
-      border-top: 1px solid #ccc;
-      margin: 2rem 0;
-    }
-
-    /* Ajustes para o mobile */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .left-column, .right-column {
-        flex: 0 0 100%;
-      }
-      iframe {
-        height: auto;
-      }
-      .about-text {
-        margin-top: 2rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -99,6 +74,8 @@
     <a href="list.html">Full List</a>
     <a href="submit.html">Submit Info</a>
   </nav>
+
+  <h1>Submit Information</h1>
 
   <div class="container">
     <!-- Left Column: Airtable Embed -->
@@ -111,15 +88,13 @@
 
     <!-- Right Column: About Text -->
     <div class="right-column">
-      <h2>About</h2>
+      <h2>About Changing Diapers</h2>
       <div class="about-text">
         <p>Changing Diapers is an initiative to help parents and caregivers easily find public places with diaper changing stations available for use. By sharing your information and experiences, we can create a more accessible city for parents and make diaper changing less stressful.</p>
         <p>Help us grow our database by contributing new locations or information. Every little bit counts, and together we can make this service available for everyone!</p>
       </div>
     </div>
   </div>
-
-  <div class="separator"></div> <!-- Separator line -->
 
   <footer>
     Made with ♥️ in Berlin<br />
