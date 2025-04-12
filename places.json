@@ -75,5 +75,24 @@
     "room_for_stroller": "No",
     "site": "https://vier-ecken.webflow.io/",
     "created_at": "2025-04-11"
+  },
+  {
+    "name": "Mignon Sicilian Bakery",
+    "city": "Berlin",
+    "neighborhood": "Neukölln",
+    "address": "Donaustraße 84, 12043",
+    "latitude": 52.4790851,
+    "longitude": 13.4415103,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.instagram.com/mignonsicilianbakery/",
+    "created_at": "2025-04-12"
   }
 ]
