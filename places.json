@@ -19,21 +19,6 @@
     "created_at": "2025-04-11"
   },
   {
-    "name": "",
-    "city": "",
-    "neighborhood": "",
-    "address": "",
-    "latitude": null,
-    "longitude": null,
-    "type": "",
-    "changing_table_location": "",
-    "supplies_available": [],
-    "conditions": [],
-    "room_for_stroller": false,
-    "site": "",
-    "created_at": "2025-04-11"
-  },
-  {
     "name": "Kulturhaus Insel Berlin",
     "city": "Berlin",
     "neighborhood": "Treptow - Köpenick",
@@ -53,6 +38,25 @@
     "created_at": "2025-04-11"
   },
   {
+    "name": "MaraLou Café",
+    "city": "Berlin",
+    "neighborhood": "Neukölln",
+    "address": "Richardpl. 2A",
+    "latitude": 52.4746496,
+    "longitude": 13.4465408,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.maralou-berlin.de/",
+    "created_at": "2025-04-12"
+  },
+  {
     "name": "Vier Ecken",
     "city": "Berlin",
     "neighborhood": "Neukölln",
@@ -61,7 +65,7 @@
     "longitude": 13.4495345,
     "type": "Restaurant",
     "changing_table_location": [
-      "both"
+      "mixed restroom"
     ],
     "supplies_available": [],
     "conditions": [
