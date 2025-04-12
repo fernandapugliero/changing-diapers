@@ -11,7 +11,7 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 2rem 6rem;
+      padding: 2rem 6rem; /* Lateral padding ajustado */
       background: white;
       color: #333;
     }
@@ -19,15 +19,14 @@
       margin-bottom: 2rem;
       padding-top: 1rem;
       display: flex;
-      justify-content: center; /* Centraliza as abas */
+      justify-content: space-between;
       align-items: center;
     }
     nav a {
-      margin: 0 15px;
+      margin-right: 20px;
       text-decoration: none;
       font-weight: 600;
       color: inherit;
-      font-size: 1.1rem;
     }
     h2 {
       font-size: 1.5rem;
@@ -75,7 +74,7 @@
       margin: 2rem 0;
     }
 
-    /* Mobile adjustments */
+    /* Ajustes responsivos para o mobile */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -92,6 +91,7 @@
       }
       nav {
         flex-direction: column;
+        align-items: center;
       }
       nav a {
         margin: 10px 0;
@@ -101,9 +101,9 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">Map</a>
-    <a href="list.html">List</a>
-    <a href="submit.html">Submit</a>
+    <a href="index.html">Map View</a>
+    <a href="list.html">Full List</a>
+    <a href="submit.html">Submit Info</a>
   </nav>
 
   <div class="container">
