@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Changing Diapers: Baby-Friendly Places with Changing Tables in Berlin</title>
+  <title>Submit Info - Changing Diapers</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 2rem;
+      padding: 2rem 6rem;
       background: white;
       color: #333;
     }
+    /* Style for the nav */
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       margin-right: 20px;
@@ -27,23 +30,32 @@
       font-weight: 600;
       color: inherit;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .hamburger-menu div {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
     }
     h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #666;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: left;
     }
-    #map {
-      height: 70vh;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+    .left-column {
+      flex: 0 0 70%;
+    }
+    .right-column {
+      flex: 0 0 30%;
     }
     iframe {
       width: 100%;
@@ -52,18 +64,106 @@
       border-radius: 8px;
       background: transparent;
     }
-  </style>
+    .about-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* Linha separadora */
+    .separator {
+      border-top: 1px solid #ccc;
+      margin: 2rem 0;
+    }
 
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .left-column, .right-column {
+        flex: 0 0 100%;
+      }
+      iframe {
+        height: auto;
+      }
+      .about-text {
+        margin-top: 2rem;
+      }
+      nav {
+        justify-content: flex-start;
+      }
+      nav a {
+        display: none;
+      }
+      nav.open a {
+        display: block;
+        margin-top: 10px;
+      }
+      .hamburger-menu {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Map View</a>
-    <a href="list.html">Full List</a>
-    <a href="submit.html">Submit Info</a>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="links">
+      <a href="index.html">Map View</a>
+      <a href="list.html">Full List</a>
+      <a href="submit.html">Submit Info</a>
+    </div>
   </nav>
-  <iframe class="airtable-embed"
-    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shrYokXRRXNQJpEWx"
-    frameborder="0"
-    style="background: transparent; border: 1px solid #ccc;" height="700"></iframe>
+
+  <div class="container">
+    <!-- Left Column: Airtable Embed -->
+    <div class="left-column">
+      <iframe class="airtable-embed"
+        src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shrYokXRRXNQJpEWx"
+        frameborder="0"
+        style="background: transparent; border: 1px solid #ccc;"></iframe>
+    </div>
+
+    <!-- Right Column: About Text -->
+    <div class="right-column">
+      <h2>About</h2>
+      <div class="about-text">
+        <p>Changing Diapers is an initiative to help parents and caregivers easily find public places with diaper changing stations available for use. By sharing your information and experiences, we can create a more accessible city for parents and make diaper changing less stressful.</p>
+        <p>Help us grow our database by contributing new locations or information. Every little bit counts, and together we can make this service available for everyone!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="separator"></div> <!-- Separator line -->
+
+  <footer>
+    Made with ♥️ in Berlin<br />
+    Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
