@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Submit Info - Changing Diapers</title>
+  <title>Changing Diapers: Baby-Friendly Places with Changing Tables in Berlin</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -30,16 +32,18 @@
       margin-bottom: 0.5rem;
       text-align: center;
     }
-    .container {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      text-align: center;
     }
-    .left-column {
-      flex: 0 0 60%;
-    }
-    .right-column {
-      flex: 0 0 35%;
+    #map {
+      height: 70vh;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     iframe {
       width: 100%;
@@ -48,25 +52,8 @@
       border-radius: 8px;
       background: transparent;
     }
-    .about-text {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    footer a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
   </style>
+
 </head>
 <body>
   <nav>
@@ -74,32 +61,9 @@
     <a href="list.html">Full List</a>
     <a href="submit.html">Submit Info</a>
   </nav>
-
-  <h1>Submit Information</h1>
-
-  <div class="container">
-    <!-- Left Column: Airtable Embed -->
-    <div class="left-column">
-      <iframe class="airtable-embed"
-        src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shrYokXRRXNQJpEWx"
-        frameborder="0"
-        style="background: transparent; border: 1px solid #ccc;"></iframe>
-    </div>
-
-    <!-- Right Column: About Text -->
-    <div class="right-column">
-      <h2>About Changing Diapers</h2>
-      <div class="about-text">
-        <p>Changing Diapers is an initiative to help parents and caregivers easily find public places with diaper changing stations available for use. By sharing your information and experiences, we can create a more accessible city for parents and make diaper changing less stressful.</p>
-        <p>Help us grow our database by contributing new locations or information. Every little bit counts, and together we can make this service available for everyone!</p>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    Made with ♥️ in Berlin<br />
-    Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a>
-  </footer>
-
+  <iframe class="airtable-embed"
+    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shrYokXRRXNQJpEWx"
+    frameborder="0"
+    style="background: transparent; border: 1px solid #ccc;" height="700"></iframe>
 </body>
 </html>
