@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Changing Diapers</title>
+  <title>Changing Diapers: Baby-Friendly Places with Changing Tables in Berlin</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -16,8 +19,6 @@
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
-      display: flex;
-      justify-content: center;
     }
     nav a {
       margin-right: 20px;
@@ -28,7 +29,7 @@
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
-      text-align: center;
+      text-align: left;
     }
     h2 {
       font-size: 1.1rem;
@@ -36,7 +37,19 @@
       color: #666;
       margin-top: 0;
       margin-bottom: 2rem;
-      text-align: center;
+      text-align: left;
+    }
+    #map {
+      height: 70vh;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: transparent;
     }
     footer {
       margin-top: 3rem;
@@ -54,23 +67,12 @@
     p {
       font-size: 1rem;
       color: #555;
-      text-align: center;
+      text-align: left;
       margin-top: 1rem;
       line-height: 1.5;
     }
     p strong {
       font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        margin: 10px 0;
-      }
     }
   </style>
 </head>
@@ -79,40 +81,27 @@
     <a href="index.html">Map</a>
     <a href="list.html">List</a>
     <a href="submit.html">Submit</a>
-    <a href="about.html">About</a>
   </nav>
 
-  <h1>About Changing Diapers</h1>
-  <h2>Helping parents find diaper-friendly places in Berlin with changing stations</h2>
+    <h2>About</h2>
+    <p>Here is a place to add a About.</p>
+  
+    <h2>Privacy Policy (Datenschutz)</h2>
+    <p>Here, you will describe your privacy practices according to German data protection laws. This should include details about the data you collect, how it is stored, and how users' data is protected.</p>
+ 
+    <h2>Terms and Conditions (AGB)</h2>
+    <p>Here you will include the terms and conditions that users must agree to when using the website. This section outlines your responsibilities, limitations, and the rights of your users.</p>
+  
+    <h2>Impressum</h2>
+    <p>Include the required legal details here based on the laws of Germany. Typically, this includes company name, address, contact info, etc.</p>
 
-  <div class="container">
-    <div class="left-column">
-      <h2>Our Mission</h2>
-      <p>Changing Diapers is an initiative to help parents and caregivers easily find public places with diaper changing stations available for free. We strive to create a community-driven platform that can be relied upon by parents in need of clean and accessible diaper changing stations.</p>
-      
-      <h2>Join Our Community</h2>
-      <p>Help us grow our database! We encourage parents and caregivers to contribute by submitting their favorite diaper-friendly spots, ensuring that we provide the most complete and accurate map possible.</p>
-    </div>
-
-    <div class="right-column">
-      <h2>Stay Updated</h2>
-      <div class="form-container">
-        <p>Sign up for our newsletter to get updates on new locations and other exciting news!</p>
-        <form>
-          <label for="email">Enter your email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </div>
 
   <footer>
     Made with ♥️ in Berlin<br />
-    Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a><br /><br />
+    Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a><br /></br>
     <a href="about.html">About</a> | 
-    <a href="legal.html">Legal</a> | 
     <a href="submit.html">Submit a Location</a>
   </footer>
+
 </body>
 </html>
