@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy, Terms, and Impressum - Changing Diapers</title>
+  <title>Legal - Changing Diapers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,34 +14,29 @@
     <a href="about.html">About</a>
   </nav>
 
-  <h1>Privacy Policy, Terms, and Impressum</h1>
+  <h1>Legal Information</h1>
 
-  <!-- Privacy Section -->
   <section id="privacy">
     <h2>Privacy Policy (Datenschutz)</h2>
     <p>Here, you will describe your privacy practices according to German data protection laws. This should include details about the data you collect, how it is stored, and how users' data is protected.</p>
   </section>
 
-  <!-- Terms Section -->
   <section id="terms">
     <h2>Terms and Conditions (AGB)</h2>
     <p>Here you will include the terms and conditions that users must agree to when using the website. This section outlines your responsibilities, limitations, and the rights of your users.</p>
   </section>
 
-  <!-- Impressum Section -->
   <section id="impressum">
     <h2>Impressum</h2>
     <p>Include the required legal details here based on the laws of Germany. Typically, this includes company name, address, contact info, etc.</p>
   </section>
 
-  <!-- Footer with Links to Different Sections -->
   <footer>
     Made with ♥️ in Berlin<br />
     Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a><br /></br>
-    <a href="about.html">About</a> | 
-    <a href="privacy-terms-impressum.html#privacy">Privacy</a> | 
-    <a href="privacy-terms-impressum.html#terms">Terms</a> | 
-    <a href="privacy-terms-impressum.html#impressum">Impressum</a> | 
+    <a href="legal.html#privacy">Privacy</a> | 
+    <a href="legal.html#terms">Terms</a> | 
+    <a href="legal.html#impressum">Impressum</a> | 
     <a href="submit.html">Submit a Location</a>
   </footer>
 
