@@ -38,18 +38,6 @@
       margin-bottom: 2rem;
       text-align: center;
     }
-    #map {
-      height: 70vh;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: transparent;
-    }
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -73,10 +61,21 @@
     p strong {
       font-weight: 600;
     }
+
+    /* Responsividade para Mobile */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Menu Igual ao Index -->
   <nav>
     <a href="index.html">Map</a>
     <a href="list.html">List</a>
@@ -88,7 +87,6 @@
   <h2>Helping parents find diaper-friendly places in Berlin with changing stations</h2>
 
   <div class="container">
-    <!-- Left Column: About Text -->
     <div class="left-column">
       <h2>Our Mission</h2>
       <p>Changing Diapers is an initiative to help parents and caregivers easily find public places with diaper changing stations available for free. We strive to create a community-driven platform that can be relied upon by parents in need of clean and accessible diaper changing stations.</p>
@@ -97,7 +95,6 @@
       <p>Help us grow our database! We encourage parents and caregivers to contribute by submitting their favorite diaper-friendly spots, ensuring that we provide the most complete and accurate map possible.</p>
     </div>
 
-    <!-- Right Column: Newsletter Signup -->
     <div class="right-column">
       <h2>Stay Updated</h2>
       <div class="form-container">
@@ -111,7 +108,6 @@
     </div>
   </div>
 
-  <!-- Footer Igual ao Index -->
   <footer>
     Made with ♥️ in Berlin<br />
     Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a><br /></br>
@@ -119,6 +115,5 @@
     <a href="legal.html">Legal</a> | 
     <a href="submit.html">Submit a Location</a>
   </footer>
-
 </body>
 </html>
