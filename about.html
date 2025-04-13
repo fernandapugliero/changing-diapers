@@ -5,6 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About - Changing Diapers</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: white;
+      color: #333;
+    }
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+    }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .container {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .left-column {
+      flex: 0 0 70%;
+      margin-right: 2rem;
+    }
+    .right-column {
+      flex: 0 0 30%;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: transparent;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .form-container {
+      margin-top: 2rem;
+    }
+    .form-container input {
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-container button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 1rem;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    .form-container button:hover {
+      background-color: #005bb5;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -15,17 +97,39 @@
   </nav>
 
   <h1>About Changing Diapers</h1>
-  <p>Changing Diapers is an initiative to make parenting easier by providing an accessible map of baby-friendly places in Berlin with changing stations. We strive to create a helpful community-driven platform that parents and caregivers can rely on.</p>
+  <div class="container">
+    <!-- Left Column: About Text -->
+    <div class="left-column">
+      <h2>Our Mission</h2>
+      <p>Changing Diapers is an initiative to help parents and caregivers easily find public places with diaper changing stations available for free. We strive to create a community-driven platform that can be relied upon by parents in need of clean and accessible diaper changing stations.</p>
+      
+      <h2>Join Our Community</h2>
+      <p>Help us grow our database! We encourage parents and caregivers to contribute by submitting their favorite diaper-friendly spots, ensuring that we provide the most complete and accurate map possible.</p>
+    </div>
 
+    <!-- Right Column: Newsletter Signup -->
+    <div class="right-column">
+      <h2>Stay Updated</h2>
+      <div class="form-container">
+        <p>Sign up for our newsletter to get updates on new locations and other exciting news!</p>
+        <form>
+          <label for="email">Enter your email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
     Made with ♥️ in Berlin<br />
-    Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a><br /></br>
+    Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a><br />
     <a href="about.html">About</a> | 
-    <a href="datenschutz.html">Privacy</a> | 
-    <a href="AGB.html">Terms</a> | 
-    <a href="impressum.html">Impressum</a> | 
+    <a href="privacy-terms-impressum.html#privacy">Privacy</a> | 
+    <a href="privacy-terms-impressum.html#terms">Terms</a> | 
+    <a href="privacy-terms-impressum.html#impressum">Impressum</a> | 
     <a href="submit.html">Submit a Location</a>
   </footer>
-
 </body>
 </html>
