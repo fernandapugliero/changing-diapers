@@ -76,16 +76,5 @@
     <a href="submit.html">Submit a Location</a>
   </footer>
 
-  <!-- JavaScript to Dynamically Adjust Iframe Height -->
-  <script>
-    var iframe = document.getElementById('airtable-iframe');
-
-    iframe.onload = function() {
-      var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-      var iframeBody = iframeDoc.body;
-      iframe.style.height = iframeBody.scrollHeight + 'px';
-    };
-  </script>
-
 </body>
 </html>
