@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Changing Diapers: Baby-Friendly Places with Changing Tables in Berlin</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <title>Submit Information - Changing Diapers</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -41,18 +39,6 @@
       margin-bottom: 2rem;
       text-align: center;
     }
-    #map {
-      height: 70vh;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: transparent;
-    }
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -69,23 +55,37 @@
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Map</a>
     <a href="list.html">List</a>
     <a href="submit.html">Submit</a>
   </nav>
-  <iframe class="airtable-embed"
+
+  <!-- Airtable Form Embed -->
+  <iframe class="airtable-embed" id="airtable-iframe"
     src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shrYokXRRXNQJpEWx"
     frameborder="0"
-    style="background: transparent; border: 1px solid #ccc; width: 100%; height: 700px; box-sizing: border-box;" 
+    style="background: transparent; border: 1px solid #ccc; width: 100%; overflow: hidden;" 
     allowfullscreen></iframe>
 
- <footer>
+  <footer>
     Made with ♥️ in Berlin<br />
     Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a><br /></br>
     <a href="legal.html">Privacy & Legal</a> | 
     <a href="submit.html">Submit a Location</a>
   </footer>
+
+  <!-- JavaScript to Dynamically Adjust Iframe Height -->
+  <script>
+    var iframe = document.getElementById('airtable-iframe');
+
+    iframe.onload = function() {
+      var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      var iframeBody = iframeDoc.body;
+      iframe.style.height = iframeBody.scrollHeight + 'px';
+    };
+  </script>
 
 </body>
 </html>
