@@ -20,28 +20,28 @@
       justify-content: center;
     }
     nav a {
-      margin: 20px;
+      margin-right: 20px;
       text-decoration: none;
       font-weight: 600;
       color: inherit;
     }
     h1 {
       font-size: 2rem;
+      margin-bottom: 0.5rem;
       text-align: center;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin-top: 0;
       margin-bottom: 2rem;
+      text-align: center;
     }
-    .container {
-      display: flex;
-      gap: 2rem;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .left-column {
-      flex: 0 0 70%;
-      margin-right: 2rem;
-    }
-    .right-column {
-      flex: 0 0 30%;
+    #map {
+      height: 70vh;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     iframe {
       width: 100%;
@@ -63,28 +63,15 @@
     footer a:hover {
       text-decoration: underline;
     }
-    .form-container {
-      margin-top: 2rem;
-    }
-    .form-container input {
-      padding: 10px;
-      margin-top: 10px;
-      width: 100%;
+    p {
       font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
     }
-    .form-container button {
-      padding: 10px 20px;
-      margin-top: 10px;
-      font-size: 1rem;
-      background-color: #0070f3;
-      color: white;
-      border: none;
-      border-radius: 4px;
-    }
-    .form-container button:hover {
-      background-color: #005bb5;
+    p strong {
+      font-weight: 600;
     }
   </style>
 </head>
