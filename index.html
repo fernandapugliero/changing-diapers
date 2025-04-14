@@ -77,6 +77,7 @@
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Map</a>
     <a href="list.html">List</a>
@@ -115,48 +116,60 @@
     var defaultLat = 52.5200;  // Latitude de Berlim
     var defaultLon = 13.4050;  // Longitude de Berlim
 
+    // Inicializa o mapa com a localização padrão
+    var map = L.map('map').setView([defaultLat, defaultLon], 13);
+
+    // Adiciona o tile layer (camada do mapa)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Adiciona marcador padrão de localização
+    var userMarker = L.marker([defaultLat, defaultLon]).addTo(map)
+      .bindPopup('Default location (Berlin)')
+      .openPopup();
+
     // Verifica se o navegador suporta geolocalização
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         var userLat = position.coords.latitude;  // Latitude do usuário
         var userLon = position.coords.longitude; // Longitude do usuário
         
-        // Cria o mapa centralizado na localização do usuário
-        var map = L.map('map').setView([userLat, userLon], 13);  
-
-        // Adiciona o tile layer (camada do mapa)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        // Centraliza o mapa na localização do usuário
+        map.setView([userLat, userLon], 13);
 
         // Adiciona um marcador na localização do usuário
         L.marker([userLat, userLon]).addTo(map)
           .bindPopup('You are here')
           .openPopup();
+
+        // Remover o marcador padrão, já que temos a localização do usuário
+        map.removeLayer(userMarker);
         
       }, function() {
-        // Se o usuário não permitir ou se houver um erro, usamos o fallback
-        createMapWithFallback();
+        // Se o usuário não permitir ou se houver um erro, usa o fallback
+        userMarker.setPopupContent("Geolocation failed. Showing default location.");
       });
-    } else {
-      // Se o navegador não suporta geolocalização, usamos o fallback
-      createMapWithFallback();
     }
 
-    // Função para criar o mapa com a localização padrão (fallback)
-    function createMapWithFallback() {
-      var map = L.map('map').setView([defaultLat, defaultLon], 13);  // Centraliza no ponto padrão (Berlim)
+    // Função para carregar e adicionar os pins do Airtable
+    function addAirtablePins() {
+      // Aqui você deve adicionar seu código para buscar os dados do Airtable e adicionar os marcadores
+      // Como exemplo, um pin é adicionado manualmente
+      var airtableData = [
+        { lat: 52.5200, lon: 13.4050, name: "Cafe 1" },
+        { lat: 52.5300, lon: 13.4055, name: "Cafe 2" }
+        // Você pode adicionar um loop aqui para processar seus dados do Airtable
+      ];
 
-      // Adiciona o tile layer (camada do mapa)
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
-
-      // Adiciona um marcador na localização padrão
-      L.marker([defaultLat, defaultLon]).addTo(map)
-        .bindPopup('Default location (Berlin)')
-        .openPopup();
+      airtableData.forEach(function(place) {
+        L.marker([place.lat, place.lon]).addTo(map)
+          .bindPopup(place.name);
+      });
     }
+
+    // Adiciona os marcadores do Airtable no mapa
+    addAirtablePins();
   </script>
 </body>
 </html>
