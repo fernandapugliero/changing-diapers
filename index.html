@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fix My Diaper: Baby-Friendly Places with Changing Tables</title>
+  <title>Changing Diapers: Baby-Friendly Places with Changing Tables in Berlin</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
@@ -77,7 +77,6 @@
   </style>
 </head>
 <body>
-
   <nav>
     <a href="index.html">Map</a>
     <a href="list.html">List</a>
@@ -86,14 +85,11 @@
 
   <h1>Need to change a diaper?</h1>
   <h2>Find baby-friendly places in your city with changing tables – cafes, restaurants, and more.</h2>
-
-  <!-- Mapa (Aqui ele vai ser centralizado na posição do usuário ou no fallback) -->
   <div id="map"></div>
 
   <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Top 5 best places to change a diaper in Berlin</h2>
-  <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
-    Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.
-  </p>
+<p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
+  Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
 
   <iframe class="airtable-embed"
     src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
@@ -103,73 +99,14 @@
     height="auto"
     style="background: transparent; border: 1px solid #ccc;"></iframe>
 
-  <footer>
+   <footer>
     Made with ♥️ in Berlin<br />
-    Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a><br /><br />
+    Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a><br /></br>
     <a href="about.html">About</a> | 
     <a href="submit.html">Submit a Location</a>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-  <script>
-    // Define uma localização padrão (fallback), no caso, no centro de Berlim
-    var defaultLat = 52.5200;  // Latitude de Berlim
-    var defaultLon = 13.4050;  // Longitude de Berlim
-
-    // Inicializa o mapa com a localização padrão
-    var map = L.map('map').setView([defaultLat, defaultLon], 13);
-
-    // Adiciona o tile layer (camada do mapa)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Adiciona marcador padrão de localização
-    var userMarker = L.marker([defaultLat, defaultLon]).addTo(map)
-      .bindPopup('Default location (Berlin)')
-      .openPopup();
-
-    // Verifica se o navegador suporta geolocalização
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var userLat = position.coords.latitude;  // Latitude do usuário
-        var userLon = position.coords.longitude; // Longitude do usuário
-        
-        // Centraliza o mapa na localização do usuário
-        map.setView([userLat, userLon], 13);
-
-        // Adiciona um marcador na localização do usuário
-        L.marker([userLat, userLon]).addTo(map)
-          .bindPopup('You are here')
-          .openPopup();
-
-        // Remover o marcador padrão, já que temos a localização do usuário
-        map.removeLayer(userMarker);
-        
-      }, function() {
-        // Se o usuário não permitir ou se houver um erro, usa o fallback
-        userMarker.setPopupContent("Geolocation failed. Showing default location.");
-      });
-    }
-
-    // Função para carregar e adicionar os pins do Airtable
-    function addAirtablePins() {
-      // Aqui você deve adicionar seu código para buscar os dados do Airtable e adicionar os marcadores
-      // Como exemplo, um pin é adicionado manualmente
-      var airtableData = [
-        { lat: 52.5200, lon: 13.4050, name: "Cafe 1" },
-        { lat: 52.5300, lon: 13.4055, name: "Cafe 2" }
-        // Você pode adicionar um loop aqui para processar seus dados do Airtable
-      ];
-
-      airtableData.forEach(function(place) {
-        L.marker([place.lat, place.lon]).addTo(map)
-          .bindPopup(place.name);
-      });
-    }
-
-    // Adiciona os marcadores do Airtable no mapa
-    addAirtablePins();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
