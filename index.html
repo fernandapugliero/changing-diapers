@@ -112,31 +112,46 @@
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script>
-    // Inicializa o mapa com a localização padrão (fallback) de Berlim
-    var map = L.map('map').setView([52.5200, 13.4050], 13); // Centraliza em Berlim
+    // Define uma localização padrão (fallback), no caso, no centro de Berlim
+    var defaultLat = 52.5200;  // Latitude de Berlim
+    var defaultLon = 13.4050;  // Longitude de Berlim
+
+    // Inicializa o mapa com a localização padrão
+    var map = L.map('map').setView([defaultLat, defaultLon], 13);
 
     // Adiciona o tile layer (camada do mapa)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Função para carregar os pins do Airtable
-    function addAirtablePins() {
-      // Simulando os dados do Airtable (substitua com seus próprios dados do Airtable)
-      var airtableData = [
-        { lat: 52.5200, lon: 13.4050, name: "Cafe 1" },
-        { lat: 52.5300, lon: 13.4055, name: "Cafe 2" },
-        { lat: 52.5400, lon: 13.4060, name: "Restaurant 1" }
-      ];
+    // Função para carregar os pins do Airtable (usando a API do Airtable)
+    function loadAirtableData() {
+      var airtableUrl = 'https://api.airtable.com/v0/appjWF7WnC8DRWaXM/ChangingDiapers';
+      var apiKey = 'appjWF7WnC8DRWaXM';  // Substitua pela sua chave de API
 
-      airtableData.forEach(function(place) {
-        L.marker([place.lat, place.lon]).addTo(map)
-          .bindPopup(place.name);
-      });
+      fetch(airtableUrl, {
+        headers: {
+          'Authorization': 'Bearer ' + apiKey
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Percorre os dados do Airtable e adiciona os marcadores no mapa
+        data.records.forEach(function(record) {
+          var lat = record.fields.Latitude;
+          var lon = record.fields.Longitude;
+          var name = record.fields.Name;
+
+          // Adiciona o marcador ao mapa
+          L.marker([lat, lon]).addTo(map)
+            .bindPopup(name);
+        });
+      })
+      .catch(error => console.log('Error fetching data: ', error));
     }
 
-    // Adicionar marcadores do Airtable ao mapa
-    addAirtablePins();
+    // Carrega e exibe os pins do Airtable
+    loadAirtableData();
 
     // Verifica se o navegador suporta geolocalização
     if (navigator.geolocation) {
