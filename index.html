@@ -3,80 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Changing Diapers: Baby-Friendly Places with Changing Tables in Berlin</title>
+  <title>Fix My Diaper: Baby-Friendly Places with Changing Tables</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: white;
-      color: #333;
-    }
-    nav {
-      margin-bottom: 2rem;
-      padding-top: 1rem;
-    }
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: 600;
-      color: inherit;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #666;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-    #map {
-      height: 70vh;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: transparent;
-    }
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    footer a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    p {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-    p strong {
-      font-weight: 600;
-    }
-  </style>
 </head>
 <body>
+
+  <!-- Navegação -->
   <nav>
     <a href="index.html">Map</a>
     <a href="list.html">List</a>
@@ -85,28 +20,66 @@
 
   <h1>Need to change a diaper?</h1>
   <h2>Find baby-friendly places in your city with changing tables – cafes, restaurants, and more.</h2>
-  <div id="map"></div>
 
-  <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Top 5 best places to change a diaper in Berlin</h2>
-<p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
-  Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
+  <!-- Mapa (Aqui ele vai ser centralizado na posição do usuário ou no fallback) -->
+  <div id="map" style="height: 70vh;"></div>
 
-  <iframe class="airtable-embed"
-    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
-    frameborder="0"
-    onmousewheel=""
-    width="100%"
-    height="auto"
-    style="background: transparent; border: 1px solid #ccc;"></iframe>
-
-   <footer>
+  <footer>
     Made with ♥️ in Berlin<br />
-    Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a><br /></br>
+    Created by <a href="https://sites.google.com/view/fernandapugliero" target="_blank">Fernanda Pugliero</a><br /><br />
     <a href="about.html">About</a> | 
+    <a href="legal.html">Legal</a> | 
     <a href="submit.html">Submit a Location</a>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-  <script src="script.js"></script>
+  <script>
+    // Define uma localização padrão (fallback), no caso, no centro de Berlim
+    var defaultLat = 52.5200;  // Latitude de Berlim
+    var defaultLon = 13.4050;  // Longitude de Berlim
+
+    // Verifica se o navegador suporta geolocalização
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var userLat = position.coords.latitude;  // Latitude do usuário
+        var userLon = position.coords.longitude; // Longitude do usuário
+        
+        // Cria o mapa centralizado na localização do usuário
+        var map = L.map('map').setView([userLat, userLon], 13);  
+
+        // Adiciona o tile layer (camada do mapa)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Adiciona um marcador na localização do usuário
+        L.marker([userLat, userLon]).addTo(map)
+          .bindPopup('You are here')
+          .openPopup();
+        
+      }, function() {
+        // Se o usuário não permitir ou se houver um erro, usamos o fallback
+        createMapWithFallback();
+      });
+    } else {
+      // Se o navegador não suporta geolocalização, usamos o fallback
+      createMapWithFallback();
+    }
+
+    // Função para criar o mapa com a localização padrão (fallback)
+    function createMapWithFallback() {
+      var map = L.map('map').setView([defaultLat, defaultLon], 13);  // Centraliza no ponto padrão (Berlim)
+
+      // Adiciona o tile layer (camada do mapa)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      // Adiciona um marcador na localização padrão
+      L.marker([defaultLat, defaultLon]).addTo(map)
+        .bindPopup('Default location (Berlin)')
+        .openPopup();
+    }
+  </script>
 </body>
 </html>
