@@ -38,6 +38,26 @@
     "created_at": "2025-04-11"
   },
   {
+    "name": "Cafe am Neuen See",
+    "city": "Berlin",
+    "neighborhood": "Charlottenburg - Wilmersdorf",
+    "address": "Lichtensteinallee 2, 10787",
+    "latitude": 52.51037945,
+    "longitude": 13.344492257028067,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.cafeamneuensee.de/",
+    "created_at": "2025-04-14"
+  },
+  {
     "name": "MaraLou Café",
     "city": "Berlin",
     "neighborhood": "Neukölln",
