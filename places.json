@@ -19,6 +19,26 @@
     "created_at": "2025-04-11"
   },
   {
+    "name": "Dokumentationszentrum Berliner Mauer",
+    "city": "Berlin",
+    "neighborhood": "Mitte",
+    "address": "Bernauer Str. 111, 13355",
+    "latitude": 52.53530015,
+    "longitude": 13.38955424227489,
+    "type": "Museum",
+    "changing_table_location": [
+      "disable restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Cramped"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://stiftung-berliner-mauer.de/de/gedenkstaette-berliner-mauer",
+    "created_at": "2025-04-14"
+  },
+  {
     "name": "Kulturhaus Insel Berlin",
     "city": "Berlin",
     "neighborhood": "Treptow - Köpenick",
