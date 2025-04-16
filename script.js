@@ -28,7 +28,7 @@ fetch('places.json')
       // Verificar se o tipo do local existe antes de exibir
       const type = place.type || 'Not Specified';
       const popupContent = `<strong>${place.name || 'Unnamed Place'}</strong><br>
-                            Type: ${type}`;
+                            ${type}`;
 
       L.marker([place.latitude, place.longitude])
         .addTo(map)
