@@ -117,6 +117,42 @@
     "created_at": "2025-04-11"
   },
   {
+    "name": "Petit Brunch",
+    "city": "Berlin",
+    "neighborhood": "Pankow - Prenzlauerberg",
+    "address": "Schönhauser Allee 140a, 10437 Berlin",
+    "latitude": 52.5481764363036,
+    "longitude": 13.413325304600315,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "disable restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.instagram.com/petitbrunch_bln/",
+    "created_at": "2025-04-16"
+  },
+  {
+    "name": "Kiez Kaffee Kraft",
+    "city": "Berlin",
+    "neighborhood": "Pankow - Prenzlauerberg",
+    "address": "Breite Str. 35, 13187 Berlin",
+    "latitude": 52.5699462,
+    "longitude": 13.4076954,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "kiezkaffeekraft.de",
+    "created_at": "2025-04-16"
+  },
+  {
     "name": "Mignon Sicilian Bakery",
     "city": "Berlin",
     "neighborhood": "Neukölln",
