@@ -25,12 +25,16 @@ fetch('places.json')
     Object.values(grouped).forEach(place => {
       if (!place.latitude || !place.longitude) return;
 
-      // Adicionar o tipo de estabelecimento no popup
+      // Verificar se o tipo do local existe antes de exibir
+      const type = place.type || 'Not Specified';
       const popupContent = `<strong>${place.name || 'Unnamed Place'}</strong><br>
-                            Type: ${place.type || 'Not Specified'}`;
+                            Type: ${type}`;
 
       L.marker([place.latitude, place.longitude])
         .addTo(map)
         .bindPopup(popupContent);
     });
+  })
+  .catch(error => {
+    console.error("Error loading places data:", error);
   });
