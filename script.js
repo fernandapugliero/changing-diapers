@@ -25,6 +25,7 @@ fetch('places.json')
       if (!place.latitude || !place.longitude) return;
 
       const popupContent = `<strong>${place.name || 'Unnamed Place'}</strong>`;
+                            Type: ${place.type || 'Not Specified'}
 
       L.marker([place.latitude, place.longitude])
         .addTo(map)
