@@ -39,6 +39,25 @@
     "created_at": "2025-04-14"
   },
   {
+    "name": "Junge Die Bäckerei.",
+    "city": "Berlin",
+    "neighborhood": "Pankow - Prenzlauerberg",
+    "address": "Schönhauser Allee 10-11, 10119",
+    "latitude": 52.5305899,
+    "longitude": 13.4115883,
+    "type": "Bakery",
+    "changing_table_location": [
+      "disable restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.jb.de/",
+    "created_at": "2025-04-16"
+  },
+  {
     "name": "Kulturhaus Insel Berlin",
     "city": "Berlin",
     "neighborhood": "Treptow - Köpenick",
@@ -150,6 +169,26 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "kiezkaffeekraft.de",
+    "created_at": "2025-04-16"
+  },
+  {
+    "name": "Le Belford",
+    "city": "Berlin",
+    "neighborhood": "Pankow - Prenzlauerberg",
+    "address": "Kollwitzstraße 28, 10405",
+    "latitude": 52.5334029,
+    "longitude": 13.4151951,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Cramped"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.instagram.com/le_belfort_berlin/",
     "created_at": "2025-04-16"
   },
   {
