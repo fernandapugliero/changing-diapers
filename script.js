@@ -21,11 +21,13 @@ fetch('places.json')
       }
     });
 
+    // Criar marcadores e popups com o nome e tipo do local
     Object.values(grouped).forEach(place => {
       if (!place.latitude || !place.longitude) return;
 
-      const popupContent = `<strong>${place.name || 'Unnamed Place'}</strong>`;
-                            Type: ${place.type || 'Not Specified'}
+      // Adicionar o tipo de estabelecimento no popup
+      const popupContent = `<strong>${place.name || 'Unnamed Place'}</strong><br>
+                            Type: ${place.type || 'Not Specified'}`;
 
       L.marker([place.latitude, place.longitude])
         .addTo(map)
