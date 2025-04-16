@@ -7,17 +7,7 @@
   <meta name="description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
   <meta name="keywords" content="diaper changing, baby-friendly places, changing tables in Berlin, family cafes, diaper changing locations, parent resources">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables">
-  <meta property="og:description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
-  <meta property="og:image" content="url_to_your_image.jpg">
-  <meta property="og:url" content="https://fixmydiaper.com">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables">
-  <meta name="twitter:description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
-  <meta name="twitter:image" content="url_to_your_image.jpg">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -32,12 +22,13 @@
       margin-bottom: 2rem;
       padding-top: 1rem;
       display: flex;
-      align-items: center; /* Alinha itens no centro */
+      align-items: center;
+      justify-content: space-between;  /* Espaço entre logo e menu */
     }
     nav img {
-      width: 30px;  /* Tamanho do logo */
+      width: 50px;
       height: auto;
-      margin-right: 30px;  /* Espaçamento entre logo e os links do menu */
+      margin-right: 20px;
     }
     nav a {
       margin-right: 20px;
@@ -45,91 +36,101 @@
       font-weight: 600;
       color: inherit;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
+
+    /* Estilos para o menu */
+    #menu {
+      display: flex;
     }
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #666;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      text-align: center;
+
+    #menu a {
+      margin-left: 20px;
     }
-    #map {
-      height: 70vh;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    /* Menu de hambúrguer para mobile */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
     }
-    iframe {
+    .hamburger div {
       width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: transparent;
+      height: 3px;
+      background-color: #333;
     }
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
+
+    /* Menu mobile */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      margin-top: 20px;
     }
-    footer a {
-      color: #0070f3;
-      text-decoration: none;
+
+    /* Quando o menu estiver visível */
+    .mobile-menu.open {
+      display: flex;
     }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    p {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-    p strong {
-      font-weight: 600;
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      .hamburger {
+        display: flex;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <!-- Logo no topo, alinhado à esquerda -->
+    <!-- Logo -->
     <img src="images/logo.png" alt="Fix My Diaper Logo">
     
-    <!-- Menu -->
+    <!-- Menu de Navegação -->
+    <div id="menu">
+      <a href="https://fixmydiaper.com/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
+    </div>
+
+    <!-- Ícone de Menu (Hambúrguer) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <!-- Menu Mobile -->
+  <div class="mobile-menu" id="mobile-menu">
     <a href="https://fixmydiaper.com/">Map</a>
     <a href="list">List</a>
     <a href="submit">Submit</a>
-  </nav>
+  </div>
 
   <h1>Need to change a diaper?</h1>
   <h2>Find baby-friendly places in your city with changing tables – cafes, restaurants, and more.</h2>
   <div id="map"></div>
 
-  <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Top 5 best places to change a diaper in Berlin</h2>
-  <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
-    Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
-
-  <iframe class="airtable-embed"
-    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
-    frameborder="0"
-    onmousewheel=""
-    width="100%"
-    height="100%"
-    style="background: transparent; border: 1px solid #ccc;"></iframe>
-
   <footer>
     Made with ♥️ in Berlin<br />
-    Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a><br /></br>
+    Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a><br />
     <a href="about">About</a> | 
     <a href="submit">Submit a Location</a>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');  // Alterna a classe 'open' para mostrar/ocultar o menu
+    }
+  </script>
 </body>
 </html>
