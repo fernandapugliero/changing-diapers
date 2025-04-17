@@ -23,8 +23,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Bernauer Str. 111, 13355",
-    "latitude": 52.53530015,
-    "longitude": 13.38955424227489,
+    "latitude": 52.5353001,
+    "longitude": 13.3895542,
     "type": "Museum",
     "changing_table_location": [
       "disable restroom"
@@ -63,7 +63,7 @@
     "neighborhood": "Treptow - Köpenick",
     "address": "Alt Treptow 6, 12435 Berlin",
     "latitude": 52.4867977,
-    "longitude": 13.48092316557658,
+    "longitude": 13.4809232,
     "type": "Biergarten",
     "changing_table_location": [
       "women's restroom"
@@ -81,8 +81,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg - Wilmersdorf",
     "address": "Lichtensteinallee 2, 10787",
-    "latitude": 52.51037945,
-    "longitude": 13.344492257028067,
+    "latitude": 52.5103795,
+    "longitude": 13.3444923,
     "type": "Biergarten",
     "changing_table_location": [
       "hallway"
@@ -159,8 +159,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow - Prenzlauerberg",
     "address": "Schönhauser Allee 140a, 10437 Berlin",
-    "latitude": 52.5481764363036,
-    "longitude": 13.413325304600315,
+    "latitude": 52.5481764,
+    "longitude": 13.4133253,
     "type": "Restaurant",
     "changing_table_location": [
       "disable restroom"
