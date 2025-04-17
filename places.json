@@ -58,6 +58,21 @@
     "created_at": "2025-04-16"
   },
   {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Karl-Marx-Straße 66",
+    "latitude": 52.4819616,
+    "longitude": 13.4327729,
+    "type": "Store",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-04-17"
+  },
+  {
     "name": "Kulturhaus Insel Berlin",
     "city": "Berlin",
     "neighborhood": "Treptow - Köpenick",
