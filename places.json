@@ -173,9 +173,9 @@
     "name": "Zenner",
     "city": "Berlin",
     "neighborhood": "Treptow - Köpenick",
-    "address": "https://maps.app.goo.gl/qqsz4EpRFKMawD2y7?g_st=com.google.maps.preview.copy",
-    "latitude": null,
-    "longitude": null,
+    "address": "Alt Treptow 15",
+    "latitude": 52.4872491,
+    "longitude": 13.4774693,
     "type": "Biergarten",
     "changing_table_location": [
       "women's restroom"
