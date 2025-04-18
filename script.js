@@ -71,8 +71,8 @@ function updateCarousel() {
 }
 
 // Adiciona eventos de navegação
-document.querySelector('.testimonial-carousel::before').addEventListener('click', prevTestimonial);
-document.querySelector('.testimonial-carousel::after').addEventListener('click', nextTestimonial);
+document.querySelector('.nav-prev').addEventListener('click', prevTestimonial);
+document.querySelector('.nav-next').addEventListener('click', nextTestimonial);
 
 // Inicializa o carrossel com o primeiro depoimento
 updateCarousel();
