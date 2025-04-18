@@ -39,40 +39,29 @@ fetch('places.json')
     console.error("Error loading places data:", error);
   });
 
-let currentIndex = 0;
-const testimonials = document.querySelectorAll('.testimonial');
-const totalTestimonials = testimonials.length;
-const testimonialWrapper = document.querySelector('.testimonial-wrapper');
-
-// Função para ir para o próximo depoimento
-function nextTestimonial() {
-  if (currentIndex < totalTestimonials - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0; // Volta ao primeiro depoimento
-  }
-  updateCarousel();
-}
-
-// Função para ir para o depoimento anterior
-function prevTestimonial() {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = totalTestimonials - 1; // Vai para o último depoimento
-  }
-  updateCarousel();
-}
-
-// Atualiza o carrossel com a nova posição
-function updateCarousel() {
-  const offset = -currentIndex * 100; // Mover o carrossel para a esquerda ou direita
-  testimonialWrapper.style.transform = `translateX(${offset}%)`;
-}
-
-// Adiciona eventos de navegação
-document.querySelector('.nav-prev').addEventListener('click', prevTestimonial);
-document.querySelector('.nav-next').addEventListener('click', nextTestimonial);
-
-// Inicializa o carrossel com o primeiro depoimento
-updateCarousel();
+$(document).ready(function(){
+  $('.testimonial-carousel').slick({
+    slidesToShow: 1,   // Mostra 1 depoimento por vez
+    slidesToScroll: 1,  // Avança 1 depoimento por vez
+    autoplay: true,     // Define que o carrossel vai rodar automaticamente
+    autoplaySpeed: 3000, // Intervalo de 3 segundos entre cada troca de slide
+    arrows: true,       // Ativa as setas de navegação
+    dots: true,         // Ativa os pontos de navegação
+    responsive: [
+      {
+        breakpoint: 768, // Para mobile
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1024, // Para desktop
+        settings: {
+          slidesToShow: 4,  // Exibe 4 depoimentos por vez no desktop
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+});
