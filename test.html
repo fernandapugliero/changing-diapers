@@ -118,6 +118,8 @@
   overflow: hidden;
   margin: 2rem auto;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 /* Contêiner para os depoimentos */
@@ -128,15 +130,15 @@
 
 /* Cada depoimento */
 .testimonial {
-  flex: 0 0 100%; /* Exibe 1 depoimento por vez no mobile */
-  padding: 1rem;
+  flex: 0 0 80%; /* Exibe 1 depoimento por vez no mobile */
+  padding: 1.5rem;
   text-align: center;
-  background: #f9f9f9;
+  background: #ffffff; /* Fundo branco */
   margin: 0 10px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* Ajuste da fonte para mobile */
-  font-size: 0.9rem;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Texto do depoimento */
@@ -144,7 +146,6 @@
   font-size: 1.1rem;
   color: #333;
   font-style: italic;
-  margin: 0.5rem 0;
 }
 
 /* Nome do usuário */
@@ -157,8 +158,8 @@
 /* Responsividade: Carrossel para mobile */
 @media (max-width: 768px) {
   .testimonial {
-    flex: 0 0 80%; /* Exibe 1 depoimento por vez no mobile */
-    font-size: 0.85rem; /* Fonte menor */
+    flex: 0 0 90%; /* Exibe 1 depoimento por vez no mobile */
+    font-size: 0.9rem; /* Fonte menor */
     margin: 0 5px; /* Ajuste da margem */
   }
 }
@@ -171,50 +172,45 @@
   }
 }
 
-/* Adicionando botões de navegação */
-.testimonial-carousel::before,
-.testimonial-carousel::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.testimonial-carousel::before {
-  left: 10px;
-}
-
-.testimonial-carousel::after {
-  right: 10px;
-}
-
-    /* Adicionando botões de navegação */
+/* Adicionando botões de navegação modernos (setas) */
 .nav-prev,
 .nav-next {
-  content: '';
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
+  background-color: transparent;
+  color: #0070f3;
   font-size: 2rem;
+  padding: 10px;
   cursor: pointer;
   z-index: 10;
+  border: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-prev {
-  left: 10px;
+  left: 15px;
 }
 
 .nav-next {
-  right: 10px;
+  right: 15px;
+}
+
+/* Efeito de hover nas setas */
+.nav-prev:hover,
+.nav-next:hover {
+  color: #005bb5; /* Cor mais escura quando o cursor passar */
+  transform: translateY(-50%) scale(1.2); /* Aumenta o tamanho das setas no hover */
+}
+
+/* Opção para setas em forma de SVG */
+.nav-prev:before,
+.nav-next:before {
+  content: "";
+  display: inline-block;
+  background: url('https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css') no-repeat center;
+  width: 25px;
+  height: 25px;
 }
 
   </style>
