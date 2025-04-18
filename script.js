@@ -38,27 +38,3 @@ fetch('places.json')
   .catch(error => {
     console.error("Error loading places data:", error);
   });
-
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1, // 1 slide por vez no mobile
-  spaceBetween: 10,  // Espaço entre os slides
-  autoplay: {
-    delay: 3000, // Intervalo entre as trocas de slides
-  },
-  navigation: {
-    nextEl: '.swiper-button-next', // Botão de navegação para frente
-    prevEl: '.swiper-button-prev', // Botão de navegação para trás
-  },
-  breakpoints: {
-    // Para telas menores, no mobile, exibe 1 depoimento
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    // Para telas maiores, no desktop, exibe 4 depoimentos
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    }
-  }
-});
