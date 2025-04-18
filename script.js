@@ -38,3 +38,41 @@ fetch('places.json')
   .catch(error => {
     console.error("Error loading places data:", error);
   });
+
+let currentIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial');
+const totalTestimonials = testimonials.length;
+const testimonialWrapper = document.querySelector('.testimonial-wrapper');
+
+// Função para ir para o próximo depoimento
+function nextTestimonial() {
+  if (currentIndex < totalTestimonials - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateCarousel();
+}
+
+// Função para ir para o depoimento anterior
+function prevTestimonial() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = totalTestimonials - 1;
+  }
+  updateCarousel();
+}
+
+// Atualiza o carrossel
+function updateCarousel() {
+  const offset = -currentIndex * 100; // Mover o carrossel
+  testimonialWrapper.style.transform = `translateX(${offset}%)`;
+}
+
+// Adiciona os eventos de navegação
+document.querySelector('.testimonial-carousel::before').addEventListener('click', prevTestimonial);
+document.querySelector('.testimonial-carousel::after').addEventListener('click', nextTestimonial);
+
+// Inicializa o carrossel com o primeiro depoimento
+updateCarousel();
