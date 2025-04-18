@@ -125,7 +125,9 @@
 /* Contêiner para os depoimentos */
 .testimonial-wrapper {
   display: flex;
+  flex-wrap: wrap; /* Permite que haja mais de uma linha de depoimentos */
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 /* Cada depoimento */
@@ -159,7 +161,7 @@
 @media (max-width: 768px) {
   .testimonial {
     flex: 0 0 90%; /* Exibe 1 depoimento por vez no mobile */
-    font-size: 0.9rem; /* Fonte menor */
+    font-size: 0.8rem; /* Fonte menor */
     margin: 0 5px; /* Ajuste da margem */
   }
 }
@@ -170,6 +172,11 @@
     flex: 0 0 23%; /* Exibe 4 depoimentos por vez */
     font-size: 1rem; /* Fonte para desktop */
   }
+
+  .testimonial-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite mais de uma linha de depoimentos */
+  }
 }
 
 /* Adicionando botões de navegação modernos (setas) */
@@ -179,7 +186,7 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: transparent;
-  color: #0070f3;
+  color: #333; /* Alterado para cinza escuro */
   font-size: 2rem;
   padding: 10px;
   cursor: pointer;
@@ -201,16 +208,6 @@
 .nav-next:hover {
   color: #005bb5; /* Cor mais escura quando o cursor passar */
   transform: translateY(-50%) scale(1.2); /* Aumenta o tamanho das setas no hover */
-}
-
-/* Opção para setas em forma de SVG */
-.nav-prev:before,
-.nav-next:before {
-  content: "";
-  display: inline-block;
-  background: url('https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css') no-repeat center;
-  width: 25px;
-  height: 25px;
 }
 
   </style>
