@@ -112,110 +112,13 @@
       font-weight: 600;
     }
 
-    /* Container principal */
-.testimonial-carousel {
-  width: 100%;
-  overflow: hidden;
-  margin: 2rem auto;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
+<!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
-/* Container principal */
-.testimonial-carousel {
-  width: 100%;
-  overflow: hidden;
-  margin: 2rem auto;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-/* Contêiner para os depoimentos */
-.testimonial-wrapper {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-/* Cada depoimento */
-.testimonial {
-  flex: 0 0 100%; /* Exibe 1 depoimento por vez no mobile */
-  padding: 1rem;
-  text-align: center;
-  background: #ffffff; /* Fundo branco */
-  margin: 0 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Texto do depoimento */
-.testimonial p {
-  font-size: 1rem;
-  color: #333;
-  font-style: italic;
-}
-
-/* Nome do usuário */
-.testimonial strong {
-  font-size: 0.5rem;
-  color: #0070f3;
-  font-weight: 600;
-}
-
-/* Responsividade: Carrossel para mobile */
-@media (max-width: 768px) {
-  .testimonial {
-    flex: 0 0 100%; /* Exibe 1 depoimento por vez no mobile */
-    font-size: 0.5rem; /* Fonte menor */
-    margin: 0 5px; /* Ajuste da margem */
-  }
-}
-
-/* Responsividade: Carrossel para desktop */
-@media (min-width: 769px) {
-  .testimonial {
-    flex: 0 0 20%; /* Exibe 4 depoimentos por vez */
-    font-size: 1rem; /* Fonte para desktop */
-  }
-
-  .testimonial-wrapper {
-    display: flex;
-    flex-wrap: wrap; /* Permite mais de uma linha de depoimentos */
-  }
-}
-
-/* Adicionando botões de navegação modernos (setas) */
-.nav-prev,
-.nav-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: #333; /* Alterado para cinza escuro */
-  font-size: 2rem;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-prev {
-  left: 15px;
-}
-
-.nav-next {
-  right: 15px;
-}
-
-/* Efeito de hover nas setas */
-.nav-prev:hover,
-.nav-next:hover {
-  color: #005bb5; /* Cor mais escura quando o cursor passar */
-}
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
   </style>
 </head>
@@ -235,33 +138,28 @@
   <div id="map"></div>
 
   <div class="testimonial-carousel">
-  <!-- Setas de navegação -->
-  <div class="nav-prev">&#10094;</div> <!-- Setas para voltar -->
-  <div class="nav-next">&#10095;</div> <!-- Setas para avançar -->
-
-  <div class="testimonial-wrapper">
-    <div class="testimonial">
-      <p>"This is the best diaper changing station I've ever used! So convenient!"</p>
-      <p><strong>- Sarah, Mom of 2</strong></p>
-    </div>
-    <div class="testimonial">
-      <p>"Love how easy it is to find baby-friendly places through this site."</p>
-      <p><strong>- John, Dad of 1</strong></p>
-    </div>
-    <div class="testimonial">
-      <p>"Such a great idea! Saved us so much time and stress during our trip."</p>
-      <p><strong>- Emma, Traveler</strong></p>
-    </div>
-    <div class="testimonial">
-      <p>"This service is a lifesaver! Highly recommend it to all parents."</p>
-      <p><strong>- Mark, New Dad</strong></p>
-    </div>
-    <div class="testimonial">
-      <p>"A real game-changer! Now I know where to change my baby anytime."</p>
-      <p><strong>- Sophie, Mom on the go</strong></p>
-    </div>
+  <div>
+    <p>"This is the best diaper changing station I've ever used! So convenient!"</p>
+    <p><strong>- Sarah, Mom of 2</strong></p>
+  </div>
+  <div>
+    <p>"Love how easy it is to find baby-friendly places through this site."</p>
+    <p><strong>- John, Dad of 1</strong></p>
+  </div>
+  <div>
+    <p>"Such a great idea! Saved us so much time and stress during our trip."</p>
+    <p><strong>- Emma, Traveler</strong></p>
+  </div>
+  <div>
+    <p>"This service is a lifesaver! Highly recommend it to all parents."</p>
+    <p><strong>- Mark, New Dad</strong></p>
+  </div>
+  <div>
+    <p>"A real game-changer! Now I know where to change my baby anytime."</p>
+    <p><strong>- Sophie, Mom on the go</strong></p>
   </div>
 </div>
+
 
   <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Best places to change a diaper in Berlin*</h2>
   <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
