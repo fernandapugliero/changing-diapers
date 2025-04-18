@@ -122,17 +122,25 @@
   justify-content: center;
 }
 
+/* Container principal */
+.testimonial-carousel {
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 /* Contêiner para os depoimentos */
 .testimonial-wrapper {
   display: flex;
-  flex-wrap: wrap; /* Permite que haja mais de uma linha de depoimentos */
   transition: transform 0.5s ease-in-out;
-  width: 100%;
 }
 
 /* Cada depoimento */
 .testimonial {
-  flex: 0 0 80%; /* Exibe 1 depoimento por vez no mobile */
+  flex: 0 0 100%; /* Exibe 1 depoimento por vez no mobile */
   padding: 1.5rem;
   text-align: center;
   background: #ffffff; /* Fundo branco */
@@ -160,8 +168,8 @@
 /* Responsividade: Carrossel para mobile */
 @media (max-width: 768px) {
   .testimonial {
-    flex: 0 0 90%; /* Exibe 1 depoimento por vez no mobile */
-    font-size: 0.8rem; /* Fonte menor */
+    flex: 0 0 100%; /* Exibe 1 depoimento por vez no mobile */
+    font-size: 0.9rem; /* Fonte menor */
     margin: 0 5px; /* Ajuste da margem */
   }
 }
