@@ -39,29 +39,26 @@ fetch('places.json')
     console.error("Error loading places data:", error);
   });
 
-$(document).ready(function(){
-  $('.testimonial-carousel').slick({
-    slidesToShow: 1,   // Mostra 1 depoimento por vez
-    slidesToScroll: 1,  // Avança 1 depoimento por vez
-    autoplay: true,     // Define que o carrossel vai rodar automaticamente
-    autoplaySpeed: 3000, // Intervalo de 3 segundos entre cada troca de slide
-    arrows: true,       // Ativa as setas de navegação
-    dots: true,         // Ativa os pontos de navegação
-    responsive: [
-      {
-        breakpoint: 768, // Para mobile
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 1024, // Para desktop
-        settings: {
-          slidesToShow: 4,  // Exibe 4 depoimentos por vez no desktop
-          slidesToScroll: 1,
-        }
-      }
-    ]
-  });
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1, // 1 slide por vez no mobile
+  spaceBetween: 10,  // Espaço entre os slides
+  autoplay: {
+    delay: 3000, // Intervalo entre as trocas de slides
+  },
+  navigation: {
+    nextEl: '.swiper-button-next', // Botão de navegação para frente
+    prevEl: '.swiper-button-prev', // Botão de navegação para trás
+  },
+  breakpoints: {
+    // Para telas menores, no mobile, exibe 1 depoimento
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    // Para telas maiores, no desktop, exibe 4 depoimentos
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    }
+  }
 });
