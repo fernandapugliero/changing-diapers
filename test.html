@@ -112,16 +112,12 @@
       font-weight: 600;
     }
 
-  <!-- Adicionando o CSS do Slick -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-
-  <!-- Adicionando o jQuery (necessário para o Slick funcionar) -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <!-- Adicionando o JS do Slick -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
   </style>
 </head>
 <body>
@@ -139,27 +135,32 @@
   <h2>Find baby-friendly places in your city with changing tables – cafes, restaurants, and more.</h2>
   <div id="map"></div>
 
-  <div class="testimonial-carousel">
-  <div>
-    <p>"This is the best diaper changing station I've ever used! So convenient!"</p>
-    <p><strong>- Sarah, Mom of 2</strong></p>
+  <div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <p>"This is the best diaper changing station I've ever used! So convenient!"</p>
+      <p><strong>- Sarah, Mom of 2</strong></p>
+    </div>
+    <div class="swiper-slide">
+      <p>"Love how easy it is to find baby-friendly places through this site."</p>
+      <p><strong>- John, Dad of 1</strong></p>
+    </div>
+    <div class="swiper-slide">
+      <p>"Such a great idea! Saved us so much time and stress during our trip."</p>
+      <p><strong>- Emma, Traveler</strong></p>
+    </div>
+    <div class="swiper-slide">
+      <p>"This service is a lifesaver! Highly recommend it to all parents."</p>
+      <p><strong>- Mark, New Dad</strong></p>
+    </div>
+    <div class="swiper-slide">
+      <p>"A real game-changer! Now I know where to change my baby anytime."</p>
+      <p><strong>- Sophie, Mom on the go</strong></p>
+    </div>
   </div>
-  <div>
-    <p>"Love how easy it is to find baby-friendly places through this site."</p>
-    <p><strong>- John, Dad of 1</strong></p>
-  </div>
-  <div>
-    <p>"Such a great idea! Saved us so much time and stress during our trip."</p>
-    <p><strong>- Emma, Traveler</strong></p>
-  </div>
-  <div>
-    <p>"This service is a lifesaver! Highly recommend it to all parents."</p>
-    <p><strong>- Mark, New Dad</strong></p>
-  </div>
-  <div>
-    <p>"A real game-changer! Now I know where to change my baby anytime."</p>
-    <p><strong>- Sophie, Mom on the go</strong></p>
-  </div>
+  <!-- Navegação -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
 
 
