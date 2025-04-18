@@ -194,6 +194,29 @@
   right: 10px;
 }
 
+    /* Adicionando botões de navegação */
+.nav-prev,
+.nav-next {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-prev {
+  left: 10px;
+}
+
+.nav-next {
+  right: 10px;
+}
+
   </style>
 </head>
 <body>
@@ -212,6 +235,10 @@
   <div id="map"></div>
 
   <div class="testimonial-carousel">
+  <!-- Setas de navegação -->
+  <div class="nav-prev">&#10094;</div> <!-- Setas para voltar -->
+  <div class="nav-next">&#10095;</div> <!-- Setas para avançar -->
+
   <div class="testimonial-wrapper">
     <div class="testimonial">
       <p>"This is the best diaper changing station I've ever used! So convenient!"</p>
