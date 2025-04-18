@@ -49,7 +49,7 @@ function nextTestimonial() {
   if (currentIndex < totalTestimonials - 1) {
     currentIndex++;
   } else {
-    currentIndex = 0;
+    currentIndex = 0; // Volta ao primeiro depoimento
   }
   updateCarousel();
 }
@@ -59,18 +59,18 @@ function prevTestimonial() {
   if (currentIndex > 0) {
     currentIndex--;
   } else {
-    currentIndex = totalTestimonials - 1;
+    currentIndex = totalTestimonials - 1; // Vai para o último depoimento
   }
   updateCarousel();
 }
 
-// Atualiza o carrossel
+// Atualiza o carrossel com a nova posição
 function updateCarousel() {
-  const offset = -currentIndex * 100; // Mover o carrossel
+  const offset = -currentIndex * 100; // Mover o carrossel para a esquerda ou direita
   testimonialWrapper.style.transform = `translateX(${offset}%)`;
 }
 
-// Adiciona os eventos de navegação
+// Adiciona eventos de navegação
 document.querySelector('.testimonial-carousel::before').addEventListener('click', prevTestimonial);
 document.querySelector('.testimonial-carousel::after').addEventListener('click', nextTestimonial);
 
