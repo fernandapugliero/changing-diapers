@@ -170,6 +170,25 @@
     "created_at": "2025-04-16"
   },
   {
+    "name": "Zenner",
+    "city": "Berlin",
+    "neighborhood": "Treptow - Köpenick",
+    "address": "https://maps.app.goo.gl/qqsz4EpRFKMawD2y7?g_st=com.google.maps.preview.copy",
+    "latitude": null,
+    "longitude": null,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.instagram.com/zenner.biergarten?igsh=MTBremZhamZlem0xcA==",
+    "created_at": "2025-04-18"
+  },
+  {
     "name": "Petit Brunch",
     "city": "Berlin",
     "neighborhood": "Pankow - Prenzlauerberg",
