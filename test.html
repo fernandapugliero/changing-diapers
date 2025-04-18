@@ -111,6 +111,80 @@
     p strong {
       font-weight: 600;
     }
+    /* Container principal */
+.testimonial-carousel {
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem auto;
+  position: relative;
+}
+
+/* Contêiner para os depoimentos */
+.testimonial-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada depoimento */
+.testimonial {
+  flex: 0 0 100%; /* Exibe 1 depoimento por vez */
+  padding: 1rem;
+  text-align: center;
+  background: #f9f9f9;
+  margin: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto do depoimento */
+.testimonial p {
+  font-size: 1.1rem;
+  color: #333;
+  font-style: italic;
+}
+
+/* Nome do usuário */
+.testimonial strong {
+  font-size: 1rem;
+  color: #0070f3;
+  font-weight: 600;
+}
+
+/* Responsividade: Carrossel para mobile */
+@media (max-width: 768px) {
+  .testimonial {
+    flex: 0 0 100%;
+  }
+}
+
+/* Responsividade: Carrossel para desktop */
+@media (min-width: 769px) {
+  .testimonial {
+    flex: 0 0 20%; /* Exibe 5 depoimentos por vez */
+  }
+}
+/* Adicionando botões de navegação */
+.testimonial-carousel::before,
+.testimonial-carousel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.testimonial-carousel::before {
+  left: 10px;
+}
+
+.testimonial-carousel::after {
+  right: 10px;
+}
   </style>
 </head>
 <body>
@@ -124,13 +198,39 @@
     <a href="submit">Submit</a>
   </nav>
 
-  <h1>Need to change a diaper?</h1>
+  <h2>TEST SITE</h2>
   <h2>Find baby-friendly places in your city with changing tables – cafes, restaurants, and more.</h2>
   <div id="map"></div>
 
   <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Best places to change a diaper in Berlin*</h2>
   <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
     Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
+
+  <div class="testimonial-carousel">
+  <div class="testimonial-wrapper">
+    <div class="testimonial">
+      <p>"This is the best diaper changing station I've ever used! So convenient!"</p>
+      <p><strong>- Sarah, Mom of 2</strong></p>
+    </div>
+    <div class="testimonial">
+      <p>"Love how easy it is to find baby-friendly places through this site."</p>
+      <p><strong>- John, Dad of 1</strong></p>
+    </div>
+    <div class="testimonial">
+      <p>"Such a great idea! Saved us so much time and stress during our trip."</p>
+      <p><strong>- Emma, Traveler</strong></p>
+    </div>
+    <div class="testimonial">
+      <p>"This service is a lifesaver! Highly recommend it to all parents."</p>
+      <p><strong>- Mark, New Dad</strong></p>
+    </div>
+    <div class="testimonial">
+      <p>"A real game-changer! Now I know where to change my baby anytime."</p>
+      <p><strong>- Sophie, Mom on the go</strong></p>
+    </div>
+  </div>
+</div>
+
 
   <iframe class="airtable-embed"
     src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
