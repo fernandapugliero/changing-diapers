@@ -27,7 +27,7 @@
     "longitude": 13.3895542,
     "type": "Museum",
     "changing_table_location": [
-      "disable restroom"
+      "wheelchair restroom"
     ],
     "supplies_available": [],
     "conditions": [
@@ -47,7 +47,7 @@
     "longitude": 13.4115883,
     "type": "Bakery",
     "changing_table_location": [
-      "disable restroom"
+      "wheelchair restroom"
     ],
     "supplies_available": [],
     "conditions": [
@@ -184,7 +184,7 @@
     "longitude": 13.4133253,
     "type": "Restaurant",
     "changing_table_location": [
-      "disable restroom"
+      "wheelchair restroom"
     ],
     "supplies_available": [],
     "conditions": [
@@ -232,6 +232,25 @@
     "room_for_stroller": "Yes",
     "site": "https://www.dm.de/",
     "created_at": "2025-04-16"
+  },
+  {
+    "name": "Kadewe",
+    "city": "Berlin",
+    "neighborhood": "Charlottenburg - Wilmersdorf",
+    "address": "Tauentzienstraße 21-24, 10789",
+    "latitude": 52.5015753,
+    "longitude": 13.3410035,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/vhuEKt1EsaQAq7Hs7",
+    "created_at": "2025-04-18"
   },
   {
     "name": "Le Belford",
