@@ -19,6 +19,25 @@
     "created_at": "2025-04-11"
   },
   {
+    "name": "Boutique de LA MAISON",
+    "city": "Berlin",
+    "neighborhood": "Neukölln",
+    "address": "Urbanstraße 70A, 10967",
+    "latitude": 52.4882441,
+    "longitude": 13.4230337,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.lamaison.berlin/en/",
+    "created_at": "2025-04-19"
+  },
+  {
     "name": "Dokumentationszentrum Berliner Mauer",
     "city": "Berlin",
     "neighborhood": "Mitte",
@@ -134,6 +153,25 @@
     "room_for_stroller": "No",
     "site": "https://vier-ecken.webflow.io/",
     "created_at": "2025-04-11"
+  },
+  {
+    "name": "WILMA Shoppen",
+    "city": "Berlin",
+    "neighborhood": "Charlottenburg - Wilmersdorf",
+    "address": "Wilmersdorfer Str. 46, 10627",
+    "latitude": 52.5084018,
+    "longitude": 13.3055222,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "westfield.com",
+    "created_at": "2025-04-19"
   },
   {
     "name": "dm",
