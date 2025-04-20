@@ -77,6 +77,25 @@
     "created_at": "2025-04-16"
   },
   {
+    "name": "Manifesto Markt",
+    "city": "Berlin",
+    "neighborhood": "Mitte",
+    "address": "Alte Potsdamer Str. 7, 10785",
+    "latitude": 52.5081178,
+    "longitude": 13.3744583,
+    "type": "Food court",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.manifestomarket.com/berlin/potsdamer-platz/en/",
+    "created_at": "2025-04-20"
+  },
+  {
     "name": "Kulturhaus Insel Berlin",
     "city": "Berlin",
     "neighborhood": "Treptow - Köpenick",
