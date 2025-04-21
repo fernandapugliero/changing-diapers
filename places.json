@@ -356,12 +356,14 @@
     "latitude": 52.5266907,
     "longitude": 13.3724523,
     "type": "Restaurant",
-    "changing_table_location": "",
+    "changing_table_location": [
+      "women's restroom"
+    ],
     "supplies_available": [],
     "conditions": [
       "Clean"
     ],
-    "room_for_stroller": false,
+    "room_for_stroller": "No",
     "site": "",
     "created_at": "2025-04-19"
   }
