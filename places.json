@@ -1,5 +1,22 @@
 [
   {
+    "name": "Alexa",
+    "city": "Berlin",
+    "neighborhood": "Mitte",
+    "address": "Grunerstraße 20, 10179",
+    "latitude": 52.5190723,
+    "longitude": 13.4160154,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.alexacentre.com/",
+    "created_at": "2025-04-23"
+  },
+  {
     "name": "Zenner",
     "city": "Berlin",
     "neighborhood": "Treptow - Köpenick",
