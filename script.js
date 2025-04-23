@@ -7,34 +7,21 @@ fetch('places.json')
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Agrupar por nome e manter só o mais recente
-    const grouped = {};
+    // Remover a lógica de agrupamento por nome, agora vamos exibir todos os locais
     data.forEach(place => {
-      if (!place.name) return;
-      const currentDate = new Date(place.created_at || 0);
-      const existingDate = grouped[place.name]
-        ? new Date(grouped[place.name].created_at || 0)
-        : null;
-
-      if (!grouped[place.name] || currentDate > existingDate) {
-        grouped[place.name] = place;
-      }
-    });
-
-    // Criar marcadores e popups com o nome e tipo do local
-    Object.values(grouped).forEach(place => {
-      if (!place.latitude || !place.longitude) return;
+      if (!place.latitude || !place.longitude) return; // Se não tiver latitude ou longitude, ignora
 
       // Verificar se o tipo do local existe antes de exibir
       const type = place.type || 'Not Specified';
       const popupContent = `<strong>${place.name || 'Unnamed Place'}</strong><br>
                             ${type}`;
 
+      // Criar o marcador (pin) no mapa para cada local
       L.marker([place.latitude, place.longitude])
         .addTo(map)
         .bindPopup(popupContent);
     });
   })
   .catch(error => {
-    console.error("Error loading places data:", error);
+    console.error("Erro ao carregar os dados dos locais:", error);
   });
