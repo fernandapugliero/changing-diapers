@@ -2,14 +2,13 @@ import requests
 import json
 import os
 import time
-import concurrent.futures
 from datetime import datetime
 
 AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
 BASE_ID = "appjWF7WnC8DRWaXM"
 TABLE_NAME = "Changing Diapers"
 HEADERS = {
-    "Authorization": f"Bearer {patqKFEGtq3QyDYVL}"
+    "Authorization": f"Bearer {AIRTABLE_TOKEN}"
 }
 
 def geocode_address(address):
@@ -31,8 +30,17 @@ def geocode_address(address):
         print(f"[!] Error geocoding address '{address}':", e)
     return None, None
 
-# Função para processar cada local
-def process_place(record):
+url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
+params = {"pageSize": 100}
+places = []
+
+print("[...] Requesting data from Airtable...")
+res = requests.get(url, headers=HEADERS, params=params)
+data = res.json()
+records = data.get("records", [])
+print(f"[✓] Received {len(records)} records from Airtable.")
+
+for record in records:
     fields = record.get("fields", {})
     lat = fields.get("Latitude")
     lon = fields.get("Longitude")
@@ -45,6 +53,7 @@ def process_place(record):
     if (not lat or not lon) and address:
         search_address = f"{address}, {city}, Germany"
         lat, lon = geocode_address(search_address)
+        time.sleep(1)
 
     place = {
         "name": fields.get("Name", ""),
@@ -61,39 +70,9 @@ def process_place(record):
         "site": fields.get("Site", ""),
         "created_at": created_at
     }
+    places.append(place)
 
-    return place
-
-# Função para buscar locais da API do Airtable
-def fetch_airtable_data():
-    url = f"https://api.airtable.com/v0/{appjWF7WnC8DRWaXM}/{Changing Diapers}"
-    params = {"pageSize": 100}
-    places = []
-
-    print("[...] Requesting data from Airtable...")
-    res = requests.get(url, headers=HEADERS, params=params)
-    data = res.json()
-    records = data.get("records", [])
-    print(f"[✓] Received {len(records)} records from Airtable.")
-    
-    # Verificando se a resposta está vindo corretamente
-    if not records:
-        print("[!] No records found.")
-        return []
-
-    # Usando execução paralela para processar múltiplos registros ao mesmo tempo
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        places = list(executor.map(process_place, records))
-
-    return places
-
-# Chamada para buscar dados e salvar no arquivo
-places = fetch_airtable_data()
-
-if places:
-    print(f"[✓] Writing {len(places)} places to places.json...")
-    with open("places.json", "w", encoding="utf-8") as f:
-        json.dump(places, f, ensure_ascii=False, indent=2)
-    print("[✓] Done.")
-else:
-    print("[!] No places to write.")
+print(f"[✓] Writing {len(places)} places to places.json...")
+with open("places.json", "w", encoding="utf-8") as f:
+    json.dump(places, f, ensure_ascii=False, indent=2)
+print("[✓] Done.")
