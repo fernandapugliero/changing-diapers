@@ -1,5 +1,24 @@
 [
   {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "Mitte",
+    "address": "Alte Potsdamer Str. 7",
+    "latitude": 52.5081178,
+    "longitude": 13.3744583,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-23"
+  },
+  {
     "name": "Alexa",
     "city": "Berlin",
     "neighborhood": "Mitte",
