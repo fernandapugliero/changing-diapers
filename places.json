@@ -403,6 +403,25 @@
     "created_at": "2025-04-12"
   },
   {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "Mitte",
+    "address": "Henriette-Herz-Platz 4, 10178",
+    "latitude": 52.5223932,
+    "longitude": 13.4029576,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-23"
+  },
+  {
     "name": "L'osteria",
     "city": "Berlin",
     "neighborhood": "Mitte",
