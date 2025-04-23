@@ -31,7 +31,7 @@ def geocode_address(address):
         print(f"[!] Error geocoding address '{address}':", e)
     return None, None
 
-# Função principal para processar locais
+# Função para processar cada local
 def process_place(record):
     fields = record.get("fields", {})
     lat = fields.get("Latitude")
@@ -76,6 +76,11 @@ def fetch_airtable_data():
     records = data.get("records", [])
     print(f"[✓] Received {len(records)} records from Airtable.")
     
+    # Verificando se a resposta está vindo corretamente
+    if not records:
+        print("[!] No records found.")
+        return []
+
     # Usando execução paralela para processar múltiplos registros ao mesmo tempo
     with concurrent.futures.ThreadPoolExecutor() as executor:
         places = list(executor.map(process_place, records))
@@ -85,7 +90,10 @@ def fetch_airtable_data():
 # Chamada para buscar dados e salvar no arquivo
 places = fetch_airtable_data()
 
-print(f"[✓] Writing {len(places)} places to places.json...")
-with open("places.json", "w", encoding="utf-8") as f:
-    json.dump(places, f, ensure_ascii=False, indent=2)
-print("[✓] Done.")
+if places:
+    print(f"[✓] Writing {len(places)} places to places.json...")
+    with open("places.json", "w", encoding="utf-8") as f:
+        json.dump(places, f, ensure_ascii=False, indent=2)
+    print("[✓] Done.")
+else:
+    print("[!] No places to write.")
