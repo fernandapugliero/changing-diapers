@@ -1,3 +1,4 @@
+
 fetch('places.json')
   .then(res => res.json())
   .then(data => {
@@ -7,36 +8,16 @@ fetch('places.json')
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    const displayedCoordinates = new Set(); // Para armazenar as coordenadas já exibidas
-
+    // Remover a lógica de agrupamento por nome, agora vamos exibir todos os locais
     data.forEach(place => {
-      if (!place.latitude || !place.longitude) return; // Ignorar locais sem coordenadas
+      if (!place.latitude || !place.longitude) return; // Se não tiver latitude ou longitude, ignora
 
-      // Gerar uma string única para as coordenadas
-      let coordsKey = `${place.latitude},${place.longitude}`;
+      // Verificar se o tipo do local existe antes de exibir
+      const type = place.type || 'Not Specified';
+      const popupContent = `<strong>${place.name || 'Unnamed Place'}</strong><br>
+                            ${type}`;
 
-      // Se as coordenadas já foram exibidas, aplica um deslocamento leve
-      if (displayedCoordinates.has(coordsKey)) {
-        // Desloca levemente a latitude e longitude
-        const offsetLat = (Math.random() - 0.5) * 0.001; // Desloca entre -0.0005 e +0.0005
-        const offsetLon = (Math.random() - 0.5) * 0.001; // Desloca entre -0.0005 e +0.0005
-
-        // Aplica o deslocamento nas coordenadas
-        place.latitude += offsetLat;
-        place.longitude += offsetLon;
-        coordsKey = `${place.latitude},${place.longitude}`; // Atualiza a chave com as novas coordenadas
-      }
-
-      // Adiciona a nova coordenada ao conjunto para evitar repetições
-      displayedCoordinates.add(coordsKey);
-
-      // Gerar o conteúdo do popup
-      const popupContent = `
-        <strong>${place.name || 'Unnamed Place'}</strong><br>
-        ${place.type || 'Not Specified'}
-      `;
-
-      // Adiciona o marcador (pin) no mapa com o novo local (se as coordenadas foram ajustadas)
+      // Criar o marcador (pin) no mapa para cada local
       L.marker([place.latitude, place.longitude])
         .addTo(map)
         .bindPopup(popupContent);
