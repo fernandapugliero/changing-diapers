@@ -214,6 +214,25 @@
   {
     "name": "dm",
     "city": "Berlin",
+    "neighborhood": "Kreuzberg",
+    "address": "Wrangelstraße 34, 10997",
+    "latitude": 52.4994894,
+    "longitude": 13.4397299,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-23"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Schönhauser Allee 9",
     "latitude": 52.5301311,
@@ -380,25 +399,6 @@
     "supplies_available": [],
     "conditions": [
       "Excellent"
-    ],
-    "room_for_stroller": "Yes",
-    "site": "dm.de",
-    "created_at": "2025-04-21"
-  },
-  {
-    "name": "dm",
-    "city": "Berlin",
-    "neighborhood": "Kreuzberg",
-    "address": "Wrangelstraße 34, 10997",
-    "latitude": 52.4994894,
-    "longitude": 13.4397299,
-    "type": "Store",
-    "changing_table_location": [
-      "sales area"
-    ],
-    "supplies_available": [],
-    "conditions": [
-      "New"
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
