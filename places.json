@@ -12,7 +12,7 @@
     ],
     "supplies_available": [],
     "conditions": [],
-    "room_for_stroller": false,
+    "room_for_stroller": "Yes",
     "site": "https://www.alexacentre.com/",
     "created_at": "2025-04-23"
   },
