@@ -9,7 +9,7 @@ AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
 BASE_ID = "appjWF7WnC8DRWaXM"
 TABLE_NAME = "Changing Diapers"
 HEADERS = {
-    "Authorization": f"Bearer {AIRTABLE_TOKEN}"
+    "Authorization": f"Bearer {patqKFEGtq3QyDYVL}"
 }
 
 def geocode_address(address):
@@ -66,7 +66,7 @@ def process_place(record):
 
 # Função para buscar locais da API do Airtable
 def fetch_airtable_data():
-    url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
+    url = f"https://api.airtable.com/v0/{appjWF7WnC8DRWaXM}/{Changing Diapers}"
     params = {"pageSize": 100}
     places = []
 
