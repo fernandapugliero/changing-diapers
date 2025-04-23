@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import time
+import concurrent.futures
 from datetime import datetime
 
 AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
@@ -30,17 +31,8 @@ def geocode_address(address):
         print(f"[!] Error geocoding address '{address}':", e)
     return None, None
 
-url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
-params = {"pageSize": 100}
-places = []
-
-print("[...] Requesting data from Airtable...")
-res = requests.get(url, headers=HEADERS, params=params)
-data = res.json()
-records = data.get("records", [])
-print(f"[✓] Received {len(records)} records from Airtable.")
-
-for record in records:
+# Função principal para processar locais
+def process_place(record):
     fields = record.get("fields", {})
     lat = fields.get("Latitude")
     lon = fields.get("Longitude")
@@ -53,7 +45,6 @@ for record in records:
     if (not lat or not lon) and address:
         search_address = f"{address}, {city}, Germany"
         lat, lon = geocode_address(search_address)
-        time.sleep(1)
 
     place = {
         "name": fields.get("Name", ""),
@@ -70,7 +61,29 @@ for record in records:
         "site": fields.get("Site", ""),
         "created_at": created_at
     }
-    places.append(place)
+
+    return place
+
+# Função para buscar locais da API do Airtable
+def fetch_airtable_data():
+    url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
+    params = {"pageSize": 100}
+    places = []
+
+    print("[...] Requesting data from Airtable...")
+    res = requests.get(url, headers=HEADERS, params=params)
+    data = res.json()
+    records = data.get("records", [])
+    print(f"[✓] Received {len(records)} records from Airtable.")
+    
+    # Usando execução paralela para processar múltiplos registros ao mesmo tempo
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        places = list(executor.map(process_place, records))
+
+    return places
+
+# Chamada para buscar dados e salvar no arquivo
+places = fetch_airtable_data()
 
 print(f"[✓] Writing {len(places)} places to places.json...")
 with open("places.json", "w", encoding="utf-8") as f:
