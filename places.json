@@ -113,6 +113,25 @@
     "created_at": "2025-04-21"
   },
   {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "Kreuzberg",
+    "address": " Pücklerstraße 34",
+    "latitude": 52.5024466,
+    "longitude": 13.4311003,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-23"
+  },
+  {
     "name": "Manifesto Markt",
     "city": "Berlin",
     "neighborhood": "Mitte",
