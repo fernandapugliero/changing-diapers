@@ -7,36 +7,38 @@ fetch('places.json')
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    const displayedCoordinates = new Set(); // Para armazenar as coordenadas já exibidas
-    const uniquePlaces = {}; // Usamos um objeto para garantir que locais duplicados sejam evitados
+    // Para armazenar as coordenadas já exibidas e garantir que locais duplicados não apareçam
+    const displayedCoordinates = {}; // Mudança para garantir a contagem correta dos locais
+    const uniquePlaces = {}; // Para garantir que locais duplicados sejam evitados
 
     data.forEach(place => {
       if (!place.latitude || !place.longitude) return; // Ignorar locais sem coordenadas
 
+      // Criar uma chave única com base nas coordenadas
       const coordsKey = `${place.latitude},${place.longitude}`;
-      const placeKey = `${place.name},${coordsKey}`; // Chave única com nome + coordenadas
+      
+      // Criar uma chave combinada para nome e coordenadas
+      const placeKey = `${place.name || 'Unnamed Place'},${coordsKey}`;
 
-      // Verificar se o local já foi exibido (mesmo nome e coordenadas)
-      if (uniquePlaces[placeKey]) return; // Se o local já foi exibido, ignorar
+      // Se o local já foi exibido, não adiciona novamente
+      if (uniquePlaces[placeKey]) return;
 
-      // Se o local tiver coordenadas duplicadas e o nome for diferente, aplica deslocamento
-      if (displayedCoordinates.has(coordsKey)) {
+      // Se o local com a mesma coordenada foi exibido, aplica um deslocamento
+      if (displayedCoordinates[coordsKey]) {
         const offsetLat = (Math.random() - 0.5) * 0.0005; // Desloca levemente na latitude
         const offsetLon = (Math.random() - 0.5) * 0.0005; // Desloca levemente na longitude
 
         place.latitude += offsetLat;
         place.longitude += offsetLon;
 
-        // Atualiza a chave com as novas coordenadas deslocadas
+        // Atualizar chave para coordenadas deslocadas
         const newCoordsKey = `${place.latitude},${place.longitude}`;
-        coordsKey = newCoordsKey; // Atualiza a chave para refletir o deslocamento
+        coordsKey = newCoordsKey;
       }
 
-      // Marca o local como exibido (mesmo coordenadas e nome)
+      // Marca o local como exibido
       uniquePlaces[placeKey] = true;
-
-      // Adiciona as coordenadas ao conjunto para evitar repetição
-      displayedCoordinates.add(coordsKey);
+      displayedCoordinates[coordsKey] = true; // Marcar as coordenadas como já exibidas
 
       // Gerar o conteúdo do popup
       const popupContent = `
