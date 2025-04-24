@@ -3,9 +3,9 @@
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "Mitte",
-    "address": "Alte Potsdamer Str.",
-    "latitude": 52.5081179,
-    "longitude": 13.3744584,
+    "address": "Alte Potsdamer Str. 7",
+    "latitude": 52.5081178,
+    "longitude": 13.3744583,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -381,6 +381,25 @@
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/vhuEKt1EsaQAq7Hs7",
     "created_at": "2025-04-18"
+  },
+  {
+    "name": "Brasilianische Botschaft in Berlin",
+    "city": "Berlin",
+    "neighborhood": "Mitte",
+    "address": " Wallstraße 57",
+    "latitude": 52.5136175,
+    "longitude": 13.4136259,
+    "type": "Institution",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.gov.br/mre/pt-br/embaixada-berlim/de/brasilianische-botschaft-in-berlin",
+    "created_at": "2025-04-24"
   },
   {
     "name": "Le Belford",
