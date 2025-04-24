@@ -19,8 +19,24 @@ fetch('places.json')
       // Verificar se o local já foi exibido (mesmo nome e coordenadas)
       if (uniquePlaces[placeKey]) return; // Se o local já foi exibido, ignorar
 
-      // Marcar o local como exibido
+      // Se o local tiver coordenadas duplicadas e o nome for diferente, aplica deslocamento
+      if (displayedCoordinates.has(coordsKey)) {
+        const offsetLat = (Math.random() - 0.5) * 0.0005; // Desloca levemente na latitude
+        const offsetLon = (Math.random() - 0.5) * 0.0005; // Desloca levemente na longitude
+
+        place.latitude += offsetLat;
+        place.longitude += offsetLon;
+
+        // Atualiza a chave com as novas coordenadas deslocadas
+        const newCoordsKey = `${place.latitude},${place.longitude}`;
+        coordsKey = newCoordsKey; // Atualiza a chave para refletir o deslocamento
+      }
+
+      // Marca o local como exibido (mesmo coordenadas e nome)
       uniquePlaces[placeKey] = true;
+
+      // Adiciona as coordenadas ao conjunto para evitar repetição
+      displayedCoordinates.add(coordsKey);
 
       // Gerar o conteúdo do popup
       const popupContent = `
@@ -28,7 +44,7 @@ fetch('places.json')
         ${place.type || 'Not Specified'}
       `;
 
-      // Adicionar o marcador no mapa
+      // Adicionar o marcador (pin) no mapa
       L.marker([place.latitude, place.longitude])
         .addTo(map)
         .bindPopup(popupContent);
