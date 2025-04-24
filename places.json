@@ -3,9 +3,9 @@
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "Mitte",
-    "address": "Alte Potsdamer Str. 7",
+    "address": "Alte Potsdamer Str.",
     "latitude": 52.5081179,
-    "longitude": 13.3744583,
+    "longitude": 13.3744584,
     "type": "Store",
     "changing_table_location": [
       "sales area"
