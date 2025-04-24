@@ -115,6 +115,26 @@
   {
     "name": "dm",
     "city": "Berlin",
+    "neighborhood": "Charlottenburg - Wilmersdorf",
+    "address": "Tauentzienstraße 2-3",
+    "latitude": 52.5025081,
+    "longitude": 13.3415961,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty",
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-24"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Karl-Marx-Straße 66",
     "latitude": 52.4819616,
