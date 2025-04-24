@@ -364,6 +364,23 @@
     "created_at": "2025-04-16"
   },
   {
+    "name": "IKEA Berlin-Tempelhof",
+    "city": "Berlin",
+    "neighborhood": "Tempelhof - Schöneberg",
+    "address": "Sachsendamm 47",
+    "latitude": 52.4696117,
+    "longitude": 13.3663411,
+    "type": "Store",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://www.ikea.com/de/de/stores/berlin-tempelhof/",
+    "created_at": "2025-04-24"
+  },
+  {
     "name": "Kadewe",
     "city": "Berlin",
     "neighborhood": "Charlottenburg - Wilmersdorf",
