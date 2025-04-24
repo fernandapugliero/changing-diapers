@@ -8,31 +8,19 @@ fetch('places.json')
     }).addTo(map);
 
     const displayedCoordinates = new Set(); // Para armazenar as coordenadas já exibidas
-    const uniquePlaces = []; // Para garantir que não exibimos locais duplicados
+    const uniquePlaces = {}; // Usamos um objeto para garantir que locais duplicados sejam evitados
 
     data.forEach(place => {
       if (!place.latitude || !place.longitude) return; // Ignorar locais sem coordenadas
 
-      // Gerar uma chave única para as coordenadas
-      let coordsKey = `${place.latitude},${place.longitude}`;
+      const coordsKey = `${place.latitude},${place.longitude}`;
+      const placeKey = `${place.name},${coordsKey}`; // Chave única com nome + coordenadas
 
-      // Verificar se o local já foi exibido
-      if (displayedCoordinates.has(coordsKey)) {
-        // Se o local já existe, desloca as coordenadas um pouco
-        const offsetLat = (Math.random() - 0.5) * 0.0005; // Desloca levemente na latitude
-        const offsetLon = (Math.random() - 0.5) * 0.0005; // Desloca levemente na longitude
+      // Verificar se o local já foi exibido (mesmo nome e coordenadas)
+      if (uniquePlaces[placeKey]) return; // Se o local já foi exibido, ignorar
 
-        place.latitude += offsetLat;
-        place.longitude += offsetLon;
-
-        coordsKey = `${place.latitude},${place.longitude}`; // Atualiza a chave com as novas coordenadas
-      }
-
-      // Adiciona as coordenadas ao conjunto para não repetir
-      displayedCoordinates.add(coordsKey);
-
-      // Adiciona o local à lista de locais únicos
-      uniquePlaces.push(place);
+      // Marcar o local como exibido
+      uniquePlaces[placeKey] = true;
 
       // Gerar o conteúdo do popup
       const popupContent = `
@@ -40,13 +28,13 @@ fetch('places.json')
         ${place.type || 'Not Specified'}
       `;
 
-      // Adiciona o marcador no mapa
+      // Adicionar o marcador no mapa
       L.marker([place.latitude, place.longitude])
         .addTo(map)
         .bindPopup(popupContent);
     });
 
-    console.log(`Total de locais únicos exibidos: ${uniquePlaces.length}`);
+    console.log(`Total de locais únicos exibidos: ${Object.keys(uniquePlaces).length}`);
   })
   .catch(error => {
     console.error("Erro ao carregar os dados dos locais:", error);
