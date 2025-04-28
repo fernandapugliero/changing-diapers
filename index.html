@@ -132,13 +132,20 @@
   <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
     Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
 
-  <iframe class="airtable-embed"
-    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
-    frameborder="0"
-    onmousewheel=""
-    width="100%"
-    height="100%"
-    style="background: transparent; border: 1px solid #ccc;"></iframe>
+  <iframe id="airtable-iframe" 
+    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr7pWWZ2QUP1t5zT?viewControls=on" 
+    frameborder="0" 
+    style="background: transparent; border: 1px solid #ccc; width: 100%;" 
+    onload="resizeIframe(this)">
+</iframe>
+
+<script>
+    function resizeIframe(iframe) {
+        var iframeDocument = iframe.contentWindow.document;
+        var iframeHeight = iframeDocument.body.scrollHeight;
+        iframe.style.height = iframeHeight + "px";
+    }
+</script>
 
 <p class="top5-explanation">
   *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
