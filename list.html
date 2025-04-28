@@ -112,10 +112,20 @@
   <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
     Do you know a great diaper changing station? <a href="submit.html">Share it with us now</a> and help our database grow.</p>
   
-    <iframe class="airtable-embed" 
-    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shrc9jpbTtiMEOI62?viewControls=on" 
-    frameborder="0" onmousewheel="" width="100%" height="auto"
-    style="background: transparent; border: 1px solid #ccc;"></iframe>
+    <iframe id="airtable-iframe" 
+    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr7pWWZ2QUP1t5zT?viewControls=on" 
+    frameborder="0" 
+    style="background: transparent; border: 1px solid #ccc; width: 100%;" 
+    onload="resizeIframe(this)">
+</iframe>
+
+<script>
+    function resizeIframe(iframe) {
+        var iframeDocument = iframe.contentWindow.document;
+        var iframeHeight = iframeDocument.body.scrollHeight;
+        iframe.style.height = iframeHeight + "px";
+    }
+</script>
 
     <footer>
     <a href="about">About</a> | 
