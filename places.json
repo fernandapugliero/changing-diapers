@@ -152,6 +152,23 @@
     "created_at": "2025-04-21"
   },
   {
+    "name": "Tapiocaria",
+    "city": "Berlin",
+    "neighborhood": "Friedrichshain",
+    "address": "Samariterstraße 34A",
+    "latitude": 52.5163204,
+    "longitude": 13.4648762,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "men's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "tapiocaria.de",
+    "created_at": "2025-04-27"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
