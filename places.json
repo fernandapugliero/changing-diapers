@@ -575,8 +575,8 @@
     "city": "Lisbon",
     "neighborhood": "",
     "address": "Rua do 4 de Infantaria 53C",
-    "latitude": 38.7188,
-    "longitude": -9.1649,
+    "latitude": null,
+    "longitude": null,
     "type": "Café",
     "changing_table_location": [
       "dedicated room"
