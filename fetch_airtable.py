@@ -11,21 +11,23 @@ HEADERS = {
     "Authorization": f"Bearer {AIRTABLE_TOKEN}"
 }
 
-def geocode_address(address):
+def geocode_address(address, country):
     try:
         url = "https://nominatim.openstreetmap.org/search"
+        # Agora adicionamos o país de maneira dinâmica
+        search_address = f"{address}, {country}"
         params = {
-            "q": address,
+            "q": search_address,
             "format": "json",
             "limit": 1
         }
         res = requests.get(url, params=params, headers={"User-Agent": "changing-diapers-mvp"})
         data = res.json()
         if data:
-            print(f"[✓] Geocoded: {address} -> {data[0]['lat']}, {data[0]['lon']}")
+            print(f"[✓] Geocoded: {search_address} -> {data[0]['lat']}, {data[0]['lon']}")
             return float(data[0]["lat"]), float(data[0]["lon"])
         else:
-            print(f"[!] No result for address: {address}")
+            print(f"[!] No result for address: {search_address}")
     except Exception as e:
         print(f"[!] Error geocoding address '{address}':", e)
     return None, None
@@ -46,13 +48,14 @@ for record in records:
     lon = fields.get("Longitude")
     address = fields.get("Full Address", "")
     city = fields.get("City", "")
+    country = fields.get("Country", "Germany")  # Default para "Germany", se não houver país
     created_at = fields.get("Created at")
 
-    print(f"    - Processing: {fields.get('Name', 'Unnamed')} at {address}, {city}")
+    print(f"    - Processing: {fields.get('Name', 'Unnamed')} at {address}, {city}, {country}")
 
     if (not lat or not lon) and address:
-        search_address = f"{address}, {city}, Germany"
-        lat, lon = geocode_address(search_address)
+        # Passando o país dinamicamente
+        lat, lon = geocode_address(address, country)
         time.sleep(1)
 
     place = {
