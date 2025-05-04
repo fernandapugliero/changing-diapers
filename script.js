@@ -12,10 +12,10 @@ fetch('places.json')
     const pinOffset = 0.0003; // Distância máxima do deslocamento em metros (~30 metros)
 
     data.forEach(place => {
-      // Caso o local não tenha coordenadas válidas, ignora
+      // Garantir que as coordenadas inseridas manualmente sejam preservadas
       if (!place.latitude || !place.longitude) {
         console.log(`Skipping ${place.name} due to missing coordinates`);
-        return;
+        return; // Se coordenadas estiverem ausentes, ignora o local
       }
 
       const coordsKey = `${place.latitude},${place.longitude}`; // Chave com coordenadas únicas
@@ -24,10 +24,11 @@ fetch('places.json')
       // Se o local já foi exibido (mesmo nome e coordenadas), ignora
       if (uniquePlaces[placeKey]) return;
 
-      // Verifica se o local com as mesmas coordenadas foi exibido antes
+      // Se o local com as mesmas coordenadas foi exibido antes
       if (displayedCoordinates.has(coordsKey)) {
         // Se o nome for diferente, desloca as coordenadas ligeiramente para evitar sobreposição
         if (place.name !== displayedCoordinates.get(coordsKey)) {
+          // Desloca as coordenadas para não sobrepor
           place.latitude += (Math.random() - 0.5) * pinOffset;
           place.longitude += (Math.random() - 0.5) * pinOffset;
         }
