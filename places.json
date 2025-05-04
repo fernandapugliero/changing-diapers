@@ -401,6 +401,25 @@
     "created_at": "2025-04-16"
   },
   {
+    "name": "Gal Café ",
+    "city": "Lisbon",
+    "neighborhood": "",
+    "address": "Rua do Forno do Tijolo 54A 1170-172 Lisboa ",
+    "latitude": null,
+    "longitude": null,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-05-04"
+  },
+  {
     "name": "IKEA Berlin-Tempelhof",
     "city": "Berlin",
     "neighborhood": "Tempelhof - Schöneberg",
@@ -556,8 +575,8 @@
     "city": "Lisbon",
     "neighborhood": "",
     "address": "Rua do 4 de Infantaria 53C",
-    "latitude": 38.7188,
-    "longitude": -9.1649,
+    "latitude": null,
+    "longitude": null,
     "type": "Café",
     "changing_table_location": [
       "dedicated room"
