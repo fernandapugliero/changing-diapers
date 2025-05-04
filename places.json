@@ -137,8 +137,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Karl-Marx-Straße 66",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.4819616,
+    "longitude": 13.4327729,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -289,8 +289,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg - Wilmersdorf",
     "address": "Wilmersdorfer Str. 46, 10627",
-    "latitude": 52.5089452,
-    "longitude": 13.3045001,
+    "latitude": 52.5084018,
+    "longitude": 13.3055222,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -308,8 +308,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Wrangelstraße 34, 10997",
-    "latitude": 52.4982972,
-    "longitude": 13.442619,
+    "latitude": 52.4994894,
+    "longitude": 13.4397299,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -405,8 +405,8 @@
     "city": "Lisbon",
     "neighborhood": "",
     "address": "Rua do Forno do Tijolo 54A 1170-172 Lisboa ",
-    "latitude": 38.7243137,
-    "longitude": -9.1325443,
+    "latitude": null,
+    "longitude": null,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -460,8 +460,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Wallstraße 57",
-    "latitude": 50.0104483,
-    "longitude": 8.2428416,
+    "latitude": 52.5136175,
+    "longitude": 13.4136259,
     "type": "Institution",
     "changing_table_location": [
       "women's restroom"
@@ -575,8 +575,8 @@
     "city": "Lisbon",
     "neighborhood": "",
     "address": "Rua do 4 de Infantaria 53C",
-    "latitude": 38.7201818,
-    "longitude": -9.1648956,
+    "latitude": null,
+    "longitude": null,
     "type": "Café",
     "changing_table_location": [
       "dedicated room"
