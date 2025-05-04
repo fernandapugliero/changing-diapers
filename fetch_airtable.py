@@ -14,8 +14,12 @@ HEADERS = {
 def geocode_address(address, country):
     try:
         url = "https://nominatim.openstreetmap.org/search"
-        # Agora adicionamos o país de maneira dinâmica
-        search_address = f"{address}, {country}"
+        # Se o país não for a Alemanha, adiciona o país ao final do endereço
+        if country != "Germany":
+            search_address = f"{address}, {country}"
+        else:
+            search_address = f"{address}"  # Não adicionar país para a Alemanha
+
         params = {
             "q": search_address,
             "format": "json",
