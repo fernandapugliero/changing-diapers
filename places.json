@@ -137,8 +137,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Karl-Marx-Straße 66",
-    "latitude": 52.4819616,
-    "longitude": 13.4327729,
+    "latitude": null,
+    "longitude": null,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -173,8 +173,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Pücklerstraße 34",
-    "latitude": 51.736384,
-    "longitude": 14.3699579,
+    "latitude": 52.5024466,
+    "longitude": 13.4311003,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -289,8 +289,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg - Wilmersdorf",
     "address": "Wilmersdorfer Str. 46, 10627",
-    "latitude": 52.5084018,
-    "longitude": 13.3055222,
+    "latitude": 52.5089452,
+    "longitude": 13.3045001,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
