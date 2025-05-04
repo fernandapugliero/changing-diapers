@@ -12,9 +12,9 @@ fetch('places.json')
     const pinOffset = 0.0003; // Distância máxima do deslocamento em metros (~30 metros)
 
     data.forEach(place => {
-      // Ignora locais sem coordenadas ou com coordenadas nulas
+      // Caso o local não tenha coordenadas válidas, ignora
       if (!place.latitude || !place.longitude) {
-        console.log(`Skipping place ${place.name} due to missing coordinates`);
+        console.log(`Skipping ${place.name} due to missing coordinates`);
         return;
       }
 
@@ -26,14 +26,16 @@ fetch('places.json')
 
       // Verifica se o local com as mesmas coordenadas foi exibido antes
       if (displayedCoordinates.has(coordsKey)) {
-        // Desloca as coordenadas ligeiramente se o local já foi exibido
-        place.latitude += (Math.random() - 0.5) * pinOffset;
-        place.longitude += (Math.random() - 0.5) * pinOffset;
+        // Se o nome for diferente, desloca as coordenadas ligeiramente para evitar sobreposição
+        if (place.name !== displayedCoordinates.get(coordsKey)) {
+          place.latitude += (Math.random() - 0.5) * pinOffset;
+          place.longitude += (Math.random() - 0.5) * pinOffset;
+        }
       }
 
       // Marca o local como exibido
       uniquePlaces[placeKey] = true;
-      displayedCoordinates.set(coordsKey, true); // Marca as coordenadas como já exibidas
+      displayedCoordinates.set(coordsKey, place.name); // Marca as coordenadas e nome como já exibidos
 
       // Gerar o conteúdo do popup
       const popupContent = `
