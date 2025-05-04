@@ -173,8 +173,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": " Pücklerstraße 34",
-    "latitude": 52.5024466,
-    "longitude": 13.4311003,
+    "latitude": 51.736384,
+    "longitude": 14.3699579,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -308,8 +308,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Wrangelstraße 34, 10997",
-    "latitude": 52.4994894,
-    "longitude": 13.4397299,
+    "latitude": 52.4982972,
+    "longitude": 13.442619,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -402,11 +402,11 @@
   },
   {
     "name": "Gal Café ",
-    "city": "Lisboa",
+    "city": "Lisbon",
     "neighborhood": "",
     "address": "Rua do Forno do Tijolo 54A 1170-172 Lisboa ",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 38.7243137,
+    "longitude": -9.1325443,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -460,8 +460,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": " Wallstraße 57",
-    "latitude": 52.5136175,
-    "longitude": 13.4136259,
+    "latitude": 50.0104483,
+    "longitude": 8.2428416,
     "type": "Institution",
     "changing_table_location": [
       "women's restroom"
@@ -572,11 +572,11 @@
   },
   {
     "name": "Baby & Beans",
-    "city": "Lisboa",
+    "city": "Lisbon",
     "neighborhood": "",
     "address": "Rua do 4 de Infantaria 53C",
-    "latitude": 38.7188,
-    "longitude": -9.1649,
+    "latitude": 38.7201818,
+    "longitude": -9.1648956,
     "type": "Café",
     "changing_table_location": [
       "dedicated room"
