@@ -341,6 +341,26 @@
     "created_at": "2025-05-11"
   },
   {
+    "name": "BRLO",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Schöneberger Str. 16, 10963 Berlin",
+    "latitude": 52.5000198,
+    "longitude": 13.3736145,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "brlo.de",
+    "created_at": "2025-05-12"
+  },
+  {
     "name": "MaraLou Café",
     "city": "Berlin",
     "neighborhood": "",
