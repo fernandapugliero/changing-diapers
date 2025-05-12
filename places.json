@@ -2,7 +2,7 @@
   {
     "name": "dm",
     "city": "Berlin",
-    "neighborhood": "Mitte",
+    "neighborhood": "",
     "address": "Alte Potsdamer Str. 7",
     "latitude": 52.5081178,
     "longitude": 13.3744583,
@@ -21,7 +21,7 @@
   {
     "name": "Alexa",
     "city": "Berlin",
-    "neighborhood": "Mitte",
+    "neighborhood": "",
     "address": "Grunerstraße 20, 10179",
     "latitude": 52.5190723,
     "longitude": 13.4160154,
@@ -38,7 +38,7 @@
   {
     "name": "Zenner",
     "city": "Berlin",
-    "neighborhood": "Treptow - Köpenick",
+    "neighborhood": "",
     "address": "Alt Treptow 15",
     "latitude": 52.4872491,
     "longitude": 13.4774693,
@@ -57,7 +57,7 @@
   {
     "name": "Boutique de LA MAISON",
     "city": "Berlin",
-    "neighborhood": "Neukölln",
+    "neighborhood": "",
     "address": "Urbanstraße 70A, 10967",
     "latitude": 52.4882441,
     "longitude": 13.4230337,
@@ -76,7 +76,7 @@
   {
     "name": "Dokumentationszentrum Berliner Mauer",
     "city": "Berlin",
-    "neighborhood": "Mitte",
+    "neighborhood": "",
     "address": "Bernauer Str. 111, 13355",
     "latitude": 52.5353001,
     "longitude": 13.3895542,
@@ -96,7 +96,7 @@
   {
     "name": "Junge Die Bäckerei.",
     "city": "Berlin",
-    "neighborhood": "Pankow - Prenzlauerberg",
+    "neighborhood": "",
     "address": "Schönhauser Allee 10-11, 10119",
     "latitude": 52.5305899,
     "longitude": 13.4115883,
@@ -115,7 +115,7 @@
   {
     "name": "I Due Forni",
     "city": "Berlin",
-    "neighborhood": "Pankow - Prenzlauerberg",
+    "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119 Berlin",
     "latitude": 52.5308311,
     "longitude": 13.412464,
@@ -151,7 +151,7 @@
   {
     "name": "dm",
     "city": "Berlin",
-    "neighborhood": "Charlottenburg - Wilmersdorf",
+    "neighborhood": "",
     "address": "Tauentzienstraße 2-3",
     "latitude": 52.5025081,
     "longitude": 13.3415961,
@@ -171,7 +171,7 @@
   {
     "name": "dm",
     "city": "Berlin",
-    "neighborhood": "Neukölln",
+    "neighborhood": "",
     "address": "Karl-Marx-Straße 66",
     "latitude": 52.4819616,
     "longitude": 13.4327729,
@@ -190,7 +190,7 @@
   {
     "name": "Tapiocaria",
     "city": "Berlin",
-    "neighborhood": "Friedrichshain",
+    "neighborhood": "",
     "address": "Samariterstraße 34A",
     "latitude": 52.5163204,
     "longitude": 13.4648762,
@@ -207,7 +207,7 @@
   {
     "name": "dm",
     "city": "Berlin",
-    "neighborhood": "Kreuzberg",
+    "neighborhood": "",
     "address": "Pücklerstraße 34",
     "latitude": 52.5024466,
     "longitude": 13.4311003,
@@ -226,7 +226,7 @@
   {
     "name": "Manifesto Markt",
     "city": "Berlin",
-    "neighborhood": "Mitte",
+    "neighborhood": "",
     "address": "Alte Potsdamer Str. 7, 10785",
     "latitude": 52.5081178,
     "longitude": 13.3744583,
@@ -245,7 +245,7 @@
   {
     "name": "Café Marameo",
     "city": "Berlin",
-    "neighborhood": "Tempelhof - Schöneberg",
+    "neighborhood": "",
     "address": "Chamissopl. 7, 10965",
     "latitude": 52.4881298,
     "longitude": 13.3917754,
@@ -264,7 +264,7 @@
   {
     "name": "Standesamt Neukölln",
     "city": "Berlin",
-    "neighborhood": "Neukölln",
+    "neighborhood": "",
     "address": "Haus 5, Blaschkoallee 32, 12359",
     "latitude": null,
     "longitude": null,
@@ -284,7 +284,7 @@
   {
     "name": "Kulturhaus Insel Berlin",
     "city": "Berlin",
-    "neighborhood": "Treptow - Köpenick",
+    "neighborhood": "",
     "address": "Alt Treptow 6, 12435 Berlin",
     "latitude": 52.4867977,
     "longitude": 13.4809232,
@@ -303,7 +303,7 @@
   {
     "name": "Cafe am Neuen See",
     "city": "Berlin",
-    "neighborhood": "Charlottenburg - Wilmersdorf",
+    "neighborhood": "",
     "address": "Lichtensteinallee 2, 10787",
     "latitude": 52.5103795,
     "longitude": 13.3444923,
@@ -343,7 +343,7 @@
   {
     "name": "MaraLou Café",
     "city": "Berlin",
-    "neighborhood": "Neukölln",
+    "neighborhood": "",
     "address": "Richardpl. 2A",
     "latitude": 52.4746496,
     "longitude": 13.4465408,
@@ -362,7 +362,7 @@
   {
     "name": "Vier Ecken",
     "city": "Berlin",
-    "neighborhood": "Neukölln",
+    "neighborhood": "",
     "address": "Böhmische Straße 14, 12055 Berlin",
     "latitude": 52.47424,
     "longitude": 13.4495345,
@@ -382,7 +382,7 @@
   {
     "name": "WILMA Shoppen",
     "city": "Berlin",
-    "neighborhood": "Charlottenburg - Wilmersdorf",
+    "neighborhood": "",
     "address": "Wilmersdorfer Str. 46, 10627",
     "latitude": 52.5084018,
     "longitude": 13.3055222,
@@ -401,7 +401,7 @@
   {
     "name": "dm",
     "city": "Berlin",
-    "neighborhood": "Kreuzberg",
+    "neighborhood": "",
     "address": "Wrangelstraße 34, 10997",
     "latitude": 52.4994894,
     "longitude": 13.4397299,
@@ -420,7 +420,7 @@
   {
     "name": "dm",
     "city": "Berlin",
-    "neighborhood": "Mitte",
+    "neighborhood": "",
     "address": "Schönhauser Allee 9",
     "latitude": 52.5301311,
     "longitude": 13.4109881,
@@ -441,7 +441,7 @@
   {
     "name": "Zenner",
     "city": "Berlin",
-    "neighborhood": "Treptow - Köpenick",
+    "neighborhood": "",
     "address": "Alt Treptow 15",
     "latitude": 52.4872491,
     "longitude": 13.4774693,
@@ -460,7 +460,7 @@
   {
     "name": "Petit Brunch",
     "city": "Berlin",
-    "neighborhood": "Pankow - Prenzlauerberg",
+    "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437 Berlin",
     "latitude": 52.5464715,
     "longitude": 13.4132514,
@@ -479,7 +479,7 @@
   {
     "name": "Kiez Kaffee Kraft",
     "city": "Berlin",
-    "neighborhood": "Pankow - Prenzlauerberg",
+    "neighborhood": "",
     "address": "Breite Str. 35, 13187 Berlin",
     "latitude": 52.5699462,
     "longitude": 13.4076954,
@@ -517,7 +517,7 @@
   {
     "name": "IKEA Berlin-Tempelhof",
     "city": "Berlin",
-    "neighborhood": "Tempelhof - Schöneberg",
+    "neighborhood": "",
     "address": "Sachsendamm 47",
     "latitude": 52.4696117,
     "longitude": 13.3663411,
@@ -534,7 +534,7 @@
   {
     "name": "Kadewe",
     "city": "Berlin",
-    "neighborhood": "Charlottenburg - Wilmersdorf",
+    "neighborhood": "",
     "address": "Tauentzienstraße 21-24, 10789",
     "latitude": 52.5015753,
     "longitude": 13.3410035,
@@ -553,7 +553,7 @@
   {
     "name": "Brasilianische Botschaft in Berlin",
     "city": "Berlin",
-    "neighborhood": "Mitte",
+    "neighborhood": "",
     "address": "Wallstraße 57",
     "latitude": 52.5136175,
     "longitude": 13.4136259,
@@ -572,7 +572,7 @@
   {
     "name": "Le Belford",
     "city": "Berlin",
-    "neighborhood": "Pankow - Prenzlauerberg",
+    "neighborhood": "",
     "address": "Kollwitzstraße 28, 10405",
     "latitude": 52.5334029,
     "longitude": 13.4151951,
@@ -592,7 +592,7 @@
   {
     "name": "Mignon Sicilian Bakery",
     "city": "Berlin",
-    "neighborhood": "Neukölln",
+    "neighborhood": "",
     "address": "Donaustraße 84, 12043",
     "latitude": 52.4790851,
     "longitude": 13.4415103,
@@ -611,7 +611,7 @@
   {
     "name": "dm",
     "city": "Berlin",
-    "neighborhood": "Mitte",
+    "neighborhood": "",
     "address": "Henriette-Herz-Platz 4, 10178",
     "latitude": 52.5223932,
     "longitude": 13.4029576,
@@ -630,7 +630,7 @@
   {
     "name": "L'osteria",
     "city": "Berlin",
-    "neighborhood": "Mitte",
+    "neighborhood": "",
     "address": "Hilda-Geiringer-Weg 4",
     "latitude": 52.5266907,
     "longitude": 13.3724523,
@@ -649,7 +649,7 @@
   {
     "name": "dm",
     "city": "Berlin",
-    "neighborhood": "Friedrichshain",
+    "neighborhood": "",
     "address": "Tamara-Danz-Straße 11",
     "latitude": 52.5060486,
     "longitude": 13.4466595,
