@@ -74,6 +74,21 @@
     "created_at": "2025-04-19"
   },
   {
+    "name": "Boulderwelt Hamburg",
+    "city": "Hamburg",
+    "neighborhood": "",
+    "address": "Beim Strohhause 17, 20097",
+    "latitude": 53.5540145,
+    "longitude": 10.0208859,
+    "type": "Fitness Studio",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "boulderwelt-hamburg.de",
+    "created_at": "2025-05-20"
+  },
+  {
     "name": "Dokumentationszentrum Berliner Mauer",
     "city": "Berlin",
     "neighborhood": "",
@@ -299,6 +314,21 @@
     "room_for_stroller": "Yes",
     "site": "https://www.inselberlin.de/",
     "created_at": "2025-04-11"
+  },
+  {
+    "name": "Emilia's Familiencafé",
+    "city": "Hamburg",
+    "neighborhood": "",
+    "address": "Barmbeker Str. 169, 22299 Hamburg",
+    "latitude": 53.5922755,
+    "longitude": 10.0024836,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-05-20"
   },
   {
     "name": "Cafe am Neuen See",
