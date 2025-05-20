@@ -554,6 +554,23 @@
     "created_at": "2025-05-04"
   },
   {
+    "name": "Minicity Kindercafé",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Hauptstraße 73, 12159 Berlin",
+    "latitude": 52.4747941,
+    "longitude": 13.3388243,
+    "type": "Café",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "minicity.cafe",
+    "created_at": "2025-05-19"
+  },
+  {
     "name": "IKEA Berlin-Tempelhof",
     "city": "Berlin",
     "neighborhood": "",
