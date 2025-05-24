@@ -544,6 +544,23 @@
     "created_at": "2025-04-23"
   },
   {
+    "name": "Café Cosita",
+    "city": "Geesthacht",
+    "neighborhood": "",
+    "address": "Bergedorfer Str. 69, 21502",
+    "latitude": 53.4363586,
+    "longitude": 10.3695864,
+    "type": "Café",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.instagram.com/cafe_cosita_geesthacht",
+    "created_at": "2025-05-23"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
