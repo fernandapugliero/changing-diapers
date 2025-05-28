@@ -109,11 +109,11 @@
   },
   {
     "name": "Urbayn",
-    "city": "berlin",
+    "city": "Berlin",
     "neighborhood": "",
     "address": "Glasbläserallee 25, 10245 Berlin",
-    "latitude": 52.4986608,
-    "longitude": 13.4690444,
+    "latitude": 52.4987096,
+    "longitude": 13.469097,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -128,7 +128,7 @@
   },
   {
     "name": "Marco Polo Uno",
-    "city": "berlin",
+    "city": "Berlin",
     "neighborhood": "",
     "address": "Dolgenseestraße 9 G, 10319 Berlin",
     "latitude": 52.4930389,
@@ -412,9 +412,9 @@
   },
   {
     "name": "Pastelaria Litoral",
-    "city": "Osório/RS",
+    "city": "Osório",
     "neighborhood": "",
-    "address": "Rodovia Rs-030 - 3010 - Km 90 Joquei Club, Osorio, State of Rio Grande do Sul 95520-993 Brazil",
+    "address": "Rodovia RS-030, Km 90 Joquei Club, 95520-993",
     "latitude": null,
     "longitude": null,
     "type": "Café",
@@ -678,11 +678,13 @@
     "name": "Shopping Cidade Jardim",
     "city": "São Paulo",
     "neighborhood": "",
-    "address": "Shopping cidade jardim ",
+    "address": "Shopping Cidade Jardim ",
     "latitude": -23.599033,
     "longitude": -46.6975701,
-    "type": "Gallery",
-    "changing_table_location": "",
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
     "supplies_available": [],
     "conditions": [],
     "room_for_stroller": false,
@@ -710,11 +712,11 @@
   },
   {
     "name": "Pastasciutta",
-    "city": "Porto Alegre/RS",
+    "city": "Porto Alegre",
     "neighborhood": "",
-    "address": "Avenida dos estados, 111. Bairro Sao Joao. 90200-000",
-    "latitude": null,
-    "longitude": null,
+    "address": "Avenida dos Estados 111, 90200-000",
+    "latitude": -29.996074,
+    "longitude": -51.1873821,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
