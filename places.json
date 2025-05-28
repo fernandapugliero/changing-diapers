@@ -411,6 +411,25 @@
     "created_at": "2025-04-11"
   },
   {
+    "name": "Pastelaria Litoral",
+    "city": "Osório",
+    "neighborhood": "",
+    "address": "RS-030, 3010 - Albatroz, Osório",
+    "latitude": null,
+    "longitude": null,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.instagram.com/pastelarialitoral?igsh=OTY3b3ozYml4ZXoz",
+    "created_at": "2025-05-27"
+  },
+  {
     "name": "Emilia's Familiencafé",
     "city": "Hamburg",
     "neighborhood": "",
