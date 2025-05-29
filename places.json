@@ -48,7 +48,8 @@
     ],
     "supplies_available": [],
     "conditions": [
-      "Dirty"
+      "Dirty",
+      "Heavily used"
     ],
     "room_for_stroller": "Yes",
     "site": "https://zenner.berlin/",
@@ -404,7 +405,7 @@
     ],
     "supplies_available": [],
     "conditions": [
-      "Heavily used"
+      "Excellent"
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.inselberlin.de/",
@@ -522,6 +523,25 @@
     "room_for_stroller": "Yes",
     "site": "brlo.de",
     "created_at": "2025-05-12"
+  },
+  {
+    "name": "Forum Gesundheit Neukölln e.V.",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Weserstr. 175, 12045",
+    "latitude": 52.4846106,
+    "longitude": 13.4393169,
+    "type": "Fitness Studio",
+    "changing_table_location": [
+      "men's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Heavily used"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.forumgesundheitneukoelln.de/",
+    "created_at": "2025-05-28"
   },
   {
     "name": "MaraLou Café",
