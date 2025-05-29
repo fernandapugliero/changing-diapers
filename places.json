@@ -36,6 +36,23 @@
     "created_at": "2025-04-23"
   },
   {
+    "name": "Tempelhofer Feld",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Straße 645, Am Tempelhofer Feld, 12049 Berlin",
+    "latitude": null,
+    "longitude": null,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-05-29"
+  },
+  {
     "name": "Zenner",
     "city": "Berlin",
     "neighborhood": "",
@@ -748,6 +765,23 @@
     "created_at": "2025-05-27"
   },
   {
+    "name": "La Maison",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Herrfurthpl. 14, 12049 Berlin",
+    "latitude": 52.476987,
+    "longitude": 13.4224107,
+    "type": "Café",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-05-29"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -932,6 +966,23 @@
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/vhuEKt1EsaQAq7Hs7",
     "created_at": "2025-04-18"
+  },
+  {
+    "name": "Engels",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Herrfurthstraße 21, 12049 Berlin",
+    "latitude": 52.4766888,
+    "longitude": 13.4198521,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-05-29"
   },
   {
     "name": "Brasilianische Botschaft in Berlin",
