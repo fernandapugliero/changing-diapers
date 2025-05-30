@@ -39,9 +39,9 @@
     "name": " Toilette im Tempelhofer Feld",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Straße 645, Am Tempelhofer Feld, 12049",
-    "latitude": null,
-    "longitude": null,
+    "address": "Straße 645, 12049",
+    "latitude": 52.4766787,
+    "longitude": 13.4185319,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
