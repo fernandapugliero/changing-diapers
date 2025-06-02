@@ -130,8 +130,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Glasbläserallee 25, 10245 Berlin",
-    "latitude": 52.4987096,
-    "longitude": 13.469097,
+    "latitude": 52.4986608,
+    "longitude": 13.4690444,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -162,6 +162,21 @@
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/Cqmc5DbmdsQpfyWV7?g_st=com.google.maps.preview.copy",
     "created_at": "2025-05-27"
+  },
+  {
+    "name": "Little Ones Cafe",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Karl-Marx-Allee 92, 10243",
+    "latitude": 52.5165045,
+    "longitude": 13.4417246,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.instagram.com/little_ones_cafe",
+    "created_at": "2025-06-02"
   },
   {
     "name": "Dokumentationszentrum Berliner Mauer",
@@ -318,8 +333,8 @@
     "city": "Dresden",
     "neighborhood": "",
     "address": "Webergasse 1, 01067",
-    "latitude": 51.0500299,
-    "longitude": 13.7353085,
+    "latitude": 51.0497107,
+    "longitude": 13.7354113,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -375,8 +390,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Chamissopl. 7, 10965",
-    "latitude": 52.4881298,
-    "longitude": 13.3917754,
+    "latitude": 52.4881536,
+    "longitude": 13.3918234,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -604,8 +619,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Wilmersdorfer Str. 46, 10627",
-    "latitude": 52.5084018,
-    "longitude": 13.3055222,
+    "latitude": 52.5091104,
+    "longitude": 13.3046728,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -640,8 +655,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rummelsburger Str. 16, 12459",
-    "latitude": 52.4690996,
-    "longitude": 13.5124943,
+    "latitude": 52.4692855,
+    "longitude": 13.5123692,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -659,8 +674,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Alt-Stralau 61, 10245 Berlin",
-    "latitude": 52.4958391,
-    "longitude": 13.4678929,
+    "latitude": 52.4959189,
+    "longitude": 13.4677677,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1064,8 +1079,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Heidestraße 40, 10557",
-    "latitude": 52.5327109,
-    "longitude": 13.3656755,
+    "latitude": 52.5327671,
+    "longitude": 13.365657,
     "type": "Store",
     "changing_table_location": [
       "sales area"
