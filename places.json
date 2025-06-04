@@ -218,6 +218,23 @@
     "created_at": "2025-04-16"
   },
   {
+    "name": "Smart Kids - Family Play Café ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Revalerstr 17, 10245",
+    "latitude": 52.5071676,
+    "longitude": 13.4574607,
+    "type": "Café",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "https://www.instagram.com/smartkids.cafe",
+    "created_at": "2025-06-04"
+  },
+  {
     "name": "I Due Forni",
     "city": "Berlin",
     "neighborhood": "",
