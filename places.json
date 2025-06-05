@@ -885,25 +885,6 @@
     "created_at": "2025-05-29"
   },
   {
-    "name": "Pasiphae Restaurant",
-    "city": "Iraklio",
-    "neighborhood": "",
-    "address": "Leof. Knosou 329, Iraklio 715 00, Greece",
-    "latitude": null,
-    "longitude": null,
-    "type": "Restaurant",
-    "changing_table_location": [
-      "mixed restroom"
-    ],
-    "supplies_available": [],
-    "conditions": [
-      "Decent"
-    ],
-    "room_for_stroller": "Yes",
-    "site": "https://www.google.com/maps/place/Pasiphae+Restaurant/@35.3008789,25.1599453,17z/data=!3m1!4b1!4m6!3m5!1s0x149a5916b7e92fbd:0xcc50bacf25189f02!8m2!3d35.3008789!4d25.1599453!16s%2Fg%2F11cnbsx4wl?hl=en&entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D",
-    "created_at": "2025-06-05"
-  },
-  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
