@@ -53,6 +53,21 @@
     "created_at": "2025-05-29"
   },
   {
+    "name": "LUC Bistro",
+    "city": "Porto Alegre",
+    "neighborhood": "",
+    "address": "R. Dinarte Ribeiro 17, 90570-050",
+    "latitude": -30.023002,
+    "longitude": -51.2040425,
+    "type": "Restaurant",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.instagram.com/lucbistro",
+    "created_at": "2025-06-05"
+  },
+  {
     "name": "Zenner",
     "city": "Berlin",
     "neighborhood": "",
@@ -534,6 +549,45 @@
     "created_at": "2025-04-14"
   },
   {
+    "name": "Casalot Restaurant",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Heidestraße 15, 10557 Berlin",
+    "latitude": 52.5324661,
+    "longitude": 13.3668089,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/VwFc6KRyc9sED1cV8",
+    "created_at": "2025-06-05"
+  },
+  {
+    "name": "Öffentliche Toilette",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Tunnelstraße 12, 10245",
+    "latitude": 52.4901396,
+    "longitude": 13.4806431,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "berlin.de",
+    "created_at": "2025-06-05"
+  },
+  {
     "name": "Public Toilet",
     "city": "Copenhagen",
     "neighborhood": "",
@@ -831,6 +885,25 @@
     "created_at": "2025-05-29"
   },
   {
+    "name": "Pasiphae Restaurant",
+    "city": "Iraklio",
+    "neighborhood": "",
+    "address": "Leof. Knosou 329, Iraklio 715 00, Greece",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.google.com/maps/place/Pasiphae+Restaurant/@35.3008789,25.1599453,17z/data=!3m1!4b1!4m6!3m5!1s0x149a5916b7e92fbd:0xcc50bacf25189f02!8m2!3d35.3008789!4d25.1599453!16s%2Fg%2F11cnbsx4wl?hl=en&entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D",
+    "created_at": "2025-06-05"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -869,6 +942,23 @@
     "room_for_stroller": "Yes",
     "site": "https://ishin.de/",
     "created_at": "2025-05-25"
+  },
+  {
+    "name": "Therme Erding",
+    "city": "Erding",
+    "neighborhood": "",
+    "address": " Thermenallee 1-5, 85435 Erding",
+    "latitude": 48.2897062,
+    "longitude": 11.8872151,
+    "type": "Spa",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-06-05"
   },
   {
     "name": "Zenner",
@@ -1215,6 +1305,21 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-05-03"
+  },
+  {
+    "name": "Refugio Café",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Lenaustraße 4, 12047",
+    "latitude": 52.4899283,
+    "longitude": 13.4252308,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.refugio.berlin/",
+    "created_at": "2025-06-05"
   },
   {
     "name": "luuv café",
