@@ -126,6 +126,23 @@
     "created_at": "2025-04-19"
   },
   {
+    "name": "Pomeranze",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": " Leinestraße 48, 12049",
+    "latitude": 52.4727915,
+    "longitude": 13.4253544,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "https://pomeranzeberlin.de/",
+    "created_at": "2025-06-05"
+  },
+  {
     "name": "Boulderwelt Hamburg",
     "city": "Hamburg",
     "neighborhood": "",
@@ -325,6 +342,21 @@
     "created_at": "2025-04-21"
   },
   {
+    "name": "Junge Die Bäckerei.",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Carl-Schurz-Straße 43, 13597 Berlin",
+    "latitude": 52.5379717,
+    "longitude": 13.2039529,
+    "type": "Bakery",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-06-05"
+  },
+  {
     "name": "Tapiocaria",
     "city": "Berlin",
     "neighborhood": "",
@@ -378,6 +410,25 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-05-25"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Chausseestraße 40, 10115",
+    "latitude": 52.5337675,
+    "longitude": 13.3793608,
+    "type": "Store",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-05"
   },
   {
     "name": "Manifesto Markt",
@@ -474,6 +525,25 @@
     "room_for_stroller": "Yes",
     "site": "https://www.inselberlin.de/",
     "created_at": "2025-04-11"
+  },
+  {
+    "name": "dm",
+    "city": "   Berlin",
+    "neighborhood": "",
+    "address": "Greifswalder Straße/Thomas-Mann-Straße, 10409 Berlin",
+    "latitude": null,
+    "longitude": null,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/WkQQHA3XSHKRaxvU8?g_st=com.google.maps.preview.copy",
+    "created_at": "2025-06-05"
   },
   {
     "name": "Pastelaria Litoral",
@@ -741,6 +811,26 @@
     "created_at": "2025-05-18"
   },
   {
+    "name": "Peter Pane ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rankestraße 35, 10789 Berlin",
+    "latitude": 52.5037858,
+    "longitude": 13.3354195,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-05"
+  },
+  {
     "name": "Kap Frida",
     "city": "Berlin",
     "neighborhood": "",
@@ -883,6 +973,25 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-05-29"
+  },
+  {
+    "name": "Pasiphae Restaurant",
+    "city": "Iraklio",
+    "neighborhood": "",
+    "address": "Leof. Knosou 329, 715 00",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.google.com/maps/place/Pasiphae+Restaurant/@35.3008789,25.1599453,17z/data=!3m1!4b1!4m6!3m5!1s0x149a5916b7e92fbd:0xcc50bacf25189f02!8m2!3d35.3008789!4d25.1599453!16s%2Fg%2F11cnbsx4wl?hl=en&entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D",
+    "created_at": "2025-06-05"
   },
   {
     "name": "dm",
