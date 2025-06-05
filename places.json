@@ -303,6 +303,23 @@
     "created_at": "2025-05-12"
   },
   {
+    "name": "Dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Massower Str. 5, 10315 Berlin",
+    "latitude": 52.507609,
+    "longitude": 13.5129018,
+    "type": "Store",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-05"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -530,9 +547,9 @@
     "name": "dm",
     "city": "   Berlin",
     "neighborhood": "",
-    "address": "Greifswalder Straße/Thomas-Mann-Straße, 10409 Berlin",
-    "latitude": null,
-    "longitude": null,
+    "address": "Greifswalder Str. 89, 10409",
+    "latitude": 52.542893,
+    "longitude": 13.4417194,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -978,7 +995,7 @@
     "name": "Pasiphae Restaurant",
     "city": "Iraklio",
     "neighborhood": "",
-    "address": "Leof. Knosou 329, 715 00",
+    "address": "Leof. Knosou 329",
     "latitude": null,
     "longitude": null,
     "type": "Restaurant",
