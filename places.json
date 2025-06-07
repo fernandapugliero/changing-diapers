@@ -250,6 +250,23 @@
     "created_at": "2025-04-16"
   },
   {
+    "name": "Hans & Gretel pancake house",
+    "city": "Zeewolde",
+    "neighborhood": "",
+    "address": "Sternweg 2A, 3898 LJ Zeewolde",
+    "latitude": 52.4020806,
+    "longitude": 5.6143731,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "hansengrietjezeewolde.nl",
+    "created_at": "2025-06-07"
+  },
+  {
     "name": "Smart Kids - Family Play Café ",
     "city": "Berlin",
     "neighborhood": "",
