@@ -1390,6 +1390,26 @@
     "created_at": "2025-05-27"
   },
   {
+    "name": "Shopping Praia de Belas ",
+    "city": "Porto Alegre ",
+    "neighborhood": "",
+    "address": "Av. Praia de Belas 1181, 90110-001 ",
+    "latitude": -30.0496165,
+    "longitude": -51.2287325,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-09"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
