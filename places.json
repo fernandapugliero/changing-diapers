@@ -707,7 +707,7 @@
     "created_at": "2025-04-14"
   },
   {
-    "name": "Caroline ",
+    "name": "Shopping Iguatemi ",
     "city": "Porto Alegre",
     "neighborhood": "",
     "address": "Rua João Wallig, 1800",
@@ -1520,6 +1520,23 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-06-09"
+  },
+  {
+    "name": "Berlin Brandenburg Airport",
+    "city": "Schönefeld",
+    "neighborhood": "",
+    "address": "Melli-Beese-Ring 1, 12529",
+    "latitude": 52.3650799,
+    "longitude": 13.5088327,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://ber.berlin-airport.de/en.html",
+    "created_at": "2025-06-16"
   },
   {
     "name": "dm",
