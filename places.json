@@ -213,6 +213,26 @@
     "created_at": "2025-05-27"
   },
   {
+    "name": "FEZ, Café Zauberbaum",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Str. zum FEZ 2, 12459 Berlin",
+    "latitude": 52.4610303,
+    "longitude": 13.5486588,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom",
+      "men's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/FjmEiuRkrZh8z1XR7?g_st=com.google.maps.preview.copy",
+    "created_at": "2025-06-16"
+  },
+  {
     "name": "Little Ones Cafe",
     "city": "Berlin",
     "neighborhood": "",
