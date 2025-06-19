@@ -484,6 +484,25 @@
     "created_at": "2025-04-23"
   },
   {
+    "name": "Chotto",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kollwitzstraße 84, 10435 Berlin",
+    "latitude": 52.5377462,
+    "longitude": 13.4199342,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-18"
+  },
+  {
     "name": "dm",
     "city": "Dresden",
     "neighborhood": "",
@@ -1234,7 +1253,7 @@
     "created_at": "2025-05-25"
   },
   {
-    "name": "erchy‘s",
+    "name": "Erchy‘s",
     "city": "Berlin",
     "neighborhood": "",
     "address": "Choriner Str. 84, 10119 Berlin",
@@ -1635,7 +1654,7 @@
     "created_at": "2025-04-23"
   },
   {
-    "name": "Broca Cafe",
+    "name": "Brocca Cafe",
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Gleimstraße 40, 10437 Berlin",
