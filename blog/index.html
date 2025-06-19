@@ -1,47 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fix My Diaper Blog</title>
-  <meta name="description" content="Read the latest blog posts about diaper changing stations and parenting tips.">
-  <link rel="stylesheet" href="../style.css"> <!-- Certifique-se de que o arquivo CSS está sendo carregado corretamente -->
+  <meta name="description" content="Read stories and updates about parenting, public changing tables, and building a tiny side project from scratch.">
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    nav img {
+      height: 40px;
+    }
+    .blog-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media screen and (min-width: 768px) {
+      .blog-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .blog-post {
+      border: 1px solid #eee;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .blog-post img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-     <!-- Logo no topo, alinhado à esquerda -->
-    <img src="images/logo.png" alt="Fix My Diaper Logo">
-    
-    <!-- Menu -->
-    <a href="https://fixmydiaper.com/">Map</a>
-    <a href="list">List</a>
-    <a href="submit">Submit</a>
+  <nav>
+    <a href="../">
+      <img src="../images/logo.png" alt="Fix My Diaper Logo" />
+    </a>
+    <a href="../">Map</a>
+    <a href="../list">List</a>
+    <a href="../submit">Submit</a>
   </nav>
 
   <h1>Our Blog</h1>
-  <h2>Discover helpful tips, stories, and advice from other parents.</h2>
+  <h2>Stories, updates, and a few thoughts from behind the scenes.</h2>
 
-  <h3>Latest Posts:</h3>
   <div class="blog-list">
     <div class="blog-post">
-      <h3><a href="best-places-to-change-diapers-in-berlin.html">Best Places to Change Diapers in Berlin</a></h3>
-      <p>Finding diaper changing stations in Berlin can be a challenge for parents on the go. This guide will help you...</p>
+      <a href="best-places-to-change-diapers-in-berlin.html">
+        <img src="../images/blog1.jpg" alt="Changing table Berlin" />
+        <h3>Best Places to Change Diapers in Berlin</h3>
+      </a>
+      <p>Finding diaper changing stations in Berlin can be a challenge. This guide will help you find better options.</p>
     </div>
 
     <div class="blog-post">
-      <h3><a href="another-post.html">Another Blog Post</a></h3>
-      <p>This post will talk about other useful tips for parents who need diaper changing stations...</p>
+      <a href="another-post.html">
+        <img src="../images/blog-placeholder.jpg" alt="Parenting tips" />
+        <h3>Another Blog Post</h3>
+      </a>
+      <p>Useful tips for parents exploring Berlin with their babies (or strollers!).</p>
     </div>
-    <!-- Adicione mais posts aqui -->
   </div>
 
   <footer>
     Made with ♥️ in Berlin<br />
     Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a><br /><br />
-    <a href="../about.html">About</a> | 
+    <a href="../about.html">About</a> |
     <a href="../submit.html">Submit a Location</a>
   </footer>
-
-  <script src="../script.js"></script>
 </body>
 </html>
