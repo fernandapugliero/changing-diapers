@@ -4,31 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fix My Diaper Blog</title>
-  <meta name="description" content="Read stories and updates about parenting, public changing tables, and building a tiny side project from scratch.">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Best Places to Change Diapers in Berlin">
-  <meta property="og:description" content="Finding a diaper changing station in Berlin doesn't have to be a struggle. This guide highlights top baby-friendly spots.">
-  <meta property="og:image" content="https://fixmydiaper.com/images/blog1.jpg">
-  <meta property="og:url" content="https://fixmydiaper.com/blog/best-places-to-change-diapers-in-berlin.html">
+  <meta name="description" content="Discover helpful tips and stories about parenting and diaper changing in Berlin.">
+  <meta name="keywords" content="parenting, diaper changing, baby-friendly cafes, Berlin, parenting tips">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Fix My Diaper Blog">
+  <meta property="og:description" content="Read stories and tips about parenting and diaper changing in Berlin.">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com/blog">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fix My Diaper Blog">
+  <meta name="twitter:description" content="Read stories and tips about parenting and diaper changing in Berlin.">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
   <link rel="stylesheet" href="../style.css" />
   <style>
     body {
-      font-family: sans-serif;
-      padding: 1rem;
-      max-width: 900px;
-      margin: auto;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: white;
+      color: #333;
     }
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
       display: flex;
-      align-items: center; /* Alinha itens no centro */
+      align-items: center;
     }
     nav img {
-      width: 30px;  /* Tamanho do logo */
+      width: 30px;
       height: auto;
-      margin-right: 30px;  /* Espaçamento entre logo e os links do menu */
+      margin-right: 30px;
     }
     nav a {
       margin-right: 20px;
@@ -36,71 +44,96 @@
       font-weight: 600;
       color: inherit;
     }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
     .blog-list {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    @media screen and (min-width: 768px) {
-      .blog-list {
-        grid-template-columns: repeat(3, 1fr);
-      }
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
     .blog-post {
       border: 1px solid #eee;
-      padding: 1rem;
       border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
     .blog-post img {
       width: 100%;
-      height: auto;
+      height: 180px;
+      object-fit: cover;
       border-radius: 6px;
-      margin-bottom: 0.5rem;
+    }
+    .blog-post h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    .blog-post p {
+      font-size: 0.95rem;
+      color: #555;
     }
     footer {
-      text-align: center;
       margin-top: 3rem;
+      text-align: center;
       font-size: 0.9rem;
+      color: #777;
+    }
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="../">
-      <img src="../images/logo.png" alt="Fix My Diaper Logo" />
-    </a>
-    <a href="../">Map</a>
+    <img src="../images/logo.png" alt="Fix My Diaper Logo">
+    <a href="https://fixmydiaper.com/">Map</a>
     <a href="../list">List</a>
     <a href="../submit">Submit</a>
   </nav>
 
-  <h1>Our Blog</h1>
-  <h2>Stories, updates, and a few thoughts from behind the scenes.</h2>
+  <h1>Fix My Diaper Blog</h1>
+  <h2>Stories, tips, and reflections from the stroller lane.</h2>
 
   <div class="blog-list">
     <div class="blog-post">
       <a href="best-places-to-change-diapers-in-berlin.html">
-        <img src="../images/blog1.jpg" alt="Changing table Berlin" />
+        <img src="../images/blog1.jpg" alt="Best Places to Change Diapers">
         <h3>Best Places to Change Diapers in Berlin</h3>
       </a>
-      <p>Finding diaper changing stations in Berlin can be a challenge. This guide will help you find better options.</p>
+      <p>Finding diaper changing stations in Berlin can be a challenge for parents on the go. This guide will help you...</p>
     </div>
 
     <div class="blog-post">
       <a href="another-post.html">
-        <img src="../images/blog-placeholder.jpg" alt="Parenting tips" />
+        <img src="../images/placeholder.jpg" alt="Another Blog Post">
         <h3>Another Blog Post</h3>
       </a>
-      <p>Useful tips for parents exploring Berlin with their babies (or strollers!).</p>
+      <p>This post will talk about other useful tips for parents who need diaper changing stations...</p>
     </div>
   </div>
 
   <footer>
-    <a href="about">About</a> | 
-    <a href="submit">Submit a Location</a> |
-    <a href="https://www.instagram.com/fixmydiaper">Instagram</a></br></br>
+    <a href="../about">About</a> | 
+    <a href="../submit">Submit a Location</a> | 
+    <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
     Made with ♥️ in Berlin<br />
     Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
   </footer>
+
+  <script src="../script.js"></script>
 </body>
 </html>
