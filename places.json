@@ -1007,6 +1007,25 @@
     "created_at": "2025-04-19"
   },
   {
+    "name": "Zenner",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Alt Treptow 15",
+    "latitude": 52.4872491,
+    "longitude": 13.4774693,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-20"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
