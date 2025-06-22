@@ -558,6 +558,25 @@
     "created_at": "2025-06-05"
   },
   {
+    "name": "Trivitys",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Florastraße 27, 13187 Berlin",
+    "latitude": 52.5653609,
+    "longitude": 13.4041146,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-06-22"
+  },
+  {
     "name": "Manifesto Markt",
     "city": "Berlin",
     "neighborhood": "",
