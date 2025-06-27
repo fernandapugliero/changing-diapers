@@ -3,7 +3,7 @@
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Alte Potsdamer Str. 7",
+    "address": "Alte Potsdamer Str. 7, 10785",
     "latitude": 52.5081178,
     "longitude": 13.3744583,
     "type": "Store",
@@ -520,6 +520,23 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-05-25"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Friedrichstraße 191, 10117",
+    "latitude": 52.5107745,
+    "longitude": 13.3896707,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-06-26"
   },
   {
     "name": "Neukölln Arcaden",
@@ -1591,6 +1608,21 @@
     "created_at": "2025-04-24"
   },
   {
+    "name": "Designer Outlet Ochtrup",
+    "city": "Ochtrup",
+    "neighborhood": "",
+    "address": "Laurenzstraße 51-55, 48607",
+    "latitude": 52.2105651,
+    "longitude": 7.1984376,
+    "type": "Mall",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.mcarthurglen.com/de/outlets/de/designer-outlet-ochtrup/",
+    "created_at": "2025-06-26"
+  },
+  {
     "name": "Le Belford",
     "city": "Berlin",
     "neighborhood": "",
@@ -1798,37 +1830,5 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-05-03"
-  },
-  {
-    "name": "Refugio Café",
-    "city": "Berlin",
-    "neighborhood": "",
-    "address": "Lenaustraße 4, 12047",
-    "latitude": 52.4899283,
-    "longitude": 13.4252308,
-    "type": "Café",
-    "changing_table_location": "",
-    "supplies_available": [],
-    "conditions": [],
-    "room_for_stroller": false,
-    "site": "https://www.refugio.berlin/",
-    "created_at": "2025-06-05"
-  },
-  {
-    "name": "luuv café",
-    "city": "Berlin",
-    "neighborhood": "",
-    "address": "Dunckerstraße 72, 10437",
-    "latitude": 52.544327,
-    "longitude": 13.4221772,
-    "type": "Café",
-    "changing_table_location": "",
-    "supplies_available": [],
-    "conditions": [
-      "Decent"
-    ],
-    "room_for_stroller": false,
-    "site": "https://www.instagram.com/luuv.cafe",
-    "created_at": "2025-06-02"
   }
 ]
