@@ -651,6 +651,21 @@
     "created_at": "2025-05-11"
   },
   {
+    "name": "Deutsche Welle",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Voltastraße 6, 13355",
+    "latitude": 52.5411771,
+    "longitude": 13.3877912,
+    "type": "Institution",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "dw.com",
+    "created_at": "2025-06-27"
+  },
+  {
     "name": "Standesamt Neukölln",
     "city": "Berlin",
     "neighborhood": "",
@@ -1811,24 +1826,5 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-04-29"
-  },
-  {
-    "name": "Baby & Beans",
-    "city": "Lisbon",
-    "neighborhood": "",
-    "address": "Rua do 4 de Infantaria 53C",
-    "latitude": 38.7201818,
-    "longitude": -9.1648956,
-    "type": "Café",
-    "changing_table_location": [
-      "dedicated room"
-    ],
-    "supplies_available": [],
-    "conditions": [
-      "Clean"
-    ],
-    "room_for_stroller": "Yes",
-    "site": "",
-    "created_at": "2025-05-03"
   }
 ]
