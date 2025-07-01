@@ -670,6 +670,21 @@
     "created_at": "2025-05-11"
   },
   {
+    "name": "ZOLA",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Paul-Lincke-Ufer 39-40",
+    "latitude": 52.4961121,
+    "longitude": 13.4222913,
+    "type": "Restaurant",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-06-30"
+  },
+  {
     "name": "Deutsche Welle",
     "city": "Berlin",
     "neighborhood": "",
@@ -703,6 +718,23 @@
     "room_for_stroller": "Yes",
     "site": "berlin.de",
     "created_at": "2025-05-12"
+  },
+  {
+    "name": "KungerKiezInitiative e.V.",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kiefholzstraße 20, 12435",
+    "latitude": 52.490701,
+    "longitude": 13.451148,
+    "type": "Institution",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://kungerkiez.de/",
+    "created_at": "2025-06-30"
   },
   {
     "name": "Kulturhaus Insel Berlin",
@@ -1188,6 +1220,23 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-05-25"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Friedrichstraße 191",
+    "latitude": 52.5107745,
+    "longitude": 13.3896707,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-06-30"
   },
   {
     "name": "dm",
@@ -1771,60 +1820,5 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-06-09"
-  },
-  {
-    "name": "Amoreiras Shopping",
-    "city": "Lisbon",
-    "neighborhood": "",
-    "address": "Av. Eng. Duarte Pacheco, 1070-103 Lisboa",
-    "latitude": 38.7229686,
-    "longitude": -9.166909,
-    "type": "Mall",
-    "changing_table_location": [
-      "mixed restroom"
-    ],
-    "supplies_available": [],
-    "conditions": [
-      "Decent"
-    ],
-    "room_for_stroller": "Yes",
-    "site": "https://maps.app.goo.gl/iXGCgfR5KjfiiJqa6?g_st=aw",
-    "created_at": "2025-06-28"
-  },
-  {
-    "name": "Berlin Brandenburg Airport",
-    "city": "Schönefeld",
-    "neighborhood": "",
-    "address": "Melli-Beese-Ring 1, 12529",
-    "latitude": 52.3615524,
-    "longitude": 13.5120353,
-    "type": "Public toilet",
-    "changing_table_location": [
-      "wheelchair restroom"
-    ],
-    "supplies_available": [],
-    "conditions": [],
-    "room_for_stroller": "Yes",
-    "site": "https://ber.berlin-airport.de/en.html",
-    "created_at": "2025-06-16"
-  },
-  {
-    "name": "dm",
-    "city": "Berlin",
-    "neighborhood": "",
-    "address": "Henriette-Herz-Platz 4, 10178",
-    "latitude": 52.5223932,
-    "longitude": 13.4029576,
-    "type": "Store",
-    "changing_table_location": [
-      "sales area"
-    ],
-    "supplies_available": [],
-    "conditions": [
-      "New"
-    ],
-    "room_for_stroller": "Yes",
-    "site": "dm.de",
-    "created_at": "2025-04-23"
   }
 ]
