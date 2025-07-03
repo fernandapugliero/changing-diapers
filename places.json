@@ -143,6 +143,26 @@
     "created_at": "2025-06-11"
   },
   {
+    "name": "Plansche im Plänterwald (Wasserspielplatz)",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Dammweg 1c, 12057",
+    "latitude": 52.4813727,
+    "longitude": 13.4890037,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "berlin.de",
+    "created_at": "2025-07-02"
+  },
+  {
     "name": "Pomeranze",
     "city": "Berlin",
     "neighborhood": "",
@@ -1800,25 +1820,5 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-05-27"
-  },
-  {
-    "name": "Shopping Praia de Belas ",
-    "city": "Porto Alegre ",
-    "neighborhood": "",
-    "address": "Av. Praia de Belas 1181, 90110-001 ",
-    "latitude": -30.0496165,
-    "longitude": -51.2287325,
-    "type": "Mall",
-    "changing_table_location": [
-      "dedicated room"
-    ],
-    "supplies_available": [],
-    "conditions": [
-      "Clean",
-      "Excellent"
-    ],
-    "room_for_stroller": "Yes",
-    "site": "",
-    "created_at": "2025-06-09"
   }
 ]
