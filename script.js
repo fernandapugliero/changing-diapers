@@ -7,51 +7,50 @@ fetch('places.json')
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    const displayedCoordinates = new Map(); // Para armazenar coordenadas já exibidas
-    const uniquePlaces = {}; // Para garantir que locais duplicados sejam evitados
-    const pinOffset = 0.0003; // Distância máxima do deslocamento em metros (~30 metros)
+    const displayedCoordinates = new Map();
+    const uniquePlaces = {};
+    const pinOffset = 0.0003; // ~30 metros
 
     data.forEach(place => {
-      // Preservar coordenadas manuais
       if (!place.latitude || !place.longitude) {
-        console.log(`Skipping ${place.name} due to missing coordinates`);
-        return; // Se coordenadas estiverem ausentes, ignora o local
+        console.log(`⚠️ Skipping '${place.name}' — missing coordinates`);
+        return;
       }
 
-      const coordsKey = `${place.latitude},${place.longitude}`; // Chave com coordenadas únicas
-      const placeKey = `${place.name},${coordsKey}`; // Chave com nome e coordenadas para eliminar duplicatas
+      const coordsKey = `${place.latitude.toFixed(6)},${place.longitude.toFixed(6)}`;
+      const placeKey = `${place.name},${coordsKey}`;
 
-      // Se o local já foi exibido (mesmo nome e coordenadas), ignora
-      if (uniquePlaces[placeKey]) return;
+      if (uniquePlaces[placeKey]) {
+        console.log(`⏭️ Duplicate found for '${place.name}' at ${coordsKey}`);
+        return;
+      }
 
-      // Se o local com as mesmas coordenadas foi exibido antes
       if (displayedCoordinates.has(coordsKey)) {
-        // Se o nome for diferente, desloca as coordenadas ligeiramente para evitar sobreposição de pins
         if (place.name !== displayedCoordinates.get(coordsKey)) {
-          // Desloca as coordenadas para não sobrepor
+          const oldLat = place.latitude;
+          const oldLon = place.longitude;
           place.latitude += (Math.random() - 0.5) * pinOffset;
           place.longitude += (Math.random() - 0.5) * pinOffset;
+          console.log(`📍 Adjusted pin for '${place.name}' to avoid overlap: [${oldLat}, ${oldLon}] ➜ [${place.latitude.toFixed(6)}, ${place.longitude.toFixed(6)}]`);
         }
       }
 
-      // Marca o local como exibido
       uniquePlaces[placeKey] = true;
-      displayedCoordinates.set(coordsKey, place.name); // Marca as coordenadas e nome como já exibidos
+      displayedCoordinates.set(coordsKey, place.name);
 
-      // Gerar o conteúdo do popup
       const popupContent = `
         <strong>${place.name || 'Unnamed Place'}</strong><br>
-        ${place.type || 'Not Specified'}
+        ${place.type || 'Type: N/A'}<br>
+        ${place.city || ''} ${place.country || ''}
       `;
 
-      // Adicionar o marcador no mapa
       L.marker([place.latitude, place.longitude])
         .addTo(map)
-        .bindPopup(popupContent);
+        .bindPopup(popupContent.trim());
     });
 
-    console.log(`Total de locais únicos exibidos: ${Object.keys(uniquePlaces).length}`);
+    console.log(`✅ Total unique pins on map: ${Object.keys(uniquePlaces).length}`);
   })
   .catch(error => {
-    console.error("Erro ao carregar os dados dos locais:", error);
+    console.error("❌ Error loading places.json:", error);
   });
