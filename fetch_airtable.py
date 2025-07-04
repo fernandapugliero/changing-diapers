@@ -2,7 +2,6 @@ import requests
 import json
 import os
 import time
-from datetime import datetime
 
 AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
 BASE_ID = "appjWF7WnC8DRWaXM"
@@ -14,74 +13,76 @@ HEADERS = {
 def geocode_address(address):
     try:
         url = "https://nominatim.openstreetmap.org/search"
-        params = {
-            "q": address,
-            "format": "json",
-            "limit": 1
-        }
+        params = {"q": address, "format": "json", "limit": 1}
         res = requests.get(url, params=params, headers={"User-Agent": "changing-diapers-mvp"})
         data = res.json()
         if data:
-            lat, lon = float(data[0]["lat"]), float(data[0]["lon"])
-            print(f"✅ Geocoded: {address} -> {lat}, {lon}")
-            return lat, lon
+            print(f"[✓] Geocoded: {address} → {data[0]['lat']}, {data[0]['lon']}")
+            return float(data[0]["lat"]), float(data[0]["lon"])
         else:
-            print(f"⚠️ No result for address: {address}")
+            print(f"[!] No result for address: {address}")
     except Exception as e:
-        print(f"❌ Error geocoding '{address}':", e)
+        print(f"[!] Geocode error for '{address}': {e}")
     return None, None
 
+places = []
 url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
 params = {"pageSize": 100}
-places = []
 
-print("🔄 Requesting data from Airtable...")
-res = requests.get(url, headers=HEADERS, params=params)
-data = res.json()
-records = data.get("records", [])
-print(f"✅ Received {len(records)} records from Airtable.")
+print("[...] Starting Airtable fetch...")
 
-for record in records:
-    fields = record.get("fields", {})
-    lat = fields.get("Latitude")
-    lon = fields.get("Longitude")
-    address = fields.get("Full Address", "")
-    city = fields.get("City", "")
-    country = fields.get("Country", "")
-    created_at = fields.get("Created at")
+while True:
+    res = requests.get(url, headers=HEADERS, params=params)
+    data = res.json()
+    records = data.get("records", [])
+    print(f"[✓] Received {len(records)} records.")
 
-    name = fields.get("Name", "Unnamed")
-    print(f"🗂️ Processing: {name} [{address}, {city}, {country}]")
+    for record in records:
+        fields = record.get("fields", {})
+        print(f"[🔍] Processing fields: {fields}")
 
-    if (not lat or not lon) and address:
-        # Monta endereço de busca flexível
-        parts = [address, city, country]
-        search_address = ", ".join(part for part in parts if part)
-        lat, lon = geocode_address(search_address)
-        time.sleep(1)
+        lat = fields.get("Latitude")
+        lon = fields.get("Longitude")
+        address = fields.get("Full Address", "")
+        city = fields.get("City", "")
+        country = fields.get("Country", "")
+        created_at = fields.get("Created at")
 
-    if not lat or not lon:
-        print(f"⏭️ Skipped '{name}' — missing coordinates even after geocoding.")
-        continue
+        if (not lat or not lon) and address:
+            parts = [address, city, country]
+            search_address = ", ".join(part for part in parts if part)
+            lat, lon = geocode_address(search_address)
+            time.sleep(1)
 
-    place = {
-        "name": name,
-        "city": city,
-        "neighborhood": fields.get("Neighborhood", ""),
-        "address": address,
-        "latitude": lat,
-        "longitude": lon,
-        "type": fields.get("Type", ""),
-        "changing_table_location": fields.get("Changing Table Location", ""),
-        "supplies_available": fields.get("Available Suppllies", []),
-        "conditions": fields.get("Changing Table Condition", []),
-        "room_for_stroller": fields.get("Room for a stroller", False),
-        "site": fields.get("Site", ""),
-        "created_at": created_at
-    }
-    places.append(place)
+            if not lat or not lon:
+                print(f"[!] Could not geocode: {search_address}")
 
-print(f"✅ Writing {len(places)} valid places to places.json...")
+        place = {
+            "name": fields.get("Name", ""),
+            "city": city,
+            "neighborhood": fields.get("Neighborhood", ""),
+            "address": address,
+            "latitude": lat,
+            "longitude": lon,
+            "type": fields.get("Type", ""),
+            "changing_table_location": fields.get("Changing Table Location", ""),
+            "supplies_available": fields.get("Available Suppllies", []),
+            "conditions": fields.get("Changing Table Condition", []),
+            "room_for_stroller": fields.get("Room for a stroller", False),
+            "site": fields.get("Site", ""),
+            "created_at": created_at
+        }
+        places.append(place)
+
+    if 'offset' in data:
+        params['offset'] = data['offset']
+        print("[⏭️] More pages to fetch...")
+    else:
+        break
+
+print(f"[✓] Total places collected: {len(places)}")
+
 with open("places.json", "w", encoding="utf-8") as f:
     json.dump(places, f, ensure_ascii=False, indent=2)
-print("🏁 Done.")
+
+print("[✅] places.json updated successfully.")
