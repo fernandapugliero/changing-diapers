@@ -68,6 +68,25 @@
     "created_at": "2025-06-05"
   },
   {
+    "name": "East Side Mall",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Tamara-Danz-Straße 11, 10243 Berlin",
+    "latitude": 52.5060486,
+    "longitude": 13.4466595,
+    "type": "Mall",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-04"
+  },
+  {
     "name": "Zenner",
     "city": "Berlin",
     "neighborhood": "",
@@ -1761,24 +1780,5 @@
     "room_for_stroller": "Yes",
     "site": "https://www.instagram.com/mignonsicilianbakery/",
     "created_at": "2025-04-12"
-  },
-  {
-    "name": "Parking Knuedler",
-    "city": "Luxembourg",
-    "neighborhood": "",
-    "address": "11 Rue Notre Dame, 2240 Ville-Haute Luxembourg",
-    "latitude": 49.6099031,
-    "longitude": 6.1302068,
-    "type": "Public toilet",
-    "changing_table_location": [
-      "dedicated room"
-    ],
-    "supplies_available": [],
-    "conditions": [
-      "Excellent"
-    ],
-    "room_for_stroller": "Yes",
-    "site": "",
-    "created_at": "2025-06-17"
   }
 ]
