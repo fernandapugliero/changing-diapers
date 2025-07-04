@@ -9,48 +9,62 @@ fetch('places.json')
 
     const displayedCoordinates = new Map();
     const uniquePlaces = {};
-    const pinOffset = 0.0003; // ~30 metros
+    const pinOffset = 0.0003;
+
+    console.log(`📌 Places received from JSON: ${data.length}`);
+
+    let skipped = 0;
 
     data.forEach(place => {
       if (!place.latitude || !place.longitude) {
-        console.log(`⚠️ Skipping '${place.name}' — missing coordinates`);
+        console.log(`⏭️ Skipped "${place.name}" → Missing coordinates`);
+        skipped++;
         return;
       }
 
-      const coordsKey = `${place.latitude.toFixed(6)},${place.longitude.toFixed(6)}`;
+      const coordsKey = `${place.latitude},${place.longitude}`;
       const placeKey = `${place.name},${coordsKey}`;
 
-      if (uniquePlaces[placeKey]) {
-        console.log(`⏭️ Duplicate found for '${place.name}' at ${coordsKey}`);
-        return;
-      }
+      if (uniquePlaces[placeKey]) return;
 
       if (displayedCoordinates.has(coordsKey)) {
         if (place.name !== displayedCoordinates.get(coordsKey)) {
-          const oldLat = place.latitude;
-          const oldLon = place.longitude;
           place.latitude += (Math.random() - 0.5) * pinOffset;
           place.longitude += (Math.random() - 0.5) * pinOffset;
-          console.log(`📍 Adjusted pin for '${place.name}' to avoid overlap: [${oldLat}, ${oldLon}] ➜ [${place.latitude.toFixed(6)}, ${place.longitude.toFixed(6)}]`);
+          console.log(`📍 Adjusted pin for "${place.name}" to avoid overlap`);
         }
       }
 
       uniquePlaces[placeKey] = true;
       displayedCoordinates.set(coordsKey, place.name);
 
+      const emoji = getEmojiForType(place.type);
+
       const popupContent = `
-        <strong>${place.name || 'Unnamed Place'}</strong><br>
-        ${place.type || 'Type: N/A'}<br>
-        ${place.city || ''} ${place.country || ''}
+        ${emoji} <strong>${place.name || 'Unnamed Place'}</strong><br>
+        ${place.type || 'Not Specified'}
       `;
 
       L.marker([place.latitude, place.longitude])
         .addTo(map)
-        .bindPopup(popupContent.trim());
+        .bindPopup(popupContent);
     });
 
-    console.log(`✅ Total unique pins on map: ${Object.keys(uniquePlaces).length}`);
+    console.log(`✅ Unique pins on map: ${Object.keys(uniquePlaces).length}`);
+    console.log(`⏭️ Skipped (missing coordinates): ${skipped}`);
   })
   .catch(error => {
     console.error("❌ Error loading places.json:", error);
   });
+
+// Helper function for emojis
+function getEmojiForType(type) {
+  if (!type) return '';
+  type = type.toLowerCase();
+  if (type.includes('cafe')) return '☕';
+  if (type.includes('restaurant')) return '🍽️';
+  if (type.includes('shopping') || type.includes('shop')) return '🛍️';
+  if (type.includes('public toilet')) return '🚻';
+  if (type.includes('biergarten')) return '🍺';
+  return '';
+}
