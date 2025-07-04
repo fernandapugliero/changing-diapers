@@ -12,7 +12,7 @@ fetch('places.json')
     const pinOffset = 0.0003;
 
     let skipped = 0;
-    const skippedPlaces = []; // Coletar nomes pulados
+    const skippedPlaces = [];
 
     console.log(`📥 Received total places from JSON: ${data.length}`);
 
@@ -54,20 +54,11 @@ fetch('places.json')
 
     console.log(`✅ Total unique pins on map: ${Object.keys(uniquePlaces).length}`);
     console.log(`⏭️ Total skipped (missing coordinates): ${skipped}`);
-
     if (skippedPlaces.length > 0) {
-      const blob = new Blob([skippedPlaces.join('\n')], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'places_missing.log';
-      a.click();
-      URL.revokeObjectURL(url);
-      console.log(`📄 Generated places_missing.log with ${skippedPlaces.length} entries`);
+      console.log(`🔍 Skipped places: ${skippedPlaces.join(', ')}`);
     } else {
-      console.log('✅ No places missing coordinates — nothing to log.');
+      console.log('✅ No places missing coordinates.');
     }
-
   })
   .catch(error => {
     console.error("❌ Error loading places.json:", error);
