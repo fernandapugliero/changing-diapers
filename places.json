@@ -848,6 +848,25 @@
     "created_at": "2025-07-03"
   },
   {
+    "name": "Pastelaria Litoral",
+    "city": "Osório",
+    "neighborhood": "",
+    "address": "Acesso Auto Estrada 606, 95520-000",
+    "latitude": null,
+    "longitude": null,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.instagram.com/pastelarialitoral?igsh=OTY3b3ozYml4ZXoz",
+    "created_at": "2025-05-27"
+  },
+  {
     "name": "Emilia's Familiencafé",
     "city": "Hamburg",
     "neighborhood": "",
@@ -1382,6 +1401,25 @@
     "created_at": "2025-05-29"
   },
   {
+    "name": "Pasiphae Restaurant",
+    "city": "Iraklio",
+    "neighborhood": "",
+    "address": "Leof. Knosou 329",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.google.com/maps/place/Pasiphae+Restaurant/@35.3008789,25.1599453,17z/data=!3m1!4b1!4m6!3m5!1s0x149a5916b7e92fbd:0xcc50bacf25189f02!8m2!3d35.3008789!4d25.1599453!16s%2Fg%2F11cnbsx4wl?hl=en&entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D",
+    "created_at": "2025-06-05"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -1780,5 +1818,243 @@
     "room_for_stroller": "Yes",
     "site": "https://www.instagram.com/mignonsicilianbakery/",
     "created_at": "2025-04-12"
+  },
+  {
+    "name": "Parking Knuedler",
+    "city": "Luxembourg",
+    "neighborhood": "",
+    "address": "11 Rue Notre Dame, 2240 Ville-Haute Luxembourg",
+    "latitude": 49.6099031,
+    "longitude": 6.1302068,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-17"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Heidestraße 40, 10557",
+    "latitude": 52.5327671,
+    "longitude": 13.365657,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-05-27"
+  },
+  {
+    "name": "Shopping Praia de Belas ",
+    "city": "Porto Alegre ",
+    "neighborhood": "",
+    "address": "Avenida Praia de Belas 1181",
+    "latitude": -30.0496165,
+    "longitude": -51.2287325,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-09"
+  },
+  {
+    "name": "Amoreiras Shopping",
+    "city": "Lisbon",
+    "neighborhood": "",
+    "address": "Avenida Engenheiro Duarte Pacheco",
+    "latitude": 38.724605,
+    "longitude": -9.1585845,
+    "type": "Mall",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/iXGCgfR5KjfiiJqa6?g_st=aw",
+    "created_at": "2025-06-28"
+  },
+  {
+    "name": "Berlin Brandenburg Airport",
+    "city": "Schönefeld",
+    "neighborhood": "",
+    "address": "Melli-Beese-Ring 1, 12529",
+    "latitude": 52.3650799,
+    "longitude": 13.5088327,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://ber.berlin-airport.de/en.html",
+    "created_at": "2025-06-16"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Henriette-Herz-Platz 4, 10178",
+    "latitude": 52.5223932,
+    "longitude": 13.4029576,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-23"
+  },
+  {
+    "name": "Brocca Cafe",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Gleimstraße 40, 10437 Berlin",
+    "latitude": 52.5474777,
+    "longitude": 13.4093679,
+    "type": "Café",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-06-18"
+  },
+  {
+    "name": "L'osteria",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Hilda-Geiringer-Weg 4",
+    "latitude": 52.5268271,
+    "longitude": 13.3724979,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-04-19"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Tamara-Danz-Straße 11",
+    "latitude": 52.5060486,
+    "longitude": 13.4466595,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-29"
+  },
+  {
+    "name": "Baby & Beans",
+    "city": "Lisbon",
+    "neighborhood": "",
+    "address": "Rua do 4 de Infantaria 53C, 1350-243",
+    "latitude": 38.7201818,
+    "longitude": -9.1648956,
+    "type": "Café",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-05-03"
+  },
+  {
+    "name": "Refugio Café",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Lenaustraße 4, 12047",
+    "latitude": 52.4899283,
+    "longitude": 13.4252308,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.refugio.berlin/",
+    "created_at": "2025-06-05"
+  },
+  {
+    "name": "luuv café",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Dunckerstraße 72, 10437",
+    "latitude": 52.544327,
+    "longitude": 13.4221772,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": false,
+    "site": "https://www.instagram.com/luuv.cafe",
+    "created_at": "2025-06-02"
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rigaer Straße 67",
+    "latitude": 52.5158676,
+    "longitude": 13.4686052,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-06-29"
   }
 ]
