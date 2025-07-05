@@ -739,6 +739,25 @@
     "created_at": "2025-06-27"
   },
   {
+    "name": "Fridas Eiskrem",
+    "city": "Aschaffenburg",
+    "neighborhood": "",
+    "address": "Sandgasse 43, 63739 Aschaffenburg ",
+    "latitude": 49.9744776,
+    "longitude": 9.149943,
+    "type": "Ice cream shop",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-07-04"
+  },
+  {
     "name": "Standesamt Neukölln",
     "city": "Berlin",
     "neighborhood": "",
@@ -1532,6 +1551,24 @@
     "room_for_stroller": false,
     "site": "",
     "created_at": "2025-06-05"
+  },
+  {
+    "name": "Öffentliche Toiletten",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Bulgarische Str. 58, 12435",
+    "latitude": 52.4856174,
+    "longitude": 13.4816741,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "mixed restroom",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-04"
   },
   {
     "name": "Zenner",
