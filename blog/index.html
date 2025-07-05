@@ -135,5 +135,56 @@
   </footer>
 
   <script src="../script.js"></script>
+
+  <script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#000" },
+        button: { background: "#f1d600" }
+      },
+      theme: "classic",
+      position: "bottom",
+      type: "opt-in",
+      content: {
+        message: "We use cookies to improve your experience. 🍪",
+        dismiss: "Accept",
+        allow: "Accept",
+        deny: "Decline",
+        link: "Learn more",
+        href: "/privacy-policy.html"
+      },
+      onInitialise: function(status) {
+        if(status == cookieconsent.status.allow) {
+          enableGA();
+        }
+      },
+      onStatusChange: function(status) {
+        if(status == cookieconsent.status.allow) {
+          enableGA();
+        } else {
+          disableGA();
+        }
+      }
+    });
+  });
+
+  function enableGA(){
+    // Libera o GA se o usuário aceitou
+    // Insira aqui o seu Google Analytics gtag:
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JGYVLDZQTM'); // Substitua pelo seu ID de rastreamento!
+  }
+
+  function disableGA(){
+    // Opcional: implemente algo para desativar o GA se quiser
+    console.log("Google Analytics disabled");
+  }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+
 </body>
 </html>
