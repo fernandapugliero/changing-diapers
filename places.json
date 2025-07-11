@@ -1123,6 +1123,25 @@
     "created_at": "2025-06-14"
   },
   {
+    "name": "Tierra Garat Porfirio",
+    "city": "Mexico City",
+    "neighborhood": "",
+    "address": "Av Porfirio Díaz 66, Noche Buena, Benito Juárez, 03720 Ciudad de México, CDMX, Mexico",
+    "latitude": 19.3801802,
+    "longitude": -99.1766303,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "tierragarat.mx",
+    "created_at": "2025-07-10"
+  },
+  {
     "name": "Public Toilet",
     "city": "Copenhagen",
     "neighborhood": "",
