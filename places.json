@@ -55,8 +55,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Straße 645, 12049",
-    "latitude": 52.4766787,
-    "longitude": 13.4185319,
+    "latitude": 52.4789312,
+    "longitude": 13.4180521,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -2033,10 +2033,10 @@
     "name": "Zooparque",
     "city": "Itatiba",
     "neighborhood": "",
-    "address": "Paraíso das Aves - Av. ZooParque Itatiba, Rod. Dom Pedro I, KM 95.5, Itatiba - SP, 13254-762",
+    "address": "Avenida ZooParque Itatiba, Rodovia Dom Pedro I, KM 95.5, 13254-762",
     "latitude": null,
     "longitude": null,
-    "type": "Museum",
+    "type": "Zoo",
     "changing_table_location": [
       "mixed restroom"
     ],
