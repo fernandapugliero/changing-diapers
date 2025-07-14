@@ -2030,6 +2030,25 @@
     "created_at": "2025-04-12"
   },
   {
+    "name": "Zooparque",
+    "city": "Itatiba",
+    "neighborhood": "",
+    "address": "Paraíso das Aves - Av. ZooParque Itatiba, Rod. Dom Pedro I, KM 95.5, Itatiba - SP, 13254-762",
+    "latitude": null,
+    "longitude": null,
+    "type": "Museum",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-07-14"
+  },
+  {
     "name": "Parking Knuedler",
     "city": "Luxembourg",
     "neighborhood": "",
