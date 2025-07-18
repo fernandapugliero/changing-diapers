@@ -1128,6 +1128,26 @@
     "created_at": "2025-06-05"
   },
   {
+    "name": "Garda",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Oranienburger Str. 32, 10117 Berlin",
+    "latitude": 52.5255763,
+    "longitude": 13.3939581,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/dCm3AHeSeyzg8dzd8?g_st=ipc",
+    "created_at": "2025-07-18"
+  },
+  {
     "name": "Daryas Spielcafé",
     "city": "Berlin",
     "neighborhood": "",
@@ -2234,6 +2254,23 @@
     "room_for_stroller": "No",
     "site": "",
     "created_at": "2025-04-19"
+  },
+  {
+    "name": "Kiraku",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Litfaß-Platz 1, 10178 Berlin",
+    "latitude": 52.5218966,
+    "longitude": 13.4034489,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/HrNVLoJucg6sWVDa9?g_st=ipc",
+    "created_at": "2025-07-18"
   },
   {
     "name": "dm",
