@@ -788,6 +788,23 @@
     "created_at": "2025-05-11"
   },
   {
+    "name": "Berliner Toilette Weichselstraße",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Weichselstraße 33-36, 12045",
+    "latitude": 52.488479,
+    "longitude": 13.4384913,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "berlin.de",
+    "created_at": "2025-07-17"
+  },
+  {
     "name": "ZOLA",
     "city": "Berlin",
     "neighborhood": "",
