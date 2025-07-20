@@ -2350,6 +2350,23 @@
     "created_at": "2025-07-18"
   },
   {
+    "name": "Quintal do Espeto (Vila Mariana)",
+    "city": "São Paulo",
+    "neighborhood": "",
+    "address": "R. Joaquim Távora, 1195 - Vila Mariana, São Paulo - SP, 04015-002",
+    "latitude": -23.587165,
+    "longitude": -46.6438923,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-07-19"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
