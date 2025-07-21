@@ -154,3 +154,62 @@ footer a:hover {
     font-size: 1rem;
   }
 }
+/* Estilo do formulário da newsletter */
+.newsletter-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.newsletter-container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-container p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.newsletter-form input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 33%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.newsletter-form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #ccc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 33%;
+  max-width: 300px;
+}
+
+.newsletter-form button:hover {
+  background-color: #888;
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para mobile */
+  .newsletter-form input[type="text"],
+  .newsletter-form button {
+    width: 80%;
+  }
+}
+
