@@ -241,6 +241,85 @@
   <p id="message"></p>
 </div>
 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fix My Diaper: Newsletter</title>
+  <meta name="description" content="Sign up for our newsletter and get updates on the best baby-friendly places with changing tables!">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Add any other styles or links to CSS here -->
+</head>
+<body>
+  <!-- Newsletter form -->
+  <div class="newsletter-form">
+    <h2>Subscribe to our Newsletter</h2>
+    <p>Stay updated on the best baby-friendly places and diaper-changing stations near you!</p>
+    <form id="newsletterForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <!-- Add any other content you want here -->
+
+  <!-- JavaScript for the form -->
+  <script>
+    document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+
+      // Get form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      // Validate fields
+      if (!name || !email) {
+        document.getElementById('message').textContent = "Please fill out all fields.";
+        return;
+      }
+
+      // Airtable API setup
+      const AIRTABLE_API_KEY = 'YOUR_API_KEY';
+      const BASE_ID = 'apppSigVLt8ICVUA5';
+      const TABLE_NAME = 'Newsletter';
+      const AIRTABLE_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
+
+      const data = {
+        fields: {
+          Name: name,
+          Email: email
+        }
+      };
+
+      // Send data to Airtable
+      fetch(AIRTABLE_URL, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('message').textContent = "Thank you for subscribing!";
+        document.getElementById('newsletterForm').reset(); // Clear the form after submission
+      })
+      .catch(error => {
+        document.getElementById('message').textContent = "There was an error. Please try again.";
+        console.error("Error:", error);
+      });
+    });
+  </script>
+
+  <!-- Optional: Add any other JS scripts -->
+</body>
+</html>
+
+
   
 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cx-xyz12345/" data-instgrm-version="14" style="width: 100%; max-width: 540px; min-width: 326px; margin: 0 auto;">
   <div style="padding: 16px;"> 
