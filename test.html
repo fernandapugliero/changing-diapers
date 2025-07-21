@@ -118,6 +118,56 @@
   
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+.newsletter-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.newsletter-form h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.newsletter-form p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #005bb5;
+}
+
+#message {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #28a745; /* Green message for success */
+}
+
     
   </style>
 </head>
@@ -180,6 +230,18 @@
 <p class="top5-explanation">
   *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
 
+<div class="newsletter-form">
+  <h2>Subscribe to our Newsletter</h2>
+  <p>Stay updated on the best baby-friendly places and diaper-changing stations near you!</p>
+  <form id="newsletterForm">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="message"></p>
+</div>
+
+  
 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cx-xyz12345/" data-instgrm-version="14" style="width: 100%; max-width: 540px; min-width: 326px; margin: 0 auto;">
   <div style="padding: 16px;"> 
     <a href="https://www.instagram.com/p/Cx-xyz12345/" target="_blank">
