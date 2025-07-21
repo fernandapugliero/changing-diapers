@@ -787,9 +787,9 @@
     "name": "BrewDog Berlin Friedrichshain",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Käthe-Niederkirchner-Straße 39",
-    "latitude": 52.5318609,
-    "longitude": 13.4290884,
+    "address": "Frankfurter Tor 7, 10243",
+    "latitude": 52.5151267,
+    "longitude": 13.4544355,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
