@@ -191,68 +191,20 @@
   <!-- Add any other styles or links to CSS here -->
 </head>
 <body>
-  <div class="newsletter-container">
-  <h2>Subscribe to our newsletter</h2>
-  <p>Stay updated with the latest diaper-changing locations and tips. Join our community!</p>
-  <form class="newsletter-form" action="your_backend_script_here" method="POST">
-    <input type="text" name="email" placeholder="Enter your email" required />
-    <button type="submit">Subscribe</button>
-  </form>
-</div>
+  <form class="newsletter-form">
+    <!-- Campo Nome -->
+    <input type="text" name="name" placeholder="Enter your name" required>
 
-  <!-- Add any other content you want here -->
+    <!-- Campo Email -->
+    <input type="email" name="email" placeholder="Enter your email" required>
 
-  <!-- JavaScript for the form -->
-  <script>
-    document.getElementById('newsletterForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from submitting normally
+    <!-- Botão de Envio -->
+    <button type="submit" class="submit-btn">Subscribe</button>
+</form>
+<p id="message"></p>
 
-      // Get form data
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
+  <script src="newsletter.js"></script>
 
-      // Validate fields
-      if (!name || !email) {
-        document.getElementById('message').textContent = "Please fill out all fields.";
-        return;
-      }
-
-      // Airtable API setup
-      const AIRTABLE_API_KEY = 'patIvzlvp30wnC7VO';
-      const BASE_ID = 'apppSigVLt8ICVUA5';
-      const TABLE_NAME = 'Newsletter';
-      const AIRTABLE_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
-
-      const data = {
-        fields: {
-          Name: name,
-          Email: email
-        }
-      };
-
-      // Send data to Airtable
-      fetch(AIRTABLE_URL, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('message').textContent = "Thank you for subscribing!";
-        document.getElementById('newsletterForm').reset(); // Clear the form after submission
-      })
-      .catch(error => {
-        document.getElementById('message').textContent = "There was an error. Please try again.";
-        console.error("Error:", error);
-      });
-    });
-  </script>
-</body>
-</html>
-  
   <footer>
     <a href="about">About</a> | 
     <a href="submit">Submit a Location</a> |
