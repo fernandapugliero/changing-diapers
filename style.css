@@ -154,61 +154,72 @@ footer a:hover {
     font-size: 1rem;
   }
 }
-/* Estilo do formulário da newsletter */
-.newsletter-container {
-  text-align: center;
-  margin-top: 2rem;
+/* Estilos gerais do formulário */
+.newsletter-form {
+  display: flex;
+  flex-direction: column; /* Campos empilhados no mobile */
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre os campos e o botão */
+  max-width: 500px; /* Limitar a largura do formulário */
+  margin: 0 auto;
+  padding: 1.5rem; /* Ajustar o padding para não ficar excessivo */
 }
 
-.newsletter-container h2 {
-  font-size: 1.5rem;
+/* Título e subtítulo */
+.newsletter-form h2 {
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem; /* Diminuir o espaço entre título e subtítulo */
 }
 
-.newsletter-container p {
+.newsletter-form p {
   font-size: 1rem;
   color: #555;
+  text-align: center;
+  margin-bottom: 1.5rem; /* Reduzir o espaçamento entre o subtítulo e os campos */
+}
+
+/* Estilo dos campos de entrada */
+.newsletter-form input {
+  padding: 12px;
+  font-size: 1rem;
+  width: 90%; /* Aumentar a largura no mobile */
+  border: 1px solid #ccc;
+  border-radius: 5px;
   margin-bottom: 1rem;
 }
 
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.newsletter-form input[type="text"] {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 33%;
-  max-width: 300px;
-  box-sizing: border-box;
-}
-
-.newsletter-form button {
-  padding: 0.5rem;
-  font-size: 1rem;
-  background-color: #ccc;
+/* Estilo do botão de envio */
+.newsletter-form .submit-btn {
+  padding: 12px 20px;
+  background-color: #bbb; /* Cor do botão mais clara */
   color: white;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  width: 33%;
-  max-width: 300px;
+  width: 90%; /* Largura igual aos campos no mobile */
 }
 
-.newsletter-form button:hover {
-  background-color: #888;
+/* Efeito ao passar o mouse sobre o botão */
+.newsletter-form .submit-btn:hover {
+  background-color: #999;
 }
 
-@media (max-width: 768px) {
-  /* Ajustes para mobile */
-  .newsletter-form input[type="text"],
-  .newsletter-form button {
-    width: 80%;
+/* Estilo para Desktop */
+@media (min-width: 768px) {
+  .newsletter-form {
+    flex-direction: row; /* Campos lado a lado no desktop */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .newsletter-form input {
+    width: 45%; /* Cada campo ocupa 45% da largura no desktop */
+  }
+
+  .newsletter-form .submit-btn {
+    width: 15%; /* Largura do botão no desktop */
   }
 }
