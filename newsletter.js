@@ -1,6 +1,6 @@
 // Definir variáveis de API do Airtable
-const AIRTABLE_API_KEY = 'appjWF7WnC8DRWaXM';  // Substitua pelo seu token
-const BASE_ID = 'patIvzlvp30wnC7VO';  // Substitua pelo seu Base ID
+const AIRTABLE_API_KEY = 'patIvzlvp30wnC7VO';  // Substitua pelo seu token
+const BASE_ID = 'appjWF7WnC8DRWaXM';  // Substitua pelo seu Base ID
 const TABLE_NAME = 'Newsletter';  // Nome da tabela no Airtable
 const AIRTABLE_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
 
