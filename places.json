@@ -68,6 +68,21 @@
     "created_at": "2025-05-29"
   },
   {
+    "name": "Tajinebanane",
+    "city": "Bordeaux",
+    "neighborhood": "",
+    "address": "34 Cr d'Alsace-et-Lorraine, 33000",
+    "latitude": null,
+    "longitude": null,
+    "type": "Store",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://tajinebanane.com/",
+    "created_at": "2025-07-23"
+  },
+  {
     "name": "LUC Bistro",
     "city": "Porto Alegre",
     "neighborhood": "",
