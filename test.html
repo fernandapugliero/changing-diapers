@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fix My Diaper: Find Baby-Friendly Places with Changing Tables in Berlin</title>
@@ -16,7 +16,6 @@
   <meta name="twitter:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables">
   <meta name="twitter:description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
-  <meta name="robots" content="noindex, nofollow">
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
@@ -28,7 +27,7 @@
   gtag('config', 'G-JGYVLDZQTM');
 </script>
   
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧷</text></svg>">
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -112,13 +111,6 @@
     p strong {
       font-weight: 600;
     }
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
   </style>
 </head>
 <body>
@@ -132,78 +124,24 @@
     <a href="submit">Submit</a>
   </nav>
 
-  <h2>TEST SITE</h2>
+  <h1>Need to change a diaper?</h1>
   <h2>Find baby-friendly places in your city with changing tables – cafes, restaurants, and more.</h2>
   <div id="map"></div>
-
-  <div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <p>"This is the best diaper changing station I've ever used! So convenient!"</p>
-      <p><strong>- Sarah, Mom of 2</strong></p>
-    </div>
-    <div class="swiper-slide">
-      <p>"Love how easy it is to find baby-friendly places through this site."</p>
-      <p><strong>- John, Dad of 1</strong></p>
-    </div>
-    <div class="swiper-slide">
-      <p>"Such a great idea! Saved us so much time and stress during our trip."</p>
-      <p><strong>- Emma, Traveler</strong></p>
-    </div>
-    <div class="swiper-slide">
-      <p>"This service is a lifesaver! Highly recommend it to all parents."</p>
-      <p><strong>- Mark, New Dad</strong></p>
-    </div>
-    <div class="swiper-slide">
-      <p>"A real game-changer! Now I know where to change my baby anytime."</p>
-      <p><strong>- Sophie, Mom on the go</strong></p>
-    </div>
-  </div>
-  <!-- Navegação -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
-
 
   <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Best places to change a diaper in Berlin*</h2>
   <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
     Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
 
   <iframe class="airtable-embed"
-    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
-    frameborder="0"
-    onmousewheel=""
-    width="100%"
-    height="100%"
-    style="background: transparent; border: 1px solid #ccc;"></iframe>
+     src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
+     frameborder="0"
+     onmousewheel=""
+     width="100%"
+     height="100%"
+     style="background: transparent; border: 1px solid #ccc;"></iframe>
 
 <p class="top5-explanation">
   *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
-
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fix My Diaper: Newsletter</title>
-  <meta name="description" content="Sign up for our newsletter and get updates on the best baby-friendly places with changing tables!">
-  <link rel="stylesheet" href="style.css" />
-  <!-- Add any other styles or links to CSS here -->
-</head>
-<body>
-  <form class="newsletter-form">
-    <!-- Campo Nome -->
-    <input type="text" name="name" placeholder="Enter your name" required>
-
-    <!-- Campo Email -->
-    <input type="email" name="email" placeholder="Enter your email" required>
-
-    <!-- Botão de Envio -->
-    <button type="submit" class="submit-btn">Subscribe</button>
-</form>
-<p id="message"></p>
-
-  <script src="newsletter.js"></script>
 
   <footer>
     <a href="about">About</a> | 
