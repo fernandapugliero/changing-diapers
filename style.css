@@ -154,62 +154,49 @@ footer a:hover {
     font-size: 1rem;
   }
 }
-/* Estilo do formulário da newsletter */
-.newsletter-container {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.newsletter-container h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.newsletter-container p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
+/* CSS para o formulário de newsletter */
 .newsletter-form {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-direction: column; /* Para que os campos fiquem em uma coluna no mobile */
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre os campos */
 }
 
-.newsletter-form input[type="text"] {
-  padding: 0.5rem;
+.newsletter-form input {
+  padding: 10px;
   font-size: 1rem;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 400px; /* Max width no mobile */
   border: 1px solid #ccc;
-  width: 33%;
-  max-width: 300px;
-  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-.newsletter-form button {
-  padding: 0.5rem;
-  font-size: 1rem;
-  background-color: #ccc;
+.newsletter-form .submit-btn {
+  padding: 10px 20px;
+  background-color: gray;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 33%;
-  max-width: 300px;
+  font-size: 1rem;
 }
 
-.newsletter-form button:hover {
-  background-color: #888;
+.newsletter-form .submit-btn:hover {
+  background-color: darkgray;
 }
 
-@media (max-width: 768px) {
-  /* Ajustes para mobile */
-  .newsletter-form input[type="text"],
-  .newsletter-form button {
-    width: 80%;
+/* Estilo para desktop */
+@media (min-width: 768px) {
+  .newsletter-form {
+    flex-direction: row; /* Para alinhar os campos lado a lado no desktop */
+    justify-content: center; /* Para centralizar os campos horizontalmente */
+  }
+
+  .newsletter-form input {
+    width: 45%; /* Faz os campos de Nome e E-mail ficarem lado a lado no desktop */
+  }
+
+  .newsletter-form .submit-btn {
+    width: 15%; /* Ajuste o tamanho do botão conforme necessário */
   }
 }
-
