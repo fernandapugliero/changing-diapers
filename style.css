@@ -166,19 +166,18 @@ footer a:hover {
 .newsletter-form button {
   width: 100%; /* Campos e botões com largura total */
   margin: 8px 0; /* Espaçamento entre os campos */
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.newsletter-form input[name="name"] {
-  max-width: 300px; /* Máximo de largura para o campo de nome */
-}
-
+/* Nome e email */
+.newsletter-form input[name="name"],
 .newsletter-form input[name="email"] {
-  max-width: 300px; /* Máximo de largura para o campo de email */
+  max-width: 300px; /* Máximo de largura para o campo de nome e email */
 }
 
+/* Botão */
 .newsletter-form button {
   background-color: #ccc; /* Cor cinza para o botão */
   color: white;
@@ -205,6 +204,13 @@ footer a:hover {
   margin-bottom: 15px;
 }
 
+/* Mensagem de agradecimento */
+#message {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* Responsividade para mobile */
 @media (max-width: 768px) {
   .newsletter-form input,
@@ -219,6 +225,11 @@ footer a:hover {
 
   .newsletter-form button {
     width: 100%; /* Botão também ocupa 100% */
+  }
+
+  /* Ajuste no espaço entre título e subtítulo */
+  .newsletter-form h2, .newsletter-form p {
+    margin-bottom: 5px;
   }
 }
 
