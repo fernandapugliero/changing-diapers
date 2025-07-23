@@ -1,4 +1,4 @@
-const AIRTABLE_API_KEY = 'YpatIvzlvp30wnC7VO';  // Substitua com seu token
+const AIRTABLE_API_KEY = 'patIvzlvp30wnC7VO';  // Substitua com seu token
 const BASE_ID = 'appjWF7WnC8DRWaXM';  // Substitua pelo seu Base ID
 const TABLE_NAME = 'Newsletter';  // Nome da tabela no Airtable
 const AIRTABLE_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
@@ -29,10 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => {
         document.getElementById('message').textContent = "Thank you for subscribing!";
+        document.getElementById('message').style.color = "green"; // Muda a cor para verde
         form.reset(); // Limpa o formulário
+        form.style.display = "none"; // Oculta o formulário após o envio
       })
       .catch(error => {
         document.getElementById('message').textContent = "There was an error. Please try again.";
+        document.getElementById('message').style.color = "red"; // Muda a cor para vermelho
         console.error("Error:", error);
       });
     } else {
