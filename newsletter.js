@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (email && name) {
             // Enviar os dados para o Airtable
-            const AIRTABLE_API_KEY = 'YOUR_PERSONAL_ACCESS_TOKEN';  // Substitua por seu token de acesso
+            const AIRTABLE_API_KEY = 'YpatIvzlvp30wnC7VO';  // Substitua por seu token de acesso
             const BASE_ID = 'YOUR_BASE_ID';  // Já está correto, esse é o seu ID da base
             const TABLE_NAME = 'Newsletter';  // Nome da sua tabela no Airtable
             const AIRTABLE_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
