@@ -55,8 +55,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Straße 645, 12049",
-    "latitude": 52.4789312,
-    "longitude": 13.4180521,
+    "latitude": 52.4767036,
+    "longitude": 13.4183601,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1416,8 +1416,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weserstr. 175, 12045",
-    "latitude": 52.4846289,
-    "longitude": 13.4392789,
+    "latitude": 52.4846106,
+    "longitude": 13.4393169,
     "type": "Fitness Studio",
     "changing_table_location": [
       "men's restroom"
