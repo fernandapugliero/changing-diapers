@@ -1334,6 +1334,25 @@
     "created_at": "2025-06-14"
   },
   {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Landsberger Allee 117, 10407 Berlin, Alemanha",
+    "latitude": null,
+    "longitude": null,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-24"
+  },
+  {
     "name": "Tierra Garat Porfirio",
     "city": "Mexico City",
     "neighborhood": "",
@@ -2096,8 +2115,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Sachsendamm 47",
-    "latitude": 52.469021,
-    "longitude": 13.3671263,
+    "latitude": 52.4696117,
+    "longitude": 13.3663411,
     "type": "Store",
     "changing_table_location": [
       "dedicated room"
