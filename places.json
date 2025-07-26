@@ -2020,6 +2020,25 @@
     "created_at": "2025-06-02"
   },
   {
+    "name": "Ristorante Firenze",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Florastraße 27, 13187 Berlin",
+    "latitude": 52.5653609,
+    "longitude": 13.4041146,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-07-25"
+  },
+  {
     "name": "Kiez Kaffee Kraft",
     "city": "Berlin",
     "neighborhood": "",
