@@ -218,7 +218,7 @@
     "name": "Mayersche Buchhandlung",
     "city": "Aachen",
     "neighborhood": "",
-    "address": "Buchkrenerstr 1-7",
+    "address": "Buchkrenerstr 1-7, 52062",
     "latitude": null,
     "longitude": null,
     "type": "Bookstore",
@@ -1377,9 +1377,9 @@
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Landsberger Allee 117, 10407 Berlin, Alemanha",
-    "latitude": null,
-    "longitude": null,
+    "address": "Landsberger Allee 117, 10407",
+    "latitude": 52.5290131,
+    "longitude": 13.4566633,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2375,9 +2375,9 @@
     "name": "Centre Charlemagne",
     "city": "Aachen",
     "neighborhood": "",
-    "address": "Katschhof",
-    "latitude": 50.7754374,
-    "longitude": 6.0837919,
+    "address": "Katschhof 1, 52062",
+    "latitude": 50.7757531,
+    "longitude": 6.0830609,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
