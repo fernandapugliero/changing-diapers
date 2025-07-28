@@ -215,6 +215,25 @@
     "created_at": "2025-04-19"
   },
   {
+    "name": "Mayersche Buchhandlung",
+    "city": "Aachen",
+    "neighborhood": "",
+    "address": "Buchkrenerstr 1-7",
+    "latitude": null,
+    "longitude": null,
+    "type": "Bookstore",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-07-28"
+  },
+  {
     "name": "dm",
     "city": "Himmelkron",
     "neighborhood": "",
@@ -2351,6 +2370,23 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-05-27"
+  },
+  {
+    "name": "Centre Charlemagne",
+    "city": "Aachen",
+    "neighborhood": "",
+    "address": "Katschhof",
+    "latitude": 50.7754374,
+    "longitude": 6.0837919,
+    "type": "Museum",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-28"
   },
   {
     "name": "Shopping Praia de Belas ",
