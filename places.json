@@ -136,6 +136,27 @@
     "created_at": "2025-07-20"
   },
   {
+    "name": "Botanischer Garten und Botanisches Museum",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Königin-Luise-Straße 6-8, 14195",
+    "latitude": 52.4582458,
+    "longitude": 13.3048516,
+    "type": "Institution",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Heavily used",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "bo.berlin",
+    "created_at": "2025-07-27"
+  },
+  {
     "name": "Zenner",
     "city": "Berlin",
     "neighborhood": "",
