@@ -2538,6 +2538,25 @@
     "created_at": "2025-07-18"
   },
   {
+    "name": "Das Café in der Gartenakademie ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Altensteinstraße 15A, 14195 Berlin",
+    "latitude": 52.456248,
+    "longitude": 13.299745,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-29"
+  },
+  {
     "name": "Quintal do Espeto (Vila Mariana)",
     "city": "São Paulo",
     "neighborhood": "",
