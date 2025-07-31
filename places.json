@@ -1451,6 +1451,25 @@
     "created_at": "2025-07-05"
   },
   {
+    "name": "RumBa ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Baumschulenstraße 28, 12437 Berlin",
+    "latitude": 52.4644533,
+    "longitude": 13.4861817,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-07-31"
+  },
+  {
     "name": "BRLO",
     "city": "Berlin",
     "neighborhood": "",
