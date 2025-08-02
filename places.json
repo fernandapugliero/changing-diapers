@@ -765,6 +765,25 @@
     "created_at": "2025-06-26"
   },
   {
+    "name": "Matanga - Cafe & Co",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Dunckerstraße 12, 10437 Berlin",
+    "latitude": 52.54273,
+    "longitude": 13.421225,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-02"
+  },
+  {
     "name": "Neukölln Arcaden",
     "city": "Berlin",
     "neighborhood": "",
