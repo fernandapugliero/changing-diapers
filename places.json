@@ -345,6 +345,23 @@
     "created_at": "2025-05-20"
   },
   {
+    "name": "Blume an der Hasenheide",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Fontanestraße 32, 12049 Berlin",
+    "latitude": 52.4817319,
+    "longitude": 13.4212137,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-08-03"
+  },
+  {
     "name": "Urbayn",
     "city": "Berlin",
     "neighborhood": "",
@@ -1722,8 +1739,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Alt-Stralau 61, 10245 Berlin",
-    "latitude": 52.4958391,
-    "longitude": 13.4678929,
+    "latitude": 52.4959189,
+    "longitude": 13.4677677,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1760,8 +1777,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Friedrichstraße 191",
-    "latitude": 52.5108387,
-    "longitude": 13.3896381,
+    "latitude": 52.5107745,
+    "longitude": 13.3896707,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2305,8 +2322,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Herrfurthstraße 21, 12049 Berlin",
-    "latitude": 52.4767265,
-    "longitude": 13.4200344,
+    "latitude": 52.4766888,
+    "longitude": 13.4198521,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -2433,8 +2450,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Heidestraße 40, 10557",
-    "latitude": 52.5328215,
-    "longitude": 13.3655968,
+    "latitude": 52.5327671,
+    "longitude": 13.365657,
     "type": "Store",
     "changing_table_location": [
       "sales area"
