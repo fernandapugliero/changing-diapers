@@ -1722,8 +1722,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Alt-Stralau 61, 10245 Berlin",
-    "latitude": 52.4959189,
-    "longitude": 13.4677677,
+    "latitude": 52.4958391,
+    "longitude": 13.4678929,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1760,8 +1760,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Friedrichstraße 191",
-    "latitude": 52.5107745,
-    "longitude": 13.3896707,
+    "latitude": 52.5108387,
+    "longitude": 13.3896381,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2305,8 +2305,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Herrfurthstraße 21, 12049 Berlin",
-    "latitude": 52.4766888,
-    "longitude": 13.4198521,
+    "latitude": 52.4767265,
+    "longitude": 13.4200344,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -2433,8 +2433,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Heidestraße 40, 10557",
-    "latitude": 52.5327671,
-    "longitude": 13.365657,
+    "latitude": 52.5328215,
+    "longitude": 13.3655968,
     "type": "Store",
     "changing_table_location": [
       "sales area"
