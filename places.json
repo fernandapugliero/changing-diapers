@@ -1431,6 +1431,27 @@
     "created_at": "2025-07-10"
   },
   {
+    "name": "LIVING BERLIN",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kantstraße 17, 10623",
+    "latitude": 52.5060585,
+    "longitude": 13.3247627,
+    "type": "Mall",
+    "changing_table_location": [
+      "women's restroom",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "living-berlin.com",
+    "created_at": "2025-08-02"
+  },
+  {
     "name": "Public Toilet",
     "city": "Copenhagen",
     "neighborhood": "",
