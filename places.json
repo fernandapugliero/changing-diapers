@@ -917,6 +917,23 @@
     "created_at": "2025-07-10"
   },
   {
+    "name": "Tucano brasilianisches Restaurant",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Castello, Landsberger Allee 171C, 10369",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "tucano-restaurant.de",
+    "created_at": "2025-08-04"
+  },
+  {
     "name": "Eiscafé Klatsch",
     "city": "Berlin",
     "neighborhood": "",
