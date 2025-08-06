@@ -121,8 +121,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Göhrener Str. 5, 10437 Berlin",
-    "latitude": 52.5416295,
-    "longitude": 13.4214974,
+    "latitude": 52.541466,
+    "longitude": 13.4214466,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -2105,8 +2105,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437 Berlin",
-    "latitude": 52.5437552,
-    "longitude": 13.4125377,
+    "latitude": 52.5418177,
+    "longitude": 13.4123572,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
