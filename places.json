@@ -1241,6 +1241,25 @@
     "created_at": "2025-05-27"
   },
   {
+    "name": "Restaurant Athos",
+    "city": "Delitzsch",
+    "neighborhood": "",
+    "address": "Bitterfelder Str. 17, 04509 Delitzsch",
+    "latitude": 51.5260205,
+    "longitude": 12.3366202,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/6ebUatafQqAyAYRc6?g_st=com.google.maps.preview.copy",
+    "created_at": "2025-08-07"
+  },
+  {
     "name": "Cafe am Neuen See",
     "city": "Berlin",
     "neighborhood": "",
