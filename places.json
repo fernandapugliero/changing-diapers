@@ -251,6 +251,25 @@
     "created_at": "2025-06-11"
   },
   {
+    "name": "K-Fetisch",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Wildenbruchstr. 86, 12045",
+    "latitude": 52.4831376,
+    "longitude": 13.4418549,
+    "type": "Café",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-07"
+  },
+  {
     "name": "Plansche im Plänterwald (Wasserspielplatz)",
     "city": "Berlin",
     "neighborhood": "",
@@ -437,6 +456,25 @@
     "room_for_stroller": false,
     "site": "https://maps.app.goo.gl/FjmEiuRkrZh8z1XR7?g_st=com.google.maps.preview.copy",
     "created_at": "2025-06-16"
+  },
+  {
+    "name": "Il Ritrovo",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Gabriel-Max-Straße 2, 10245",
+    "latitude": 52.5097902,
+    "longitude": 13.4581776,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "ritrovo.de",
+    "created_at": "2025-08-07"
   },
   {
     "name": "Little Ones Cafe",
