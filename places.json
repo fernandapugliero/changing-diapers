@@ -2121,6 +2121,25 @@
     "created_at": "2025-07-05"
   },
   {
+    "name": "7 Delikatessen ",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Deitmerstraße 7, 12163, Berlin",
+    "latitude": 52.4589179,
+    "longitude": 13.3253725,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/5iFyNyctj55GVgQH9",
+    "created_at": "2025-08-08"
+  },
+  {
     "name": "Öffentliche Toiletten",
     "city": "Berlin",
     "neighborhood": "",
