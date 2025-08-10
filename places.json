@@ -1586,7 +1586,7 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Baumschulenstraße 28, 12437 Berlin",
-    "latitude": 52.4644533,
+    "latitude": 52.4644534,
     "longitude": 13.4861817,
     "type": "Café",
     "changing_table_location": [
@@ -1661,8 +1661,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weserstr. 175, 12045",
-    "latitude": 52.4846106,
-    "longitude": 13.4393169,
+    "latitude": 52.4846289,
+    "longitude": 13.4392789,
     "type": "Fitness Studio",
     "changing_table_location": [
       "men's restroom"
