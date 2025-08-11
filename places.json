@@ -641,6 +641,25 @@
     "created_at": "2025-06-08"
   },
   {
+    "name": "Holland-park",
+    "city": "Panketal",
+    "neighborhood": "",
+    "address": "Dorfstraße 30, 16341 Panketal",
+    "latitude": 52.6213123,
+    "longitude": 13.545319,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/Sz1TzqV66huvkVxP6?g_st=ipc",
+    "created_at": "2025-08-10"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -1753,6 +1772,26 @@
     "created_at": "2025-06-20"
   },
   {
+    "name": "PalaisPopulaire",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Unter den Linden 5, 10117 Berlin",
+    "latitude": 52.5171465,
+    "longitude": 13.3961451,
+    "type": "Museum",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-10"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -2066,6 +2105,25 @@
     "room_for_stroller": "Yes",
     "site": "https://ishin.de/",
     "created_at": "2025-05-25"
+  },
+  {
+    "name": "Zollpackhof",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Elisabeth-Abegg-Straße 1, 10557 Berlin",
+    "latitude": 52.5212821,
+    "longitude": 13.3668503,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/d8VUJibEUDku44rr9?g_st=ipc",
+    "created_at": "2025-08-10"
   },
   {
     "name": "Erchy‘s",
@@ -2537,6 +2595,25 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-06-17"
+  },
+  {
+    "name": "Haus der Wannsee Konferenz",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Am Großen Wannsee 56-58",
+    "latitude": 52.4269367,
+    "longitude": 13.1617574,
+    "type": "Museum",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-08-10"
   },
   {
     "name": "dm",
