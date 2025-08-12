@@ -1410,6 +1410,25 @@
     "created_at": "2025-06-10"
   },
   {
+    "name": "Junge Die Bäckerei",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rudi-Dutschke-Straße 17, 10969 Berlin",
+    "latitude": 52.5067214,
+    "longitude": 13.3931644,
+    "type": "Bakery",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.jb.de/?mtm_source=google&mtm_medium=uberall&mtm_campaign=401",
+    "created_at": "2025-08-11"
+  },
+  {
     "name": "Casalot Restaurant",
     "city": "Berlin",
     "neighborhood": "",
@@ -2595,6 +2614,23 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-06-17"
+  },
+  {
+    "name": "Spielplatz Volkspark Köpenick",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Pablo-Neruda-Straße, 12559",
+    "latitude": 52.4410783,
+    "longitude": 13.5880337,
+    "type": "Park",
+    "changing_table_location": [
+      "outdoors"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "berlin.de",
+    "created_at": "2025-08-11"
   },
   {
     "name": "Haus der Wannsee Konferenz",
