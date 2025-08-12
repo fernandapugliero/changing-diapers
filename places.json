@@ -218,7 +218,7 @@
     "name": "Mayersche Buchhandlung",
     "city": "Aachen",
     "neighborhood": "",
-    "address": "Buchkrenerstr 1-7, 52062",
+    "address": "Buchkrenerstr 1, 52062",
     "latitude": null,
     "longitude": null,
     "type": "Bookstore",
@@ -496,7 +496,7 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Bernauer Str. 111, 13355",
-    "latitude": 52.5353001,
+    "latitude": 52.5353002,
     "longitude": 13.3895542,
     "type": "Museum",
     "changing_table_location": [
@@ -977,9 +977,9 @@
     "name": "Tucano brasilianisches Restaurant",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Castello, Landsberger Allee 171C, 10369",
-    "latitude": null,
-    "longitude": null,
+    "address": "Landsberger Allee 171C, 10369",
+    "latitude": 52.5324512,
+    "longitude": 13.4694831,
     "type": "Restaurant",
     "changing_table_location": [
       "hallway"
@@ -1926,8 +1926,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Wrangelstraße 34, 10997",
-    "latitude": 52.5036406,
-    "longitude": 13.429672,
+    "latitude": 52.50088,
+    "longitude": 13.4356547,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2909,6 +2909,25 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-05-03"
+  },
+  {
+    "name": "C&A",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Alexanderpl. 1, 10178",
+    "latitude": 52.5215058,
+    "longitude": 13.4123809,
+    "type": "Store",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.c-and-a.com/stores/de-de/berlin/berlin/alexanderplatz-1.html",
+    "created_at": "2025-08-12"
   },
   {
     "name": "Refugio Café",
