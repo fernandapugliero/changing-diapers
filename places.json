@@ -1772,6 +1772,23 @@
     "created_at": "2025-04-19"
   },
   {
+    "name": "Genezarethkirche",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Herrfurthpl. 14, 12049 Berlin",
+    "latitude": 52.476987,
+    "longitude": 13.4224107,
+    "type": "Institution",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-13"
+  },
+  {
     "name": "Zenner",
     "city": "Berlin",
     "neighborhood": "",
