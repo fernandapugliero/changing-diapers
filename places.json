@@ -784,6 +784,27 @@
     "created_at": "2025-04-23"
   },
   {
+    "name": "Rastanlage Frankenwald West",
+    "city": "Berg",
+    "neighborhood": "",
+    "address": "Am Hohen Rain 3, 95180",
+    "latitude": 50.4053607,
+    "longitude": 11.7736829,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/qVuT85acSq1iux4X8?g_st=ipc",
+    "created_at": "2025-08-13"
+  },
+  {
     "name": "Chotto",
     "city": "Berlin",
     "neighborhood": "",
@@ -2395,6 +2416,25 @@
     "room_for_stroller": "No",
     "site": "",
     "created_at": "2025-05-04"
+  },
+  {
+    "name": "Rossmann ",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Schloßstraße 95, 12163 Berlin",
+    "latitude": 52.4584189,
+    "longitude": 13.3225704,
+    "type": "Store",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/ebZayWHuGh589qPE7",
+    "created_at": "2025-08-13"
   },
   {
     "name": "Kaffeeschwestern Cafe",
