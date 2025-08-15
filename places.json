@@ -200,8 +200,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Urbanstraße 70A, 10967",
-    "latitude": 52.4881953,
-    "longitude": 13.4230643,
+    "latitude": 52.4882441,
+    "longitude": 13.4230337,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -331,8 +331,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schloßpl. 1, 10178",
-    "latitude": 52.5178944,
-    "longitude": 13.4019325,
+    "latitude": 52.5152648,
+    "longitude": 13.4004549,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom",
@@ -385,8 +385,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Glasbläserallee 25, 10245 Berlin",
-    "latitude": 52.4987096,
-    "longitude": 13.469097,
+    "latitude": 52.4986608,
+    "longitude": 13.4690444,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -462,8 +462,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Gabriel-Max-Straße 2, 10245",
-    "latitude": 52.5097614,
-    "longitude": 13.4581539,
+    "latitude": 52.5097902,
+    "longitude": 13.4581776,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -847,8 +847,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Friedrichstraße 191, 10117",
-    "latitude": 52.5108387,
-    "longitude": 13.3896381,
+    "latitude": 52.5107745,
+    "longitude": 13.3896707,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -977,8 +977,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Paul-Lincke-Ufer 17, 10999",
-    "latitude": 52.4933018,
-    "longitude": 13.4311,
+    "latitude": 52.4933415,
+    "longitude": 13.430955,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom",
@@ -1055,8 +1055,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Chamissopl. 7, 10965",
-    "latitude": 52.4881298,
-    "longitude": 13.3917754,
+    "latitude": 52.4881536,
+    "longitude": 13.3918234,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1091,8 +1091,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Paul-Lincke-Ufer 39-40",
-    "latitude": 52.4969207,
-    "longitude": 13.4228276,
+    "latitude": 52.4961121,
+    "longitude": 13.4222913,
     "type": "Restaurant",
     "changing_table_location": "",
     "supplies_available": [],
@@ -1473,8 +1473,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Oranienburger Str. 32, 10117 Berlin",
-    "latitude": 52.5258054,
-    "longitude": 13.3943591,
+    "latitude": 52.5255763,
+    "longitude": 13.3939581,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -1493,8 +1493,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Chausseestraße 55, 10115",
-    "latitude": 52.5359273,
-    "longitude": 13.3767068,
+    "latitude": 52.5360351,
+    "longitude": 13.3765927,
     "type": "Café",
     "changing_table_location": "",
     "supplies_available": [],
@@ -1547,8 +1547,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Landsberger Allee 117, 10407",
-    "latitude": 52.5289446,
-    "longitude": 13.4560639,
+    "latitude": 52.5290131,
+    "longitude": 13.4566633,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1566,8 +1566,8 @@
     "city": "Mexico City",
     "neighborhood": "",
     "address": "Av Porfirio Díaz 66, Noche Buena, Benito Juárez, 03720 Ciudad de México, CDMX, Mexico",
-    "latitude": 19.3801802,
-    "longitude": -99.1766303,
+    "latitude": 19.3800922,
+    "longitude": -99.1771339,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1909,8 +1909,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Alt-Stralau 61, 10245 Berlin",
-    "latitude": 52.4958391,
-    "longitude": 13.4678929,
+    "latitude": 52.4959189,
+    "longitude": 13.4677677,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1947,8 +1947,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Friedrichstraße 191",
-    "latitude": 52.5108387,
-    "longitude": 13.3896381,
+    "latitude": 52.5107745,
+    "longitude": 13.3896707,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2047,6 +2047,26 @@
     "room_for_stroller": "No",
     "site": "https://www.instagram.com/cantinapastasciutta?igsh=MWZsOTM4NThtMmF4ag==",
     "created_at": "2025-05-27"
+  },
+  {
+    "name": "Breuninger",
+    "city": "Stuttgart",
+    "neighborhood": "",
+    "address": "Marktstraße 1, 70173",
+    "latitude": 48.7749716,
+    "longitude": 9.1797392,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "e-breuninger.de",
+    "created_at": "2025-08-14"
   },
   {
     "name": "La Maison",
@@ -2240,8 +2260,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Deitmerstraße 7, 12163, Berlin",
-    "latitude": 52.4589709,
-    "longitude": 13.3252707,
+    "latitude": 52.4589179,
+    "longitude": 13.3253725,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -2549,8 +2569,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Herrfurthstraße 21, 12049 Berlin",
-    "latitude": 52.4767265,
-    "longitude": 13.4200344,
+    "latitude": 52.4766888,
+    "longitude": 13.4198521,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -2713,8 +2733,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Heidestraße 40, 10557",
-    "latitude": 52.5328215,
-    "longitude": 13.3655968,
+    "latitude": 52.5327671,
+    "longitude": 13.365657,
     "type": "Store",
     "changing_table_location": [
       "sales area"
