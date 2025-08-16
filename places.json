@@ -1431,6 +1431,26 @@
     "created_at": "2025-06-10"
   },
   {
+    "name": "Arlberg WellCom",
+    "city": "St. Anton am Arlberg",
+    "neighborhood": "",
+    "address": "Hannes-Schneider-Weg 11, 6580",
+    "latitude": 47.1304336,
+    "longitude": 10.2654253,
+    "type": "Spa",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "arlberg-wellcom.at",
+    "created_at": "2025-08-16"
+  },
+  {
     "name": "Junge Die Bäckerei",
     "city": "Berlin",
     "neighborhood": "",
@@ -1502,6 +1522,25 @@
     "room_for_stroller": false,
     "site": "",
     "created_at": "2025-06-08"
+  },
+  {
+    "name": "McDonald's",
+    "city": "Aichstetten",
+    "neighborhood": "",
+    "address": "Am Waizenhof 8, 88317",
+    "latitude": 47.8795097,
+    "longitude": 10.0382586,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/FysTrMJXkUmBkk2G7?g_st=ipc",
+    "created_at": "2025-08-16"
   },
   {
     "name": "Öffentliche Toilette",
