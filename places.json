@@ -1117,6 +1117,25 @@
     "created_at": "2025-06-27"
   },
   {
+    "name": "Zum Fliegenden Holländer",
+    "city": "Potsdam",
+    "neighborhood": "",
+    "address": "Benkertstraße 5, 14467 Potsdam",
+    "latitude": 52.4030845,
+    "longitude": 13.0603075,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "zumfliegendenhollaender.com",
+    "created_at": "2025-08-18"
+  },
+  {
     "name": "Fridas Eiskrem",
     "city": "Aschaffenburg",
     "neighborhood": "",
@@ -2240,6 +2259,25 @@
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/d8VUJibEUDku44rr9?g_st=ipc",
     "created_at": "2025-08-10"
+  },
+  {
+    "name": "Augustiner Potsdam",
+    "city": "Potsdam",
+    "neighborhood": "",
+    "address": "Mittelstraße 18, 14467 Potsdam",
+    "latitude": 52.4030235,
+    "longitude": 13.061649,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "augustiner-potsdam.de",
+    "created_at": "2025-08-18"
   },
   {
     "name": "Erchy‘s",
