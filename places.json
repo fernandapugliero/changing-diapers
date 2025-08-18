@@ -3008,6 +3008,26 @@
     "created_at": "2025-04-29"
   },
   {
+    "name": "Wagner Hütte",
+    "city": "St. Anton am Arlberg",
+    "neighborhood": "",
+    "address": "Verwallweg 122, 6580",
+    "latitude": 47.1047265,
+    "longitude": 10.2211614,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "wagnerhuette.at",
+    "created_at": "2025-08-17"
+  },
+  {
     "name": "Baby & Beans",
     "city": "Lisbon",
     "neighborhood": "",
