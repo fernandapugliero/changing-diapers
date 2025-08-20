@@ -200,8 +200,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Urbanstraße 70A, 10967",
-    "latitude": 52.4882441,
-    "longitude": 13.4230337,
+    "latitude": 52.4881953,
+    "longitude": 13.4230643,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1474,8 +1474,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rudi-Dutschke-Straße 17, 10969 Berlin",
-    "latitude": 52.5067214,
-    "longitude": 13.3931644,
+    "latitude": 52.5067343,
+    "longitude": 13.3941121,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
