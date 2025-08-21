@@ -2224,6 +2224,25 @@
     "created_at": "2025-06-28"
   },
   {
+    "name": "Serways Raststätte Aichen Nord",
+    "city": "Nellingen",
+    "neighborhood": "",
+    "address": "Aichen 19, 89191 Nellingen",
+    "latitude": 48.5211487,
+    "longitude": 9.806326,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-21"
+  },
+  {
     "name": "FaNN - Familienhaus Neukölln Nord",
     "city": "Berlin",
     "neighborhood": "",
