@@ -714,6 +714,27 @@
     "created_at": "2025-04-24"
   },
   {
+    "name": "Restaurant Himmeleck",
+    "city": "St. Anton am Arlberg",
+    "neighborhood": "",
+    "address": "Gampen, 6580",
+    "latitude": 47.1376376,
+    "longitude": 10.2524675,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent",
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "arlbergerbergbahnen.com",
+    "created_at": "2025-08-20"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -3170,5 +3191,24 @@
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/SPVBXMYkd5tzUkKy8?g_st=ipc",
     "created_at": "2025-08-04"
+  },
+  {
+    "name": "FMZ IMST",
+    "city": "Imst",
+    "neighborhood": "",
+    "address": "Industriezone 32, 6460",
+    "latitude": 47.219666,
+    "longitude": 10.7352695,
+    "type": "Mall",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "fmz-imst.at",
+    "created_at": "2025-08-20"
   }
 ]
