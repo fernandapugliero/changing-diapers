@@ -2644,6 +2644,26 @@
     "created_at": "2025-07-12"
   },
   {
+    "name": "Bio Company",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Treskowallee 114, 10318 Berlin ",
+    "latitude": 52.4811557,
+    "longitude": 13.5249272,
+    "type": "Store",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dusty"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-21"
+  },
+  {
     "name": "Kadewe",
     "city": "Berlin",
     "neighborhood": "",
@@ -3123,6 +3143,25 @@
     "room_for_stroller": "Yes",
     "site": "https://www.c-and-a.com/stores/de-de/berlin/berlin/alexanderplatz-1.html",
     "created_at": "2025-08-12"
+  },
+  {
+    "name": "Gasthaus Seibl Fam. Bayer",
+    "city": "Lochau",
+    "neighborhood": "",
+    "address": "Oberhaggen 1, 6911",
+    "latitude": 47.5132717,
+    "longitude": 9.7620243,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "gasthausseibl.at",
+    "created_at": "2025-08-21"
   },
   {
     "name": "Refugio Café",
