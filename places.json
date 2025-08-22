@@ -23,8 +23,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Grunerstraße 20, 10179",
-    "latitude": 52.5190723,
-    "longitude": 13.4160154,
+    "latitude": 52.5183116,
+    "longitude": 13.4157397,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -121,8 +121,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Göhrener Str. 5, 10437 Berlin",
-    "latitude": 52.541466,
-    "longitude": 13.4214466,
+    "latitude": 52.5416295,
+    "longitude": 13.4214974,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -331,8 +331,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schloßpl. 1, 10178",
-    "latitude": 52.5152648,
-    "longitude": 13.4004549,
+    "latitude": 52.5177898,
+    "longitude": 13.4024502,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom",
@@ -423,8 +423,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 41, 10319 Berlin",
-    "latitude": 52.4991199,
-    "longitude": 13.5216227,
+    "latitude": 52.5038205,
+    "longitude": 13.5205206,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1495,8 +1495,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rudi-Dutschke-Straße 17, 10969 Berlin",
-    "latitude": 52.5067343,
-    "longitude": 13.3941121,
+    "latitude": 52.5067214,
+    "longitude": 13.3931644,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -2433,8 +2433,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437 Berlin",
-    "latitude": 52.5452066,
-    "longitude": 13.4125713,
+    "latitude": 52.5417792,
+    "longitude": 13.4120073,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -2453,7 +2453,7 @@
     "neighborhood": "",
     "address": "Helmholtzplatz 1, 10437",
     "latitude": 52.5426573,
-    "longitude": 13.4197575,
+    "longitude": 13.4197576,
     "type": "Café",
     "changing_table_location": "",
     "supplies_available": [],
@@ -3149,7 +3149,7 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Alexanderpl. 1, 10178",
-    "latitude": 52.5215058,
+    "latitude": 52.5215059,
     "longitude": 13.4123809,
     "type": "Store",
     "changing_table_location": [
