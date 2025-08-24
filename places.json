@@ -102,8 +102,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tamara-Danz-Straße 11, 10243 Berlin",
-    "latitude": 52.5060486,
-    "longitude": 13.4466595,
+    "latitude": 52.5064848,
+    "longitude": 13.4459175,
     "type": "Mall",
     "changing_table_location": [
       "hallway"
@@ -331,8 +331,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schloßpl. 1, 10178",
-    "latitude": 52.5172152,
-    "longitude": 13.4007352,
+    "latitude": 52.5152614,
+    "longitude": 13.4019087,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom",
@@ -754,8 +754,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66",
-    "latitude": 52.4820886,
-    "longitude": 13.4321513,
+    "latitude": 52.4819616,
+    "longitude": 13.4327729,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1110,8 +1110,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weichselstraße 33-36, 12045",
-    "latitude": 52.487544,
-    "longitude": 13.437259,
+    "latitude": 52.488479,
+    "longitude": 13.4384913,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom"
@@ -1814,8 +1814,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weserstr. 175, 12045",
-    "latitude": 52.4846106,
-    "longitude": 13.4393169,
+    "latitude": 52.4844788,
+    "longitude": 13.4388872,
     "type": "Fitness Studio",
     "changing_table_location": [
       "men's restroom"
@@ -2262,8 +2262,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hobrechtstraße 32, 12047",
-    "latitude": 52.4920373,
-    "longitude": 13.4268288,
+    "latitude": 52.4920006,
+    "longitude": 13.4262918,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -3106,8 +3106,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tamara-Danz-Straße 11",
-    "latitude": 52.5060486,
-    "longitude": 13.4466595,
+    "latitude": 52.5064848,
+    "longitude": 13.4459175,
     "type": "Store",
     "changing_table_location": [
       "sales area"
