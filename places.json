@@ -55,8 +55,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Straße 645, 12049",
-    "latitude": 52.4767036,
-    "longitude": 13.4183601,
+    "latitude": 52.4767037,
+    "longitude": 13.4183602,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -754,8 +754,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66",
-    "latitude": 52.4819616,
-    "longitude": 13.4327729,
+    "latitude": 52.4820886,
+    "longitude": 13.4321513,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1110,8 +1110,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weichselstraße 33-36, 12045",
-    "latitude": 52.4850611,
-    "longitude": 13.4339971,
+    "latitude": 52.487544,
+    "longitude": 13.437259,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom"
@@ -1510,8 +1510,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rudi-Dutschke-Straße 17, 10969 Berlin",
-    "latitude": 52.5067343,
-    "longitude": 13.3941121,
+    "latitude": 52.5067214,
+    "longitude": 13.3931644,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -2262,8 +2262,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hobrechtstraße 32, 12047",
-    "latitude": 52.4920006,
-    "longitude": 13.4262918,
+    "latitude": 52.4920373,
+    "longitude": 13.4268288,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -2849,8 +2849,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.4410783,
-    "longitude": 13.5880337,
+    "latitude": 52.4410584,
+    "longitude": 13.5871053,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
