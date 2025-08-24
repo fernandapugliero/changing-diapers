@@ -36,6 +36,25 @@
     "created_at": "2025-04-23"
   },
   {
+    "name": "DM",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Am Steglitzer Kreisel, Albrechtstr. 3, 12165 Berlin",
+    "latitude": null,
+    "longitude": null,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-24"
+  },
+  {
     "name": "Salzino",
     "city": "Hamburg",
     "neighborhood": "",
@@ -115,6 +134,21 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-07-04"
+  },
+  {
+    "name": "Prater Biergarten ",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Prenzlauer Berg ",
+    "latitude": 52.5398466,
+    "longitude": 13.4285652,
+    "type": "Biergarten",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-08-24"
   },
   {
     "name": "Benedict Prenzlauerberg",
@@ -423,8 +457,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 41, 10319 Berlin",
-    "latitude": 52.5021692,
-    "longitude": 13.5206042,
+    "latitude": 52.4963937,
+    "longitude": 13.5243883,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1964,7 +1998,7 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rummelsburger Str. 16, 12459",
-    "latitude": 52.4692855,
+    "latitude": 52.4692856,
     "longitude": 13.5123692,
     "type": "Store",
     "changing_table_location": [
@@ -2411,8 +2445,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Bulgarische Str. 58, 12435",
-    "latitude": 52.4814994,
-    "longitude": 13.4731341,
+    "latitude": 52.4814988,
+    "longitude": 13.4733516,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom",
@@ -3228,6 +3262,23 @@
     "room_for_stroller": false,
     "site": "https://www.instagram.com/luuv.cafe",
     "created_at": "2025-06-02"
+  },
+  {
+    "name": "Tomasa",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kreuzbergstraße 62, 10965 Berlin",
+    "latitude": 52.4894583,
+    "longitude": 13.3802094,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/Wo6FZb3LPzGGdpru6?g_st=ac",
+    "created_at": "2025-08-24"
   },
   {
     "name": "dm",
