@@ -23,8 +23,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Grunerstraße 20, 10179",
-    "latitude": 52.5194901,
-    "longitude": 13.4162781,
+    "latitude": 52.5190723,
+    "longitude": 13.4160154,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -209,6 +209,21 @@
     "room_for_stroller": "Yes",
     "site": "https://zenner.berlin/",
     "created_at": "2025-04-11"
+  },
+  {
+    "name": "Hof an den Teichen",
+    "city": "Lüneburg",
+    "neighborhood": "",
+    "address": "Heiligenthaler Str. 1, 21335",
+    "latitude": 53.2137577,
+    "longitude": 10.3601916,
+    "type": "Park",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "hofandenteichen.de",
+    "created_at": "2025-08-24"
   },
   {
     "name": "Westfield Hamburg-Überseequartier",
@@ -638,8 +653,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119 Berlin",
-    "latitude": 52.530919,
-    "longitude": 13.4121507,
+    "latitude": 52.5308311,
+    "longitude": 13.412464,
     "type": "Restaurant",
     "changing_table_location": [
       "dedicated room"
@@ -1848,8 +1863,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weserstr. 175, 12045",
-    "latitude": 52.4844788,
-    "longitude": 13.4388872,
+    "latitude": 52.4846289,
+    "longitude": 13.4392789,
     "type": "Fitness Studio",
     "changing_table_location": [
       "men's restroom"
@@ -2296,8 +2311,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hobrechtstraße 32, 12047",
-    "latitude": 52.4920006,
-    "longitude": 13.4262918,
+    "latitude": 52.4920373,
+    "longitude": 13.4268288,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -2409,8 +2424,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hermannstraße 158a",
-    "latitude": 52.4672647,
-    "longitude": 13.433053,
+    "latitude": 52.4671065,
+    "longitude": 13.4318289,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2445,8 +2460,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Bulgarische Str. 58, 12435",
-    "latitude": 52.4814988,
-    "longitude": 13.4733516,
+    "latitude": 52.4841887,
+    "longitude": 13.478835,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom",
@@ -2482,8 +2497,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437 Berlin",
-    "latitude": 52.5489819,
-    "longitude": 13.4134528,
+    "latitude": 52.5484492,
+    "longitude": 13.4137082,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -2516,8 +2531,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119 Berlin",
-    "latitude": 52.530919,
-    "longitude": 13.4121507,
+    "latitude": 52.5308311,
+    "longitude": 13.412464,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
@@ -2755,8 +2770,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Herrfurthstraße 21, 12049 Berlin",
-    "latitude": 52.4766888,
-    "longitude": 13.4198521,
+    "latitude": 52.4767265,
+    "longitude": 13.4200344,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
