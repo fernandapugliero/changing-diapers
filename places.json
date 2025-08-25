@@ -36,7 +36,7 @@
     "created_at": "2025-04-23"
   },
   {
-    "name": "DM",
+    "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Steglitzer Kreisel, Albrechtstr. 3, 12165 Berlin",
@@ -230,8 +230,8 @@
     "city": "Hamburg",
     "neighborhood": "",
     "address": "Überseeboulevard 7, 20457",
-    "latitude": 53.5397349,
-    "longitude": 9.9991553,
+    "latitude": 53.5406335,
+    "longitude": 9.9991418,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -2205,6 +2205,26 @@
     "room_for_stroller": false,
     "site": "https://www.instagram.com/cafe_cosita_geesthacht",
     "created_at": "2025-05-23"
+  },
+  {
+    "name": "Marché Hirschberg",
+    "city": "Hirschberg",
+    "neighborhood": "",
+    "address": "A9, 07927",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "marche-restaurants.de",
+    "created_at": "2025-08-25"
   },
   {
     "name": "Shopping Cidade Jardim",
