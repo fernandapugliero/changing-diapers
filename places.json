@@ -799,6 +799,23 @@
     "created_at": "2025-08-20"
   },
   {
+    "name": "Nah am Wasser",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kiehlufer 55, 12059 Berlin",
+    "latitude": 52.4851268,
+    "longitude": 13.4449541,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-25"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -831,6 +848,25 @@
     "room_for_stroller": false,
     "site": "",
     "created_at": "2025-06-05"
+  },
+  {
+    "name": "BRLO Charlottenburg ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Giesebrechtstraße 15, 10629 Berlin",
+    "latitude": 52.5018681,
+    "longitude": 13.3105132,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-25"
   },
   {
     "name": "Tapiocaria",
@@ -1784,6 +1820,23 @@
     "created_at": "2025-07-05"
   },
   {
+    "name": "Neue Republik Reger",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Bouchéstraße 79A, 12435 Berlin",
+    "latitude": 52.4903321,
+    "longitude": 13.4490329,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/uf1ceqUuqJ9xGfgV6?g_st=ipc",
+    "created_at": "2025-08-25"
+  },
+  {
     "name": "RumBa ",
     "city": "Berlin",
     "neighborhood": "",
@@ -2101,6 +2154,21 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-06-30"
+  },
+  {
+    "name": "Nah am Wasser",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Kiehlufer 55, 12059 Berlin",
+    "latitude": 52.4851268,
+    "longitude": 13.4449541,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-08-25"
   },
   {
     "name": "dm",
