@@ -1577,7 +1577,7 @@
     "address": "Hannes-Schneider-Weg 11, 6580",
     "latitude": 47.1304336,
     "longitude": 10.2654253,
-    "type": "Spa",
+    "type": "Swimming Pool",
     "changing_table_location": [
       "dedicated room"
     ],
@@ -1826,7 +1826,7 @@
     "address": "Bouchéstraße 79A, 12435 Berlin",
     "latitude": 52.4903321,
     "longitude": 13.4490329,
-    "type": "Restaurant",
+    "type": "Bar",
     "changing_table_location": [
       "mixed restroom"
     ],
