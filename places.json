@@ -2353,6 +2353,21 @@
     "created_at": "2025-06-05"
   },
   {
+    "name": "Zenner Biergarten und Weingarten",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Alt Treptow 15, 12435 Berlin",
+    "latitude": 52.4872491,
+    "longitude": 13.4774693,
+    "type": "Biergarten",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-08-31"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
