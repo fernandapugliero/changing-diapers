@@ -300,6 +300,25 @@
     "created_at": "2025-06-11"
   },
   {
+    "name": "Edeka Niebisch",
+    "city": "Landsberg",
+    "neighborhood": "",
+    "address": "Zörbiger Str. 17, 06188 Landsberg",
+    "latitude": 51.5370802,
+    "longitude": 12.1600728,
+    "type": "Bakery",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/pRXDBzoVWzChhvLQ6?g_st=ipc",
+    "created_at": "2025-09-01"
+  },
+  {
     "name": "K-Fetisch",
     "city": "Berlin",
     "neighborhood": "",
