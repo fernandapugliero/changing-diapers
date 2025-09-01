@@ -23,8 +23,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Grunerstraße 20, 10179",
-    "latitude": 52.5190723,
-    "longitude": 13.4160154,
+    "latitude": 52.5186319,
+    "longitude": 13.417012,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -121,8 +121,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tamara-Danz-Straße 11, 10243 Berlin",
-    "latitude": 52.5064848,
-    "longitude": 13.4459175,
+    "latitude": 52.5060486,
+    "longitude": 13.4466595,
     "type": "Mall",
     "changing_table_location": [
       "hallway"
@@ -249,8 +249,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Urbanstraße 70A, 10967",
-    "latitude": 52.4881953,
-    "longitude": 13.4230643,
+    "latitude": 52.4882441,
+    "longitude": 13.4230337,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -472,8 +472,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 41, 10319 Berlin",
-    "latitude": 52.4963937,
-    "longitude": 13.5243883,
+    "latitude": 52.4991199,
+    "longitude": 13.5216227,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -837,8 +837,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66",
-    "latitude": 52.4819616,
-    "longitude": 13.4327729,
+    "latitude": 52.4820169,
+    "longitude": 13.4330692,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1021,8 +1021,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66, 12043",
-    "latitude": 52.4819616,
-    "longitude": 13.4327729,
+    "latitude": 52.4820169,
+    "longitude": 13.4330692,
     "type": "Mall",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1212,8 +1212,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weichselstraße 33-36, 12045",
-    "latitude": 52.488479,
-    "longitude": 13.4384913,
+    "latitude": 52.4890018,
+    "longitude": 13.4391874,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom"
@@ -1612,8 +1612,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rudi-Dutschke-Straße 17, 10969 Berlin",
-    "latitude": 52.5067214,
-    "longitude": 13.3931644,
+    "latitude": 52.5067343,
+    "longitude": 13.3941121,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -2372,8 +2372,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 9",
-    "latitude": 52.5298245,
-    "longitude": 13.4112754,
+    "latitude": 52.5301311,
+    "longitude": 13.4109881,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2431,8 +2431,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hobrechtstraße 32, 12047",
-    "latitude": 52.4920373,
-    "longitude": 13.4268288,
+    "latitude": 52.4920006,
+    "longitude": 13.4262918,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -2544,8 +2544,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hermannstraße 158a",
-    "latitude": 52.4671065,
-    "longitude": 13.4318289,
+    "latitude": 52.4672647,
+    "longitude": 13.433053,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2617,8 +2617,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437 Berlin",
-    "latitude": 52.5418177,
-    "longitude": 13.4123572,
+    "latitude": 52.5437552,
+    "longitude": 13.4125377,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -3035,8 +3035,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.4410584,
-    "longitude": 13.5871053,
+    "latitude": 52.4425089,
+    "longitude": 13.5910199,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
@@ -3052,8 +3052,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Großen Wannsee 56-58",
-    "latitude": 52.4269367,
-    "longitude": 13.1617574,
+    "latitude": 52.4211679,
+    "longitude": 13.1664432,
     "type": "Museum",
     "changing_table_location": [
       "women's restroom"
@@ -3292,8 +3292,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tamara-Danz-Straße 11",
-    "latitude": 52.5064848,
-    "longitude": 13.4459175,
+    "latitude": 52.5060486,
+    "longitude": 13.4466595,
     "type": "Store",
     "changing_table_location": [
       "sales area"
