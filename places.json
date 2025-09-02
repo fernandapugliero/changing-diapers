@@ -886,6 +886,25 @@
     "created_at": "2025-06-05"
   },
   {
+    "name": "Kurhaus Zingst",
+    "city": "Zingst",
+    "neighborhood": "",
+    "address": "Seestraße 57, 18374 Zingst",
+    "latitude": 54.4410354,
+    "longitude": 12.6821867,
+    "type": "Institution",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-01"
+  },
+  {
     "name": "BRLO Charlottenburg ",
     "city": "Berlin",
     "neighborhood": "",
