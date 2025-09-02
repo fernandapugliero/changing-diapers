@@ -1758,6 +1758,25 @@
     "created_at": "2025-06-05"
   },
   {
+    "name": "Rossmann",
+    "city": "Herford",
+    "neighborhood": "",
+    "address": "Waltgeristraße 77, 32049 Herford",
+    "latitude": 52.1265049,
+    "longitude": 8.6825786,
+    "type": "Store",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-02"
+  },
+  {
     "name": "La Fève",
     "city": "Berlin",
     "neighborhood": "",
@@ -2651,6 +2670,23 @@
     "created_at": "2025-04-18"
   },
   {
+    "name": "dm",
+    "city": "Pinneberg ",
+    "neighborhood": "",
+    "address": "Bismarckstraße 13, 25421 Pinneberg",
+    "latitude": 53.6623102,
+    "longitude": 9.7962626,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-02"
+  },
+  {
     "name": "Petit Brunch",
     "city": "Berlin",
     "neighborhood": "",
@@ -2720,6 +2756,25 @@
     "room_for_stroller": false,
     "site": "https://ilovedots.de/",
     "created_at": "2025-08-27"
+  },
+  {
+    "name": "dm",
+    "city": "Bad Salzuflen",
+    "neighborhood": "",
+    "address": "Hoffmannstraße 34, 32105 Bad Salzuflen",
+    "latitude": 52.0767829,
+    "longitude": 8.7511091,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-02"
   },
   {
     "name": "Café Peri",
@@ -3271,6 +3326,25 @@
     "room_for_stroller": "No",
     "site": "",
     "created_at": "2025-04-19"
+  },
+  {
+    "name": "dm",
+    "city": "Herford",
+    "neighborhood": "",
+    "address": "Ernstmeierstraße 17, 32052 Herford",
+    "latitude": 52.1031906,
+    "longitude": 8.6930921,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-02"
   },
   {
     "name": "Kiraku",
