@@ -3564,6 +3564,25 @@
     "created_at": "2025-06-02"
   },
   {
+    "name": "Kaffee Barista",
+    "city": "Greifswald",
+    "neighborhood": "",
+    "address": "Knopfstr. 14",
+    "latitude": 54.0964285,
+    "longitude": 13.3819252,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/Q7Np4o5CNgQ5Fcri7?g_st=ipc",
+    "created_at": "2025-09-12"
+  },
+  {
     "name": "De Noantri",
     "city": "Berlin",
     "neighborhood": "",
