@@ -2957,6 +2957,25 @@
     "created_at": "2025-07-12"
   },
   {
+    "name": "Public Toilet Rummelsburger Str.",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rummelsburger Str. 35E",
+    "latitude": 52.5018992,
+    "longitude": 13.5060851,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/FimwggycTxvoavQM9?g_st=ipc",
+    "created_at": "2025-09-12"
+  },
+  {
     "name": "Bio Company",
     "city": "Berlin",
     "neighborhood": "",
