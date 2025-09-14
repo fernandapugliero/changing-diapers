@@ -1226,6 +1226,25 @@
     "created_at": "2025-05-22"
   },
   {
+    "name": "Junge Bäckerei",
+    "city": "Greifswald",
+    "neighborhood": "",
+    "address": "Schuhagen 24, 17489 Greifswald",
+    "latitude": null,
+    "longitude": null,
+    "type": "Bakery",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/itYtpiHUoPNpsNqD8?g_st=ipc",
+    "created_at": "2025-09-14"
+  },
+  {
     "name": "dm",
     "city": "Bad Oeynhausen",
     "neighborhood": "",
