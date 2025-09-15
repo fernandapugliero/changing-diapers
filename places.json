@@ -983,7 +983,7 @@
     "city": "Berg",
     "neighborhood": "",
     "address": "Am Hohen Rain 3, 95180",
-    "latitude": 50.4053607,
+    "latitude": 50.4053608,
     "longitude": 11.7736829,
     "type": "Restaurant",
     "changing_table_location": [
@@ -2028,8 +2028,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weserstr. 175, 12045",
-    "latitude": 52.4846289,
-    "longitude": 13.4392789,
+    "latitude": 52.4846106,
+    "longitude": 13.4393169,
     "type": "Fitness Studio",
     "changing_table_location": [
       "men's restroom"
