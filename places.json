@@ -1348,6 +1348,25 @@
     "created_at": "2025-06-27"
   },
   {
+    "name": "DM",
+    "city": "München",
+    "neighborhood": "",
+    "address": "Rotkreuzpl. 1, 80634 München",
+    "latitude": 48.1524792,
+    "longitude": 11.5337837,
+    "type": "Store",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/xFZgrd9hheV8sJ1j6",
+    "created_at": "2025-09-18"
+  },
+  {
     "name": "Zum Fliegenden Holländer",
     "city": "Potsdam",
     "neighborhood": "",
@@ -3275,8 +3294,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.4425089,
-    "longitude": 13.5910199,
+    "latitude": 52.4412947,
+    "longitude": 13.5930442,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
