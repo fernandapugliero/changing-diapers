@@ -1072,6 +1072,25 @@
     "created_at": "2025-06-26"
   },
   {
+    "name": "Tierpark hinter dem Baumstachlergehege",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Am Tierpark 39, 10319 Berlin",
+    "latitude": 52.4991199,
+    "longitude": 13.5216227,
+    "type": "Zoo",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/1fGJYYFNB5wFALSQA?g_st=ipc",
+    "created_at": "2025-09-19"
+  },
+  {
     "name": "Matanga - Cafe & Co",
     "city": "Berlin",
     "neighborhood": "",
