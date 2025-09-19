@@ -1912,8 +1912,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kantstraße 17, 10623",
-    "latitude": 52.5060585,
-    "longitude": 13.3247627,
+    "latitude": 52.505933,
+    "longitude": 13.3241853,
     "type": "Mall",
     "changing_table_location": [
       "women's restroom",
@@ -3294,8 +3294,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.4410789,
-    "longitude": 13.5879868,
+    "latitude": 52.441937,
+    "longitude": 13.5901206,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
@@ -3311,8 +3311,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Großen Wannsee 56-58",
-    "latitude": 52.4269367,
-    "longitude": 13.1617574,
+    "latitude": 52.434135,
+    "longitude": 13.1630339,
     "type": "Museum",
     "changing_table_location": [
       "women's restroom"
