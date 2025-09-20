@@ -1645,6 +1645,25 @@
     "created_at": "2025-08-07"
   },
   {
+    "name": "Ewig Freunde",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Raumerstr. 9",
+    "latitude": 52.5428261,
+    "longitude": 13.418085,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-09-20"
+  },
+  {
     "name": "Cafe am Neuen See",
     "city": "Berlin",
     "neighborhood": "",
