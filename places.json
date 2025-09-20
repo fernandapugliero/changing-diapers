@@ -2838,6 +2838,25 @@
     "created_at": "2025-07-04"
   },
   {
+    "name": "La Maison des Histoires",
+    "city": "Paris",
+    "neighborhood": "",
+    "address": "7 Cité de la Roquette, 75011 Paris",
+    "latitude": 48.8550252,
+    "longitude": 2.3739935,
+    "type": "Park",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "lamaisondeshistoires.com",
+    "created_at": "2025-09-20"
+  },
+  {
     "name": "Familienzentrum Juli",
     "city": "Berlin",
     "neighborhood": "",
@@ -3387,8 +3406,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Großen Wannsee 56-58",
-    "latitude": 52.434135,
-    "longitude": 13.1630339,
+    "latitude": 52.4269367,
+    "longitude": 13.1617574,
     "type": "Museum",
     "changing_table_location": [
       "women's restroom"
@@ -3481,8 +3500,8 @@
     "city": "Schönefeld",
     "neighborhood": "",
     "address": "Melli-Beese-Ring 1, 12529",
-    "latitude": 52.3650799,
-    "longitude": 13.5088327,
+    "latitude": 52.3644089,
+    "longitude": 13.5097021,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
