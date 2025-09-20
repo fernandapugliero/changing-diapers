@@ -922,6 +922,25 @@
     "created_at": "2025-06-05"
   },
   {
+    "name": "Kindervilla Kivi der Naturfreundejugend, Familienzentrum",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Lucy-Lameck-Straße 31, 12049",
+    "latitude": 52.4835549,
+    "longitude": 13.4218614,
+    "type": "Institution",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "kindervilla-kivi.de",
+    "created_at": "2025-09-19"
+  },
+  {
     "name": "Kurhaus Zingst",
     "city": "Zingst",
     "neighborhood": "",
@@ -1991,8 +2010,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Elsenstr. 52",
-    "latitude": 52.4859986,
-    "longitude": 13.4482936,
+    "latitude": 52.4855684,
+    "longitude": 13.4492569,
     "type": "Bakery",
     "changing_table_location": [
       "hallway"
@@ -2798,6 +2817,25 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-07-04"
+  },
+  {
+    "name": "Familienzentrum Juli",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Gürtelstraße 20, 10247",
+    "latitude": 52.5088564,
+    "longitude": 13.472468,
+    "type": "Institution",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "lebensnah.de",
+    "created_at": "2025-09-19"
   },
   {
     "name": "Zenner",
