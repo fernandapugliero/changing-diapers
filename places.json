@@ -3055,6 +3055,25 @@
     "created_at": "2025-04-16"
   },
   {
+    "name": "Kiez & Kugel",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Eisenbahnstraße 48, 10997 Berlin",
+    "latitude": 52.5010414,
+    "longitude": 13.4310567,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/F7b2av5MZkgDHeYZA",
+    "created_at": "2025-09-21"
+  },
+  {
     "name": "Gal Café ",
     "city": "Lisbon",
     "neighborhood": "",
