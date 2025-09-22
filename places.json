@@ -1405,6 +1405,25 @@
     "created_at": "2025-09-18"
   },
   {
+    "name": "dm",
+    "city": "Rostock",
+    "neighborhood": "",
+    "address": "Handwerkstraße 1, 18069",
+    "latitude": 54.1240633,
+    "longitude": 12.0723129,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-09-21"
+  },
+  {
     "name": "Zum Fliegenden Holländer",
     "city": "Potsdam",
     "neighborhood": "",
@@ -1422,6 +1441,28 @@
     "room_for_stroller": "No",
     "site": "zumfliegendenhollaender.com",
     "created_at": "2025-08-18"
+  },
+  {
+    "name": "Ostsee Park",
+    "city": "Rostock",
+    "neighborhood": "",
+    "address": "Ostsee-Park-Straße 3, 18069",
+    "latitude": 54.1074138,
+    "longitude": 12.0283144,
+    "type": "Mall",
+    "changing_table_location": [
+      "women's restroom",
+      "men's restroom",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "ostseeparkrostock.de",
+    "created_at": "2025-09-21"
   },
   {
     "name": "Fridas Eiskrem",
@@ -2616,8 +2657,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 9",
-    "latitude": 52.5301311,
-    "longitude": 13.4109881,
+    "latitude": 52.5298245,
+    "longitude": 13.4112754,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2916,8 +2957,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437 Berlin",
-    "latitude": 52.5437552,
-    "longitude": 13.4125377,
+    "latitude": 52.5418177,
+    "longitude": 13.4123572,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
