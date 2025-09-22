@@ -1339,6 +1339,25 @@
     "created_at": "2025-05-11"
   },
   {
+    "name": "Dussmann",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Friedrichstr. 90, 10117 Berlin",
+    "latitude": 52.518369,
+    "longitude": 13.3890173,
+    "type": "Bookstore",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/CpSxbyVBGKqJ8YUx6?g_st=ipc",
+    "created_at": "2025-09-22"
+  },
+  {
     "name": "Berliner Toilette Weichselstraße",
     "city": "Berlin",
     "neighborhood": "",
@@ -3466,8 +3485,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Großen Wannsee 56-58",
-    "latitude": 52.4269367,
-    "longitude": 13.1617574,
+    "latitude": 52.4206519,
+    "longitude": 13.1671045,
     "type": "Museum",
     "changing_table_location": [
       "women's restroom"
