@@ -111,6 +111,45 @@
     p strong {
       font-weight: 600;
     }
+    /* 🔎 Caixinha de busca */
+#geo-search {
+  position: fixed;        /* fica sempre visível enquanto o usuário rola */
+  top: 110px;             /* ajusta conforme seu layout */
+  left: 24px;
+  z-index: 1000;
+  background: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  border: 1px solid #eee;
+}
+#geo-search input {
+  width: 240px;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+#geo-search button {
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-size: 13px;
+}
+#geo-search button:hover {
+  background: #efefef;
+}
+@media (max-width: 480px) {
+  #geo-search { left: 12px; right: 12px; width: auto; }
+  #geo-search input { flex: 1; width: auto; }
+}
   </style>
 </head>
 <body>
@@ -127,6 +166,13 @@
   <h1>Need to change a diaper?</h1>
   <h2>Find baby-friendly places in your city with changing tables – cafes, restaurants, and more.</h2>
   <div id="map"></div>
+
+  <!-- 🔎 Geo-search (flutua sobre o mapa) -->
+<div id="geo-search">
+  <input id="geo-input" type="text" placeholder="Type an address, ZIP/CEP, or city" />
+  <button id="geo-go">Go</button>
+  <button id="geo-me">Use my location</button>
+</div>
 
   <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Best places to change a diaper in Berlin*</h2>
   <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
