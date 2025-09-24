@@ -7,6 +7,82 @@ fetch('places.json')
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+    // ========== ADIÇÃO: busca por localização ==========
+    const input = document.getElementById('geo-input');
+    const goBtn = document.getElementById('geo-go');
+    const meBtn = document.getElementById('geo-me');
+
+    let youMarker = null; // marcador do "sua localização"
+
+    function centerMap(lat, lng) {
+      map.setView([lat, lng], 14);
+      if (!youMarker) {
+        youMarker = L.marker([lat, lng], { title: 'Your location' }).addTo(map);
+      } else {
+        youMarker.setLatLng([lat, lng]);
+      }
+    }
+
+    async function geocodeAndCenter(query) {
+      if (!query) return;
+
+      // Se o usuário digitar "lat,lng", aceita direto
+      const m = query.trim().match(/^\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*$/);
+      if (m) {
+        const lat = parseFloat(m[1]);
+        const lng = parseFloat(m[2]);
+        centerMap(lat, lng);
+        return;
+      }
+
+      // Geocoding via Nominatim (OSM) — ótimo para MVP, sem chave
+      const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&addressdetails=1&limit=1&countrycodes=de,pt`;
+
+      try {
+        const res = await fetch(url, { headers: { 'Accept-Language': 'en' } });
+        const results = await res.json();
+
+        if (!Array.isArray(results) || results.length === 0) {
+          alert('Location not found. Try a more specific address or ZIP/CEP.');
+          return;
+        }
+
+        const { lat, lon } = results[0];
+        centerMap(parseFloat(lat), parseFloat(lon));
+      } catch (err) {
+        console.error('Geocoding error:', err);
+        alert('Could not look up this location now. Please try again in a moment.');
+      }
+    }
+
+    // Listeners — só conectam se os elementos existem no HTML
+    if (input && goBtn) {
+      goBtn.addEventListener('click', () => geocodeAndCenter(input.value.trim()));
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') geocodeAndCenter(input.value.trim());
+      });
+    }
+    if (meBtn) {
+      meBtn.addEventListener('click', () => {
+        if (!navigator.geolocation) {
+          alert('Geolocation is not supported in this browser.');
+          return;
+        }
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            const { latitude, longitude } = pos.coords;
+            centerMap(latitude, longitude);
+          },
+          (err) => {
+            console.warn('Geolocation error:', err);
+            alert('Could not get your location. Please check permissions and try again.');
+          },
+          { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 }
+        );
+      });
+    }
+    // ========== FIM DA ADIÇÃO ==========
+
     const displayedCoordinates = new Map();
     const uniquePlaces = {};
     const pinOffset = 0.0003;
