@@ -7,17 +7,27 @@ fetch('places.json')
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // ========== ADIÇÃO: busca por localização ==========
+    // ====== Geolocalização por texto + botão "Use my location" ======
     const input = document.getElementById('geo-input');
     const goBtn = document.getElementById('geo-go');
     const meBtn = document.getElementById('geo-me');
 
-    let youMarker = null; // marcador do "sua localização"
+    let youMarker = null; // marcador da localização do usuário
+
+    // 🔮 Ícone roxo personalizado
+    const purpleIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
 
     function centerMap(lat, lng) {
       map.setView([lat, lng], 14);
       if (!youMarker) {
-        youMarker = L.marker([lat, lng], { title: 'Your location' }).addTo(map);
+        youMarker = L.marker([lat, lng], { icon: purpleIcon, title: 'Your location' }).addTo(map);
       } else {
         youMarker.setLatLng([lat, lng]);
       }
@@ -26,7 +36,7 @@ fetch('places.json')
     async function geocodeAndCenter(query) {
       if (!query) return;
 
-      // Se o usuário digitar "lat,lng", aceita direto
+      // aceita "lat,lng"
       const m = query.trim().match(/^\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*$/);
       if (m) {
         const lat = parseFloat(m[1]);
@@ -35,7 +45,7 @@ fetch('places.json')
         return;
       }
 
-      // Geocoding via Nominatim (OSM) — ótimo para MVP, sem chave
+      // Geocoding via Nominatim
       const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&addressdetails=1&limit=1&countrycodes=de,pt`;
 
       try {
@@ -55,13 +65,14 @@ fetch('places.json')
       }
     }
 
-    // Listeners — só conectam se os elementos existem no HTML
+    // Eventos do campo e botões
     if (input && goBtn) {
       goBtn.addEventListener('click', () => geocodeAndCenter(input.value.trim()));
       input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') geocodeAndCenter(input.value.trim());
       });
     }
+
     if (meBtn) {
       meBtn.addEventListener('click', () => {
         if (!navigator.geolocation) {
@@ -81,8 +92,9 @@ fetch('places.json')
         );
       });
     }
-    // ========== FIM DA ADIÇÃO ==========
+    // ====== FIM geolocalização ======
 
+    // ====== PLOTAGEM DOS PINS ======
     const displayedCoordinates = new Map();
     const uniquePlaces = {};
     const pinOffset = 0.0003;
