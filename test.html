@@ -139,29 +139,30 @@ nav a {
   color: inherit;
 }
 
-/* ===== Títulos ===== */
+/* ===== Títulos (mesmos estilos que você já tinha) ===== */
 h1 {
   font-size: 2rem;
-  margin: 0 0 0.5rem 0;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 h2 {
   font-size: 1.1rem;
   font-weight: 400;
   color: #666;
-  margin: 0 0 1.25rem 0;
+  margin-top: 0;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-/* ===== Barra de busca (entre H2 e mapa) ===== */
+/* ===== Barra de busca ===== */
 .map-search {
-  margin: 0 auto 12px auto;       /* espaço acima do mapa */
+  margin: 0 auto 1.5rem auto;      /* espaçamento natural antes do mapa */
   max-width: 720px;
   display: flex;
   gap: 8px;
   align-items: center;
-  justify-content: center;        /* centralizada como os títulos */
-  flex-wrap: wrap;                /* quebra no mobile */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .map-search input {
   flex: 1 1 260px;
@@ -243,8 +244,9 @@ footer a:hover {
 @media (max-width: 768px) {
   body { padding: 1.25rem; }
   nav { margin-bottom: 1.25rem; }
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1rem; margin-bottom: 1rem; }
+  /* 👇 mantemos h1 e h2 iguais ao desktop */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.1rem; }
   .map-search { padding: 0 12px; }
   #map { height: 60vh; }
   iframe { height: 520px; }
