@@ -813,6 +813,23 @@
     "created_at": "2025-07-19"
   },
   {
+    "name": "Mercabanyal",
+    "city": "Valencia ",
+    "neighborhood": "",
+    "address": "C/ d'Eugènia Viñes, 225, Poblats Marítims, 46011 València, Valencia, Espanha",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/NWUzB6A95zHNAzbz8?g_st=ipc",
+    "created_at": "2025-09-25"
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -3855,6 +3872,25 @@
     "created_at": "2025-08-12"
   },
   {
+    "name": "La Más Bonita Ruzafa",
+    "city": "Valencia ",
+    "neighborhood": "",
+    "address": "C/ de Cadis, 61, L'Eixample, 46006 València, Valencia, Espanha",
+    "latitude": null,
+    "longitude": null,
+    "type": "Bakery",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/pjaUeQFvitX4Xfi5A?g_st=ipc",
+    "created_at": "2025-09-25"
+  },
+  {
     "name": "Gasthaus Seibl Fam. Bayer",
     "city": "Lochau",
     "neighborhood": "",
@@ -4030,6 +4066,23 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-06-29"
+  },
+  {
+    "name": "L'Oceanogrŕfic",
+    "city": "Valencia ",
+    "neighborhood": "",
+    "address": "C/ d'Eduardo Primo Yúfera, 1, Quatre Carreres, 46013 València, Valencia, Espanha",
+    "latitude": null,
+    "longitude": null,
+    "type": "Zoo",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/DMtzAnWujWU5WbiH8?g_st=ipc",
+    "created_at": "2025-09-25"
   },
   {
     "name": "Gorilla Bäckerei",
