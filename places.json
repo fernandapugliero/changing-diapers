@@ -16,7 +16,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-04-23"
+    "created_at": "2025-04-23",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Alexa",
@@ -33,7 +34,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "https://www.alexacentre.com/",
-    "created_at": "2025-04-23"
+    "created_at": "2025-04-23",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -52,7 +54,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-24"
+    "created_at": "2025-08-24",
+    "overall_user_experience": null
   },
   {
     "name": "Salzino",
@@ -67,7 +70,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://www.salzino.de/",
-    "created_at": "2025-07-05"
+    "created_at": "2025-07-05",
+    "overall_user_experience": null
   },
   {
     "name": " Toilette im Tempelhofer Feld",
@@ -84,7 +88,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-05-29"
+    "created_at": "2025-05-29",
+    "overall_user_experience": null
   },
   {
     "name": "Tajinebanane",
@@ -99,7 +104,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "https://tajinebanane.com/",
-    "created_at": "2025-07-23"
+    "created_at": "2025-07-23",
+    "overall_user_experience": null
   },
   {
     "name": "LUC Bistro",
@@ -114,7 +120,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://www.instagram.com/lucbistro",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
   },
   {
     "name": "East Side Mall",
@@ -133,7 +140,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-07-04"
+    "created_at": "2025-07-04",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Prater Biergarten ",
@@ -148,7 +156,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-08-24"
+    "created_at": "2025-08-24",
+    "overall_user_experience": null
   },
   {
     "name": "Benedict Prenzlauerberg",
@@ -167,7 +176,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://pberg.benedict.world/",
-    "created_at": "2025-07-20"
+    "created_at": "2025-07-20",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Botanischer Garten und Botanisches Museum",
@@ -188,7 +198,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "bo.berlin",
-    "created_at": "2025-07-27"
+    "created_at": "2025-07-27",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Zenner",
@@ -208,7 +219,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://zenner.berlin/",
-    "created_at": "2025-04-11"
+    "created_at": "2025-04-11",
+    "overall_user_experience": 2.0
   },
   {
     "name": "Hof an den Teichen",
@@ -223,7 +235,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "hofandenteichen.de",
-    "created_at": "2025-08-24"
+    "created_at": "2025-08-24",
+    "overall_user_experience": null
   },
   {
     "name": "Westfield Hamburg-Überseequartier",
@@ -242,7 +255,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.westfield.com/de/germany/hamburg",
-    "created_at": "2025-05-22"
+    "created_at": "2025-05-22",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Boutique de LA MAISON",
@@ -261,7 +275,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.lamaison.berlin/en/",
-    "created_at": "2025-04-19"
+    "created_at": "2025-04-19",
+    "overall_user_experience": 6.0
   },
   {
     "name": "Mayersche Buchhandlung",
@@ -280,7 +295,8 @@
     ],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-07-28"
+    "created_at": "2025-07-28",
+    "overall_user_experience": 9.0
   },
   {
     "name": "dm",
@@ -297,13 +313,14 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-11"
+    "created_at": "2025-06-11",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Edeka Niebisch",
     "city": "Landsberg",
     "neighborhood": "",
-    "address": "Zörbiger Str. 17, 06188 Landsberg",
+    "address": "Zörbiger Str. 17, 06188",
     "latitude": 51.5370802,
     "longitude": 12.1600728,
     "type": "Bakery",
@@ -316,7 +333,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/pRXDBzoVWzChhvLQ6?g_st=ipc",
-    "created_at": "2025-09-01"
+    "created_at": "2025-09-01",
+    "overall_user_experience": 7.0
   },
   {
     "name": "K-Fetisch",
@@ -335,7 +353,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-07"
+    "created_at": "2025-08-07",
+    "overall_user_experience": 6.0
   },
   {
     "name": "Plansche im Plänterwald (Wasserspielplatz)",
@@ -355,7 +374,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "berlin.de",
-    "created_at": "2025-07-02"
+    "created_at": "2025-07-02",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Fiore",
@@ -374,7 +394,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/jpVvF4L7u3EUvfMU9?g_st=ipc",
-    "created_at": "2025-09-13"
+    "created_at": "2025-09-13",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Burger King",
@@ -394,7 +415,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "burgerking.de",
-    "created_at": "2025-07-20"
+    "created_at": "2025-07-20",
+    "overall_user_experience": 4.0
   },
   {
     "name": "Pomeranze",
@@ -411,7 +433,8 @@
     "conditions": [],
     "room_for_stroller": "No",
     "site": "https://pomeranzeberlin.de/",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
   },
   {
     "name": "Humboldt Forum",
@@ -433,7 +456,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "humboldtforum.org",
-    "created_at": "2025-07-12"
+    "created_at": "2025-07-12",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Boulderwelt Hamburg",
@@ -448,7 +472,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "boulderwelt-hamburg.de",
-    "created_at": "2025-05-20"
+    "created_at": "2025-05-20",
+    "overall_user_experience": null
   },
   {
     "name": "Blume an der Hasenheide",
@@ -465,7 +490,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-08-03"
+    "created_at": "2025-08-03",
+    "overall_user_experience": null
   },
   {
     "name": "Urbayn",
@@ -484,7 +510,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/DAvWKHH3pR6CPg6Z7?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-05-27"
+    "created_at": "2025-05-27",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Marco Polo Uno",
@@ -503,13 +530,14 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/Cqmc5DbmdsQpfyWV7?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-05-27"
+    "created_at": "2025-05-27",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Tierpark Berlin (Schlossseite)",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Am Tierpark 41, 10319 Berlin",
+    "address": "Am Tierpark 41, 10319",
     "latitude": 52.4991199,
     "longitude": 13.5216227,
     "type": "Museum",
@@ -522,7 +550,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-29"
+    "created_at": "2025-06-29",
+    "overall_user_experience": 9.0
   },
   {
     "name": "FEZ, Café Zauberbaum",
@@ -542,7 +571,8 @@
     ],
     "room_for_stroller": false,
     "site": "https://maps.app.goo.gl/FjmEiuRkrZh8z1XR7?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-06-16"
+    "created_at": "2025-06-16",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Il Ritrovo",
@@ -561,7 +591,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "ritrovo.de",
-    "created_at": "2025-08-07"
+    "created_at": "2025-08-07",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Little Ones Cafe",
@@ -576,7 +607,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://www.instagram.com/little_ones_cafe",
-    "created_at": "2025-06-02"
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -593,7 +625,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "dm.de",
-    "created_at": "2025-08-31"
+    "created_at": "2025-08-31",
+    "overall_user_experience": null
   },
   {
     "name": "Dokumentationszentrum Berliner Mauer",
@@ -613,7 +646,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://stiftung-berliner-mauer.de/de/gedenkstaette-berliner-mauer",
-    "created_at": "2025-04-14"
+    "created_at": "2025-04-14",
+    "overall_user_experience": null
   },
   {
     "name": "schim:Pause",
@@ -628,7 +662,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-08-22"
+    "created_at": "2025-08-22",
+    "overall_user_experience": null
   },
   {
     "name": "Junge Die Bäckerei.",
@@ -647,7 +682,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.jb.de/",
-    "created_at": "2025-04-16"
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
   },
   {
     "name": "Kindercafé Spielzimmer",
@@ -667,7 +703,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "spielzimmer.berlin",
-    "created_at": "2025-07-13"
+    "created_at": "2025-07-13",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Hans & Gretel pancake house",
@@ -684,7 +721,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "hansengrietjezeewolde.nl",
-    "created_at": "2025-06-07"
+    "created_at": "2025-06-07",
+    "overall_user_experience": null
   },
   {
     "name": "Smart Kids - Family Play Café ",
@@ -701,7 +739,8 @@
     "conditions": [],
     "room_for_stroller": "No",
     "site": "https://www.instagram.com/smartkids.cafe",
-    "created_at": "2025-06-04"
+    "created_at": "2025-06-04",
+    "overall_user_experience": null
   },
   {
     "name": "I Due Forni",
@@ -718,13 +757,14 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://g.co/kgs/V2As5ix",
-    "created_at": "2025-05-06"
+    "created_at": "2025-05-06",
+    "overall_user_experience": null
   },
   {
     "name": "Parkering ved Fjaltring Strand",
     "city": "Lemvig",
     "neighborhood": "",
-    "address": "Kjeldbjergvej 25, 7620 Lemvig",
+    "address": "Kjeldbjergvej 25, 7620",
     "latitude": 56.476289,
     "longitude": 8.124437,
     "type": "Public toilet",
@@ -737,7 +777,8 @@
     ],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-05-12"
+    "created_at": "2025-05-12",
+    "overall_user_experience": null
   },
   {
     "name": "T.Viet",
@@ -757,7 +798,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "tviet.de",
-    "created_at": "2025-06-08"
+    "created_at": "2025-06-08",
+    "overall_user_experience": 5.0
   },
   {
     "name": "Holland-park",
@@ -776,7 +818,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/Sz1TzqV66huvkVxP6?g_st=ipc",
-    "created_at": "2025-08-10"
+    "created_at": "2025-08-10",
+    "overall_user_experience": 10.0
   },
   {
     "name": "dm",
@@ -793,7 +836,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Werre-Park",
@@ -810,7 +854,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "werre-park.de",
-    "created_at": "2025-07-19"
+    "created_at": "2025-07-19",
+    "overall_user_experience": null
   },
   {
     "name": "Mercabanyal",
@@ -827,7 +872,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://maps.app.goo.gl/NWUzB6A95zHNAzbz8?g_st=ipc",
-    "created_at": "2025-09-25"
+    "created_at": "2025-09-25",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -847,7 +893,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-04-24"
+    "created_at": "2025-04-24",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Restaurant Himmeleck",
@@ -868,7 +915,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "arlbergerbergbahnen.com",
-    "created_at": "2025-08-20"
+    "created_at": "2025-08-20",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Nah am Wasser",
@@ -885,7 +933,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-25"
+    "created_at": "2025-08-25",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -904,7 +953,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-04-21"
+    "created_at": "2025-04-21",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Gorilla",
@@ -921,7 +971,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-09-16"
+    "created_at": "2025-09-16",
+    "overall_user_experience": null
   },
   {
     "name": "Junge Die Bäckerei.",
@@ -936,7 +987,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
   },
   {
     "name": "Kindervilla Kivi der Naturfreundejugend, Familienzentrum",
@@ -955,13 +1007,14 @@
     ],
     "room_for_stroller": "Yes",
     "site": "kindervilla-kivi.de",
-    "created_at": "2025-09-19"
+    "created_at": "2025-09-19",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Kurhaus Zingst",
     "city": "Zingst",
     "neighborhood": "",
-    "address": "Seestraße 57, 18374 Zingst",
+    "address": "Seestraße 57, 18374",
     "latitude": 54.4410354,
     "longitude": 12.6821867,
     "type": "Institution",
@@ -974,7 +1027,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-09-01"
+    "created_at": "2025-09-01",
+    "overall_user_experience": 10.0
   },
   {
     "name": "BRLO Charlottenburg ",
@@ -993,7 +1047,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-25"
+    "created_at": "2025-08-25",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Tapiocaria",
@@ -1010,7 +1065,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "tapiocaria.de",
-    "created_at": "2025-04-27"
+    "created_at": "2025-04-27",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -1029,7 +1085,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-04-23"
+    "created_at": "2025-04-23",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Rastanlage Frankenwald West",
@@ -1050,7 +1107,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/qVuT85acSq1iux4X8?g_st=ipc",
-    "created_at": "2025-08-13"
+    "created_at": "2025-08-13",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Chotto",
@@ -1069,7 +1127,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-18"
+    "created_at": "2025-06-18",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -1088,7 +1147,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-05-25"
+    "created_at": "2025-05-25",
+    "overall_user_experience": 9.0
   },
   {
     "name": "dm",
@@ -1105,7 +1165,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-06-26"
+    "created_at": "2025-06-26",
+    "overall_user_experience": null
   },
   {
     "name": "Tierpark hinter dem Baumstachlergehege",
@@ -1124,7 +1185,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/1fGJYYFNB5wFALSQA?g_st=ipc",
-    "created_at": "2025-09-19"
+    "created_at": "2025-09-19",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Matanga - Cafe & Co",
@@ -1143,7 +1205,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-02"
+    "created_at": "2025-08-02",
+    "overall_user_experience": null
   },
   {
     "name": "Neukölln Arcaden",
@@ -1160,7 +1223,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-19"
+    "created_at": "2025-06-19",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -1179,7 +1243,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Trivitys",
@@ -1198,7 +1263,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-06-22"
+    "created_at": "2025-06-22",
+    "overall_user_experience": null
   },
   {
     "name": "Manifesto Markt",
@@ -1217,7 +1283,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.manifestomarket.com/berlin/potsdamer-platz/en/",
-    "created_at": "2025-04-20"
+    "created_at": "2025-04-20",
+    "overall_user_experience": 7.0
   },
   {
     "name": "BrewDog Berlin Friedrichshain",
@@ -1237,7 +1304,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/3D8ZrMD5MYJzX9QQ6?g_st=ac",
-    "created_at": "2025-07-20"
+    "created_at": "2025-07-20",
+    "overall_user_experience": 9.0
   },
   {
     "name": "LA MAISON",
@@ -1259,7 +1327,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "lamaison.berlin",
-    "created_at": "2025-07-10"
+    "created_at": "2025-07-10",
+    "overall_user_experience": 1.0
   },
   {
     "name": "Tucano brasilianisches Restaurant",
@@ -1276,7 +1345,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "tucano-restaurant.de",
-    "created_at": "2025-08-04"
+    "created_at": "2025-08-04",
+    "overall_user_experience": null
   },
   {
     "name": "Eiscafé Klatsch",
@@ -1295,7 +1365,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/QDWnPPupiSAyEdVL9?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-05-22"
+    "created_at": "2025-05-22",
+    "overall_user_experience": 6.0
   },
   {
     "name": "Junge Bäckerei",
@@ -1314,7 +1385,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/itYtpiHUoPNpsNqD8?g_st=ipc",
-    "created_at": "2025-09-14"
+    "created_at": "2025-09-14",
+    "overall_user_experience": 9.0
   },
   {
     "name": "dm",
@@ -1334,7 +1406,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-07-19"
+    "created_at": "2025-07-19",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Café Marameo",
@@ -1353,7 +1426,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/V9x3nBMsbkxQSEJX8?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-05-11"
+    "created_at": "2025-05-11",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Dussmann",
@@ -1372,7 +1446,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/CpSxbyVBGKqJ8YUx6?g_st=ipc",
-    "created_at": "2025-09-22"
+    "created_at": "2025-09-22",
+    "overall_user_experience": 1.0
   },
   {
     "name": "Berliner Toilette Weichselstraße",
@@ -1389,7 +1464,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "berlin.de",
-    "created_at": "2025-07-17"
+    "created_at": "2025-07-17",
+    "overall_user_experience": null
   },
   {
     "name": "ZOLA",
@@ -1404,7 +1480,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-06-30"
+    "created_at": "2025-06-30",
+    "overall_user_experience": null
   },
   {
     "name": "Deutsche Welle",
@@ -1419,7 +1496,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "dw.com",
-    "created_at": "2025-06-27"
+    "created_at": "2025-06-27",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -1438,7 +1516,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/xFZgrd9hheV8sJ1j6",
-    "created_at": "2025-09-18"
+    "created_at": "2025-09-18",
+    "overall_user_experience": 8.0
   },
   {
     "name": "dm",
@@ -1457,7 +1536,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-09-21"
+    "created_at": "2025-09-21",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Zum Fliegenden Holländer",
@@ -1476,7 +1556,8 @@
     ],
     "room_for_stroller": "No",
     "site": "zumfliegendenhollaender.com",
-    "created_at": "2025-08-18"
+    "created_at": "2025-08-18",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Ostsee Park",
@@ -1498,7 +1579,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "ostseeparkrostock.de",
-    "created_at": "2025-09-21"
+    "created_at": "2025-09-21",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Fridas Eiskrem",
@@ -1517,7 +1599,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-07-04"
+    "created_at": "2025-07-04",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Standesamt Neukölln",
@@ -1537,7 +1620,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "berlin.de",
-    "created_at": "2025-05-12"
+    "created_at": "2025-05-12",
+    "overall_user_experience": 5.0
   },
   {
     "name": "KungerKiezInitiative e.V.",
@@ -1554,13 +1638,14 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "https://kungerkiez.de/",
-    "created_at": "2025-06-30"
+    "created_at": "2025-06-30",
+    "overall_user_experience": null
   },
   {
     "name": "Kulturhaus Insel Berlin",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Alt Treptow 6, 12435 Berlin",
+    "address": "Alt Treptow 6, 12435",
     "latitude": 52.4867977,
     "longitude": 13.4809232,
     "type": "Biergarten",
@@ -1573,7 +1658,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.inselberlin.de/",
-    "created_at": "2025-04-11"
+    "created_at": "2025-04-11",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -1592,7 +1678,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/WkQQHA3XSHKRaxvU8?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Rossmann",
@@ -1609,7 +1696,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-13"
+    "created_at": "2025-06-13",
+    "overall_user_experience": 10.0
   },
   {
     "name": "dm",
@@ -1626,7 +1714,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-07-03"
+    "created_at": "2025-07-03",
+    "overall_user_experience": null
   },
   {
     "name": "Pastelaria Litoral",
@@ -1645,13 +1734,14 @@
     ],
     "room_for_stroller": "No",
     "site": "https://www.instagram.com/pastelarialitoral?igsh=OTY3b3ozYml4ZXoz",
-    "created_at": "2025-05-27"
+    "created_at": "2025-05-27",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Emilia's Familiencafé",
     "city": "Hamburg",
     "neighborhood": "",
-    "address": "Barmbeker Str. 169, 22299 Hamburg",
+    "address": "Barmbeker Str. 169, 22299",
     "latitude": 53.5922755,
     "longitude": 10.0024836,
     "type": "Café",
@@ -1660,7 +1750,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-05-20"
+    "created_at": "2025-05-20",
+    "overall_user_experience": null
   },
   {
     "name": "Serways Raststätte Schafstrift Nord",
@@ -1681,7 +1772,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/fuko3hbF164vH9nt9?g_st=ic",
-    "created_at": "2025-07-19"
+    "created_at": "2025-07-19",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Schnell Bäckerei",
@@ -1700,7 +1792,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/6VxBMVm6RvYrmguc6?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-05-27"
+    "created_at": "2025-05-27",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Restaurant Athos",
@@ -1719,7 +1812,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/6ebUatafQqAyAYRc6?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-08-07"
+    "created_at": "2025-08-07",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Ewig Freunde",
@@ -1738,7 +1832,8 @@
     ],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-09-20"
+    "created_at": "2025-09-20",
+    "overall_user_experience": null
   },
   {
     "name": "Cafe am Neuen See",
@@ -1758,7 +1853,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.cafeamneuensee.de/",
-    "created_at": "2025-04-14"
+    "created_at": "2025-04-14",
+    "overall_user_experience": null
   },
   {
     "name": "Bambini City",
@@ -1773,7 +1869,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "bambini-city.de",
-    "created_at": "2025-06-19"
+    "created_at": "2025-06-19",
+    "overall_user_experience": null
   },
   {
     "name": "Shopping Iguatemi ",
@@ -1793,7 +1890,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-16"
+    "created_at": "2025-06-16",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Vapiano",
@@ -1812,7 +1910,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/x672cstpAw1MNMbG7?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-07-05"
+    "created_at": "2025-07-05",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Papà pane di Sorrento",
@@ -1831,7 +1930,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-10"
+    "created_at": "2025-06-10",
+    "overall_user_experience": null
   },
   {
     "name": "Arlberg WellCom",
@@ -1851,7 +1951,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "arlberg-wellcom.at",
-    "created_at": "2025-08-16"
+    "created_at": "2025-08-16",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Junge Die Bäckerei",
@@ -1870,7 +1971,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://www.jb.de/?mtm_source=google&mtm_medium=uberall&mtm_campaign=401",
-    "created_at": "2025-08-11"
+    "created_at": "2025-08-11",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Casalot Restaurant",
@@ -1889,7 +1991,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/VwFc6KRyc9sED1cV8",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Garda",
@@ -1909,7 +2012,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/dCm3AHeSeyzg8dzd8?g_st=ipc",
-    "created_at": "2025-07-18"
+    "created_at": "2025-07-18",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Daryas Spielcafé",
@@ -1924,7 +2028,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-06-08"
+    "created_at": "2025-06-08",
+    "overall_user_experience": null
   },
   {
     "name": "McDonald's",
@@ -1943,7 +2048,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/FysTrMJXkUmBkk2G7?g_st=ipc",
-    "created_at": "2025-08-16"
+    "created_at": "2025-08-16",
+    "overall_user_experience": null
   },
   {
     "name": "Öffentliche Toilette",
@@ -1963,7 +2069,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "berlin.de",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
   },
   {
     "name": "Rossmann",
@@ -1982,7 +2089,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-09-02"
+    "created_at": "2025-09-02",
+    "overall_user_experience": 10.0
   },
   {
     "name": "La Fève",
@@ -2001,7 +2109,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-06-14"
+    "created_at": "2025-06-14",
+    "overall_user_experience": 7.0
   },
   {
     "name": "dm",
@@ -2020,7 +2129,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-07-24"
+    "created_at": "2025-07-24",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Tierra Garat Porfirio",
@@ -2039,7 +2149,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "tierragarat.mx",
-    "created_at": "2025-07-10"
+    "created_at": "2025-07-10",
+    "overall_user_experience": 8.0
   },
   {
     "name": "LIVING BERLIN",
@@ -2060,7 +2171,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "living-berlin.com",
-    "created_at": "2025-08-02"
+    "created_at": "2025-08-02",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Public Toilet",
@@ -2080,7 +2192,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "kk.dk",
-    "created_at": "2025-05-11"
+    "created_at": "2025-05-11",
+    "overall_user_experience": null
   },
   {
     "name": "60 seconds to napoli",
@@ -2099,7 +2212,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://60secondstonapoli.de/",
-    "created_at": "2025-07-05"
+    "created_at": "2025-07-05",
+    "overall_user_experience": 3.0
   },
   {
     "name": "Endorphina",
@@ -2116,7 +2230,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-09-16"
+    "created_at": "2025-09-16",
+    "overall_user_experience": null
   },
   {
     "name": "Neue Republik Reger",
@@ -2133,7 +2248,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://maps.app.goo.gl/uf1ceqUuqJ9xGfgV6?g_st=ipc",
-    "created_at": "2025-08-25"
+    "created_at": "2025-08-25",
+    "overall_user_experience": null
   },
   {
     "name": "RumBa ",
@@ -2152,7 +2268,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-07-31"
+    "created_at": "2025-07-31",
+    "overall_user_experience": 8.0
   },
   {
     "name": "BRLO",
@@ -2172,7 +2289,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "brlo.de",
-    "created_at": "2025-05-12"
+    "created_at": "2025-05-12",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Schönhauser Allee Arcaden",
@@ -2189,7 +2307,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "schoenhauseralleearcaden.de",
-    "created_at": "2025-08-01"
+    "created_at": "2025-08-01",
+    "overall_user_experience": null
   },
   {
     "name": "Zauberküche ",
@@ -2208,7 +2327,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-07-24"
+    "created_at": "2025-07-24",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Forum Gesundheit Neukölln e.V.",
@@ -2227,7 +2347,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://www.forumgesundheitneukoelln.de/",
-    "created_at": "2025-05-28"
+    "created_at": "2025-05-28",
+    "overall_user_experience": 6.0
   },
   {
     "name": "MaraLou Café",
@@ -2246,7 +2367,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://www.maralou-berlin.de/",
-    "created_at": "2025-04-12"
+    "created_at": "2025-04-12",
+    "overall_user_experience": null
   },
   {
     "name": "Vier Ecken",
@@ -2266,7 +2388,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://vier-ecken.webflow.io/",
-    "created_at": "2025-04-11"
+    "created_at": "2025-04-11",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -2285,7 +2408,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/hKoh1XfJFTo93Fy17?g_st=ipc",
-    "created_at": "2025-09-13"
+    "created_at": "2025-09-13",
+    "overall_user_experience": 9.0
   },
   {
     "name": "WILMA Shoppen",
@@ -2304,7 +2428,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "westfield.com",
-    "created_at": "2025-04-19"
+    "created_at": "2025-04-19",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Genezarethkirche",
@@ -2321,7 +2446,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-13"
+    "created_at": "2025-08-13",
+    "overall_user_experience": null
   },
   {
     "name": "Zenner",
@@ -2340,7 +2466,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-20"
+    "created_at": "2025-06-20",
+    "overall_user_experience": 4.0
   },
   {
     "name": "PalaisPopulaire",
@@ -2360,7 +2487,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-10"
+    "created_at": "2025-08-10",
+    "overall_user_experience": 9.0
   },
   {
     "name": "dm",
@@ -2377,7 +2505,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-06-02"
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -2396,7 +2525,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-05-18"
+    "created_at": "2025-05-18",
+    "overall_user_experience": null
   },
   {
     "name": "Peter Pane ",
@@ -2416,7 +2546,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Kap Frida",
@@ -2435,7 +2566,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/St7JDAVpzTDh4nXe6?g_st=com.google.maps.preview.copy",
-    "created_at": "2025-05-22"
+    "created_at": "2025-05-22",
+    "overall_user_experience": 8.0
   },
   {
     "name": "dm",
@@ -2454,7 +2586,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-05-25"
+    "created_at": "2025-05-25",
+    "overall_user_experience": 10.0
   },
   {
     "name": "dm",
@@ -2471,7 +2604,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-06-30"
+    "created_at": "2025-06-30",
+    "overall_user_experience": null
   },
   {
     "name": "Nah am Wasser",
@@ -2486,7 +2620,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-08-25"
+    "created_at": "2025-08-25",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -2505,7 +2640,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-04-23"
+    "created_at": "2025-04-23",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Café Cosita",
@@ -2522,7 +2658,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://www.instagram.com/cafe_cosita_geesthacht",
-    "created_at": "2025-05-23"
+    "created_at": "2025-05-23",
+    "overall_user_experience": null
   },
   {
     "name": "Marché Hirschberg",
@@ -2542,7 +2679,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "marche-restaurants.de",
-    "created_at": "2025-08-25"
+    "created_at": "2025-08-25",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Shopping Cidade Jardim",
@@ -2559,7 +2697,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-05-27"
+    "created_at": "2025-05-27",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Dussmann Kulturkaufhaus",
@@ -2578,7 +2717,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://www.kulturkaufhaus.de/",
-    "created_at": "2025-05-25"
+    "created_at": "2025-05-25",
+    "overall_user_experience": null
   },
   {
     "name": "Tapiocaria",
@@ -2598,7 +2738,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-09-14"
+    "created_at": "2025-09-14",
+    "overall_user_experience": 4.0
   },
   {
     "name": "Pastasciutta",
@@ -2615,7 +2756,8 @@
     "conditions": [],
     "room_for_stroller": "No",
     "site": "https://www.instagram.com/cantinapastasciutta?igsh=MWZsOTM4NThtMmF4ag==",
-    "created_at": "2025-05-27"
+    "created_at": "2025-05-27",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Breuninger",
@@ -2635,7 +2777,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "e-breuninger.de",
-    "created_at": "2025-08-14"
+    "created_at": "2025-08-14",
+    "overall_user_experience": 10.0
   },
   {
     "name": "La Maison",
@@ -2652,7 +2795,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-05-29"
+    "created_at": "2025-05-29",
+    "overall_user_experience": null
   },
   {
     "name": "Pasiphae Restaurant",
@@ -2671,7 +2815,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.google.com/maps/place/Pasiphae+Restaurant/@35.3008789,25.1599453,17z/data=!3m1!4b1!4m6!3m5!1s0x149a5916b7e92fbd:0xcc50bacf25189f02!8m2!3d35.3008789!4d25.1599453!16s%2Fg%2F11cnbsx4wl?hl=en&entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
   },
   {
     "name": "Zenner",
@@ -2686,7 +2831,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-08-31"
+    "created_at": "2025-08-31",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -2707,7 +2853,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-04-16"
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
   },
   {
     "name": "BRLO Charlottenburg ",
@@ -2726,7 +2873,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-28"
+    "created_at": "2025-06-28",
+    "overall_user_experience": null
   },
   {
     "name": "Serways Raststätte Aichen Nord",
@@ -2745,7 +2893,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-21"
+    "created_at": "2025-08-21",
+    "overall_user_experience": 3.0
   },
   {
     "name": "FaNN - Familienhaus Neukölln Nord",
@@ -2765,7 +2914,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.jugendwohnen-berlin.de/familienzentren/fann-familienhaus-neukoelln-nord/",
-    "created_at": "2025-06-16"
+    "created_at": "2025-06-16",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Ishin Mittelstraße",
@@ -2784,7 +2934,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://ishin.de/",
-    "created_at": "2025-05-25"
+    "created_at": "2025-05-25",
+    "overall_user_experience": null
   },
   {
     "name": "Zollpackhof",
@@ -2803,7 +2954,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/d8VUJibEUDku44rr9?g_st=ipc",
-    "created_at": "2025-08-10"
+    "created_at": "2025-08-10",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Augustiner Potsdam",
@@ -2822,7 +2974,8 @@
     ],
     "room_for_stroller": "No",
     "site": "augustiner-potsdam.de",
-    "created_at": "2025-08-18"
+    "created_at": "2025-08-18",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Erchy‘s",
@@ -2841,7 +2994,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-06-17"
+    "created_at": "2025-06-17",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Therme Erding",
@@ -2858,7 +3012,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -2875,7 +3030,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-07-05"
+    "created_at": "2025-07-05",
+    "overall_user_experience": null
   },
   {
     "name": "7 Delikatessen ",
@@ -2894,7 +3050,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/5iFyNyctj55GVgQH9",
-    "created_at": "2025-08-08"
+    "created_at": "2025-08-08",
+    "overall_user_experience": null
   },
   {
     "name": "Öffentliche Toiletten",
@@ -2912,7 +3069,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-07-04"
+    "created_at": "2025-07-04",
+    "overall_user_experience": null
   },
   {
     "name": "La Maison des Histoires",
@@ -2931,7 +3089,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "lamaisondeshistoires.com",
-    "created_at": "2025-09-20"
+    "created_at": "2025-09-20",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Familienzentrum Juli",
@@ -2950,7 +3109,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "lebensnah.de",
-    "created_at": "2025-09-19"
+    "created_at": "2025-09-19",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Zenner",
@@ -2969,7 +3129,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.instagram.com/zenner.biergarten?igsh=MTBremZhamZlem0xcA==",
-    "created_at": "2025-04-18"
+    "created_at": "2025-04-18",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -2986,7 +3147,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-09-02"
+    "created_at": "2025-09-02",
+    "overall_user_experience": null
   },
   {
     "name": "Petit Brunch",
@@ -3005,7 +3167,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.instagram.com/petitbrunch_bln/",
-    "created_at": "2025-04-16"
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
   },
   {
     "name": "Kiezkind Berlin",
@@ -3020,7 +3183,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-06-02"
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
   },
   {
     "name": "I Due Forni",
@@ -3040,7 +3204,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-14"
+    "created_at": "2025-06-14",
+    "overall_user_experience": null
   },
   {
     "name": "Dots",
@@ -3057,7 +3222,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://ilovedots.de/",
-    "created_at": "2025-08-27"
+    "created_at": "2025-08-27",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -3076,7 +3242,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-09-02"
+    "created_at": "2025-09-02",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Café Peri",
@@ -3091,7 +3258,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://www.instagram.com/cafeperi.berlin",
-    "created_at": "2025-06-02"
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
   },
   {
     "name": "Ristorante Firenze",
@@ -3110,7 +3278,8 @@
     ],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-07-25"
+    "created_at": "2025-07-25",
+    "overall_user_experience": null
   },
   {
     "name": "Kiez Kaffee Kraft",
@@ -3129,7 +3298,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "kiezkaffeekraft.de",
-    "created_at": "2025-04-16"
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
   },
   {
     "name": "Forum Schwanthaler Höhe",
@@ -3148,7 +3318,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/nWGNXWWWrr3XYs866?g_st=ipc",
-    "created_at": "2025-09-24"
+    "created_at": "2025-09-24",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Kiez & Kugel",
@@ -3167,7 +3338,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/F7b2av5MZkgDHeYZA",
-    "created_at": "2025-09-21"
+    "created_at": "2025-09-21",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Gal Café ",
@@ -3186,7 +3358,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-05-04"
+    "created_at": "2025-05-04",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Rossmann ",
@@ -3205,7 +3378,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/ebZayWHuGh589qPE7",
-    "created_at": "2025-08-13"
+    "created_at": "2025-08-13",
+    "overall_user_experience": null
   },
   {
     "name": "Kaffeeschwestern Cafe",
@@ -3222,7 +3396,8 @@
     ],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-05-29"
+    "created_at": "2025-05-29",
+    "overall_user_experience": null
   },
   {
     "name": "McDonalds",
@@ -3241,13 +3416,14 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-07-19"
+    "created_at": "2025-07-19",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Minicity Kindercafé",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Hauptstraße 73, 12159 Berlin",
+    "address": "Hauptstraße 73, 12159",
     "latitude": 52.4747941,
     "longitude": 13.3388243,
     "type": "Café",
@@ -3258,7 +3434,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "minicity.cafe",
-    "created_at": "2025-05-19"
+    "created_at": "2025-05-19",
+    "overall_user_experience": null
   },
   {
     "name": "IKEA Berlin-Tempelhof",
@@ -3275,7 +3452,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "https://www.ikea.com/de/de/stores/berlin-tempelhof/",
-    "created_at": "2025-04-24"
+    "created_at": "2025-04-24",
+    "overall_user_experience": null
   },
   {
     "name": "Camponesa",
@@ -3294,7 +3472,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-07-12"
+    "created_at": "2025-07-12",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Public Toilet Rummelsburger Str.",
@@ -3313,7 +3492,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/FimwggycTxvoavQM9?g_st=ipc",
-    "created_at": "2025-09-12"
+    "created_at": "2025-09-12",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Bio Company",
@@ -3333,7 +3513,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-08-21"
+    "created_at": "2025-08-21",
+    "overall_user_experience": 6.0
   },
   {
     "name": "Kadewe",
@@ -3352,7 +3533,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/vhuEKt1EsaQAq7Hs7",
-    "created_at": "2025-04-18"
+    "created_at": "2025-04-18",
+    "overall_user_experience": 8.0
   },
   {
     "name": "Engels",
@@ -3369,7 +3551,8 @@
     "conditions": [],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-05-29"
+    "created_at": "2025-05-29",
+    "overall_user_experience": null
   },
   {
     "name": "Radikalecker",
@@ -3386,7 +3569,8 @@
     "conditions": [],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-09-16"
+    "created_at": "2025-09-16",
+    "overall_user_experience": null
   },
   {
     "name": "Brasilianische Botschaft in Berlin",
@@ -3405,7 +3589,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://www.gov.br/mre/pt-br/embaixada-berlim/de/brasilianische-botschaft-in-berlin",
-    "created_at": "2025-04-24"
+    "created_at": "2025-04-24",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -3424,7 +3609,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/3UwArAYT7aTtmd2i9?g_st=ipc",
-    "created_at": "2025-09-24"
+    "created_at": "2025-09-24",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Designer Outlet Ochtrup",
@@ -3439,7 +3625,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://www.mcarthurglen.com/de/outlets/de/designer-outlet-ochtrup/",
-    "created_at": "2025-06-26"
+    "created_at": "2025-06-26",
+    "overall_user_experience": null
   },
   {
     "name": "Le Belford",
@@ -3459,7 +3646,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://www.instagram.com/le_belfort_berlin/",
-    "created_at": "2025-04-16"
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
   },
   {
     "name": "Mignon Sicilian Bakery",
@@ -3478,7 +3666,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.instagram.com/mignonsicilianbakery/",
-    "created_at": "2025-04-12"
+    "created_at": "2025-04-12",
+    "overall_user_experience": null
   },
   {
     "name": "Zooparque",
@@ -3497,7 +3686,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-07-14"
+    "created_at": "2025-07-14",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Parking Knuedler",
@@ -3516,7 +3706,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-17"
+    "created_at": "2025-06-17",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Spielplatz Volkspark Köpenick",
@@ -3533,7 +3724,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "berlin.de",
-    "created_at": "2025-08-11"
+    "created_at": "2025-08-11",
+    "overall_user_experience": null
   },
   {
     "name": "Haus der Wannsee Konferenz",
@@ -3552,7 +3744,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-08-10"
+    "created_at": "2025-08-10",
+    "overall_user_experience": 6.0
   },
   {
     "name": "dm",
@@ -3571,7 +3764,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-05-27"
+    "created_at": "2025-05-27",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Centre Charlemagne",
@@ -3588,7 +3782,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-07-28"
+    "created_at": "2025-07-28",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Shopping Praia de Belas ",
@@ -3608,7 +3803,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-06-09"
+    "created_at": "2025-06-09",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Amoreiras Shopping",
@@ -3627,7 +3823,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/iXGCgfR5KjfiiJqa6?g_st=aw",
-    "created_at": "2025-06-28"
+    "created_at": "2025-06-28",
+    "overall_user_experience": null
   },
   {
     "name": "Berlin Brandenburg Airport",
@@ -3644,7 +3841,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "https://ber.berlin-airport.de/en.html",
-    "created_at": "2025-06-16"
+    "created_at": "2025-06-16",
+    "overall_user_experience": null
   },
   {
     "name": "dm",
@@ -3663,7 +3861,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-04-23"
+    "created_at": "2025-04-23",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Brocca Cafe",
@@ -3682,7 +3881,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-06-18"
+    "created_at": "2025-06-18",
+    "overall_user_experience": 8.0
   },
   {
     "name": "dm",
@@ -3701,7 +3901,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-07-16"
+    "created_at": "2025-07-16",
+    "overall_user_experience": null
   },
   {
     "name": "L'osteria",
@@ -3720,7 +3921,8 @@
     ],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-04-19"
+    "created_at": "2025-04-19",
+    "overall_user_experience": 10.0
   },
   {
     "name": "dm",
@@ -3739,7 +3941,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-09-02"
+    "created_at": "2025-09-02",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Kiraku",
@@ -3756,7 +3959,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/HrNVLoJucg6sWVDa9?g_st=ipc",
-    "created_at": "2025-07-18"
+    "created_at": "2025-07-18",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Das Café in der Gartenakademie ",
@@ -3775,7 +3979,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-07-29"
+    "created_at": "2025-07-29",
+    "overall_user_experience": 5.0
   },
   {
     "name": "Quintal do Espeto (Vila Mariana)",
@@ -3792,7 +3997,8 @@
     "conditions": [],
     "room_for_stroller": "No",
     "site": "",
-    "created_at": "2025-07-19"
+    "created_at": "2025-07-19",
+    "overall_user_experience": 6.0
   },
   {
     "name": "dm",
@@ -3811,7 +4017,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-04-29"
+    "created_at": "2025-04-29",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Wagner Hütte",
@@ -3831,7 +4038,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "wagnerhuette.at",
-    "created_at": "2025-08-17"
+    "created_at": "2025-08-17",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Baby & Beans",
@@ -3850,7 +4058,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "",
-    "created_at": "2025-05-03"
+    "created_at": "2025-05-03",
+    "overall_user_experience": 9.0
   },
   {
     "name": "C&A",
@@ -3869,7 +4078,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://www.c-and-a.com/stores/de-de/berlin/berlin/alexanderplatz-1.html",
-    "created_at": "2025-08-12"
+    "created_at": "2025-08-12",
+    "overall_user_experience": null
   },
   {
     "name": "La Más Bonita Ruzafa",
@@ -3888,7 +4098,8 @@
     ],
     "room_for_stroller": false,
     "site": "https://maps.app.goo.gl/pjaUeQFvitX4Xfi5A?g_st=ipc",
-    "created_at": "2025-09-25"
+    "created_at": "2025-09-25",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Gasthaus Seibl Fam. Bayer",
@@ -3907,7 +4118,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "gasthausseibl.at",
-    "created_at": "2025-08-21"
+    "created_at": "2025-08-21",
+    "overall_user_experience": 9.0
   },
   {
     "name": "Refugio Café",
@@ -3922,7 +4134,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://www.refugio.berlin/",
-    "created_at": "2025-06-05"
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
   },
   {
     "name": "Fräulein Frost",
@@ -3939,7 +4152,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-08-27"
+    "created_at": "2025-08-27",
+    "overall_user_experience": null
   },
   {
     "name": "luuv café",
@@ -3956,7 +4170,8 @@
     ],
     "room_for_stroller": false,
     "site": "https://www.instagram.com/luuv.cafe",
-    "created_at": "2025-06-02"
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
   },
   {
     "name": "Kaffee Barista",
@@ -3975,7 +4190,8 @@
     ],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/Q7Np4o5CNgQ5Fcri7?g_st=ipc",
-    "created_at": "2025-09-12"
+    "created_at": "2025-09-12",
+    "overall_user_experience": 8.0
   },
   {
     "name": "De Noantri",
@@ -3992,7 +4208,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "",
-    "created_at": "2025-08-27"
+    "created_at": "2025-08-27",
+    "overall_user_experience": null
   },
   {
     "name": "Tomasa",
@@ -4009,7 +4226,8 @@
     "conditions": [],
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/Wo6FZb3LPzGGdpru6?g_st=ac",
-    "created_at": "2025-08-24"
+    "created_at": "2025-08-24",
+    "overall_user_experience": 9.0
   },
   {
     "name": "KERB Berlin",
@@ -4029,7 +4247,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "kerbberlin.de",
-    "created_at": "2025-09-06"
+    "created_at": "2025-09-06",
+    "overall_user_experience": 9.0
   },
   {
     "name": "dm",
@@ -4048,7 +4267,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-08-22"
+    "created_at": "2025-08-22",
+    "overall_user_experience": 10.0
   },
   {
     "name": "dm",
@@ -4065,7 +4285,8 @@
     "conditions": [],
     "room_for_stroller": "Yes",
     "site": "dm.de",
-    "created_at": "2025-06-29"
+    "created_at": "2025-06-29",
+    "overall_user_experience": null
   },
   {
     "name": "L'Oceanogrŕfic",
@@ -4082,7 +4303,8 @@
     "conditions": [],
     "room_for_stroller": false,
     "site": "https://maps.app.goo.gl/DMtzAnWujWU5WbiH8?g_st=ipc",
-    "created_at": "2025-09-25"
+    "created_at": "2025-09-25",
+    "overall_user_experience": null
   },
   {
     "name": "Gorilla Bäckerei",
@@ -4101,7 +4323,8 @@
     ],
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/SPVBXMYkd5tzUkKy8?g_st=ipc",
-    "created_at": "2025-08-04"
+    "created_at": "2025-08-04",
+    "overall_user_experience": null
   },
   {
     "name": "FMZ IMST",
@@ -4120,6 +4343,7 @@
     ],
     "room_for_stroller": "Yes",
     "site": "fmz-imst.at",
-    "created_at": "2025-08-20"
+    "created_at": "2025-08-20",
+    "overall_user_experience": 8.0
   }
 ]
