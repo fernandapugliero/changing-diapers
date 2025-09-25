@@ -280,33 +280,42 @@ footer a:hover {
     height: 480px;
   }
 }
-    /* ===== POPUP CONTENT REFINADO ===== */
-
-/* Ajusta alinhamento e espaçamento interno dos popups */
-.leaflet-popup-content {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  display: flex;
-  flex-direction: column;
-  gap: 4px; /* espaço vertical entre elementos */
+/* ===== ⭐ RATING STARS ===== */
+.star-rating {
+  --rating: 0;                 /* 0 → 5 (meia estrela permitida) */
+  --star-color: #e0e0e0;       /* cinza claro para estrelas vazias */
+  --star-fill: #f5c518;        /* ouro vibrante para preenchidas */
+  position: relative;
+  display: inline-block;
+  font-size: 18px;             /* tamanho padrão das estrelas */
+  font-family: "Arial", "Helvetica", sans-serif;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-top: 4px;
 }
 
-/* Garante que nome, tipo e endereço tenham respiro */
-.leaflet-popup-content strong {
-  font-size: 1.05rem;
-  display: block;
-  margin-bottom: 2px;
+.star-rating::before {
+  content: "★★★★★";
+  color: var(--star-color);
 }
 
-.leaflet-popup-content br + .star-rating {
-  margin-top: 6px; /* espaço extra entre endereço e estrelas */
+.star-rating::after {
+  content: "★★★★★";
+  color: var(--star-fill);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc((var(--rating) / 5) * 100%);
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
-/* Ajuste de espaçamento geral no mobile */
+/* ⭐ ajuste sutil no mobile (opcional) */
 @media (max-width: 600px) {
-  .leaflet-popup-content {
-    font-size: 0.9rem;
-    gap: 6px;
+  .star-rating {
+    font-size: 16px;
+    letter-spacing: 1px;
   }
 }
   </style>
