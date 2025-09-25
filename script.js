@@ -1,20 +1,29 @@
 fetch('places.json')
   .then(res => res.json())
   .then(data => {
+    // ===== MAPA =====
     const map = L.map('map').setView([52.52, 13.405], 12);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // ====== Geolocalização por texto + botão "Use my location" ======
+    // ===== GEOCODER + "USE MY LOCATION" =====
     const input = document.getElementById('geo-input');
     const goBtn = document.getElementById('geo-go');
     const meBtn = document.getElementById('geo-me');
 
-    let youMarker = null; // marcador da sua localização (bolinha azul)
+    // estado de geoloc/rota
+    let youMarker = null;          // seu pontinho azul
+    let routingControl = null;     // rota ativa
+    let geoWatchId = null;         // id do watchPosition
+    let lastRouteAt = 0;           // última vez que recalculou rota
 
-    // bolinha azul discreta (mesma cor padrão do Leaflet)
+    // parâmetros "educados" p/ servidor público
+    const MIN_ROUTE_INTERVAL_MS = 20000; // 20s entre recálculos
+    const MIN_MOVE_METERS = 50;          // só re-rota se moveu > 50 m
+
+    // estilo do "pontinho" (mesma cor padrão do Leaflet)
     const youStyle = {
       radius: 6,
       color: '#3388ff',
@@ -34,7 +43,19 @@ fetch('places.json')
       }
     }
 
-    // Escolhe o melhor resultado do Nominatim, priorizando cidades/towns/villages
+    // util: distância em metros (haversine)
+    function haversine(a, b) {
+      const R = 6371000;
+      const toRad = d => d * Math.PI / 180;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const s = Math.sin(dLat/2) ** 2 +
+                Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) *
+                Math.sin(dLng/2) ** 2;
+      return 2 * R * Math.asin(Math.sqrt(s));
+    }
+
+    // escolhe melhor resultado do Nominatim
     function pickBestResult(query, results) {
       const q = (query || '').trim().toLowerCase();
       const placeTypes = new Set([
@@ -50,7 +71,6 @@ fetch('places.json')
         const exact = label === q ? 1 : 0;
         const startsWith = label.startsWith(q) ? 1 : 0;
         const importance = Number(r.importance || 0);
-        // peso simples: exato > começa com > importância
         const score = exact * 100 + startsWith * 10 + importance;
         return { r, score };
       });
@@ -71,7 +91,6 @@ fetch('places.json')
         return;
       }
 
-      // Geocoding via Nominatim (MUNDO INTEIRO — sem countrycodes)
       const params = new URLSearchParams({
         format: 'json',
         q: query,
@@ -90,16 +109,13 @@ fetch('places.json')
         }
 
         const best = pickBestResult(query, results) || results[0];
-        const lat = parseFloat(best.lat);
-        const lon = parseFloat(best.lon);
-        centerMap(lat, lon);
+        centerMap(parseFloat(best.lat), parseFloat(best.lon));
       } catch (err) {
         console.error('Geocoding error:', err);
         alert('Could not look up this location now. Please try again in a moment.');
       }
     }
 
-    // Eventos do campo e botões
     if (input && goBtn) {
       goBtn.addEventListener('click', () => geocodeAndCenter(input.value.trim()));
       input.addEventListener('keydown', (e) => {
@@ -117,6 +133,7 @@ fetch('places.json')
           (pos) => {
             const { latitude, longitude } = pos.coords;
             centerMap(latitude, longitude);
+            startWatchingPosition(); // já começa a acompanhar
           },
           (err) => {
             console.warn('Geolocation error:', err);
@@ -126,9 +143,87 @@ fetch('places.json')
         );
       });
     }
-    // ====== FIM geolocalização ======
 
-    // ====== PLOTAGEM DOS PINS ======
+    // acompanha a posição e atualiza o pontinho (e a rota, com moderação)
+    function startWatchingPosition() {
+      if (!navigator.geolocation || geoWatchId) return;
+      geoWatchId = navigator.geolocation.watchPosition(
+        (pos) => {
+          const cur = L.latLng(pos.coords.latitude, pos.coords.longitude);
+          if (youMarker) youMarker.setLatLng(cur);
+
+          if (routingControl && routingControl.getWaypoints().length === 2) {
+            const now = Date.now();
+            const prevStart = routingControl.getWaypoints()[0].latLng;
+            const moved = haversine(prevStart, cur);
+
+            if (now - lastRouteAt >= MIN_ROUTE_INTERVAL_MS && moved >= MIN_MOVE_METERS) {
+              const dest = routingControl.getWaypoints()[1].latLng;
+              routingControl.setWaypoints([cur, dest]); // re-roteia
+              lastRouteAt = now;
+            }
+          }
+        },
+        (err) => console.warn('watchPosition error', err),
+        { enableHighAccuracy: true, maximumAge: 10000, timeout: 15000 }
+      );
+    }
+
+    // fallback para Google/Apple Maps
+    function fallbackDirections(lat, lng) {
+      const isApple = /iPad|iPhone|Macintosh/.test(navigator.userAgent);
+      const url = isApple
+        ? `http://maps.apple.com/?daddr=${lat},${lng}&dirflg=w`
+        : `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=walking`;
+      window.open(url, '_blank');
+    }
+
+    // cria/atualiza rota a pé usando OSRM (LRM)
+    function routeTo(destLat, destLng) {
+      if (!L.Routing || !L.Routing.control) {
+        alert('Routing unavailable. Make sure Leaflet Routing Machine is included in the page.');
+        return;
+      }
+      if (!youMarker) {
+        alert('Click “Use my location” or search your location first.');
+        return;
+      }
+
+      const start = youMarker.getLatLng();
+      const end = L.latLng(destLat, destLng);
+
+      // remove rota anterior
+      if (routingControl) {
+        map.removeControl(routingControl);
+        routingControl = null;
+      }
+
+      try {
+        routingControl = L.Routing.control({
+          waypoints: [start, end],
+          addWaypoints: false,
+          draggableWaypoints: false,
+          fitSelectedRoutes: true,
+          show: false, // sem painel lateral
+          router: L.Routing.osrmv1({
+            serviceUrl: 'https://router.project-osrm.org/route/v1',
+            profile: 'foot',
+            timeout: 15000
+          }),
+          routeWhileDragging: false,
+          lineOptions: { styles: [{ opacity: 0.9, weight: 6 }] }
+        }).addTo(map);
+
+        lastRouteAt = Date.now();
+        startWatchingPosition();
+      } catch (e) {
+        console.error('Routing error:', e);
+        alert('Could not calculate route now. Opening external maps…');
+        fallbackDirections(destLat, destLng);
+      }
+    }
+
+    // ===== PINS / POPUPS =====
     const displayedCoordinates = new Map();
     const uniquePlaces = {};
     const pinOffset = 0.0003;
@@ -138,21 +233,37 @@ fetch('places.json')
 
     console.log(`📥 Received total places from JSON: ${data.length}`);
 
-    // Monta o conteúdo do popup com nome, tipo, endereço e nota (se houver)
     function buildPopup(place) {
       const name = place.name || 'Unnamed Place';
       const type = place.type || 'Not specified';
       const address = place.address || '';
-      const score10 = typeof place.overall_user_experience === 'number'
+      const score10 = (typeof place.overall_user_experience === 'number')
         ? place.overall_user_experience
         : null;
 
       let html = `<strong>${name}</strong><br>${type}`;
       if (address) html += `<br>${address}`;
       if (score10 !== null) {
-        const stars = Math.round((score10 / 2) * 10) / 10; // 0–5 com 1 casa
+        const stars = Math.round((score10 / 2) * 10) / 10; // 0–5
         html += `<br>⭐️ ${stars}/5 (${score10}/10)`;
       }
+
+      // botões de ação
+      html += `
+        <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="route-btn"
+                  data-lat="${place.latitude}"
+                  data-lng="${place.longitude}"
+                  style="padding:6px 10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;">
+            Calcular rota (a pé)
+          </button>
+          <button class="extmaps-btn"
+                  data-lat="${place.latitude}"
+                  data-lng="${place.longitude}"
+                  style="padding:6px 10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;">
+            Abrir no Maps
+          </button>
+        </div>`;
       return html;
     }
 
@@ -175,9 +286,7 @@ fetch('places.json')
           const origLon = place.longitude;
           place.latitude += (Math.random() - 0.5) * pinOffset;
           place.longitude += (Math.random() - 0.5) * pinOffset;
-          console.log(
-            `📍 Adjusted pin for "${place.name}" to avoid overlap: [${origLat}, ${origLon}] ➜ [${place.latitude.toFixed(6)}, ${place.longitude.toFixed(6)}]`
-          );
+          console.log(`📍 Adjusted pin for "${place.name}" to avoid overlap: [${origLat}, ${origLon}] ➜ [${place.latitude.toFixed(6)}, ${place.longitude.toFixed(6)}]`);
         }
       }
 
@@ -189,6 +298,29 @@ fetch('places.json')
       L.marker([place.latitude, place.longitude])
         .addTo(map)
         .bindPopup(popupContent);
+    });
+
+    // captura cliques dos botões dentro dos popups
+    map.on('popupopen', (e) => {
+      const root = e.popup._contentNode;
+
+      const routeBtn = root.querySelector('.route-btn');
+      if (routeBtn) {
+        routeBtn.addEventListener('click', () => {
+          const lat = parseFloat(routeBtn.getAttribute('data-lat'));
+          const lng = parseFloat(routeBtn.getAttribute('data-lng'));
+          routeTo(lat, lng);
+        });
+      }
+
+      const extBtn = root.querySelector('.extmaps-btn');
+      if (extBtn) {
+        extBtn.addEventListener('click', () => {
+          const lat = parseFloat(extBtn.getAttribute('data-lat'));
+          const lng = parseFloat(extBtn.getAttribute('data-lng'));
+          fallbackDirections(lat, lng);
+        });
+      }
     });
 
     console.log(`✅ Total unique pins on map: ${Object.keys(uniquePlaces).length}`);
