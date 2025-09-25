@@ -1342,7 +1342,7 @@
     "name": "Dussmann",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Friedrichstr. 90, 10117 Berlin",
+    "address": "Friedrichstr. 90, 10117",
     "latitude": 52.518369,
     "longitude": 13.3890173,
     "type": "Bookstore",
@@ -3118,7 +3118,7 @@
     "name": "Forum Schwanthaler Höhe",
     "city": "München",
     "neighborhood": "",
-    "address": "Theresienhöhe 5, 80339 München",
+    "address": "Theresienhöhe 5, 80339",
     "latitude": 48.1369362,
     "longitude": 11.5461992,
     "type": "Mall",
@@ -3391,12 +3391,12 @@
     "created_at": "2025-04-24"
   },
   {
-    "name": "Dm",
+    "name": "dm",
     "city": "München",
     "neighborhood": "",
-    "address": "Dm Theresienhöhe",
-    "latitude": 48.136489,
-    "longitude": 11.5480662,
+    "address": " Theresienhöhe 5, 80339",
+    "latitude": 48.1369362,
+    "longitude": 11.5461992,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3506,8 +3506,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.441937,
-    "longitude": 13.5901206,
+    "latitude": 52.441687,
+    "longitude": 13.5900987,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
