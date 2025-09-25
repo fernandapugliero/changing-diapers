@@ -3,6 +3,7 @@ import json
 import os
 import time
 
+# === Configurações da API ===
 AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
 BASE_ID = "appjWF7WnC8DRWaXM"
 TABLE_NAME = "Changing Diapers"
@@ -10,6 +11,7 @@ HEADERS = {
     "Authorization": f"Bearer {AIRTABLE_TOKEN}"
 }
 
+# === Função para geocodificar endereços ===
 def geocode_address(address):
     try:
         url = "https://nominatim.openstreetmap.org/search"
@@ -31,6 +33,7 @@ params = {"pageSize": 100}
 
 print("[...] Starting Airtable fetch...")
 
+# === Paginação dos resultados ===
 while True:
     res = requests.get(url, headers=HEADERS, params=params)
     data = res.json()
@@ -39,7 +42,7 @@ while True:
 
     for record in records:
         fields = record.get("fields", {})
-        print(f"[🔍] Processing fields: {fields}")
+        print(f"[🔍] Processing: {fields.get('Name', 'Unnamed')}")
 
         lat = fields.get("Latitude")
         lon = fields.get("Longitude")
@@ -48,15 +51,26 @@ while True:
         country = fields.get("Country", "")
         created_at = fields.get("Created at")
 
+        # 🌍 Geocodificação caso não tenha lat/lon
         if (not lat or not lon) and address:
             parts = [address, city, country]
             search_address = ", ".join(part for part in parts if part)
             lat, lon = geocode_address(search_address)
-            time.sleep(1)
+            time.sleep(1)  # evita bloqueio da API
 
             if not lat or not lon:
                 print(f"[!] Could not geocode: {search_address}")
 
+        # ⭐️ Novo: pegar o campo "Overall user experience"
+        overall_score = fields.get("Overall user experience")
+        if overall_score is not None:
+            try:
+                overall_score = float(overall_score)
+            except ValueError:
+                print(f"[⚠️] Invalid score for {fields.get('Name')}: {overall_score}")
+                overall_score = None
+
+        # === Criar dicionário do local ===
         place = {
             "name": fields.get("Name", ""),
             "city": city,
@@ -70,19 +84,23 @@ while True:
             "conditions": fields.get("Changing Table Condition", []),
             "room_for_stroller": fields.get("Room for a stroller", False),
             "site": fields.get("Site", ""),
-            "created_at": created_at
+            "created_at": created_at,
+            "overall_user_experience": overall_score  # ✅ novo campo
         }
+
         places.append(place)
 
+    # === Paginação ===
     if 'offset' in data:
         params['offset'] = data['offset']
         print("[⏭️] More pages to fetch...")
     else:
         break
 
-print(f"[✓] Total places collected: {len(places)}")
+print(f"[✅] Total places collected: {len(places)}")
 
+# === Exportar para JSON ===
 with open("places.json", "w", encoding="utf-8") as f:
     json.dump(places, f, ensure_ascii=False, indent=2)
 
-print("[✅] places.json updated successfully.")
+print("[🎉] places.json updated successfully with overall_user_experience!")
