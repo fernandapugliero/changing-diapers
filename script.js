@@ -125,26 +125,33 @@ fetch('places.json')
     }
 
     // ===== ESTRELAS (0–5) a partir do overall_user_experience (0–10) =====
-    function starSpanFromScore10(rawScore) {
-      if (typeof rawScore !== 'number') return '';
-      // converte 0–10 para 0–5 e arredonda em passos de 0.5
-      let stars = Math.max(0, Math.min(5, rawScore / 2));
-      stars = Math.round(stars * 2) / 2;
-      // retorna um span que o CSS vai pintar com metade quando necessário
-      return `<span class="star-rating" aria-hidden="true" style="--rating:${stars}"></span>`;
-    }
+function starSpanFromScore10(rawScore) {
+  if (typeof rawScore !== 'number' || Number.isNaN(rawScore)) {
+    // 🚨 Sem nota: 5 estrelas vazias + texto "Not rated yet"
+    return `
+      <span class="star-rating is-empty" aria-hidden="true" style="--rating:0;"></span>
+      <span class="star-note">Not rated yet</span>
+    `;
+  }
 
-    function buildPopup(place) {
-      const name = place.name || 'Unnamed Place';
-      const type = place.type || 'Not specified';
-      const address = place.address || '';
-      const starsHTML = starSpanFromScore10(place.overall_user_experience);
+  // ✅ Converte 0–10 para 0–5 e arredonda em .0 ou .5
+  let stars = Math.max(0, Math.min(5, rawScore / 2));
+  stars = Math.round(stars * 2) / 2;
 
-      let html = `<strong>${name}</strong><br>${type}`;
-      if (address) html += `<br>${address}`;
-      if (starsHTML) html += `<br>${starsHTML}`;
-      return html;
-    }
+  return `<span class="star-rating" aria-hidden="true" style="--rating:${stars}"></span>`;
+}
+
+function buildPopup(place) {
+  const name = place.name || 'Unnamed Place';
+  const type = place.type || 'Not specified';
+  const address = place.address || '';
+  const starsHTML = starSpanFromScore10(place.overall_user_experience);
+
+  let html = `<strong>${name}</strong><br>${type}`;
+  if (address) html += `<br>${address}`;
+  if (starsHTML) html += `<br>${starsHTML}`;
+  return html;
+}
 
     // ===== PLOTAGEM DOS PINS =====
     const displayedCoordinates = new Map();
