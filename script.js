@@ -250,20 +250,20 @@ fetch('places.json')
 
       // botões de ação
       html += `
-        <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
-          <button class="route-btn"
-                  data-lat="${place.latitude}"
-                  data-lng="${place.longitude}"
-                  style="padding:6px 10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;">
-            Calcular rota (a pé)
-          </button>
-          <button class="extmaps-btn"
-                  data-lat="${place.latitude}"
-                  data-lng="${place.longitude}"
-                  style="padding:6px 10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;">
-            Abrir no Maps
-          </button>
-        </div>`;
+  <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+    <button class="route-btn"
+            data-lat="${place.latitude}"
+            data-lng="${place.longitude}"
+            style="padding:6px 12px;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:pointer;font-size:0.9rem;">
+      👣 Calcular rota
+    </button>
+    <button class="extmaps-btn"
+            data-lat="${place.latitude}"
+            data-lng="${place.longitude}"
+            style="padding:6px 12px;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:pointer;font-size:0.9rem;">
+      🗺️ Abrir no Maps
+    </button>
+  </div>`;
       return html;
     }
 
