@@ -286,6 +286,36 @@ footer a:hover {
     height: 480px;
   }
 }
+    .leaflet-popup-content .route-btn,
+.leaflet-popup-content .extmaps-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.leaflet-popup-content .route-btn:hover {
+  background: #6a5acd; /* roxo fixmydiaper */
+  border-color: #6a5acd;
+  color: #fff;
+}
+
+.leaflet-popup-content .extmaps-btn:hover {
+  background: #3388ff; /* azul Google Maps */
+  border-color: #3388ff;
+  color: #fff;
+}
+
+.leaflet-popup-content .route-btn + .extmaps-btn {
+  margin-left: 6px;
+}
   </style>
 </head>
 <body>
