@@ -286,11 +286,11 @@ footer a:hover {
     height: 480px;
   }
 }
-    .leaflet-popup-content .route-btn,
-.leaflet-popup-content .extmaps-btn {
+    /* ===== POPUP BUTTON ===== */
+.leaflet-popup-content .route-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 6px; /* espaço entre 👣 e texto */
   padding: 6px 12px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -302,19 +302,9 @@ footer a:hover {
 }
 
 .leaflet-popup-content .route-btn:hover {
-  background: #6a5acd; /* roxo fixmydiaper */
+  background: #6a5acd; /* roxo FixMyDiaper */
   border-color: #6a5acd;
   color: #fff;
-}
-
-.leaflet-popup-content .extmaps-btn:hover {
-  background: #3388ff; /* azul Google Maps */
-  border-color: #3388ff;
-  color: #fff;
-}
-
-.leaflet-popup-content .route-btn + .extmaps-btn {
-  margin-left: 6px;
 }
   </style>
 </head>
