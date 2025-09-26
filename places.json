@@ -1659,7 +1659,7 @@
     "room_for_stroller": "Yes",
     "site": "https://www.inselberlin.de/",
     "created_at": "2025-04-11",
-    "overall_user_experience": null
+    "overall_user_experience": 8.0
   },
   {
     "name": "dm",
@@ -1854,7 +1854,7 @@
     "room_for_stroller": "Yes",
     "site": "https://www.cafeamneuensee.de/",
     "created_at": "2025-04-14",
-    "overall_user_experience": null
+    "overall_user_experience": 6.0
   },
   {
     "name": "Bambini City",
@@ -2368,7 +2368,7 @@
     "room_for_stroller": "No",
     "site": "https://www.maralou-berlin.de/",
     "created_at": "2025-04-12",
-    "overall_user_experience": null
+    "overall_user_experience": 10.0
   },
   {
     "name": "Vier Ecken",
@@ -2389,7 +2389,7 @@
     "room_for_stroller": "No",
     "site": "https://vier-ecken.webflow.io/",
     "created_at": "2025-04-11",
-    "overall_user_experience": null
+    "overall_user_experience": 3.0
   },
   {
     "name": "dm",
@@ -2567,7 +2567,7 @@
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/St7JDAVpzTDh4nXe6?g_st=com.google.maps.preview.copy",
     "created_at": "2025-05-22",
-    "overall_user_experience": 8.0
+    "overall_user_experience": 9.0
   },
   {
     "name": "dm",
@@ -2839,8 +2839,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 9",
-    "latitude": 52.5298245,
-    "longitude": 13.4112754,
+    "latitude": 52.5301311,
+    "longitude": 13.4109881,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3130,7 +3130,7 @@
     "room_for_stroller": "Yes",
     "site": "https://www.instagram.com/zenner.biergarten?igsh=MTBremZhamZlem0xcA==",
     "created_at": "2025-04-18",
-    "overall_user_experience": null
+    "overall_user_experience": 4.0
   },
   {
     "name": "dm",
@@ -3155,8 +3155,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437",
-    "latitude": 52.5418177,
-    "longitude": 13.4123572,
+    "latitude": 52.5452066,
+    "longitude": 13.4125713,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -3453,7 +3453,7 @@
     "room_for_stroller": "Yes",
     "site": "https://www.ikea.com/de/de/stores/berlin-tempelhof/",
     "created_at": "2025-04-24",
-    "overall_user_experience": null
+    "overall_user_experience": 8.0
   },
   {
     "name": "Camponesa",
@@ -3590,7 +3590,7 @@
     "room_for_stroller": "No",
     "site": "https://www.gov.br/mre/pt-br/embaixada-berlim/de/brasilianische-botschaft-in-berlin",
     "created_at": "2025-04-24",
-    "overall_user_experience": null
+    "overall_user_experience": 8.0
   },
   {
     "name": "dm",
@@ -3667,7 +3667,7 @@
     "room_for_stroller": "Yes",
     "site": "https://www.instagram.com/mignonsicilianbakery/",
     "created_at": "2025-04-12",
-    "overall_user_experience": null
+    "overall_user_experience": 9.0
   },
   {
     "name": "Zooparque",
