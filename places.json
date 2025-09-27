@@ -1955,6 +1955,24 @@
     "overall_user_experience": 9.0
   },
   {
+    "name": "Marheineke Markthalle ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Marheinekepl. 15, 10961 Berlin",
+    "latitude": 52.489286,
+    "longitude": 13.3943009,
+    "type": "Food court",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-09-27",
+    "overall_user_experience": null
+  },
+  {
     "name": "Junge Die Bäckerei",
     "city": "Berlin",
     "neighborhood": "",
@@ -3244,6 +3262,24 @@
     "site": "",
     "created_at": "2025-09-02",
     "overall_user_experience": 9.0
+  },
+  {
+    "name": "Felix Austria",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Bergmannstraße 26, 10961 Berlin",
+    "latitude": 52.4888555,
+    "longitude": 13.3950143,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-09-27",
+    "overall_user_experience": null
   },
   {
     "name": "Café Peri",
