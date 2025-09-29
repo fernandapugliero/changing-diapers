@@ -2175,8 +2175,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kantstraße 17, 10623",
-    "latitude": 52.5059004,
-    "longitude": 13.3247432,
+    "latitude": 52.5060585,
+    "longitude": 13.3247627,
     "type": "Mall",
     "changing_table_location": [
       "women's restroom",
@@ -3867,8 +3867,8 @@
     "city": "Schönefeld",
     "neighborhood": "",
     "address": "Melli-Beese-Ring 1, 12529",
-    "latitude": 52.3644089,
-    "longitude": 13.5097021,
+    "latitude": 52.3646011,
+    "longitude": 13.509425,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
