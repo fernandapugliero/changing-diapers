@@ -147,9 +147,9 @@
     "name": "Prater Biergarten ",
     "city": "Berlin ",
     "neighborhood": "",
-    "address": "Prenzlauer Berg ",
-    "latitude": 52.5398466,
-    "longitude": 13.4285652,
+    "address": " Kastanienallee 7, 10435",
+    "latitude": 52.5398024,
+    "longitude": 13.4107579,
     "type": "Biergarten",
     "changing_table_location": "",
     "supplies_available": [],
@@ -3750,8 +3750,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.441687,
-    "longitude": 13.5900987,
+    "latitude": 52.4410911,
+    "longitude": 13.5886076,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
