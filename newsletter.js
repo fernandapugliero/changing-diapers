@@ -1,68 +1,29 @@
-<script>
-(function(){
-  const form    = document.getElementById('nl-form');
-  const nameEl  = document.getElementById('nl-name');
-  const emailEl = document.getElementById('nl-email');
-  const btn     = document.getElementById('nl-submit');
-  const okMsg   = document.getElementById('nl-success');
-  const errMsg  = document.getElementById('nl-error');
+document.getElementById('nl-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-  // 👉 Cole aqui a URL do seu "Incoming Webhook" da Automação do Airtable
-  const WEBHOOK_URL = 'YOUR_AIRTABLE_AUTOMATION_WEBHOOK_URL';
+  const name = document.getElementById('nl-name').value;
+  const email = document.getElementById('nl-email').value;
 
-  function show(el){ el.style.display = 'block'; }
-  function hide(el){ el.style.display = 'none'; }
-
-  function isValidEmail(v){
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v).toLowerCase());
-  }
-
-  async function postToAirtable(name, email){
-    // Payload que sua Automação deve mapear para criar o record
-    const body = JSON.stringify({ name, email });
-
-    const res = await fetch(WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body
-    });
-
-    // A Automação costuma responder 200/202; trate qualquer 2xx como sucesso
-    if (!res.ok) throw new Error('non-2xx');
-    return true;
-  }
-
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      hide(okMsg); hide(errMsg);
-
-      const name  = (nameEl.value || '').trim();
-      const email = (emailEl.value || '').trim();
-
-      if (!isValidEmail(email)) {
-        show(errMsg);
-        errMsg.textContent = 'Please enter a valid email.';
-        return;
+  const res = await fetch(`https://api.airtable.com/v0/apppSigVLt8ICVUA5/Newsletter`, {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer patIvzlvp30wnC7VO',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      fields: {
+        Name: name,
+        Email: email,
+        "Created at": new Date().toISOString()
       }
+    })
+  });
 
-      btn.disabled = true;
-      const oldLabel = btn.textContent;
-      btn.textContent = 'Subscribing…';
-
-      try {
-        await postToAirtable(name, email);
-        form.reset();
-        show(okMsg);
-      } catch (err) {
-        console.error('Newsletter error:', err);
-        show(errMsg);
-        errMsg.textContent = 'Something went wrong. Please try again.';
-      } finally {
-        btn.disabled = false;
-        btn.textContent = oldLabel;
-      }
-    });
+  if (res.ok) {
+    alert('🎉 Thank you for subscribing!');
+    e.target.reset();
+  } else {
+    alert('❌ Something went wrong.');
+    console.error(await res.text());
   }
-})();
-</script>
+});
