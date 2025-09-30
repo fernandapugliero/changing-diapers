@@ -1,8 +1,7 @@
-<script>
 (function () {
-  const BASE_ID = 'apppSigVLt8ICVUA5';             // ex: appXXXXXXXXXXXXXX
-  const TABLE = 'Newsletter';                 // nome da tabela
-  const PAT = 'patIvzlvp30wnC7VO';            // seu token
+  const BASE_ID = 'apppSigVLt8ICVUA5';             
+  const TABLE = 'Newsletter';                 
+  const PAT = 'patIvzlvp30wnC7VO';           
 
   const form = document.getElementById('nl-form');
   const nameEl = document.getElementById('nl-name');
@@ -73,4 +72,3 @@
     }
   });
 })();
-</script>
