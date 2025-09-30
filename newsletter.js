@@ -6,7 +6,7 @@ document.getElementById("newsletter-form").addEventListener("submit", async (e) 
     const res = await fetch("https://api.airtable.com/v0/apppSigVLt8ICVUA5/Newsletter%20Subscribers", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer YOUR_AIRTABLE_PAT",
+        "Authorization": "Bearer patIvzlvp30wnC7VO",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
