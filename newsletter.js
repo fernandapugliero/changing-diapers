@@ -1,9 +1,15 @@
-document.getElementById("newsletter-form").addEventListener("submit", async (e) => {
+document.getElementById("newsletter-submit").addEventListener("click", async (e) => {
   e.preventDefault();
-  const email = document.getElementById("email").value;
+  const email = document.getElementById("newsletter-email").value.trim();
+  const successMsg = document.getElementById("newsletter-success");
+
+  if (!email) {
+    alert("Please enter a valid email.");
+    return;
+  }
 
   try {
-    const res = await fetch("https://api.airtable.com/v0/apppSigVLt8ICVUA5/Newsletter", {
+    const res = await fetch("https://api.airtable.com/v0/tblCkhBLqSlysvp5K/Newsletter", {
       method: "POST",
       headers: {
         "Authorization": "Bearer patIvzlvp30wnC7VO",
@@ -18,8 +24,8 @@ document.getElementById("newsletter-form").addEventListener("submit", async (e) 
     });
 
     if (res.ok) {
-      document.getElementById("newsletter-success").style.display = "block";
-      document.getElementById("newsletter-form").reset();
+      successMsg.style.display = "block";
+      document.getElementById("newsletter-email").value = "";
     } else {
       alert("Something went wrong. Please try again.");
     }
