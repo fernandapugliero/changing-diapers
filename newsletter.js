@@ -1,7 +1,7 @@
 (function () {
-  const BASE_ID = 'apppSigVLt8ICVUA5';             
-  const TABLE = 'Newsletter';                 
-  const PAT = 'patIvzlvp30wnC7VO';           
+  const BASE_ID = 'apppSigVLt8ICVUA5';
+  const TABLE = 'Newsletter';
+  const PAT = 'patIvzlvp30wnC7VO';
 
   const form = document.getElementById('nl-form');
   const nameEl = document.getElementById('nl-name');
@@ -25,8 +25,8 @@
     e.preventDefault();
     setStatus('');
 
-    const name = (nameEl.value || '').trim();
-    const email = (emailEl.value || '').trim();
+    const name = (nameEl?.value || '').trim();
+    const email = (emailEl?.value || '').trim();
 
     if (!email || !validateEmail(email)) {
       setStatus('Please enter a valid email.', false);
@@ -34,7 +34,6 @@
       return;
     }
 
-    // trava botão durante envio
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
 
@@ -60,7 +59,6 @@
         throw new Error('Airtable returned ' + res.status);
       }
 
-      // sucesso
       setStatus('🎉 You’re in! Thanks for subscribing.', true);
       form.reset();
     } catch (err) {
