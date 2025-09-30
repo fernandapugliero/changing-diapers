@@ -9,19 +9,20 @@ document.getElementById("newsletter-submit").addEventListener("click", async (e)
   }
 
   try {
-    const res = await fetch("https://api.airtable.com/v0/tblCkhBLqSlysvp5K/Newsletter", {
-      method: "POST",
-      headers: {
-        "Authorization": "Bearer patIvzlvp30wnC7VO",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        fields: {
-          "Email": email,
-          "Created At": new Date().toISOString()
-        }
-      })
-    });
+    const res = await fetch("https://api.airtable.com/v0/apppSigVLt8ICVUA5/Newsletter", {
+  method: "POST",
+  headers: {
+    "Authorization": "Bearer patIvzlvp30wnC7VO",
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    fields: {
+      "Name": name,
+      "Email": email,
+      "Created at": new Date().toISOString()
+    }
+  })
+});
 
     if (res.ok) {
       successMsg.style.display = "block";
