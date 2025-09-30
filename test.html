@@ -319,16 +319,26 @@ footer a:hover {
 <p class="top5-explanation">
   *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
 
-<section class="newsletter-signup">
-  <h2>Join our monthly newsletter 🍼</h2>
-  <p>Get parenting tips, new changing table locations, and family-friendly insights — straight to your inbox.</p>
-  <form id="newsletter-form">
-    <input type="email" id="email" name="email" placeholder="Your email" required />
-    <button type="submit">Subscribe</button>
-  </form>
-  <p id="newsletter-success" style="display:none; color:green; margin-top:8px;">
-    🎉 Thanks for subscribing!
+<section id="newsletter" style="max-width:760px;margin:3rem auto 0;">
+  <h2 style="text-align:center;font-size:1.3rem;margin:0 0 1rem;">Join our monthly newsletter</h2>
+  <p style="text-align:center;font-size:1rem;color:#555;margin:0 0 1.25rem;">
+    Get parenting tips, new changing table locations, and family-friendly insights — straight to your inbox.
   </p>
+
+  <form id="nl-form" novalidate style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+    <div class="nl-field">
+      <label class="visually-hidden" for="nl-name">Name</label>
+      <input id="nl-name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+    </div>
+    <div class="nl-field">
+      <label class="visually-hidden" for="nl-email">Email</label>
+      <input id="nl-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+    </div>
+    <button id="nl-submit" type="submit" class="nl-btn">Subscribe</button>
+  </form>
+
+  <p id="nl-success" style="display:none;text-align:center;color:#2f7a35;margin-top:10px;">Thanks for subscribing!</p>
+  <p id="nl-error"   style="display:none;text-align:center;color:#b00020;margin-top:10px;">Something went wrong. Please try again.</p>
 </section>
   
   <footer>
