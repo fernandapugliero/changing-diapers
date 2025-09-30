@@ -3,7 +3,7 @@ document.getElementById("newsletter-form").addEventListener("submit", async (e) 
   const email = document.getElementById("email").value;
 
   try {
-    const res = await fetch("https://api.airtable.com/v0/apppSigVLt8ICVUA5/Newsletter%20Subscribers", {
+    const res = await fetch("https://api.airtable.com/v0/apppSigVLt8ICVUA5/Newsletter", {
       method: "POST",
       headers: {
         "Authorization": "Bearer patIvzlvp30wnC7VO",
