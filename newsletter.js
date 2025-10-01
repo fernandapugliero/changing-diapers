@@ -2,7 +2,7 @@
 (() => {
   const BASE_ID = 'apppSigVLt8ICVUA5';      
   const TABLE   = 'Newsletter';             
-  const PAT     = 'patvs4gtL4xOw9DAq';  
+  const PAT     = 'patQoqoniXW6vJqZU';  
 
   const form   = document.getElementById('nl-form');
   const nameEl = document.getElementById('nl-name');
