@@ -1,44 +1,43 @@
-(function () {
-  const BASE_ID = 'apppSigVLt8ICVUA5';
-  const TABLE = 'Newsletter';
-  const PAT = 'patIvzlvp30wnC7VO';
 
-  const form = document.getElementById('nl-form');
+(() => {
+  const BASE_ID = 'apppSigVLt8ICVUA5';      
+  const TABLE   = 'Newsletter';             
+  const PAT     = 'patvs4gtL4xOw9DAq';  
+
+  const form   = document.getElementById('nl-form');
   const nameEl = document.getElementById('nl-name');
-  const emailEl = document.getElementById('nl-email');
-  const statusEl = document.getElementById('nl-status');
-  const submitBtn = document.getElementById('nl-submit');
+  const mailEl = document.getElementById('nl-email');
+  const btn    = document.getElementById('nl-submit');
+  const status = document.getElementById('nl-status');
 
-  if (!form || !emailEl || !submitBtn || !statusEl) return;
-
-  function setStatus(msg, ok = true) {
-    statusEl.textContent = msg || '';
-    statusEl.classList.remove('ok', 'err');
-    statusEl.classList.add(ok ? 'ok' : 'err');
+  if (!form || !nameEl || !mailEl || !btn || !status) {
+    console.error('Newsletter form: elementos não encontrados (IDs errados?).');
+    return;
   }
 
-  function validateEmail(v) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  const endpoint = `https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(TABLE)}`;
+
+  function setStatus(msg, ok = true) {
+    status.textContent = msg;
+    status.style.color = ok ? '#2e7d32' : '#c62828';
   }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     setStatus('');
+    btn.disabled = true;
 
-    const name = (nameEl?.value || '').trim();
-    const email = (emailEl?.value || '').trim();
+    const name  = nameEl.value.trim();
+    const email = mailEl.value.trim();
 
-    if (!email || !validateEmail(email)) {
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
       setStatus('Please enter a valid email.', false);
-      emailEl.focus();
+      btn.disabled = false;
       return;
     }
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-
     try {
-      const res = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(TABLE)}`, {
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${PAT}`,
@@ -46,27 +45,44 @@
         },
         body: JSON.stringify({
           fields: {
-            Name: name,
-            Email: email,
-            "Created at": new Date().toISOString()
+            'Name': name || '',
+            'Email': email,
+            'Created at': new Date().toISOString()
           }
         })
       });
 
+      // 🔍 LOGS DEPOIS DA RESPOSTA
+      console.log('Airtable response status:', res.status);
+      const text = await res.text();
+      let payload = null;
+      try { payload = JSON.parse(text); } catch { /* deixa como string */ }
+      console.log('Airtable response body:', payload || text);
+
       if (!res.ok) {
-        const text = await res.text();
-        console.error('Airtable error:', text);
-        throw new Error('Airtable returned ' + res.status);
+        // Mostra a mensagem real do Airtable na UI
+        const msg = (payload && payload.error && payload.error.message) 
+          ? payload.error.message 
+          : `HTTP ${res.status}`;
+        setStatus(`Something went wrong: ${msg}`, false);
+
+        // Dicas específicas p/ 401
+        if (res.status === 401) {
+          console.warn('DICA: 401 costuma ser PAT inválido, sem acesso à base, ou sem Allowed origins.');
+          console.warn('Verifique: scopes (read/write), base selecionada, Allowed origins e se o BASE_ID é da base Newsletter.');
+        }
+
+        btn.disabled = false;
+        return;
       }
 
-      setStatus('🎉 You’re in! Thanks for subscribing.', true);
+      setStatus('You’re in! Thanks for subscribing 💌');
       form.reset();
     } catch (err) {
-      console.error(err);
-      setStatus('❌ Something went wrong. Please try again.', false);
+      console.error('Fetch error:', err);
+      setStatus('Network error. Please try again.', false);
     } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Subscribe';
+      btn.disabled = false;
     }
   });
 })();
