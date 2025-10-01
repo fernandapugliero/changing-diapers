@@ -319,14 +319,30 @@ footer a:hover {
 <p class="top5-explanation">
   *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
 
-<!-- Newsletter: Name + Email -->
-<form id="nl-form" class="nl-form" novalidate>
-  <div class="nl-row">
-    <input id="nl-name" type="text" name="name" placeholder="Your name" aria-label="Name" />
-    <input id="nl-email" type="email" name="email" placeholder="Your email" aria-label="Email" required />
-    <button id="nl-submit" type="submit">Subscribe</button>
-  </div>
-  <div id="nl-status" class="nl-status" aria-live="polite"></div>
+<form id="nl-form">
+  <input 
+    type="text" 
+    id="nl-name" 
+    name="name" 
+    placeholder="Your name" 
+    required 
+  />
+  
+  <input 
+    type="email" 
+    id="nl-email" 
+    name="email" 
+    placeholder="Your email" 
+    required 
+  />
+  
+  <button 
+    type="submit" 
+    id="nl-submit">
+    Subscribe
+  </button>
+  
+  <p id="nl-status"></p>
 </form>
   
   <footer>
