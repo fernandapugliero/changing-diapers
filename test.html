@@ -319,31 +319,68 @@ footer a:hover {
 <p class="top5-explanation">
   *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
 
-<form id="nl-form">
-  <input 
-    type="text" 
-    id="nl-name" 
-    name="name" 
-    placeholder="Your name" 
-    required 
-  />
-  
-  <input 
-    type="email" 
-    id="nl-email" 
-    name="email" 
-    placeholder="Your email" 
-    required 
-  />
-  
-  <button 
-    type="submit" 
-    id="nl-submit">
-    Subscribe
-  </button>
-  
-  <p id="nl-status"></p>
-</form>
+<section id="newsletter" style="margin-top: 3rem; text-align: center;">
+  <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Join our monthly newsletter</h2>
+  <p style="font-size: 1rem; color: #555; margin-bottom: 1.5rem;">
+    Get parenting tips, updates and baby-friendly spots right in your inbox.
+  </p>
+
+  <form id="nl-form" style="display: flex; flex-direction: column; align-items: center; gap: 0.7rem; max-width: 400px; margin: 0 auto;">
+    <input 
+      type="text" 
+      id="nl-name" 
+      name="name" 
+      placeholder="Your name" 
+      required 
+      style="
+        width: 100%;
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+        border: 1.5px solid #ccc;
+        border-radius: 8px;
+        font-family: 'Inter', sans-serif;
+      "
+    />
+
+    <input 
+      type="email" 
+      id="nl-email" 
+      name="email" 
+      placeholder="Your email" 
+      required 
+      style="
+        width: 100%;
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+        border: 1.5px solid #ccc;
+        border-radius: 8px;
+        font-family: 'Inter', sans-serif;
+      "
+    />
+
+    <button 
+      type="submit" 
+      id="nl-submit" 
+      style="
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: #6b4eff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        transition: background 0.3s ease;
+      "
+    >
+      Subscribe
+    </button>
+
+    <p id="nl-status" style="font-size: 0.95rem; margin-top: 0.5rem; color: #555;"></p>
+  </form>
+</section>
   
   <footer>
     <a href="about">About</a> | 
