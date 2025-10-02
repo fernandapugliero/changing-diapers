@@ -901,9 +901,9 @@
     "name": "Mercabanyal",
     "city": "Valencia ",
     "neighborhood": "",
-    "address": "C/ d'Eugènia Viñes, 225, Poblats Marítims, 46011 València, Valencia, Espanha",
-    "latitude": null,
-    "longitude": null,
+    "address": "C/ d'Eugènia Viñes, 225, Poblats Marítims, 46011",
+    "latitude": 39.4720628,
+    "longitude": -0.325863,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
@@ -4161,9 +4161,9 @@
     "name": "La Más Bonita Ruzafa",
     "city": "Valencia ",
     "neighborhood": "",
-    "address": "C/ de Cadis, 61, L'Eixample, 46006 València, Valencia, Espanha",
-    "latitude": null,
-    "longitude": null,
+    "address": "C/ de Cadis, 61, L'Eixample, 46006",
+    "latitude": 39.4605266,
+    "longitude": -0.3725838,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -4368,9 +4368,9 @@
     "name": "L'Oceanogrŕfic",
     "city": "Valencia ",
     "neighborhood": "",
-    "address": "C/ d'Eduardo Primo Yúfera, 1, Quatre Carreres, 46013 València, Valencia, Espanha",
-    "latitude": null,
-    "longitude": null,
+    "address": "C/ d'Eduardo Primo Yúfera, 1, Quatre Carreres, 46013",
+    "latitude": 39.4530495,
+    "longitude": -0.3471814,
     "type": "Zoo",
     "changing_table_location": [
       "women's restroom"
