@@ -30,6 +30,7 @@
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -279,6 +280,131 @@ footer a:hover {
     height: 480px;
   }
 }
+/* ===== ⭐ RATING STARS ===== */
+.star-rating {
+  --rating: 0;                 /* 0 → 5 (meia estrela permitida) */
+  --star-color: #e0e0e0;       /* cinza claro para estrelas vazias */
+  --star-fill: #f5c518;        /* ouro vibrante para preenchidas */
+  position: relative;
+  display: inline-block;
+  font-size: 18px;             /* tamanho padrão das estrelas */
+  font-family: "Arial", "Helvetica", sans-serif;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+    /* Fallback para locais sem avaliação */
+.star-rating.is-empty::after {
+  width: 0; /* sem preenchimento dourado */
+}
+
+.star-note {
+  display: inline-block;
+  font-size: 12px;
+  color: #777;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.star-rating::before {
+  content: "★★★★★";
+  color: var(--star-color);
+}
+
+.star-rating::after {
+  content: "★★★★★";
+  color: var(--star-fill);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc((var(--rating) / 5) * 100%);
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ⭐ ajuste sutil no mobile (opcional) */
+@media (max-width: 600px) {
+  .star-rating {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+    /* 📬 Newsletter Banner */
+.newsletter-banner {
+  background: #f9f9fb;
+  border-top: 1px solid #ddd;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.nl-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.nl-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.nl-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.nl-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nl-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.nl-input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+}
+
+.nl-button {
+  padding: 0.7rem 1.5rem;
+  background: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-weight: 600;
+}
+
+.nl-button:hover {
+  background: #554dde;
+}
+
+/* 📱 Mobile tweaks */
+@media (max-width: 600px) {
+  .nl-form {
+    flex-direction: column;
+  }
+  .nl-button {
+    width: 100%;
+  }
+}   
   </style>
 </head>
 <body>
@@ -319,69 +445,29 @@ footer a:hover {
 <p class="top5-explanation">
   *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
 
-<section id="newsletter" style="margin-top: 3rem; text-align: center;">
-  <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Join our monthly newsletter</h2>
-  <p style="font-size: 1rem; color: #555; margin-bottom: 1.5rem;">
-    Get parenting tips, updates and baby-friendly spots right in your inbox.
-  </p>
-
-  <form id="nl-form" style="display: flex; flex-direction: column; align-items: center; gap: 0.7rem; max-width: 400px; margin: 0 auto;">
-    <input 
-      type="text" 
-      id="nl-name" 
-      name="name" 
-      placeholder="Your name" 
-      required 
-      style="
-        width: 100%;
-        padding: 0.7rem 1rem;
-        font-size: 1rem;
-        border: 1.5px solid #ccc;
-        border-radius: 8px;
-        font-family: 'Inter', sans-serif;
-      "
-    />
-
-    <input 
-      type="email" 
-      id="nl-email" 
-      name="email" 
-      placeholder="Your email" 
-      required 
-      style="
-        width: 100%;
-        padding: 0.7rem 1rem;
-        font-size: 1rem;
-        border: 1.5px solid #ccc;
-        border-radius: 8px;
-        font-family: 'Inter', sans-serif;
-      "
-    />
-
-    <button 
-      type="submit" 
-      id="nl-submit" 
-      style="
-        width: 100%;
-        padding: 0.8rem;
-        font-size: 1rem;
-        font-weight: 600;
-        background-color: #6b4eff;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        transition: background 0.3s ease;
-      "
+  <!-- 📬 Newsletter banner -->
+<section class="newsletter-banner">
+  <div class="nl-container">
+    <h3 class="nl-title">💌 Join our monthly newsletter</h3>
+    <p class="nl-text">Parenting tips, baby-friendly places and project updates — straight to your inbox.</p>
+    <form 
+      action="https://fixmydiaper.substack.com/subscribe" 
+      method="post" 
+      target="_blank" 
+      class="nl-form"
     >
-      Subscribe
-    </button>
-
-    <p id="nl-status" style="font-size: 0.95rem; margin-top: 0.5rem; color: #555;"></p>
-  </form>
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Your email address" 
+        class="nl-input" 
+        required
+      />
+      <button type="submit" class="nl-button">Subscribe</button>
+    </form>
+  </div>
 </section>
-  
+
   <footer>
     <a href="about">About</a> | 
     <a href="submit">Submit a Location</a> |
@@ -391,7 +477,8 @@ footer a:hover {
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-  <script src="script.js"></script>
-  <script src="newsletter.js"></script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
