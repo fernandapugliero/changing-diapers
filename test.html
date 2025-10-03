@@ -18,457 +18,166 @@
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JGYVLDZQTM');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JGYVLDZQTM');
+  </script>
   
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
+    /* ===== Base ===== */
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 2rem;
-      background: white;
+      background: #fff;
       color: #333;
     }
+
+    /* ===== Navegação ===== */
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
       display: flex;
-      align-items: center; /* Alinha itens no centro */
+      align-items: center;
     }
-    nav img {
-      width: 30px;  /* Tamanho do logo */
-      height: auto;
-      margin-right: 30px;  /* Espaçamento entre logo e os links do menu */
+    nav img { width: 30px; height: auto; margin-right: 30px; }
+    nav a { margin-right: 20px; text-decoration: none; font-weight: 600; color: inherit; }
+
+    /* ===== Títulos ===== */
+    h1 { font-size: 2rem; margin: 0 0 .5rem 0; text-align: center; line-height: 1.2; }
+    h2 { font-size: 1.1rem; font-weight: 400; color: #666; margin: 0 0 2rem 0; text-align: center; line-height: 1.4; }
+
+    /* ===== UI unificado (inputs & botões) ===== */
+    :root{
+      --ui-radius: 14px;
+      --ui-h: 56px;
+      --ui-font: 18px;
+      --ui-border: #e5e7eb;
+      --ui-text: #222;
+      --ui-bg: #fff;
+      --brand-purple: #6C63FF;
+      --brand-purple-hover: #5a52e6;
+      --brand-purple-focus: rgba(108, 99, 255, .35);
     }
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: 600;
-      color: inherit;
+    .ui-input{
+      width: 100%;
+      height: var(--ui-h);
+      padding: 0 20px;
+      border: 1px solid var(--ui-border);
+      border-radius: var(--ui-radius);
+      background: var(--ui-bg);
+      font-size: var(--ui-font);
+      line-height: 1;
+      color: var(--ui-text);
+      outline: none;
+      transition: box-shadow .15s ease, border-color .15s ease;
+      box-sizing: border-box;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
+    .ui-input::placeholder{ color:#9ca3af; }
+    .ui-input:focus{
+      border-color: var(--brand-purple);
+      box-shadow: 0 0 0 4px var(--brand-purple-focus);
     }
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #666;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      text-align: center;
+    .ui-btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      height: var(--ui-h); padding: 0 24px;
+      border-radius: var(--ui-radius); font-size: var(--ui-font); line-height: 1;
+      cursor:pointer; border:1px solid transparent; white-space: nowrap;
+      transition: background-color .15s ease, box-shadow .15s ease, border-color .15s ease, transform .02s ease;
+      user-select:none;
     }
-    .top5-explanation {
-  font-size: 0.85rem;
-  color: #555;
-  text-align: center;
-  margin-top: 1rem;
-  line-height: 1.4;
+    .ui-btn:active{ transform: translateY(0.5px); }
+    .ui-btn--primary{ background: var(--brand-purple); color:#fff; border-color: var(--brand-purple); }
+    .ui-btn--primary:hover{ background: var(--brand-purple-hover); border-color: var(--brand-purple-hover); }
+    .ui-btn--primary:focus{ box-shadow: 0 0 0 4px var(--brand-purple-focus); }
+    .ui-btn--ghost{ background:#fff; color: var(--ui-text); border-color: var(--ui-border); }
+    .ui-btn--ghost:hover{ background:#f8f8fb; border-color:#d8dae0; }
+    .ui-btn--ghost:focus{ box-shadow: 0 0 0 4px var(--brand-purple-focus); }
+    .ui-row{ display:flex; gap:12px; align-items:center; }
+    @media (max-width: 720px){
+      .ui-row{ flex-direction: column; align-items: stretch; }
+      .ui-row .ui-btn{ width:100%; }
     }
+
+    /* ===== Barra de busca (usa UI unificado) ===== */
+    .map-search{
+      margin: 0 auto 1.5rem auto;
+      max-width: 980px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    /* 🔴 IMPORTANTE: removemos as regras antigas que sobrescreviam o estilo
+       (.map-search input { … } e .map-search button { … }) */
+
+    /* ===== Mapa ===== */
     #map {
       height: 70vh;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    iframe {
+
+    /* ===== Airtable embed (escopo específico) ===== */
+    .airtable-embed {
       width: 100%;
       height: 600px;
       border: 1px solid #ccc;
       border-radius: 8px;
       background: transparent;
     }
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
+
+    /* ===== Parágrafos e notas ===== */
+    p { font-size: 1rem; color: #555; text-align: center; margin-top: 1rem; line-height: 1.5; }
+    p strong { font-weight: 600; }
+    .top5-explanation { font-size: .85rem; color:#555; text-align:center; margin-top:1rem; line-height:1.4; }
+
+    /* ===== Estrelas ===== */
+    .star-rating{
+      --rating: 0; --star-color:#e0e0e0; --star-fill:#f5c518;
+      position:relative; display:inline-block; font-size:18px; font-family: "Arial","Helvetica",sans-serif;
+      line-height:1; letter-spacing:2px; margin-top:4px;
     }
-    footer a {
-      color: #0070f3;
-      text-decoration: none;
+    .star-rating.is-empty::after{ width:0; }
+    .star-rating::before{ content:"★★★★★"; color:var(--star-color); }
+    .star-rating::after{
+      content:"★★★★★"; color:var(--star-fill); position:absolute; top:0; left:0;
+      width: calc((var(--rating)/5)*100%); overflow:hidden; white-space:nowrap; pointer-events:none;
     }
-    footer a:hover {
-      text-decoration: underline;
+    @media (max-width: 600px){ .star-rating{ font-size:16px; letter-spacing:1px; } }
+
+    /* ===== Newsletter banner (com Substack embed) ===== */
+    .nl-banner{ position:relative; background:#f7f7fb; border-top:none !important; box-shadow:none !important; margin-top:32px; }
+    .nl-wrap{ max-width:980px; margin:0 auto; padding:32px 16px 36px; text-align:center; }
+    .nl-title{ font-size: clamp(20px, 2vw, 30px); line-height:1.2; font-weight:800; margin:0 0 10px; }
+    .nl-sub{ font-size: clamp(14px, 1.6vw, 18px); color:#555; margin:0 0 18px; }
+    .nl-embed iframe{ display:block; width:100%; border:0; border-radius:14px; background:transparent; }
+    .footer-spacer{ height:8px; background:transparent; }
+
+    /* ===== Responsivo ===== */
+    @media (max-width: 768px){
+      body{ padding: 2rem; }
+      #map{ height: 60vh; }
+      .airtable-embed{ height: 520px; }
     }
-    p {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
-      line-height: 1.5;
+    @media (max-width: 480px){
+      #map{ height: 55vh; }
+      .airtable-embed{ height: 480px; }
     }
-    p strong {
-      font-weight: 600;
-    }
-    /* ===== Base ===== */
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 2rem;
-  background: #fff;
-  color: #333;
-}
-
-/* ===== Navegação ===== */
-nav {
-  margin-bottom: 2rem;
-  padding-top: 1rem;
-  display: flex;
-  align-items: center;
-}
-nav img {
-  width: 30px;
-  height: auto;
-  margin-right: 30px;
-}
-nav a {
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: 600;
-  color: inherit;
-}
-
-/* ===== Títulos ===== */
-h1 {
-  font-size: 2rem;
-  margin: 0 0 0.5rem 0; /* sempre igual */
-  text-align: center;
-  line-height: 1.2;
-}
-h2 {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #666;
-  margin: 0 0 2rem 0; /* sempre igual */
-  text-align: center;
-  line-height: 1.4;
-}
-
-/* ===== Barra de busca ===== */
-.map-search {
-  margin: 0 auto 1.5rem auto;
-  max-width: 720px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.map-search input {
-  flex: 1 1 260px;
-  max-width: 420px;
-  height: 36px;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #333;
-  background: #fff;
-}
-.map-search button {
-  height: 36px;
-  padding: 0 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f7f7f7;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  color: #333;
-}
-.map-search button:hover {
-  background: #efefef;
-}
-
-/* ===== Mapa ===== */
-#map {
-  height: 70vh;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* ===== Airtable embed ===== */
-iframe {
-  width: 100%;
-  height: 600px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: transparent;
-}
-
-/* ===== Parágrafos e notas ===== */
-p {
-  font-size: 1rem;
-  color: #555;
-  text-align: center;
-  margin-top: 1rem;
-  line-height: 1.5;
-}
-p strong {
-  font-weight: 600;
-}
-.top5-explanation {
-  font-size: 0.85rem;
-  color: #555;
-  text-align: center;
-  margin-top: 1rem;
-  line-height: 1.4;
-}
-
-/* ===== Rodapé ===== */
-footer {
-  margin-top: 3rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-}
-footer a {
-  color: #0070f3;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Responsivo ===== */
-@media (max-width: 768px) {
-  body {
-    padding: 2rem; /* 👈 mesmo padding do desktop */
-  }
-  nav {
-    margin-bottom: 2rem;
-  }
-  h1 {
-    font-size: 2rem;
-    margin: 0 0 0.5rem 0; /* 👈 igual ao desktop */
-  }
-  h2 {
-    font-size: 1.1rem;
-    margin: 0 0 2rem 0; /* 👈 igual ao desktop */
-  }
-  .map-search {
-    padding: 0 12px;
-  }
-  #map {
-    height: 60vh;
-  }
-  iframe {
-    height: 520px;
-  }
-}
-
-@media (max-width: 480px) {
-  .map-search button {
-    flex: 0 0 auto;
-  }
-  #map {
-    height: 55vh;
-  }
-  iframe {
-    height: 480px;
-  }
-}
-/* ===== ⭐ RATING STARS ===== */
-.star-rating {
-  --rating: 0;                 /* 0 → 5 (meia estrela permitida) */
-  --star-color: #e0e0e0;       /* cinza claro para estrelas vazias */
-  --star-fill: #f5c518;        /* ouro vibrante para preenchidas */
-  position: relative;
-  display: inline-block;
-  font-size: 18px;             /* tamanho padrão das estrelas */
-  font-family: "Arial", "Helvetica", sans-serif;
-  line-height: 1;
-  letter-spacing: 2px;
-  margin-top: 4px;
-}
-    /* Fallback para locais sem avaliação */
-.star-rating.is-empty::after {
-  width: 0; /* sem preenchimento dourado */
-}
-
-.star-note {
-  display: inline-block;
-  font-size: 12px;
-  color: #777;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-
-.star-rating::before {
-  content: "★★★★★";
-  color: var(--star-color);
-}
-
-.star-rating::after {
-  content: "★★★★★";
-  color: var(--star-fill);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc((var(--rating) / 5) * 100%);
-  overflow: hidden;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-/* ⭐ ajuste sutil no mobile (opcional) */
-@media (max-width: 600px) {
-  .star-rating {
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-}
-   /* =========================================
-   UI — Campos e botões (unificados)
-   ========================================= */
-:root{
-  --ui-radius: 14px;
-  --ui-h: 56px;                 /* altura padrão */
-  --ui-font: 18px;              /* tamanho de fonte padrão */
-  --ui-border: #e5e7eb;         /* cinza clarinho da borda */
-  --ui-text: #222;
-  --ui-bg: #fff;
-
-  --brand-purple: #6C63FF;      /* roxo do newsletter */
-  --brand-purple-hover: #5a52e6;
-  --brand-purple-focus: rgba(108, 99, 255, .35);
-}
-
-/* INPUT grande (usa em geoloc e newsletter) */
-.ui-input{
-  width: 100%;
-  height: var(--ui-h);
-  padding: 0 20px;
-  border: 1px solid var(--ui-border);
-  border-radius: var(--ui-radius);
-  background: var(--ui-bg);
-  font-size: var(--ui-font);
-  line-height: 1;
-  color: var(--ui-text);
-  outline: none;
-  transition: box-shadow .15s ease, border-color .15s ease;
-  box-sizing: border-box;
-}
-.ui-input::placeholder{ color:#9ca3af; }
-.ui-input:focus{
-  border-color: var(--brand-purple);
-  box-shadow: 0 0 0 4px var(--brand-purple-focus);
-}
-
-/* BOTÃO base */
-.ui-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  height: var(--ui-h);
-  padding: 0 24px;
-  border-radius: var(--ui-radius);
-  font-size: var(--ui-font);
-  line-height: 1;
-  cursor:pointer;
-  border:1px solid transparent;
-  white-space: nowrap;
-  transition: background-color .15s ease, box-shadow .15s ease, border-color .15s ease, transform .02s ease;
-  user-select:none;
-}
-.ui-btn:active{ transform: translateY(0.5px); }
-
-/* BOTÃO principal (roxo) */
-.ui-btn--primary{
-  background: var(--brand-purple);
-  color:#fff;
-  border-color: var(--brand-purple);
-}
-.ui-btn--primary:hover{ background: var(--brand-purple-hover); border-color: var(--brand-purple-hover); }
-.ui-btn--primary:focus{ box-shadow: 0 0 0 4px var(--brand-purple-focus); }
-
-/* BOTÃO fantasma (para “Use my location”) */
-.ui-btn--ghost{
-  background:#fff;
-  color: var(--ui-text);
-  border-color: var(--ui-border);
-}
-.ui-btn--ghost:hover{ background:#f8f8fb; border-color:#d8dae0; }
-.ui-btn--ghost:focus{ box-shadow: 0 0 0 4px var(--brand-purple-focus); }
-
-/* Layout horizontal comum (input + botões) */
-.ui-row{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-@media (max-width: 720px){
-  .ui-row{
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .ui-row .ui-btn{ width:100%; }
-}
-
-/* =========================================
-   Banner fixo da Newsletter (cinza claro)
-   ========================================= */
-.nl-banner{
-  position: relative;
-  background: #f7f7fb;       /* cinza claro */
-  border-top: none !important;/* remove “linha” superior se algum estilo antigo existir */
-  box-shadow: none !important;
-  margin-top: 32px;
-}
-.nl-wrap{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 32px 16px 36px;
-  text-align:center;
-}
-.nl-title{
-  font-size: clamp(22px, 2.6vw, 36px);
-  line-height:1.2;
-  font-weight: 800;
-  margin: 0 0 12px;
-}
-.nl-sub{
-  font-size: clamp(15px, 1.8vw, 20px);
-  color:#555;
-  margin: 0 0 20px;
-}
-.nl-form{
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  align-items:center;
-  max-width: 980px;
-  margin: 0 auto;
-}
-.nl-form .ui-input{ max-width: 760px; }
-@media (max-width: 720px){
-  .nl-form{ flex-direction: column; }
-  .nl-form .ui-input, .nl-form .ui-btn{ width:100%; }
-}
-
-/* (opcional) dar um “respiro” entre o banner e o footer real */
-.footer-spacer{ height: 8px; background: transparent; }
-
   </style>
 </head>
 <body>
   <nav>
-     <!-- Logo no topo, alinhado à esquerda -->
     <img src="images/logo.png" alt="Fix My Diaper Logo">
-    
-    <!-- Menu -->
     <a href="https://fixmydiaper.com/">Map</a>
     <a href="list">List</a>
     <a href="submit">Submit</a>
@@ -477,54 +186,67 @@ footer a:hover {
   <h1>Need to change a diaper?</h1>
   <h2>Find baby-friendly places with changing tables near you – cafes, restaurants, and more.</h2>
   
-  <!-- 🔎 Geo-search: abaixo dos títulos, acima do mapa -->
-<div id="geo-search" class="map-search">
-  <input id="geo-input" class="ui-input" type="text" placeholder="Type an address, ZIP code, or city and country" />
-  <button id="geo-go" class="ui-btn ui-btn--primary" type="button">Go</button>
-  <button id="geo-me" class="ui-btn ui-btn--ghost" type="button">Use my location</button>
-</div>
+  <!-- 🔎 Geo-search -->
+  <div id="geo-search" class="map-search ui-row">
+    <input id="geo-input" class="ui-input" type="text" placeholder="Type an address, ZIP code, or city and country" />
+    <button id="geo-go" class="ui-btn ui-btn--primary" type="button">Go</button>
+    <button id="geo-me" class="ui-btn ui-btn--ghost" type="button">Use my location</button>
+  </div>
 
   <div id="map"></div>
 
   <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Best places to change a diaper in Berlin*</h2>
   <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
-    Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
+    Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.
+  </p>
 
-  <iframe class="airtable-embed"
-     src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
-     frameborder="0"
-     onmousewheel=""
-     width="100%"
-     height="100%"
-     style="background: transparent; border: 1px solid #ccc;"></iframe>
+  <iframe
+    class="airtable-embed"
+    src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
+    frameborder="0"
+    onmousewheel=""
+    width="100%"
+    height="100%"
+    style="background: transparent; border: 1px solid #ccc;"
+  ></iframe>
 
-<p class="top5-explanation">
-  *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
+  <p class="top5-explanation">
+    *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.
+  </p>
 
+  <!-- Newsletter banner com Substack (sem sair do site) -->
   <section class="nl-banner">
-  <div class="nl-wrap">
-    <h2 class="nl-title">💌 Join our newsletter</h2>
-    <p class="nl-sub">Parenting tips, baby-friendly places and project updates – in your inbox.</p>
+    <div class="nl-wrap">
+      <h2 class="nl-title">💌 Join our monthly newsletter</h2>
+      <p class="nl-sub">Parenting tips, baby-friendly places and project updates — straight to your inbox.</p>
 
-    <form class="nl-form" action="https://fixmydiaper.substack.com/api/v1/free" method="post" target="_blank" onsubmit="return true;">
-      <input class="ui-input" type="email" name="email" placeholder="Your email address" required />
-      <button class="ui-btn ui-btn--primary" type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-<div class="footer-spacer"></div>
+      <div class="nl-embed">
+        <iframe
+          src="https://fixmydiaper.substack.com/embed"
+          width="100%"
+          height="230"
+          frameborder="0"
+          scrolling="no"
+          style="background: transparent;"
+          title="Subscribe to FixMyDiaper on Substack"
+        ></iframe>
+        <noscript>
+          <a href="https://fixmydiaper.substack.com" target="_blank" rel="noopener">Subscribe on Substack</a>
+        </noscript>
+      </div>
+    </div>
+  </section>
+  <div class="footer-spacer"></div>
 
   <footer>
     <a href="about">About</a> | 
     <a href="submit">Submit a Location</a> |
-    <a href="https://www.instagram.com/fixmydiaper">Instagram</a></br></br>
+    <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br/><br/>
     Made with ♥️ in Berlin<br />
     Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
