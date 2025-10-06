@@ -1171,6 +1171,24 @@
     "overall_user_experience": 9.0
   },
   {
+    "name": "Dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Turmstr 59",
+    "latitude": 52.5275057,
+    "longitude": 13.3294408,
+    "type": "Store",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-10-06",
+    "overall_user_experience": null
+  },
+  {
     "name": "Chotto",
     "city": "Berlin",
     "neighborhood": "",
@@ -2256,8 +2274,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kantstraße 17, 10623",
-    "latitude": 52.5060585,
-    "longitude": 13.3247627,
+    "latitude": 52.5059004,
+    "longitude": 13.3247432,
     "type": "Mall",
     "changing_table_location": [
       "women's restroom",
