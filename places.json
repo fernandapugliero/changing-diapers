@@ -1171,12 +1171,12 @@
     "overall_user_experience": 9.0
   },
   {
-    "name": "Dm",
+    "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Turmstr 59",
-    "latitude": 52.5275057,
-    "longitude": 13.3294408,
+    "address": "Turmstr. 59, 10551",
+    "latitude": 52.5274898,
+    "longitude": 13.3295892,
     "type": "Store",
     "changing_table_location": "",
     "supplies_available": [],
