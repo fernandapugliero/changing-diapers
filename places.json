@@ -904,8 +904,8 @@
     "city": "Bad Oeynhausen",
     "neighborhood": "",
     "address": "Mindener Str. 22, 32547",
-    "latitude": 52.2122037,
-    "longitude": 8.8128214,
+    "latitude": 52.2134276,
+    "longitude": 8.8112954,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -1471,8 +1471,8 @@
     "city": "Bad Oeynhausen",
     "neighborhood": "",
     "address": "Mindener Straße 22, 32547",
-    "latitude": 52.2122037,
-    "longitude": 8.8128214,
+    "latitude": 52.2134276,
+    "longitude": 8.8112954,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2194,7 +2194,7 @@
     "city": "Herford",
     "neighborhood": "",
     "address": "Waltgeristraße 77, 32049",
-    "latitude": 52.1265049,
+    "latitude": 52.126505,
     "longitude": 8.6825786,
     "type": "Store",
     "changing_table_location": [
