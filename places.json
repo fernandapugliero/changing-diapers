@@ -1565,9 +1565,9 @@
     "name": "KALLE HALLE Markthalle",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Kalle Neukölln, Karl-Marx-Straße 101, 12043",
-    "latitude": null,
-    "longitude": null,
+    "address": "Karl-Marx-Straße 101, 12043",
+    "latitude": 52.4795713,
+    "longitude": 13.437379,
     "type": "Food court",
     "changing_table_location": [
       "wheelchair restroom"
