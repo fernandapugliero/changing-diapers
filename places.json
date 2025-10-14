@@ -940,8 +940,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tauentzienstraße 2-3",
-    "latitude": 52.5025081,
-    "longitude": 13.3415961,
+    "latitude": 52.5025439,
+    "longitude": 13.3415155,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2294,8 +2294,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kantstraße 17, 10623",
-    "latitude": 52.5060585,
-    "longitude": 13.3247627,
+    "latitude": 52.5058908,
+    "longitude": 13.3255852,
     "type": "Mall",
     "changing_table_location": [
       "women's restroom",
