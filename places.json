@@ -94,6 +94,28 @@
     "overall_user_experience": null
   },
   {
+    "name": "Ikea Lichtenberg",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Landsberger Allee 364, 10365 Berlin",
+    "latitude": 52.5338376,
+    "longitude": 13.514577,
+    "type": "Store",
+    "changing_table_location": [
+      "women's restroom",
+      "men's restroom",
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/cWVuC1ztQMbMtXkd7?g_st=ipc",
+    "created_at": "2025-10-16",
+    "overall_user_experience": 10.0
+  },
+  {
     "name": " Toilette im Tempelhofer Feld",
     "city": "Berlin",
     "neighborhood": "",
@@ -995,6 +1017,27 @@
     "site": "",
     "created_at": "2025-08-25",
     "overall_user_experience": null
+  },
+  {
+    "name": "Casa da Musica - Café",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Av. da Boavista 604, 4149-071",
+    "latitude": 41.1590784,
+    "longitude": -8.6307703,
+    "type": "Café",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Dirty"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "maiscasadamusica.com",
+    "created_at": "2025-10-16",
+    "overall_user_experience": 6.0
   },
   {
     "name": "dm",
@@ -3726,6 +3769,26 @@
     "site": "",
     "created_at": "2025-09-16",
     "overall_user_experience": null
+  },
+  {
+    "name": "A Padaria Portuguesa",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Av. da República 44, 4450-159",
+    "latitude": 41.1798938,
+    "longitude": -8.6927362,
+    "type": "Bakery",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "apadariaportuguesa.pt",
+    "created_at": "2025-10-16",
+    "overall_user_experience": 6.0
   },
   {
     "name": "Brasilianische Botschaft in Berlin",
