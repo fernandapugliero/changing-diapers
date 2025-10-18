@@ -3771,6 +3771,26 @@
     "overall_user_experience": null
   },
   {
+    "name": "Restaurante Lage Senhor do Padrão",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. Heróis de França 516, 4450-159",
+    "latitude": 41.1815824,
+    "longitude": -8.6937232,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-10-17",
+    "overall_user_experience": 8.0
+  },
+  {
     "name": "A Padaria Portuguesa",
     "city": "Porto",
     "neighborhood": "",
