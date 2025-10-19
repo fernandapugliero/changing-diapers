@@ -306,8 +306,8 @@
     "city": "Hamburg",
     "neighborhood": "",
     "address": "Überseeboulevard 7, 20457",
-    "latitude": 53.5406335,
-    "longitude": 9.9991418,
+    "latitude": 53.539735,
+    "longitude": 9.9991553,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -615,6 +615,26 @@
     "site": "",
     "created_at": "2025-06-29",
     "overall_user_experience": 9.0
+  },
+  {
+    "name": "NorteShopping",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. Sara Afonso, 4460-841",
+    "latitude": 41.1813648,
+    "longitude": -8.654255,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "norteshopping.pt",
+    "created_at": "2025-10-19",
+    "overall_user_experience": 8.0
   },
   {
     "name": "FEZ, Café Zauberbaum",
