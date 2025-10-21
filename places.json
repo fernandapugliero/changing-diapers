@@ -1469,6 +1469,26 @@
     "overall_user_experience": 9.0
   },
   {
+    "name": "Reitoria da Universidade do Porto",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Praça de Gomes Teixeira, 4099-002",
+    "latitude": 41.1470369,
+    "longitude": -8.615589,
+    "type": "Institution",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "sigarra.up.pt",
+    "created_at": "2025-10-21",
+    "overall_user_experience": 9.0
+  },
+  {
     "name": "LA MAISON",
     "city": "Berlin",
     "neighborhood": "",
@@ -2397,8 +2417,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kantstraße 17, 10623",
-    "latitude": 52.5058908,
-    "longitude": 13.3255852,
+    "latitude": 52.5060585,
+    "longitude": 13.3247627,
     "type": "Mall",
     "changing_table_location": [
       "women's restroom",
@@ -2834,8 +2854,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "R. Formosa 322, 4000-248",
-    "latitude": 41.1472093,
-    "longitude": -8.6022891,
+    "latitude": 41.1488261,
+    "longitude": -8.6081015,
     "type": "Food court",
     "changing_table_location": [
       "women's restroom",
