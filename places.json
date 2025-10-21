@@ -2293,6 +2293,26 @@
     "overall_user_experience": null
   },
   {
+    "name": "Café Santiago F",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. de Passos Manuel 198, 4000-385",
+    "latitude": 41.146555,
+    "longitude": -8.6052745,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Cramped"
+    ],
+    "room_for_stroller": "No",
+    "site": "cafesantiago.pt",
+    "created_at": "2025-10-20",
+    "overall_user_experience": 5.0
+  },
+  {
     "name": "Rossmann",
     "city": "Herford",
     "neighborhood": "",
@@ -2810,6 +2830,25 @@
     "overall_user_experience": 10.0
   },
   {
+    "name": "Mercado do Bolhão",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. Formosa 322, 4000-248",
+    "latitude": 41.1472093,
+    "longitude": -8.6022891,
+    "type": "Food court",
+    "changing_table_location": [
+      "women's restroom",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "mercadobolhao.pt",
+    "created_at": "2025-10-20",
+    "overall_user_experience": null
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
@@ -2939,6 +2978,26 @@
     "site": "https://www.kulturkaufhaus.de/",
     "created_at": "2025-05-25",
     "overall_user_experience": null
+  },
+  {
+    "name": "InterContinental Porto - Palácio das Cardosas",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Praça da Liberdade 25, 4000-322",
+    "latitude": 41.1458729,
+    "longitude": -8.6115563,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "ihg.com",
+    "created_at": "2025-10-20",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Tapiocaria",
