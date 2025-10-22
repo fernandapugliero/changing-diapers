@@ -601,8 +601,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 41, 10319",
-    "latitude": 52.5039201,
-    "longitude": 13.5206801,
+    "latitude": 52.4961753,
+    "longitude": 13.523218,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1314,8 +1314,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 39, 10319",
-    "latitude": 52.5039201,
-    "longitude": 13.5206801,
+    "latitude": 52.4961753,
+    "longitude": 13.523218,
     "type": "Zoo",
     "changing_table_location": [
       "women's restroom"
