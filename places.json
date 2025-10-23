@@ -3200,8 +3200,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hobrechtstraße 32, 12047",
-    "latitude": 52.4920006,
-    "longitude": 13.4262918,
+    "latitude": 52.4920373,
+    "longitude": 13.4268288,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -4149,8 +4149,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "Av. da Boavista 1349, 4100-130",
-    "latitude": 41.1593135,
-    "longitude": -8.6377773,
+    "latitude": 41.159398,
+    "longitude": -8.6377577,
     "type": "Supermarket",
     "changing_table_location": [
       "women's restroom",
