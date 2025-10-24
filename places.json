@@ -3454,8 +3454,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437",
-    "latitude": 52.5417792,
-    "longitude": 13.4120073,
+    "latitude": 52.5464715,
+    "longitude": 13.4132514,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -4386,8 +4386,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Altensteinstraße 15A, 14195",
-    "latitude": 52.4564386,
-    "longitude": 13.3001781,
+    "latitude": 52.4563332,
+    "longitude": 13.2995177,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
