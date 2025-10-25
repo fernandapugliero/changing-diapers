@@ -1330,6 +1330,29 @@
     "overall_user_experience": 8.0
   },
   {
+    "name": "Shopping Via Catarina",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. de Santa Catarina 312 a 350, 4000-443",
+    "latitude": null,
+    "longitude": null,
+    "type": "Mall",
+    "changing_table_location": [
+      "women's restroom",
+      "men's restroom",
+      "dedicated room",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "viacatarina.pt",
+    "created_at": "2025-10-24",
+    "overall_user_experience": 10.0
+  },
+  {
     "name": "Matanga - Cafe & Co",
     "city": "Berlin",
     "neighborhood": "",
@@ -2056,6 +2079,27 @@
     "site": "",
     "created_at": "2025-09-20",
     "overall_user_experience": null
+  },
+  {
+    "name": "Aeroporto Sá Carneiro",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Pedras Rubras, 4470-558 Vila Nova da Telha, Portugal",
+    "latitude": null,
+    "longitude": null,
+    "type": "Airport",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "aeroportoporto.pt",
+    "created_at": "2025-10-24",
+    "overall_user_experience": 7.0
   },
   {
     "name": "Cafe am Neuen See",
