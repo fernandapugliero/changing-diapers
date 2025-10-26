@@ -808,6 +808,26 @@
     "overall_user_experience": null
   },
   {
+    "name": "porta Möbel",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Direkt an der B1/B5, Alt-Mahlsdorf 85, 12623",
+    "latitude": null,
+    "longitude": null,
+    "type": "Store",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "porta.de",
+    "created_at": "2025-10-25",
+    "overall_user_experience": 10.0
+  },
+  {
     "name": "EDEKA Treugut",
     "city": "Berlin",
     "neighborhood": "",
