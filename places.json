@@ -811,9 +811,9 @@
     "name": "porta Möbel",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Direkt an der B1/B5, Alt-Mahlsdorf 85, 12623",
-    "latitude": null,
-    "longitude": null,
+    "address": "Alt-Mahlsdorf 85, 12623",
+    "latitude": 52.5010261,
+    "longitude": 13.6226618,
     "type": "Store",
     "changing_table_location": [
       "wheelchair restroom"
@@ -4410,9 +4410,9 @@
     "name": "Biblioteca Municipal Almeida Garrett",
     "city": "Porto",
     "neighborhood": "",
-    "address": "R. de D. Manuel 21, 4050-239",
-    "latitude": 41.1473085,
-    "longitude": -8.6079208,
+    "address": "Jardins do Palácio de Cristal, R. de D. Manuel 21, 4050-239",
+    "latitude": null,
+    "longitude": null,
     "type": "Institution",
     "changing_table_location": [
       "wheelchair restroom"
