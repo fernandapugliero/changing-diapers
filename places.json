@@ -4,8 +4,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Alte Potsdamer Str. 7, 10785",
-    "latitude": 52.5081178,
-    "longitude": 13.3744583,
+    "latitude": 52.5074122,
+    "longitude": 13.3741147,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1455,8 +1455,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Alte Potsdamer Str. 7, 10785",
-    "latitude": 52.5081178,
-    "longitude": 13.3744583,
+    "latitude": 52.5074122,
+    "longitude": 13.3741147,
     "type": "Food court",
     "changing_table_location": [
       "wheelchair restroom"
