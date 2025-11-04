@@ -3147,8 +3147,8 @@
     "city": "Stuttgart",
     "neighborhood": "",
     "address": "Marktstraße 1, 70173",
-    "latitude": 48.7749716,
-    "longitude": 9.1797392,
+    "latitude": null,
+    "longitude": null,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
