@@ -461,6 +461,27 @@
     "overall_user_experience": 7.0
   },
   {
+    "name": "Segafredo Espresso Bar",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rathausstraße 5, 10178 Berlin",
+    "latitude": 52.5200676,
+    "longitude": 13.4114731,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-11-04",
+    "overall_user_experience": null
+  },
+  {
     "name": "Burger King",
     "city": "Hohe Börde",
     "neighborhood": "",
@@ -3147,8 +3168,8 @@
     "city": "Stuttgart",
     "neighborhood": "",
     "address": "Marktstraße 1, 70173",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 48.7749716,
+    "longitude": 9.1797392,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
