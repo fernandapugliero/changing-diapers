@@ -23,33 +23,40 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-JGYVLDZQTM');
 </script>
   
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
-  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 2rem;
-      background: white;
+      background: #fff;
       color: #333;
     }
+
+    /* ===== Container central ===== */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ===== Navegação ===== */
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
       display: flex;
-      align-items: center; /* Alinha itens no centro */
+      align-items: center;
     }
     nav img {
-      width: 30px;  /* Tamanho do logo */
+      width: 30px;
       height: auto;
-      margin-right: 30px;  /* Espaçamento entre logo e os links do menu */
+      margin-right: 30px;
     }
     nav a {
       margin-right: 20px;
@@ -57,31 +64,68 @@
       font-weight: 600;
       color: inherit;
     }
+
+    /* ===== Títulos ===== */
     h1 {
       font-size: 2rem;
-      margin-bottom: 0.5rem;
+      margin: 0 0 0.5rem 0;
       text-align: center;
+      line-height: 1.2;
     }
     h2 {
       font-size: 1.1rem;
       font-weight: 400;
       color: #666;
-      margin-top: 0;
-      margin-bottom: 2rem;
+      margin: 0 0 2rem 0;
       text-align: center;
+      line-height: 1.4;
     }
-    .top5-explanation {
-  font-size: 0.85rem;
-  color: #555;
-  text-align: center;
-  margin-top: 1rem;
-  line-height: 1.4;
+
+    /* ===== Barra de busca ===== */
+    .map-search {
+      margin: 0 auto 1.5rem auto;
+      max-width: 720px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
     }
+    .map-search input {
+      flex: 1 1 260px;
+      max-width: 420px;
+      height: 36px;
+      padding: 0 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #333;
+      background: #fff;
+    }
+    .map-search button {
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f7f7f7;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+    }
+    .map-search button:hover {
+      background: #efefef;
+    }
+
+    /* ===== Mapa ===== */
     #map {
       height: 70vh;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 3rem;
     }
+
+    /* ===== Airtable embed ===== */
     iframe {
       width: 100%;
       height: 600px;
@@ -89,6 +133,107 @@
       border-radius: 8px;
       background: transparent;
     }
+
+    /* ===== Parágrafos ===== */
+    p {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+    .top5-explanation {
+      font-size: 0.85rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+
+    /* ===== Recent reviews section ===== */
+    .recent-section-title {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-top: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .recent-section-subtitle {
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    .recent-grid {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0 1rem 1rem 1rem;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+    .recent-grid::-webkit-scrollbar {
+      display: none;
+    }
+    .recent-card {
+      scroll-snap-align: center;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 0.75rem;
+      min-width: 85%;
+      max-width: 320px;
+      flex: 0 0 auto;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .recent-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+    .recent-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 0.25rem;
+      margin-bottom: 2rem;
+    }
+    .recent-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+    @media (min-width: 768px) {
+      .recent-grid {
+        overflow-x: visible;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0;
+      }
+      .recent-card {
+        flex: 0 0 calc(33.333% - 1rem);
+        min-width: 0;
+      }
+      .recent-dots {
+        display: none;
+      }
+    }
+
+    /* ===== FAQ alinhado ===== */
+    #faq {
+      max-width: 900px;
+      margin: 3rem auto 0 auto;
+    }
+    #faq p {
+      text-align: left;
+    }
+
+    /* ===== Rodapé ===== */
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -102,438 +247,70 @@
     footer a:hover {
       text-decoration: underline;
     }
-    p {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-    p strong {
-      font-weight: 600;
-    }
-    /* ===== Base ===== */
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 2rem;
-  background: #fff;
-  color: #333;
-}
-
-/* ===== Navegação ===== */
-nav {
-  margin-bottom: 2rem;
-  padding-top: 1rem;
-  display: flex;
-  align-items: center;
-}
-nav img {
-  width: 30px;
-  height: auto;
-  margin-right: 30px;
-}
-nav a {
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: 600;
-  color: inherit;
-}
-
-/* ===== Títulos ===== */
-h1 {
-  font-size: 2rem;
-  margin: 0 0 0.5rem 0; /* sempre igual */
-  text-align: center;
-  line-height: 1.2;
-}
-h2 {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #666;
-  margin: 0 0 2rem 0; /* sempre igual */
-  text-align: center;
-  line-height: 1.4;
-}
-
-/* ===== Barra de busca ===== */
-.map-search {
-  margin: 0 auto 1.5rem auto;
-  max-width: 720px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.map-search input {
-  flex: 1 1 260px;
-  max-width: 420px;
-  height: 36px;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #333;
-  background: #fff;
-}
-.map-search button {
-  height: 36px;
-  padding: 0 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f7f7f7;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  color: #333;
-}
-.map-search button:hover {
-  background: #efefef;
-}
-
-/* ===== Mapa ===== */
-#map {
-  height: 70vh;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* ===== Airtable embed ===== */
-iframe {
-  width: 100%;
-  height: 600px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: transparent;
-}
-
-/* ===== Parágrafos e notas ===== */
-p {
-  font-size: 1rem;
-  color: #555;
-  text-align: center;
-  margin-top: 1rem;
-  line-height: 1.5;
-}
-p strong {
-  font-weight: 600;
-}
-.top5-explanation {
-  font-size: 0.85rem;
-  color: #555;
-  text-align: center;
-  margin-top: 1rem;
-  line-height: 1.4;
-}
-
-/* ===== Rodapé ===== */
-footer {
-  margin-top: 3rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-}
-footer a {
-  color: #0070f3;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Responsivo ===== */
-@media (max-width: 768px) {
-  body {
-    padding: 2rem; /* 👈 mesmo padding do desktop */
-  }
-  nav {
-    margin-bottom: 2rem;
-  }
-  h1 {
-    font-size: 2rem;
-    margin: 0 0 0.5rem 0; /* 👈 igual ao desktop */
-  }
-  h2 {
-    font-size: 1.1rem;
-    margin: 0 0 2rem 0; /* 👈 igual ao desktop */
-  }
-  .map-search {
-    padding: 0 12px;
-  }
-  #map {
-    height: 60vh;
-  }
-  iframe {
-    height: 520px;
-  }
-}
-
-@media (max-width: 480px) {
-  .map-search button {
-    flex: 0 0 auto;
-  }
-  #map {
-    height: 55vh;
-  }
-  iframe {
-    height: 480px;
-  }
-}
-/* ===== ⭐ RATING STARS ===== */
-.star-rating {
-  --rating: 0;                 /* 0 → 5 (meia estrela permitida) */
-  --star-color: #e0e0e0;       /* cinza claro para estrelas vazias */
-  --star-fill: #f5c518;        /* ouro vibrante para preenchidas */
-  position: relative;
-  display: inline-block;
-  font-size: 18px;             /* tamanho padrão das estrelas */
-  font-family: "Arial", "Helvetica", sans-serif;
-  line-height: 1;
-  letter-spacing: 2px;
-  margin-top: 4px;
-}
-    /* Fallback para locais sem avaliação */
-.star-rating.is-empty::after {
-  width: 0; /* sem preenchimento dourado */
-}
-
-.star-note {
-  display: inline-block;
-  font-size: 12px;
-  color: #777;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-
-.star-rating::before {
-  content: "★★★★★";
-  color: var(--star-color);
-}
-
-.star-rating::after {
-  content: "★★★★★";
-  color: var(--star-fill);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc((var(--rating) / 5) * 100%);
-  overflow: hidden;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-/* ⭐ ajuste sutil no mobile (opcional) */
-@media (max-width: 600px) {
-  .star-rating {
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-}
-   /* ===== Recent reviews section ===== */
-.recent-section-title {
-  text-align: center;
-  font-size: 1.3rem;
-  margin-top: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.recent-section-subtitle {
-  font-size: 0.9rem;
-  color: #555;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-
-.recent-grid {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 0 1rem 1rem 1rem;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
-
-.recent-grid::-webkit-scrollbar {
-  display: none; /* mais limpo no mobile */
-}
-
-.recent-card {
-  scroll-snap-align: center;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 0.75rem;
-  min-width: 85%;
-  max-width: 320px;
-  flex: 0 0 auto;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.recent-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
-
-.recent-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-
-.recent-quote {
-  font-size: 0.85rem;
-  color: #555;
-  font-style: italic;
-  margin: 0.25rem 0 0.5rem 0;
-}
-
-.recent-meta {
-  font-size: 0.8rem;
-  color: #777;
-  margin-top: 0.25rem;
-}
-
-/* Desktop layout: 3 lado a lado, sem scroll */
-@media (min-width: 768px) {
-  .recent-grid {
-    overflow-x: visible;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 0;
-  }
-
-  .recent-card {
-    min-width: 0;
-    flex: 0 0 calc(33.333% - 1rem);
-    box-shadow: none;
-    border: 1px solid #eee;
-    transition: none;
-  }
-
-  .recent-card:hover {
-    transform: none;
-    box-shadow: none;
-  }
-}
-/* ===== Carrossel indicators (bolinhas) ===== */
-.recent-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 0.25rem;
-  margin-bottom: 2rem;
-}
-
-.recent-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #ccc;
-  border-radius: 50%;
-}
-
-/* esconder no desktop */
-@media (min-width: 768px) {
-  .recent-dots {
-    display: none;
-  }
-}
   </style>
 </head>
 <body>
-  <nav>
-     <!-- Logo no topo, alinhado à esquerda -->
-    <img src="images/logo.png" alt="Fix My Diaper Logo">
+  <div class="page">
+    <nav>
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <a href="https://fixmydiaper.com/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
+    </nav>
+
+    <h1>Need to change a diaper?</h1>
+    <h2>Find baby-friendly places with changing tables near you – cafes, restaurants, and more.</h2>
     
-    <!-- Menu -->
-    <a href="https://fixmydiaper.com/">Map</a>
-    <a href="list">List</a>
-    <a href="submit">Submit</a>
-  </nav>
-
-  <h1>Need to change a diaper?</h1>
-  <h2>Find baby-friendly places with changing tables near you – cafes, restaurants, and more.</h2>
-  
-  <!-- 🔎 Geo-search: abaixo dos títulos, acima do mapa -->
-<div id="geo-search" class="map-search">
-  <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
-  <button id="geo-go">Go</button>
-  <button id="geo-me">Use my location</button>
-</div>
-
-  <div id="map"></div>
-
-  <h2 class="recent-section-title">Recently added changing tables</h2>
-<p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
-  Fresh reviews from our community. <a href="submit.html">Submit yours</a> and help other parents to find decent places to change diapers.</p>
-</p>
-
-<div class="recent-grid">
-  <!-- CARD 1 -->
-   <article class="recent-card">
-    <img src="images/east-side-mall.jpeg" alt="East Side Mall changing table">
-    <div class="star-rating" style="--rating: 5.0;"></div>
-    <span class="star-note">5/5</span>
-    <p class="recent-quote">
-      “There is a dm downstairs, but if you  are upstairs, want some privacy and maybe sit down to feed, thats a great option and it's squeeky clean, large and in good condition :)”
-    </p>
-    <div class="recent-meta">
-      <strong>East Side Mall</strong><br>
-      Tamara-Danz-Straße 11, 10243
+    <div id="geo-search" class="map-search">
+      <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
+      <button id="geo-go">Go</button>
+      <button id="geo-me">Use my location</button>
     </div>
-  </article>
 
-  <!-- CARD 2 -->
- <article class="recent-card">
-    <img src="images/il-ritrovo.jpeg" alt="Il Ritrovo changing table">
-    <div class="star-rating" style="--rating: 4.5;"></div>
-    <span class="star-note">4.5/5</span>
-    <p class="recent-quote">
-      “It seems dirty and messy, but actually it is very clean and there is lots of space for a baby, a stroller, to leave your stuff while changing etc. Very good.”
-    </p>
-    <div class="recent-meta">
-      <strong>Il Ritrovo</strong><br>
-      Gabriel-Max-Straße 2, 10245
+    <div id="map"></div>
+
+    <!-- Seção de recentes -->
+    <h2 class="recent-section-title">Recently added changing tables</h2>
+    <p class="recent-section-subtitle">Fresh reviews from our community. <a href="submit.html">Submit yours</a> and help other parents to find decent places to change diapers.</p>
+
+    <div class="recent-grid">
+      <article class="recent-card">
+        <img src="images/east-side-mall.jpeg" alt="East Side Mall changing table">
+        <div class="star-rating" style="--rating: 5.0;"></div>
+        <span class="star-note">5/5</span>
+        <p class="recent-quote">“There is a dm downstairs, but if you are upstairs, want some privacy and maybe sit down to feed, that’s a great option and it's squeaky clean.”</p>
+        <div class="recent-meta"><strong>East Side Mall</strong><br>Tamara-Danz-Straße 11, 10243</div>
+      </article>
+
+      <article class="recent-card">
+        <img src="images/il-ritrovo.jpeg" alt="Il Ritrovo changing table">
+        <div class="star-rating" style="--rating: 4.5;"></div>
+        <span class="star-note">4.5/5</span>
+        <p class="recent-quote">“It seems messy, but actually it's very clean and there is lots of space for a stroller and baby stuff.”</p>
+        <div class="recent-meta"><strong>Il Ritrovo</strong><br>Gabriel-Max-Straße 2, 10245</div>
+      </article>
+
+      <article class="recent-card">
+        <img src="images/tapiocaria.jpg" alt="Tapiocaria changing table">
+        <div class="star-rating" style="--rating: 4.0;"></div>
+        <span class="star-note">4/5</span>
+        <p class="recent-quote">“Clean and functional, but a bit cramped and installed too high.”</p>
+        <div class="recent-meta"><strong>Tapiocaria</strong><br>Samariterstraße 34A, 10247</div>
+      </article>
     </div>
-  </article>
-
-  <!-- CARD 3 -->
-  <article class="recent-card">
-    <img src="images/tapiocaria.jpg" alt="Tapiocaria changing table">
-    <div class="star-rating" style="--rating: 4.0;"></div>
-    <span class="star-note">4/5</span>
-    <p class="recent-quote">
-      “Decent and clean, but very cramped and installed too high. Bad for short parents.”
-    </p><br><br>
-    <div class="recent-meta">
-      <strong>Tapiocaria</strong><br>
-      Samariterstraße 34A, 10247
+    <div class="recent-dots">
+      <div class="recent-dot"></div>
+      <div class="recent-dot"></div>
+      <div class="recent-dot"></div>
     </div>
-  </article>
-</div>
-<div class="recent-dots">
-  <div class="recent-dot"></div>
-  <div class="recent-dot"></div>
-  <div class="recent-dot"></div>
-</div>
 
-  <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Best places to change a diaper in Berlin*</h2>
-  <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
-    Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
+    <h2 style="font-size: 1.3rem; margin-top: 3rem;">Best places to change a diaper in Berlin*</h2>
+    <p>Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
 
-  <iframe class="airtable-embed"
-     src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
-     frameborder="0"
-     onmousewheel=""
-     width="100%"
-     height="100%"
-     style="background: transparent; border: 1px solid #ccc;"></iframe>
+    <iframe class="airtable-embed"
+      src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
+      frameborder="0"
+      style="background: transparent; border: 1px solid #ccc;"></iframe>
 
 <p class="top5-explanation">
   *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
