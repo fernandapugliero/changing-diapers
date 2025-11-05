@@ -330,7 +330,120 @@ footer a:hover {
     letter-spacing: 1px;
   }
 }
-    
+   /* ===== Recent reviews section ===== */
+.recent-section-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.recent-section-subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.recent-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 1rem 1rem 1rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.recent-grid::-webkit-scrollbar {
+  display: none; /* mais limpo no mobile */
+}
+
+.recent-card {
+  scroll-snap-align: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 0.75rem;
+  min-width: 85%;
+  max-width: 320px;
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.recent-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.recent-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.recent-quote {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.recent-meta {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.25rem;
+}
+
+/* Desktop layout: 3 lado a lado, sem scroll */
+@media (min-width: 768px) {
+  .recent-grid {
+    overflow-x: visible;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .recent-card {
+    min-width: 0;
+    flex: 0 0 calc(33.333% - 1rem);
+    box-shadow: none;
+    border: 1px solid #eee;
+    transition: none;
+  }
+
+  .recent-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+/* ===== Carrossel indicators (bolinhas) ===== */
+.recent-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.recent-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+/* esconder no desktop */
+@media (min-width: 768px) {
+  .recent-dots {
+    display: none;
+  }
+}
   </style>
 </head>
 <body>
@@ -355,6 +468,60 @@ footer a:hover {
 </div>
 
   <div id="map"></div>
+
+  <h2 class="recent-section-title">Recently added changing tables</h2>
+<p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
+  Fresh reviews from our community. <a href="submit.html">Submit yours</a> and help other parents to find decent places to change diapers.</p>
+</p>
+
+<div class="recent-grid">
+  <!-- CARD 1 -->
+   <article class="recent-card">
+    <img src="images/east-side-mall.jpeg" alt="East Side Mall changing table">
+    <div class="star-rating" style="--rating: 5.0;"></div>
+    <span class="star-note">5/5</span>
+    <p class="recent-quote">
+      “There is a dm downstairs, but if you  are upstairs, want some privacy and maybe sit down to feed, thats a great option and it's squeeky clean, large and in good condition :)”
+    </p>
+    <div class="recent-meta">
+      <strong>East Side Mall</strong><br>
+      Tamara-Danz-Straße 11, 10243
+    </div>
+  </article>
+
+  <!-- CARD 2 -->
+ <article class="recent-card">
+    <img src="images/il-ritrovo.jpeg" alt="Il Ritrovo changing table">
+    <div class="star-rating" style="--rating: 4.5;"></div>
+    <span class="star-note">4.5/5</span>
+    <p class="recent-quote">
+      “It seems dirty and messy, but actually it is very clean and there is lots of space for a baby, a stroller, to leave your stuff while changing etc. Very good.”
+    </p>
+    <div class="recent-meta">
+      <strong>Il Ritrovo</strong><br>
+      Gabriel-Max-Straße 2, 10245
+    </div>
+  </article>
+
+  <!-- CARD 3 -->
+  <article class="recent-card">
+    <img src="images/tapiocaria.jpg" alt="Tapiocaria changing table">
+    <div class="star-rating" style="--rating: 4.0;"></div>
+    <span class="star-note">4/5</span>
+    <p class="recent-quote">
+      “Decent and clean, but very cramped and installed too high. Bad for short parents.”
+    </p><br><br>
+    <div class="recent-meta">
+      <strong>Tapiocaria</strong><br>
+      Samariterstraße 34A, 10247
+    </div>
+  </article>
+</div>
+<div class="recent-dots">
+  <div class="recent-dot"></div>
+  <div class="recent-dot"></div>
+  <div class="recent-dot"></div>
+</div>
 
   <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Best places to change a diaper in Berlin*</h2>
   <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
