@@ -73,6 +73,7 @@
       text-align: center;
       line-height: 1.2;
     }
+    /* subtítulo da hero */
     h2 {
       font-size: 1.1rem;
       font-weight: 400;
@@ -82,15 +83,25 @@
       line-height: 1.4;
     }
 
-    /* grandes títulos de seção (FAQ, Best places, Recently...) */
+    /* grandes títulos de seção (Recently, Best places, FAQ) */
     .section-title {
       font-size: 1.3rem;
       font-weight: 600;
       color: #444;
       text-align: center;
       margin-top: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       line-height: 1.3;
+    }
+
+    /* subtítulos de seção (texto logo abaixo do título) */
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
     }
 
     /* ===== Barra de busca ===== */
@@ -205,13 +216,6 @@
     }
 
     /* ===== Recent reviews section ===== */
-    .recent-section-subtitle {
-      font-size: 0.9rem;
-      color: #555;
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-    }
     .recent-grid {
       display: flex;
       gap: 1rem;
@@ -353,7 +357,7 @@
 
     <!-- Recently added section -->
     <h2 class="section-title">Recently added changing tables</h2>
-    <p class="recent-section-subtitle">
+    <p class="section-subtitle">
       Fresh reviews from our community. <a href="submit.html">Submit yours</a> and help other parents to find decent places to change diapers.
     </p>
 
@@ -409,7 +413,7 @@
 
     <!-- Best places / Airtable -->
     <h2 class="section-title">Best places to change a diaper in Berlin*</h2>
-    <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
+    <p class="section-subtitle">
       Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.
     </p>
 
