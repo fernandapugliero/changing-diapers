@@ -427,7 +427,8 @@ footer a:hover {
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
 }
 
 .recent-dot {
@@ -435,21 +436,14 @@ footer a:hover {
   height: 8px;
   background-color: #ccc;
   border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.recent-dot.active {
-  background-color: #0070f3;
-  transform: scale(1.3);
-}
-
-/* Some as bolinhas no desktop */
+/* esconder no desktop */
 @media (min-width: 768px) {
   .recent-dots {
     display: none;
   }
 }
-
   </style>
 </head>
 <body>
@@ -524,7 +518,7 @@ footer a:hover {
   </article>
 </div>
 <div class="recent-dots">
-  <div class="recent-dot active"></div>
+  <div class="recent-dot"></div>
   <div class="recent-dot"></div>
   <div class="recent-dot"></div>
 </div>
