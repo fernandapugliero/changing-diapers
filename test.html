@@ -3,266 +3,634 @@
 <head>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Changing Tables in Berlin – Fix My Diaper | Baby-friendly cafés, restaurants & parks</title>
-
-  <!-- Primary SEO -->
-  <meta name="description" content="Find baby-friendly places with changing tables in Berlin. Cafés, restaurants, churches and public toilets with diaper-changing stations—mapped and reviewed." />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables" />
-  <meta property="og:description" content="Find the best baby-friendly places with changing tables near you. Submit locations and help other parents." />
-  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png" />
-  <meta property="og:url" content="https://fixmydiaper.com" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables" />
-  <meta name="twitter:description" content="Find baby-friendly places with changing tables near you – cafés, restaurants, and more." />
-  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png" />
-
-  <!-- JSON-LD (Organization + WebSite) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Fix My Diaper",
-    "url":"https://fixmydiaper.com",
-    "logo":"https://fixmydiaper.com/images/logo.png",
-    "sameAs":["https://www.instagram.com/fixmydiaper"]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://fixmydiaper.com",
-    "name":"Fix My Diaper",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://fixmydiaper.com/?q={search_term_string}",
-      "query-input":"required name=search_term_string"
-    }
-  }
-  </script>
+  <title>Fix My Diaper: Find Baby-Friendly Places with Changing Tables in Berlin</title>
+  <meta name="description" content="Find the best baby-friendly places with changing tables (Wickeltische) in Berlin. Entdecke kinderfreundliche Orte mit Wickeltischen in Berlin und hilf anderen Eltern, gute Wickelplätze zu finden.">
+  <meta name="keywords" content="diaper changing, changing tables in Berlin, Wickeltisch, Wickeltische Berlin, Wickelplatz, Wickelräume, babyfreundliche Orte, familienfreundliche Cafés">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables">
+  <meta property="og:description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables">
+  <meta name="twitter:description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-JGYVLDZQTM');
-  </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-JGYVLDZQTM');
+</script>
+  
   <link rel="icon" href="/images/favicon.ico" sizes="any">
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin>
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- Seu CSS atual (mantido) -->
   <link rel="stylesheet" href="style.css" />
-
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Complementos leves para SEO list / micro ajustes sem mexer no seu style.css */
-    .seo-note-de {
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: white;
+      color: #333;
+    }
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: center; /* Alinha itens no centro */
+    }
+    nav img {
+      width: 30px;  /* Tamanho do logo */
+      height: auto;
+      margin-right: 30px;  /* Espaçamento entre logo e os links do menu */
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .top5-explanation {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.4;
+    }
+    #map {
+      height: 70vh;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: transparent;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
       font-size: 0.9rem;
-      color: #666;
-      text-align: center;
-      margin: 10px auto 24px;
-      max-width: 920px;
-      line-height: 1.45;
+      color: #777;
     }
-    .featured {
-      max-width: 960px;
-      margin: 28px auto 0;
-      padding: 0 12px;
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
     }
-    .featured h2 {
-      text-align: center;
-      font-size: 1.3rem;
-      margin: 0 0 12px 0;
-      font-weight: 800;
-      line-height: 1.25;
+    footer a:hover {
+      text-decoration: underline;
     }
-    .featured p.desc {
-      text-align: center;
+    p {
+      font-size: 1rem;
       color: #555;
-      margin: 0 0 12px 0;
-      font-size: 0.95rem;
-    }
-    .featured ul {
-      list-style: none;
-      padding: 0;
-      margin: 16px auto 0;
-      max-width: 780px;
-      display: grid;
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-      gap: 10px;
-    }
-    @media (min-width: 680px){
-      .featured ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    .featured li {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 12px 14px;
-      background: #fff;
-    }
-    .featured li strong { font-weight: 600; }
-    .featured .meta {
-      color: #666; font-size: 0.92rem; margin-top: 4px;
-    }
-    /* Noscript para mapa */
-    noscript.noscript-map {
-      display:block;
-      max-width: 920px;
-      margin: 8px auto 0;
-      font-size: 0.95rem;
-      color: #666;
       text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
     }
+    p strong {
+      font-weight: 600;
+    }
+    /* ===== Base ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #fff;
+  color: #333;
+}
+
+/* ===== Navegação ===== */
+nav {
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+nav img {
+  width: 30px;
+  height: auto;
+  margin-right: 30px;
+}
+nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+}
+
+/* ===== Títulos ===== */
+h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0; /* sempre igual */
+  text-align: center;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #666;
+  margin: 0 0 2rem 0; /* sempre igual */
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ===== Barra de busca ===== */
+.map-search {
+  margin: 0 auto 1.5rem auto;
+  max-width: 720px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.map-search input {
+  flex: 1 1 260px;
+  max-width: 420px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+}
+.map-search button {
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+.map-search button:hover {
+  background: #efefef;
+}
+
+/* ===== Mapa ===== */
+#map {
+  height: 70vh;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== Airtable embed ===== */
+iframe {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* ===== Parágrafos e notas ===== */
+p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+p strong {
+  font-weight: 600;
+}
+.top5-explanation {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+/* ===== Rodapé ===== */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+footer a {
+  color: #0070f3;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem; /* 👈 mesmo padding do desktop */
+  }
+  nav {
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0; /* 👈 igual ao desktop */
+  }
+  h2 {
+    font-size: 1.1rem;
+    margin: 0 0 2rem 0; /* 👈 igual ao desktop */
+  }
+  .map-search {
+    padding: 0 12px;
+  }
+  #map {
+    height: 60vh;
+  }
+  iframe {
+    height: 520px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-search button {
+    flex: 0 0 auto;
+  }
+  #map {
+    height: 55vh;
+  }
+  iframe {
+    height: 480px;
+  }
+}
+/* ===== ⭐ RATING STARS ===== */
+.star-rating {
+  --rating: 0;                 /* 0 → 5 (meia estrela permitida) */
+  --star-color: #e0e0e0;       /* cinza claro para estrelas vazias */
+  --star-fill: #f5c518;        /* ouro vibrante para preenchidas */
+  position: relative;
+  display: inline-block;
+  font-size: 18px;             /* tamanho padrão das estrelas */
+  font-family: "Arial", "Helvetica", sans-serif;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+    /* Fallback para locais sem avaliação */
+.star-rating.is-empty::after {
+  width: 0; /* sem preenchimento dourado */
+}
+
+.star-note {
+  display: inline-block;
+  font-size: 12px;
+  color: #777;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.star-rating::before {
+  content: "★★★★★";
+  color: var(--star-color);
+}
+
+.star-rating::after {
+  content: "★★★★★";
+  color: var(--star-fill);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc((var(--rating) / 5) * 100%);
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ⭐ ajuste sutil no mobile (opcional) */
+@media (max-width: 600px) {
+  .star-rating {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+    /* ===== Recent reviews section ===== */
+.recent-section-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.recent-section-subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.recent-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  scroll-snap-type: x mandatory;
+}
+
+.recent-card {
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-width: 260px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+}
+
+.recent-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.recent-quote {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.recent-meta {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.25rem;
+}
+
+/* Desktop: mostrar 3 cards lado a lado sem cara de carrossel */
+@media (min-width: 768px) {
+  .recent-grid {
+    overflow-x: visible;
+    justify-content: center;
+  }
+  .recent-card {
+    flex: 0 0 calc(33.333% - 0.75rem);
+    min-width: 0;
+  }
+}
+
   </style>
 </head>
-
 <body>
-  <!-- NAV -->
   <nav>
-    <img src="images/logo.png" alt="Fix My Diaper Logo" width="30" height="30" />
-    <a href="/">Map</a>
+     <!-- Logo no topo, alinhado à esquerda -->
+    <img src="images/logo.png" alt="Fix My Diaper Logo">
+    
+    <!-- Menu -->
+    <a href="https://fixmydiaper.com/">Map</a>
     <a href="list">List</a>
     <a href="submit">Submit</a>
   </nav>
 
-  <!-- Hero -->
   <h1>Need to change a diaper?</h1>
-  <h2>Find baby-friendly places with changing tables near you – cafés, restaurants, churches and parks.</h2>
+  <h2>Find baby-friendly places with changing tables near you – cafes, restaurants, and more.</h2>
+  
+  <!-- 🔎 Geo-search: abaixo dos títulos, acima do mapa -->
+<div id="geo-search" class="map-search">
+  <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
+  <button id="geo-go">Go</button>
+  <button id="geo-me">Use my location</button>
+</div>
 
-  <!-- 🔎 Geo-search (mantém seus IDs e classes) -->
-  <div id="geo-search" class="map-search">
-    <input id="geo-input" class="ui-input" type="text" placeholder="Type an address, ZIP code, or city and country" />
-    <button id="geo-go" class="ui-btn ui-btn--primary" type="button">Go</button>
-    <button id="geo-me" class="ui-btn ui-btn--ghost" type="button">Use my location</button>
-  </div>
+  <div id="map"></div>
 
-  <!-- MAP -->
-  <div id="map" aria-label="Map of baby-friendly places with changing tables"></div>
-  <noscript class="noscript-map">
-    Map requires JavaScript. Meanwhile, see a curated list of changing tables in Berlin below.
-  </noscript>
+  <h2 class="recent-section-title">Recently reviewed changing tables</h2>
+<p class="recent-section-subtitle">
+  Fresh reviews from parents using FixMyDiaper in Berlin.
+</p>
 
-  <!-- 🇩🇪 Sinal em alemão para ranquear “wickeltisch berlin” -->
-  <p class="seo-note-de">
-    Auch bekannt als <strong>Wickeltisch-Finder in Berlin</strong> – entdecken Sie kinderfreundliche Cafés, Restaurants und Parks
-    mit <strong>Wickeltischen</strong>. Eltern können neue Orte einreichen und anderen Familien helfen, unterwegs bequem zu <em>wickeln</em>.
-  </p>
+<div class="recent-grid">
+  <!-- CARD 1 -->
+  <article class="recent-card">
+    <img src="images/humboldt-forum.jpg" alt="Humboldt Forum changing table">
+    <div class="star-rating" style="--rating: 5;"></div>
+    <span class="star-note">5/5</span>
+    <p class="recent-quote">
+      “Super clean and easy to access with the stroller. Perfect stop during a museum visit.”
+    </p>
+    <div class="recent-meta">
+      <strong>Humboldt Forum</strong><br>
+      Schloßplatz, 10178 Berlin (Mitte)
+    </div>
+  </article>
 
-  <!-- ✅ Bloco indexável (populado via places.json) -->
-  <section class="featured" id="featured-places">
-    <h2>Best changing tables in Berlin</h2>
-    <p class="desc">A quick, indexable list (auto-generated from our community map) to help parents find great spots fast.</p>
-    <ul id="featured-list">
-      <!-- JS vai preencher com até 8 locais de Berlin, ordenados pela nota -->
-    </ul>
-  </section>
+  <!-- CARD 2 -->
+  <article class="recent-card">
+    <img src="images/kalle-halle.jpg" alt="KALLE HALLE Markthalle changing table">
+    <div class="star-rating" style="--rating: 4.5;"></div>
+    <span class="star-note">4.5/5</span>
+    <p class="recent-quote">
+      “Nice surprise to find a changing table in a neighborhood market hall. Very relaxed and family-friendly.”
+    </p>
+    <div class="recent-meta">
+      <strong>KALLE HALLE Markthalle</strong><br>
+      Neukölln, Berlin
+    </div>
+  </article>
 
-  <!-- Texto convite + link submit -->
-  <h2 style="text-align:center; font-size:1.2rem; margin-top: 28px;">Know a great spot?</h2>
-  <p>Help us make the list even better!
-     <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
+  <!-- CARD 3 -->
+  <article class="recent-card">
+    <img src="images/schoenhauser-allee-arcaden.jpg" alt="Schönhauser Allee Arcaden changing table">
+    <div class="star-rating" style="--rating: 4.0;"></div>
+    <span class="star-note">4/5</span>
+    <p class="recent-quote">
+      “Not the coziest place, but super practical. Always good to know there’s a reliable changing table here.”
+    </p>
+    <div class="recent-meta">
+      <strong>Schönhauser Allee Arcaden</strong><br>
+      Schönhauser Allee, 10435 Berlin (Prenzlauer Berg)
+    </div>
+  </article>
+</div>
 
-  <!-- (Opcional) Airtable embed – mantém, mas não é necessário para SEO -->
-  <iframe
-     class="airtable-embed"
+  <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">Best places to change a diaper in Berlin*</h2>
+  <p style="text-align: center; font-size: 1rem; color: #555; margin-top: 0; line-height: 1.5;">
+    Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.</p>
+
+  <iframe class="airtable-embed"
      src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
      frameborder="0"
+     onmousewheel=""
      width="100%"
-     height="600"
-     loading="lazy"
-     style="background: transparent; border: 1px solid #ccc; border-radius: 8px;">
-  </iframe>
+     height="100%"
+     style="background: transparent; border: 1px solid #ccc;"></iframe>
 
-  <!-- Newsletter banner (mantido) -->
-  <section class="nl-banner" aria-label="Newsletter sign-up">
-    <div class="nl-wrap">
-      <h2 class="nl-title">💌 Join our newsletter</h2>
-      <p class="nl-sub">Parenting tips, baby-friendly places and project updates – in your inbox.</p>
-      <form class="nl-form" action="https://fixmydiaper.substack.com/api/v1/free" method="post" target="_blank" onsubmit="return true;">
-        <input class="ui-input" type="email" name="email" placeholder="Your email address" required />
-        <button class="ui-btn ui-btn--primary" type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
-  <div class="footer-spacer"></div>
+<p class="top5-explanation">
+  *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience. The locations are regularly updated to ensure that they reflect the best options available for parents on the go.</p>
 
-  <!-- Footer -->
+ <section id="faq" style="margin-top: 3rem;">
+  <h2 style="text-align: center; font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem;">FAQ: Changing Diapers in Berlin</h2>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+    <strong>Where can I find baby changing tables in Berlin?</strong><br>
+    You can find baby changing tables across Berlin: in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are more than 160 verified locations, with new ones added regularly by parents. Whether you are near Alexanderplatz, Tempelhofer Feld, or Tiergarten, there is likely a spot nearby where you can change your baby comfortably.
+  </p>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+    <strong>Do Berlin cafés or restaurants usually have changing tables?</strong><br>
+    Some do, but it’s not universal. The good news is that Berlin is getting more family-friendly every year. On FixMyDiaper, you can type an address or use your current location, and the map will show nearby changing tables. It's perfect for emergencies or planning an outing with your baby.
+  </p>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+    <strong>How to find the nearest changing table?</strong><br>
+    Go to <a href="https://fixmydiaper.com">fixmydiaper.com</a>, type an address or use your location, and the map will instantly show baby-friendly places around you. Each spot includes a short description, user reviews, and information on accessibility, so you can pick the best one for your needs.
+  </p>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+    <strong>Are baby changing rooms in Berlin accessible for strollers?</strong><br>
+    Many are. Facilities in malls, museums, and restaurants often include spacious family restrooms where you can fit a stroller. On FixMyDiaper, users note whether a location is stroller-friendly, so you can plan ahead.
+  </p>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+    <strong>Can I add a new baby changing location to FixMyDiaper?</strong><br>
+    Yes! FixMyDiaper is built by parents and caregivers. You can submit new locations directly on the website, adding the address, a short description, and (if possible) a photo. It takes a minute, but helps other parents all over Berlin.
+  </p>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+    <strong>Where can I find baby changing tables in Mitte?</strong><br>
+    Mitte has the largest number of changing tables listed on FixMyDiaper. Popular family-friendly spots include Humboldt Forum, Alexa Shopping Center, Dussmann Kulturkaufhaus, Manifesto Markt, L’Osteria, Zollpackhof, and Casalot Restaurant.
+  </p>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+    <strong>Are there baby changing facilities in Neukölln?</strong><br>
+    Yes! Neukölln has a growing number of family-friendly locations. You’ll find changing tables at KALLE HALLE Markthalle, K-Fetisch, La Maison, Engels, MaraLou Café, Mignon Sicilian Bakery, Nah am Wasser, and Gorilla.
+  </p>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+    <strong>Is Prenzlauer Berg baby-friendly for parents with infants?</strong><br>
+    Absolutely. Prenzlauer Berg has long been one of Berlin’s most family-oriented areas. FixMyDiaper lists several changing tables here, including Schönhauser Allee Arcaden, schim:Pause, Petit Brunch, Le Belford, I Due Forni, Brocca Café, and Trivitys.
+  </p>
+
+  <p class="top5-explanation" style="text-align: left; margin-top: 1.2rem;" lang="de">
+    <strong>Wo finde ich Wickeltische in Berlin?</strong><br>
+    In Berlin findest du Wickeltische an vielen unterschiedlichen Orten, zum Beispiel in Einkaufszentren, Cafés, Museen und öffentlichen Toiletten. Auf FixMyDiaper kannst du deine aktuelle Position oder eine Adresse eingeben und siehst sofort kinderfreundliche Orte mit Wickeltischen in deiner Nähe.
+  </p>
+</section>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where can I find baby changing tables in Berlin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can find baby changing tables across Berlin — in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are more than 160 verified locations, with new ones added regularly by parents. Whether you’re near Alexanderplatz, Tempelhofer Feld, or Tiergarten, there’s likely a spot nearby where you can change your baby comfortably."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Berlin cafés or restaurants usually have changing tables?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some do, but it’s not universal. The good news is that Berlin is getting more family-friendly every year. On FixMyDiaper, you can type an address or use your current location, and the map will show nearby changing tables — perfect for emergencies or planning an outing with your baby."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to find the nearest changing table",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Go to fixmydiaper.com, type an address or use your location, and the map will instantly show baby-friendly places around you. Each spot includes a short description, user reviews, and information on accessibility, so you can pick the best one for your needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are baby changing rooms in Berlin accessible for strollers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many are. Facilities in malls, museums, and restaurants often include spacious family restrooms where you can fit a stroller. On FixMyDiaper, users note whether a location is stroller-friendly, so you can plan ahead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add a new baby changing location to FixMyDiaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! FixMyDiaper is built by parents and caregivers. You can submit new locations directly on the website, adding the address, a short description, and (if possible) a photo. It takes a minute, but helps other parents all over Berlin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find baby changing tables in Mitte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mitte has the largest number of changing tables listed on FixMyDiaper. Popular family-friendly spots include Humboldt Forum, Alexa Shopping Center, Dussmann Kulturkaufhaus, Manifesto Markt, L’Osteria, Zollpackhof, and Casalot Restaurant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there baby changing facilities in Neukölln?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Neukölln has a growing number of family-friendly locations. You’ll find changing tables at KALLE HALLE Markthalle, K-Fetisch, La Maison, Engels, MaraLou Café, Mignon Sicilian Bakery, Nah am Wasser, and Gorilla."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Prenzlauer Berg baby-friendly for parents with infants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Prenzlauer Berg has long been one of Berlin’s most family-oriented areas. FixMyDiaper lists several changing tables here, including Schönhauser Allee Arcaden, schim:Pause, Petit Brunch, Le Belford, I Due Forni, Brocca Café, and Trivitys."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wo finde ich Wickeltische in Berlin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Berlin findest du Wickeltische an vielen unterschiedlichen Orten, zum Beispiel in Einkaufszentren, Cafés, Museen und öffentlichen Toiletten. Auf FixMyDiaper kannst du deine aktuelle Position oder eine Adresse eingeben und siehst sofort kinderfreundliche Orte mit Wickeltischen in deiner Nähe."
+      }
+    }
+  ]
+}
+</script>
+
   <footer>
     <a href="about">About</a> | 
     <a href="submit">Submit a Location</a> |
-    <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br/><br/>
+    <a href="https://www.instagram.com/fixmydiaper">Instagram</a></br></br>
     Made with ♥️ in Berlin<br />
-    Created by <a href="https://fernandapugliero.com" target="_blank" rel="noopener">Fernanda Pugliero</a>
+    Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
   </footer>
 
-  <!-- Scripts -->
-  <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-  <script defer src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
-  <!-- Mini-script: popula a lista SEO a partir de places.json -->
-  <script>
-  // Regras: mostra até 8 locais de Berlin, com melhor "overall_user_experience" primeiro
-  (function(){
-    const listEl = document.getElementById('featured-list');
-    if (!listEl) return;
+<script src="script.js"></script>
 
-    fetch('places.json', { cache: 'no-cache' })
-      .then(r => r.json())
-      .then(items => {
-        if (!Array.isArray(items)) return;
-
-        // filtra Berlin (sem case) + tem coordenadas
-        const berlin = items.filter(p => {
-          const city = (p.city || '').toString().toLowerCase();
-          return city.includes('berlin') && p.latitude && p.longitude;
-        });
-
-        // ordena por nota (0–10), decrescente; se faltar nota, joga pro fim
-        berlin.sort((a, b) => {
-          const sa = typeof a.overall_user_experience === 'number' ? a.overall_user_experience : -1;
-          const sb = typeof b.overall_user_experience === 'number' ? b.overall_user_experience : -1;
-          return sb - sa;
-        });
-
-        const top = berlin.slice(0, 8);
-        if (!top.length) {
-          listEl.innerHTML = '<li>Berlin places will appear here as soon as the map loads.</li>';
-          return;
-        }
-
-        listEl.innerHTML = top.map(p => {
-          const name = p.name || 'Unnamed place';
-          const type = p.type || 'Place';
-          const addr = p.address ? ` — ${p.address}` : '';
-          let stars = '';
-          if (typeof p.overall_user_experience === 'number') {
-            const s = Math.round(Math.max(0, Math.min(10, p.overall_user_experience)) / 2 * 2) / 2; // 0–5, meio ponto
-            stars = `<span class="star-rating" aria-hidden="true" style="--rating:${s}"></span>`;
-          }
-          return `
-            <li>
-              <strong>${name}</strong>
-              <div class="meta">${type}${addr}</div>
-              ${stars ? `<div style="margin-top:6px">${stars}</div>` : ''}
-            </li>`;
-        }).join('');
-      })
-      .catch(() => {
-        listEl.innerHTML = '<li>Could not load featured list right now.</li>';
-      });
-  })();
-  </script>
 </body>
 </html>
