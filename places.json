@@ -622,8 +622,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 41, 10319",
-    "latitude": 52.4961753,
-    "longitude": 13.523218,
+    "latitude": 52.4951913,
+    "longitude": 13.5251309,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -890,8 +890,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.5308311,
-    "longitude": 13.412464,
+    "latitude": 52.530919,
+    "longitude": 13.4121507,
     "type": "Restaurant",
     "changing_table_location": [
       "dedicated room"
@@ -1355,8 +1355,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 39, 10319",
-    "latitude": 52.4961753,
-    "longitude": 13.523218,
+    "latitude": 52.4951913,
+    "longitude": 13.5251309,
     "type": "Zoo",
     "changing_table_location": [
       "women's restroom"
@@ -3243,8 +3243,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 9",
-    "latitude": 52.5298245,
-    "longitude": 13.4112754,
+    "latitude": 52.5301311,
+    "longitude": 13.4109881,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3559,8 +3559,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437",
-    "latitude": 52.5452066,
-    "longitude": 13.4125713,
+    "latitude": 52.5481764,
+    "longitude": 13.4133253,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -3595,8 +3595,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.5308311,
-    "longitude": 13.412464,
+    "latitude": 52.530919,
+    "longitude": 13.4121507,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
@@ -3846,8 +3846,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hauptstraße 73, 12159",
-    "latitude": 52.4747941,
-    "longitude": 13.3388243,
+    "latitude": null,
+    "longitude": null,
     "type": "Café",
     "changing_table_location": [
       "dedicated room"
