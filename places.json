@@ -890,8 +890,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.530919,
-    "longitude": 13.4121507,
+    "latitude": 52.5308311,
+    "longitude": 13.412464,
     "type": "Restaurant",
     "changing_table_location": [
       "dedicated room"
@@ -3559,8 +3559,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437",
-    "latitude": 52.5481764,
-    "longitude": 13.4133253,
+    "latitude": 52.5489819,
+    "longitude": 13.4134528,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -3595,8 +3595,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.530919,
-    "longitude": 13.4121507,
+    "latitude": 52.5308311,
+    "longitude": 13.412464,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
@@ -3846,8 +3846,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hauptstraße 73, 12159",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.4747941,
+    "longitude": 13.3388243,
     "type": "Café",
     "changing_table_location": [
       "dedicated room"
