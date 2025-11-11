@@ -4792,6 +4792,28 @@
     "overall_user_experience": 9.0
   },
   {
+    "name": "Wolf Kino",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Weserstr. 59, 12045",
+    "latitude": 52.4827454,
+    "longitude": 13.44178,
+    "type": "Cinema",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "wolfberlin.org",
+    "created_at": "2025-11-11",
+    "overall_user_experience": 9.0
+  },
+  {
     "name": "KERB Berlin",
     "city": "Berlin",
     "neighborhood": "",
