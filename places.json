@@ -642,8 +642,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "R. Sara Afonso, 4460-841",
-    "latitude": 41.1813648,
-    "longitude": -8.654255,
+    "latitude": 41.1806407,
+    "longitude": -8.6541027,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -2959,8 +2959,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "R. Formosa 322, 4000-248",
-    "latitude": 41.1490219,
-    "longitude": -8.6087847,
+    "latitude": 41.1472093,
+    "longitude": -8.6022891,
     "type": "Food court",
     "changing_table_location": [
       "women's restroom",
