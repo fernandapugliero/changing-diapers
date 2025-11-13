@@ -464,7 +464,7 @@
     "name": "Segafredo Espresso Bar",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Rathausstraße 5, 10178 Berlin",
+    "address": "Rathausstraße 5, 10178",
     "latitude": 52.5200676,
     "longitude": 13.4114731,
     "type": "Café",
@@ -1418,8 +1418,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66, 12043",
-    "latitude": 52.4819616,
-    "longitude": 13.4327729,
+    "latitude": 52.4820886,
+    "longitude": 13.4321513,
     "type": "Mall",
     "changing_table_location": [
       "wheelchair restroom"
