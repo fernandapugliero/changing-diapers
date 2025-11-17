@@ -4250,6 +4250,26 @@
     "overall_user_experience": 10.0
   },
   {
+    "name": "The Playce",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Alte Potsdamer Str. 7, 10785 Berlin",
+    "latitude": 52.5074122,
+    "longitude": 13.3741147,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-11-17",
+    "overall_user_experience": null
+  },
+  {
     "name": "Pingo Doce Boavista",
     "city": "Porto",
     "neighborhood": "",
