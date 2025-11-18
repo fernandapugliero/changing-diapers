@@ -2760,9 +2760,9 @@
     "name": "Obi Lichtenberg",
     "city": "Berlin",
     "neighborhood": "",
-    "address": "Buchberger Straße 5 Lichtenberg 10365 Berlin Germany",
-    "latitude": null,
-    "longitude": null,
+    "address": "Buchberger Straße 5, 10365",
+    "latitude": 52.5103017,
+    "longitude": 13.4921444,
     "type": "Store",
     "changing_table_location": [
       "wheelchair restroom"
@@ -4253,10 +4253,10 @@
     "name": "The Playce",
     "city": "Berlin ",
     "neighborhood": "",
-    "address": "Alte Potsdamer Str. 7, 10785 Berlin",
+    "address": "Alte Potsdamer Str. 7, 10785",
     "latitude": 52.5074122,
     "longitude": 13.3741147,
-    "type": "Public toilet",
+    "type": "Mall",
     "changing_table_location": [
       "dedicated room"
     ],
