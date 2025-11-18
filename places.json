@@ -170,8 +170,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tamara-Danz-Straße 11, 10243",
-    "latitude": 52.5064848,
-    "longitude": 13.4459175,
+    "latitude": 52.5060486,
+    "longitude": 13.4466595,
     "type": "Mall",
     "changing_table_location": [
       "hallway"
@@ -4569,8 +4569,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tamara-Danz-Straße 11",
-    "latitude": 52.5064848,
-    "longitude": 13.4459175,
+    "latitude": 52.5060486,
+    "longitude": 13.4466595,
     "type": "Store",
     "changing_table_location": [
       "sales area"
