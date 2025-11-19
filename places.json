@@ -44,8 +44,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Grunerstraße 20, 10179",
-    "latitude": 52.5190723,
-    "longitude": 13.4160154,
+    "latitude": 52.5186131,
+    "longitude": 13.4160003,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -3482,8 +3482,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Bulgarische Str. 58, 12435",
-    "latitude": 52.4841887,
-    "longitude": 13.478835,
+    "latitude": 52.4826953,
+    "longitude": 13.4756704,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom",
@@ -4969,5 +4969,25 @@
     "site": "fmz-imst.at",
     "created_at": "2025-08-20",
     "overall_user_experience": 8.0
+  },
+  {
+    "name": "Hotel Zoe",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Große Präsidentenstraße 6-7, 10178 Berlin",
+    "latitude": 52.5230518,
+    "longitude": 13.4009388,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/heJCPY4tvAPcqyHQ8?g_st=ipc",
+    "created_at": "2025-11-19",
+    "overall_user_experience": 6.0
   }
 ]
