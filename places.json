@@ -638,6 +638,26 @@
     "overall_user_experience": 9.0
   },
   {
+    "name": "DM",
+    "city": "Rodgau-Hainhausen",
+    "neighborhood": "",
+    "address": "Alfred-Delp-Straße 46 63110 Rodgau Hainhausen",
+    "latitude": 50.0431331,
+    "longitude": 8.883666,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-11-19",
+    "overall_user_experience": 10.0
+  },
+  {
     "name": "NorteShopping",
     "city": "Porto",
     "neighborhood": "",
