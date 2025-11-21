@@ -678,6 +678,26 @@
     "overall_user_experience": 8.0
   },
   {
+    "name": "Europa Center ",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Tauentzienstraße 9-12, 10789 Berlin",
+    "latitude": 52.5043712,
+    "longitude": 13.3374894,
+    "type": "Mall",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-11-21",
+    "overall_user_experience": 9.0
+  },
+  {
     "name": "FEZ, Café Zauberbaum",
     "city": "Berlin",
     "neighborhood": "",
