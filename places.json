@@ -1432,6 +1432,24 @@
     "overall_user_experience": 8.0
   },
   {
+    "name": "Zoologischer Garten Bahnhof",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Hardenbergpl. 11, 10623 Berlin",
+    "latitude": 52.5070587,
+    "longitude": 13.3317777,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-11-22",
+    "overall_user_experience": null
+  },
+  {
     "name": "Shopping Via Catarina",
     "city": "Porto",
     "neighborhood": "",
