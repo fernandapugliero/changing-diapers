@@ -739,6 +739,27 @@
     "overall_user_experience": 9.0
   },
   {
+    "name": "Sana Klinikum Lichtenberg Sozialpädiatrisches Zentrum",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Fanningerstraße 32, 10365",
+    "latitude": 52.5132845,
+    "longitude": 13.4959012,
+    "type": "Institution",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "sana.de",
+    "created_at": "2025-11-22",
+    "overall_user_experience": 10.0
+  },
+  {
     "name": "Little Ones Cafe",
     "city": "Berlin",
     "neighborhood": "",
@@ -4892,6 +4913,26 @@
     "room_for_stroller": "Yes",
     "site": "kerbberlin.de",
     "created_at": "2025-09-06",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "McDonald's",
+    "city": "Leuna",
+    "neighborhood": "",
+    "address": "Merseburger Landstraße 1 OT, 06237",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "mcdonalds.com",
+    "created_at": "2025-11-22",
     "overall_user_experience": 9.0
   },
   {
