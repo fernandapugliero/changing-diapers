@@ -1105,8 +1105,8 @@
     "city": "St. Anton am Arlberg",
     "neighborhood": "",
     "address": "Gampen, 6580",
-    "latitude": 47.1376376,
-    "longitude": 10.2524675,
+    "latitude": 47.1371404,
+    "longitude": 10.2501479,
     "type": "Restaurant",
     "changing_table_location": [
       "dedicated room"
@@ -2834,6 +2834,24 @@
     "site": "https://maps.app.goo.gl/hKoh1XfJFTo93Fy17?g_st=ipc",
     "created_at": "2025-09-13",
     "overall_user_experience": 9.0
+  },
+  {
+    "name": "Sphere Bar im Fernsehturm ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Panoramastraße 1 A, 10178 Berlin",
+    "latitude": 52.5208279,
+    "longitude": 13.4094214,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-11-23",
+    "overall_user_experience": 5.0
   },
   {
     "name": "Obi Lichtenberg",
