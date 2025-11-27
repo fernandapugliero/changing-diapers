@@ -702,8 +702,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Str. zum FEZ 2, 12459",
-    "latitude": 52.4610303,
-    "longitude": 13.5486588,
+    "latitude": null,
+    "longitude": null,
     "type": "Café",
     "changing_table_location": [
       "women's restroom",
@@ -1010,8 +1010,8 @@
     "city": "Panketal",
     "neighborhood": "",
     "address": "Dorfstraße 30, 16341 Panketal",
-    "latitude": 52.6213123,
-    "longitude": 13.545319,
+    "latitude": null,
+    "longitude": null,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1048,8 +1048,8 @@
     "city": "Bad Oeynhausen",
     "neighborhood": "",
     "address": "Mindener Str. 22, 32547",
-    "latitude": 52.2134276,
-    "longitude": 8.8112954,
+    "latitude": null,
+    "longitude": null,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -2662,8 +2662,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Bouchéstraße 79A, 12435",
-    "latitude": 52.4903321,
-    "longitude": 13.4490329,
+    "latitude": null,
+    "longitude": null,
     "type": "Bar",
     "changing_table_location": [
       "mixed restroom"
@@ -2721,8 +2721,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 80, 10439",
-    "latitude": 52.5496432,
-    "longitude": 13.4147198,
+    "latitude": null,
+    "longitude": null,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -4273,8 +4273,8 @@
     "city": "Luxembourg",
     "neighborhood": "",
     "address": "11 Rue Notre Dame, 2240 Ville-Haute Luxembourg",
-    "latitude": 49.6099031,
-    "longitude": 6.1302068,
+    "latitude": null,
+    "longitude": null,
     "type": "Public toilet",
     "changing_table_location": [
       "dedicated room"
