@@ -190,8 +190,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rigaer Str. 71 A, 10247",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.5166416,
+    "longitude": 13.4636425,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -1127,8 +1127,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kiehlufer 55, 12059",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.4851268,
+    "longitude": 13.4449541,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -1340,8 +1340,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Turmstr. 59, 10551",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.5274898,
+    "longitude": 13.3295892,
     "type": "Store",
     "changing_table_location": "",
     "supplies_available": [],
@@ -1796,8 +1796,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Paul-Lincke-Ufer 39-40",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.4961121,
+    "longitude": 13.4222913,
     "type": "Restaurant",
     "changing_table_location": "",
     "supplies_available": [],
@@ -1945,5 +1945,3146 @@
     "site": "",
     "created_at": "2025-07-04",
     "overall_user_experience": 9.0
+  },
+  {
+    "name": "Standesamt Neukölln",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Blaschkoallee 32, 12359",
+    "latitude": 52.4526606,
+    "longitude": 13.4473296,
+    "type": "Institution",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Heavily used",
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "berlin.de",
+    "created_at": "2025-05-12",
+    "overall_user_experience": 5.0
+  },
+  {
+    "name": "KungerKiezInitiative e.V.",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kiefholzstraße 20, 12435",
+    "latitude": 52.490701,
+    "longitude": 13.451148,
+    "type": "Institution",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://kungerkiez.de/",
+    "created_at": "2025-06-30",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Kulturhaus Insel Berlin",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Alt Treptow 6, 12435",
+    "latitude": 52.4867977,
+    "longitude": 13.4809232,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.inselberlin.de/",
+    "created_at": "2025-04-11",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "dm",
+    "city": "   Berlin",
+    "neighborhood": "",
+    "address": "Greifswalder Str. 89, 10409",
+    "latitude": 52.542893,
+    "longitude": 13.4417194,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/WkQQHA3XSHKRaxvU8?g_st=com.google.maps.preview.copy",
+    "created_at": "2025-06-05",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Rossmann",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Wilmersdorfer Str. 117, 10627",
+    "latitude": 52.50754,
+    "longitude": 13.3066375,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-13",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Bergmannstraße 102, 10961",
+    "latitude": 52.4902,
+    "longitude": 13.389238,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-07-03",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Pastelaria Litoral",
+    "city": "Osório",
+    "neighborhood": "",
+    "address": "Acesso Auto Estrada 606, 95520-000",
+    "latitude": null,
+    "longitude": null,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.instagram.com/pastelarialitoral?igsh=OTY3b3ozYml4ZXoz",
+    "created_at": "2025-05-27",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Emilia's Familiencafé",
+    "city": "Hamburg",
+    "neighborhood": "",
+    "address": "Barmbeker Str. 169, 22299",
+    "latitude": 53.5922755,
+    "longitude": 10.0024836,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-05-20",
+    "overall_user_experience": null
+  },
+  {
+    "name": "ALEX",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Hedwig-Wachenheim-Straße 14, 10243",
+    "latitude": 52.5044294,
+    "longitude": 13.4432418,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dein-alex.de",
+    "created_at": "2025-10-05",
+    "overall_user_experience": 6.0
+  },
+  {
+    "name": "Serways Raststätte Schafstrift Nord",
+    "city": "Auetal",
+    "neighborhood": "",
+    "address": "BAB2, Schafstrift, 31749",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent",
+      "Clean",
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/fuko3hbF164vH9nt9?g_st=ic",
+    "created_at": "2025-07-19",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Schnell Bäckerei",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Einbecker Str. 119, 10315 Berlin",
+    "latitude": 52.505784,
+    "longitude": 13.5135413,
+    "type": "Bakery",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/6VxBMVm6RvYrmguc6?g_st=com.google.maps.preview.copy",
+    "created_at": "2025-05-27",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Restaurant Athos",
+    "city": "Delitzsch",
+    "neighborhood": "",
+    "address": "Bitterfelder Str. 17, 04509",
+    "latitude": 51.5260205,
+    "longitude": 12.3366202,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/6ebUatafQqAyAYRc6?g_st=com.google.maps.preview.copy",
+    "created_at": "2025-08-07",
+    "overall_user_experience": 7.0
+  },
+  {
+    "name": "Ewig Freunde",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Raumerstr. 9",
+    "latitude": 52.5428261,
+    "longitude": 13.418085,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-09-20",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Aeroporto Sá Carneiro",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Pedras Rubras, 4470-558 Vila Nova da Telha, Portugal",
+    "latitude": null,
+    "longitude": null,
+    "type": "Airport",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "aeroportoporto.pt",
+    "created_at": "2025-10-24",
+    "overall_user_experience": 7.0
+  },
+  {
+    "name": "Cafe am Neuen See",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Lichtensteinallee 2, 10787",
+    "latitude": 52.5103795,
+    "longitude": 13.3444923,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.cafeamneuensee.de/",
+    "created_at": "2025-04-14",
+    "overall_user_experience": 6.0
+  },
+  {
+    "name": "Bambini City",
+    "city": "Hamburg",
+    "neighborhood": "",
+    "address": "Christoph-Probst-Weg 1, 20251",
+    "latitude": 53.5976577,
+    "longitude": 9.9771497,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "bambini-city.de",
+    "created_at": "2025-06-19",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Shopping Iguatemi ",
+    "city": "Porto Alegre",
+    "neighborhood": "",
+    "address": "Rua João Wallig, 1800",
+    "latitude": -30.0304785,
+    "longitude": -51.1657746,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-16",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Vapiano",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rathausstraße 6, 10178",
+    "latitude": 52.5205763,
+    "longitude": 13.41067,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/x672cstpAw1MNMbG7?g_st=com.google.maps.preview.copy",
+    "created_at": "2025-07-05",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Papà pane di Sorrento",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Ackerstraße 23, 10115 Berlin",
+    "latitude": 52.531892,
+    "longitude": 13.3964323,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-10",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Arlberg WellCom",
+    "city": "St. Anton am Arlberg",
+    "neighborhood": "",
+    "address": "Hannes-Schneider-Weg 11, 6580",
+    "latitude": 47.1304336,
+    "longitude": 10.2654253,
+    "type": "Swimming Pool",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "arlberg-wellcom.at",
+    "created_at": "2025-08-16",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Marheineke Markthalle ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Marheinekepl. 15, 10961 Berlin",
+    "latitude": 52.4892676,
+    "longitude": 13.3954687,
+    "type": "Food court",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-09-27",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Junge Die Bäckerei",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rudi-Dutschke-Straße 17, 10969",
+    "latitude": 52.5067214,
+    "longitude": 13.3931644,
+    "type": "Bakery",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.jb.de/?mtm_source=google&mtm_medium=uberall&mtm_campaign=401",
+    "created_at": "2025-08-11",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Casalot Restaurant",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Heidestraße 15, 10557",
+    "latitude": 52.5324661,
+    "longitude": 13.3668089,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/VwFc6KRyc9sED1cV8",
+    "created_at": "2025-06-05",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Garda",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Oranienburger Str. 32, 10117",
+    "latitude": 52.5255763,
+    "longitude": 13.3939581,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/dCm3AHeSeyzg8dzd8?g_st=ipc",
+    "created_at": "2025-07-18",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Daryas Spielcafé",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Chausseestraße 55, 10115",
+    "latitude": 52.5360351,
+    "longitude": 13.3765927,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-06-08",
+    "overall_user_experience": null
+  },
+  {
+    "name": "McDonald's",
+    "city": "Aichstetten",
+    "neighborhood": "",
+    "address": "Am Waizenhof 8, 88317",
+    "latitude": 47.8795097,
+    "longitude": 10.0382586,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/FysTrMJXkUmBkk2G7?g_st=ipc",
+    "created_at": "2025-08-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Öffentliche Toilette",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Tunnelstraße 12, 10245",
+    "latitude": 52.4901396,
+    "longitude": 13.4806431,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "berlin.de",
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Café Santiago F",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. de Passos Manuel 198, 4000-385",
+    "latitude": 41.146555,
+    "longitude": -8.6052745,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Cramped"
+    ],
+    "room_for_stroller": "No",
+    "site": "cafesantiago.pt",
+    "created_at": "2025-10-20",
+    "overall_user_experience": 5.0
+  },
+  {
+    "name": "Rossmann",
+    "city": "Herford",
+    "neighborhood": "",
+    "address": "Waltgeristraße 77, 32049",
+    "latitude": 52.126505,
+    "longitude": 8.6825786,
+    "type": "Store",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-02",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "La Fève",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Karl-Kunger-Straße 58, 12435",
+    "latitude": 52.4911737,
+    "longitude": 13.4477018,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-06-14",
+    "overall_user_experience": 7.0
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Landsberger Allee 117, 10407",
+    "latitude": 52.529482,
+    "longitude": 13.4547803,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-24",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Tierra Garat Porfirio",
+    "city": "Mexico City",
+    "neighborhood": "",
+    "address": "Av Porfirio Díaz 66, Noche Buena, Benito Juárez, 03720",
+    "latitude": 19.3800922,
+    "longitude": -99.1771339,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "tierragarat.mx",
+    "created_at": "2025-07-10",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "LIVING BERLIN",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kantstraße 17, 10623",
+    "latitude": 52.5060585,
+    "longitude": 13.3247627,
+    "type": "Mall",
+    "changing_table_location": [
+      "women's restroom",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "living-berlin.com",
+    "created_at": "2025-08-02",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Public Toilet",
+    "city": "Copenhagen",
+    "neighborhood": "",
+    "address": "Amager Strandvej 125, 2300",
+    "latitude": 55.657606,
+    "longitude": 12.63659,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "kk.dk",
+    "created_at": "2025-05-11",
+    "overall_user_experience": null
+  },
+  {
+    "name": "60 seconds to napoli",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Oderberger Str. 61, 10435",
+    "latitude": 52.5377856,
+    "longitude": 13.4111836,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://60secondstonapoli.de/",
+    "created_at": "2025-07-05",
+    "overall_user_experience": 3.0
+  },
+  {
+    "name": "Endorphina",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Elsenstr. 52",
+    "latitude": 52.4855684,
+    "longitude": 13.4492569,
+    "type": "Bakery",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Neue Republik Reger",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Bouchéstraße 79A, 12435",
+    "latitude": 52.4903321,
+    "longitude": 13.4490329,
+    "type": "Bar",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/uf1ceqUuqJ9xGfgV6?g_st=ipc",
+    "created_at": "2025-08-25",
+    "overall_user_experience": null
+  },
+  {
+    "name": "RumBa ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Baumschulenstraße 28, 12437",
+    "latitude": 52.4644534,
+    "longitude": 13.4861817,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-07-31",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "BRLO",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Schöneberger Str. 16, 10963",
+    "latitude": 52.5000124,
+    "longitude": 13.3733584,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "brlo.de",
+    "created_at": "2025-05-12",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Schönhauser Allee Arcaden",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Schönhauser Allee 80, 10439",
+    "latitude": 52.5496432,
+    "longitude": 13.4147198,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "schoenhauseralleearcaden.de",
+    "created_at": "2025-08-01",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Zauberküche ",
+    "city": "Magdeburg",
+    "neighborhood": "",
+    "address": "Tessenowstraße 5, 39114",
+    "latitude": 52.1344008,
+    "longitude": 11.6680839,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dusty"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-24",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Forum Gesundheit Neukölln e.V.",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Weserstr. 175, 12045",
+    "latitude": 52.4846289,
+    "longitude": 13.4392789,
+    "type": "Fitness Studio",
+    "changing_table_location": [
+      "men's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Heavily used"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.forumgesundheitneukoelln.de/",
+    "created_at": "2025-05-28",
+    "overall_user_experience": 6.0
+  },
+  {
+    "name": "MaraLou Café",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Richardpl. 2A",
+    "latitude": 52.4746496,
+    "longitude": 13.4465408,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.maralou-berlin.de/",
+    "created_at": "2025-04-12",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Vier Ecken",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Böhmische Straße 14, 12055",
+    "latitude": 52.47424,
+    "longitude": 13.4495345,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dusty",
+      "Cramped"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://vier-ecken.webflow.io/",
+    "created_at": "2025-04-11",
+    "overall_user_experience": 3.0
+  },
+  {
+    "name": "dm",
+    "city": "Greifswald",
+    "neighborhood": "",
+    "address": "Lange Straße 90, 17489",
+    "latitude": 54.0961573,
+    "longitude": 13.3804767,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/hKoh1XfJFTo93Fy17?g_st=ipc",
+    "created_at": "2025-09-13",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Sphere Bar im Fernsehturm ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Panoramastraße 1 A, 10178 Berlin",
+    "latitude": 52.5208279,
+    "longitude": 13.4094214,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-11-23",
+    "overall_user_experience": 5.0
+  },
+  {
+    "name": "Obi Lichtenberg",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Buchberger Straße 5, 10365",
+    "latitude": 52.5103017,
+    "longitude": 13.4921444,
+    "type": "Store",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "obi.de/markt/berlin-lichtenberg",
+    "created_at": "2025-10-27",
+    "overall_user_experience": 6.0
+  },
+  {
+    "name": "WILMA Shoppen",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Wilmersdorfer Str. 46, 10627",
+    "latitude": 52.5091104,
+    "longitude": 13.3046728,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "westfield.com",
+    "created_at": "2025-04-19",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Genezarethkirche",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Herrfurthpl. 14, 12049",
+    "latitude": 52.476987,
+    "longitude": 13.4224107,
+    "type": "Institution",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-13",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Zenner",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Alt Treptow 15",
+    "latitude": 52.4872491,
+    "longitude": 13.4774693,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-20",
+    "overall_user_experience": 4.0
+  },
+  {
+    "name": "PalaisPopulaire",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Unter den Linden 5, 10117",
+    "latitude": 52.5171465,
+    "longitude": 13.3961451,
+    "type": "Museum",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-10",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rummelsburger Seeblick 1, 10317",
+    "latitude": 52.5017674,
+    "longitude": 13.4703165,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rummelsburger Str. 16, 12459",
+    "latitude": 52.4692856,
+    "longitude": 13.5123692,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-05-18",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Peter Pane ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rankestraße 35, 10789",
+    "latitude": 52.5037858,
+    "longitude": 13.3354195,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-05",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Kap Frida",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Alt-Stralau 61, 10245",
+    "latitude": 52.4958383,
+    "longitude": 13.4678129,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/St7JDAVpzTDh4nXe6?g_st=com.google.maps.preview.copy",
+    "created_at": "2025-05-22",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "dm",
+    "city": "Dresden",
+    "neighborhood": "",
+    "address": "Wallstr. 2a, 01067",
+    "latitude": 51.0505197,
+    "longitude": 13.7332295,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-05-25",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Mercado do Bolhão",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. Formosa 322, 4000-248",
+    "latitude": 41.1472093,
+    "longitude": -8.6022891,
+    "type": "Food court",
+    "changing_table_location": [
+      "women's restroom",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "mercadobolhao.pt",
+    "created_at": "2025-10-20",
+    "overall_user_experience": null
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Friedrichstraße 191",
+    "latitude": 52.5107745,
+    "longitude": 13.3896707,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-06-30",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Nah am Wasser",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Kiehlufer 55, 12059",
+    "latitude": 52.4851268,
+    "longitude": 13.4449541,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-08-25",
+    "overall_user_experience": null
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Wrangelstraße 34, 10997",
+    "latitude": 52.50088,
+    "longitude": 13.4356547,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-23",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Café Cosita",
+    "city": "Geesthacht",
+    "neighborhood": "",
+    "address": "Bergedorfer Str. 69, 21502",
+    "latitude": 53.4363586,
+    "longitude": 10.3695864,
+    "type": "Café",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.instagram.com/cafe_cosita_geesthacht",
+    "created_at": "2025-05-23",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Marché Hirschberg",
+    "city": "Hirschberg",
+    "neighborhood": "",
+    "address": "BAB 9, 07927",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "marche-restaurants.de",
+    "created_at": "2025-08-25",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Shopping Cidade Jardim",
+    "city": "São Paulo",
+    "neighborhood": "",
+    "address": "Shopping Cidade Jardim ",
+    "latitude": -23.599033,
+    "longitude": -46.6975701,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-05-27",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Dussmann Kulturkaufhaus",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Friedrichstraße 90, 10117",
+    "latitude": 52.518369,
+    "longitude": 13.3890173,
+    "type": "Bookstore",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Cramped"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.kulturkaufhaus.de/",
+    "created_at": "2025-05-25",
+    "overall_user_experience": null
+  },
+  {
+    "name": "InterContinental Porto - Palácio das Cardosas",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Praça da Liberdade 25, 4000-322",
+    "latitude": 41.1458729,
+    "longitude": -8.6115563,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "ihg.com",
+    "created_at": "2025-10-20",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Tapiocaria",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Samariterstraße 34A, 10247",
+    "latitude": 52.5163204,
+    "longitude": 13.4648762,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "men's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Cramped",
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-09-14",
+    "overall_user_experience": 4.0
+  },
+  {
+    "name": "Pastasciutta",
+    "city": "Porto Alegre",
+    "neighborhood": "",
+    "address": "Avenida dos Estados 111, 90200-000",
+    "latitude": -29.996074,
+    "longitude": -51.1873821,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "https://www.instagram.com/cantinapastasciutta?igsh=MWZsOTM4NThtMmF4ag==",
+    "created_at": "2025-05-27",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Breuninger",
+    "city": "Stuttgart",
+    "neighborhood": "",
+    "address": "Marktstraße 1, 70173",
+    "latitude": 48.7749716,
+    "longitude": 9.1797392,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "e-breuninger.de",
+    "created_at": "2025-08-14",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "La Maison",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Herrfurthpl. 14, 12049",
+    "latitude": 52.476987,
+    "longitude": 13.4224107,
+    "type": "Café",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-05-29",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Pasiphae Restaurant",
+    "city": "Iraklio",
+    "neighborhood": "",
+    "address": "Leof. Knosou 329",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.google.com/maps/place/Pasiphae+Restaurant/@35.3008789,25.1599453,17z/data=!3m1!4b1!4m6!3m5!1s0x149a5916b7e92fbd:0xcc50bacf25189f02!8m2!3d35.3008789!4d25.1599453!16s%2Fg%2F11cnbsx4wl?hl=en&entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D",
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Zenner",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Alt Treptow 15, 12435",
+    "latitude": 52.4872491,
+    "longitude": 13.4774693,
+    "type": "Biergarten",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-08-31",
+    "overall_user_experience": null
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Schönhauser Allee 9",
+    "latitude": 52.5301311,
+    "longitude": 13.4109881,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New",
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "BRLO Charlottenburg ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Giesebrechtstraße 15, 10629",
+    "latitude": 52.5018681,
+    "longitude": 13.3105132,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-28",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Serways Raststätte Aichen Nord",
+    "city": "Nellingen",
+    "neighborhood": "",
+    "address": "Aichen 19, 89191",
+    "latitude": 48.5211487,
+    "longitude": 9.806326,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-21",
+    "overall_user_experience": 3.0
+  },
+  {
+    "name": "FaNN - Familienhaus Neukölln Nord",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Hobrechtstraße 32, 12047",
+    "latitude": 52.4920373,
+    "longitude": 13.4268288,
+    "type": "Institution",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.jugendwohnen-berlin.de/familienzentren/fann-familienhaus-neukoelln-nord/",
+    "created_at": "2025-06-16",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Ishin Mittelstraße",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Mittelstraße 24, 10117",
+    "latitude": 52.5180054,
+    "longitude": 13.3863689,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://ishin.de/",
+    "created_at": "2025-05-25",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Zollpackhof",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Elisabeth-Abegg-Straße 1, 10557",
+    "latitude": 52.5212821,
+    "longitude": 13.3668503,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/d8VUJibEUDku44rr9?g_st=ipc",
+    "created_at": "2025-08-10",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Augustiner Potsdam",
+    "city": "Potsdam",
+    "neighborhood": "",
+    "address": "Mittelstraße 18, 14467",
+    "latitude": 52.4030235,
+    "longitude": 13.061649,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "augustiner-potsdam.de",
+    "created_at": "2025-08-18",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Erchy‘s",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Choriner Str. 84, 10119",
+    "latitude": 52.5310139,
+    "longitude": 13.4056554,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-06-17",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Therme Erding",
+    "city": "Erding",
+    "neighborhood": "",
+    "address": " Thermenallee 1-5, 85435",
+    "latitude": 48.2897062,
+    "longitude": 11.8872151,
+    "type": "Spa",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Hermannstraße 158a",
+    "latitude": 52.4671065,
+    "longitude": 13.4318289,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-07-05",
+    "overall_user_experience": null
+  },
+  {
+    "name": "7 Delikatessen ",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Deitmerstraße 7, 12163",
+    "latitude": 52.4589179,
+    "longitude": 13.3253725,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/5iFyNyctj55GVgQH9",
+    "created_at": "2025-08-08",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Öffentliche Toiletten",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Bulgarische Str. 58, 12435",
+    "latitude": 52.4826953,
+    "longitude": 13.4756704,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "mixed restroom",
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-04",
+    "overall_user_experience": null
+  },
+  {
+    "name": "La Maison des Histoires",
+    "city": "Paris",
+    "neighborhood": "",
+    "address": "7 Cité de la Roquette, 75011",
+    "latitude": 48.8547976,
+    "longitude": 2.3742376,
+    "type": "Park",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "lamaisondeshistoires.com",
+    "created_at": "2025-09-20",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Familienzentrum Juli",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Gürtelstraße 20, 10247",
+    "latitude": 52.5088564,
+    "longitude": 13.472468,
+    "type": "Institution",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "lebensnah.de",
+    "created_at": "2025-09-19",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Zenner",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Alt Treptow 15",
+    "latitude": 52.4872491,
+    "longitude": 13.4774693,
+    "type": "Biergarten",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.instagram.com/zenner.biergarten?igsh=MTBremZhamZlem0xcA==",
+    "created_at": "2025-04-18",
+    "overall_user_experience": 4.0
+  },
+  {
+    "name": "dm",
+    "city": "Pinneberg ",
+    "neighborhood": "",
+    "address": "Bismarckstraße 13, 25421",
+    "latitude": 53.6623102,
+    "longitude": 9.7962626,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-02",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Petit Brunch",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Schönhauser Allee 140a, 10437",
+    "latitude": 52.5494229,
+    "longitude": 13.4135226,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.instagram.com/petitbrunch_bln/",
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Kiezkind Berlin",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Helmholtzplatz 1, 10437",
+    "latitude": 52.5426573,
+    "longitude": 13.4197576,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
+  },
+  {
+    "name": "I Due Forni",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Schönhauser Allee 12, 10119",
+    "latitude": 52.5308311,
+    "longitude": 13.412464,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dusty",
+      "Heavily used"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-14",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Dots",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Weserstraße 191",
+    "latitude": 52.48647,
+    "longitude": 13.4346547,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://ilovedots.de/",
+    "created_at": "2025-08-27",
+    "overall_user_experience": null
+  },
+  {
+    "name": "dm",
+    "city": "Bad Salzuflen",
+    "neighborhood": "",
+    "address": "Hoffmannstraße 34, 32105 Bad Salzuflen",
+    "latitude": 52.0767829,
+    "longitude": 8.7511091,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-02",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Felix Austria",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Bergmannstraße 26, 10961 Berlin",
+    "latitude": 52.4888555,
+    "longitude": 13.3950143,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-09-27",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Café Peri",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Potsdamer Str. 203, 10783",
+    "latitude": 52.4914835,
+    "longitude": 13.3611765,
+    "type": "Restaurant",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.instagram.com/cafeperi.berlin",
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Ristorante Firenze",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Florastraße 27, 13187",
+    "latitude": 52.5653609,
+    "longitude": 13.4041146,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-07-25",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Kiez Kaffee Kraft",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Breite Str. 35, 13187",
+    "latitude": 52.5699462,
+    "longitude": 13.4076954,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "kiezkaffeekraft.de",
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Forum Schwanthalerhöhe",
+    "city": "München",
+    "neighborhood": "",
+    "address": "Theresienhöhe 5, 80339",
+    "latitude": 48.1369362,
+    "longitude": 11.5461992,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/nWGNXWWWrr3XYs866?g_st=ipc",
+    "created_at": "2025-09-24",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Kiez & Kugel",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Eisenbahnstraße 48, 10997",
+    "latitude": 52.5010414,
+    "longitude": 13.4310567,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/F7b2av5MZkgDHeYZA",
+    "created_at": "2025-09-21",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Gal Café ",
+    "city": "Lisbon",
+    "neighborhood": "",
+    "address": "Rua do Forno do Tijolo 54A 1170-172 Lisboa ",
+    "latitude": 38.7243137,
+    "longitude": -9.1325443,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-05-04",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Rossmann ",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Schloßstraße 95, 12163",
+    "latitude": 52.4584189,
+    "longitude": 13.3225704,
+    "type": "Store",
+    "changing_table_location": [
+      "hallway"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/ebZayWHuGh589qPE7",
+    "created_at": "2025-08-13",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Kaffeeschwestern Cafe",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Friedrich-Wilhelm-Straße 83, 12099",
+    "latitude": 52.4579526,
+    "longitude": 13.3847709,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-05-29",
+    "overall_user_experience": null
+  },
+  {
+    "name": "McDonalds",
+    "city": "Porto Alegre",
+    "neighborhood": "",
+    "address": "Av Assis Brasil 5737",
+    "latitude": -29.998277,
+    "longitude": -51.1317387,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-19",
+    "overall_user_experience": 7.0
+  },
+  {
+    "name": "Minicity Kindercafé",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Hauptstraße 73, 12159",
+    "latitude": 52.4747941,
+    "longitude": 13.3388243,
+    "type": "Café",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "minicity.cafe",
+    "created_at": "2025-05-19",
+    "overall_user_experience": null
+  },
+  {
+    "name": "IKEA Berlin-Tempelhof",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Sachsendamm 47",
+    "latitude": 52.4696118,
+    "longitude": 13.3663411,
+    "type": "Store",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://www.ikea.com/de/de/stores/berlin-tempelhof/",
+    "created_at": "2025-04-24",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Camponesa",
+    "city": "Pardinho",
+    "neighborhood": "",
+    "address": "Rod. Pres. Castello Branco, s/n, km 198, Zona Rural, 18640-000",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-07-12",
+    "overall_user_experience": 7.0
+  },
+  {
+    "name": "Public Toilet Rummelsburger Str.",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rummelsburger Str. 35E",
+    "latitude": 52.5018992,
+    "longitude": 13.5060851,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/FimwggycTxvoavQM9?g_st=ipc",
+    "created_at": "2025-09-12",
+    "overall_user_experience": 7.0
+  },
+  {
+    "name": "Bio Company",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Treskowallee 114, 10318 ",
+    "latitude": 52.4811557,
+    "longitude": 13.5249272,
+    "type": "Store",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dusty"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-08-21",
+    "overall_user_experience": 6.0
+  },
+  {
+    "name": "Kadewe",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Tauentzienstraße 21-24, 10789",
+    "latitude": 52.5015753,
+    "longitude": 13.3410035,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/vhuEKt1EsaQAq7Hs7",
+    "created_at": "2025-04-18",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Engels",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Herrfurthstraße 21, 12049",
+    "latitude": 52.4767265,
+    "longitude": 13.4200344,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-05-29",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Radikalecker",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Weserstr. 212",
+    "latitude": 52.4884162,
+    "longitude": 13.427275,
+    "type": "Bakery",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-09-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Restaurante Lage Senhor do Padrão",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. Heróis de França 516, 4450-159",
+    "latitude": 41.1815824,
+    "longitude": -8.6937232,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-10-17",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "A Padaria Portuguesa",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Av. da República 44, 4450-159",
+    "latitude": 41.1798938,
+    "longitude": -8.6927362,
+    "type": "Bakery",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "apadariaportuguesa.pt",
+    "created_at": "2025-10-16",
+    "overall_user_experience": 6.0
+  },
+  {
+    "name": "Brasilianische Botschaft in Berlin",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Wallstraße 57",
+    "latitude": 52.5136175,
+    "longitude": 13.4136259,
+    "type": "Institution",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.gov.br/mre/pt-br/embaixada-berlim/de/brasilianische-botschaft-in-berlin",
+    "created_at": "2025-04-24",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "dm",
+    "city": "München",
+    "neighborhood": "",
+    "address": " Theresienhöhe 5, 80339",
+    "latitude": 48.1369362,
+    "longitude": 11.5461992,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/3UwArAYT7aTtmd2i9?g_st=ipc",
+    "created_at": "2025-09-24",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Designer Outlet Ochtrup",
+    "city": "Ochtrup",
+    "neighborhood": "",
+    "address": "Laurenzstraße 51-55, 48607",
+    "latitude": 52.2105651,
+    "longitude": 7.1984376,
+    "type": "Mall",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.mcarthurglen.com/de/outlets/de/designer-outlet-ochtrup/",
+    "created_at": "2025-06-26",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Honest Greens",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "R. de Santa Catarina 184, 4000-442",
+    "latitude": 41.1478327,
+    "longitude": -8.6064342,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "honestgreens.com",
+    "created_at": "2025-10-21",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Le Belford",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kollwitzstraße 28, 10405",
+    "latitude": 52.5334029,
+    "longitude": 13.4151951,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Cramped"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://www.instagram.com/le_belfort_berlin/",
+    "created_at": "2025-04-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Mignon Sicilian Bakery",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Donaustraße 84, 12043",
+    "latitude": 52.4790851,
+    "longitude": 13.4415103,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.instagram.com/mignonsicilianbakery/",
+    "created_at": "2025-04-12",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Zooparque",
+    "city": "Itatiba",
+    "neighborhood": "",
+    "address": "Avenida ZooParque Itatiba, Rodovia Dom Pedro I, KM 95.5, 13254-762",
+    "latitude": null,
+    "longitude": null,
+    "type": "Zoo",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-07-14",
+    "overall_user_experience": 7.0
+  },
+  {
+    "name": "Parking Knuedler",
+    "city": "Luxembourg",
+    "neighborhood": "",
+    "address": "11 Rue Notre Dame, 2240 Ville-Haute Luxembourg",
+    "latitude": 49.6099031,
+    "longitude": 6.1302068,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-17",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Spielplatz Volkspark Köpenick",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Pablo-Neruda-Straße, 12559",
+    "latitude": 52.4410911,
+    "longitude": 13.5886076,
+    "type": "Park",
+    "changing_table_location": [
+      "outdoors"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "berlin.de",
+    "created_at": "2025-08-11",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Haus der Wannsee Konferenz",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Am Großen Wannsee 56-58",
+    "latitude": 52.4345337,
+    "longitude": 13.1612974,
+    "type": "Museum",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-08-10",
+    "overall_user_experience": 6.0
+  },
+  {
+    "name": "dm",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Heidestraße 40, 10557",
+    "latitude": 52.5327671,
+    "longitude": 13.365657,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-05-27",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "The Playce",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Alte Potsdamer Str. 7, 10785",
+    "latitude": 52.5074122,
+    "longitude": 13.3741147,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-11-17",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Pingo Doce Boavista",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Av. da Boavista 1349, 4100-130",
+    "latitude": 41.1593135,
+    "longitude": -8.6377773,
+    "type": "Supermarket",
+    "changing_table_location": [
+      "women's restroom",
+      "men's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "pingodoce.pt",
+    "created_at": "2025-10-16",
+    "overall_user_experience": 2.0
+  },
+  {
+    "name": "Centre Charlemagne",
+    "city": "Aachen",
+    "neighborhood": "",
+    "address": "Katschhof 1, 52062",
+    "latitude": 50.7757531,
+    "longitude": 6.0830609,
+    "type": "Museum",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-28",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Shopping Praia de Belas ",
+    "city": "Porto Alegre ",
+    "neighborhood": "",
+    "address": "Avenida Praia de Belas 1181",
+    "latitude": -30.0496165,
+    "longitude": -51.2287325,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-06-09",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Amoreiras Shopping",
+    "city": "Lisbon",
+    "neighborhood": "",
+    "address": "Avenida Engenheiro Duarte Pacheco",
+    "latitude": 38.724605,
+    "longitude": -9.1585845,
+    "type": "Mall",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/iXGCgfR5KjfiiJqa6?g_st=aw",
+    "created_at": "2025-06-28",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Berlin Brandenburg Airport",
+    "city": "Schönefeld",
+    "neighborhood": "",
+    "address": "Melli-Beese-Ring 1, 12529",
+    "latitude": 52.3622792,
+    "longitude": 13.5084308,
+    "type": "Public toilet",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://ber.berlin-airport.de/en.html",
+    "created_at": "2025-06-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Henriette-Herz-Platz 4, 10178",
+    "latitude": 52.5223932,
+    "longitude": 13.4029576,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-23",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Brocca Cafe",
+    "city": "Berlin ",
+    "neighborhood": "",
+    "address": "Gleimstraße 40, 10437",
+    "latitude": 52.5474777,
+    "longitude": 13.4093679,
+    "type": "Café",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-06-18",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Garbátypl. 2, 13187",
+    "latitude": 52.5675058,
+    "longitude": 13.4116241,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-16",
+    "overall_user_experience": null
+  },
+  {
+    "name": "L'osteria",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Hilda-Geiringer-Weg 4",
+    "latitude": 52.5268271,
+    "longitude": 13.3724979,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-04-19",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "dm",
+    "city": "Herford",
+    "neighborhood": "",
+    "address": "Ernstmeierstraße 17, 32052 Herford",
+    "latitude": 52.1031906,
+    "longitude": 8.6930921,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-09-02",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Biblioteca Municipal Almeida Garrett",
+    "city": "Porto",
+    "neighborhood": "",
+    "address": "Rua de D. Manuel II 21, 4050-239",
+    "latitude": 41.1484193,
+    "longitude": -8.6249289,
+    "type": "Institution",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Dirty",
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "bmp.cm-porto.pt",
+    "created_at": "2025-10-21",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Kiraku",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Litfaß-Platz 1, 10178",
+    "latitude": 52.5218966,
+    "longitude": 13.4034489,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/HrNVLoJucg6sWVDa9?g_st=ipc",
+    "created_at": "2025-07-18",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Das Café in der Gartenakademie ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Altensteinstraße 15A, 14195",
+    "latitude": 52.4564386,
+    "longitude": 13.3001781,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-07-29",
+    "overall_user_experience": 5.0
+  },
+  {
+    "name": "Quintal do Espeto (Vila Mariana)",
+    "city": "São Paulo",
+    "neighborhood": "",
+    "address": "Rua Joaquim Távora 1195, 04015-002",
+    "latitude": -23.587165,
+    "longitude": -46.6438923,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2025-07-19",
+    "overall_user_experience": 6.0
+  },
+  {
+    "name": "Haus der Kulturen der Welt",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "John-Foster-Dulles-Allee 10, 10557 Berlin",
+    "latitude": 52.5187884,
+    "longitude": 13.3648356,
+    "type": "Gallery",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/Zme6MRJiaDe9H7fq9?g_st=ipc",
+    "created_at": "2025-10-18",
+    "overall_user_experience": 7.0
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Tamara-Danz-Straße 11",
+    "latitude": 52.5060486,
+    "longitude": 13.4466595,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-04-29",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Wagner Hütte",
+    "city": "St. Anton am Arlberg",
+    "neighborhood": "",
+    "address": "Verwallweg 122, 6580",
+    "latitude": 47.1047266,
+    "longitude": 10.2211614,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "wagnerhuette.at",
+    "created_at": "2025-08-17",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "Baby & Beans",
+    "city": "Lisbon",
+    "neighborhood": "",
+    "address": "Rua do 4 de Infantaria 53C, 1350-243",
+    "latitude": 38.7201818,
+    "longitude": -9.1648956,
+    "type": "Café",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2025-05-03",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "C&A",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Alexanderpl. 1, 10178",
+    "latitude": 52.5215059,
+    "longitude": 13.4123809,
+    "type": "Store",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://www.c-and-a.com/stores/de-de/berlin/berlin/alexanderplatz-1.html",
+    "created_at": "2025-08-12",
+    "overall_user_experience": null
+  },
+  {
+    "name": "La Más Bonita Ruzafa",
+    "city": "Valencia ",
+    "neighborhood": "",
+    "address": "C/ de Cadis, 61, L'Eixample, 46006",
+    "latitude": 39.4605077,
+    "longitude": -0.3725287,
+    "type": "Bakery",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/pjaUeQFvitX4Xfi5A?g_st=ipc",
+    "created_at": "2025-09-25",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Gasthaus Seibl Fam. Bayer",
+    "city": "Lochau",
+    "neighborhood": "",
+    "address": "Oberhaggen 1, 6911",
+    "latitude": 47.5132717,
+    "longitude": 9.7620243,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "gasthausseibl.at",
+    "created_at": "2025-08-21",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Refugio Café",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Lenaustraße 4, 12047",
+    "latitude": 52.4899283,
+    "longitude": 13.4252308,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://www.refugio.berlin/",
+    "created_at": "2025-06-05",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Fräulein Frost",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Friedelstraße 38, 12047",
+    "latitude": 52.4922556,
+    "longitude": 13.4277592,
+    "type": "Ice cream shop",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-08-27",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Evangelische Kirchengemeinde Berlin",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Fuldastr. 50",
+    "latitude": 52.4843168,
+    "longitude": 13.4361164,
+    "type": "Institution",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/jDPkWrSAiK5Xrzm47?g_st=ipc",
+    "created_at": "2025-10-07",
+    "overall_user_experience": null
+  },
+  {
+    "name": "luuv café",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Dunckerstraße 72, 10437",
+    "latitude": 52.544327,
+    "longitude": 13.4221772,
+    "type": "Café",
+    "changing_table_location": "",
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": false,
+    "site": "https://www.instagram.com/luuv.cafe",
+    "created_at": "2025-06-02",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Kaffee Barista",
+    "city": "Greifswald",
+    "neighborhood": "",
+    "address": "Knopfstr. 14",
+    "latitude": 54.0964285,
+    "longitude": 13.3819252,
+    "type": "Café",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/Q7Np4o5CNgQ5Fcri7?g_st=ipc",
+    "created_at": "2025-09-12",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "De Noantri",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kiefholzstraße 1, 12435",
+    "latitude": 52.4934086,
+    "longitude": 13.4454081,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "",
+    "created_at": "2025-08-27",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Tomasa",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Kreuzbergstraße 62, 10965",
+    "latitude": 52.4894583,
+    "longitude": 13.3802094,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "https://maps.app.goo.gl/Wo6FZb3LPzGGdpru6?g_st=ac",
+    "created_at": "2025-08-24",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "Wolf Kino",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Weserstr. 59, 12045",
+    "latitude": 52.4827454,
+    "longitude": 13.44178,
+    "type": "Cinema",
+    "changing_table_location": [
+      "wheelchair restroom",
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "wolfberlin.org",
+    "created_at": "2025-11-11",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "KERB Berlin",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Potsdamer Str. 2, 10785",
+    "latitude": 52.5096032,
+    "longitude": 13.37351,
+    "type": "Food court",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "New"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "kerbberlin.de",
+    "created_at": "2025-09-06",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "McDonald's",
+    "city": "Leuna",
+    "neighborhood": "",
+    "address": "Merseburger Landstraße 1 OT, 06237",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "No",
+    "site": "mcdonalds.com",
+    "created_at": "2025-11-22",
+    "overall_user_experience": 9.0
+  },
+  {
+    "name": "dm",
+    "city": "Stuttgart",
+    "neighborhood": "",
+    "address": "Eberhardstraße, Marktpl. 35/37, 70173",
+    "latitude": null,
+    "longitude": null,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-08-22",
+    "overall_user_experience": 10.0
+  },
+  {
+    "name": "dm",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Rigaer Straße 67",
+    "latitude": 52.5158676,
+    "longitude": 13.4686052,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-06-29",
+    "overall_user_experience": null
+  },
+  {
+    "name": "L'Oceanogrŕfic",
+    "city": "Valencia ",
+    "neighborhood": "",
+    "address": "C/ d'Eduardo Primo Yúfera, 1, Quatre Carreres, 46013",
+    "latitude": 39.4530495,
+    "longitude": -0.3471814,
+    "type": "Zoo",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "https://maps.app.goo.gl/DMtzAnWujWU5WbiH8?g_st=ipc",
+    "created_at": "2025-09-25",
+    "overall_user_experience": null
+  },
+  {
+    "name": "Gorilla Bäckerei",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "EUREF Campus 1, 10829",
+    "latitude": 52.4799594,
+    "longitude": 13.353388,
+    "type": "Bakery",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/SPVBXMYkd5tzUkKy8?g_st=ipc",
+    "created_at": "2025-08-04",
+    "overall_user_experience": null
+  },
+  {
+    "name": "FMZ IMST",
+    "city": "Imst",
+    "neighborhood": "",
+    "address": "Industriezone 32, 6460",
+    "latitude": 47.219666,
+    "longitude": 10.7352695,
+    "type": "Mall",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "fmz-imst.at",
+    "created_at": "2025-08-20",
+    "overall_user_experience": 8.0
+  },
+  {
+    "name": "Hotel Zoe",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Große Präsidentenstraße 6-7, 10178 Berlin",
+    "latitude": 52.5230518,
+    "longitude": 13.4009388,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "wheelchair restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "https://maps.app.goo.gl/heJCPY4tvAPcqyHQ8?g_st=ipc",
+    "created_at": "2025-11-19",
+    "overall_user_experience": 6.0
   }
 ]
