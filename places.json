@@ -876,8 +876,8 @@
     "city": "Zeewolde",
     "neighborhood": "",
     "address": "Sternweg 2A, 3898 LJ",
-    "latitude": 52.4020806,
-    "longitude": 5.6143731,
+    "latitude": null,
+    "longitude": null,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
