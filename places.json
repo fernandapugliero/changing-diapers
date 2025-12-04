@@ -622,8 +622,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 41, 10319",
-    "latitude": 52.5004632,
-    "longitude": 13.5216637,
+    "latitude": 52.4963937,
+    "longitude": 13.5243883,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1416,8 +1416,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 39, 10319",
-    "latitude": 52.5004632,
-    "longitude": 13.5216637,
+    "latitude": 52.4963937,
+    "longitude": 13.5243883,
     "type": "Zoo",
     "changing_table_location": [
       "women's restroom"
@@ -2975,8 +2975,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rummelsburger Str. 16, 12459",
-    "latitude": 52.4684729,
-    "longitude": 13.513063,
+    "latitude": 52.4692856,
+    "longitude": 13.5123692,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -4877,8 +4877,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kiefholzstraße 1, 12435",
-    "latitude": 52.4934086,
-    "longitude": 13.4454081,
+    "latitude": 52.4933675,
+    "longitude": 13.4456266,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
