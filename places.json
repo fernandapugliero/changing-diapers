@@ -3923,8 +3923,8 @@
     "city": "Porto Alegre",
     "neighborhood": "",
     "address": "Av Assis Brasil 5737",
-    "latitude": -29.998277,
-    "longitude": -51.1317387,
+    "latitude": -30.0103213,
+    "longitude": -51.1549372,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
@@ -4608,8 +4608,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Altensteinstraße 15A, 14195",
-    "latitude": 52.4564386,
-    "longitude": 13.3001781,
+    "latitude": 52.456248,
+    "longitude": 13.299745,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
