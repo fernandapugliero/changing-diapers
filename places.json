@@ -306,8 +306,8 @@
     "city": "Hamburg",
     "neighborhood": "",
     "address": "Überseeboulevard 7, 20457",
-    "latitude": 53.539735,
-    "longitude": 9.9991553,
+    "latitude": null,
+    "longitude": null,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -1655,8 +1655,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "Praça de Gomes Teixeira, 4099-002",
-    "latitude": 41.1470369,
-    "longitude": -8.615589,
+    "latitude": null,
+    "longitude": null,
     "type": "Institution",
     "changing_table_location": [
       "wheelchair restroom"
@@ -3882,8 +3882,8 @@
     "city": "München",
     "neighborhood": "",
     "address": "Theresienhöhe 5, 80339",
-    "latitude": 48.1369362,
-    "longitude": 11.5461992,
+    "latitude": 48.1368335,
+    "longitude": 11.5463997,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -4213,8 +4213,8 @@
     "city": "München",
     "neighborhood": "",
     "address": " Theresienhöhe 5, 80339",
-    "latitude": 48.1369362,
-    "longitude": 11.5461992,
+    "latitude": 48.1368335,
+    "longitude": 11.5463997,
     "type": "Store",
     "changing_table_location": [
       "sales area"
