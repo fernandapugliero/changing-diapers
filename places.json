@@ -306,8 +306,8 @@
     "city": "Hamburg",
     "neighborhood": "",
     "address": "Überseeboulevard 7, 20457",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 53.539735,
+    "longitude": 9.9991553,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -1655,8 +1655,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "Praça de Gomes Teixeira, 4099-002",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 41.1470369,
+    "longitude": -8.615589,
     "type": "Institution",
     "changing_table_location": [
       "wheelchair restroom"
