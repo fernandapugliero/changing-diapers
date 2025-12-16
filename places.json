@@ -1048,8 +1048,8 @@
     "city": "Bad Oeynhausen",
     "neighborhood": "",
     "address": "Mindener Str. 22, 32547",
-    "latitude": 52.2134276,
-    "longitude": 8.8112954,
+    "latitude": null,
+    "longitude": null,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -2663,8 +2663,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Oderberger Str. 61, 10435",
-    "latitude": 52.5377856,
-    "longitude": 13.4111836,
+    "latitude": null,
+    "longitude": null,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -3379,8 +3379,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 9",
-    "latitude": 52.5301311,
-    "longitude": 13.4109881,
+    "latitude": null,
+    "longitude": null,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -4449,8 +4449,8 @@
     "city": "Aachen",
     "neighborhood": "",
     "address": "Katschhof 1, 52062",
-    "latitude": 50.7757531,
-    "longitude": 6.0830609,
+    "latitude": null,
+    "longitude": null,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -4992,8 +4992,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Potsdamer Str. 2, 10785",
-    "latitude": 52.5096032,
-    "longitude": 13.37351,
+    "latitude": null,
+    "longitude": null,
     "type": "Food court",
     "changing_table_location": [
       "wheelchair restroom"
