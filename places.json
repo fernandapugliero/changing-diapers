@@ -486,8 +486,8 @@
     "city": "Hohe Börde",
     "neighborhood": "",
     "address": "Zum Raukler 8, 39326",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.1753558,
+    "longitude": 11.4947579,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -798,8 +798,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Bernauer Str. 111, 13355",
-    "latitude": 52.5353002,
-    "longitude": 13.3895542,
+    "latitude": null,
+    "longitude": null,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -914,8 +914,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Heidelberger Str. 90, 12435",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.4890233,
+    "longitude": 13.4474986,
     "type": "Supermarket",
     "changing_table_location": [
       "mixed restroom",
@@ -1010,8 +1010,8 @@
     "city": "Panketal",
     "neighborhood": "",
     "address": "Dorfstraße 30, 16341 Panketal",
-    "latitude": 52.6213123,
-    "longitude": 13.545319,
+    "latitude": null,
+    "longitude": null,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1278,8 +1278,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Giesebrechtstraße 15, 10629",
-    "latitude": 52.5018681,
-    "longitude": 13.3105132,
+    "latitude": null,
+    "longitude": null,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1516,8 +1516,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Dunckerstraße 12, 10437",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.54273,
+    "longitude": 13.421225,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1927,8 +1927,8 @@
     "city": "Potsdam",
     "neighborhood": "",
     "address": "Benkertstraße 5, 14467",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 52.4030845,
+    "longitude": 13.0603075,
     "type": "Restaurant",
     "changing_table_location": [
       "hallway"
