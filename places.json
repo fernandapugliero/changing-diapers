@@ -3379,8 +3379,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 9, 10119",
-    "latitude": 52.5301311,
-    "longitude": 13.4109881,
+    "latitude": 52.5298245,
+    "longitude": 13.4112754,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3695,8 +3695,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437",
-    "latitude": 52.5489819,
-    "longitude": 13.4134528,
+    "latitude": 52.5417792,
+    "longitude": 13.4120073,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
