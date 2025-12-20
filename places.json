@@ -1184,8 +1184,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66, 12043",
-    "latitude": 52.4820886,
-    "longitude": 13.4321513,
+    "latitude": 52.4819616,
+    "longitude": 13.4327729,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1536,8 +1536,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66, 12043",
-    "latitude": 52.4820886,
-    "longitude": 13.4321513,
+    "latitude": 52.4819616,
+    "longitude": 13.4327729,
     "type": "Mall",
     "changing_table_location": [
       "wheelchair restroom"
