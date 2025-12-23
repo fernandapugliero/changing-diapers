@@ -384,8 +384,8 @@
     "city": "Landsberg",
     "neighborhood": "",
     "address": "Zörbiger Str. 17, 06188",
-    "latitude": 51.5370802,
-    "longitude": 12.1600728,
+    "latitude": 51.5391599,
+    "longitude": 12.1569538,
     "type": "Bakery",
     "changing_table_location": [
       "mixed restroom"
@@ -2343,8 +2343,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Ackerstraße 23, 10115 Berlin",
-    "latitude": 52.531892,
-    "longitude": 13.3964323,
+    "latitude": 52.53209,
+    "longitude": 13.396302,
     "type": "Restaurant",
     "changing_table_location": [
       "hallway"
