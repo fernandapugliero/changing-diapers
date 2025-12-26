@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baby changing tables in Berlin – Best places to change a diaper | Fix My Diaper</title>
+  <meta name="description" content="Discover the best places to change a diaper in Berlin: cafés, malls, restaurants and public toilets with baby changing tables. Ratings and reviews from parents.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #333;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Nav simples reaproveitando o estilo da home */
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    nav img {
+      width: 30px;
+      height: auto;
+      margin-right: 30px;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .top5-explanation {
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+      line-height: 1.4;
+    }
+
+    /* ⭐ Estrelas */
+    .star-rating {
+      --rating: 0;
+      --star-color: #e0e0e0;
+      --star-fill: #f5c518;
+      position: relative;
+      display: inline-block;
+      font-size: 18px;
+      font-family: "Arial", "Helvetica", sans-serif;
+      line-height: 1;
+      letter-spacing: 2px;
+      margin-top: 4px;
+    }
+    .star-rating.is-empty::after {
+      width: 0;
+    }
+    .star-note {
+      display: inline-block;
+      font-size: 12px;
+      color: #777;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .star-rating::before {
+      content: "★★★★★";
+      color: var(--star-color);
+    }
+    .star-rating::after {
+      content: "★★★★★";
+      color: var(--star-fill);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc((var(--rating) / 5) * 100%);
+      overflow: hidden;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    /* Card (igual ao da home) */
+    .recent-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .recent-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .recent-quote {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.25rem 0 0.5rem 0;
+    }
+    .recent-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.25rem;
+    }
+
+    /* Grid: 1 coluna no mobile, 3 colunas no desktop */
+    #berlin-card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 900px) {
+      #berlin-card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav>
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <a href="/">Map</a>
+      <a href="/list">List</a>
+      <a href="/submit">Submit</a>
+    </nav>
+
+    <h1>Baby changing tables in Berlin</h1>
+    <p class="section-subtitle">
+      A curated list of the best places to change a diaper in Berlin – cafés, restaurants, malls and public toilets, rated by parents.
+    </p>
+
+    <p class="top5-explanation">
+      This page is automatically updated from our Airtable database. 
+      Only locations in Berlin with a written review and at least one photo are shown here, 
+      sorted by overall user experience.
+    </p>
+
+    <!-- Aqui o JS vai inserir os cards -->
+    <section id="berlin-card-grid"></section>
+
+    <footer>
+      <a href="/about">About</a> | 
+      <a href="/submit">Submit a Location</a> |
+      <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
+      Made with ♥️ in Berlin<br />
+      Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
+    </footer>
+  </div>
+
+  <script src="berlin.js"></script>
+</body>
+</html>
