@@ -20,6 +20,24 @@
     "overall_user_experience": 10.0
   },
   {
+    "name": "T.E.C.",
+    "city": "Erfurt",
+    "neighborhood": "",
+    "address": "Hermsdorfer Str. 4, 99099",
+    "latitude": 50.9709678,
+    "longitude": 11.0584467,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": false,
+    "site": "http://www.thueringereinkaufscenter.de/",
+    "created_at": "2025-12-26",
+    "overall_user_experience": null
+  },
+  {
     "name": "Bikini Cabanyal",
     "city": "Valencia",
     "neighborhood": "",
@@ -4898,6 +4916,27 @@
     "site": "gasthausseibl.at",
     "created_at": "2025-08-21",
     "overall_user_experience": 9.0
+  },
+  {
+    "name": "dm",
+    "city": "Erfurt",
+    "neighborhood": "",
+    "address": "Hermsdorfer Str. 4, 99099",
+    "latitude": 50.9709678,
+    "longitude": 11.0584467,
+    "type": "Store",
+    "changing_table_location": [
+      "sales area"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent",
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "dm.de",
+    "created_at": "2025-12-26",
+    "overall_user_experience": 10.0
   },
   {
     "name": "Refugio Café",
