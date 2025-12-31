@@ -1120,8 +1120,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tauentzienstraße 2-3, 10789",
-    "latitude": 52.5025439,
-    "longitude": 13.3415155,
+    "latitude": 52.5025081,
+    "longitude": 13.3415961,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1945,8 +1945,8 @@
     "city": "Rostock",
     "neighborhood": "",
     "address": "Handwerkstraße 1, 18069",
-    "latitude": 54.1240633,
-    "longitude": 12.0723129,
+    "latitude": 54.1240673,
+    "longitude": 12.0723171,
     "type": "Store",
     "changing_table_location": [
       "sales area"
