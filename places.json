@@ -138,8 +138,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Straße 645, 12049",
-    "latitude": 52.4767037,
-    "longitude": 13.4183602,
+    "latitude": 52.4798866,
+    "longitude": 13.4180446,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -2659,8 +2659,8 @@
     "city": "Mexico City",
     "neighborhood": "",
     "address": "Av Porfirio Díaz 66, Noche Buena, Benito Juárez, 03720",
-    "latitude": 19.3800922,
-    "longitude": -99.1771339,
+    "latitude": 19.3801802,
+    "longitude": -99.1766303,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -2857,8 +2857,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weserstr. 175, 12045",
-    "latitude": 52.4846289,
-    "longitude": 13.4392789,
+    "latitude": 52.4846106,
+    "longitude": 13.4393169,
     "type": "Fitness Studio",
     "changing_table_location": [
       "men's restroom"
@@ -3754,8 +3754,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 140a, 10437",
-    "latitude": 52.5413217,
-    "longitude": 13.4119755,
+    "latitude": 52.5417792,
+    "longitude": 13.4120073,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
