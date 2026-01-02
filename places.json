@@ -3345,8 +3345,8 @@
     "city": "Porto Alegre",
     "neighborhood": "",
     "address": "Avenida dos Estados 111, 90200-000",
-    "latitude": -29.9961359,
-    "longitude": -51.1871515,
+    "latitude": -29.996074,
+    "longitude": -51.1873821,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -4212,8 +4212,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "R. Heróis de França 516, 4450-159",
-    "latitude": 41.1815221,
-    "longitude": -8.693468,
+    "latitude": 41.1815824,
+    "longitude": -8.6937232,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
