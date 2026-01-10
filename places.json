@@ -3768,6 +3768,26 @@
     "overall_user_experience": 4.0
   },
   {
+    "name": "Estação Restaurante ",
+    "city": "Palotina",
+    "neighborhood": "",
+    "address": "P577+X4 Centro, Palotina - PR, Brasil",
+    "latitude": null,
+    "longitude": null,
+    "type": "Restaurant",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Decent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2026-01-10",
+    "overall_user_experience": null
+  },
+  {
     "name": "dm",
     "city": "Pinneberg ",
     "neighborhood": "",
