@@ -656,6 +656,26 @@
     "overall_user_experience": 9.0
   },
   {
+    "name": "Sveda",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Schwedter Str. 79, 10437 Berlin",
+    "latitude": 52.5477466,
+    "longitude": 13.4010651,
+    "type": "Café",
+    "changing_table_location": [
+      "mixed restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "sveda-berlin.de",
+    "created_at": "2026-01-18",
+    "overall_user_experience": 10.0
+  },
+  {
     "name": "dm",
     "city": "Rodgau-Hainhausen",
     "neighborhood": "",
