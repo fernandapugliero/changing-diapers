@@ -3245,6 +3245,24 @@
     "overall_user_experience": null
   },
   {
+    "name": "Becycle ",
+    "city": "Berlin",
+    "neighborhood": "",
+    "address": "Brunnenstraße 24, 10119 Berlin",
+    "latitude": 52.5334592,
+    "longitude": 13.3988575,
+    "type": "Fitness Studio",
+    "changing_table_location": [
+      "women's restroom"
+    ],
+    "supplies_available": [],
+    "conditions": [],
+    "room_for_stroller": "No",
+    "site": "",
+    "created_at": "2026-01-21",
+    "overall_user_experience": null
+  },
+  {
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "",
