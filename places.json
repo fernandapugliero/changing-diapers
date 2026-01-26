@@ -2062,6 +2062,27 @@
     "overall_user_experience": 9.0
   },
   {
+    "name": "Boulevard Laçador",
+    "city": "Porto Alegre",
+    "neighborhood": "",
+    "address": "Avenida dos Estados 111, 90200-000",
+    "latitude": -29.996074,
+    "longitude": -51.1873821,
+    "type": "Mall",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "New",
+      "Excellent"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "boulevard.com.br",
+    "created_at": "2026-01-26",
+    "overall_user_experience": 10.0
+  },
+  {
     "name": "Standesamt Neukölln",
     "city": "Berlin",
     "neighborhood": "",
@@ -2737,8 +2758,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kantstraße 17, 10623",
-    "latitude": 52.5059004,
-    "longitude": 13.3247432,
+    "latitude": 52.5060585,
+    "longitude": 13.3247627,
     "type": "Mall",
     "changing_table_location": [
       "women's restroom",
@@ -4561,8 +4582,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Lützowpl., 10785 Berlin",
-    "latitude": 52.5049514,
-    "longitude": 13.3535064,
+    "latitude": 52.5053306,
+    "longitude": 13.3521015,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
