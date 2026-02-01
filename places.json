@@ -873,8 +873,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 10-11, 10119",
-    "latitude": 52.5305826,
-    "longitude": 13.4121544,
+    "latitude": 52.5305899,
+    "longitude": 13.4115883,
     "type": "Bakery",
     "changing_table_location": [
       "wheelchair restroom"
@@ -989,8 +989,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.5308311,
-    "longitude": 13.412464,
+    "latitude": 52.530919,
+    "longitude": 13.4121507,
     "type": "Restaurant",
     "changing_table_location": [
       "dedicated room"
@@ -2898,8 +2898,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 80, 10439",
-    "latitude": 52.5492906,
-    "longitude": 13.4157975,
+    "latitude": 52.5496432,
+    "longitude": 13.4147198,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -3419,8 +3419,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "Praça da Liberdade 25, 4000-322",
-    "latitude": 41.1458729,
-    "longitude": -8.6115563,
+    "latitude": 41.1458255,
+    "longitude": -8.6115944,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -3553,8 +3553,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 9, 10119",
-    "latitude": 52.5298245,
-    "longitude": 13.4112754,
+    "latitude": 52.5301311,
+    "longitude": 13.4109881,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3943,8 +3943,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.5308311,
-    "longitude": 13.412464,
+    "latitude": 52.530919,
+    "longitude": 13.4121507,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
