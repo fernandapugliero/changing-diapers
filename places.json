@@ -2456,6 +2456,26 @@
     "overall_user_experience": 8.0
   },
   {
+    "name": "Cais Embarcadero",
+    "city": "Porto Alegre",
+    "neighborhood": "",
+    "address": "Av. Mauá1050, 90010-110",
+    "latitude": null,
+    "longitude": null,
+    "type": "Food court",
+    "changing_table_location": [
+      "dedicated room"
+    ],
+    "supplies_available": [],
+    "conditions": [
+      "Clean"
+    ],
+    "room_for_stroller": "Yes",
+    "site": "",
+    "created_at": "2026-02-06",
+    "overall_user_experience": 10.0
+  },
+  {
     "name": "Papà pane di Sorrento",
     "city": "Berlin",
     "neighborhood": "",
