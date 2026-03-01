@@ -73,12 +73,32 @@
       text-align: center;
       line-height: 1.2;
     }
+    /* subtítulo da hero */
     h2 {
       font-size: 1.1rem;
       font-weight: 400;
       color: #666;
       margin: 0 0 2rem 0;
       text-align: center;
+      line-height: 1.4;
+    }
+
+    /* ===== Parágrafos e notas ===== */
+    p {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+    p strong {
+      font-weight: 600;
+    }
+    .top5-explanation {
+      font-size: 0.85rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
       line-height: 1.4;
     }
 
@@ -95,7 +115,9 @@
       letter-spacing: 2px;
       margin-top: 4px;
     }
-    .star-rating.is-empty::after { width: 0; }
+    .star-rating.is-empty::after {
+      width: 0;
+    }
     .star-note {
       display: inline-block;
       font-size: 12px;
@@ -103,7 +125,10 @@
       margin-left: 6px;
       vertical-align: middle;
     }
-    .star-rating::before { content: "★★★★★"; color: var(--star-color); }
+    .star-rating::before {
+      content: "★★★★★";
+      color: var(--star-color);
+    }
     .star-rating::after {
       content: "★★★★★";
       color: var(--star-fill);
@@ -127,13 +152,23 @@
       color: #0070f3;
       text-decoration: none;
     }
-    footer a:hover { text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      body { padding: 2rem; }
+    footer a:hover {
+      text-decoration: underline;
     }
 
-    /************ /BERLIN ************/
+    /* ===== Responsivo ===== */
+    @media (max-width: 768px) {
+      body {
+        padding: 2rem;
+      }
+    }
+    @media (max-width: 480px) {
+      /* nada específico aqui; mantido igual ao index */
+    }
+
+    /***************************************************************
+     * ====== ESTILOS ESPECÍFICOS DA PÁGINA /BERLIN ======
+     ***************************************************************/
     .filters-wrap{
       max-width: 980px;
       margin: 0 auto 1.5rem auto;
@@ -168,37 +203,25 @@
       margin-top: 1rem;
     }
 
+    /* Chips selecionáveis (cinza default, verde quando ativo) */
     .chip{
       display:flex;
       align-items:center;
-      gap: 10px;
       border: 1px solid #ddd;
       border-radius: 999px;
-      padding: 8px 10px;
-      background: #fff;
+      padding: 10px 14px;
+      background: #f7f7f7;
       cursor:pointer;
       font: inherit;
-      color: inherit;
+      color: #333;
       user-select:none;
+      transition: background .15s ease, border-color .15s ease, color .15s ease;
     }
-    .chip .state{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width: 48px;
-      height: 24px;
-      border-radius: 999px;
-      border: 1px solid #ddd;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .02em;
-      padding: 0 8px;
-      background: #f7f7f7;
-    }
-    .chip[data-selected="true"]{ border-color: rgba(0,0,0,0.25); }
-    .chip[data-selected="true"] .state{
-      border-color: rgba(0,0,0,0.25);
-      background: #efefef;
+    .chip:hover{ background:#efefef; }
+    .chip[data-selected="true"]{
+      background: #1f9d55;
+      border-color: #1f9d55;
+      color: #fff;
     }
 
     .results-line{
@@ -208,6 +231,7 @@
       font-size: .95rem;
     }
 
+    /* Cards: 3 colunas no desktop, 1 no mobile */
     .cards-grid{
       display:grid;
       grid-template-columns: 1fr;
@@ -215,7 +239,9 @@
       margin-top: 1.25rem;
     }
     @media (min-width: 768px){
-      .cards-grid{ grid-template-columns: repeat(3, 1fr); }
+      .cards-grid{
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .place-card{
@@ -223,12 +249,20 @@
       border: 1px solid #eee;
       border-radius: 12px;
       padding: 0.75rem;
+      font-size: 0.9rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
       display:flex;
       flex-direction:column;
       min-height: 100%;
     }
-
+    .place-card img{
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      display:block;
+    }
     .place-media{
       width: 100%;
       height: 240px;
@@ -245,28 +279,35 @@
       height:100%;
       object-fit:cover;
       display:block;
+      border-radius: 0;
+      margin: 0;
     }
-    .no-photo{ font-size: 0.85rem; color:#777; }
+    .no-photo{
+      font-size: 0.85rem;
+      color:#777;
+    }
 
     .place-title{
-      margin: .25rem 0 .15rem 0;
       font-size: 1rem;
       font-weight: 600;
       color:#333;
       text-align:left;
+      margin: 0.25rem 0 0.15rem 0;
     }
-    .place-meta{
-      font-size: .85rem;
-      color:#777;
-      margin-top: .15rem;
+
+    .place-quote{
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.25rem 0 0.5rem 0;
       text-align:left;
       line-height: 1.35;
     }
-    .place-quote{
-      font-size: .85rem;
-      color:#555;
-      font-style: italic;
-      margin: .5rem 0 .5rem 0;
+
+    .place-meta{
+      font-size: 0.8rem;
+      color:#777;
+      margin-top: 0.25rem;
       text-align:left;
       line-height: 1.35;
     }
@@ -308,6 +349,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <nav>
@@ -317,8 +359,9 @@
       <a href="submit">Submit</a>
     </nav>
 
-    <h1>Changing tables in Berlin</h1>
-    <h2>Select one or more neighborhoods to filter the list.</h2>
+    <!-- SEO: H1 em alemão, mantendo site em inglês -->
+    <h1>Wickeltische in Berlin</h1>
+    <h2>Select one or more Berlin neighborhoods to see cafés, restaurants and public places with changing tables.</h2>
 
     <section class="filters-wrap" aria-label="Neighborhood filters">
       <div class="chip-grid" id="neighborhoodChips"></div>
@@ -329,7 +372,7 @@
       </div>
 
       <div class="results-line">
-        <strong id="resultsCount">—</strong> places
+        <strong id="resultsCount">0</strong> places
         <span id="activeFiltersText"></span>
       </div>
     </section>
@@ -348,6 +391,9 @@
   </div>
 
   <script>
+    /*****************************************************************
+     * Neighborhood list (alphabetical)
+     *****************************************************************/
     const neighborhoods = [
       "Charlottenburg-Wilmersdorf",
       "Friedrichshain-Kreuzberg",
@@ -363,8 +409,11 @@
       "Treptow-Köpenick"
     ];
 
-    // ✅ agora usa o JSON separado para Berlin
-    const DATA_URL = "places-berlin.json";
+    /*****************************************************************
+     * Data source (Berlin-only JSON)
+     * Use ABSOLUTE path to avoid /berlin vs /berlin/ issues.
+     *****************************************************************/
+    const DATA_URL = "/places-berlin.json";
 
     const state = { selected: new Set(), all: [], filtered: [] };
 
@@ -380,9 +429,7 @@
     };
 
     function getNeighborhood(p){ return (p.neighborhood || "").trim(); }
-
     function getPhotoUrl(p){ return p.photo_url || null; }
-
     function getReview(p){ return (p.review || "").trim(); }
 
     function getTags(p){
@@ -409,10 +456,7 @@
         btn.className = "chip";
         btn.setAttribute("data-neighborhood", n);
         btn.setAttribute("data-selected", state.selected.has(n) ? "true" : "false");
-        btn.innerHTML = `
-          <span>${escapeHtml(n)}</span>
-          <span class="state">${state.selected.has(n) ? "IN ✓" : "OUT"}</span>
-        `;
+        btn.textContent = n;
         btn.addEventListener("click", () => toggleNeighborhood(n));
         el.chips.appendChild(btn);
       });
@@ -425,19 +469,29 @@
 
       const chip = el.chips.querySelector(`[data-neighborhood="${cssEscape(n)}"]`);
       if (chip){
-        const on = state.selected.has(n);
-        chip.setAttribute("data-selected", on ? "true" : "false");
-        chip.querySelector(".state").textContent = on ? "IN ✓" : "OUT";
+        chip.setAttribute("data-selected", state.selected.has(n) ? "true" : "false");
       }
       applyFilterAndRender();
     }
 
-    function clearAll(){ state.selected.clear(); renderChips(); applyFilterAndRender(); }
-    function selectAll(){ neighborhoods.forEach(n => state.selected.add(n)); renderChips(); applyFilterAndRender(); }
+    function clearAll(){
+      state.selected.clear();
+      renderChips();
+      applyFilterAndRender();
+    }
+
+    function selectAll(){
+      neighborhoods.forEach(n => state.selected.add(n));
+      renderChips();
+      applyFilterAndRender();
+    }
 
     function updateFiltersText(){
-      if (state.selected.size === 0) el.activeFiltersText.textContent = " (showing all neighborhoods)";
-      else el.activeFiltersText.textContent = ` (filter: ${Array.from(state.selected).join(", ")})`;
+      if (state.selected.size === 0) {
+        el.activeFiltersText.textContent = "";
+      } else {
+        el.activeFiltersText.textContent = ` (filter: ${Array.from(state.selected).join(", ")})`;
+      }
     }
 
     function showLoading(on){
@@ -457,9 +511,33 @@
       updateFiltersText();
     }
 
+    function renderEmptyState(){
+      el.grid.style.display = "grid";
+      el.grid.innerHTML = `<div class="loading-box">
+        Select one or more neighborhoods above to see places with changing tables in Berlin.
+      </div>`;
+    }
+
     function applyFilterAndRender(){
       const selected = state.selected;
-      state.filtered = selected.size === 0 ? state.all.slice() : state.all.filter(p => selected.has(getNeighborhood(p)));
+
+      // Default: none selected -> show message (no full list)
+      if (selected.size === 0) {
+        state.filtered = [];
+        renderEmptyState();
+        updateCount();
+        return;
+      }
+
+      state.filtered = state.all.filter(p => selected.has(getNeighborhood(p)));
+
+      // Order: most recent first (created_at desc)
+      state.filtered.sort((a,b) => {
+        const da = String(a.created_at || "");
+        const db = String(b.created_at || "");
+        return db.localeCompare(da);
+      });
+
       renderCards();
       updateCount();
     }
@@ -482,6 +560,7 @@
       const card = document.createElement("article");
       card.className = "place-card";
 
+      // media
       const media = document.createElement("div");
       media.className = "place-media";
       const photoUrl = getPhotoUrl(p);
@@ -498,6 +577,7 @@
         media.appendChild(span);
       }
 
+      // stars + note
       const stars = (typeof p.stars === "number") ? p.stars : null;
       const starDiv = document.createElement("div");
       starDiv.className = "star-rating";
@@ -508,16 +588,23 @@
       note.className = "star-note";
       note.textContent = stars ? `${stars}/5` : "Not rated yet";
 
+      const starsWrap = document.createElement("div");
+      starsWrap.appendChild(starDiv);
+      starsWrap.appendChild(note);
+
+      // title
       const title = document.createElement("div");
       title.className = "place-title";
       title.textContent = p.name || "Unnamed place";
 
+      // meta (type + address)
       const meta = document.createElement("div");
       meta.className = "place-meta";
       const type = (p.type || "").toString().trim();
       const address = (p.address || "").toString().trim();
       meta.innerHTML = `${escapeHtml(type || "Not specified")}${address ? "<br>" + escapeHtml(address) : ""}`;
 
+      // review
       const reviewText = getReview(p);
       let quote = null;
       if (reviewText){
@@ -526,6 +613,7 @@
         quote.textContent = `“${reviewText}”`;
       }
 
+      // tags
       const tags = getTags(p);
       const tagsWrap = document.createElement("div");
       tagsWrap.className = "tags";
@@ -537,9 +625,6 @@
       });
 
       card.appendChild(media);
-      const starsWrap = document.createElement("div");
-      starsWrap.appendChild(starDiv);
-      starsWrap.appendChild(note);
       card.appendChild(starsWrap);
       card.appendChild(title);
       card.appendChild(meta);
@@ -556,9 +641,13 @@
         if (!res.ok) throw new Error(`Failed to load ${DATA_URL}: ${res.status} ${res.statusText}`);
         const data = await res.json();
         if (!Array.isArray(data)) throw new Error(`${DATA_URL} is not an array.`);
+
         state.all = data;
         renderChips();
+
+        // Default view: none selected -> show message
         applyFilterAndRender();
+
         showLoading(false);
       } catch(e){
         showLoading(false);
@@ -571,7 +660,9 @@
         "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
       }[s]));
     }
-    function cssEscape(str){ return String(str).replace(/["\\]/g, "\\$&"); }
+    function cssEscape(str){
+      return String(str).replace(/["\\]/g, "\\$&");
+    }
 
     el.clearBtn.addEventListener("click", clearAll);
     el.selectAllBtn.addEventListener("click", selectAll);
