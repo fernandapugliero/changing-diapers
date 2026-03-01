@@ -73,53 +73,12 @@
       text-align: center;
       line-height: 1.2;
     }
-    /* subtítulo da hero */
     h2 {
       font-size: 1.1rem;
       font-weight: 400;
       color: #666;
       margin: 0 0 2rem 0;
       text-align: center;
-      line-height: 1.4;
-    }
-
-    /* grandes títulos de seção (Recently, Best places, FAQ) */
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #444;
-      text-align: center;
-      margin-top: 3rem;
-      margin-bottom: 0.75rem;
-      line-height: 1.3;
-    }
-
-    /* subtítulos de seção (texto logo abaixo do título) */
-    .section-subtitle {
-      font-size: 0.95rem;
-      color: #555;
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-
-    /* ===== Parágrafos e notas ===== */
-    p {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-    p strong {
-      font-weight: 600;
-    }
-    .top5-explanation {
-      font-size: 0.85rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
       line-height: 1.4;
     }
 
@@ -136,9 +95,7 @@
       letter-spacing: 2px;
       margin-top: 4px;
     }
-    .star-rating.is-empty::after {
-      width: 0;
-    }
+    .star-rating.is-empty::after { width: 0; }
     .star-note {
       display: inline-block;
       font-size: 12px;
@@ -146,10 +103,7 @@
       margin-left: 6px;
       vertical-align: middle;
     }
-    .star-rating::before {
-      content: "★★★★★";
-      color: var(--star-color);
-    }
+    .star-rating::before { content: "★★★★★"; color: var(--star-color); }
     .star-rating::after {
       content: "★★★★★";
       color: var(--star-fill);
@@ -173,20 +127,13 @@
       color: #0070f3;
       text-decoration: none;
     }
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a:hover { text-decoration: underline; }
 
-    /* ===== Responsivo ===== */
     @media (max-width: 768px) {
-      body {
-        padding: 2rem;
-      }
+      body { padding: 2rem; }
     }
 
-    /***************************************************************
-     * ====== ESTILOS ESPECÍFICOS DA PÁGINA /BERLIN ======
-     ***************************************************************/
+    /************ /BERLIN ************/
     .filters-wrap{
       max-width: 980px;
       margin: 0 auto 1.5rem auto;
@@ -248,9 +195,7 @@
       padding: 0 8px;
       background: #f7f7f7;
     }
-    .chip[data-selected="true"]{
-      border-color: rgba(0,0,0,0.25);
-    }
+    .chip[data-selected="true"]{ border-color: rgba(0,0,0,0.25); }
     .chip[data-selected="true"] .state{
       border-color: rgba(0,0,0,0.25);
       background: #efefef;
@@ -263,7 +208,6 @@
       font-size: .95rem;
     }
 
-    /* Cards: 3 colunas no desktop, 1 no mobile */
     .cards-grid{
       display:grid;
       grid-template-columns: 1fr;
@@ -271,9 +215,7 @@
       margin-top: 1.25rem;
     }
     @media (min-width: 768px){
-      .cards-grid{
-        grid-template-columns: repeat(3, 1fr);
-      }
+      .cards-grid{ grid-template-columns: repeat(3, 1fr); }
     }
 
     .place-card{
@@ -304,10 +246,7 @@
       object-fit:cover;
       display:block;
     }
-    .no-photo{
-      font-size: 0.85rem;
-      color:#777;
-    }
+    .no-photo{ font-size: 0.85rem; color:#777; }
 
     .place-title{
       margin: .25rem 0 .15rem 0;
@@ -409,9 +348,6 @@
   </div>
 
   <script>
-    /*****************************************************************
-     * Neighborhood list (alphabetical, as requested)
-     *****************************************************************/
     const neighborhoods = [
       "Charlottenburg-Wilmersdorf",
       "Friedrichshain-Kreuzberg",
@@ -427,16 +363,10 @@
       "Treptow-Köpenick"
     ];
 
-    /*****************************************************************
-     * Data source (same JSON used by the map)
-     *****************************************************************/
+    // ✅ agora usa o JSON separado para Berlin
     const DATA_URL = "places-berlin.json";
 
-    const state = {
-      selected: new Set(), // neighborhoods IN
-      all: [],
-      filtered: []
-    };
+    const state = { selected: new Set(), all: [], filtered: [] };
 
     const el = {
       chips: document.getElementById("neighborhoodChips"),
@@ -449,86 +379,31 @@
       selectAllBtn: document.getElementById("selectAllBtn")
     };
 
-    function normalizeCity(raw) {
-      return String(raw || "").toLowerCase().trim().replace(/,+$/,"");
-    }
+    function getNeighborhood(p){ return (p.neighborhood || "").trim(); }
 
-    // 0–10 (Airtable) -> 0–5 stars, rounded to .0/.5
-    function starsFromScore10(rawScore) {
-      if (typeof rawScore !== "number" || Number.isNaN(rawScore)) return null;
-      let stars = Math.max(0, Math.min(5, rawScore / 2));
-      stars = Math.round(stars * 2) / 2;
-      return stars;
-    }
+    function getPhotoUrl(p){ return p.photo_url || null; }
 
-    function getNeighborhood(place) {
-      // compat: caso o JSON tenha vindo com chaves diferentes em alguma versão
-      return (
-        place.neighborhood ||
-        place["Neighborhood (Berlin)"] ||
-        place.Neighborhood ||
-        ""
-      ).toString().trim();
-    }
+    function getReview(p){ return (p.review || "").trim(); }
 
-    function getReview(place) {
-      return (
-        place.review ||
-        place["Changing Table Review"] ||
-        place["Changing Table Review "] ||
-        place.changing_table_review ||
-        ""
-      ).toString().trim();
-    }
+    function getTags(p){
+      const merged = [
+        ...(Array.isArray(p.changing_table_location) ? p.changing_table_location : (p.changing_table_location ? [p.changing_table_location] : [])),
+        ...(Array.isArray(p.supplies_available) ? p.supplies_available : (p.supplies_available ? [p.supplies_available] : [])),
+        ...(Array.isArray(p.changing_table_condition) ? p.changing_table_condition : (p.changing_table_condition ? [p.changing_table_condition] : [])),
+      ].map(x => String(x).trim()).filter(Boolean);
 
-    function getPhotoUrl(place) {
-      // Suporta:
-      // - place.photo_url / place.photoUrl (string)
-      // - place.Photo / place.Photos (Airtable attachment array)
-      const direct =
-        place.photo_url ||
-        place.photoUrl ||
-        place.photo ||
-        "";
-
-      if (direct && typeof direct === "string") return direct;
-
-      const att = place.Photo || place.Photos || place.photoAttachments;
-      if (Array.isArray(att) && att.length > 0) {
-        const first = att[0] || {};
-        if (first.thumbnails && first.thumbnails.large && first.thumbnails.large.url) return first.thumbnails.large.url;
-        if (first.url) return first.url;
-      }
-      return null;
-    }
-
-    function getTags(place) {
-      // 3 grupos pedidos:
-      // 1) Changing Table Location
-      // 2) Available Supplies
-      // 3) Changing Table Condition
-      const a = place.changing_table_location ?? place["Changing Table Location"] ?? [];
-      const b = place.supplies_available ?? place["Available Supplies"] ?? place["Available Suppllies"] ?? [];
-      const c = place.conditions ?? place["Changing Table Condition"] ?? [];
-
-      const toArr = (x) => Array.isArray(x) ? x : (x ? [x] : []);
-      const merged = [...toArr(a), ...toArr(b), ...toArr(c)]
-        .map(v => String(v).trim())
-        .filter(Boolean);
-
-      // remove duplicatas mantendo ordem
       const seen = new Set();
-      const unique = [];
-      for (const t of merged) {
-        const key = t.toLowerCase();
-        if (!seen.has(key)) { seen.add(key); unique.push(t); }
+      const out = [];
+      for (const t of merged){
+        const k = t.toLowerCase();
+        if (!seen.has(k)){ seen.add(k); out.push(t); }
       }
-      return unique;
+      return out;
     }
 
-    function renderChips() {
+    function renderChips(){
       el.chips.innerHTML = "";
-      neighborhoods.forEach((n) => {
+      neighborhoods.forEach(n => {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "chip";
@@ -544,12 +419,12 @@
       updateFiltersText();
     }
 
-    function toggleNeighborhood(n) {
+    function toggleNeighborhood(n){
       if (state.selected.has(n)) state.selected.delete(n);
       else state.selected.add(n);
 
       const chip = el.chips.querySelector(`[data-neighborhood="${cssEscape(n)}"]`);
-      if (chip) {
+      if (chip){
         const on = state.selected.has(n);
         chip.setAttribute("data-selected", on ? "true" : "false");
         chip.querySelector(".state").textContent = on ? "IN ✓" : "OUT";
@@ -557,80 +432,64 @@
       applyFilterAndRender();
     }
 
-    function clearAll() {
-      state.selected.clear();
-      renderChips();
-      applyFilterAndRender();
+    function clearAll(){ state.selected.clear(); renderChips(); applyFilterAndRender(); }
+    function selectAll(){ neighborhoods.forEach(n => state.selected.add(n)); renderChips(); applyFilterAndRender(); }
+
+    function updateFiltersText(){
+      if (state.selected.size === 0) el.activeFiltersText.textContent = " (showing all neighborhoods)";
+      else el.activeFiltersText.textContent = ` (filter: ${Array.from(state.selected).join(", ")})`;
     }
 
-    function selectAll() {
-      neighborhoods.forEach(n => state.selected.add(n));
-      renderChips();
-      applyFilterAndRender();
-    }
-
-    function updateFiltersText() {
-      if (state.selected.size === 0) {
-        el.activeFiltersText.textContent = " (showing all neighborhoods)";
-      } else {
-        el.activeFiltersText.textContent = ` (filter: ${Array.from(state.selected).join(", ")})`;
-      }
-    }
-
-    function showLoading(on) {
+    function showLoading(on){
       el.loading.style.display = on ? "block" : "none";
       el.grid.style.display = on ? "none" : "grid";
       el.error.style.display = "none";
     }
 
-    function showError(msg) {
+    function showError(msg){
       el.error.style.display = "block";
       el.error.textContent = msg;
       el.grid.style.display = "none";
     }
 
-    function updateCount() {
+    function updateCount(){
       el.resultsCount.textContent = String(state.filtered.length);
       updateFiltersText();
     }
 
-    function applyFilterAndRender() {
+    function applyFilterAndRender(){
       const selected = state.selected;
-
-      state.filtered = selected.size === 0
-        ? state.all.slice()
-        : state.all.filter(p => selected.has(getNeighborhood(p)));
-
+      state.filtered = selected.size === 0 ? state.all.slice() : state.all.filter(p => selected.has(getNeighborhood(p)));
       renderCards();
       updateCount();
     }
 
-    function renderCards() {
+    function renderCards(){
       el.grid.innerHTML = "";
+      el.grid.style.display = "grid";
 
-      if (state.filtered.length === 0) {
+      if (state.filtered.length === 0){
         el.grid.innerHTML = `<div class="loading-box">No results for the selected neighborhoods.</div>`;
         return;
       }
 
       const frag = document.createDocumentFragment();
-      state.filtered.forEach(place => frag.appendChild(buildCard(place)));
+      state.filtered.forEach(p => frag.appendChild(buildCard(p)));
       el.grid.appendChild(frag);
     }
 
-    function buildCard(place) {
+    function buildCard(p){
       const card = document.createElement("article");
       card.className = "place-card";
 
-      // media
       const media = document.createElement("div");
       media.className = "place-media";
-      const photoUrl = getPhotoUrl(place);
-      if (photoUrl) {
+      const photoUrl = getPhotoUrl(p);
+      if (photoUrl){
         const img = document.createElement("img");
         img.loading = "lazy";
         img.src = photoUrl;
-        img.alt = `${place.name || "Place"} changing table`;
+        img.alt = `${p.name || "Place"} changing table`;
         media.appendChild(img);
       } else {
         const span = document.createElement("span");
@@ -639,9 +498,7 @@
         media.appendChild(span);
       }
 
-      // stars + note
-      const stars = starsFromScore10(place.overall_user_experience);
-      const starsWrap = document.createElement("div");
+      const stars = (typeof p.stars === "number") ? p.stars : null;
       const starDiv = document.createElement("div");
       starDiv.className = "star-rating";
       starDiv.style.setProperty("--rating", stars || 0);
@@ -651,44 +508,38 @@
       note.className = "star-note";
       note.textContent = stars ? `${stars}/5` : "Not rated yet";
 
-      starsWrap.appendChild(starDiv);
-      starsWrap.appendChild(note);
-
-      // title
       const title = document.createElement("div");
       title.className = "place-title";
-      title.textContent = place.name || "Unnamed place";
+      title.textContent = p.name || "Unnamed place";
 
-      // meta (type + address)
       const meta = document.createElement("div");
       meta.className = "place-meta";
-      const type = (place.type || "").toString().trim();
-      const address = (place.address || "").toString().trim();
+      const type = (p.type || "").toString().trim();
+      const address = (p.address || "").toString().trim();
       meta.innerHTML = `${escapeHtml(type || "Not specified")}${address ? "<br>" + escapeHtml(address) : ""}`;
 
-      // review
-      const reviewText = getReview(place);
+      const reviewText = getReview(p);
       let quote = null;
-      if (reviewText) {
+      if (reviewText){
         quote = document.createElement("div");
         quote.className = "place-quote";
         quote.textContent = `“${reviewText}”`;
       }
 
-      // tags
-      const tags = getTags(place);
+      const tags = getTags(p);
       const tagsWrap = document.createElement("div");
       tagsWrap.className = "tags";
-      if (tags.length) {
-        tags.slice(0, 12).forEach(t => {
-          const tag = document.createElement("span");
-          tag.className = "tag";
-          tag.textContent = t;
-          tagsWrap.appendChild(tag);
-        });
-      }
+      tags.slice(0, 12).forEach(t => {
+        const tag = document.createElement("span");
+        tag.className = "tag";
+        tag.textContent = t;
+        tagsWrap.appendChild(tag);
+      });
 
       card.appendChild(media);
+      const starsWrap = document.createElement("div");
+      starsWrap.appendChild(starDiv);
+      starsWrap.appendChild(note);
       card.appendChild(starsWrap);
       card.appendChild(title);
       card.appendChild(meta);
@@ -698,38 +549,29 @@
       return card;
     }
 
-    async function load() {
+    async function load(){
       showLoading(true);
-      try {
+      try{
         const res = await fetch(DATA_URL, { cache: "no-store" });
         if (!res.ok) throw new Error(`Failed to load ${DATA_URL}: ${res.status} ${res.statusText}`);
         const data = await res.json();
-        if (!Array.isArray(data)) throw new Error("places-berlin.json is not an array.");
-
-        // Berlin only
-        const berlinOnly = data.filter(p => normalizeCity(p.city) === "berlin");
-
-        // IMPORTANT: precisamos que o neighborhood venha preenchido com os 12 Bezirke
-        // (Charlottenburg-Wilmersdorf, Mitte, etc.)
-        state.all = berlinOnly;
-
+        if (!Array.isArray(data)) throw new Error(`${DATA_URL} is not an array.`);
+        state.all = data;
         renderChips();
         applyFilterAndRender();
         showLoading(false);
-      } catch (e) {
+      } catch(e){
         showLoading(false);
         showError(e.message || String(e));
       }
     }
 
-    function escapeHtml(str) {
+    function escapeHtml(str){
       return String(str).replace(/[&<>"']/g, s => ({
         "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
       }[s]));
     }
-    function cssEscape(str) {
-      return String(str).replace(/["\\]/g, "\\$&");
-    }
+    function cssEscape(str){ return String(str).replace(/["\\]/g, "\\$&"); }
 
     el.clearBtn.addEventListener("click", clearAll);
     el.selectAllBtn.addEventListener("click", selectAll);
