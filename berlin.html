@@ -162,9 +162,6 @@
         padding: 2rem;
       }
     }
-    @media (max-width: 480px) {
-      /* nada específico aqui; mantido igual ao index */
-    }
 
     /***************************************************************
      * ====== ESTILOS ESPECÍFICOS DA PÁGINA /BERLIN ======
@@ -255,14 +252,7 @@
       flex-direction:column;
       min-height: 100%;
     }
-    .place-card img{
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-      display:block;
-    }
+
     .place-media{
       width: 100%;
       height: 240px;
@@ -279,8 +269,6 @@
       height:100%;
       object-fit:cover;
       display:block;
-      border-radius: 0;
-      margin: 0;
     }
     .no-photo{
       font-size: 0.85rem;
@@ -359,7 +347,6 @@
       <a href="submit">Submit</a>
     </nav>
 
-    <!-- SEO: H1 em alemão, mantendo site em inglês -->
     <h1>Wickeltische in Berlin</h1>
     <h2>Select one or more Berlin neighborhoods to see cafés, restaurants and public places with changing tables.</h2>
 
@@ -392,27 +379,23 @@
 
   <script>
     /*****************************************************************
-     * Neighborhood list (alphabetical)
+     * Neighborhood list (alphabetical) — MATCHES AIRTABLE EXACTLY
      *****************************************************************/
     const neighborhoods = [
-      "Charlottenburg-Wilmersdorf",
-      "Friedrichshain-Kreuzberg",
+      "Charlottenburg - Wilmersdorf",
+      "Friedrichshain",
+      "Kreuzberg",
       "Lichtenberg",
-      "Marzahn-Hellersdorf",
       "Mitte",
       "Neukölln",
-      "Pankow",
+      "Pankow - Prenzlauerberg",
       "Reinickendorf",
       "Spandau",
-      "Steglitz-Zehlendorf",
-      "Tempelhof-Schöneberg",
-      "Treptow-Köpenick"
+      "Steglitz - Zehlendorf",
+      "Tempelhof - Schöneberg",
+      "Treptow - Köpenick"
     ];
 
-    /*****************************************************************
-     * Data source (Berlin-only JSON)
-     * Use ABSOLUTE path to avoid /berlin vs /berlin/ issues.
-     *****************************************************************/
     const DATA_URL = "/places-berlin.json";
 
     const state = { selected: new Set(), all: [], filtered: [] };
@@ -521,7 +504,6 @@
     function applyFilterAndRender(){
       const selected = state.selected;
 
-      // Default: none selected -> show message (no full list)
       if (selected.size === 0) {
         state.filtered = [];
         renderEmptyState();
@@ -531,7 +513,7 @@
 
       state.filtered = state.all.filter(p => selected.has(getNeighborhood(p)));
 
-      // Order: most recent first (created_at desc)
+      // Most recent first (created_at desc)
       state.filtered.sort((a,b) => {
         const da = String(a.created_at || "");
         const db = String(b.created_at || "");
@@ -560,7 +542,6 @@
       const card = document.createElement("article");
       card.className = "place-card";
 
-      // media
       const media = document.createElement("div");
       media.className = "place-media";
       const photoUrl = getPhotoUrl(p);
@@ -577,7 +558,6 @@
         media.appendChild(span);
       }
 
-      // stars + note
       const stars = (typeof p.stars === "number") ? p.stars : null;
       const starDiv = document.createElement("div");
       starDiv.className = "star-rating";
@@ -592,19 +572,16 @@
       starsWrap.appendChild(starDiv);
       starsWrap.appendChild(note);
 
-      // title
       const title = document.createElement("div");
       title.className = "place-title";
       title.textContent = p.name || "Unnamed place";
 
-      // meta (type + address)
       const meta = document.createElement("div");
       meta.className = "place-meta";
       const type = (p.type || "").toString().trim();
       const address = (p.address || "").toString().trim();
       meta.innerHTML = `${escapeHtml(type || "Not specified")}${address ? "<br>" + escapeHtml(address) : ""}`;
 
-      // review
       const reviewText = getReview(p);
       let quote = null;
       if (reviewText){
@@ -613,7 +590,6 @@
         quote.textContent = `“${reviewText}”`;
       }
 
-      // tags
       const tags = getTags(p);
       const tagsWrap = document.createElement("div");
       tagsWrap.className = "tags";
@@ -644,10 +620,7 @@
 
         state.all = data;
         renderChips();
-
-        // Default view: none selected -> show message
         applyFilterAndRender();
-
         showLoading(false);
       } catch(e){
         showLoading(false);
