@@ -54,7 +54,6 @@ def geocode_address(address):
         print(f"[!] Geocode error for '{address}': {e}")
     return None, None
 
-
 places_all = []
 places_berlin = []
 
@@ -63,10 +62,14 @@ params = {"pageSize": 100}
 
 print("[...] Starting Airtable fetch...")
 
-# === Paginação ===
+# === Paginação dos resultados ===
 while True:
     res = requests.get(url, headers=HEADERS, params=params)
     data = res.json()
+
+    if "error" in data:
+        raise RuntimeError(f"Airtable API error: {data['error']}")
+
     records = data.get("records", [])
     print(f"[✓] Received {len(records)} records.")
 
@@ -87,9 +90,12 @@ while True:
             parts = [address, city, country]
             search_address = ", ".join(part for part in parts if part)
             lat, lon = geocode_address(search_address)
-            time.sleep(1)
+            time.sleep(1)  # evita bloqueio da API
 
-        # ⭐️ rating 0–10
+            if not lat or not lon:
+                print(f"[!] Could not geocode: {search_address}")
+
+        # ⭐️ Overall user experience (0–10)
         overall_score = fields.get("Overall user experience")
         if overall_score is not None:
             try:
@@ -98,6 +104,7 @@ while True:
                 print(f"[⚠️] Invalid score for {name}: {overall_score}")
                 overall_score = None
 
+        # 📷 Photo + Review
         photo_field = fields.get("Photo")
         review = (fields.get("Changing Table Review") or "").strip()
 
@@ -105,7 +112,10 @@ while True:
             "id": record.get("id"),
             "name": fields.get("Name", ""),
             "city": city,
+
+            # Berlin neighborhoods (Airtable field name EXACT)
             "neighborhood": (fields.get("Neighborhood (Berlin)") or "").strip(),
+
             "address": address,
             "latitude": lat,
             "longitude": lon,
@@ -127,32 +137,34 @@ while True:
             "review": review,
 
             # rating
-            "overall_user_experience": overall_score,
-            "stars": stars_from_score10(overall_score)
+            "overall_user_experience": overall_score,   # 0–10
+            "stars": stars_from_score10(overall_score)  # 0–5
         }
 
-        # adiciona ao global
         places_all.append(place)
-
-        # adiciona ao Berlin se for Berlin
         if city.lower() == "berlin":
             places_berlin.append(place)
 
+    # === Paginação ===
     if "offset" in data:
         params["offset"] = data["offset"]
         print("[⏭️] More pages to fetch...")
     else:
         break
 
-print(f"[✅] Total global places: {len(places_all)}")
-print(f"[✅] Total Berlin places: {len(places_berlin)}")
+print(f"[✅] Total global places collected: {len(places_all)}")
+print(f"[✅] Total Berlin places collected: {len(places_berlin)}")
 
-# === Exportar JSON global (mapa) ===
-with open("places.json", "w", encoding="utf-8") as f:
+# === Exportar para JSON (no diretório atual) ===
+out_global = os.path.abspath("places.json")
+out_berlin = os.path.abspath("places-berlin.json")
+
+with open(out_global, "w", encoding="utf-8") as f:
     json.dump(places_all, f, ensure_ascii=False, indent=2)
 
-# === Exportar JSON Berlin (/berlin page) ===
-with open("places-berlin.json", "w", encoding="utf-8") as f:
+with open(out_berlin, "w", encoding="utf-8") as f:
     json.dump(places_berlin, f, ensure_ascii=False, indent=2)
 
-print("[🎉] places.json (global) and places-berlin.json (Berlin only) updated successfully!")
+print("[🎉] Export done!")
+print(f"    -> {out_global}")
+print(f"    -> {out_berlin}")
