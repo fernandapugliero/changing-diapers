@@ -430,7 +430,7 @@
     /*****************************************************************
      * Data source (same JSON used by the map)
      *****************************************************************/
-    const DATA_URL = "places.json";
+    const DATA_URL = "places-berlin.json";
 
     const state = {
       selected: new Set(), // neighborhoods IN
@@ -704,7 +704,7 @@
         const res = await fetch(DATA_URL, { cache: "no-store" });
         if (!res.ok) throw new Error(`Failed to load ${DATA_URL}: ${res.status} ${res.statusText}`);
         const data = await res.json();
-        if (!Array.isArray(data)) throw new Error("places.json is not an array.");
+        if (!Array.isArray(data)) throw new Error("places-berlin.json is not an array.");
 
         // Berlin only
         const berlinOnly = data.filter(p => normalizeCity(p.city) === "berlin");
