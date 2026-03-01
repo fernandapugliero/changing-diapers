@@ -24,8 +24,8 @@
     "city": "Erfurt",
     "neighborhood": "",
     "address": "Hermsdorfer Str. 4, 99099",
-    "latitude": 50.9712945,
-    "longitude": 11.0611881,
+    "latitude": 50.9706076,
+    "longitude": 11.0603279,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -62,8 +62,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Grunerstraße 20, 10179",
-    "latitude": 52.5190723,
-    "longitude": 13.4160154,
+    "latitude": 52.5188277,
+    "longitude": 13.4165569,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -188,8 +188,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Tamara-Danz-Straße 11, 10243",
-    "latitude": 52.5064848,
-    "longitude": 13.4459175,
+    "latitude": 52.5058788,
+    "longitude": 13.4455578,
     "type": "Mall",
     "changing_table_location": [
       "hallway"
@@ -208,8 +208,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rigaer Str. 71 A, 10247",
-    "latitude": 52.5176107,
-    "longitude": 13.458197,
+    "latitude": 52.5165123,
+    "longitude": 13.462841,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -229,8 +229,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Albrechtstr. 52, 12167 Berlin",
-    "latitude": 52.4478403,
-    "longitude": 13.3402283,
+    "latitude": 52.4478999,
+    "longitude": 13.3401437,
     "type": "Restaurant",
     "changing_table_location": "",
     "supplies_available": [],
@@ -263,8 +263,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Göhrener Str. 5, 10437",
-    "latitude": 52.5415308,
-    "longitude": 13.4214264,
+    "latitude": 52.5416295,
+    "longitude": 13.4214974,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -326,8 +326,8 @@
     "city": "Lüneburg",
     "neighborhood": "",
     "address": "Heiligenthaler Str. 1, 21335",
-    "latitude": 53.2134404,
-    "longitude": 10.3611222,
+    "latitude": 53.2137577,
+    "longitude": 10.3601916,
     "type": "Park",
     "changing_table_location": "",
     "supplies_available": [],
@@ -420,8 +420,8 @@
     "city": "Landsberg",
     "neighborhood": "",
     "address": "Zörbiger Str. 17, 06188",
-    "latitude": 51.5388924,
-    "longitude": 12.1573081,
+    "latitude": 51.5391599,
+    "longitude": 12.1569538,
     "type": "Bakery",
     "changing_table_location": [
       "mixed restroom"
@@ -561,8 +561,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schloßpl. 1, 10178",
-    "latitude": 52.5152614,
-    "longitude": 13.4019087,
+    "latitude": 52.5172152,
+    "longitude": 13.4007352,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom",
@@ -658,8 +658,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Am Tierpark 41, 10319",
-    "latitude": 52.5021692,
-    "longitude": 13.5206042,
+    "latitude": 52.5001802,
+    "longitude": 13.522036,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom"
@@ -678,8 +678,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schwedter Str. 79, 10437 Berlin",
-    "latitude": 52.5476464,
-    "longitude": 13.4011426,
+    "latitude": 52.5477466,
+    "longitude": 13.4010651,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -718,8 +718,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "R. Sara Afonso, 4460-841",
-    "latitude": 41.1813648,
-    "longitude": -8.654255,
+    "latitude": 41.1802463,
+    "longitude": -8.654006,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -875,8 +875,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Dunckerstraße 85, 10437",
-    "latitude": 52.5414252,
-    "longitude": 13.4195481,
+    "latitude": 52.5414666,
+    "longitude": 13.4196034,
     "type": "Café",
     "changing_table_location": "",
     "supplies_available": [],
@@ -950,8 +950,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Alt-Mahlsdorf 85, 12623",
-    "latitude": 52.5010261,
-    "longitude": 13.6226618,
+    "latitude": 52.50364,
+    "longitude": 13.6220898,
     "type": "Store",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1007,8 +1007,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.530919,
-    "longitude": 13.4121507,
+    "latitude": 52.5308311,
+    "longitude": 13.412464,
     "type": "Restaurant",
     "changing_table_location": [
       "dedicated room"
@@ -1104,8 +1104,8 @@
     "city": "Bad Oeynhausen",
     "neighborhood": "",
     "address": "Mindener Str. 22, 32547",
-    "latitude": 52.2145928,
-    "longitude": 8.8140128,
+    "latitude": 52.2134276,
+    "longitude": 8.8112954,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -1140,8 +1140,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Bouchéstraße 12, 12435 Berlin",
-    "latitude": 52.4939788,
-    "longitude": 13.447736,
+    "latitude": 52.4936421,
+    "longitude": 13.4488785,
     "type": "Supermarket",
     "changing_table_location": [
       "mixed restroom"
@@ -1201,8 +1201,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kiehlufer 55, 12059",
-    "latitude": 52.4851268,
-    "longitude": 13.4449541,
+    "latitude": 52.4850446,
+    "longitude": 13.4450519,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -1240,8 +1240,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66, 12043",
-    "latitude": 52.4819616,
-    "longitude": 13.4327729,
+    "latitude": 52.4820109,
+    "longitude": 13.433294,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1354,8 +1354,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Samariterstraße 34A, 10247",
-    "latitude": 52.5163204,
-    "longitude": 13.4648762,
+    "latitude": 52.5162369,
+    "longitude": 13.4648502,
     "type": "Restaurant",
     "changing_table_location": [
       "men's restroom"
@@ -1493,8 +1493,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Friedrichstraße 191, 10117",
-    "latitude": 52.5107745,
-    "longitude": 13.3896707,
+    "latitude": 52.5109315,
+    "longitude": 13.3895576,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1549,8 +1549,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hardenbergpl. 11, 10623 Berlin",
-    "latitude": 52.5080757,
-    "longitude": 13.3333329,
+    "latitude": 52.5076168,
+    "longitude": 13.3328159,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1610,8 +1610,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Karl-Marx-Straße 66, 12043",
-    "latitude": 52.4819616,
-    "longitude": 13.4327729,
+    "latitude": 52.4820109,
+    "longitude": 13.433294,
     "type": "Mall",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1749,8 +1749,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Paul-Lincke-Ufer 17, 10999",
-    "latitude": 52.4933415,
-    "longitude": 13.430955,
+    "latitude": 52.4933018,
+    "longitude": 13.4311,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom",
@@ -1792,8 +1792,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Landsberger Allee 171C, 10369",
-    "latitude": 52.5324512,
-    "longitude": 13.4694831,
+    "latitude": 52.532487,
+    "longitude": 13.4694728,
     "type": "Restaurant",
     "changing_table_location": [
       "hallway"
@@ -1831,8 +1831,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Bölschestraße 25, 12587",
-    "latitude": 52.4499782,
-    "longitude": 13.6249212,
+    "latitude": 52.4499026,
+    "longitude": 13.6249229,
     "type": "Ice cream shop",
     "changing_table_location": [
       "hallway"
@@ -1871,8 +1871,8 @@
     "city": "Bad Oeynhausen",
     "neighborhood": "",
     "address": "Mindener Straße 22, 32547",
-    "latitude": 52.2134276,
-    "longitude": 8.8112954,
+    "latitude": 52.2145928,
+    "longitude": 8.8140128,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2022,8 +2022,8 @@
     "city": "Rostock",
     "neighborhood": "",
     "address": "Handwerkstraße 1, 18069",
-    "latitude": 54.1244245,
-    "longitude": 12.0735793,
+    "latitude": 54.1240673,
+    "longitude": 12.0723171,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2205,8 +2205,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Wilmersdorfer Str. 117, 10627",
-    "latitude": 52.5077136,
-    "longitude": 13.3065913,
+    "latitude": 52.50754,
+    "longitude": 13.3066375,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2277,8 +2277,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hedwig-Wachenheim-Straße 14, 10243",
-    "latitude": 52.5044294,
-    "longitude": 13.4432418,
+    "latitude": 52.5046845,
+    "longitude": 13.4426285,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -2578,8 +2578,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rudi-Dutschke-Straße 17, 10969",
-    "latitude": 52.5067214,
-    "longitude": 13.3931644,
+    "latitude": 52.5067343,
+    "longitude": 13.3941121,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -2797,8 +2797,8 @@
     "city": "Mexico City",
     "neighborhood": "",
     "address": "Av Porfirio Díaz 66, Noche Buena, Benito Juárez, 03720",
-    "latitude": 19.3800922,
-    "longitude": -99.1771339,
+    "latitude": 19.3801802,
+    "longitude": -99.1766303,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -2817,8 +2817,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kantstraße 17, 10623",
-    "latitude": 52.5060585,
-    "longitude": 13.3247627,
+    "latitude": 52.5062269,
+    "longitude": 13.3245072,
     "type": "Mall",
     "changing_table_location": [
       "women's restroom",
@@ -2995,8 +2995,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Weserstr. 175, 12045",
-    "latitude": 52.4844788,
-    "longitude": 13.4388872,
+    "latitude": 52.4846289,
+    "longitude": 13.4392789,
     "type": "Fitness Studio",
     "changing_table_location": [
       "men's restroom"
@@ -3328,8 +3328,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "R. Formosa 322, 4000-248",
-    "latitude": 41.1488261,
-    "longitude": -8.6081015,
+    "latitude": 41.1486748,
+    "longitude": -8.607465,
     "type": "Food court",
     "changing_table_location": [
       "women's restroom",
@@ -3365,8 +3365,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Friedrichstraße 191",
-    "latitude": 52.5110708,
-    "longitude": 13.3893114,
+    "latitude": 52.5107745,
+    "longitude": 13.3896707,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3383,8 +3383,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Kiehlufer 55, 12059",
-    "latitude": 52.4851268,
-    "longitude": 13.4449541,
+    "latitude": 52.4850446,
+    "longitude": 13.4450519,
     "type": "Café",
     "changing_table_location": "",
     "supplies_available": [],
@@ -3437,8 +3437,8 @@
     "city": "Porto Alegre",
     "neighborhood": "",
     "address": "Av. Severo Dullius 90010, 90200-310",
-    "latitude": -29.9891941,
-    "longitude": -51.1682086,
+    "latitude": -29.988797,
+    "longitude": -51.1677932,
     "type": "Airport",
     "changing_table_location": [
       "women's restroom"
@@ -3536,8 +3536,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Samariterstraße 34A, 10247",
-    "latitude": 52.5163204,
-    "longitude": 13.4648762,
+    "latitude": 52.5162369,
+    "longitude": 13.4648502,
     "type": "Restaurant",
     "changing_table_location": [
       "men's restroom"
@@ -3650,8 +3650,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 9, 10119",
-    "latitude": 52.5298245,
-    "longitude": 13.4112754,
+    "latitude": 52.5301311,
+    "longitude": 13.4109881,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3712,8 +3712,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Hobrechtstraße 32, 12047",
-    "latitude": 52.4920006,
-    "longitude": 13.4262918,
+    "latitude": 52.4920373,
+    "longitude": 13.4268288,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -4061,8 +4061,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.530919,
-    "longitude": 13.4121507,
+    "latitude": 52.5308311,
+    "longitude": 13.412464,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
@@ -4120,8 +4120,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Bergmannstraße 26, 10961 Berlin",
-    "latitude": 52.4888292,
-    "longitude": 13.3950244,
+    "latitude": 52.4888555,
+    "longitude": 13.3950143,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -4138,8 +4138,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Potsdamer Str. 203, 10783",
-    "latitude": 52.4917687,
-    "longitude": 13.3611473,
+    "latitude": 52.4914835,
+    "longitude": 13.3611765,
     "type": "Restaurant",
     "changing_table_location": "",
     "supplies_available": [],
@@ -4214,8 +4214,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Eisenbahnstraße 48, 10997",
-    "latitude": 52.501079,
-    "longitude": 13.4310577,
+    "latitude": 52.5010414,
+    "longitude": 13.4310567,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -4254,8 +4254,8 @@
     "city": "Berlin ",
     "neighborhood": "",
     "address": "Schloßstraße 95, 12163",
-    "latitude": 52.4584189,
-    "longitude": 13.3225704,
+    "latitude": 52.4584247,
+    "longitude": 13.3226405,
     "type": "Store",
     "changing_table_location": [
       "hallway"
@@ -4292,8 +4292,8 @@
     "city": "Porto Alegre",
     "neighborhood": "",
     "address": "Av Assis Brasil 5737",
-    "latitude": -29.998277,
-    "longitude": -51.1317387,
+    "latitude": -29.9941882,
+    "longitude": -51.1293448,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
@@ -4429,8 +4429,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Herrfurthstraße 21, 12049",
-    "latitude": 52.4767265,
-    "longitude": 13.4200344,
+    "latitude": 52.4766888,
+    "longitude": 13.4198521,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -4682,8 +4682,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.4410789,
-    "longitude": 13.5879868,
+    "latitude": 52.4410911,
+    "longitude": 13.5886076,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
@@ -4860,8 +4860,8 @@
     "city": "Schönefeld",
     "neighborhood": "",
     "address": "Melli-Beese-Ring 1, 12529",
-    "latitude": 52.3646011,
-    "longitude": 13.509425,
+    "latitude": 52.3631004,
+    "longitude": 13.508062,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -4998,8 +4998,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "Rua de D. Manuel II 21, 4050-239",
-    "latitude": 41.1475849,
-    "longitude": -8.6219491,
+    "latitude": 41.1483645,
+    "longitude": -8.6245451,
     "type": "Institution",
     "changing_table_location": [
       "wheelchair restroom"
@@ -5216,8 +5216,8 @@
     "city": "Erfurt",
     "neighborhood": "",
     "address": "Hermsdorfer Str. 4, 99099",
-    "latitude": 50.9712945,
-    "longitude": 11.0611881,
+    "latitude": 50.9707748,
+    "longitude": 11.0597322,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -5289,8 +5289,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Dunckerstraße 72, 10437",
-    "latitude": 52.5442346,
-    "longitude": 13.4220906,
+    "latitude": 52.544327,
+    "longitude": 13.4221772,
     "type": "Café",
     "changing_table_location": "",
     "supplies_available": [],
@@ -5446,8 +5446,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Rigaer Straße 67",
-    "latitude": 52.5158676,
-    "longitude": 13.4686052,
+    "latitude": 52.5159393,
+    "longitude": 13.4684513,
     "type": "Store",
     "changing_table_location": [
       "sales area"
