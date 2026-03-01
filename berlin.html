@@ -73,32 +73,12 @@
       text-align: center;
       line-height: 1.2;
     }
-    /* subtítulo da hero */
     h2 {
       font-size: 1.1rem;
       font-weight: 400;
       color: #666;
       margin: 0 0 2rem 0;
       text-align: center;
-      line-height: 1.4;
-    }
-
-    /* ===== Parágrafos e notas ===== */
-    p {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-    p strong {
-      font-weight: 600;
-    }
-    .top5-explanation {
-      font-size: 0.85rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
       line-height: 1.4;
     }
 
@@ -115,9 +95,7 @@
       letter-spacing: 2px;
       margin-top: 4px;
     }
-    .star-rating.is-empty::after {
-      width: 0;
-    }
+    .star-rating.is-empty::after { width: 0; }
     .star-note {
       display: inline-block;
       font-size: 12px;
@@ -125,10 +103,7 @@
       margin-left: 6px;
       vertical-align: middle;
     }
-    .star-rating::before {
-      content: "★★★★★";
-      color: var(--star-color);
-    }
+    .star-rating::before { content: "★★★★★"; color: var(--star-color); }
     .star-rating::after {
       content: "★★★★★";
       color: var(--star-fill);
@@ -152,23 +127,39 @@
       color: #0070f3;
       text-decoration: none;
     }
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a:hover { text-decoration: underline; }
 
-    /* ===== Responsivo ===== */
     @media (max-width: 768px) {
-      body {
-        padding: 2rem;
-      }
+      body { padding: 2rem; }
     }
 
     /***************************************************************
-     * ====== ESTILOS ESPECÍFICOS DA PÁGINA /BERLIN ======
+     * ====== /BERLIN ======
      ***************************************************************/
     .filters-wrap{
       max-width: 980px;
-      margin: 0 auto 1.5rem auto;
+      margin: 0 auto 1rem auto;
+    }
+
+    /* Mobile: botão para abrir/fechar filtros */
+    .filters-toggle{
+      display: none;
+      margin: 0 auto 0.75rem auto;
+      height: 38px;
+      padding: 0 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #f7f7f7;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+    .filters-toggle:hover{ background:#efefef; }
+
+    .filters-panel{
+      /* Desktop: sempre aberto */
+      display: block;
     }
 
     .filters-actions{
@@ -197,10 +188,10 @@
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
     }
 
-    /* Chips selecionáveis (cinza default, verde quando ativo) */
+    /* Chips */
     .chip{
       display:flex;
       align-items:center;
@@ -221,14 +212,36 @@
       color: #fff;
     }
 
+    /* ✅ Mobile: chips menores para caber melhor */
+    @media (max-width: 520px){
+      .chip-grid{ gap: 8px; }
+      .chip{
+        padding: 8px 10px;
+        font-size: 13px;
+      }
+      .btn-small{
+        height: 34px;
+        font-size: 12.5px;
+      }
+      .filters-toggle{
+        display: block; /* aparece no mobile */
+      }
+      /* por padrão no mobile, filtros ficam FECHADOS */
+      .filters-panel{
+        display: none;
+      }
+      .filters-wrap[data-open="true"] .filters-panel{
+        display: block;
+      }
+    }
+
     .results-line{
       text-align:center;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
       color:#555;
       font-size: .95rem;
     }
 
-    /* Cards: 3 colunas no desktop, 1 no mobile */
     .cards-grid{
       display:grid;
       grid-template-columns: 1fr;
@@ -236,9 +249,7 @@
       margin-top: 1.25rem;
     }
     @media (min-width: 768px){
-      .cards-grid{
-        grid-template-columns: repeat(3, 1fr);
-      }
+      .cards-grid{ grid-template-columns: repeat(3, 1fr); }
     }
 
     .place-card{
@@ -270,10 +281,7 @@
       object-fit:cover;
       display:block;
     }
-    .no-photo{
-      font-size: 0.85rem;
-      color:#777;
-    }
+    .no-photo{ font-size: 0.85rem; color:#777; }
 
     .place-title{
       font-size: 1rem;
@@ -282,7 +290,6 @@
       text-align:left;
       margin: 0.25rem 0 0.15rem 0;
     }
-
     .place-quote{
       font-size: 0.85rem;
       color: #555;
@@ -291,7 +298,6 @@
       text-align:left;
       line-height: 1.35;
     }
-
     .place-meta{
       font-size: 0.8rem;
       color:#777;
@@ -322,7 +328,7 @@
       border: 1px dashed rgba(0,0,0,0.2);
       border-radius: 12px;
       padding: 12px;
-      text-align:center;
+      text-align:center; /* ✅ centralizado */
       color:#666;
     }
     .error-box{
@@ -350,17 +356,22 @@
     <h1>Changing Tables in Berlin</h1>
     <h2>Select one or more Berlin neighborhoods to see cafés, restaurants and public places with changing tables.</h2>
 
-    <section class="filters-wrap" aria-label="Neighborhood filters">
-      <div class="chip-grid" id="neighborhoodChips"></div>
+    <section class="filters-wrap" id="filtersWrap" data-open="false" aria-label="Neighborhood filters">
+      <!-- Mobile toggle -->
+      <button class="filters-toggle" id="filtersToggle" type="button">Filters</button>
 
-      <div class="filters-actions">
-        <button class="btn-small" id="selectAllBtn" type="button">Select all</button>
-        <button class="btn-small" id="clearBtn" type="button">Clear</button>
-      </div>
+      <div class="filters-panel" id="filtersPanel">
+        <div class="chip-grid" id="neighborhoodChips"></div>
 
-      <div class="results-line">
-        <strong id="resultsCount">0</strong> places
-        <span id="activeFiltersText"></span>
+        <div class="filters-actions">
+          <button class="btn-small" id="selectAllBtn" type="button">Select all</button>
+          <button class="btn-small" id="clearBtn" type="button">Clear</button>
+        </div>
+
+        <div class="results-line">
+          <strong id="resultsCount">0</strong> places
+          <span id="activeFiltersText"></span>
+        </div>
       </div>
     </section>
 
@@ -378,9 +389,6 @@
   </div>
 
   <script>
-    /*****************************************************************
-     * Neighborhood list (alphabetical) — MATCHES AIRTABLE EXACTLY
-     *****************************************************************/
     const neighborhoods = [
       "Charlottenburg - Wilmersdorf",
       "Friedrichshain",
@@ -400,7 +408,14 @@
 
     const state = { selected: new Set(), all: [], filtered: [] };
 
+    // Default: ALL neighborhoods selected
+    neighborhoods.forEach(n => state.selected.add(n));
+
     const el = {
+      filtersWrap: document.getElementById("filtersWrap"),
+      filtersToggle: document.getElementById("filtersToggle"),
+      filtersPanel: document.getElementById("filtersPanel"),
+
       chips: document.getElementById("neighborhoodChips"),
       grid: document.getElementById("cardsGrid"),
       loading: document.getElementById("loading"),
@@ -410,6 +425,10 @@
       clearBtn: document.getElementById("clearBtn"),
       selectAllBtn: document.getElementById("selectAllBtn")
     };
+
+    function isMobile(){
+      return window.matchMedia && window.matchMedia("(max-width: 520px)").matches;
+    }
 
     function getNeighborhood(p){ return (p.neighborhood || "").trim(); }
     function getPhotoUrl(p){ return p.photo_url || null; }
@@ -472,6 +491,8 @@
     function updateFiltersText(){
       if (state.selected.size === 0) {
         el.activeFiltersText.textContent = "";
+      } else if (state.selected.size === neighborhoods.length) {
+        el.activeFiltersText.textContent = " (all neighborhoods)";
       } else {
         el.activeFiltersText.textContent = ` (filter: ${Array.from(state.selected).join(", ")})`;
       }
@@ -610,6 +631,19 @@
       return card;
     }
 
+    // Mobile filters toggle
+    function syncFiltersToggleLabel(){
+      if (!isMobile()) return;
+      const open = el.filtersWrap.getAttribute("data-open") === "true";
+      el.filtersToggle.textContent = open ? "Hide filters" : "Filters";
+    }
+
+    function toggleFiltersPanel(){
+      const open = el.filtersWrap.getAttribute("data-open") === "true";
+      el.filtersWrap.setAttribute("data-open", open ? "false" : "true");
+      syncFiltersToggleLabel();
+    }
+
     async function load(){
       showLoading(true);
       try{
@@ -619,8 +653,16 @@
         if (!Array.isArray(data)) throw new Error(`${DATA_URL} is not an array.`);
 
         state.all = data;
+
         renderChips();
         applyFilterAndRender();
+
+        // Mobile: start with filters closed (cards visible first)
+        if (isMobile()){
+          el.filtersWrap.setAttribute("data-open", "false");
+          syncFiltersToggleLabel();
+        }
+
         showLoading(false);
       } catch(e){
         showLoading(false);
@@ -639,6 +681,9 @@
 
     el.clearBtn.addEventListener("click", clearAll);
     el.selectAllBtn.addEventListener("click", selectAll);
+
+    el.filtersToggle.addEventListener("click", toggleFiltersPanel);
+    window.addEventListener("resize", syncFiltersToggleLabel);
 
     load();
   </script>
