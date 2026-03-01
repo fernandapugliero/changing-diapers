@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fix My Diaper: Find Baby-Friendly Places with Changing Tables in Berlin</title>
-  <meta name="description" content="Find the best baby-friendly places with changing tables (Wickeltische) in Berlin. Entdecke kinderfreundliche Orte mit Wickeltischen in Berlin und hilf anderen Eltern, gute Wickelplätze zu finden.">
-  <meta name="keywords" content="diaper changing, changing tables in Berlin, Wickeltisch, Wickeltische Berlin, Wickelplatz, Wickelräume, babyfreundliche Orte, familienfreundliche Cafés">
+  <meta name="description" content="Find the best baby-friendly places with changing tables in Berlin. Filter by neighborhood to discover cafés, restaurants and public places with diaper changing facilities.">
+  <meta name="keywords" content="diaper changing, changing tables in Berlin, changing table Berlin, baby-friendly places Berlin, diaper changing station Berlin">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables">
-  <meta property="og:description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
+  <meta property="og:title" content="Changing Tables in Berlin | Fix My Diaper">
+  <meta property="og:description" content="Browse baby-friendly places with changing tables across Berlin. Filter by neighborhood to find cafés, restaurants and public places.">
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
-  <meta property="og:url" content="https://fixmydiaper.com">
+  <meta property="og:url" content="https://fixmydiaper.com/berlin.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fix My Diaper: Find Baby-Friendly Places with Changing Tables">
-  <meta name="twitter:description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
+  <meta name="twitter:title" content="Changing Tables in Berlin | Fix My Diaper">
+  <meta name="twitter:description" content="Browse baby-friendly places with changing tables across Berlin. Filter by neighborhood to find cafés, restaurants and public places.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <!-- Google tag (gtag.js) -->
@@ -40,8 +40,6 @@
       background: #fff;
       color: #333;
     }
-
-    /* Container central */
     .page {
       max-width: 1200px;
       margin: 0 auto;
@@ -77,9 +75,17 @@
       font-size: 1.1rem;
       font-weight: 400;
       color: #666;
-      margin: 0 0 2rem 0;
+      margin: 0 0 1rem 0;
       text-align: center;
       line-height: 1.4;
+    }
+    .intro {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
     }
 
     /* ===== ⭐ RATING STARS ===== */
@@ -129,37 +135,39 @@
     }
     footer a:hover { text-decoration: underline; }
 
-    @media (max-width: 768px) {
-      body { padding: 2rem; }
-    }
-
-    /***************************************************************
-     * ====== /BERLIN ======
-     ***************************************************************/
+    /************ Filters ************/
     .filters-wrap{
       max-width: 980px;
-      margin: 0 auto 1rem auto;
+      margin: 0 auto 1.25rem auto;
     }
-
-    /* Mobile: botão para abrir/fechar filtros */
-    .filters-toggle{
-      display: none;
-      margin: 0 auto 0.75rem auto;
-      height: 38px;
-      padding: 0 14px;
+    .chip-grid{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 0.75rem;
+    }
+    .chip{
+      display:flex;
+      align-items:center;
       border: 1px solid #ddd;
-      border-radius: 10px;
+      border-radius: 999px;
+      padding: 10px 14px;
       background: #f7f7f7;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 600;
+      cursor:pointer;
+      font: inherit;
       color: #333;
+      user-select:none;
+      transition: background .15s ease, border-color .15s ease, color .15s ease;
+      font-size: 14px;
+      line-height: 1;
+      white-space: nowrap;
     }
-    .filters-toggle:hover{ background:#efefef; }
-
-    .filters-panel{
-      /* Desktop: sempre aberto */
-      display: block;
+    .chip:hover{ background:#efefef; }
+    .chip[data-selected="true"]{
+      background: #1f9d55;
+      border-color: #1f9d55;
+      color: #fff;
     }
 
     .filters-actions{
@@ -169,7 +177,6 @@
       flex-wrap: wrap;
       margin-top: .75rem;
     }
-
     .btn-small{
       height: 36px;
       padding: 0 12px;
@@ -183,58 +190,6 @@
     }
     .btn-small:hover{ background:#efefef; }
 
-    .chip-grid{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 0.75rem;
-    }
-
-    /* Chips */
-    .chip{
-      display:flex;
-      align-items:center;
-      border: 1px solid #ddd;
-      border-radius: 999px;
-      padding: 10px 14px;
-      background: #f7f7f7;
-      cursor:pointer;
-      font: inherit;
-      color: #333;
-      user-select:none;
-      transition: background .15s ease, border-color .15s ease, color .15s ease;
-    }
-    .chip:hover{ background:#efefef; }
-    .chip[data-selected="true"]{
-      background: #1f9d55;
-      border-color: #1f9d55;
-      color: #fff;
-    }
-
-    /* ✅ Mobile: chips menores para caber melhor */
-    @media (max-width: 520px){
-      .chip-grid{ gap: 8px; }
-      .chip{
-        padding: 8px 10px;
-        font-size: 13px;
-      }
-      .btn-small{
-        height: 34px;
-        font-size: 12.5px;
-      }
-      .filters-toggle{
-        display: block; /* aparece no mobile */
-      }
-      /* por padrão no mobile, filtros ficam FECHADOS */
-      .filters-panel{
-        display: none;
-      }
-      .filters-wrap[data-open="true"] .filters-panel{
-        display: block;
-      }
-    }
-
     .results-line{
       text-align:center;
       margin-top: 0.75rem;
@@ -242,6 +197,25 @@
       font-size: .95rem;
     }
 
+    /* ✅ Mobile: chips + buttons menores */
+    @media (max-width: 520px){
+      .chip-grid{ gap: 6px; }
+      .chip{
+        padding: 7px 9px;
+        font-size: 12.5px;
+        border-radius: 999px;
+      }
+      .btn-small{
+        height: 32px;
+        font-size: 12px;
+        padding: 0 10px;
+      }
+      .results-line{
+        font-size: 0.9rem;
+      }
+    }
+
+    /************ Cards ************/
     .cards-grid{
       display:grid;
       grid-template-columns: 1fr;
@@ -263,7 +237,6 @@
       flex-direction:column;
       min-height: 100%;
     }
-
     .place-media{
       width: 100%;
       height: 240px;
@@ -281,7 +254,10 @@
       object-fit:cover;
       display:block;
     }
-    .no-photo{ font-size: 0.85rem; color:#777; }
+    .no-photo{
+      font-size: 0.85rem;
+      color:#777;
+    }
 
     .place-title{
       font-size: 1rem;
@@ -328,7 +304,7 @@
       border: 1px dashed rgba(0,0,0,0.2);
       border-radius: 12px;
       padding: 12px;
-      text-align:center; /* ✅ centralizado */
+      text-align:center;
       color:#666;
     }
     .error-box{
@@ -356,22 +332,21 @@
     <h1>Changing Tables in Berlin</h1>
     <h2>Select one or more Berlin neighborhoods to see cafés, restaurants and public places with changing tables.</h2>
 
-    <section class="filters-wrap" id="filtersWrap" data-open="false" aria-label="Neighborhood filters">
-      <!-- Mobile toggle -->
-      <button class="filters-toggle" id="filtersToggle" type="button">Filters</button>
+    <p class="intro">
+      Browse baby-friendly places with changing tables across Berlin. Filter by neighborhood to discover cafés, restaurants and public locations — updated regularly by parents.
+    </p>
 
-      <div class="filters-panel" id="filtersPanel">
-        <div class="chip-grid" id="neighborhoodChips"></div>
+    <section class="filters-wrap" aria-label="Neighborhood filters">
+      <div class="chip-grid" id="neighborhoodChips"></div>
 
-        <div class="filters-actions">
-          <button class="btn-small" id="selectAllBtn" type="button">Select all</button>
-          <button class="btn-small" id="clearBtn" type="button">Clear</button>
-        </div>
+      <div class="filters-actions">
+        <button class="btn-small" id="selectAllBtn" type="button">Select all</button>
+        <button class="btn-small" id="clearBtn" type="button">Clear</button>
+      </div>
 
-        <div class="results-line">
-          <strong id="resultsCount">0</strong> places
-          <span id="activeFiltersText"></span>
-        </div>
+      <div class="results-line">
+        <strong id="resultsCount">0</strong> places
+        <span id="activeFiltersText"></span>
       </div>
     </section>
 
@@ -389,19 +364,23 @@
   </div>
 
   <script>
+    /*****************************************************************
+     * Neighborhood list — MATCHES AIRTABLE EXACTLY
+     * Optimized order for mobile packing (shorter labels first).
+     *****************************************************************/
     const neighborhoods = [
-      "Charlottenburg - Wilmersdorf",
-      "Friedrichshain",
-      "Kreuzberg",
-      "Lichtenberg",
       "Mitte",
-      "Neukölln",
       "Pankow - Prenzlauerberg",
-      "Reinickendorf",
+      "Neukölln",
+      "Kreuzberg",
+      "Friedrichshain",
       "Spandau",
-      "Steglitz - Zehlendorf",
+      "Lichtenberg",
+      "Reinickendorf",
+      "Treptow - Köpenick",
       "Tempelhof - Schöneberg",
-      "Treptow - Köpenick"
+      "Steglitz - Zehlendorf",
+      "Charlottenburg - Wilmersdorf"
     ];
 
     const DATA_URL = "/places-berlin.json";
@@ -412,10 +391,6 @@
     neighborhoods.forEach(n => state.selected.add(n));
 
     const el = {
-      filtersWrap: document.getElementById("filtersWrap"),
-      filtersToggle: document.getElementById("filtersToggle"),
-      filtersPanel: document.getElementById("filtersPanel"),
-
       chips: document.getElementById("neighborhoodChips"),
       grid: document.getElementById("cardsGrid"),
       loading: document.getElementById("loading"),
@@ -425,10 +400,6 @@
       clearBtn: document.getElementById("clearBtn"),
       selectAllBtn: document.getElementById("selectAllBtn")
     };
-
-    function isMobile(){
-      return window.matchMedia && window.matchMedia("(max-width: 520px)").matches;
-    }
 
     function getNeighborhood(p){ return (p.neighborhood || "").trim(); }
     function getPhotoUrl(p){ return p.photo_url || null; }
@@ -631,19 +602,6 @@
       return card;
     }
 
-    // Mobile filters toggle
-    function syncFiltersToggleLabel(){
-      if (!isMobile()) return;
-      const open = el.filtersWrap.getAttribute("data-open") === "true";
-      el.filtersToggle.textContent = open ? "Hide filters" : "Filters";
-    }
-
-    function toggleFiltersPanel(){
-      const open = el.filtersWrap.getAttribute("data-open") === "true";
-      el.filtersWrap.setAttribute("data-open", open ? "false" : "true");
-      syncFiltersToggleLabel();
-    }
-
     async function load(){
       showLoading(true);
       try{
@@ -656,12 +614,6 @@
 
         renderChips();
         applyFilterAndRender();
-
-        // Mobile: start with filters closed (cards visible first)
-        if (isMobile()){
-          el.filtersWrap.setAttribute("data-open", "false");
-          syncFiltersToggleLabel();
-        }
 
         showLoading(false);
       } catch(e){
@@ -681,9 +633,6 @@
 
     el.clearBtn.addEventListener("click", clearAll);
     el.selectAllBtn.addEventListener("click", selectAll);
-
-    el.filtersToggle.addEventListener("click", toggleFiltersPanel);
-    window.addEventListener("resize", syncFiltersToggleLabel);
 
     load();
   </script>
