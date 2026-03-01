@@ -3,18 +3,18 @@
 <head>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fix My Diaper: Find Baby-Friendly Places with Changing Tables in Berlin</title>
-  <meta name="description" content="Find the best baby-friendly places with changing tables in Berlin. Filter by neighborhood to discover cafés, restaurants and public places with diaper changing facilities.">
+  <title>Changing Tables in Berlin | Fix My Diaper</title>
+  <meta name="description" content="Find baby-friendly places with changing tables in Berlin. Filter by neighborhood to discover cafés, restaurants and public places with diaper changing facilities.">
   <meta name="keywords" content="diaper changing, changing tables in Berlin, changing table Berlin, baby-friendly places Berlin, diaper changing station Berlin">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="Changing Tables in Berlin | Fix My Diaper">
-  <meta property="og:description" content="Browse baby-friendly places with changing tables across Berlin. Filter by neighborhood to find cafés, restaurants and public places.">
+  <meta property="og:description" content="Find baby-friendly places with changing tables in Berlin. Filter by neighborhood to discover cafés, restaurants and public places.">
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url" content="https://fixmydiaper.com/berlin.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Changing Tables in Berlin | Fix My Diaper">
-  <meta name="twitter:description" content="Browse baby-friendly places with changing tables across Berlin. Filter by neighborhood to find cafés, restaurants and public places.">
+  <meta name="twitter:description" content="Find baby-friendly places with changing tables in Berlin. Filter by neighborhood to discover cafés, restaurants and public places.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <!-- Google tag (gtag.js) -->
@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== Base ===== */
+    /* ===== Base (same vibe as index) ===== */
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -45,7 +45,7 @@
       margin: 0 auto;
     }
 
-    /* ===== Navegação ===== */
+    /* ===== Navegação (copied from index) ===== */
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
@@ -64,7 +64,7 @@
       color: inherit;
     }
 
-    /* ===== Títulos ===== */
+    /* ===== Títulos (same as index) ===== */
     h1 {
       font-size: 2rem;
       margin: 0 0 0.5rem 0;
@@ -75,20 +75,48 @@
       font-size: 1.1rem;
       font-weight: 400;
       color: #666;
-      margin: 0 0 1rem 0;
+      margin: 0 0 1.15rem 0;
       text-align: center;
       line-height: 1.4;
     }
-    .intro {
+
+    /* ===== Section title + subtitle (copied from index styles) ===== */
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #444;
       text-align: center;
-      max-width: 850px;
-      margin: 0 auto 1.5rem auto;
+      margin-top: 3rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .section-subtitle {
       font-size: 0.95rem;
       color: #555;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
       line-height: 1.5;
     }
 
-    /* ===== ⭐ RATING STARS ===== */
+    /* ===== Parágrafos e notas (copied from index) ===== */
+    p {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+    p strong { font-weight: 600; }
+    .top5-explanation {
+      font-size: 0.85rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+
+    /* ===== ⭐ RATING STARS (copied from index) ===== */
     .star-rating {
       --rating: 0;
       --star-color: #e0e0e0;
@@ -122,44 +150,31 @@
       pointer-events: none;
     }
 
-    /* ===== Rodapé ===== */
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    footer a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-    footer a:hover { text-decoration: underline; }
-
-    /************ Filters ************/
+    /* ===== Filters ===== */
     .filters-wrap{
       max-width: 980px;
-      margin: 0 auto 1.25rem auto;
+      margin: 0 auto 1rem auto;
     }
     .chip-grid{
       display:flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       justify-content: center;
-      margin-top: 0.75rem;
+      margin-top: 0.25rem;   /* tighter so cards show sooner */
     }
     .chip{
       display:flex;
       align-items:center;
       border: 1px solid #ddd;
       border-radius: 999px;
-      padding: 10px 14px;
+      padding: 9px 12px;
       background: #f7f7f7;
       cursor:pointer;
       font: inherit;
       color: #333;
       user-select:none;
       transition: background .15s ease, border-color .15s ease, color .15s ease;
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1;
       white-space: nowrap;
     }
@@ -175,10 +190,10 @@
       gap: 8px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: .75rem;
+      margin-top: .6rem;
     }
     .btn-small{
-      height: 36px;
+      height: 34px;
       padding: 0 12px;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -192,35 +207,40 @@
 
     .results-line{
       text-align:center;
-      margin-top: 0.75rem;
+      margin-top: 0.55rem;
       color:#555;
-      font-size: .95rem;
+      font-size: .93rem;
     }
 
-    /* ✅ Mobile: chips + buttons menores */
-    @media (max-width: 520px){
-      .chip-grid{ gap: 6px; }
+    /* ✅ iPhone 16-ish tuning (393px wide) */
+    @media (max-width: 430px){
+      body { padding: 1.6rem; }
+
+      /* bring cards up */
+      h2 { margin-bottom: 0.95rem; }
+
+      .chip-grid{ gap: 5px; }
       .chip{
-        padding: 7px 9px;
-        font-size: 12.5px;
-        border-radius: 999px;
+        padding: 6px 8px;
+        font-size: 12px;
       }
+
+      .filters-actions{ margin-top: 0.5rem; }
       .btn-small{
-        height: 32px;
+        height: 31px;
         font-size: 12px;
         padding: 0 10px;
       }
-      .results-line{
-        font-size: 0.9rem;
-      }
+
+      .results-line{ margin-top: 0.45rem; font-size: 0.9rem; }
     }
 
-    /************ Cards ************/
+    /* ===== Cards (same behavior you wanted) ===== */
     .cards-grid{
       display:grid;
       grid-template-columns: 1fr;
       gap: 1rem;
-      margin-top: 1.25rem;
+      margin-top: 0.95rem;
     }
     @media (min-width: 768px){
       .cards-grid{ grid-template-columns: repeat(3, 1fr); }
@@ -254,10 +274,7 @@
       object-fit:cover;
       display:block;
     }
-    .no-photo{
-      font-size: 0.85rem;
-      color:#777;
-    }
+    .no-photo{ font-size: 0.85rem; color:#777; }
 
     .place-title{
       font-size: 1rem;
@@ -317,11 +334,29 @@
       text-align:left;
       color:#8a2b2b;
     }
+
+    /* ===== FAQ (same as index behavior) ===== */
+    #faq { margin-top: 3rem; }
+    #faq p { text-align: left; }
+
+    /* ===== Rodapé (copied from index) ===== */
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 
 <body>
   <div class="page">
+    <!-- ✅ NAV EXACT AS INDEX -->
     <nav>
       <img src="images/logo.png" alt="Fix My Diaper Logo">
       <a href="https://fixmydiaper.com/">Map</a>
@@ -330,7 +365,7 @@
     </nav>
 
     <h1>Changing Tables in Berlin</h1>
-    <h2>Find baby-friendly places with changing tables across Berlin.</h2>
+    <h2>Filter by neighborhood to browse cafés, restaurants and public places with changing tables.</h2>
 
     <section class="filters-wrap" aria-label="Neighborhood filters">
       <div class="chip-grid" id="neighborhoodChips"></div>
@@ -350,21 +385,37 @@
     <div id="error" class="error-box" style="display:none;"></div>
     <section id="cardsGrid" class="cards-grid" style="display:none;" aria-label="Places list"></section>
 
-    <section class="seo-text">
-  <h2 class="section-title">Where to Find Changing Tables in Berlin</h2>
+    <!-- ✅ FAQ at the end, same style/format as index -->
+    <section id="faq">
+      <h2 class="section-title">FAQ: Changing Tables in Berlin</h2>
 
-  <p>
-    Berlin offers a growing number of baby-friendly places with diaper changing facilities. 
-    From cafés and restaurants to shopping centers and public buildings, parents can find 
-    changing tables across many neighborhoods including Mitte, Neukölln, Friedrichshain and more.
-  </p>
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>Where can I find baby changing tables in Berlin?</strong><br>
+        You can find changing tables across Berlin in cafés, restaurants, shopping centers, museums and public restrooms. Fix My Diaper is updated regularly by parents, so you can quickly discover baby-friendly places nearby.
+      </p>
 
-  <p>
-    Fix My Diaper helps families discover verified locations with reviews, photos and ratings 
-    submitted by other parents.
-  </p>
-</section>
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>How do I use the neighborhood filters?</strong><br>
+        Tap one or more neighborhoods to refine the list. You can select multiple areas at the same time, or use “Select all” and “Clear” to manage filters quickly.
+      </p>
 
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>Do Berlin cafés or restaurants usually have changing tables?</strong><br>
+        Some do, but it’s not universal. The list includes community-submitted reviews, photos and notes so you can pick the best option for your needs.
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>Are the ratings on Fix My Diaper reliable?</strong><br>
+        Ratings reflect user-submitted experiences, and new places are added regularly. If a place has no rating yet, it will show “Not rated yet.”
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem;">
+        <strong>Can I add a new location?</strong><br>
+        Yes! Use the <a href="submit">Submit</a> page to add a new place and help other parents in Berlin.
+      </p>
+    </section>
+
+    <!-- ✅ FOOTER EXACT AS INDEX -->
     <footer>
       <a href="about">About</a> | 
       <a href="submit">Submit a Location</a> |
@@ -376,18 +427,18 @@
 
   <script>
     /*****************************************************************
-     * Neighborhood list — MATCHES AIRTABLE EXACTLY
-     * Optimized order for mobile packing (shorter labels first).
+     * Neighborhood list — MUST MATCH AIRTABLE VALUES EXACTLY
+     * Order optimized for iPhone packing (no abbreviations).
      *****************************************************************/
     const neighborhoods = [
       "Mitte",
-      "Pankow - Prenzlauerberg",
       "Neukölln",
       "Kreuzberg",
       "Friedrichshain",
       "Spandau",
       "Lichtenberg",
       "Reinickendorf",
+      "Pankow - Prenzlauerberg",
       "Treptow - Köpenick",
       "Tempelhof - Schöneberg",
       "Steglitz - Zehlendorf",
