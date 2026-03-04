@@ -246,38 +246,45 @@ footer a:hover {
     width: 30%; /* Menor largura para campos e botões no desktop */
     margin: 8px; /* Ajuste no espaçamento */
   }
-/* ===== Minimal Berlin banner ===== */
+/* =========================================================
+   Berlin minimal banner (INDEX) — FINAL ABSOLUTO DO ARQUIVO
+   ========================================================= */
 
+/* wrapper spacing */
 .berlin-banner-min{
   margin: 2.2rem 0 2.6rem 0;
 }
 
-/* main container */
-.berlin-banner-min__inner{
-  background:#fff;
-  border:1px solid rgba(0,0,0,0.75);
-  border-radius:16px;
+/* main card */
+.berlin-banner-min .berlin-banner-min__inner{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.75);
+  border-radius: 16px;
 
-  padding:24px 34px; /* more side breathing space */
+  /* more side breathing space (subtle “towards center”) */
+  padding: 24px 34px;
 
-  display:grid;
-  grid-template-columns:3fr 1fr;
-  gap:18px;
-  align-items:center;
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* 3/4 text + 1/4 CTA */
+  gap: 18px;
+  align-items: center;
 }
 
-/* TEXT SIDE */
-
-.berlin-banner-min__title{
-  margin:0;
-  font-size:1.6rem;
-  line-height:1.18;
-  font-weight:600;
-  color:#111;
-  text-align:left;
+/* left (text) */
+.berlin-banner-min .berlin-banner-min__left{
+  min-width: 0;
 }
 
-/* yellow highlight — more “marker” / organic */
+.berlin-banner-min .berlin-banner-min__title{
+  margin: 0;
+  font-size: 1.6rem;   /* slightly bigger */
+  line-height: 1.18;
+  font-weight: 600;
+  color: #111;
+  text-align: left; /* important: your global p is centered */
+}
+
+/* yellow “marker/crayon-ish” highlight */
 .berlin-banner-min .hl{
   position: relative;
   display: inline;
@@ -294,127 +301,84 @@ footer a:hover {
   right: -6px;
   bottom: 0.02em;
   height: 0.95em;
-
   background: rgba(255, 230, 80, 0.92);
 
-  /* makes it look “hand-drawn” */
+  /* organic edges */
   border-radius: 14px 10px 16px 10px;
-
   transform: rotate(-1.3deg) skewX(-3deg);
-
-  /* subtle texture-like edges */
-  filter: saturate(1.05);
-  opacity: 0.95;
 
   z-index: -1;
 }
 
-/* CTA area */
-
-.berlin-banner-min__right{
-  display:flex;
-  justify-content:center; /* brings button slightly inward */
+/* right (CTA area) */
+.berlin-banner-min .berlin-banner-min__right{
+  display: flex;
+  justify-content: center; /* keeps button a bit more inward */
+  align-items: center;
 }
 
-/* CTA button (matching map buttons) */
+/* CTA — match your map buttons (Go / Use my location) */
+.berlin-banner-min .berlin-banner-min__cta{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-.berlin-banner-min__cta{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  height: 36px;
+  padding: 0 14px;
 
-  height:36px;
-  padding:0 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f7f7f7;
 
-  border:1px solid #ddd;
-  border-radius:8px;
-  background:#f7f7f7;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
 
-  font-size:13px;
-  font-weight:600;
-  color:#333;
-
-  text-decoration:none;
-  cursor:pointer;
-  white-space:nowrap;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-.berlin-banner-min__cta:hover{
-  background:#efefef;
+.berlin-banner-min .berlin-banner-min__cta:hover{
+  background: #efefef;
 }
 
-/* ===== MOBILE ===== */
+/* -----------------------
+   MOBILE / TABLET
+   ----------------------- */
 
+/* Use 900px so it triggers on most phones + tablets (incl iPhone) */
 @media (max-width: 900px){
-
-  .berlin-banner-min__inner{
-    grid-template-columns:1fr;
-    gap:14px;
-    padding:20px 22px;
+  .berlin-banner-min .berlin-banner-min__inner{
+    grid-template-columns: 1fr; /* STACK */
+    padding: 20px 22px;
+    gap: 14px;
   }
 
-  .berlin-banner-min__title{
-    font-size:1.35rem;
-    line-height:1.22;
+  .berlin-banner-min .berlin-banner-min__right{
+    justify-content: flex-start; /* aligns with text */
   }
 
-  .berlin-banner-min__right{
-    justify-content:flex-start;
+  .berlin-banner-min .berlin-banner-min__title{
+    font-size: 1.35rem;
+    line-height: 1.22;
   }
-
 }
 
+/* iPhone: make CTA full width for tap target */
 @media (max-width: 480px){
-
-  .berlin-banner-min__inner{
-    padding:18px 18px;
-    border-radius:14px;
+  .berlin-banner-min .berlin-banner-min__inner{
+    padding: 18px 18px;
+    border-radius: 14px;
   }
 
-  .berlin-banner-min__title{
-    font-size:1.2rem;
+  .berlin-banner-min .berlin-banner-min__title{
+    font-size: 1.2rem;
   }
 
-  /* big mobile tap target */
-
-  .berlin-banner-min__cta{
-    width:100%;
-    justify-content:center;
-  }
-
-}
-  /* ===== Force Berlin banner mobile layout (put at VERY END of style.css) ===== */
-
-@media (max-width: 900px){
-  body .berlin-banner-min .berlin-banner-min__inner{
-    grid-template-columns: 1fr !important;
-    padding: 20px 22px !important;
-    gap: 14px !important;
-  }
-
-  body .berlin-banner-min .berlin-banner-min__right{
-    justify-content: flex-start !important;
-  }
-
-  body .berlin-banner-min .berlin-banner-min__title{
-    font-size: 1.35rem !important;
-    line-height: 1.22 !important;
-  }
-}
-
-@media (max-width: 480px){
-  body .berlin-banner-min .berlin-banner-min__inner{
-    padding: 18px 18px !important;
-    border-radius: 14px !important;
-  }
-
-  body .berlin-banner-min .berlin-banner-min__cta{
-    width: 100% !important;
-    justify-content: center !important;
-  }
-
-  body .berlin-banner-min .berlin-banner-min__title{
-    font-size: 1.2rem !important;
+  .berlin-banner-min .berlin-banner-min__cta{
+    width: 100%;
+    justify-content: center; /* better tap UX */
   }
 }
 }
