@@ -246,61 +246,139 @@ footer a:hover {
     width: 30%; /* Menor largura para campos e botões no desktop */
     margin: 8px; /* Ajuste no espaçamento */
   }
-  /* ===== Berlin banner ===== */
+  /* ===== Berlin banner (pro look) ===== */
 
 .berlin-banner{
-  background:#eef6ff;
-  border:1px solid #d6e9ff;
-  border-radius:12px;
-  padding:20px;
-  margin:2rem 0;
+  margin: 2rem 0 2.5rem 0;
 }
 
-.banner-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+.berlin-banner__inner{
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 22px;
+  background: linear-gradient(135deg, #eef6ff 0%, #ffffff 60%);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+  align-items: center;
 }
 
-.banner-text h3{
-  margin:0;
-  font-size:1.2rem;
-  font-weight:600;
-  color:#333;
+.berlin-banner__badge{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2c5aa0;
+  background: rgba(77,163,255,0.18);
+  border: 1px solid rgba(77,163,255,0.28);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
 }
 
-.banner-text p{
-  margin:6px 0 0 0;
-  font-size:0.95rem;
-  color:#555;
+.berlin-banner__title{
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #222;
+  font-weight: 600;
 }
 
-.banner-button{
-  background:#4da3ff;
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  padding:10px 16px;
-  border-radius:8px;
-  white-space:nowrap;
+.berlin-banner__subtitle{
+  margin: 10px 0 0 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left; /* important bc your base p is center */
 }
 
-.banner-button:hover{
-  background:#3c92ea;
+.berlin-banner__actions{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
 }
 
-/* mobile */
-@media (max-width:768px){
+.berlin-banner__cta{
+  background: #2f7fe9;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 14px rgba(47,127,233,0.22);
+}
 
-  .banner-inner{
-    flex-direction:column;
-    align-items:flex-start;
+.berlin-banner__cta:hover{
+  background: #2a73d4;
+}
+
+.berlin-banner__link{
+  color: #2f7fe9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.berlin-banner__link:hover{
+  text-decoration: underline;
+}
+
+.berlin-banner__right{
+  display: grid;
+  gap: 10px;
+}
+
+.berlin-banner__stat{
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 12px 12px;
+}
+
+.berlin-banner__statValue{
+  font-weight: 700;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.berlin-banner__statLabel{
+  margin-top: 3px;
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+/* Mobile: stack + keep it compact */
+@media (max-width: 768px){
+  .berlin-banner__inner{
+    grid-template-columns: 1fr;
+    padding: 18px;
   }
-
-  .banner-button{
-    margin-top:10px;
+  .berlin-banner__title{
+    font-size: 1.15rem;
   }
+  .berlin-banner__right{
+    grid-template-columns: 1fr;
+  }
+}
 
+/* iPhone-ish */
+@media (max-width: 430px){
+  .berlin-banner__inner{
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  }
+  .berlin-banner__title{
+    font-size: 1.08rem;
+  }
+  .berlin-banner__cta{
+    width: 100%;
+    justify-content: center;
+  }
 }
 }
