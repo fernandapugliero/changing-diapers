@@ -288,7 +288,7 @@ footer a:hover {
 /* yellow “marker/crayon-ish” highlight */
 .berlin-banner-min .hl{
   position: relative;
-  display: inline;
+  display: inline-block;
   padding: 0 2px;
   z-index: 0;
   box-decoration-break: clone;
@@ -348,38 +348,41 @@ footer a:hover {
    MOBILE / TABLET
    ----------------------- */
 
-/* Use 900px so it triggers on most phones + tablets (incl iPhone) */
+/* MOBILE / TABLET */
+
 @media (max-width: 900px){
+
   .berlin-banner-min .berlin-banner-min__inner{
-    grid-template-columns: 1fr; /* STACK */
+    grid-template-columns: 1fr;
     padding: 20px 22px;
-    gap: 14px;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .berlin-banner-min .berlin-banner-min__title{
+    font-size: 1.45rem;
+    line-height: 1.25;
+    text-align: center;
   }
 
   .berlin-banner-min .berlin-banner-min__right{
-    justify-content: flex-start; /* aligns with text */
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 480px){
+
+  .berlin-banner-min .berlin-banner-min__inner{
+    padding: 18px 18px;
   }
 
   .berlin-banner-min .berlin-banner-min__title{
     font-size: 1.35rem;
-    line-height: 1.22;
-  }
-}
-
-/* iPhone: make CTA full width for tap target */
-@media (max-width: 480px){
-  .berlin-banner-min .berlin-banner-min__inner{
-    padding: 18px 18px;
-    border-radius: 14px;
-  }
-
-  .berlin-banner-min .berlin-banner-min__title{
-    font-size: 1.2rem;
   }
 
   .berlin-banner-min .berlin-banner-min__cta{
-    width: 100%;
-    justify-content: center; /* better tap UX */
+    width: auto;          
   }
 }
 
