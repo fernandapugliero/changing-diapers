@@ -6,15 +6,11 @@ import re
 import unicodedata
 from datetime import datetime
 
-# === Configurações da API ===
 AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
 BASE_ID = "appjWF7WnC8DRWaXM"
 TABLE_NAME = "Changing Diapers"
-HEADERS = {
-    "Authorization": f"Bearer {AIRTABLE_TOKEN}"
-}
+HEADERS = {"Authorization": f"Bearer {AIRTABLE_TOKEN}"}
 
-# === Helpers ===
 def to_list(v):
     if v is None:
         return []
@@ -28,7 +24,7 @@ def stars_from_score10(score):
     except (TypeError, ValueError):
         return None
     s = max(0.0, min(5.0, s))
-    return round(s * 2) / 2  # 0.0 or 0.5 steps
+    return round(s * 2) / 2
 
 def parse_dt(value):
     if not value:
@@ -42,10 +38,6 @@ def parse_dt(value):
         return None
 
 def pick_photo_thumbs(photo_field):
-    """
-    Airtable attachments array -> (small_url, large_url)
-    Prefer thumbnails to reduce weight.
-    """
     if not isinstance(photo_field, list) or len(photo_field) == 0:
         return (None, None)
 
@@ -72,9 +64,6 @@ def pick_photo_thumbs(photo_field):
     return (small, large)
 
 def normalize_neighborhood_hyphen(s):
-    """
-    Convert 'Tempelhof - Schöneberg' -> 'Tempelhof-Schöneberg'
-    """
     if not s:
         return ""
     s = str(s).strip()
@@ -99,24 +88,40 @@ def extract_zip(s: str) -> str:
     m = re.search(r"\b(\d{5})\b", str(s))
     return m.group(1) if m else ""
 
-def dedupe_tolerant(places):
+def dedupe_tolerant_safe(places):
     """
-    Deduplicate by tolerant key:
-      (normalized name, normalized address, zip)
-    Keep most recent by created_at.
-    Tie-break: has_photo True.
+    Safer dedupe:
+      - If lat/lon present: key by (name_norm, zip, lat_round, lon_round)
+      - Else if address present: key by (name_norm, addr_norm, zip)
+      - Else: no dedupe (key uses record id)
+    Keep most recent created_at; tie-break: has_photo.
     """
     best = {}
 
     for p in places:
         name = p.get("name", "")
         address = p.get("address", "")
-
+        lat = p.get("latitude")
+        lon = p.get("longitude")
         zip_code = extract_zip(address)
-        key = (norm_text(name), norm_text(address), zip_code)
 
-        if key[0] == "" and key[1] == "" and key[2] == "":
-            key = ("__missing__", p.get("id"))
+        name_n = norm_text(name)
+        addr_n = norm_text(address)
+
+        key = None
+        if lat is not None and lon is not None:
+            try:
+                lat_r = round(float(lat), 4)
+                lon_r = round(float(lon), 4)
+                key = ("geo", name_n, zip_code, lat_r, lon_r)
+            except Exception:
+                key = None
+
+        if key is None and addr_n:
+            key = ("addr", name_n, addr_n, zip_code)
+
+        if key is None:
+            key = ("id", p.get("id"))
 
         cur_dt = parse_dt(p.get("created_at"))
         prev = best.get(key)
@@ -142,10 +147,9 @@ def dedupe_tolerant(places):
                     best[key] = p
 
     out = list(best.values())
-    print(f"[✅] Deduped Berlin (tolerant): {len(places)} → {len(out)}")
+    print(f"[✅] Deduped Berlin (safe): {len(places)} → {len(out)}")
     return out
 
-# === Função para geocodificar endereços ===
 def geocode_address(address):
     try:
         url = "https://nominatim.openstreetmap.org/search"
@@ -169,7 +173,6 @@ params = {"pageSize": 100}
 
 print("[...] Starting Airtable fetch...")
 
-# === Paginação dos resultados ===
 while True:
     res = requests.get(url, headers=HEADERS, params=params)
     data = res.json()
@@ -192,16 +195,12 @@ while True:
         country = fields.get("Country", "")
         created_at = fields.get("Created at") or record.get("createdTime")
 
-        # 🌍 Geocodificação caso não tenha lat/lon
         if (not lat or not lon) and address:
             parts = [address, city, country]
             search_address = ", ".join(part for part in parts if part)
             lat, lon = geocode_address(search_address)
             time.sleep(1)
-            if not lat or not lon:
-                print(f"[!] Could not geocode: {search_address}")
 
-        # ⭐️ Overall user experience (0–10)
         overall_score = fields.get("Overall user experience")
         if overall_score is not None:
             try:
@@ -210,13 +209,12 @@ while True:
                 print(f"[⚠️] Invalid score for {name}: {overall_score}")
                 overall_score = None
 
-        # 📷 Photo + Review
         photo_field = fields.get("Photo")
         review = (fields.get("Changing Table Review") or "").strip()
 
         photo_small_url, photo_large_url = pick_photo_thumbs(photo_field)
         has_photo = True if (photo_small_url or photo_large_url) else False
-        photo_url = photo_large_url or photo_small_url  # ✅ compatibility
+        photo_url = photo_large_url or photo_small_url
 
         neighborhood_raw = (fields.get("Neighborhood (Berlin)") or "").strip()
         neighborhood = normalize_neighborhood_hyphen(neighborhood_raw)
@@ -242,7 +240,7 @@ while True:
 
             "photo_small_url": photo_small_url,
             "photo_large_url": photo_large_url,
-            "photo_url": photo_url,     # ✅ old html fallback
+            "photo_url": photo_url,
             "has_photo": has_photo,
             "review": review,
 
@@ -263,18 +261,13 @@ while True:
 print(f"[✅] Total global places collected: {len(places_all)}")
 print(f"[✅] Total Berlin places collected (raw): {len(places_berlin_raw)}")
 
-places_berlin = dedupe_tolerant(places_berlin_raw)
+places_berlin = dedupe_tolerant_safe(places_berlin_raw)
 print(f"[✅] Total Berlin places collected (deduped): {len(places_berlin)}")
 
-out_global = os.path.abspath("places.json")
-out_berlin = os.path.abspath("places-berlin.json")
-
-with open(out_global, "w", encoding="utf-8") as f:
+with open(os.path.abspath("places.json"), "w", encoding="utf-8") as f:
     json.dump(places_all, f, ensure_ascii=False, indent=2)
 
-with open(out_berlin, "w", encoding="utf-8") as f:
+with open(os.path.abspath("places-berlin.json"), "w", encoding="utf-8") as f:
     json.dump(places_berlin, f, ensure_ascii=False, indent=2)
 
 print("[🎉] Export done!")
-print(f"    -> {out_global}")
-print(f"    -> {out_berlin}")
