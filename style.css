@@ -257,18 +257,28 @@ footer a:hover {
   border: 1px solid rgba(0,0,0,0.75); /* thin black stroke */
   border-radius: 16px;
   padding: 18px;
+}
 
+/* Desktop split: 3/4 text + 1/4 CTA */
+.berlin-banner-min__inner--split{
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 18px;
+  grid-template-columns: 3fr 1fr;
+  gap: 16px;
   align-items: center;
 }
 
-/* LEFT */
+.berlin-banner-min__left{ min-width: 0; }
+
+.berlin-banner-min__right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Title */
 .berlin-banner-min__title{
   margin: 0;
-  font-size: 1.35rem; /* bigger */
-  line-height: 1.18;
+  font-size: 1.55rem; /* bigger */
+  line-height: 1.16;
   font-weight: 600;
   color: #111;
   text-align: left;
@@ -300,7 +310,6 @@ footer a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 12px;
 
   height: 36px;
   padding: 0 12px;
@@ -315,47 +324,29 @@ footer a:hover {
   color: #333;
   text-decoration: none;
 
-  width: fit-content;
+  white-space: nowrap;
 }
 
 .berlin-banner-min__cta:hover{
   background: #efefef;
 }
 
-/* RIGHT (quote) */
-.berlin-banner-min__quote{
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.5;
-  color: #222;
-  text-align: left;
-  font-style: italic;
-
-  border-left: 3px solid rgba(0,0,0,0.12);
-  padding-left: 12px;
-}
-
-.berlin-banner-min__author{
-  margin: 10px 0 0 0;
-  font-size: 0.85rem;
-  color: #555;
-  text-align: right;
-}
-
-/* ===== Mobile: stack properly (iPhone) ===== */
+/* ===== Mobile (real iPhone behavior) ===== */
 @media (max-width: 768px){
-  .berlin-banner-min__inner{
+  .berlin-banner-min__inner--split{
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 12px;
     padding: 16px;
   }
 
-  /* Quote first on mobile */
-  .berlin-banner-min__right{ order: 1; }
-  .berlin-banner-min__left{ order: 2; }
+  /* text first, CTA below */
+  .berlin-banner-min__right{
+    justify-content: flex-start; /* aligned with text (cleaner) */
+  }
 
-  .berlin-banner-min__cta{
-    width: 100%;
+  .berlin-banner-min__title{
+    font-size: 1.28rem;
+    line-height: 1.2;
   }
 }
 
@@ -366,17 +357,14 @@ footer a:hover {
   }
 
   .berlin-banner-min__title{
-    font-size: 1.15rem;
-    line-height: 1.2;
+    font-size: 1.18rem;
+    line-height: 1.22;
   }
 
-  .berlin-banner-min__quote{
-    font-size: 0.92rem;
-    padding-left: 10px;
-  }
-
-  .berlin-banner-min__author{
-    font-size: 0.82rem;
+  /* big, tappable CTA on iPhone */
+  .berlin-banner-min__cta{
+    width: 100%;
+    justify-content: center; /* better tap UX */
   }
 }
 }
