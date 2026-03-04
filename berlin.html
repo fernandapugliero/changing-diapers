@@ -32,74 +32,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== Base ===== */
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #fff;
-      color: #333;
-    }
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 2rem; background: #fff; color: #333; }
+    .page { max-width: 1200px; margin: 0 auto; }
 
-    /* ===== Navegação (EXACT AS INDEX) ===== */
-    nav {
-      margin-bottom: 2rem;
-      padding-top: 1rem;
-      display: flex;
-      align-items: center;
-    }
-    nav img {
-      width: 30px;
-      height: auto;
-      margin-right: 30px;
-    }
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: 600;
-      color: inherit;
-    }
+    nav { margin-bottom: 2rem; padding-top: 1rem; display: flex; align-items: center; }
+    nav img { width: 30px; height: auto; margin-right: 30px; }
+    nav a { margin-right: 20px; text-decoration: none; font-weight: 600; color: inherit; }
 
-    /* ===== Headline ===== */
-    h1 {
-      font-size: 2rem;
-      margin: 0 0 0.5rem 0;
-      text-align: center;
-      line-height: 1.2;
-    }
+    h1 { font-size: 2rem; margin: 0 0 0.5rem 0; text-align: center; line-height: 1.2; }
 
-    .intro {
-      text-align: center;
-      max-width: 840px;
-      margin: 0 auto 1.25rem auto;
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
-    }
+    .intro { text-align: center; max-width: 840px; margin: 0 auto 1.25rem auto; font-size: 0.95rem; color: #555; line-height: 1.5; }
 
-    /* ===== Section title + subtitle (same as index) ===== */
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #444;
-      text-align: center;
-      margin-top: 3rem;
-      margin-bottom: 0.75rem;
-      line-height: 1.3;
-    }
-    .top5-explanation {
-      font-size: 0.85rem;
-      color: #555;
-      text-align: center;
-      margin-top: 1rem;
-      line-height: 1.4;
-    }
+    .section-title { font-size: 1.3rem; font-weight: 600; color: #444; text-align: center; margin-top: 3rem; margin-bottom: 0.75rem; line-height: 1.3; }
+    .top5-explanation { font-size: 0.85rem; color: #555; text-align: center; margin-top: 1rem; line-height: 1.4; }
 
-    /* ===== ⭐ RATING STARS (copied from index) ===== */
     .star-rating {
       --rating: 0;
       --star-color: #e0e0e0;
@@ -113,13 +59,7 @@
       margin-top: 4px;
     }
     .star-rating.is-empty::after { width: 0; }
-    .star-note {
-      display: inline-block;
-      font-size: 12px;
-      color: #777;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
+    .star-note { display: inline-block; font-size: 12px; color: #777; margin-left: 6px; vertical-align: middle; }
     .star-rating::before { content: "★★★★★"; color: var(--star-color); }
     .star-rating::after {
       content: "★★★★★";
@@ -133,205 +73,81 @@
       pointer-events: none;
     }
 
-    /* ===== Filters ===== */
-    .filters-wrap{
-      max-width: 980px;
-      margin: 0 auto 1.25rem auto;
-    }
-    .chip-grid{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-top: 0.5rem;
-      margin-bottom: 1.15rem;
-    }
-    .chip{
-      display:flex;
-      align-items:center;
-      border: 1px solid #ddd;
-      border-radius: 999px;
+    .filters-wrap { max-width: 980px; margin: 0 auto 1.25rem auto; }
+    .chip-grid { display:flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 0.5rem; margin-bottom: 1.15rem; }
+    .chip {
+      display:flex; align-items:center;
+      border: 1px solid #ddd; border-radius: 999px;
       padding: 10px 14px;
-      background: #f7f7f7;
-      cursor:pointer;
-      font: inherit;
-      color: #333;
-      user-select:none;
+      background: #f7f7f7; cursor:pointer;
+      font: inherit; color: #333; user-select:none;
       transition: background .15s ease, border-color .15s ease, color .15s ease;
-      font-size: 14px;
-      line-height: 1;
-      white-space: nowrap;
+      font-size: 14px; line-height: 1; white-space: nowrap;
     }
     .chip:hover{ background:#efefef; }
-    .chip[data-selected="true"]{
-      background: #1f9d55;
-      border-color: #1f9d55;
-      color: #fff;
-    }
+    .chip[data-selected="true"]{ background: #1f9d55; border-color: #1f9d55; color: #fff; }
 
-    .filters-actions{
-      display:flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-    }
+    .filters-actions{ display:flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 0; margin-bottom: 0.75rem; }
     .btn-small{
-      height: 36px;
-      padding: 0 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #f7f7f7;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      color: #333;
+      height: 36px; padding: 0 12px;
+      border: 1px solid #ddd; border-radius: 8px;
+      background: #f7f7f7; cursor: pointer;
+      font-size: 13px; font-weight: 600; color: #333;
     }
     .btn-small:hover{ background:#efefef; }
 
-    /* ✅ iPhone-ish tuning: chips slightly smaller, buttons same size */
     @media (max-width: 430px){
       body { padding: 1.8rem; }
       .chip-grid{ gap: 6px; margin-bottom: 1.05rem; }
-      .chip{
-        padding: 9px 12px;
-        font-size: 13px;
-      }
+      .chip{ padding: 9px 12px; font-size: 13px; }
       .filters-actions{ gap: 12px; margin-bottom: 0.85rem; }
-      .btn-small{
-        height: 36px;
-        font-size: 13px;
-        padding: 0 12px;
-      }
+      .btn-small{ height: 36px; font-size: 13px; padding: 0 12px; }
     }
 
-    /* ===== Cards ===== */
-    .cards-grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 0.6rem;
-    }
-    @media (min-width: 768px){
-      .cards-grid{ grid-template-columns: repeat(3, 1fr); }
-    }
+    .cards-grid{ display:grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 0.6rem; }
+    @media (min-width: 768px){ .cards-grid{ grid-template-columns: repeat(3, 1fr); } }
 
     .place-card{
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 0.75rem;
-      font-size: 0.9rem;
+      background: #fff; border: 1px solid #eee; border-radius: 12px;
+      padding: 0.75rem; font-size: 0.9rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      display:flex;
-      flex-direction:column;
-      min-height: 100%;
+      display:flex; flex-direction:column; min-height: 100%;
     }
     .place-media{
-      width: 100%;
-      height: 240px;
-      border-radius: 8px;
-      background: #f6f6f6;
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      width: 100%; height: 240px; border-radius: 8px;
+      background: #f6f6f6; overflow:hidden;
+      display:flex; align-items:center; justify-content:center;
       margin-bottom: .5rem;
     }
-    .place-media img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
+    .place-media img{ width:100%; height:100%; object-fit:cover; display:block; }
     .no-photo{ font-size: 0.85rem; color:#777; }
 
-    .place-title{
-      font-size: 1rem;
-      font-weight: 600;
-      color:#333;
-      text-align:left;
-      margin: 0.25rem 0 0.15rem 0;
-    }
-    .place-quote{
-      font-size: 0.85rem;
-      color: #555;
-      font-style: italic;
-      margin: 0.25rem 0 0.5rem 0;
-      text-align:left;
-      line-height: 1.35;
-    }
-    .place-meta{
-      font-size: 0.8rem;
-      color:#777;
-      margin-top: 0.25rem;
-      text-align:left;
-      line-height: 1.35;
-    }
+    .place-title{ font-size: 1rem; font-weight: 600; color:#333; text-align:left; margin: 0.25rem 0 0.15rem 0; }
+    .place-quote{ font-size: 0.85rem; color: #555; font-style: italic; margin: 0.25rem 0 0.5rem 0; text-align:left; line-height: 1.35; }
+    .place-meta{ font-size: 0.8rem; color:#777; margin-top: 0.25rem; text-align:left; line-height: 1.35; }
 
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 6px;
-      margin-top: .5rem;
-    }
-    .tag{
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid #eee;
-      color:#555;
-      background:#fafafa;
-      line-height: 1;
-    }
+    .tags{ display:flex; flex-wrap:wrap; gap: 6px; margin-top: .5rem; }
+    .tag{ font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid #eee; color:#555; background:#fafafa; line-height: 1; }
 
     .loading-box{
-      max-width: 720px;
-      margin: 1.5rem auto 0 auto;
-      border: 1px dashed rgba(0,0,0,0.2);
-      border-radius: 12px;
-      padding: 12px;
-      text-align:center;
-      color:#666;
+      max-width: 720px; margin: 1.5rem auto 0 auto;
+      border: 1px dashed rgba(0,0,0,0.2); border-radius: 12px;
+      padding: 12px; text-align:center; color:#666;
     }
     .error-box{
-      max-width: 720px;
-      margin: 1.5rem auto 0 auto;
-      border: 1px solid rgba(255,0,0,0.25);
-      background: rgba(255,0,0,0.05);
-      border-radius: 12px;
-      padding: 12px;
-      text-align:left;
-      color:#8a2b2b;
+      max-width: 720px; margin: 1.5rem auto 0 auto;
+      border: 1px solid rgba(255,0,0,0.25); background: rgba(255,0,0,0.05);
+      border-radius: 12px; padding: 12px; text-align:left; color:#8a2b2b;
     }
 
-    /* ✅ Results count below cards */
-    .results-bottom{
-      text-align:center;
-      margin: 1.25rem auto 0 auto;
-      color:#555;
-      font-size: 0.95rem;
-    }
-    @media (max-width: 430px){
-      .results-bottom{ font-size: 0.92rem; margin-top: 1rem; }
-    }
+    .results-bottom{ text-align:center; margin: 1.25rem auto 0 auto; color:#555; font-size: 0.95rem; }
+    @media (max-width: 430px){ .results-bottom{ font-size: 0.92rem; margin-top: 1rem; } }
 
-    /* ===== FAQ (same format as index) ===== */
     #faq { margin-top: 3rem; }
     #faq p { text-align: left; }
 
-    /* ===== Footer (EXACT AS INDEX) ===== */
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    footer a {
-      color: #0070f3;
-      text-decoration: none;
-    }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #777; }
+    footer a { color: #0070f3; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -387,11 +203,6 @@
         Some do, but it’s not universal. The list includes community-submitted reviews, photos and notes so you can pick the best option for your needs.
       </p>
 
-      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
-        <strong>Are the ratings on Fix My Diaper reliable?</strong><br>
-        Ratings reflect user-submitted experiences, and new places are added regularly. If a place has no rating yet, it will show “Not rated yet.”
-      </p>
-
       <p class="top5-explanation" style="margin-top: 1.2rem;">
         <strong>Can I add a new location?</strong><br>
         Yes! Use the <a href="submit">Submit</a> page to add a new place and help other parents in Berlin.
@@ -408,7 +219,7 @@
   </div>
 
   <script>
-    // Neighborhood list (no spaces around hyphen)
+    // IMPORTANT: These are your filter labels (no spaces around hyphen)
     const neighborhoods = [
       "Mitte",
       "Neukölln",
@@ -441,21 +252,26 @@
       selectAllBtn: document.getElementById("selectAllBtn")
     };
 
-    function getNeighborhood(p){ return (p.neighborhood || "").trim(); }
+    // ✅ normalize neighborhood strings to avoid "0 results" due to formatting differences
+    function normNeighborhood(s){
+      return String(s || "")
+        .trim()
+        .replace(/\s*-\s*/g, "-")     // remove spaces around hyphen
+        .replace(/\s+/g, " ");        // normalize whitespace
+    }
+
+    function getNeighborhood(p){ return normNeighborhood(p.neighborhood); }
     function getReview(p){ return (p.review || "").trim(); }
 
-    // ✅ Backward-compatible photo getter (new thumbs + old fields)
     function getPhoto(p){
       const small = p.photo_small_url || null;
       const large = p.photo_large_url || null;
-
       const legacy = p.photo_url || null;
 
       let legacyFromArray = null;
       if (!legacy && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
         legacyFromArray = p.photo[0].url;
       }
-
       return {
         small: small || legacy || legacyFromArray,
         large: large || legacy || legacyFromArray
@@ -555,6 +371,7 @@
 
     function applyFilterAndRender(){
       const selected = state.selected;
+      const selectedNorm = new Set(Array.from(selected).map(normNeighborhood));
 
       if (selected.size === 0) {
         state.filtered = [];
@@ -563,7 +380,8 @@
         return;
       }
 
-      state.filtered = state.all.filter(p => selected.has(getNeighborhood(p)));
+      // ✅ compare normalized values
+      state.filtered = state.all.filter(p => selectedNorm.has(getNeighborhood(p)));
 
       // Sort: 1) most recent first 2) photos first (tie-break)
       state.filtered.sort((a,b) => {
@@ -599,17 +417,14 @@
       const card = document.createElement("article");
       card.className = "place-card";
 
-      // --- media (thumbs + fallback) ---
       const media = document.createElement("div");
       media.className = "place-media";
 
       const photo = getPhoto(p);
-
       if (photo.small || photo.large){
         const img = document.createElement("img");
         img.loading = "lazy";
         img.decoding = "async";
-
         img.src = photo.large || photo.small;
 
         const srcsetParts = [];
@@ -617,7 +432,6 @@
         if (photo.large) srcsetParts.push(`${photo.large} 1024w`);
         if (srcsetParts.length) img.setAttribute("srcset", srcsetParts.join(", "));
         img.setAttribute("sizes", "(max-width: 430px) 100vw, (max-width: 900px) 50vw, 33vw");
-
         img.alt = `${p.name || "Place"} changing table`;
 
         img.onerror = () => {
@@ -636,7 +450,6 @@
         media.appendChild(span);
       }
 
-      // --- stars ---
       const stars = (typeof p.stars === "number") ? p.stars : null;
       const starDiv = document.createElement("div");
       starDiv.className = "star-rating";
@@ -651,7 +464,6 @@
       starsWrap.appendChild(starDiv);
       starsWrap.appendChild(note);
 
-      // --- title + meta ---
       const title = document.createElement("div");
       title.className = "place-title";
       title.textContent = p.name || "Unnamed place";
@@ -662,7 +474,6 @@
       const address = (p.address || "").toString().trim();
       meta.innerHTML = `${escapeHtml(type || "Not specified")}${address ? "<br>" + escapeHtml(address) : ""}`;
 
-      // --- review ---
       const reviewText = getReview(p);
       let quote = null;
       if (reviewText){
@@ -671,7 +482,6 @@
         quote.textContent = `“${reviewText}”`;
       }
 
-      // --- tags ---
       const tags = getTags(p);
       const tagsWrap = document.createElement("div");
       tagsWrap.className = "tags";
