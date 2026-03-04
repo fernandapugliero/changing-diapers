@@ -246,7 +246,7 @@ footer a:hover {
     width: 30%; /* Menor largura para campos e botões no desktop */
     margin: 8px; /* Ajuste no espaçamento */
   }
-/* ===== Minimal Berlin banner ===== */
+/* ===== Minimal Berlin banner (index) ===== */
 
 .berlin-banner-min{
   margin: 2rem 0 2.5rem 0;
@@ -257,82 +257,97 @@ footer a:hover {
   border: 1px solid rgba(0,0,0,0.75); /* thin black stroke */
   border-radius: 16px;
   padding: 18px;
+
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 18px;
   align-items: center;
 }
 
+/* LEFT */
 .berlin-banner-min__title{
   margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.25;
+  font-size: 1.35rem; /* bigger */
+  line-height: 1.18;
   font-weight: 600;
   color: #111;
-  text-align: left; /* your site centers many <p> */
+  text-align: left;
 }
 
+/* Yellow “crayon/highlighter” vibe */
+.berlin-banner-min .hl{
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+  padding: 0 3px;
+}
+
+.berlin-banner-min .hl::before{
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: 0.08em;
+  height: 0.78em;
+  background: rgba(255, 230, 80, 0.88);
+  border-radius: 10px;
+  transform: rotate(-1.1deg);
+  z-index: -1;
+}
+
+/* CTA (match map-search buttons: Go / Use my location) */
 .berlin-banner-min__cta{
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-top: 12px;
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(0,0,0,0.75);
-  background: #fff;
-  color: #111;
+
+  height: 36px;
+  padding: 0 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f7f7f7;
+  cursor: pointer;
+
+  font-size: 13px;
   font-weight: 600;
+  color: #333;
   text-decoration: none;
+
   width: fit-content;
 }
 
 .berlin-banner-min__cta:hover{
-  background: rgba(0,0,0,0.04);
+  background: #efefef;
 }
 
-/* Right side quote */
+/* RIGHT (quote) */
 .berlin-banner-min__quote{
   margin: 0;
   font-size: 0.98rem;
-  line-height: 1.45;
+  line-height: 1.5;
   color: #222;
   text-align: left;
+  font-style: italic;
+
+  border-left: 3px solid rgba(0,0,0,0.12);
+  padding-left: 12px;
 }
 
 .berlin-banner-min__author{
   margin: 10px 0 0 0;
   font-size: 0.85rem;
   color: #555;
-  text-align: left;
+  text-align: right;
 }
 
-/* Hand-drawn highlight (yellow “crayon” vibe) */
-.berlin-banner-min .hl{
-  position: relative;
-  display: inline-block;
-  z-index: 0;
-  padding: 0 2px;
-}
-
-.berlin-banner-min .hl::before{
-  content: "";
-  position: absolute;
-  left: -3px;
-  right: -3px;
-  bottom: 0.08em;
-  height: 0.75em;
-  background: rgba(255, 230, 80, 0.85);
-  border-radius: 10px;
-  transform: rotate(-1.2deg);
-  z-index: -1;
-}
-
-/* Mobile stack: quote on top, then text + CTA */
+/* ===== Mobile: stack properly (iPhone) ===== */
 @media (max-width: 768px){
   .berlin-banner-min__inner{
     grid-template-columns: 1fr;
     gap: 14px;
+    padding: 16px;
   }
 
   /* Quote first on mobile */
@@ -346,14 +361,22 @@ footer a:hover {
 
 @media (max-width: 430px){
   .berlin-banner-min__inner{
-    padding: 16px;
     border-radius: 14px;
+    padding: 14px;
   }
+
   .berlin-banner-min__title{
-    font-size: 1.05rem;
+    font-size: 1.15rem;
+    line-height: 1.2;
   }
+
   .berlin-banner-min__quote{
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    padding-left: 10px;
+  }
+
+  .berlin-banner-min__author{
+    font-size: 0.82rem;
   }
 }
 }
