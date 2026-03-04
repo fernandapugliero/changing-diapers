@@ -144,7 +144,7 @@
       gap: 8px;
       justify-content: center;
       margin-top: 0.5rem;
-      margin-bottom: 1.15rem; /* ✅ more space between chips and buttons */
+      margin-bottom: 1.15rem;
     }
     .chip{
       display:flex;
@@ -171,7 +171,7 @@
 
     .filters-actions{
       display:flex;
-      gap: 12px;              /* ✅ more space between Select/Clear */
+      gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 0;
@@ -190,7 +190,7 @@
     }
     .btn-small:hover{ background:#efefef; }
 
-    /* ✅ iPhone 16 tuning (393px-ish): chips a bit smaller, buttons same size */
+    /* ✅ iPhone-ish tuning: chips slightly smaller, buttons same size */
     @media (max-width: 430px){
       body { padding: 1.8rem; }
       .chip-grid{ gap: 6px; margin-bottom: 1.05rem; }
@@ -306,7 +306,7 @@
       color:#8a2b2b;
     }
 
-    /* ✅ Results count moved below cards */
+    /* ✅ Results count below cards */
     .results-bottom{
       text-align:center;
       margin: 1.25rem auto 0 auto;
@@ -333,10 +333,6 @@
       text-decoration: none;
     }
     footer a:hover { text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      body { padding: 2rem; }
-    }
   </style>
 </head>
 
@@ -412,9 +408,7 @@
   </div>
 
   <script>
-    /*****************************************************************
-     * Neighborhood list — MUST MATCH Airtable (now without spaces around hyphen)
-     *****************************************************************/
+    // Neighborhood list (no spaces around hyphen)
     const neighborhoods = [
       "Mitte",
       "Neukölln",
@@ -450,10 +444,21 @@
     function getNeighborhood(p){ return (p.neighborhood || "").trim(); }
     function getReview(p){ return (p.review || "").trim(); }
 
+    // ✅ Backward-compatible photo getter (new thumbs + old fields)
     function getPhoto(p){
+      const small = p.photo_small_url || null;
+      const large = p.photo_large_url || null;
+
+      const legacy = p.photo_url || null;
+
+      let legacyFromArray = null;
+      if (!legacy && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
+        legacyFromArray = p.photo[0].url;
+      }
+
       return {
-        small: p.photo_small_url || null,
-        large: p.photo_large_url || null
+        small: small || legacy || legacyFromArray,
+        large: large || legacy || legacyFromArray
       };
     }
 
@@ -594,7 +599,7 @@
       const card = document.createElement("article");
       card.className = "place-card";
 
-      // --- media (lightweight thumbs + fallback on failure) ---
+      // --- media (thumbs + fallback) ---
       const media = document.createElement("div");
       media.className = "place-media";
 
