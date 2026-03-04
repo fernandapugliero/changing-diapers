@@ -386,5 +386,8 @@ footer a:hover {
   .berlin-banner-min .berlin-banner-min__cta{
     width: auto;          
   }
+  .berlin-banner-min{
+  margin: 2.5rem 0;
+}
 }
 
