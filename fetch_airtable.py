@@ -3,7 +3,6 @@ import json
 import os
 import time
 import re
-import unicodedata
 from datetime import datetime
 
 AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
@@ -37,7 +36,15 @@ def parse_dt(value):
     except Exception:
         return None
 
+def normalize_neighborhood(s):
+    if not s:
+        return ""
+    return re.sub(r"\s*-\s*", "-", str(s).strip())
+
 def pick_photo_thumbs(photo_field):
+    """
+    Returns (small_url, large_url). Prefer Airtable thumbnails to reduce weight.
+    """
     if not isinstance(photo_field, list) or len(photo_field) == 0:
         return (None, None)
 
@@ -63,93 +70,6 @@ def pick_photo_thumbs(photo_field):
 
     return (small, large)
 
-def normalize_neighborhood_hyphen(s):
-    if not s:
-        return ""
-    s = str(s).strip()
-    return re.sub(r"\s*-\s*", "-", s)
-
-def norm_text(s: str) -> str:
-    if not s:
-        return ""
-    s = str(s).strip().lower()
-    s = unicodedata.normalize("NFKD", s)
-    s = "".join(ch for ch in s if not unicodedata.combining(ch))
-    s = s.replace("ß", "ss")
-    s = s.replace("str.", "strasse")
-    s = s.replace("straße", "strasse")
-    s = re.sub(r"[^\w\s]", " ", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
-
-def extract_zip(s: str) -> str:
-    if not s:
-        return ""
-    m = re.search(r"\b(\d{5})\b", str(s))
-    return m.group(1) if m else ""
-
-def dedupe_tolerant_safe(places):
-    """
-    Safer dedupe:
-      - If lat/lon present: key by (name_norm, zip, lat_round, lon_round)
-      - Else if address present: key by (name_norm, addr_norm, zip)
-      - Else: no dedupe (key uses record id)
-    Keep most recent created_at; tie-break: has_photo.
-    """
-    best = {}
-
-    for p in places:
-        name = p.get("name", "")
-        address = p.get("address", "")
-        lat = p.get("latitude")
-        lon = p.get("longitude")
-        zip_code = extract_zip(address)
-
-        name_n = norm_text(name)
-        addr_n = norm_text(address)
-
-        key = None
-        if lat is not None and lon is not None:
-            try:
-                lat_r = round(float(lat), 4)
-                lon_r = round(float(lon), 4)
-                key = ("geo", name_n, zip_code, lat_r, lon_r)
-            except Exception:
-                key = None
-
-        if key is None and addr_n:
-            key = ("addr", name_n, addr_n, zip_code)
-
-        if key is None:
-            key = ("id", p.get("id"))
-
-        cur_dt = parse_dt(p.get("created_at"))
-        prev = best.get(key)
-
-        if prev is None:
-            best[key] = p
-            continue
-
-        prev_dt = parse_dt(prev.get("created_at"))
-
-        if prev_dt is None and cur_dt is not None:
-            best[key] = p
-        elif prev_dt is not None and cur_dt is None:
-            pass
-        elif prev_dt is None and cur_dt is None:
-            if p.get("has_photo") and not prev.get("has_photo"):
-                best[key] = p
-        else:
-            if cur_dt > prev_dt:
-                best[key] = p
-            elif cur_dt == prev_dt:
-                if p.get("has_photo") and not prev.get("has_photo"):
-                    best[key] = p
-
-    out = list(best.values())
-    print(f"[✅] Deduped Berlin (safe): {len(places)} → {len(out)}")
-    return out
-
 def geocode_address(address):
     try:
         url = "https://nominatim.openstreetmap.org/search"
@@ -157,7 +77,7 @@ def geocode_address(address):
         res = requests.get(url, params=params, headers={"User-Agent": "changing-diapers-mvp"})
         data = res.json()
         if data:
-            print(f"[✓] Geocoded: {address} → {data[0]['lat']}, {data[0]['lon']}")
+            print(f"[✓] Geocoded: {address}")
             return float(data[0]["lat"]), float(data[0]["lon"])
         else:
             print(f"[!] No result for address: {address}")
@@ -165,6 +85,45 @@ def geocode_address(address):
         print(f"[!] Geocode error for '{address}': {e}")
     return None, None
 
+def dedupe_prefer_recent_with_photo(places):
+    """
+    Group by (Name + Full Address). For each group:
+      1) if any record has photo -> pick the most recent among those with photo
+      2) else pick the most recent overall
+    This matches: "mostrar o mais recente que houver com foto; senão o mais recente sem foto".
+    """
+    grouped = {}
+
+    for p in places:
+        name = (p.get("name") or "").strip().lower()
+        address = (p.get("address") or "").strip().lower()
+
+        # If address is missing, fallback to name only + neighborhood to reduce accidental merging
+        if not address:
+            key = f"{name}|__noaddr__|{(p.get('neighborhood') or '').strip().lower()}"
+        else:
+            key = f"{name}|{address}"
+
+        grouped.setdefault(key, []).append(p)
+
+    out = []
+
+    for key, items in grouped.items():
+        # split
+        with_photo = [x for x in items if x.get("has_photo")]
+        if with_photo:
+            with_photo.sort(key=lambda x: (parse_dt(x.get("created_at")) or datetime.min), reverse=True)
+            out.append(with_photo[0])
+        else:
+            items.sort(key=lambda x: (parse_dt(x.get("created_at")) or datetime.min), reverse=True)
+            out.append(items[0])
+
+    print(f"[✅] Deduped (prefer recent with photo): {len(places)} → {len(out)}")
+    return out
+
+# -----------------------------
+# Airtable fetch
+# -----------------------------
 places_all = []
 places_berlin_raw = []
 
@@ -195,9 +154,10 @@ while True:
         country = fields.get("Country", "")
         created_at = fields.get("Created at") or record.get("createdTime")
 
+        # geocode if missing
         if (not lat or not lon) and address:
             parts = [address, city, country]
-            search_address = ", ".join(part for part in parts if part)
+            search_address = ", ".join(x for x in parts if x)
             lat, lon = geocode_address(search_address)
             time.sleep(1)
 
@@ -206,7 +166,6 @@ while True:
             try:
                 overall_score = float(overall_score)
             except (TypeError, ValueError):
-                print(f"[⚠️] Invalid score for {name}: {overall_score}")
                 overall_score = None
 
         photo_field = fields.get("Photo")
@@ -216,15 +175,13 @@ while True:
         has_photo = True if (photo_small_url or photo_large_url) else False
         photo_url = photo_large_url or photo_small_url
 
-        neighborhood_raw = (fields.get("Neighborhood (Berlin)") or "").strip()
-        neighborhood = normalize_neighborhood_hyphen(neighborhood_raw)
+        neighborhood = normalize_neighborhood((fields.get("Neighborhood (Berlin)") or "").strip())
 
         place = {
             "id": record.get("id"),
             "name": fields.get("Name", ""),
             "city": city,
             "neighborhood": neighborhood,
-
             "address": address,
             "latitude": lat,
             "longitude": lon,
@@ -242,10 +199,14 @@ while True:
             "photo_large_url": photo_large_url,
             "photo_url": photo_url,
             "has_photo": has_photo,
+
             "review": review,
 
             "overall_user_experience": overall_score,
-            "stars": stars_from_score10(overall_score)
+            "stars": stars_from_score10(overall_score),
+
+            # Keep it in JSON (even if we don't use for dedupe now)
+            "unique_entry": fields.get("Unique entry?", "")
         }
 
         places_all.append(place)
@@ -261,13 +222,15 @@ while True:
 print(f"[✅] Total global places collected: {len(places_all)}")
 print(f"[✅] Total Berlin places collected (raw): {len(places_berlin_raw)}")
 
-places_berlin = dedupe_tolerant_safe(places_berlin_raw)
+# ✅ Deduplicate Berlin with your exact preference
+places_berlin = dedupe_prefer_recent_with_photo(places_berlin_raw)
 print(f"[✅] Total Berlin places collected (deduped): {len(places_berlin)}")
 
-with open(os.path.abspath("places.json"), "w", encoding="utf-8") as f:
+# Export JSON
+with open("places.json", "w", encoding="utf-8") as f:
     json.dump(places_all, f, ensure_ascii=False, indent=2)
 
-with open(os.path.abspath("places-berlin.json"), "w", encoding="utf-8") as f:
+with open("places-berlin.json", "w", encoding="utf-8") as f:
     json.dump(places_berlin, f, ensure_ascii=False, indent=2)
 
 print("[🎉] Export done!")
