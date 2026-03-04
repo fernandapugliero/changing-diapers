@@ -277,26 +277,36 @@ footer a:hover {
   text-align:left;
 }
 
-/* yellow highlight */
-
+/* yellow highlight — more “marker” / organic */
 .berlin-banner-min .hl{
-  position:relative;
-  display:inline-block;
-  padding:0 3px;
-  z-index:0;
+  position: relative;
+  display: inline;
+  padding: 0 2px;
+  z-index: 0;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .berlin-banner-min .hl::before{
-  content:"";
-  position:absolute;
-  left:-4px;
-  right:-4px;
-  bottom:0.08em;
-  height:0.78em;
-  background:rgba(255,230,80,0.9);
-  border-radius:10px;
-  transform:rotate(-1deg);
-  z-index:-1;
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  bottom: 0.02em;
+  height: 0.95em;
+
+  background: rgba(255, 230, 80, 0.92);
+
+  /* makes it look “hand-drawn” */
+  border-radius: 14px 10px 16px 10px;
+
+  transform: rotate(-1.3deg) skewX(-3deg);
+
+  /* subtle texture-like edges */
+  filter: saturate(1.05);
+  opacity: 0.95;
+
+  z-index: -1;
 }
 
 /* CTA area */
