@@ -28,8 +28,7 @@ def stars_from_score10(score):
     except (TypeError, ValueError):
         return None
     s = max(0.0, min(5.0, s))
-    # keep .0 or .5 steps like your current cards
-    return round(s * 2) / 2
+    return round(s * 2) / 2  # 0.0 or 0.5 steps
 
 def parse_dt(value):
     if not value:
@@ -64,7 +63,6 @@ def pick_photo_thumbs(photo_field):
         if isinstance(lg, dict):
             large = lg.get("url")
 
-    # fallback to original if thumbs missing
     original = first.get("url")
     if not small and original:
         small = original
@@ -80,27 +78,17 @@ def normalize_neighborhood_hyphen(s):
     if not s:
         return ""
     s = str(s).strip()
-    s = re.sub(r"\s*-\s*", "-", s)
-    return s
+    return re.sub(r"\s*-\s*", "-", s)
 
 def norm_text(s: str) -> str:
     if not s:
         return ""
     s = str(s).strip().lower()
-
-    # normalize accents
     s = unicodedata.normalize("NFKD", s)
     s = "".join(ch for ch in s if not unicodedata.combining(ch))
-
-    # german ß
     s = s.replace("ß", "ss")
-
-    # common street variants
     s = s.replace("str.", "strasse")
     s = s.replace("straße", "strasse")
-    s = s.replace("strasse", "strasse")
-
-    # remove punctuation
     s = re.sub(r"[^\w\s]", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
     return s
@@ -139,13 +127,11 @@ def dedupe_tolerant(places):
 
         prev_dt = parse_dt(prev.get("created_at"))
 
-        # choose most recent
         if prev_dt is None and cur_dt is not None:
             best[key] = p
         elif prev_dt is not None and cur_dt is None:
             pass
         elif prev_dt is None and cur_dt is None:
-            # tie-break: photo
             if p.get("has_photo") and not prev.get("has_photo"):
                 best[key] = p
         else:
@@ -211,7 +197,7 @@ while True:
             parts = [address, city, country]
             search_address = ", ".join(part for part in parts if part)
             lat, lon = geocode_address(search_address)
-            time.sleep(1)  # evita bloqueio da API
+            time.sleep(1)
             if not lat or not lon:
                 print(f"[!] Could not geocode: {search_address}")
 
@@ -230,8 +216,8 @@ while True:
 
         photo_small_url, photo_large_url = pick_photo_thumbs(photo_field)
         has_photo = True if (photo_small_url or photo_large_url) else False
+        photo_url = photo_large_url or photo_small_url  # ✅ compatibility
 
-        # ✅ Neighborhood (Berlin) normalized to remove spaces around hyphen
         neighborhood_raw = (fields.get("Neighborhood (Berlin)") or "").strip()
         neighborhood = normalize_neighborhood_hyphen(neighborhood_raw)
 
@@ -239,8 +225,6 @@ while True:
             "id": record.get("id"),
             "name": fields.get("Name", ""),
             "city": city,
-
-            # Berlin neighborhoods (Airtable field name EXACT)
             "neighborhood": neighborhood,
 
             "address": address,
@@ -248,32 +232,28 @@ while True:
             "longitude": lon,
             "type": fields.get("Type", ""),
 
-            # tags
             "changing_table_location": to_list(fields.get("Changing Table Location")),
             "supplies_available": to_list(fields.get("Available Supplies") or fields.get("Available Suppllies")),
             "changing_table_condition": to_list(fields.get("Changing Table Condition")),
 
-            # extras
             "room_for_stroller": fields.get("Room for a stroller", False),
             "site": fields.get("Site", ""),
             "created_at": created_at,
 
-            # photo + review
             "photo_small_url": photo_small_url,
             "photo_large_url": photo_large_url,
+            "photo_url": photo_url,     # ✅ old html fallback
             "has_photo": has_photo,
             "review": review,
 
-            # rating
-            "overall_user_experience": overall_score,   # 0–10
-            "stars": stars_from_score10(overall_score), # 0–5
+            "overall_user_experience": overall_score,
+            "stars": stars_from_score10(overall_score)
         }
 
         places_all.append(place)
         if city.lower() == "berlin":
             places_berlin_raw.append(place)
 
-    # === Paginação ===
     if "offset" in data:
         params["offset"] = data["offset"]
         print("[⏭️] More pages to fetch...")
@@ -283,11 +263,9 @@ while True:
 print(f"[✅] Total global places collected: {len(places_all)}")
 print(f"[✅] Total Berlin places collected (raw): {len(places_berlin_raw)}")
 
-# ✅ Deduplicate Berlin
 places_berlin = dedupe_tolerant(places_berlin_raw)
 print(f"[✅] Total Berlin places collected (deduped): {len(places_berlin)}")
 
-# === Exportar para JSON ===
 out_global = os.path.abspath("places.json")
 out_berlin = os.path.abspath("places-berlin.json")
 
