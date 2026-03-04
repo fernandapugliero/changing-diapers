@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Changing Tables in Berlin | Fix My Diaper</title>
   <meta name="description" content="Find baby-friendly places with changing tables in Berlin. Filter by neighborhood to discover cafés, restaurants and public places with diaper changing facilities.">
-  <meta name="keywords" content="diaper changing, changing tables in Berlin, changing table Berlin, baby-friendly places Berlin, diaper changing station Berlin">
+  <meta name="keywords" content="changing tables berlin, diaper changing station berlin, baby-friendly berlin, changing table cafes berlin, changing table restaurants berlin">
   <meta name="robots" content="index, follow">
+
   <meta property="og:title" content="Changing Tables in Berlin | Fix My Diaper">
   <meta property="og:description" content="Find baby-friendly places with changing tables in Berlin. Filter by neighborhood to discover cafés, restaurants and public places.">
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url" content="https://fixmydiaper.com/berlin.html">
   <meta property="og:type" content="website">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Changing Tables in Berlin | Fix My Diaper">
   <meta name="twitter:description" content="Find baby-friendly places with changing tables in Berlin. Filter by neighborhood to discover cafés, restaurants and public places.">
@@ -25,27 +27,79 @@
     gtag('js', new Date());
     gtag('config', 'G-JGYVLDZQTM');
   </script>
-  
+
   <link rel="icon" href="/images/favicon.ico" sizes="any">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; padding: 2rem; background: #fff; color: #333; }
-    .page { max-width: 1200px; margin: 0 auto; }
+    /* ===== Base ===== */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #333;
+    }
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-    nav { margin-bottom: 2rem; padding-top: 1rem; display: flex; align-items: center; }
-    nav img { width: 30px; height: auto; margin-right: 30px; }
-    nav a { margin-right: 20px; text-decoration: none; font-weight: 600; color: inherit; }
+    /* ===== Navegação (same as index) ===== */
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    nav img {
+      width: 30px;
+      height: auto;
+      margin-right: 30px;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+    }
 
-    h1 { font-size: 2rem; margin: 0 0 0.5rem 0; text-align: center; line-height: 1.2; }
+    /* ===== Headline ===== */
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .intro {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto 1.25rem auto;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
 
-    .intro { text-align: center; max-width: 840px; margin: 0 auto 1.25rem auto; font-size: 0.95rem; color: #555; line-height: 1.5; }
+    /* ===== Section styles (from index) ===== */
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .top5-explanation {
+      font-size: 0.85rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
 
-    .section-title { font-size: 1.3rem; font-weight: 600; color: #444; text-align: center; margin-top: 3rem; margin-bottom: 0.75rem; line-height: 1.3; }
-    .top5-explanation { font-size: 0.85rem; color: #555; text-align: center; margin-top: 1rem; line-height: 1.4; }
-
+    /* ===== ⭐ RATING STARS (from index) ===== */
     .star-rating {
       --rating: 0;
       --star-color: #e0e0e0;
@@ -59,7 +113,13 @@
       margin-top: 4px;
     }
     .star-rating.is-empty::after { width: 0; }
-    .star-note { display: inline-block; font-size: 12px; color: #777; margin-left: 6px; vertical-align: middle; }
+    .star-note {
+      display: inline-block;
+      font-size: 12px;
+      color: #777;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
     .star-rating::before { content: "★★★★★"; color: var(--star-color); }
     .star-rating::after {
       content: "★★★★★";
@@ -73,29 +133,66 @@
       pointer-events: none;
     }
 
-    .filters-wrap { max-width: 980px; margin: 0 auto 1.25rem auto; }
-    .chip-grid { display:flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 0.5rem; margin-bottom: 1.15rem; }
-    .chip {
-      display:flex; align-items:center;
-      border: 1px solid #ddd; border-radius: 999px;
+    /* ===== Filters ===== */
+    .filters-wrap{
+      max-width: 980px;
+      margin: 0 auto 1.25rem auto;
+    }
+    .chip-grid{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 0.5rem;
+      margin-bottom: 1.15rem;
+    }
+    .chip{
+      display:flex;
+      align-items:center;
+      border: 1px solid #ddd;
+      border-radius: 999px;
       padding: 10px 14px;
-      background: #f7f7f7; cursor:pointer;
-      font: inherit; color: #333; user-select:none;
+      background: #f7f7f7;
+      cursor:pointer;
+      font: inherit;
+      color: #333;
+      user-select:none;
       transition: background .15s ease, border-color .15s ease, color .15s ease;
-      font-size: 14px; line-height: 1; white-space: nowrap;
+      font-size: 14px;
+      line-height: 1;
+      white-space: nowrap;
     }
     .chip:hover{ background:#efefef; }
-    .chip[data-selected="true"]{ background: #4da3ff; border-color: #4da3ff; color: #fff; }
 
-    .filters-actions{ display:flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 0; margin-bottom: 0.75rem; }
+    /* ✅ selected color (soft blue) */
+    .chip[data-selected="true"]{
+      background: #4da3ff;
+      border-color: #4da3ff;
+      color: #fff;
+    }
+
+    .filters-actions{
+      display:flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
     .btn-small{
-      height: 36px; padding: 0 12px;
-      border: 1px solid #ddd; border-radius: 8px;
-      background: #f7f7f7; cursor: pointer;
-      font-size: 13px; font-weight: 600; color: #333;
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f7f7f7;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
     }
     .btn-small:hover{ background:#efefef; }
 
+    /* iPhone-ish tuning */
     @media (max-width: 430px){
       body { padding: 1.8rem; }
       .chip-grid{ gap: 6px; margin-bottom: 1.05rem; }
@@ -104,49 +201,137 @@
       .btn-small{ height: 36px; font-size: 13px; padding: 0 12px; }
     }
 
-    .cards-grid{ display:grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 0.6rem; margin-bottom: 1.5rem; }
-    @media (min-width: 768px){ .cards-grid{ grid-template-columns: repeat(3, 1fr); } }
+    /* ===== Cards ===== */
+    .cards-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 0.6rem;
+      margin-bottom: 1.6rem; /* ✅ prevents overlap with counter */
+    }
+    @media (min-width: 768px){
+      .cards-grid{ grid-template-columns: repeat(3, 1fr); }
+    }
 
     .place-card{
-      background: #fff; border: 1px solid #eee; border-radius: 12px;
-      padding: 0.75rem; font-size: 0.9rem;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      display:flex; flex-direction:column; min-height: 100%;
+      display:flex;
+      flex-direction:column;
+      min-height: 100%;
     }
     .place-media{
-      width: 100%; height: 240px; border-radius: 8px;
-      background: #f6f6f6; overflow:hidden;
-      display:flex; align-items:center; justify-content:center;
+      width: 100%;
+      height: 240px;
+      border-radius: 8px;
+      background: #f6f6f6;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       margin-bottom: .5rem;
     }
-    .place-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .place-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
     .no-photo{ font-size: 0.85rem; color:#777; }
 
-    .place-title{ font-size: 1rem; font-weight: 600; color:#333; text-align:left; margin: 0.25rem 0 0.15rem 0; }
-    .place-quote{ font-size: 0.85rem; color: #555; font-style: italic; margin: 0.25rem 0 0.5rem 0; text-align:left; line-height: 1.35; }
-    .place-meta{ font-size: 0.8rem; color:#777; margin-top: 0.25rem; text-align:left; line-height: 1.35; }
+    .place-title{
+      font-size: 1rem;
+      font-weight: 600;
+      color:#333;
+      text-align:left;
+      margin: 0.25rem 0 0.15rem 0;
+    }
+    .place-quote{
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.25rem 0 0.5rem 0;
+      text-align:left;
+      line-height: 1.35;
+    }
+    .place-meta{
+      font-size: 0.8rem;
+      color:#777;
+      margin-top: 0.25rem;
+      text-align:left;
+      line-height: 1.35;
+    }
 
-    .tags{ display:flex; flex-wrap:wrap; gap: 6px; margin-top: .5rem; }
-    .tag{ font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid #eee; color:#555; background:#fafafa; line-height: 1; }
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 6px;
+      margin-top: .5rem;
+    }
+    .tag{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #eee;
+      color:#555;
+      background:#fafafa;
+      line-height: 1;
+    }
 
     .loading-box{
-      max-width: 720px; margin: 1.5rem auto 0 auto;
-      border: 1px dashed rgba(0,0,0,0.2); border-radius: 12px;
-      padding: 12px; text-align:center; color:#666;
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px dashed rgba(0,0,0,0.2);
+      border-radius: 12px;
+      padding: 12px;
+      text-align:center;
+      color:#666;
     }
     .error-box{
-      max-width: 720px; margin: 1.5rem auto 0 auto;
-      border: 1px solid rgba(255,0,0,0.25); background: rgba(255,0,0,0.05);
-      border-radius: 12px; padding: 12px; text-align:left; color:#8a2b2b;
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px solid rgba(255,0,0,0.25);
+      background: rgba(255,0,0,0.05);
+      border-radius: 12px;
+      padding: 12px;
+      text-align:left;
+      color:#8a2b2b;
     }
 
-    .results-bottom{ text-align:center; margin: 1.8rem auto 0 auto; color:#555; font-size: 0.95rem; }
-    @media (max-width: 430px){ .results-bottom{ font-size: 0.92rem; margin-top: 1rem; } }
+    .results-bottom{
+      text-align:center;
+      margin: 1.8rem auto 0 auto;
+      color:#555;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 430px){
+      .results-bottom{ font-size: 0.92rem; margin-top: 1.2rem; }
+    }
 
+    /* Infinite scroll small loader */
+    .more-loader{
+      text-align:center;
+      color:#777;
+      font-size: 0.9rem;
+      margin: 0.5rem 0 0;
+      display:none;
+    }
+
+    /* FAQ */
     #faq { margin-top: 3rem; }
     #faq p { text-align: left; }
 
-    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #777; }
+    /* Footer (same as index) */
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
     footer a { color: #0070f3; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
   </style>
@@ -178,7 +363,9 @@
 
     <div id="loading" class="loading-box">Loading places…</div>
     <div id="error" class="error-box" style="display:none;"></div>
+
     <section id="cardsGrid" class="cards-grid" style="display:none;" aria-label="Places list"></section>
+    <div id="moreLoader" class="more-loader">Loading more places…</div>
 
     <div class="results-bottom" id="resultsBottom" style="display:none;">
       <strong id="resultsCount">0</strong> places
@@ -219,7 +406,7 @@
   </div>
 
   <script>
-    // IMPORTANT: These are your filter labels (no spaces around hyphen)
+    // Neighborhood labels (no spaces around hyphen)
     const neighborhoods = [
       "Mitte",
       "Neukölln",
@@ -240,6 +427,10 @@
     const state = { selected: new Set(), all: [], filtered: [] };
     neighborhoods.forEach(n => state.selected.add(n)); // default all selected
 
+    // Infinite scroll
+    let visibleCount = 24;
+    const BATCH_SIZE = 24;
+
     const el = {
       chips: document.getElementById("neighborhoodChips"),
       grid: document.getElementById("cardsGrid"),
@@ -249,15 +440,15 @@
       resultsCount: document.getElementById("resultsCount"),
       activeFiltersText: document.getElementById("activeFiltersText"),
       clearBtn: document.getElementById("clearBtn"),
-      selectAllBtn: document.getElementById("selectAllBtn")
+      selectAllBtn: document.getElementById("selectAllBtn"),
+      moreLoader: document.getElementById("moreLoader")
     };
 
-    // ✅ normalize neighborhood strings to avoid "0 results" due to formatting differences
     function normNeighborhood(s){
       return String(s || "")
         .trim()
-        .replace(/\s*-\s*/g, "-")     // remove spaces around hyphen
-        .replace(/\s+/g, " ");        // normalize whitespace
+        .replace(/\s*-\s*/g, "-")
+        .replace(/\s+/g, " ");
     }
 
     function getNeighborhood(p){ return normNeighborhood(p.neighborhood); }
@@ -272,6 +463,7 @@
       if (!legacy && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
         legacyFromArray = p.photo[0].url;
       }
+
       return {
         small: small || legacy || legacyFromArray,
         large: large || legacy || legacyFromArray
@@ -345,6 +537,7 @@
     function showLoading(on){
       el.loading.style.display = on ? "block" : "none";
       el.grid.style.display = on ? "none" : "grid";
+      el.moreLoader.style.display = "none";
       el.error.style.display = "none";
     }
 
@@ -353,6 +546,7 @@
       el.error.textContent = msg;
       el.grid.style.display = "none";
       el.resultsBottom.style.display = "none";
+      el.moreLoader.style.display = "none";
     }
 
     function updateCount(){
@@ -370,6 +564,8 @@
     }
 
     function applyFilterAndRender(){
+      visibleCount = BATCH_SIZE;
+
       const selected = state.selected;
       const selectedNorm = new Set(Array.from(selected).map(normNeighborhood));
 
@@ -380,19 +576,21 @@
         return;
       }
 
-      // ✅ compare normalized values
       state.filtered = state.all.filter(p => selectedNorm.has(getNeighborhood(p)));
 
-      // Sort: 1) most recent first 2) photos first (tie-break)
-      state.filtered.sort((a,b) => {
-        const da = String(a.created_at || "");
-        const db = String(b.created_at || "");
-        const byDate = db.localeCompare(da);
-        if (byDate !== 0) return byDate;
-
+      // ✅ ORDER: (A) with photos (most recent first), then (B) without photos (most recent first)
+      state.filtered.sort((a, b) => {
         const ap = a.has_photo ? 1 : 0;
         const bp = b.has_photo ? 1 : 0;
-        return bp - ap;
+        if (bp !== ap) return bp - ap; // photos first
+
+        const ta = Date.parse(a.created_at || "") || 0;
+        const tb = Date.parse(b.created_at || "") || 0;
+        if (tb !== ta) return tb - ta; // most recent first
+
+        const an = (a.name || "").toLowerCase();
+        const bn = (b.name || "").toLowerCase();
+        return an.localeCompare(bn);
       });
 
       renderCards();
@@ -402,6 +600,7 @@
     function renderCards(){
       el.grid.innerHTML = "";
       el.grid.style.display = "grid";
+      el.moreLoader.style.display = "none";
 
       if (state.filtered.length === 0){
         el.grid.innerHTML = `<div class="loading-box">No results for the selected neighborhoods.</div>`;
@@ -409,11 +608,29 @@
       }
 
       const frag = document.createDocumentFragment();
-      state.filtered.forEach(p => frag.appendChild(buildCard(p)));
+      const items = state.filtered.slice(0, visibleCount);
+
+      items.forEach((p, idx) => {
+        frag.appendChild(buildCard(p, idx));
+      });
+
       el.grid.appendChild(frag);
     }
 
-    function buildCard(p){
+    function appendMore(){
+      const already = el.grid.querySelectorAll(".place-card").length;
+      const next = state.filtered.slice(already, visibleCount);
+
+      if (next.length === 0) return;
+
+      const frag = document.createDocumentFragment();
+      next.forEach((p, idx) => {
+        frag.appendChild(buildCard(p, already + idx));
+      });
+      el.grid.appendChild(frag);
+    }
+
+    function buildCard(p, index){
       const card = document.createElement("article");
       card.className = "place-card";
 
@@ -421,10 +638,16 @@
       media.className = "place-media";
 
       const photo = getPhoto(p);
+
       if (photo.small || photo.large){
         const img = document.createElement("img");
-        img.loading = "lazy";
+
+        // ✅ performance: show first few images faster
+        if (index < 6) img.setAttribute("fetchpriority", "high");
+
+        img.loading = index < 6 ? "eager" : "lazy";
         img.decoding = "async";
+
         img.src = photo.large || photo.small;
 
         const srcsetParts = [];
@@ -432,6 +655,7 @@
         if (photo.large) srcsetParts.push(`${photo.large} 1024w`);
         if (srcsetParts.length) img.setAttribute("srcset", srcsetParts.join(", "));
         img.setAttribute("sizes", "(max-width: 430px) 100vw, (max-width: 900px) 50vw, 33vw");
+
         img.alt = `${p.name || "Place"} changing table`;
 
         img.onerror = () => {
@@ -521,6 +745,24 @@
         showError(e.message || String(e));
       }
     }
+
+    // infinite scroll listener
+    window.addEventListener("scroll", () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 700;
+
+      if (!nearBottom) return;
+      if (visibleCount >= state.filtered.length) return;
+
+      el.moreLoader.style.display = "block";
+
+      // bump & append
+      visibleCount = Math.min(state.filtered.length, visibleCount + BATCH_SIZE);
+      appendMore();
+
+      // tiny delay to avoid flicker
+      setTimeout(() => { el.moreLoader.style.display = "none"; }, 250);
+    });
 
     function escapeHtml(str){
       return String(str).replace(/[&<>"']/g, s => ({
