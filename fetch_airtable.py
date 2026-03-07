@@ -2,18 +2,31 @@ import requests
 import json
 import os
 import time
-import re
-from datetime import datetime
 
-AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
+# === Configurações da API ===
+AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
 BASE_ID = "appjWF7WnC8DRWaXM"
 TABLE_NAME = "Changing Diapers"
-HEADERS = {"Authorization": f"Bearer {AIRTABLE_TOKEN}"}
+HEADERS = {
+    "Authorization": f"Bearer {AIRTABLE_TOKEN}"
+}
 
+# === Helpers ===
 def to_list(v):
     if v is None:
         return []
     return v if isinstance(v, list) else [v]
+
+def first_photo_url(photo_field):
+    if not isinstance(photo_field, list) or len(photo_field) == 0:
+        return None
+    first = photo_field[0] or {}
+    thumbs = first.get("thumbnails") or {}
+    if isinstance(thumbs, dict):
+        large = thumbs.get("large")
+        if isinstance(large, dict) and large.get("url"):
+            return large["url"]
+    return first.get("url")
 
 def stars_from_score10(score):
     if score is None:
@@ -25,51 +38,7 @@ def stars_from_score10(score):
     s = max(0.0, min(5.0, s))
     return round(s * 2) / 2
 
-def parse_dt(value):
-    if not value:
-        return None
-    try:
-        s = str(value).strip()
-        if s.endswith("Z"):
-            s = s[:-1] + "+00:00"
-        return datetime.fromisoformat(s)
-    except Exception:
-        return None
-
-def normalize_neighborhood(s):
-    if not s:
-        return ""
-    return re.sub(r"\s*-\s*", "-", str(s).strip())
-
-def pick_photo_thumbs(photo_field):
-    """
-    Returns (small_url, large_url). Prefer Airtable thumbnails to reduce weight.
-    """
-    if not isinstance(photo_field, list) or len(photo_field) == 0:
-        return (None, None)
-
-    first = photo_field[0] or {}
-    thumbs = first.get("thumbnails") or {}
-
-    small = None
-    large = None
-
-    if isinstance(thumbs, dict):
-        sm = thumbs.get("small")
-        lg = thumbs.get("large")
-        if isinstance(sm, dict):
-            small = sm.get("url")
-        if isinstance(lg, dict):
-            large = lg.get("url")
-
-    original = first.get("url")
-    if not small and original:
-        small = original
-    if not large and original:
-        large = original
-
-    return (small, large)
-
+# === Função para geocodificar endereços ===
 def geocode_address(address):
     try:
         url = "https://nominatim.openstreetmap.org/search"
@@ -77,7 +46,7 @@ def geocode_address(address):
         res = requests.get(url, params=params, headers={"User-Agent": "changing-diapers-mvp"})
         data = res.json()
         if data:
-            print(f"[✓] Geocoded: {address}")
+            print(f"[✓] Geocoded: {address} → {data[0]['lat']}, {data[0]['lon']}")
             return float(data[0]["lat"]), float(data[0]["lon"])
         else:
             print(f"[!] No result for address: {address}")
@@ -85,53 +54,15 @@ def geocode_address(address):
         print(f"[!] Geocode error for '{address}': {e}")
     return None, None
 
-def dedupe_prefer_recent_with_photo(places):
-    """
-    Group by (Name + Full Address). For each group:
-      1) if any record has photo -> pick the most recent among those with photo
-      2) else pick the most recent overall
-    This matches: "mostrar o mais recente que houver com foto; senão o mais recente sem foto".
-    """
-    grouped = {}
-
-    for p in places:
-        name = (p.get("name") or "").strip().lower()
-        address = (p.get("address") or "").strip().lower()
-
-        # If address is missing, fallback to name only + neighborhood to reduce accidental merging
-        if not address:
-            key = f"{name}|__noaddr__|{(p.get('neighborhood') or '').strip().lower()}"
-        else:
-            key = f"{name}|{address}"
-
-        grouped.setdefault(key, []).append(p)
-
-    out = []
-
-    for key, items in grouped.items():
-        # split
-        with_photo = [x for x in items if x.get("has_photo")]
-        if with_photo:
-            with_photo.sort(key=lambda x: (parse_dt(x.get("created_at")) or datetime.min), reverse=True)
-            out.append(with_photo[0])
-        else:
-            items.sort(key=lambda x: (parse_dt(x.get("created_at")) or datetime.min), reverse=True)
-            out.append(items[0])
-
-    print(f"[✅] Deduped (prefer recent with photo): {len(places)} → {len(out)}")
-    return out
-
-# -----------------------------
-# Airtable fetch
-# -----------------------------
 places_all = []
-places_berlin_raw = []
+places_berlin = []
 
 url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
 params = {"pageSize": 100}
 
 print("[...] Starting Airtable fetch...")
 
+# === Paginação dos resultados ===
 while True:
     res = requests.get(url, headers=HEADERS, params=params)
     data = res.json()
@@ -152,67 +83,69 @@ while True:
         address = fields.get("Full Address", "")
         city = (fields.get("City", "") or "").strip()
         country = fields.get("Country", "")
-        created_at = fields.get("Created at") or record.get("createdTime")
+        created_at = fields.get("Created at")
 
-        # geocode if missing
+        # 🌍 Geocodificação caso não tenha lat/lon
         if (not lat or not lon) and address:
             parts = [address, city, country]
-            search_address = ", ".join(x for x in parts if x)
+            search_address = ", ".join(part for part in parts if part)
             lat, lon = geocode_address(search_address)
-            time.sleep(1)
+            time.sleep(1)  # evita bloqueio da API
 
+            if not lat or not lon:
+                print(f"[!] Could not geocode: {search_address}")
+
+        # ⭐️ Overall user experience (0–10)
         overall_score = fields.get("Overall user experience")
         if overall_score is not None:
             try:
                 overall_score = float(overall_score)
             except (TypeError, ValueError):
+                print(f"[⚠️] Invalid score for {name}: {overall_score}")
                 overall_score = None
 
+        # 📷 Photo + Review
         photo_field = fields.get("Photo")
         review = (fields.get("Changing Table Review") or "").strip()
-
-        photo_small_url, photo_large_url = pick_photo_thumbs(photo_field)
-        has_photo = True if (photo_small_url or photo_large_url) else False
-        photo_url = photo_large_url or photo_small_url
-
-        neighborhood = normalize_neighborhood((fields.get("Neighborhood (Berlin)") or "").strip())
 
         place = {
             "id": record.get("id"),
             "name": fields.get("Name", ""),
             "city": city,
-            "neighborhood": neighborhood,
+
+            # Berlin neighborhoods (Airtable field name EXACT)
+            "neighborhood": (fields.get("Neighborhood (Berlin)") or "").strip(),
+
             "address": address,
             "latitude": lat,
             "longitude": lon,
             "type": fields.get("Type", ""),
 
+            # tags
             "changing_table_location": to_list(fields.get("Changing Table Location")),
-            "supplies_available": to_list(fields.get("Available Supplies") or fields.get("Available Suppllies")),
+            "supplies_available": to_list(fields.get("Available Supplies")),
             "changing_table_condition": to_list(fields.get("Changing Table Condition")),
 
+            # extras
             "room_for_stroller": fields.get("Room for a stroller", False),
             "site": fields.get("Site", ""),
             "created_at": created_at,
 
-            "photo_small_url": photo_small_url,
-            "photo_large_url": photo_large_url,
-            "photo_url": photo_url,
-            "has_photo": has_photo,
-
+            # photo + review
+            "photo": photo_field if isinstance(photo_field, list) else [],
+            "photo_url": first_photo_url(photo_field),
             "review": review,
 
-            "overall_user_experience": overall_score,
-            "stars": stars_from_score10(overall_score),
-
-            # Keep it in JSON (even if we don't use for dedupe now)
-            "unique_entry": fields.get("Unique entry?", "")
+            # rating
+            "overall_user_experience": overall_score,   # 0–10
+            "stars": stars_from_score10(overall_score)  # 0–5
         }
 
         places_all.append(place)
         if city.lower() == "berlin":
-            places_berlin_raw.append(place)
+            places_berlin.append(place)
 
+    # === Paginação ===
     if "offset" in data:
         params["offset"] = data["offset"]
         print("[⏭️] More pages to fetch...")
@@ -220,17 +153,18 @@ while True:
         break
 
 print(f"[✅] Total global places collected: {len(places_all)}")
-print(f"[✅] Total Berlin places collected (raw): {len(places_berlin_raw)}")
+print(f"[✅] Total Berlin places collected: {len(places_berlin)}")
 
-# ✅ Deduplicate Berlin with your exact preference
-places_berlin = dedupe_prefer_recent_with_photo(places_berlin_raw)
-print(f"[✅] Total Berlin places collected (deduped): {len(places_berlin)}")
+# === Exportar para JSON (no diretório atual) ===
+out_global = os.path.abspath("places.json")
+out_berlin = os.path.abspath("places-berlin.json")
 
-# Export JSON
-with open("places.json", "w", encoding="utf-8") as f:
+with open(out_global, "w", encoding="utf-8") as f:
     json.dump(places_all, f, ensure_ascii=False, indent=2)
 
-with open("places-berlin.json", "w", encoding="utf-8") as f:
+with open(out_berlin, "w", encoding="utf-8") as f:
     json.dump(places_berlin, f, ensure_ascii=False, indent=2)
 
 print("[🎉] Export done!")
+print(f"    -> {out_global}")
+print(f"    -> {out_berlin}")
