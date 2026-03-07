@@ -5,9 +5,13 @@ on:
   schedule:
     - cron: '0 */6 * * *'  # Executa a cada 6 horas
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -20,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
+      - name: Ensure Berlin images folder exists
+        run: mkdir -p images/berlin
+
       - name: Fetch Airtable data
         env:
           AIRTABLE_PAT: ${{ secrets.AIRTABLE_PAT }}
@@ -30,6 +37,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add places.json places-berlin.json
-          git commit -m "Update places.json from Airtable" || echo "No changes to commit"
+          git add places.json places-berlin.json images/berlin
+          git commit -m "Update places and Berlin images from Airtable" || echo "No changes to commit"
           git push
