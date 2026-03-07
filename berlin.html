@@ -454,22 +454,22 @@
     function getNeighborhood(p){ return normNeighborhood(p.neighborhood); }
     function getReview(p){ return (p.review || "").trim(); }
 
-    // ✅ FIXED PHOTO LOGIC: large first, small fallback, no srcset
     function getPhoto(p){
-      const small = p.photo_small_url || null;
-      const large = p.photo_large_url || null;
-      const legacy = p.photo_url || null;
+  const local = p.photo_local_url || null;
+  const small = p.photo_small_url || null;
+  const large = p.photo_large_url || null;
+  const legacy = p.photo_url || null;
 
-      let legacyFromArray = null;
-      if (!legacy && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
-        legacyFromArray = p.photo[0].url;
-      }
+  let legacyFromArray = null;
+  if (!legacy && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
+    legacyFromArray = p.photo[0].url;
+  }
 
-      return {
-        primary: large || small || legacy || legacyFromArray || null,
-        fallback: small || legacy || legacyFromArray || large || null
-      };
-    }
+  return {
+    primary: local || large || small || legacy || legacyFromArray || null,
+    fallback: large || small || legacy || legacyFromArray || null
+  };
+}
 
     function getTags(p){
       const merged = [
