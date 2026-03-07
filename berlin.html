@@ -164,7 +164,6 @@
     }
     .chip:hover{ background:#efefef; }
 
-    /* ✅ selected color (soft blue) */
     .chip[data-selected="true"]{
       background: #4da3ff;
       border-color: #4da3ff;
@@ -192,7 +191,6 @@
     }
     .btn-small:hover{ background:#efefef; }
 
-    /* iPhone-ish tuning */
     @media (max-width: 430px){
       body { padding: 1.8rem; }
       .chip-grid{ gap: 6px; margin-bottom: 1.05rem; }
@@ -207,7 +205,7 @@
       grid-template-columns: 1fr;
       gap: 1rem;
       margin-top: 0.6rem;
-      margin-bottom: 1.6rem; /* ✅ prevents overlap with counter */
+      margin-bottom: 1.6rem;
     }
     @media (min-width: 768px){
       .cards-grid{ grid-template-columns: repeat(3, 1fr); }
@@ -312,7 +310,6 @@
       .results-bottom{ font-size: 0.92rem; margin-top: 1.2rem; }
     }
 
-    /* Infinite scroll small loader */
     .more-loader{
       text-align:center;
       color:#777;
@@ -321,11 +318,9 @@
       display:none;
     }
 
-    /* FAQ */
     #faq { margin-top: 3rem; }
     #faq p { text-align: left; }
 
-    /* Footer (same as index) */
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -406,7 +401,6 @@
   </div>
 
   <script>
-    // Neighborhood labels (no spaces around hyphen)
     const neighborhoods = [
       "Mitte",
       "Neukölln",
@@ -425,9 +419,8 @@
     const DATA_URL = "/places-berlin.json";
 
     const state = { selected: new Set(), all: [], filtered: [] };
-    neighborhoods.forEach(n => state.selected.add(n)); // default all selected
+    neighborhoods.forEach(n => state.selected.add(n));
 
-    // Infinite scroll
     let visibleCount = 24;
     const BATCH_SIZE = 24;
 
@@ -455,22 +448,20 @@
     function getReview(p){ return (p.review || "").trim(); }
 
     function getPhoto(p){
+      const original = p.photo_url || null;
+      const large = p.photo_large_url || null;
+      const small = p.photo_small_url || null;
 
-  const original = p.photo_url || null;
-  const large = p.photo_large_url || null;
-  const small = p.photo_small_url || null;
+      let legacyFromArray = null;
+      if (!original && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
+        legacyFromArray = p.photo[0].url;
+      }
 
-  let legacyFromArray = null;
-
-  if (!original && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
-    legacyFromArray = p.photo[0].url;
-  }
-
-  return {
-    primary: original || large || small || legacyFromArray || null,
-    fallback: large || small || legacyFromArray || null
-  };
-}
+      return {
+        primary: original || large || small || legacyFromArray || null,
+        fallback: large || small || legacyFromArray || null
+      };
+    }
 
     function getTags(p){
       const merged = [
@@ -580,15 +571,14 @@
 
       state.filtered = state.all.filter(p => selectedNorm.has(getNeighborhood(p)));
 
-      // ✅ ORDER: (A) with photos (most recent first), then (B) without photos (most recent first)
       state.filtered.sort((a, b) => {
         const ap = a.has_photo ? 1 : 0;
         const bp = b.has_photo ? 1 : 0;
-        if (bp !== ap) return bp - ap; // photos first
+        if (bp !== ap) return bp - ap;
 
         const ta = Date.parse(a.created_at || "") || 0;
         const tb = Date.parse(b.created_at || "") || 0;
-        if (tb !== ta) return tb - ta; // most recent first
+        if (tb !== ta) return tb - ta;
 
         const an = (a.name || "").toLowerCase();
         const bn = (b.name || "").toLowerCase();
@@ -661,17 +651,11 @@
             return;
           }
 
-          if (photo.fallback && img.src !== photo.fallback) {
+          if (photo.fallback) {
             img.dataset.fallbackTried = "true";
             img.src = photo.fallback;
             return;
           }
-
-          media.innerHTML = "";
-          const span = document.createElement("span");
-          span.className = "no-photo";
-          span.textContent = "No photo yet";
-          media.appendChild(span);
         };
 
         media.appendChild(img);
@@ -754,7 +738,6 @@
       }
     }
 
-    // infinite scroll listener
     window.addEventListener("scroll", () => {
       const nearBottom =
         window.innerHeight + window.scrollY >= document.body.offsetHeight - 700;
@@ -764,11 +747,9 @@
 
       el.moreLoader.style.display = "block";
 
-      // bump & append
       visibleCount = Math.min(state.filtered.length, visibleCount + BATCH_SIZE);
       appendMore();
 
-      // tiny delay to avoid flicker
       setTimeout(() => { el.moreLoader.style.display = "none"; }, 250);
     });
 
