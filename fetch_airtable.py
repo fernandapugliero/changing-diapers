@@ -2,14 +2,13 @@ import requests
 import json
 import os
 import time
+import re
+from datetime import datetime
 
-AIRTABLE_TOKEN = os.environ.get('AIRTABLE_PAT')
+AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
 BASE_ID = "appjWF7WnC8DRWaXM"
 TABLE_NAME = "Changing Diapers"
-
-HEADERS = {
-    "Authorization": f"Bearer {AIRTABLE_TOKEN}"
-}
+HEADERS = {"Authorization": f"Bearer {AIRTABLE_TOKEN}"}
 
 def to_list(v):
     if v is None:
@@ -21,13 +20,112 @@ def stars_from_score10(score):
         return None
     try:
         s = float(score) / 2.0
-    except:
+    except (TypeError, ValueError):
         return None
     s = max(0.0, min(5.0, s))
     return round(s * 2) / 2
 
+def parse_dt(value):
+    if not value:
+        return None
+    try:
+        s = str(value).strip()
+        if s.endswith("Z"):
+            s = s[:-1] + "+00:00"
+        return datetime.fromisoformat(s)
+    except Exception:
+        return None
+
+def normalize_neighborhood(s):
+    if not s:
+        return ""
+    return re.sub(r"\s*-\s*", "-", str(s).strip())
+
+def pick_photo_thumbs(photo_field):
+    """
+    Returns (small_url, large_url). Prefer Airtable thumbnails to reduce weight.
+    """
+    if not isinstance(photo_field, list) or len(photo_field) == 0:
+        return (None, None)
+
+    first = photo_field[0] or {}
+    thumbs = first.get("thumbnails") or {}
+
+    small = None
+    large = None
+
+    if isinstance(thumbs, dict):
+        sm = thumbs.get("small")
+        lg = thumbs.get("large")
+        if isinstance(sm, dict):
+            small = sm.get("url")
+        if isinstance(lg, dict):
+            large = lg.get("url")
+
+    original = first.get("url")
+    if not small and original:
+        small = original
+    if not large and original:
+        large = original
+
+    return (small, large)
+
+def geocode_address(address):
+    try:
+        url = "https://nominatim.openstreetmap.org/search"
+        params = {"q": address, "format": "json", "limit": 1}
+        res = requests.get(url, params=params, headers={"User-Agent": "changing-diapers-mvp"})
+        data = res.json()
+        if data:
+            print(f"[✓] Geocoded: {address}")
+            return float(data[0]["lat"]), float(data[0]["lon"])
+        else:
+            print(f"[!] No result for address: {address}")
+    except Exception as e:
+        print(f"[!] Geocode error for '{address}': {e}")
+    return None, None
+
+def dedupe_prefer_recent_with_photo(places):
+    """
+    Group by (Name + Full Address). For each group:
+      1) if any record has photo -> pick the most recent among those with photo
+      2) else pick the most recent overall
+    This matches: "mostrar o mais recente que houver com foto; senão o mais recente sem foto".
+    """
+    grouped = {}
+
+    for p in places:
+        name = (p.get("name") or "").strip().lower()
+        address = (p.get("address") or "").strip().lower()
+
+        # If address is missing, fallback to name only + neighborhood to reduce accidental merging
+        if not address:
+            key = f"{name}|__noaddr__|{(p.get('neighborhood') or '').strip().lower()}"
+        else:
+            key = f"{name}|{address}"
+
+        grouped.setdefault(key, []).append(p)
+
+    out = []
+
+    for key, items in grouped.items():
+        # split
+        with_photo = [x for x in items if x.get("has_photo")]
+        if with_photo:
+            with_photo.sort(key=lambda x: (parse_dt(x.get("created_at")) or datetime.min), reverse=True)
+            out.append(with_photo[0])
+        else:
+            items.sort(key=lambda x: (parse_dt(x.get("created_at")) or datetime.min), reverse=True)
+            out.append(items[0])
+
+    print(f"[✅] Deduped (prefer recent with photo): {len(places)} → {len(out)}")
+    return out
+
+# -----------------------------
+# Airtable fetch
+# -----------------------------
 places_all = []
-places_berlin = []
+places_berlin_raw = []
 
 url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
 params = {"pageSize": 100}
@@ -35,88 +133,104 @@ params = {"pageSize": 100}
 print("[...] Starting Airtable fetch...")
 
 while True:
-
     res = requests.get(url, headers=HEADERS, params=params)
     data = res.json()
 
+    if "error" in data:
+        raise RuntimeError(f"Airtable API error: {data['error']}")
+
     records = data.get("records", [])
+    print(f"[✓] Received {len(records)} records.")
 
     for record in records:
-
         fields = record.get("fields", {})
+        name = fields.get("Name", "Unnamed")
+        print(f"[🔍] Processing: {name}")
+
+        lat = fields.get("Latitude")
+        lon = fields.get("Longitude")
+        address = fields.get("Full Address", "")
+        city = (fields.get("City", "") or "").strip()
+        country = fields.get("Country", "")
+        created_at = fields.get("Created at") or record.get("createdTime")
+
+        # geocode if missing
+        if (not lat or not lon) and address:
+            parts = [address, city, country]
+            search_address = ", ".join(x for x in parts if x)
+            lat, lon = geocode_address(search_address)
+            time.sleep(1)
 
         overall_score = fields.get("Overall user experience")
-
         if overall_score is not None:
             try:
                 overall_score = float(overall_score)
-            except:
+            except (TypeError, ValueError):
                 overall_score = None
 
         photo_field = fields.get("Photo")
+        review = (fields.get("Changing Table Review") or "").strip()
 
-        photo_small = None
-        photo_large = None
-        photo_url = None
+        photo_small_url, photo_large_url = pick_photo_thumbs(photo_field)
+        has_photo = True if (photo_small_url or photo_large_url) else False
+        photo_url = photo_large_url or photo_small_url
 
-        if isinstance(photo_field, list) and len(photo_field) > 0:
-
-            first = photo_field[0]
-            thumbs = first.get("thumbnails", {})
-
-            if thumbs.get("small"):
-                photo_small = thumbs["small"]["url"]
-
-            if thumbs.get("large"):
-                photo_large = thumbs["large"]["url"]
-
-            photo_url = first.get("url")
+        neighborhood = normalize_neighborhood((fields.get("Neighborhood (Berlin)") or "").strip())
 
         place = {
-
             "id": record.get("id"),
             "name": fields.get("Name", ""),
-            "city": fields.get("City", ""),
-            "neighborhood": fields.get("Neighborhood (Berlin)", ""),
-            "address": fields.get("Full Address", ""),
-            "latitude": fields.get("Latitude"),
-            "longitude": fields.get("Longitude"),
+            "city": city,
+            "neighborhood": neighborhood,
+            "address": address,
+            "latitude": lat,
+            "longitude": lon,
             "type": fields.get("Type", ""),
 
             "changing_table_location": to_list(fields.get("Changing Table Location")),
-            "supplies_available": to_list(fields.get("Available Supplies")),
+            "supplies_available": to_list(fields.get("Available Supplies") or fields.get("Available Suppllies")),
             "changing_table_condition": to_list(fields.get("Changing Table Condition")),
 
             "room_for_stroller": fields.get("Room for a stroller", False),
-
             "site": fields.get("Site", ""),
-            "created_at": fields.get("Created at"),
+            "created_at": created_at,
 
-            "photo_small_url": photo_small,
-            "photo_large_url": photo_large,
+            "photo_small_url": photo_small_url,
+            "photo_large_url": photo_large_url,
             "photo_url": photo_url,
+            "has_photo": has_photo,
 
-            "review": fields.get("Changing Table Review", ""),
+            "review": review,
 
             "overall_user_experience": overall_score,
-            "stars": stars_from_score10(overall_score)
+            "stars": stars_from_score10(overall_score),
 
+            # Keep it in JSON (even if we don't use for dedupe now)
+            "unique_entry": fields.get("Unique entry?", "")
         }
 
         places_all.append(place)
+        if city.lower() == "berlin":
+            places_berlin_raw.append(place)
 
-        if place["city"].lower() == "berlin":
-            places_berlin.append(place)
-
-    if 'offset' in data:
-        params['offset'] = data['offset']
+    if "offset" in data:
+        params["offset"] = data["offset"]
+        print("[⏭️] More pages to fetch...")
     else:
         break
 
+print(f"[✅] Total global places collected: {len(places_all)}")
+print(f"[✅] Total Berlin places collected (raw): {len(places_berlin_raw)}")
+
+# ✅ Deduplicate Berlin with your exact preference
+places_berlin = dedupe_prefer_recent_with_photo(places_berlin_raw)
+print(f"[✅] Total Berlin places collected (deduped): {len(places_berlin)}")
+
+# Export JSON
 with open("places.json", "w", encoding="utf-8") as f:
     json.dump(places_all, f, ensure_ascii=False, indent=2)
 
 with open("places-berlin.json", "w", encoding="utf-8") as f:
     json.dump(places_berlin, f, ensure_ascii=False, indent=2)
 
-print("[✓] JSON updated")
+print("[🎉] Export done!")
