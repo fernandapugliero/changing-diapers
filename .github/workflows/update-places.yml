@@ -31,5 +31,5 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add places.json places-berlin.json
-          git commit -m "Update places JSON from Airtable" || echo "No changes to commit"
+          git commit -m "Update places.json from Airtable" || echo "No changes to commit"
           git push
