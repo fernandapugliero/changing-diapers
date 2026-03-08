@@ -448,19 +448,13 @@
     function getReview(p){ return (p.review || "").trim(); }
 
     function getPhoto(p){
-      const original = p.photo_url || null;
-      const large = p.photo_large_url || null;
-      const small = p.photo_small_url || null;
+      if (p.photo_url) return p.photo_url;
 
-      let legacyFromArray = null;
-      if (!original && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
-        legacyFromArray = p.photo[0].url;
+      if (Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
+        return p.photo[0].url;
       }
 
-      return {
-        primary: original || large || small || legacyFromArray || null,
-        fallback: large || small || legacyFromArray || null
-      };
+      return null;
     }
 
     function getTags(p){
@@ -572,8 +566,8 @@
       state.filtered = state.all.filter(p => selectedNorm.has(getNeighborhood(p)));
 
       state.filtered.sort((a, b) => {
-        const ap = a.has_photo ? 1 : 0;
-        const bp = b.has_photo ? 1 : 0;
+        const ap = a.photo_url ? 1 : 0;
+        const bp = b.photo_url ? 1 : 0;
         if (bp !== ap) return bp - ap;
 
         const ta = Date.parse(a.created_at || "") || 0;
@@ -631,31 +625,22 @@
 
       const photo = getPhoto(p);
 
-      if (photo.primary){
+      if (photo){
         const img = document.createElement("img");
 
         if (index < 6) img.setAttribute("fetchpriority", "high");
 
         img.loading = index < 6 ? "eager" : "lazy";
         img.decoding = "async";
-        img.src = photo.primary;
+        img.src = photo;
         img.alt = `${p.name || "Place"} changing table`;
 
         img.onerror = () => {
-          if (img.dataset.fallbackTried === "true") {
-            media.innerHTML = "";
-            const span = document.createElement("span");
-            span.className = "no-photo";
-            span.textContent = "No photo yet";
-            media.appendChild(span);
-            return;
-          }
-
-          if (photo.fallback) {
-            img.dataset.fallbackTried = "true";
-            img.src = photo.fallback;
-            return;
-          }
+          media.innerHTML = "";
+          const span = document.createElement("span");
+          span.className = "no-photo";
+          span.textContent = "No photo yet";
+          media.appendChild(span);
         };
 
         media.appendChild(img);
