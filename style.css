@@ -389,5 +389,18 @@ footer a:hover {
   .berlin-banner-min{
   margin: 2.5rem 0;
 }
+
+  /* ===== Support FixMyDiaper (Buy me a coffee) ===== */
+
+.support-project{
+  text-align:center;
+  margin-top:3rem;
+  margin-bottom:3rem;
+}
+
+.bmc-wrapper{
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
 }
 
