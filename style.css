@@ -402,5 +402,11 @@ footer a:hover {
   margin-top:1rem;
   margin-bottom:1rem;
 }
+  
+  .support-project p{
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
 }
 
