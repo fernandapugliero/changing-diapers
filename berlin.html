@@ -454,20 +454,23 @@
     function getNeighborhood(p){ return normNeighborhood(p.neighborhood); }
     function getReview(p){ return (p.review || "").trim(); }
 
-    function getPhoto(p){
-      const small = p.photo_small_url || null;
-      const large = p.photo_large_url || null;
-      const legacy = p.photo_url || null;
+    function getPhotoCandidates(p){
+      const candidates = [];
 
-      let legacyFromArray = null;
-      if (!legacy && Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url){
-        legacyFromArray = p.photo[0].url;
+      if (p.photo_url) candidates.push(p.photo_url);
+      if (p.photo_large_url && !candidates.includes(p.photo_large_url)) candidates.push(p.photo_large_url);
+      if (p.photo_small_url && !candidates.includes(p.photo_small_url)) candidates.push(p.photo_small_url);
+
+      if (Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url) {
+        const legacy = p.photo[0].url;
+        if (!candidates.includes(legacy)) candidates.push(legacy);
       }
 
-      return {
-        small: small || legacy || legacyFromArray,
-        large: large || legacy || legacyFromArray
-      };
+      return candidates.filter(Boolean);
+    }
+
+    function hasAnyPhoto(p){
+      return getPhotoCandidates(p).length > 0;
     }
 
     function getTags(p){
@@ -578,15 +581,14 @@
 
       state.filtered = state.all.filter(p => selectedNorm.has(getNeighborhood(p)));
 
-      // ✅ ORDER: (A) with photos (most recent first), then (B) without photos (most recent first)
       state.filtered.sort((a, b) => {
-        const ap = a.has_photo ? 1 : 0;
-        const bp = b.has_photo ? 1 : 0;
-        if (bp !== ap) return bp - ap; // photos first
+        const ap = hasAnyPhoto(a) ? 1 : 0;
+        const bp = hasAnyPhoto(b) ? 1 : 0;
+        if (bp !== ap) return bp - ap;
 
         const ta = Date.parse(a.created_at || "") || 0;
         const tb = Date.parse(b.created_at || "") || 0;
-        if (tb !== ta) return tb - ta; // most recent first
+        if (tb !== ta) return tb - ta;
 
         const an = (a.name || "").toLowerCase();
         const bn = (b.name || "").toLowerCase();
@@ -637,28 +639,28 @@
       const media = document.createElement("div");
       media.className = "place-media";
 
-      const photo = getPhoto(p);
+      const photoCandidates = getPhotoCandidates(p);
 
-      if (photo.small || photo.large){
+      if (photoCandidates.length > 0){
         const img = document.createElement("img");
 
-        // ✅ performance: show first few images faster
         if (index < 6) img.setAttribute("fetchpriority", "high");
 
         img.loading = index < 6 ? "eager" : "lazy";
         img.decoding = "async";
-
-        img.src = photo.large || photo.small;
-
-        const srcsetParts = [];
-        if (photo.small) srcsetParts.push(`${photo.small} 256w`);
-        if (photo.large) srcsetParts.push(`${photo.large} 1024w`);
-        if (srcsetParts.length) img.setAttribute("srcset", srcsetParts.join(", "));
-        img.setAttribute("sizes", "(max-width: 430px) 100vw, (max-width: 900px) 50vw, 33vw");
-
         img.alt = `${p.name || "Place"} changing table`;
 
+        let photoIndex = 0;
+        img.src = photoCandidates[photoIndex];
+
         img.onerror = () => {
+          photoIndex += 1;
+
+          if (photoIndex < photoCandidates.length) {
+            img.src = photoCandidates[photoIndex];
+            return;
+          }
+
           media.innerHTML = "";
           const span = document.createElement("span");
           span.className = "no-photo";
