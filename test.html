@@ -48,6 +48,80 @@
       margin: 0 auto;
     }
 
+    /* ===== Navegação ===== */
+    .site-nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+    }
+
+    .site-nav-top {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .site-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-brand img {
+      width: 30px;
+      height: auto;
+      display: block;
+    }
+
+    .site-brand span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      line-height: 1;
+    }
+
+    .site-nav-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 34px;
+    }
+
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .site-nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+      line-height: 1;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .lang-switch a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 600;
+    }
+
+    .lang-switch strong {
+      font-weight: 600;
+      color: #333;
+    }
+
     /* ===== Títulos ===== */
     h1 {
       font-size: 2rem;
@@ -55,6 +129,7 @@
       text-align: center;
       line-height: 1.2;
     }
+
     /* subtítulo da hero */
     h2 {
       font-size: 1.1rem;
@@ -65,7 +140,7 @@
       line-height: 1.4;
     }
 
-    /* grandes títulos de seção (Recently, Best places, FAQ) */
+    /* grandes títulos de seção */
     .section-title {
       font-size: 1.3rem;
       font-weight: 600;
@@ -76,7 +151,7 @@
       line-height: 1.3;
     }
 
-    /* subtítulos de seção (texto logo abaixo do título) */
+    /* subtítulos de seção */
     .section-subtitle {
       font-size: 0.95rem;
       color: #555;
@@ -289,7 +364,46 @@
         height: 520px;
       }
     }
+
     @media (max-width: 480px) {
+      .site-nav-top {
+        justify-content: flex-start;
+        margin-bottom: 0.65rem;
+      }
+
+      .site-brand {
+        gap: 8px;
+      }
+
+      .site-brand img {
+        width: 30px;
+      }
+
+      .site-brand span {
+        font-size: 0.95rem;
+      }
+
+      .site-nav-bottom {
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .site-nav-links {
+        gap: 14px;
+        flex-wrap: nowrap;
+      }
+
+      .site-nav-links a {
+        font-size: 0.95rem;
+      }
+
+      .lang-switch {
+        font-size: 0.85rem;
+        margin-left: 10px;
+        flex: 0 0 auto;
+      }
+
       .map-search button {
         flex: 0 0 auto;
       }
@@ -300,6 +414,7 @@
         height: 480px;
       }
     }
+
     @media (min-width: 768px) {
       .recent-grid {
         overflow-x: visible;
@@ -314,129 +429,33 @@
       .recent-dots {
         display: none;
       }
-    /* ===== Nav upgrade ===== */
-.site-nav{
-  margin-bottom: 2rem;
-  padding-top: 1rem;
-}
-
-.site-nav-top{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0.7rem;
-}
-
-.site-brand{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.site-brand img{
-  width: 30px;
-  height: auto;
-  margin-right: 0;
-}
-
-.site-brand span{
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.site-nav-bottom{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 34px; /* espaço maior entre menu e idioma no desktop */
-}
-
-.site-nav-links{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.site-nav-links a{
-  text-decoration: none;
-  font-weight: 600;
-  color: inherit;
-}
-
-.lang-switch{
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.9rem;
-  color: #666;
-  white-space: nowrap;
-}
-
-.lang-switch a{
-  text-decoration: none;
-  color: inherit;
-  font-weight: 600;
-}
-
-.lang-switch strong{
-  font-weight: 600;
-  color: #333;
-}
-
-/* Mobile */
-@media (max-width: 480px){
-  .site-nav-top{
-    justify-content: flex-start;
-    margin-bottom: 0.65rem;
-  }
-
-  .site-brand span{
-    font-size: 0.95rem;
-  }
-
-  .site-nav-bottom{
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  .site-nav-links{
-    gap: 16px;
-  }
-
-  .lang-switch{
-    font-size: 0.85rem;
-    margin-left: 12px;
-  }
-}
+    }
   </style>
 </head>
 <body>
   <div class="page">
-    
     <nav class="site-nav">
-  <div class="site-nav-top">
-    <a href="/" class="site-brand" aria-label="Fix My Diaper home">
-      <img src="images/logo.png" alt="Fix My Diaper Logo">
-      <span>Fix My Diaper</span>
-    </a>
-  </div>
+      <div class="site-nav-top">
+        <a href="/" class="site-brand" aria-label="Fix My Diaper home">
+          <img src="images/logo.png" alt="Fix My Diaper Logo">
+          <span>Fix My Diaper</span>
+        </a>
+      </div>
 
-  <div class="site-nav-bottom">
-    <div class="site-nav-links">
-      <a href="/">Map</a>
-      <a href="list">List</a>
-      <a href="submit">Submit</a>
-    </div>
+      <div class="site-nav-bottom">
+        <div class="site-nav-links">
+          <a href="/">Map</a>
+          <a href="list">List</a>
+          <a href="submit">Submit</a>
+        </div>
 
-    <div class="lang-switch" aria-label="Language switcher">
-      <strong>EN</strong>
-      <span>|</span>
-      <a href="/de/">DE</a>
-    </div>
-  </div>
-</nav>
+        <div class="lang-switch" aria-label="Language switcher">
+          <strong>EN</strong>
+          <span>|</span>
+          <a href="/de/">DE</a>
+        </div>
+      </div>
+    </nav>
 
     <h1>Need to change a diaper?</h1>
     <h2>Find baby-friendly places with changing tables near you – cafes, restaurants, and more.</h2>
@@ -450,20 +469,19 @@
     <div id="map"></div>
 
     <section class="berlin-banner-min">
-  <div class="berlin-banner-min__inner">
-    <div class="berlin-banner-min__left">
-      <h3 class="berlin-banner-min__title">
-        See <span class="hl">photos and reviews</span> of changing tables by <span class="hl">neighborhood</span> in
-        <span class="hl">Berlin</span>. Decide where to go before you leave the house.
-      </h3>
-    </div>
+      <div class="berlin-banner-min__inner">
+        <div class="berlin-banner-min__left">
+          <h3 class="berlin-banner-min__title">
+            See <span class="hl">photos and reviews</span> of changing tables by <span class="hl">neighborhood</span> in
+            <span class="hl">Berlin</span>. Decide where to go before you leave the house.
+          </h3>
+        </div>
 
-    <div class="berlin-banner-min__right">
-      <a class="berlin-banner-min__cta" href="/berlin">Explore Berlin locations</a>
-    </div>
-
-  </div>
-</section>
+        <div class="berlin-banner-min__right">
+          <a class="berlin-banner-min__cta" href="/berlin">Explore Berlin locations</a>
+        </div>
+      </div>
+    </section>
     
     <!-- Recently added section -->
     <h2 class="section-title">Our favorites in Berlin ❤️</h2>
@@ -472,7 +490,6 @@
     </p>
 
     <div class="recent-grid">
-      <!-- CARD 1 -->
       <article class="recent-card">
         <img src="images/east-side-mall.jpeg" alt="East Side Mall changing table">
         <div class="star-rating" style="--rating: 5.0;"></div>
@@ -486,7 +503,6 @@
         </div>
       </article>
 
-      <!-- CARD 2 -->
       <article class="recent-card">
         <img src="images/il-ritrovo.jpeg" alt="Il Ritrovo changing table">
         <div class="star-rating" style="--rating: 4.5;"></div>
@@ -500,7 +516,6 @@
         </div>
       </article>
 
-      <!-- CARD 3 -->
       <article class="recent-card">
         <img src="images/tapiocaria.jpg" alt="Tapiocaria changing table">
         <div class="star-rating" style="--rating: 4.0;"></div>
@@ -537,20 +552,19 @@
     </p>
 
     <section class="berlin-banner-min">
-  <div class="berlin-banner-min__inner">
-    <div class="berlin-banner-min__left">
-      <h3 class="berlin-banner-min__title">
-        There is a <span class="hl">mom</span> behind this <span class="hl">map</span>.
-        These days she runs on a lot of <span class="hl">decaf cappuccinos</span>.
-      </h3>
-    </div>
+      <div class="berlin-banner-min__inner">
+        <div class="berlin-banner-min__left">
+          <h3 class="berlin-banner-min__title">
+            There is a <span class="hl">mom</span> behind this <span class="hl">map</span>.
+            These days she runs on a lot of <span class="hl">decaf cappuccinos</span>.
+          </h3>
+        </div>
 
-    <div class="berlin-banner-min__right">
-      <a class="berlin-banner-min__cta" href="https://buymeacoffee.com/fixmydiaper">Buy me a coffee</a>
-    </div>
-
-  </div>
-</section>
+        <div class="berlin-banner-min__right">
+          <a class="berlin-banner-min__cta" href="https://buymeacoffee.com/fixmydiaper">Buy me a coffee</a>
+        </div>
+      </div>
+    </section>
 
     <!-- FAQ -->
     <section id="faq">
