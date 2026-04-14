@@ -7,7 +7,7 @@ from datetime import datetime
 
 AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
 BASE_ID = "appjWF7WnC8DRWaXM"
-TABLE_NAME = "Fix My Diaper"
+TABLE_NAME = "FixMyDiaper"
 HEADERS = {"Authorization": f"Bearer {AIRTABLE_TOKEN}"}
 
 def to_list(v):
