@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
     /* ===== Base ===== */
@@ -338,11 +339,13 @@
 <body>
   <div class="page">
     <nav>
-      <img src="images/logo.png" alt="Fix My Diaper Logo">
-      <a href="https://fixmydiaper.com/">Map</a>
-      <a href="list">List</a>
-      <a href="submit">Submit</a>
-    </nav>
+<a href="/" aria-label="Fix My Diaper home">
+<img src="images/logo.png" alt="Fix My Diaper Logo">
+</a>
+<a href="/">Map</a>
+<a href="list">List</a>
+<a href="submit">Submit</a>
+</nav>
 
     <h1>Need to change a diaper?</h1>
     <h2>Find baby-friendly places with changing tables near you – cafes, restaurants, and more.</h2>
@@ -355,55 +358,29 @@
 
     <div id="map"></div>
 
+    <section class="berlin-banner-min">
+  <div class="berlin-banner-min__inner">
+    <div class="berlin-banner-min__left">
+      <h3 class="berlin-banner-min__title">
+        See <span class="hl">photos and reviews</span> of changing tables by <span class="hl">neighborhood</span> in
+        <span class="hl">Berlin</span>. Decide where to go before you leave the house.
+      </h3>
+    </div>
+
+    <div class="berlin-banner-min__right">
+      <a class="berlin-banner-min__cta" href="/berlin">Explore Berlin locations</a>
+    </div>
+
+  </div>
+</section>
+    
     <!-- Recently added section -->
     <h2 class="section-title">Our favorites in Berlin ❤️</h2>
     <p class="section-subtitle">
-      Take a look at these reviews from our community. <a href="submit.html">Submit a place you have been</a> and help other parents.
+      Photos and reviews from our community. <a href="submit.html">Submit a place</a> and help other parents.
     </p>
 
     <div class="recent-grid">
-      <!-- CARD 1 -->
-      <article class="recent-card">
-        <img src="images/east-side-mall.jpeg" alt="East Side Mall changing table">
-        <div class="star-rating" style="--rating: 5.0;"></div>
-        <span class="star-note">5/5</span>
-        <p class="recent-quote">
-          “There is a dm downstairs, but if you are upstairs, want some privacy and maybe sit down to feed, that’s a great option and it's squeaky clean, large and in good condition.”
-        </p>
-        <div class="recent-meta">
-          <strong>East Side Mall</strong><br>
-          Tamara-Danz-Straße 11, 10243
-        </div>
-      </article>
-
-      <!-- CARD 2 -->
-      <article class="recent-card">
-        <img src="images/il-ritrovo.jpeg" alt="Il Ritrovo changing table">
-        <div class="star-rating" style="--rating: 4.5;"></div>
-        <span class="star-note">4.5/5</span>
-        <p class="recent-quote">
-          “It seems dirty and messy, but actually it is very clean and there is lots of space for a baby, a stroller, to leave your stuff while changing etc. Very good.”
-        </p>
-        <div class="recent-meta">
-          <strong>Il Ritrovo</strong><br>
-          Gabriel-Max-Straße 2, 10245
-        </div>
-      </article>
-
-      <!-- CARD 3 -->
-      <article class="recent-card">
-        <img src="images/tapiocaria.jpg" alt="Tapiocaria changing table">
-        <div class="star-rating" style="--rating: 4.0;"></div>
-        <span class="star-note">4/5</span>
-        <p class="recent-quote">
-          “Decent and clean, but very cramped and installed too high. Bad for short parents.”
-        </p><br><br>
-        <div class="recent-meta">
-          <strong>Tapiocaria</strong><br>
-          Samariterstraße 34A, 10247
-        </div>
-      </article>
-
       <!-- CARD 1 -->
       <article class="recent-card">
         <img src="images/east-side-mall.jpeg" alt="East Side Mall changing table">
@@ -451,9 +428,6 @@
       <div class="recent-dot"></div>
       <div class="recent-dot"></div>
       <div class="recent-dot"></div>
-      <div class="recent-dot"></div>
-      <div class="recent-dot"></div>
-      <div class="recent-dot"></div>
     </div>
 
     <!-- Best places / Airtable -->
@@ -470,6 +444,22 @@
     <p class="top5-explanation">
       *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience.
     </p>
+
+    <section class="berlin-banner-min">
+  <div class="berlin-banner-min__inner">
+    <div class="berlin-banner-min__left">
+      <h3 class="berlin-banner-min__title">
+        There is a <span class="hl">mom</span> behind this <span class="hl">map</span>.
+        These days she runs on a lot of <span class="hl">decaf cappuccinos</span>.
+      </h3>
+    </div>
+
+    <div class="berlin-banner-min__right">
+      <a class="berlin-banner-min__cta" href="https://buymeacoffee.com/fixmydiaper">Buy me a coffee</a>
+    </div>
+
+  </div>
+</section>
 
     <!-- FAQ -->
     <section id="faq">
