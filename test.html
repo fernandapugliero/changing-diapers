@@ -333,15 +333,16 @@
       .recent-dots {
         display: none;
       }
-      .site-nav{
+    /* ===== Nav upgrade ===== */
+.site-nav{
   margin-bottom: 2rem;
   padding-top: 1rem;
 }
 
 .site-nav-top{
   display: flex;
-  align-items: center;
-  margin-bottom: 0.55rem;
+  justify-content: center;
+  margin-bottom: 0.7rem;
 }
 
 .site-brand{
@@ -359,23 +360,22 @@
 }
 
 .site-brand span{
-  font-weight: 600;
   font-size: 1rem;
+  font-weight: 600;
   color: #333;
 }
 
 .site-nav-bottom{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: center;
+  gap: 34px; /* espaço maior entre menu e idioma no desktop */
 }
 
 .site-nav-links{
   display: flex;
   align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .site-nav-links a{
@@ -404,28 +404,36 @@
   color: #333;
 }
 
+/* Mobile */
 @media (max-width: 480px){
+  .site-nav-top{
+    justify-content: flex-start;
+    margin-bottom: 0.65rem;
+  }
+
   .site-brand span{
     font-size: 0.95rem;
   }
 
   .site-nav-bottom{
-    gap: 10px;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .site-nav-links{
-    gap: 14px;
+    gap: 16px;
   }
 
   .lang-switch{
     font-size: 0.85rem;
+    margin-left: 12px;
   }
 }
   </style>
 </head>
 <body>
   <div class="page">
-
+    
     <nav class="site-nav">
   <div class="site-nav-top">
     <a href="/" class="site-brand" aria-label="Fix My Diaper home">
