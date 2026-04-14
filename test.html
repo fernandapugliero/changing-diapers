@@ -333,18 +333,120 @@
       .recent-dots {
         display: none;
       }
-    }
+      .site-nav{
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.site-nav-top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.55rem;
+}
+
+.site-brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-brand img{
+  width: 30px;
+  height: auto;
+  margin-right: 0;
+}
+
+.site-brand span{
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.site-nav-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.site-nav-links{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.site-nav-links a{
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+}
+
+.lang-switch{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.lang-switch a{
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.lang-switch strong{
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 480px){
+  .site-brand span{
+    font-size: 0.95rem;
+  }
+
+  .site-nav-bottom{
+    gap: 10px;
+  }
+
+  .site-nav-links{
+    gap: 14px;
+  }
+
+  .lang-switch{
+    font-size: 0.85rem;
+  }
+}
   </style>
 </head>
 <body>
   <div class="page">
-    <nav>
-<a href="/" aria-label="Fix My Diaper home">
-<img src="images/logo.png" alt="Fix My Diaper Logo">
-</a>
-<a href="/">Map</a>
-<a href="list">List</a>
-<a href="submit">Submit</a>
+
+    <nav class="site-nav">
+  <div class="site-nav-top">
+    <a href="/" class="site-brand" aria-label="Fix My Diaper home">
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <span>Fix My Diaper</span>
+    </a>
+  </div>
+
+  <div class="site-nav-bottom">
+    <div class="site-nav-links">
+      <a href="/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
+    </div>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <strong>EN</strong>
+      <span>|</span>
+      <a href="/de/">DE</a>
+    </div>
+  </div>
 </nav>
 
     <h1>Need to change a diaper?</h1>
