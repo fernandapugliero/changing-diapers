@@ -64,9 +64,9 @@
     "name": "dm",
     "city": "Berlin",
     "neighborhood": "Steglitz-Zehlendorf",
-    "address": "Am Steglitzer Kreisel, Albrechtstr. 3, 12165 Berlin",
-    "latitude": null,
-    "longitude": null,
+    "address": "Albrechtstr. 3, 12165 Berlin",
+    "latitude": 52.4562533,
+    "longitude": 13.3221014,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -130,8 +130,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Straße 645, 12049",
-    "latitude": 52.4789312,
-    "longitude": 13.4180521,
+    "latitude": 52.4773983,
+    "longitude": 13.418101,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -156,8 +156,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Tamara-Danz-Straße 11, 10243",
-    "latitude": 52.5058431,
-    "longitude": 13.4451291,
+    "latitude": 52.5061904,
+    "longitude": 13.445637,
     "type": "Mall",
     "changing_table_location": [
       "hallway"
@@ -223,8 +223,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Chausseestraße 55, 10115 Berlin",
-    "latitude": 52.5359273,
-    "longitude": 13.3767068,
+    "latitude": 52.5359491,
+    "longitude": 13.3766279,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -251,8 +251,8 @@
     "city": "Berlin",
     "neighborhood": "Steglitz-Zehlendorf",
     "address": "Albrechtstr. 52, 12167",
-    "latitude": 52.4478403,
-    "longitude": 13.3402283,
+    "latitude": 52.4478999,
+    "longitude": 13.3401437,
     "type": "Restaurant",
     "changing_table_location": [],
     "supplies_available": [],
@@ -301,8 +301,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Göhrener Str. 5, 10437",
-    "latitude": 52.5416295,
-    "longitude": 13.4214974,
+    "latitude": 52.541466,
+    "longitude": 13.4214466,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -407,13 +407,13 @@
     "room_for_stroller": "Yes",
     "site": "https://www.lamaison.berlin/en/",
     "created_at": "2025-04-19",
-    "photo_small_url": null,
-    "photo_large_url": null,
-    "photo_url": null,
-    "has_photo": false,
-    "review": "",
-    "overall_user_experience": 6.0,
-    "stars": 3.0,
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/GCFcAOw8QD86N8PlQSCnuA/ZqKBsJRWlHExOqddYeLrWNibDQAofKtPnfoAL-bhWsaoXLVlMzc4EGPshOTsxOuto3ZhepJv4WPXl4pv1s6llcL9RXCoaiYeRFF-Lexca9TZ8zvkXWzABipkxv5fQ7I0NtcAhSeingl7zRL7bxrycw/ZOiZPZzWshDQudM9GoiWjBWznJf61zlWGv7AnJuCnow",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/Z293QzYufFBCwS7uiYIamQ/uVxEuhoDfM1CHa_9cBRnZw_Y9GqNrKqhJwugSyY9wNaB9UA8lCas4gowJVN2A1Nrk4L8CcJ9_lNTMlQjCcllinndru23oeaBS9xJYgUMMcQPos8_cBDGjZ06Wb67LxoOXF9RzQ5Fneq5vpN0qVY5qw/gBCrW0w9z4PM7rOPcR5gB6nH1lCk0aJoVU9-mEpj8WE",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/Z293QzYufFBCwS7uiYIamQ/uVxEuhoDfM1CHa_9cBRnZw_Y9GqNrKqhJwugSyY9wNaB9UA8lCas4gowJVN2A1Nrk4L8CcJ9_lNTMlQjCcllinndru23oeaBS9xJYgUMMcQPos8_cBDGjZ06Wb67LxoOXF9RzQ5Fneq5vpN0qVY5qw/gBCrW0w9z4PM7rOPcR5gB6nH1lCk0aJoVU9-mEpj8WE",
+    "has_photo": true,
+    "review": "It’s really bad in a number of ways. First, because it’s just a mat propped up against the window frame (it’s not at a good height for changing the baby). Second, because it’s in a corner and there’s no way to position yourself to change the baby. Not to mention all the products and the “mini storage area” around it. It could be better.",
+    "overall_user_experience": 1.0,
+    "stars": 0.5,
     "unique_entry": "Yes"
   },
   {
@@ -454,8 +454,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Gabriel-Max-Straße 1, 10245 Berlin",
-    "latitude": 52.5092595,
-    "longitude": 13.457922,
+    "latitude": 52.5093265,
+    "longitude": 13.4579704,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -540,8 +540,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Rathausstraße 5, 10178",
-    "latitude": 52.5192421,
-    "longitude": 13.4097571,
+    "latitude": 52.5191361,
+    "longitude": 13.4095725,
     "type": "Café",
     "changing_table_location": [
       "women's restroom",
@@ -597,8 +597,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Schloßpl. 1, 10178",
-    "latitude": 52.5152614,
-    "longitude": 13.4019087,
+    "latitude": 52.5172152,
+    "longitude": 13.4007352,
     "type": "Museum",
     "changing_table_location": [
       "wheelchair restroom",
@@ -1042,8 +1042,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Schönhauser Allee 10-11, 10119",
-    "latitude": 52.5304876,
-    "longitude": 13.4118918,
+    "latitude": 52.5305899,
+    "longitude": 13.4115883,
     "type": "Bakery",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1106,8 +1106,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Schliemannstraße 37, 10437",
-    "latitude": 52.5424452,
-    "longitude": 13.4181927,
+    "latitude": 52.5424138,
+    "longitude": 13.4181949,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1138,8 +1138,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Alt-Mahlsdorf 85, 12623",
-    "latitude": 52.50364,
-    "longitude": 13.6220898,
+    "latitude": 52.5010261,
+    "longitude": 13.6226618,
     "type": "Store",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1291,8 +1291,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Elsenstraße 109, 12435",
-    "latitude": 52.4901146,
-    "longitude": 13.4558556,
+    "latitude": 52.4900205,
+    "longitude": 13.4558231,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom",
@@ -1353,8 +1353,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Bouchéstraße 12, 12435 Berlin",
-    "latitude": 52.4936421,
-    "longitude": 13.4488785,
+    "latitude": 52.4929693,
+    "longitude": 13.4506755,
     "type": "Supermarket",
     "changing_table_location": [
       "mixed restroom"
@@ -1414,8 +1414,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Kiehlufer 55, 12059",
-    "latitude": 52.4850446,
-    "longitude": 13.4450519,
+    "latitude": 52.4851268,
+    "longitude": 13.4449541,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -1473,7 +1473,7 @@
     "name": "Gorilla",
     "city": "Berlin",
     "neighborhood": "Neukölln",
-    "address": "Hermannstraße 211",
+    "address": "Hermannstraße 211, 12049",
     "latitude": 52.4778569,
     "longitude": 13.4263351,
     "type": "Bakery",
@@ -1485,13 +1485,13 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-09-16",
-    "photo_small_url": null,
-    "photo_large_url": null,
-    "photo_url": null,
-    "has_photo": false,
-    "review": "",
-    "overall_user_experience": null,
-    "stars": null,
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/EpmmsiRAILXnU1Ngffsibg/Q45LajryXw7hopGJLfBy3gTjSdTD-wegWb8_ei5bG1_6-cWHMLOK_w--VDEI5GyOi0YcIdrpv-XplkyS6fo_xeL2a6PAMwrb6d_ZzB4syum7VUPfyvThgO9DP382Ykw91n5FO_NK3H2D9YKT91qVFw/xEa2AY21ReKA-DPwPjUabDI_Ad8EkAcQub83RZQa9BY",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/P-7qh_mgE4-O9X5_V-vX7g/bFGeGV9v2TgLxpRuCJiBoheAGq8mQjHvF_MuPTt8U9WWCrT3l-FXDNrMZp2ycDaaHUBsrtlh3cysgHkaG6nj-avzz8KBbPPMg1p_tW3_dgungLbV3z4MAq_G8r1qj2RTnR_cIjHG3pP2_x3lGslx5A/4e7Yc4bSyAIn8NpibEb0tZ6ybFHrKfmpO9oODlkCZ0k",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/P-7qh_mgE4-O9X5_V-vX7g/bFGeGV9v2TgLxpRuCJiBoheAGq8mQjHvF_MuPTt8U9WWCrT3l-FXDNrMZp2ycDaaHUBsrtlh3cysgHkaG6nj-avzz8KBbPPMg1p_tW3_dgungLbV3z4MAq_G8r1qj2RTnR_cIjHG3pP2_x3lGslx5A/4e7Yc4bSyAIn8NpibEb0tZ6ybFHrKfmpO9oODlkCZ0k",
+    "has_photo": true,
+    "review": "Very nice; there's space for a stroller inside the bathroom (but you can also leave it parked outside). Everything was very clean.",
+    "overall_user_experience": 10.0,
+    "stars": 5.0,
     "unique_entry": "Yes"
   },
   {
@@ -1557,8 +1557,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg-Wilmersdorf",
     "address": "Giesebrechtstraße 15, 10629",
-    "latitude": 52.5018681,
-    "longitude": 13.3105132,
+    "latitude": 52.5017702,
+    "longitude": 13.3106157,
     "type": "Biergarten",
     "changing_table_location": [
       "wheelchair restroom"
@@ -1616,8 +1616,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Pücklerstraße 34, 10997",
-    "latitude": 52.5024466,
-    "longitude": 13.4311003,
+    "latitude": 52.5021469,
+    "longitude": 13.4312004,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1709,8 +1709,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg-Wilmersdorf",
     "address": "Röntgenstraße 7b, 10587 Berlin",
-    "latitude": 52.5196739,
-    "longitude": 13.3145445,
+    "latitude": 52.5196343,
+    "longitude": 13.3147668,
     "type": "Restaurant",
     "changing_table_location": [
       "hallway"
@@ -1768,8 +1768,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Friedrichstraße 191, 10117",
-    "latitude": 52.5107745,
-    "longitude": 13.3896707,
+    "latitude": 52.5109315,
+    "longitude": 13.3895576,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1799,8 +1799,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Am Tierpark 39, 10319",
-    "latitude": 52.5054788,
-    "longitude": 13.5192607,
+    "latitude": 52.5032792,
+    "longitude": 13.5202148,
     "type": "Zoo",
     "changing_table_location": [
       "women's restroom"
@@ -1853,8 +1853,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg-Wilmersdorf",
     "address": "Hardenbergpl. 11, 10623 Berlin",
-    "latitude": 52.5076168,
-    "longitude": 13.3328159,
+    "latitude": 52.5080757,
+    "longitude": 13.3333329,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -2124,8 +2124,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Paul-Lincke-Ufer 17, 10999",
-    "latitude": 52.4933415,
-    "longitude": 13.430955,
+    "latitude": 52.4933018,
+    "longitude": 13.4311,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom",
@@ -2245,8 +2245,8 @@
     "city": "Berlin",
     "neighborhood": "Tempelhof-Schöneberg",
     "address": "Chamissopl. 7, 10965",
-    "latitude": 52.4881536,
-    "longitude": 13.3918234,
+    "latitude": 52.4881298,
+    "longitude": 13.3917754,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -2304,8 +2304,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Weichselstraße 33-36, 12045",
-    "latitude": 52.4850611,
-    "longitude": 13.4339971,
+    "latitude": 52.4856332,
+    "longitude": 13.4347487,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom"
@@ -2562,8 +2562,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Bergmannstraße 102, 10961",
-    "latitude": 52.4902,
-    "longitude": 13.389238,
+    "latitude": 52.4902689,
+    "longitude": 13.3893714,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2653,8 +2653,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Einbecker Str. 119, 10315 Berlin",
-    "latitude": 52.505784,
-    "longitude": 13.5135413,
+    "latitude": 52.5057342,
+    "longitude": 13.5135667,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -2977,8 +2977,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Falckensteinstraße 33, 10997",
-    "latitude": 52.4979289,
-    "longitude": 13.4418972,
+    "latitude": 52.49789,
+    "longitude": 13.4418722,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -3009,8 +3009,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Karl-Kunger-Straße 58, 12435",
-    "latitude": 52.4911737,
-    "longitude": 13.4477018,
+    "latitude": 52.4911953,
+    "longitude": 13.4476611,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -3041,8 +3041,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Landsberger Allee 117, 10407",
-    "latitude": 52.5289446,
-    "longitude": 13.4560639,
+    "latitude": 52.529054,
+    "longitude": 13.4559153,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3071,8 +3071,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg-Wilmersdorf",
     "address": "Kantstraße 17, 10623",
-    "latitude": 52.5060585,
-    "longitude": 13.3247627,
+    "latitude": 52.5060665,
+    "longitude": 13.3245821,
     "type": "Mall",
     "changing_table_location": [
       "women's restroom",
@@ -3104,8 +3104,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Oderberger Str. 61, 10435",
-    "latitude": 52.5377856,
-    "longitude": 13.4111836,
+    "latitude": 52.537724,
+    "longitude": 13.4113477,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -3307,8 +3307,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Richardpl. 2A, 12055",
-    "latitude": 52.4746877,
-    "longitude": 13.4464863,
+    "latitude": 52.4746496,
+    "longitude": 13.4465408,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -3471,13 +3471,13 @@
     "room_for_stroller": "Yes",
     "site": "westfield.com",
     "created_at": "2025-04-19",
-    "photo_small_url": null,
-    "photo_large_url": null,
-    "photo_url": null,
-    "has_photo": false,
-    "review": "",
-    "overall_user_experience": 9.0,
-    "stars": 4.5,
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/KrmtSs8rLYIao8zhyDqxgA/q4CZKBRLIXGCjQIiAIxxLvkNUPHv5a5cBb-eWEj56xmeGau-j1CJRmug-LYaPzJNNRHIlVwv10DXbWZY1Q1tdfJkaPo_-o2Mf8mUJr2udyjW_7fXh-kirnjMGvpqVXZdorgj0PXmJVeYqe6RTag_fw/UmNTWO0xK99f72Wp1Kjxf3Hxx-DVCkWvNiMTN-YnmL8",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/rGu2ydqq7btrPcSers2_YQ/Q-IPqECP42rztTJ2BooII-K6arc7mJb2Cvi91CxwjR_sqFMMGiPj2bLZvVOmMbOszKHk1EksjvN99szNBPd5XUuJIUNMr5OIYQgs7OaITrTF5BI0TmLJ3eitcU2JD7xtYX23vs-tzRMTZDaMo4ZjEw/dwZnLvnJPeafQvzjgw4-zoCukPN6DKu8CEjWCdLXsaI",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/rGu2ydqq7btrPcSers2_YQ/Q-IPqECP42rztTJ2BooII-K6arc7mJb2Cvi91CxwjR_sqFMMGiPj2bLZvVOmMbOszKHk1EksjvN99szNBPd5XUuJIUNMr5OIYQgs7OaITrTF5BI0TmLJ3eitcU2JD7xtYX23vs-tzRMTZDaMo4ZjEw/dwZnLvnJPeafQvzjgw4-zoCukPN6DKu8CEjWCdLXsaI",
+    "has_photo": true,
+    "review": "There is a dedicated diaper-changing room. Everything is brand-new and well-maintained. There’s plenty of space for the whole family. There’s a microwave and a nursing chair.",
+    "overall_user_experience": 10.0,
+    "stars": 5.0,
     "unique_entry": "Yes"
   },
   {
@@ -3497,13 +3497,13 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-08-13",
-    "photo_small_url": null,
-    "photo_large_url": null,
-    "photo_url": null,
-    "has_photo": false,
-    "review": "",
-    "overall_user_experience": null,
-    "stars": null,
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/2Qjo-pSqyNltLHrtInCSkA/hf0UrrRy2qjT99FR65hM8-qF5m7JCHGg0K_SnmnSNf8nnJxgLbChrvlO6xYJ7aEt58n-aup3stSucFQWEDbn7Zrw29bOinMEh_OTV8Aa8AYAKl5lwiNs2PZTs04EVOTMLpphh9ewJvjPl9xX_uIWcQ/TSIIlNj32tLPeKZGGuZReXK5p-VeeCenSLtM1uPO3Nc",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/H1I4Zwi9Rd13BYOX88vQZQ/gTA-9NacX9DnwKfsSMlKyRASsmfkGjpeckinriHBWnN0r4ALlXlcdXmRJNcoVNKKIj9kgZIF-PvP6X8VT7E2vWUwm4HmaXZMIu_7k7KfhXwayIFq6Wh24y2ZiJyKuFFBWOvH4FHwFwLozHMRdYGdSg/Ee_dxHHEnQa5f2L6Ptk18vZD7wx9wNO2CHlLlOlgc1E",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/H1I4Zwi9Rd13BYOX88vQZQ/gTA-9NacX9DnwKfsSMlKyRASsmfkGjpeckinriHBWnN0r4ALlXlcdXmRJNcoVNKKIj9kgZIF-PvP6X8VT7E2vWUwm4HmaXZMIu_7k7KfhXwayIFq6Wh24y2ZiJyKuFFBWOvH4FHwFwLozHMRdYGdSg/Ee_dxHHEnQa5f2L6Ptk18vZD7wx9wNO2CHlLlOlgc1E",
+    "has_photo": true,
+    "review": "It’s one of the best Krabbelgruppe in Berlin, and the diaper changing station is really nice. There are usually diapers available on site, since people donate them (though they’re usually small sizes).",
+    "overall_user_experience": 10.0,
+    "stars": 5.0,
     "unique_entry": "Yes"
   },
   {
@@ -3614,13 +3614,13 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2025-06-02",
-    "photo_small_url": null,
-    "photo_large_url": null,
-    "photo_url": null,
-    "has_photo": false,
-    "review": "",
-    "overall_user_experience": null,
-    "stars": null,
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/PKS4lRK5SHHdTuauGLFRtA/2YeKoYuTvEmDRROr6QKQFKako5_FVw9IcjxpU8BNk9GVUfWC2gQlOht6fC5cwSUNgCdmP6IFrh1Nd4kGkvaEUureW6WZw6qJescWKRH3f4RQ5ZBgsyYPn9q3-Z2MBqq6JuYoAh2HKpzd862eA-OXaA/CdjGb7wdBfmSIk2hGjI9SzTuVBRVwUoG-UoN-akkGqk",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/dZUSVXx3WepvSj3WEVBCKA/cS9u77KYgitlpSkuLfHNsW0kLHENNT6_8N70ej24axr1MewD2oIGqUw8pFG0PUvWFs__AaOdAPbimWIaTvpamf6gAWhj1-o1lRFKqi1f1E3fCPlo41GO8d1QzlJI-NLdlVS0L8MwnU7rYtxfXP_BvA/LX-Z01BBKy7plhl874vPiICfOZlmOiK6G8x7hnrUrZs",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/dZUSVXx3WepvSj3WEVBCKA/cS9u77KYgitlpSkuLfHNsW0kLHENNT6_8N70ej24axr1MewD2oIGqUw8pFG0PUvWFs__AaOdAPbimWIaTvpamf6gAWhj1-o1lRFKqi1f1E3fCPlo41GO8d1QzlJI-NLdlVS0L8MwnU7rYtxfXP_BvA/LX-Z01BBKy7plhl874vPiICfOZlmOiK6G8x7hnrUrZs",
+    "has_photo": true,
+    "review": "It's pretty “dm standard”, but the mat could be a little newer (the store opened less than a year ago).",
+    "overall_user_experience": 9.0,
+    "stars": 4.5,
     "unique_entry": "Yes"
   },
   {
@@ -3629,8 +3629,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Rummelsburger Str. 16, 12459",
-    "latitude": 52.4684729,
-    "longitude": 13.513063,
+    "latitude": 52.4692856,
+    "longitude": 13.5123692,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3723,8 +3723,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Brunnenstraße 24, 10119 Berlin",
-    "latitude": 52.5334592,
-    "longitude": 13.3988575,
+    "latitude": 52.5334144,
+    "longitude": 13.3988764,
     "type": "Fitness Studio",
     "changing_table_location": [
       "women's restroom"
@@ -3891,13 +3891,13 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2025-05-29",
-    "photo_small_url": null,
-    "photo_large_url": null,
-    "photo_url": null,
-    "has_photo": false,
-    "review": "",
-    "overall_user_experience": null,
-    "stars": null,
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/4aJLmscV1xhilgDsayZdPA/91nXPIkkplhp-gyuiDZ-lbF-4MS8NdZUAfqcfFUgB1ew7ot3fN4-xBs1FF-sFTywqQ9wpCDFCntMlqRueKpuJVWyUSd2zOEl3XYBYbyuyXHzvIdBp-P7MHjBI7iNFxseI3ssRiLzAwnC9rlRLkUvXA/RmaLmOOG_AgnmAIkf3MfL7nPetV4L2n2NOkjRmWnrXM",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/nvhQ-oERKRPPFagXLUDw4w/YjVUzdeK0aQwgiGDSC885ZVNBC6q3ng3aVeGP41qtjQvmw89MWpC8YRlG4r6doezMk2quDvp_WiZfYYOa-rDz_O8sW-r4WEwedXpNMSHhkwKkzTJDqh82Oky5TBAy0-gc0X9tc88thXmHdStch6m_A/LQldVxuFnfa_kQ4ui7LU3UJQNQ-qwsP_jeRPJ9xjics",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/52/52/1776290400000/nvhQ-oERKRPPFagXLUDw4w/YjVUzdeK0aQwgiGDSC885ZVNBC6q3ng3aVeGP41qtjQvmw89MWpC8YRlG4r6doezMk2quDvp_WiZfYYOa-rDz_O8sW-r4WEwedXpNMSHhkwKkzTJDqh82Oky5TBAy0-gc0X9tc88thXmHdStch6m_A/LQldVxuFnfa_kQ4ui7LU3UJQNQ-qwsP_jeRPJ9xjics",
+    "has_photo": true,
+    "review": "It’s not exactly in the best spot for changing (it’s their cleaning room), but at least there’s one.",
+    "overall_user_experience": 5.0,
+    "stars": 2.5,
     "unique_entry": "Yes"
   },
   {
@@ -3906,8 +3906,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Schönhauser Allee 9, 10119",
-    "latitude": 52.5300343,
-    "longitude": 13.4110442,
+    "latitude": 52.5298245,
+    "longitude": 13.4112754,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3974,8 +3974,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Hobrechtstraße 32, 12047",
-    "latitude": 52.4920006,
-    "longitude": 13.4262918,
+    "latitude": 52.4920373,
+    "longitude": 13.4268288,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -4130,8 +4130,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Schloßstraße 10, 12163 Berlin",
-    "latitude": 52.4631698,
-    "longitude": 13.3246081,
+    "latitude": 52.4624892,
+    "longitude": 13.3241274,
     "type": "Mall",
     "changing_table_location": [
       "hallway"
@@ -4319,8 +4319,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Schönhauser Allee 140a, 10437",
-    "latitude": 52.5412447,
-    "longitude": 13.4123157,
+    "latitude": 52.5469891,
+    "longitude": 13.4130477,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -4431,8 +4431,8 @@
     "city": "Berlin",
     "neighborhood": "Tempelhof-Schöneberg",
     "address": "Potsdamer Str. 203, 10783",
-    "latitude": 52.4914835,
-    "longitude": 13.3611765,
+    "latitude": 52.4917687,
+    "longitude": 13.3611473,
     "type": "Restaurant",
     "changing_table_location": [],
     "supplies_available": [],
@@ -4515,8 +4515,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Eisenbahnstraße 48, 10997",
-    "latitude": 52.501079,
-    "longitude": 13.4310577,
+    "latitude": 52.5010414,
+    "longitude": 13.4310567,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -4928,8 +4928,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Donaustraße 84, 12043",
-    "latitude": 52.479073,
-    "longitude": 13.4415376,
+    "latitude": 52.4790851,
+    "longitude": 13.4415103,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -4961,8 +4961,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.4411228,
-    "longitude": 13.5903579,
+    "latitude": 52.4417134,
+    "longitude": 13.5885299,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
@@ -5100,8 +5100,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Henriette-Herz-Platz 4, 10178",
-    "latitude": 52.5223932,
-    "longitude": 13.4029576,
+    "latitude": 52.5222581,
+    "longitude": 13.4031763,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -5226,8 +5226,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Hilda-Geiringer-Weg 4, 10557",
-    "latitude": 52.5266907,
-    "longitude": 13.3724523,
+    "latitude": 52.5268271,
+    "longitude": 13.3724979,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -5257,8 +5257,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Litfaß-Platz 1, 10178",
-    "latitude": 52.5218041,
-    "longitude": 13.4035735,
+    "latitude": 52.5218966,
+    "longitude": 13.4034489,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -5339,8 +5339,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Tamara-Danz-Straße 11, 10243",
-    "latitude": 52.5058431,
-    "longitude": 13.4451291,
+    "latitude": 52.5061904,
+    "longitude": 13.445637,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -5404,8 +5404,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Lenaustraße 4, 12047",
-    "latitude": 52.4899621,
-    "longitude": 13.4252203,
+    "latitude": 52.4899283,
+    "longitude": 13.4252308,
     "type": "Café",
     "changing_table_location": [],
     "supplies_available": [],
