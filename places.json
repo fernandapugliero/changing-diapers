@@ -6154,8 +6154,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Samariterstraße 34A, 10247",
-    "latitude": 52.5162369,
-    "longitude": 13.4648502,
+    "latitude": 52.5163204,
+    "longitude": 13.4648762,
     "type": "Restaurant",
     "changing_table_location": [
       "men's restroom"
@@ -7146,8 +7146,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Schönhauser Allee 12, 10119",
-    "latitude": 52.530919,
-    "longitude": 13.4121507,
+    "latitude": 52.5308311,
+    "longitude": 13.412464,
     "type": "Restaurant",
     "changing_table_location": [
       "mixed restroom"
@@ -8951,8 +8951,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Tamara-Danz-Straße 11, 10243",
-    "latitude": 52.5061904,
-    "longitude": 13.445637,
+    "latitude": 52.5057401,
+    "longitude": 13.4457661,
     "type": "Store",
     "changing_table_location": [
       "sales area"
