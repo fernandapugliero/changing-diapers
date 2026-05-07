@@ -39,8 +39,8 @@
     "city": "Erfurt",
     "neighborhood": "",
     "address": "Hermsdorfer Str. 4, 99099",
-    "latitude": 50.9707748,
-    "longitude": 11.0597322,
+    "latitude": 50.9706076,
+    "longitude": 11.0603279,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -282,8 +282,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Tamara-Danz-Straße 11, 10243",
-    "latitude": 52.5059648,
-    "longitude": 13.4458206,
+    "latitude": 52.5059879,
+    "longitude": 13.4472132,
     "type": "Mall",
     "changing_table_location": [
       "hallway"
@@ -313,8 +313,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Rigaer Str. 71 A, 10247",
-    "latitude": 52.5154366,
-    "longitude": 13.4703646,
+    "latitude": 52.5157672,
+    "longitude": 13.4685091,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -427,8 +427,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Göhrener Str. 5, 10437",
-    "latitude": 52.5416295,
-    "longitude": 13.4214974,
+    "latitude": 52.5415308,
+    "longitude": 13.4214264,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -542,8 +542,8 @@
     "city": "Hamburg",
     "neighborhood": "",
     "address": "Überseeboulevard 7, 20457",
-    "latitude": 53.5397349,
-    "longitude": 9.9991553,
+    "latitude": 53.5406335,
+    "longitude": 9.9991418,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -573,8 +573,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Urbanstraße 70A, 10967",
-    "latitude": 52.4881953,
-    "longitude": 13.4230643,
+    "latitude": 52.4885506,
+    "longitude": 13.422899,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -662,8 +662,8 @@
     "city": "Landsberg",
     "neighborhood": "",
     "address": "Zörbiger Str. 17, 06188",
-    "latitude": 51.5391599,
-    "longitude": 12.1569538,
+    "latitude": 51.5388924,
+    "longitude": 12.1573081,
     "type": "Bakery",
     "changing_table_location": [
       "mixed restroom"
@@ -690,8 +690,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Wildenbruchstr. 86, 12045",
-    "latitude": 52.4830906,
-    "longitude": 13.4417527,
+    "latitude": 52.4831376,
+    "longitude": 13.4418549,
     "type": "Café",
     "changing_table_location": [
       "wheelchair restroom"
@@ -866,8 +866,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Rathausstraße 5, 10178",
-    "latitude": 52.5191361,
-    "longitude": 13.4095725,
+    "latitude": 52.5192421,
+    "longitude": 13.4097571,
     "type": "Café",
     "changing_table_location": [
       "women's restroom",
@@ -986,8 +986,8 @@
     "city": "Hamburg",
     "neighborhood": "",
     "address": "Beim Strohhause 17, 20097",
-    "latitude": 53.5540145,
-    "longitude": 10.0208859,
+    "latitude": 53.5536884,
+    "longitude": 10.0210851,
     "type": "Fitness Studio",
     "changing_table_location": [],
     "supplies_available": [],
@@ -1244,8 +1244,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "R. Sara Afonso, 4460-841",
-    "latitude": 41.1813648,
-    "longitude": -8.654255,
+    "latitude": 41.1802463,
+    "longitude": -8.654006,
     "type": "Mall",
     "changing_table_location": [
       "dedicated room"
@@ -1698,8 +1698,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Alt-Mahlsdorf 85, 12623",
-    "latitude": 52.5010261,
-    "longitude": 13.6226618,
+    "latitude": 52.501218,
+    "longitude": 13.6219796,
     "type": "Store",
     "changing_table_location": [
       "wheelchair restroom"
@@ -2048,7 +2048,7 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Bouchéstraße 12, 12435 Berlin",
-    "latitude": 52.4939788,
+    "latitude": 52.4939787,
     "longitude": 13.447736,
     "type": "Supermarket",
     "changing_table_location": [
@@ -2143,8 +2143,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Kiehlufer 55, 12059",
-    "latitude": 52.4850446,
-    "longitude": 13.4450519,
+    "latitude": 52.4851268,
+    "longitude": 13.4449541,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -2630,8 +2630,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Friedrichstraße 191, 10117",
-    "latitude": 52.5107745,
-    "longitude": 13.3896707,
+    "latitude": 52.5109315,
+    "longitude": 13.3895576,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2661,8 +2661,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Am Tierpark 39, 10319",
-    "latitude": 52.5032792,
-    "longitude": 13.5202148,
+    "latitude": 52.5039647,
+    "longitude": 13.5199661,
     "type": "Zoo",
     "changing_table_location": [
       "women's restroom"
@@ -2715,7 +2715,7 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg-Wilmersdorf",
     "address": "Hardenbergpl. 11, 10623 Berlin",
-    "latitude": 52.5076167,
+    "latitude": 52.5076168,
     "longitude": 13.3328159,
     "type": "Public toilet",
     "changing_table_location": [
@@ -2843,8 +2843,8 @@
     "city": "Capão da Canoa",
     "neighborhood": "",
     "address": "Avenida Paraguassu 3093, 95555-000",
-    "latitude": -29.7206289,
-    "longitude": -49.9972398,
+    "latitude": -29.7053197,
+    "longitude": -49.9888319,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -2934,8 +2934,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Florastraße 27, 13187",
-    "latitude": 52.5653609,
-    "longitude": 13.4041146,
+    "latitude": 52.5653802,
+    "longitude": 13.4037971,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -3144,8 +3144,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Paul-Lincke-Ufer 17, 10999",
-    "latitude": 52.4933415,
-    "longitude": 13.430955,
+    "latitude": 52.4933018,
+    "longitude": 13.4311,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom",
@@ -3422,8 +3422,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Weichselstraße 33-36, 12045",
-    "latitude": 52.4879702,
-    "longitude": 13.4378198,
+    "latitude": 52.4866761,
+    "longitude": 13.436119,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom"
@@ -3558,8 +3558,8 @@
     "city": "Rostock",
     "neighborhood": "",
     "address": "Handwerkstraße 1, 18069",
-    "latitude": 54.1244245,
-    "longitude": 12.0735793,
+    "latitude": 54.1240673,
+    "longitude": 12.0723171,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -3621,8 +3621,8 @@
     "city": "Igrejinha",
     "neighborhood": "",
     "address": "Rua João Corrêa 1011, 95650-000",
-    "latitude": -29.5735787,
-    "longitude": -50.7897353,
+    "latitude": -29.5734577,
+    "longitude": -50.7920686,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -4201,8 +4201,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Einbecker Str. 119, 10315 Berlin",
-    "latitude": 52.505784,
-    "longitude": 13.5135413,
+    "latitude": 52.5057342,
+    "longitude": 13.5135667,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -4229,8 +4229,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Am Bürgerpark 15-18, 13156 Berlin",
-    "latitude": 52.5688761,
-    "longitude": 13.3886772,
+    "latitude": 52.5689772,
+    "longitude": 13.3882907,
     "type": "Zoo",
     "changing_table_location": [
       "dedicated room"
@@ -4283,8 +4283,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Raumerstr. 9",
-    "latitude": 52.5428261,
-    "longitude": 13.418085,
+    "latitude": 52.5428202,
+    "longitude": 13.4181412,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -4712,8 +4712,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Chausseestraße 55, 10115",
-    "latitude": 52.5360351,
-    "longitude": 13.3765927,
+    "latitude": 52.5359491,
+    "longitude": 13.3766279,
     "type": "Café",
     "changing_table_location": [],
     "supplies_available": [
@@ -4867,8 +4867,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Falckensteinstraße 33, 10997",
-    "latitude": 52.49789,
-    "longitude": 13.4418722,
+    "latitude": 52.4979289,
+    "longitude": 13.4418972,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -4962,8 +4962,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Landsberger Allee 117, 10407",
-    "latitude": 52.5290131,
-    "longitude": 13.4566633,
+    "latitude": 52.529054,
+    "longitude": 13.4559153,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -5148,8 +5148,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Oderberger Str. 61, 10435",
-    "latitude": 52.5377856,
-    "longitude": 13.4111836,
+    "latitude": 52.537724,
+    "longitude": 13.4113477,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -5202,8 +5202,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Bouchéstraße 79A, 12435",
-    "latitude": 52.4903415,
-    "longitude": 13.449057,
+    "latitude": 52.4903321,
+    "longitude": 13.4490329,
     "type": "Bar",
     "changing_table_location": [
       "mixed restroom"
@@ -5380,8 +5380,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Weserstr. 175, 12045",
-    "latitude": 52.4846289,
-    "longitude": 13.4392789,
+    "latitude": 52.4846106,
+    "longitude": 13.4393169,
     "type": "Fitness Studio",
     "changing_table_location": [
       "men's restroom"
@@ -5770,8 +5770,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Rummelsburger Seeblick 1, 10317",
-    "latitude": 52.5017674,
-    "longitude": 13.4703165,
+    "latitude": 52.5019913,
+    "longitude": 13.4704069,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -5802,8 +5802,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Rummelsburger Str. 16, 12459",
-    "latitude": 52.4684729,
-    "longitude": 13.513063,
+    "latitude": 52.4692856,
+    "longitude": 13.5123692,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -5865,8 +5865,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Alt-Stralau 61, 10245",
-    "latitude": 52.4959189,
-    "longitude": 13.4677677,
+    "latitude": 52.4958383,
+    "longitude": 13.4678129,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -5930,8 +5930,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "R. Formosa 322, 4000-248",
-    "latitude": 41.1488261,
-    "longitude": -8.6081015,
+    "latitude": 41.1484236,
+    "longitude": -8.6067085,
     "type": "Food court",
     "changing_table_location": [
       "women's restroom",
@@ -5961,8 +5961,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Brunnenstraße 24, 10119 Berlin",
-    "latitude": 52.5334144,
-    "longitude": 13.3988764,
+    "latitude": 52.5334592,
+    "longitude": 13.3988575,
     "type": "Fitness Studio",
     "changing_table_location": [
       "women's restroom"
@@ -6022,8 +6022,8 @@
     "city": "Berlin",
     "neighborhood": "",
     "address": "Kiehlufer 55, 12059",
-    "latitude": 52.4850446,
-    "longitude": 13.4450519,
+    "latitude": 52.4851268,
+    "longitude": 13.4449541,
     "type": "Café",
     "changing_table_location": [],
     "supplies_available": [],
@@ -6106,8 +6106,8 @@
     "city": "Porto Alegre",
     "neighborhood": "",
     "address": "Av. Severo Dullius 90010, 90200-310",
-    "latitude": -29.9891941,
-    "longitude": -51.1682086,
+    "latitude": -29.988797,
+    "longitude": -51.1677932,
     "type": "Airport",
     "changing_table_location": [
       "women's restroom"
@@ -6228,8 +6228,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Friedrichstraße 90, 10117",
-    "latitude": 52.518369,
-    "longitude": 13.3890173,
+    "latitude": 52.5185694,
+    "longitude": 13.3887412,
     "type": "Bookstore",
     "changing_table_location": [
       "women's restroom"
@@ -6459,8 +6459,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Schönhauser Allee 9, 10119",
-    "latitude": 52.5298245,
-    "longitude": 13.4112754,
+    "latitude": 52.5301311,
+    "longitude": 13.4109881,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -6495,8 +6495,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg-Wilmersdorf",
     "address": "Giesebrechtstraße 15, 10629",
-    "latitude": 52.5017702,
-    "longitude": 13.3106157,
+    "latitude": 52.5018681,
+    "longitude": 13.3105132,
     "type": "Biergarten",
     "changing_table_location": [
       "wheelchair restroom"
@@ -6588,8 +6588,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Hobrechtstraße 32, 12047",
-    "latitude": 52.4920373,
-    "longitude": 13.4268288,
+    "latitude": 52.4920006,
+    "longitude": 13.4262918,
     "type": "Institution",
     "changing_table_location": [
       "mixed restroom"
@@ -6892,8 +6892,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Bulgarische Str. 58, 12435",
-    "latitude": 52.4855701,
-    "longitude": 13.4818052,
+    "latitude": 52.4847995,
+    "longitude": 13.4801737,
     "type": "Public toilet",
     "changing_table_location": [
       "mixed restroom",
@@ -7104,8 +7104,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Schönhauser Allee 140a, 10437",
-    "latitude": 52.5482622,
-    "longitude": 13.4136757,
+    "latitude": 52.5469891,
+    "longitude": 13.4130477,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -7461,8 +7461,8 @@
     "city": "Berlin",
     "neighborhood": "Pankow-Prenzlauerberg",
     "address": "Florastraße 27, 13187",
-    "latitude": 52.5653609,
-    "longitude": 13.4041146,
+    "latitude": 52.5653802,
+    "longitude": 13.4037971,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -7614,8 +7614,8 @@
     "city": "Berlin",
     "neighborhood": "Steglitz-Zehlendorf",
     "address": "Schloßstraße 95, 12163",
-    "latitude": 52.4584914,
-    "longitude": 13.3225079,
+    "latitude": 52.4584189,
+    "longitude": 13.3225704,
     "type": "Store",
     "changing_table_location": [
       "hallway"
@@ -7910,8 +7910,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Herrfurthstraße 21, 12049",
-    "latitude": 52.4766888,
-    "longitude": 13.4198521,
+    "latitude": 52.4767265,
+    "longitude": 13.4200344,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -7970,8 +7970,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Weserstr. 212",
-    "latitude": 52.4884014,
-    "longitude": 13.4271321,
+    "latitude": 52.4884033,
+    "longitude": 13.4270259,
     "type": "Bakery",
     "changing_table_location": [
       "mixed restroom"
@@ -8274,8 +8274,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Donaustraße 84, 12043",
-    "latitude": 52.4790851,
-    "longitude": 13.4415103,
+    "latitude": 52.479073,
+    "longitude": 13.4415376,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -8370,8 +8370,8 @@
     "city": "Luxembourg",
     "neighborhood": "",
     "address": "11 Rue Notre Dame, 2240 Ville-Haute Luxembourg",
-    "latitude": 49.6099311,
-    "longitude": 6.130137,
+    "latitude": 49.6099031,
+    "longitude": 6.1302068,
     "type": "Public toilet",
     "changing_table_location": [
       "dedicated room"
@@ -8401,8 +8401,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Pablo-Neruda-Straße, 12559",
-    "latitude": 52.442562,
-    "longitude": 13.5893925,
+    "latitude": 52.4423459,
+    "longitude": 13.590158,
     "type": "Park",
     "changing_table_location": [
       "outdoors"
@@ -8462,8 +8462,8 @@
     "city": "Berlin",
     "neighborhood": "Steglitz-Zehlendorf",
     "address": "Am Großen Wannsee 56-58",
-    "latitude": 52.435062,
-    "longitude": 13.1621278,
+    "latitude": 52.4333702,
+    "longitude": 13.1636596,
     "type": "Museum",
     "changing_table_location": [
       "women's restroom"
@@ -8490,8 +8490,8 @@
     "city": "Berlin",
     "neighborhood": "Charlottenburg-Wilmersdorf",
     "address": "Lützowpl., 10785 Berlin",
-    "latitude": 52.5048156,
-    "longitude": 13.3516509,
+    "latitude": 52.5040363,
+    "longitude": 13.3528537,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -8544,8 +8544,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Heidestraße 40, 10557",
-    "latitude": 52.5328215,
-    "longitude": 13.3655968,
+    "latitude": 52.5327256,
+    "longitude": 13.3656843,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -8733,8 +8733,8 @@
     "city": "Lisbon",
     "neighborhood": "",
     "address": "Avenida Engenheiro Duarte Pacheco",
-    "latitude": 38.7245289,
-    "longitude": -9.1595904,
+    "latitude": 38.7242234,
+    "longitude": -9.1607785,
     "type": "Mall",
     "changing_table_location": [
       "mixed restroom"
@@ -8794,8 +8794,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Henriette-Herz-Platz 4, 10178",
-    "latitude": 52.5223932,
-    "longitude": 13.4029576,
+    "latitude": 52.5222581,
+    "longitude": 13.4031763,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -8920,8 +8920,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Hilda-Geiringer-Weg 4, 10557",
-    "latitude": 52.5268271,
-    "longitude": 13.3724979,
+    "latitude": 52.5266907,
+    "longitude": 13.3724523,
     "type": "Restaurant",
     "changing_table_location": [
       "women's restroom"
@@ -8982,8 +8982,8 @@
     "city": "Porto",
     "neighborhood": "",
     "address": "Rua de D. Manuel II 21, 4050-239",
-    "latitude": 41.1473036,
-    "longitude": -8.620521,
+    "latitude": 41.1486395,
+    "longitude": -8.6256043,
     "type": "Institution",
     "changing_table_location": [
       "wheelchair restroom"
@@ -9015,8 +9015,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Litfaß-Platz 1, 10178",
-    "latitude": 52.5218041,
-    "longitude": 13.4035735,
+    "latitude": 52.5218811,
+    "longitude": 13.4034519,
     "type": "Restaurant",
     "changing_table_location": [
       "wheelchair restroom"
@@ -9041,8 +9041,8 @@
     "city": "Berlin",
     "neighborhood": "Steglitz-Zehlendorf",
     "address": "Altensteinstraße 15A, 14195",
-    "latitude": 52.4563332,
-    "longitude": 13.2995177,
+    "latitude": 52.4564386,
+    "longitude": 13.3001781,
     "type": "Café",
     "changing_table_location": [
       "women's restroom"
@@ -9119,9 +9119,9 @@
     "room_for_stroller": "Yes",
     "site": "dm.de",
     "created_at": "2026-05-02",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/ezXig-xSqXn-1OTQtgXEhg/YukgOTX2rAupg9vi8fRAQshZDKJj8jX_y0GQIz3bTv9udYDD8mdj9LkvCHkWM78OjCQIbyKjajivYLn1OPzeaEDUyuL1vbZCGGuzxEuR_9EdPWL9LR698zjYh8JE58TjLVcTUuDqm-npztTFUsAX9w/bgF41JU4mYCquLVkfRsgrfVDRi2xsCa1wxCpiAzXpKc",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/fowTo217GnX-vRB4FeqhBQ/puTrQtYgY93nUrXu8Ixo14uTshNybahAafGPBIjYpgLQPljN84mLzhVpj2I79NumtoqdaERU4DB8kSl9AByFSnG7K9F6ANU22nIoiLN8GYT3vv5wHVckdRA_sNA-bqudhAlPvtSCIZP5HHkgvlM2mg/eGmETJWHP8pxTUHZUDcAPcsloeSVF6AeMfEIUKVfonY",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/fowTo217GnX-vRB4FeqhBQ/puTrQtYgY93nUrXu8Ixo14uTshNybahAafGPBIjYpgLQPljN84mLzhVpj2I79NumtoqdaERU4DB8kSl9AByFSnG7K9F6ANU22nIoiLN8GYT3vv5wHVckdRA_sNA-bqudhAlPvtSCIZP5HHkgvlM2mg/eGmETJWHP8pxTUHZUDcAPcsloeSVF6AeMfEIUKVfonY",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/HQ4OVBIDRfffeGZLf5as5A/ZO3JmYY5C1JRivfcoiE0FMRSukiCZ9fYY-qAe6K61cP9ofRiBdZE5j8xSlKkS4HW9H6adtd8BkuSHHI3WllGwkpKN9N3PPyLtW_9uCIIJ2rdY1YMMPuHCTmVT2Z5p4Xy9jb4YYRK9nG-3szdxsYvug/C-FA9qFKsWZbCF50jzRS1WdIdR8ySNAI7IRAQX3G9Xk",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/z_r1pO-WqDYXhWVIGLpfbw/5u4939Hn6iZuQDnfDF9R-U-kAdQt8928TPXAjOFhXmmCzvtAljNjxcyIj2Lpn9ykTYuE9ZgUmXn6hMoQQyh4A5RtYEgiwIBz1Q_lmlbO3usrgHkCgvAfZLr8EwgFuaZK6B9t9NW2_yrC1GqJSGb4jA/XdhdJ7Kb8kJHCsNsGydrwhOk5Ne8FT9L0dZeCLY5OKk",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/z_r1pO-WqDYXhWVIGLpfbw/5u4939Hn6iZuQDnfDF9R-U-kAdQt8928TPXAjOFhXmmCzvtAljNjxcyIj2Lpn9ykTYuE9ZgUmXn6hMoQQyh4A5RtYEgiwIBz1Q_lmlbO3usrgHkCgvAfZLr8EwgFuaZK6B9t9NW2_yrC1GqJSGb4jA/XdhdJ7Kb8kJHCsNsGydrwhOk5Ne8FT9L0dZeCLY5OKk",
     "has_photo": true,
     "review": "Very nice and clean, dm standard. But the day I was there, they were restocking the shelves and had parked the cart used to transport the products right next to them. It was a bit of a bother.",
     "overall_user_experience": 9.0,
@@ -9147,9 +9147,9 @@
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/Zme6MRJiaDe9H7fq9?g_st=ipc",
     "created_at": "2025-10-18",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/yRSM4t5IKwrABGxL01YOAg/Jc24liOXeL54NKA5TLI0c5Gb68tabqEyRSTBYZmktxSC8CGalhDVWreAgenJvWWM4beYHezmJGqmU9UteepOH5IPFvvqMf8F69GQSCx1Fj4B0jgUTMnc2QBJIM40NPZQzUSiioQFxsL4CZnZZi0qGQ/Fi1TQHJsHZUZE2Rv8gYRLIzKoPeqYYwszwVAmLPwBLc",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/udfU6yygZzlJSSxzkWMe9A/AB_wjVWMKj_jvKXKBAd0Adk828aH6aFWv7rFNhaEjPGRnjbCjQorZk5Fw92MrgRYqeYsWi8-Jt_0hVlhWs8HhFaI-bcN-d8c8HeR6U0WTy1Qtth4P5akMJ-PoNO6xp9viPju7draZret2qPUIpJA8w/hZakLl0MjhY9i0zRIkpAhnaZZo3U-22AKB4zHYh-UXs",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/udfU6yygZzlJSSxzkWMe9A/AB_wjVWMKj_jvKXKBAd0Adk828aH6aFWv7rFNhaEjPGRnjbCjQorZk5Fw92MrgRYqeYsWi8-Jt_0hVlhWs8HhFaI-bcN-d8c8HeR6U0WTy1Qtth4P5akMJ-PoNO6xp9viPju7draZret2qPUIpJA8w/hZakLl0MjhY9i0zRIkpAhnaZZo3U-22AKB4zHYh-UXs",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/89Vj8m9-ACNs58-VKF-YXw/zTJIq0LlMfCjvRpyNl2JcJtuFU5U2aVPkCE0OqP_VyS5oqE2PKC-Aa13ZYiFjoo3NfbyNsUo2FtROt6-B8ijCAQNeBs7YJuIt8iuD54-cGwgtKofvIDydm5UrOPk_o-Ly2sgHq-lF1_aGtcz9E3kPA/uqw9JzFFVnV3ANbSlCjUehaADiKlPdgBrEyZRPZUVAI",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/4N48Ed3nA36m2hUGRPLHNw/TCLbJ_LM1diKyL6f-ENDd_7jObU-N36VTlBFk2Ye1x467H34yX1-MrcyJw6KJCqa2v02U1p90F6jyaIepfLSwkLxG8j5OnNNVQUt7geGRyLSZ9IER_-D3YK5e6rr0GNT6tISqwXG8Ydv8Hu6R2FmjA/4LFxsvx_xGmFOQEpJRL0VRZFYS7DTm47_-q03wwnzBY",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/4N48Ed3nA36m2hUGRPLHNw/TCLbJ_LM1diKyL6f-ENDd_7jObU-N36VTlBFk2Ye1x467H34yX1-MrcyJw6KJCqa2v02U1p90F6jyaIepfLSwkLxG8j5OnNNVQUt7geGRyLSZ9IER_-D3YK5e6rr0GNT6tISqwXG8Ydv8Hu6R2FmjA/4LFxsvx_xGmFOQEpJRL0VRZFYS7DTm47_-q03wwnzBY",
     "has_photo": true,
     "review": "",
     "overall_user_experience": 7.0,
@@ -9162,8 +9162,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Tamara-Danz-Straße 11, 10243",
-    "latitude": 52.5059648,
-    "longitude": 13.4458206,
+    "latitude": 52.5059879,
+    "longitude": 13.4472132,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -9196,7 +9196,7 @@
     "city": "St. Anton am Arlberg",
     "neighborhood": "",
     "address": "Verwallweg 122, 6580",
-    "latitude": 47.1047266,
+    "latitude": 47.1047265,
     "longitude": 10.2211614,
     "type": "Restaurant",
     "changing_table_location": [
@@ -9214,9 +9214,9 @@
     "room_for_stroller": "Yes",
     "site": "wagnerhuette.at",
     "created_at": "2025-08-17",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/CXNaY3rjMnXSiUqfC3yknA/35PVX6sB07bS0KyFQ5dLeBzrmR2SwFuYCBIn8VJyg7UaOa6KpAHUv1x6j_bFw4yAuTgsKg0VdVt9UeJsSlLUqqrbCHTtZgG-vtU_T70sfhg5lrzaTIUToi9jL1TFEkl-6KdH2-fQDZIFEGg8P0yUTg/EnyZ2r3NVyWgr6KG2hSlZNhI2pgFWLyhiAOt3C7EY1A",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/SJut8ojqgLWb7VzZDlLRRA/zXj_ewcwPWmjqkGabkdxDp9CWFLMLdYWNYIKH60uKX5zp2oV2LQSInZX5fcq4Qtaw_hGdW7LsgxgCVDpjxw9Wk8dxLBHMrf7eWrMPsHv6y2n3aIoAdecLX5AoElgYd4vYHMd7ZiW2kwzfCYebTBn1Q/Lm7XwVTFgaTwbKKCE0somrhaTv31CkRGZOVf9d_jWTg",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/SJut8ojqgLWb7VzZDlLRRA/zXj_ewcwPWmjqkGabkdxDp9CWFLMLdYWNYIKH60uKX5zp2oV2LQSInZX5fcq4Qtaw_hGdW7LsgxgCVDpjxw9Wk8dxLBHMrf7eWrMPsHv6y2n3aIoAdecLX5AoElgYd4vYHMd7ZiW2kwzfCYebTBn1Q/Lm7XwVTFgaTwbKKCE0somrhaTv31CkRGZOVf9d_jWTg",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/42HGpjZyz3zx8zed6uyeOA/wqSfN6o2lhxA2RmU75JeU6q_ePEEcwMyAFt8Hz-Y9o-NzVc8mOUyScocTLLvSGsTnAwhqSgOwWXElusf8dNE_qC0AM9V_T5zC6xGHs4wWlN27vMOiGPM2Pdz_AAeETi4dijO00yNfy7jlsRd95HeVQ/AFEBlme9dmrqb6MhhRw_WDYdtoVTJaZs_63juKd5bQw",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/YtmWLVRCZPIem_qaX7vgbQ/WIsJv91eN343WxanwGM2jx5sFTbhhLMHnXL71aHTfTPFUe3DduzImjsHE51Vb1Uavhyabl5B9-fJO0CTFz5Pwp4wDNabiaoKihB1ZeYvviFcOccji8VpC4iSGEO7WjTRZvAWESDG0ReX-APjfcWTUQ/B2q_cFNTxtWoE42bGeIg8C0kaqXJuyBO6XQP7Ilq8hg",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/YtmWLVRCZPIem_qaX7vgbQ/WIsJv91eN343WxanwGM2jx5sFTbhhLMHnXL71aHTfTPFUe3DduzImjsHE51Vb1Uavhyabl5B9-fJO0CTFz5Pwp4wDNabiaoKihB1ZeYvviFcOccji8VpC4iSGEO7WjTRZvAWESDG0ReX-APjfcWTUQ/B2q_cFNTxtWoE42bGeIg8C0kaqXJuyBO6XQP7Ilq8hg",
     "has_photo": true,
     "review": "",
     "overall_user_experience": 10.0,
@@ -9261,7 +9261,7 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Alexanderpl. 1, 10178",
-    "latitude": 52.5215059,
+    "latitude": 52.5215058,
     "longitude": 13.4123809,
     "type": "Store",
     "changing_table_location": [
@@ -9309,9 +9309,9 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2026-04-15",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/odxceYtKfFy2ueoutwl1cg/WdM9EjF-CoovhUaAHMRMkI8PqSroPemS2cBr90AIWCyfd5Gs4hMO8pxMlr6IxMfxM0eU_SsRV5HVx2XFQin0fEXoQ90B6UMXMNH6TnHM3gZdVJaH_6YX1VZSSOKTMp4eSiwNkWtLDQ3fGO3UxPifig/QXVycNdlIjmAzWEHzpKvfY38AZvDwOWZ6jWF521ERSs",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/uwlclL_s5ZTo78oIk35-UA/b3VFusfVWw5CCr2PMmriKt3_VwQAqAUbyMBt0PGAGvJ_W01w4-9er3yyQoN62awmgHljTQyp8NQjjBw3hkEvRAq7vbnfslAST_Gfk9F32gJZd5ncVFhtyeAndCyIA67IuWlSQM2Mc6CNcOLUgIrwCA/hdL9AjCKH41rTlJqNkrXfZbkGioKKYlVd6C1gVYd5EY",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/uwlclL_s5ZTo78oIk35-UA/b3VFusfVWw5CCr2PMmriKt3_VwQAqAUbyMBt0PGAGvJ_W01w4-9er3yyQoN62awmgHljTQyp8NQjjBw3hkEvRAq7vbnfslAST_Gfk9F32gJZd5ncVFhtyeAndCyIA67IuWlSQM2Mc6CNcOLUgIrwCA/hdL9AjCKH41rTlJqNkrXfZbkGioKKYlVd6C1gVYd5EY",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/yUey71rNLkfsK3QSjzaxuQ/BJJi3-vjWsp75T9ubZNisI77BXQIT7TOImgmdqB4WEKoHqoJ_lnUcBhRy_bjKn-VJ5o47FcubHS8tCU5ZXH_f_wMP3f5hhKXVjvvih8WC7iwBtJlgjXqp2tw053PAemPxYxvJlB2tP55XnzFd3pEeg/tTFP7jKZZti5I-nXSSt8BkLCATEPzBi-BKzhETpGN_g",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/U2H8n8P2q9fTEgAsVp7krw/9kjdQL0Sd3vzhd4GcgMA1vK5XdSzbTWAiSBB4EtKYgepeUr5JrSc4gCEUj36L220nUvUPCaZwUe7GvoDt8Bm_kOMFC7L9Zahh5DfycW7HzlZRqYeE_LbfP_2kf5wyKBAFE4i_Y8Nn2tkV4iEblZ6EA/Ylnk9yFkD75lXhlNmFWsRdZ5Tw9nZpyrc7FsVO8IO-s",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/U2H8n8P2q9fTEgAsVp7krw/9kjdQL0Sd3vzhd4GcgMA1vK5XdSzbTWAiSBB4EtKYgepeUr5JrSc4gCEUj36L220nUvUPCaZwUe7GvoDt8Bm_kOMFC7L9Zahh5DfycW7HzlZRqYeE_LbfP_2kf5wyKBAFE4i_Y8Nn2tkV4iEblZ6EA/Ylnk9yFkD75lXhlNmFWsRdZ5Tw9nZpyrc7FsVO8IO-s",
     "has_photo": true,
     "review": "It does the job. It’s very clean, and my baby enjoyed playing with the wall decorations while I was changing him.",
     "overall_user_experience": 8.0,
@@ -9324,8 +9324,8 @@
     "city": "Valencia",
     "neighborhood": "",
     "address": "C/ de Cadis, 61, L'Eixample, 46006",
-    "latitude": 39.4605266,
-    "longitude": -0.3725838,
+    "latitude": 39.4605077,
+    "longitude": -0.3725287,
     "type": "Bakery",
     "changing_table_location": [
       "women's restroom"
@@ -9337,9 +9337,9 @@
     "room_for_stroller": false,
     "site": "https://maps.app.goo.gl/pjaUeQFvitX4Xfi5A?g_st=ipc",
     "created_at": "2025-09-25",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/kd7-UJFun9spbjHOMLFofA/XU1hu_bUPkbpOTss2liZYx0_3Y2kQ1F2BDn-ZhshTJBjwONc2zX0Ot7W3o0Ov3PMzs67g4lDQ1pX-FjXlGgfp2Au3OHEocP5Ttzl7R158AWIVJMREuF-Tcux1U6tHuPD98rMQlNy9ud-m2QDVqRT3A/31tj64eH2XLDVyV7mjdQAdvOMkUHrI3aG8jCQLXuS_8",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/5wJ1iPf0aR82NdeTcqi_ng/6Vxp4UYfDYUtVpLWJdR-ywjMYP-f8WKVjMQAnQ0avStNCRRlI_CcjLvUMWP71IHUNZCi_-HcrqFDohUENEL_c_tKp8bBNE59zB3JZQlN8yZIs9NV5VOjJLYKI7DHlBc-SxYCdUrHBQWrKi2Z4l_hTg/AhXiCxrZOVvnE3BwpXCVbkzblHmwSLFF1L78hUTWGzE",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/5wJ1iPf0aR82NdeTcqi_ng/6Vxp4UYfDYUtVpLWJdR-ywjMYP-f8WKVjMQAnQ0avStNCRRlI_CcjLvUMWP71IHUNZCi_-HcrqFDohUENEL_c_tKp8bBNE59zB3JZQlN8yZIs9NV5VOjJLYKI7DHlBc-SxYCdUrHBQWrKi2Z4l_hTg/AhXiCxrZOVvnE3BwpXCVbkzblHmwSLFF1L78hUTWGzE",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/S2f4RlTCCwcfLe1rFT2F6Q/LP5c-tnaWhekYW5WEU8n2geYFwbbDZb-trA3SgFWCoIO6X-OWTZ22DPruxYdySLHGjYonOle2xGEN5hsTpmMbN76EBI0aO6B2U9lYsS85EEeix9DEV2Esw6FJM4zhaf4Y_lyncKYbeN-zQKBE33JqQ/L2TY-wJHHDMnANHALWIXozKL6z4oEZ6Kd_V3nuhjIfc",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/T8q1CC2gJWsOqw89I33BVg/kkpKkrj_nFWVD5MWUVoskYdKSyQUc1_Iv_RUZfuvh4400xFmvYGY5oNbLHECMSacss8zTKdkJDT7CJ7G_MWK1oe4qvXYy452DWu6IN8VYfuxFWnvghGXom5dJnGe4Icj19QTnhg1RosT782dlv5j3A/iu8yRV5YYp0NCuqLpTOZX33bSmWm_iF3VA9O1w3_yn0",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/T8q1CC2gJWsOqw89I33BVg/kkpKkrj_nFWVD5MWUVoskYdKSyQUc1_Iv_RUZfuvh4400xFmvYGY5oNbLHECMSacss8zTKdkJDT7CJ7G_MWK1oe4qvXYy452DWu6IN8VYfuxFWnvghGXom5dJnGe4Icj19QTnhg1RosT782dlv5j3A/iu8yRV5YYp0NCuqLpTOZX33bSmWm_iF3VA9O1w3_yn0",
     "has_photo": true,
     "review": "",
     "overall_user_experience": 9.0,
@@ -9368,9 +9368,9 @@
     "room_for_stroller": "Yes",
     "site": "gasthausseibl.at",
     "created_at": "2025-08-21",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/otHmN7TSaY7iAUh2lUVJTw/VqfRz039F9QJGbkd6KOEi4HKw7vjx3CkUzC7DQLRuICV6nFncVfHw-XpqQ9DWPY5LsD6sWJ6HAXgSTdEFXO1JywiijG67OLarGCdZu-pFJijPDpvoP8kp5y_ZbKaeiN6uEwmnNC-kuH7mYqXAfIlOw/GZHZPIrF3PZP3QScS1EO30VZcfD1zWzGueY3TIpPMiM",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/8dZbWcDtwAjsMJToAVg3Lg/fep-C_6XL9E8B0TF4YnrESjJTvfi31YUjAKmDd7HkjxTQB9GeyxOqoEZab4ixERWCVoH2btuyPsJqi0gWY6OSRMzWk_-0qPOpCNUUXg9K0-qUAXIlwEdV2xs-r0KgH40Tp6Z7PI83sRGFAqONfVriA/vM4MdmwzcoufuG2HQmmk_q9wRYk-sj3gQDruZ-tEokg",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/8dZbWcDtwAjsMJToAVg3Lg/fep-C_6XL9E8B0TF4YnrESjJTvfi31YUjAKmDd7HkjxTQB9GeyxOqoEZab4ixERWCVoH2btuyPsJqi0gWY6OSRMzWk_-0qPOpCNUUXg9K0-qUAXIlwEdV2xs-r0KgH40Tp6Z7PI83sRGFAqONfVriA/vM4MdmwzcoufuG2HQmmk_q9wRYk-sj3gQDruZ-tEokg",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/M6cTvr4KoSQCO6FZIR19-g/zeM-ETfEaFjZ6JNOSAX1BU6TD-WpnoAUsKjWRmHrHPUH2YYTcGNCczmLkORDb4XgrGDBqUQxJ18QZaKorPthRcO28AYvThNQfznXqcWb5OnQpS0TV5mpIe4Huzw3O1_lLM6OggWVrNbTvsFKbO2pdQ/CnkQK31903biwfDkvN--dzDYgw29JfIKOqt2fVOqhzU",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/NWDiHk8UNCScGeEprtTEBQ/WZM4-_qnp6qavTjhVcm232Y3ORDm0Z1tfB2G2gVQ957BnmZ7xmuVfjmcTQnGJR8H9jIb_qcIgR5dXCuI7ADGn4QCpbL8PioEuXBUCBSD4_9l6FN4kXC4qVWOujtvYgiGcZQSjy3BMEP81TUVp-tLjg/dW_efMyi4fZDPxJqf45uY0EiUlNTGP5tpm76v4AoePM",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/NWDiHk8UNCScGeEprtTEBQ/WZM4-_qnp6qavTjhVcm232Y3ORDm0Z1tfB2G2gVQ957BnmZ7xmuVfjmcTQnGJR8H9jIb_qcIgR5dXCuI7ADGn4QCpbL8PioEuXBUCBSD4_9l6FN4kXC4qVWOujtvYgiGcZQSjy3BMEP81TUVp-tLjg/dW_efMyi4fZDPxJqf45uY0EiUlNTGP5tpm76v4AoePM",
     "has_photo": true,
     "review": "The changing table is good but the restaurant service is TERRIBLE. I don‘t recommend it.",
     "overall_user_experience": 9.0,
@@ -9400,9 +9400,9 @@
     "room_for_stroller": "No",
     "site": "",
     "created_at": "2026-03-01",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/A1QEo-g6DJlEfv7_raJwyg/hjjRurB8GIDtFP8HLEvxYVoE1iv7CJQ6fDJco5KpesbQp81i-UVHw9vQUuesLvaOo-HmrXbtFVsoKeCfsH2I4EaLa2zzqz8Bz884ij5CUGfXKtIJyooc79_sQ9PLmVg4-LKp3LfIA8NheE_Fp0ByIQ/mURGtXXGKb9LRs9dquhgdrEsLef98yPksUDu5FEBUVE",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/-o2fGFKWIfW04LE_ocwsAA/JgagkgzINDKoY8C5j2owvEmot_RyErJYK9Yxzhj9i6JzxmZGD7owRgPlPZnz76nP04xcdKuHDnqNVPqSd5m1smnA4vyQ9LKLlWpjFWdPJlVYgabcVMKVEnW91-68HYWTTDshpEkJ_8nlI3XPVNSnrA/a-8GEnbA-Q0jgEucZVw6iwZXPycZSbexdduhazRAML8",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/-o2fGFKWIfW04LE_ocwsAA/JgagkgzINDKoY8C5j2owvEmot_RyErJYK9Yxzhj9i6JzxmZGD7owRgPlPZnz76nP04xcdKuHDnqNVPqSd5m1smnA4vyQ9LKLlWpjFWdPJlVYgabcVMKVEnW91-68HYWTTDshpEkJ_8nlI3XPVNSnrA/a-8GEnbA-Q0jgEucZVw6iwZXPycZSbexdduhazRAML8",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/cz_7tTqIKdGlsUAzTJZcKA/9U4tJNpkNLY6NjnKOjdB8LOz5hWgfaqcyaHYnXfsWefShoBxSkZJell5zhOAMQQWy5a9uzaIO7U5jjw3hqwBZupWkR3zq8WJ7_PxCEvl845HZ7bdTxWzTyTl-1uJxxmZBpRdTNynYqteoXx_mjI3Xw/TJ8VcSnbY44E6WyMUL34gbOVH_6Z_7xLLlfFatNG-vQ",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/8rZkLKbclWc9iyNeMNzDdQ/hgsfu0YEbcov34Of3INJYKqYAxT_4ovwz4iZZec33w5uijMsBaOM5Q7PPAoV2FN4B_qc7E3VlOHi3XSREWterLSmPUUWxWgniZrZ8jWVuhKa4QMtcpw9ofUrYj3CHoPugPakMvQhpfdy-Gzd8Ik_bQ/wChcKwDk79R9viv2Nnhk93J51ETRCZzVpQteNNjgIc0",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/8rZkLKbclWc9iyNeMNzDdQ/hgsfu0YEbcov34Of3INJYKqYAxT_4ovwz4iZZec33w5uijMsBaOM5Q7PPAoV2FN4B_qc7E3VlOHi3XSREWterLSmPUUWxWgniZrZ8jWVuhKa4QMtcpw9ofUrYj3CHoPugPakMvQhpfdy-Gzd8Ik_bQ/wChcKwDk79R9viv2Nnhk93J51ETRCZzVpQteNNjgIc0",
     "has_photo": true,
     "review": "The table is okay, but the cafe is mega kids friendly! They have a kids corner and you should leave your stroller outside the place — but they lock it up themselves outside :))",
     "overall_user_experience": 8.0,
@@ -9415,8 +9415,8 @@
     "city": "Erfurt",
     "neighborhood": "",
     "address": "Hermsdorfer Str. 4, 99099",
-    "latitude": 50.9707748,
-    "longitude": 11.0597322,
+    "latitude": 50.9706076,
+    "longitude": 11.0603279,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -9510,9 +9510,9 @@
     "room_for_stroller": false,
     "site": "https://maps.app.goo.gl/jDPkWrSAiK5Xrzm47?g_st=ipc",
     "created_at": "2025-10-07",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/RbDDQtb445gCh6VenIT_3w/eFOrEEUuodB5CdBLijvtv8E5e80JmNxsvflStu78hyfAc0Td-XRTxsLexRC-YI1SySyCLjxPnipNac1DzzAZbbAcDbyBjiqPSz2puWSrs8LinTAQg_DHEO-HEZoWn1UoIe9LOplHtqIGcYsYR6Fkzg/wIp6LbA6NIJ4b5GW5zwvC-rTqMGi7SrF7X4DtQIPdVI",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/o6_rnANAnLC0VP6xXH-XiA/_6CL4n8AMa5SbYlurzO08_LTx6RNuOBDCxvBr8H2HVKzWH_obEU9F73PY_NXUhH2zQnGe6HYwEku0t9AOEHTEv50SHtWlJkPNmvonEMWrTwCtqe-KBiGRQpL6QIlE1VeSIJQ76GhGzLULuZr97uW2w/cQ6Qb1J3je6FF2dL3Maizqx_u2AjVTI-RQRX8wRwnEY",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/o6_rnANAnLC0VP6xXH-XiA/_6CL4n8AMa5SbYlurzO08_LTx6RNuOBDCxvBr8H2HVKzWH_obEU9F73PY_NXUhH2zQnGe6HYwEku0t9AOEHTEv50SHtWlJkPNmvonEMWrTwCtqe-KBiGRQpL6QIlE1VeSIJQ76GhGzLULuZr97uW2w/cQ6Qb1J3je6FF2dL3Maizqx_u2AjVTI-RQRX8wRwnEY",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/dqXBPYSjv5SEqjvxxbEevQ/_CmYIzAl2xxtRvGRhAjF7UwnKAIWs52pgiwSUf8LjdkUQxBrY2DqvhqRh9OwgMgv2785EpXNIswxVor9aIF0c4uU4J5dgWNhbjtjBJDH1Y3HacktD49iPYtJtIgba-zYhEgWb0gU2OOUFugDDFbQdg/XPZAoWmriWqNidytqPd4JR99n4XmOh80yG6wUb3XIqk",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/5GFTYva8MpjqJEXBFNf94g/POW4PQHlGVX44LgGdRnd7opGeigsE5C4pn0or3HR2OIiCpn44lOjsPZJ_8CvGKB5B9gyioMNyhzXao_N9eHC3e2akjYP6i88_xBALk8MdswwO7UywmAmsGomGvu1Tz5jEGZuFkiUVnX6eP49N7j8Aw/LnYOVwobCktlIOpj8OQL7BiE8PuF8F68vhGcVTryQdY",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/5GFTYva8MpjqJEXBFNf94g/POW4PQHlGVX44LgGdRnd7opGeigsE5C4pn0or3HR2OIiCpn44lOjsPZJ_8CvGKB5B9gyioMNyhzXao_N9eHC3e2akjYP6i88_xBALk8MdswwO7UywmAmsGomGvu1Tz5jEGZuFkiUVnX6eP49N7j8Aw/LnYOVwobCktlIOpj8OQL7BiE8PuF8F68vhGcVTryQdY",
     "has_photo": true,
     "review": "",
     "overall_user_experience": null,
@@ -9525,8 +9525,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Fuldastraße 54, 12043",
-    "latitude": 52.4834569,
-    "longitude": 13.4352366,
+    "latitude": 52.4834919,
+    "longitude": 13.4353057,
     "type": "Café",
     "changing_table_location": [
       "dedicated room"
@@ -9539,9 +9539,9 @@
     "room_for_stroller": "No",
     "site": "lebrot.com",
     "created_at": "2026-03-01",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/CwI5ZBob7NPftj743tagGA/UI5gZmBHcOAus_KjRKOOgngNSlboYJT2_zOPTEzKsLH4YcY3fe9_PceWOh2q-M3lug7Zm3fBrno1KNl9xbcSGpPZG0MJmVjitOncGTH_sE0jgZjRnaUDKD1d71MQMzr78a2Of9-YJse4ZYdx2zTKfQ/dhsZVZkmCDA3fPIVd2B5DwmLLK11XarQN1jBDDtdEJs",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/No4s3CbgWHsZzdhqhgKfOA/aHcCOgIji7oPr8vQ-Wpzq8SAGi3Ach_pONDQVNmq0LKexDcwHpyRqlOzytNSgtuyTDv2vpHhdbD164x9k41MYyMffTFMFDPE39wMXQ-9pYrxlzuCYLYR4dcN0EZcw6eiYfG7nhijz6k4yMVVYuBVUw/Z-5M_Irvsc8LkOaLHDEiK4z2_wmJs-CmhzZ7N64o8iM",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/No4s3CbgWHsZzdhqhgKfOA/aHcCOgIji7oPr8vQ-Wpzq8SAGi3Ach_pONDQVNmq0LKexDcwHpyRqlOzytNSgtuyTDv2vpHhdbD164x9k41MYyMffTFMFDPE39wMXQ-9pYrxlzuCYLYR4dcN0EZcw6eiYfG7nhijz6k4yMVVYuBVUw/Z-5M_Irvsc8LkOaLHDEiK4z2_wmJs-CmhzZ7N64o8iM",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/oDcbxLr29DfNYVrBJQkz2w/8BCPBEMVooDe0gzL3zjpiFpL8EwENWLIhZU4oUxBtME-m2fAvpEHJZ5N-SAQVCgVouLSZ62SxejxRa0FjPgZZrAfJWAWs6O-jVzSDi4DL8TmHK6SFnDptN1aqnKJPVAj47YPUPqrjJW0EOi4bKMLRQ/0T5Th7fPZKIDyIWCgRxLYHxZFRoA36J4lBot9QDyCRU",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/dg8yam_u7uIO-vOY-NivpQ/zOvdvEKr-7R1fYUGE3BkjWSQq-J9UfsWUDAlkUA5yVy9X_Ev3pIDRm4ATCNajEf88wiZyMf19dTQhb0mqW9d_9xuHX4HQl0PEvKuam_Ue-mzwKH-HDvwMgIw6Q12THgOyRNJ2_fDvnCQGMzJvZAQAw/sLsp1bkrrWEY7vYaGEXhMKroXGA55sXixT9y2XqZs2c",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/dg8yam_u7uIO-vOY-NivpQ/zOvdvEKr-7R1fYUGE3BkjWSQq-J9UfsWUDAlkUA5yVy9X_Ev3pIDRm4ATCNajEf88wiZyMf19dTQhb0mqW9d_9xuHX4HQl0PEvKuam_Ue-mzwKH-HDvwMgIw6Q12THgOyRNJ2_fDvnCQGMzJvZAQAw/sLsp1bkrrWEY7vYaGEXhMKroXGA55sXixT9y2XqZs2c",
     "has_photo": true,
     "review": "It is in a very small room and a bit improvised — but at least they have one! Extra points because they have a kids corner for the small ones :)",
     "overall_user_experience": 6.0,
@@ -9568,9 +9568,9 @@
     "room_for_stroller": false,
     "site": "https://www.instagram.com/luuv.cafe",
     "created_at": "2025-06-02",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/mhemSgkgR9GeG6d1-tqNwg/xuWKwRjrwcHWCGS7XjuGtmhXmJkjgC0Z8qDCUKY3ru_f171oAvEXrEoSG823ogcySbGCaJdEEDAO8FSjdudapHggPQUky10HYpsmUuRbxwTcAParGVSijLEEyVRV8YecqDC_r7BoqMyqdVffHiKYyg/XmvELtVDLLDzKYjRn6vYMn7Q_xw6cjLE63_5Q0mHOFQ",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/bKMmrZtSMXwEImCrY_J-9A/v1EmgabGuIEzVmtUsDazB4F3Q6GUDYQ0j2u92rOuCyW-rxvfIHY-cQpD8Usw4OxckzzimX5dMFpfrTYV_v2qwS0s-SiDO4E0oxLX_Ir9faKdwLoYhlGu7uhp4poTX1W4Hjw4JD92koKH9iijujC7zA/7X_hxVy3x8r2vXiTnqkQgxB7KY6QkLxOhurjPsBSliI",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/bKMmrZtSMXwEImCrY_J-9A/v1EmgabGuIEzVmtUsDazB4F3Q6GUDYQ0j2u92rOuCyW-rxvfIHY-cQpD8Usw4OxckzzimX5dMFpfrTYV_v2qwS0s-SiDO4E0oxLX_Ir9faKdwLoYhlGu7uhp4poTX1W4Hjw4JD92koKH9iijujC7zA/7X_hxVy3x8r2vXiTnqkQgxB7KY6QkLxOhurjPsBSliI",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/t9K-NCbtOCoVyUb4LBhxWQ/s_jQx2HoQ9jsK3quFdbPXhCNdBNaeKzR7vE7OfHn63Y44rnLcftHAStfwEwyTjas_s5O9b5fRKviOjRkW4vwuS_IE-dsx60pKy9Mi6hfr5_AnyiH85KhMZQIqXWu2F_iHc-IiYtBJkHFKzEbzC-qzw/rxU7Ti455YUik2w-VZqXn1KWdBjRQMKUBsGLQdON6BA",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/h7L2c-noTrtkAyNL7q13xA/pLDLiB_OVZC6P583kKYQvl-s8k1Ln50HuNfn_begJ7jZ-iMhfO7b0PT_1dh9KsYpx0ZUZ7UZxaC8SkZvR_i5m2PYgjGFK_xuYVJ_QIA1K1GJ6SH2kSsvku6keKQvVofe7dNMIP9F2_Eze5OuCal0Og/Ww3xJR1t6O97KbdqPeTRrDPi7MT9crD_LTKeCcpWzrI",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/h7L2c-noTrtkAyNL7q13xA/pLDLiB_OVZC6P583kKYQvl-s8k1Ln50HuNfn_begJ7jZ-iMhfO7b0PT_1dh9KsYpx0ZUZ7UZxaC8SkZvR_i5m2PYgjGFK_xuYVJ_QIA1K1GJ6SH2kSsvku6keKQvVofe7dNMIP9F2_Eze5OuCal0Og/Ww3xJR1t6O97KbdqPeTRrDPi7MT9crD_LTKeCcpWzrI",
     "has_photo": true,
     "review": "",
     "overall_user_experience": null,
@@ -9598,9 +9598,9 @@
     "room_for_stroller": "No",
     "site": "https://maps.app.goo.gl/Q7Np4o5CNgQ5Fcri7?g_st=ipc",
     "created_at": "2025-09-12",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/XIPFtEUkpE7WPjjz74WkqQ/yrVCVus4MP9u890wJdvbQBLljrQo1RCbx93A_HbJyXA8UFELZlNgqwfP0juKqVVvEdNPlsu5G9f7iqtfugs49XxrBgE9Lerg1NOBpIby0QBYAs3Mm5TNvgRy6URw9Komsppu6VowLKHk-VEwKbKJjw/oyspQv0tPErlnnowChazxB2k30lJqFvEc6VHbxQidRU",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/96gfxgtDm5WCn7CgIpRQUQ/wRMgk3fXJM9rDtbQhxVgWuoyEZT2je7OJtHaRMq9RPPcdc79PvjYX_LJo3ijtYu1Wiy0yQuu8fAcO1Qyu9JSEgSpuc98Rmxtat6kWA5y1yKuFSCNCxvA8RTp9JrdMxXyBo8742zK_T3od0gleuf1eg/Kiu6VEiwozf_HhzF294lshd5q4ZOyA_47aOnMM4NhMw",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/96gfxgtDm5WCn7CgIpRQUQ/wRMgk3fXJM9rDtbQhxVgWuoyEZT2je7OJtHaRMq9RPPcdc79PvjYX_LJo3ijtYu1Wiy0yQuu8fAcO1Qyu9JSEgSpuc98Rmxtat6kWA5y1yKuFSCNCxvA8RTp9JrdMxXyBo8742zK_T3od0gleuf1eg/Kiu6VEiwozf_HhzF294lshd5q4ZOyA_47aOnMM4NhMw",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/QjgI6260YVDKT7WKU1NLQQ/cNs7d22H5sUo2nhUWnljKhT7iYr4bWCSpyZwliJIH5XH_EuifgaWnF8vetK9wXU5qhgsG8mzNLJ5BjpLEQHLdKnzEQV26tNfziTd-IhRy_XsxdBbJrp5ViVLat2mVQqWo4eVjy3G1-8wRIsI9414Mw/zIpQx6hMYGT6jBUpZGFL4aAfSCe5i23iBv6leSFodcE",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/rn05UtypOEMe6JH7KJ0pMw/Jj8Lc5dRQlHXS3YAuX_2UQXQooyZG81Aw71wgkgwISn-YBBAXNST5g5Gou4CyqEoF-vwUAFTBxPDxg3Acdvh8R3thBwGQyOnuADNXw2dkjAm1FAC9HEqio8gAW0l35W0FiXz_1QzMvYNblpCOdyY_w/w-cna8IZ0n-XuBxrNT_gi5wrHZ3h8NbfhCdyyZ72kx0",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/rn05UtypOEMe6JH7KJ0pMw/Jj8Lc5dRQlHXS3YAuX_2UQXQooyZG81Aw71wgkgwISn-YBBAXNST5g5Gou4CyqEoF-vwUAFTBxPDxg3Acdvh8R3thBwGQyOnuADNXw2dkjAm1FAC9HEqio8gAW0l35W0FiXz_1QzMvYNblpCOdyY_w/w-cna8IZ0n-XuBxrNT_gi5wrHZ3h8NbfhCdyyZ72kx0",
     "has_photo": true,
     "review": "It's downstairs, so no stroller, but clean and enough space",
     "overall_user_experience": 8.0,
@@ -9626,9 +9626,9 @@
     "room_for_stroller": "Yes",
     "site": "",
     "created_at": "2026-04-17",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/Aje9V2NQa51c1rZO3Ya6zg/AmFvH2Vt_w1hc-GXtflpz0PTnev8TtYJ54U5yrezpI5imTEhMnSBIU8maGJOsmSZC_TpA5LplrRJqMKZq6VEuQ8nmvHY4KBoZpgcd72QjqczODIougjRChURhOrBihhnlyH6S7uv8sRECxq0St-H3g/VUQ1bdSSY59cplypyMoD4Vmd55bEA834miF5WLv8Voo",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/jmSOOYX1mSQvo5FO0uBNGw/9lEtatBAwsX1aYW9P3jgtWi7dZdxwUmT6qkgxqetkjYNTVRr9ixZr7CgjBxpFMQkn_jCvfZf67WSV-xEOrhhkQljH9kkghbRbM6yujV0SaJ4c0YdD2s7WPR7e67rkgpZSQWT7gEbvY9YlUFY7WpK_g/4xElLTf3YyQylUawP9WOpSpyKkJ9Na5IFw2qW93Y8Fc",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/jmSOOYX1mSQvo5FO0uBNGw/9lEtatBAwsX1aYW9P3jgtWi7dZdxwUmT6qkgxqetkjYNTVRr9ixZr7CgjBxpFMQkn_jCvfZf67WSV-xEOrhhkQljH9kkghbRbM6yujV0SaJ4c0YdD2s7WPR7e67rkgpZSQWT7gEbvY9YlUFY7WpK_g/4xElLTf3YyQylUawP9WOpSpyKkJ9Na5IFw2qW93Y8Fc",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/LfHa7RQu2Yp9td83TibcOg/UWSPrF35oQ8TO3kvbk3T4jKxUouTMZTRwWNTPYA3D1HI2GIkeNOTAL5PeigomMy5DUWKqNKc7kEcmBmcxqG-W3qWKbwSYNYmNOvejCoN-UT-gbAZiOjogZuPItpz2iharD7Ht49whysPNNYX1KFe5w/GkmXGjyRcvCbjyZocvI0YTUrqpYOT7LxRn04l03flJo",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/4pDtTqguvp2TsNY-4vOH5g/oTsBKjLJncUUPXZYDXnogoK2DfqcV-Bj29bjiG4CLyPuVwfjwzAc64sPdBo8FmE4Z1-vBwCO2IHNIk90-23aIDlzm1lLX70Ybwd97hkkaLvCUOMIRELj4BC6IIJmIM7paKmpEje2uOz2YZFTe8_vPg/Fq99LGAzSHa8y0c1gioRpH6Ri-ZtrA5ulUn6pKb5a_Y",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/4pDtTqguvp2TsNY-4vOH5g/oTsBKjLJncUUPXZYDXnogoK2DfqcV-Bj29bjiG4CLyPuVwfjwzAc64sPdBo8FmE4Z1-vBwCO2IHNIk90-23aIDlzm1lLX70Ybwd97hkkaLvCUOMIRELj4BC6IIJmIM7paKmpEje2uOz2YZFTe8_vPg/Fq99LGAzSHa8y0c1gioRpH6Ri-ZtrA5ulUn6pKb5a_Y",
     "has_photo": true,
     "review": "",
     "overall_user_experience": null,
@@ -9717,9 +9717,9 @@
     "room_for_stroller": "Yes",
     "site": "wolfberlin.org",
     "created_at": "2025-11-11",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/8ymmhklE2WDFIy_cHUsnfQ/0CbF-U6daCI8n1IUrbMhEWYXhnMPhL6j5u7Gm3w787JaNyu6VQ4FCSbXcF7pPvWN1dh0pLYdqBXzYw8LepHn-FsPOODnpCKnUzHpMedjpcA8WvG8zJaB3UDNskcICNyWKgS4g05Zg9ni_BOy925X_g/kNtDxy13eGfpoOtqODATGMEzeaIJSRVj7xEpSzbqYdM",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/nnyLa4ZRlE-Ik692XotFBA/CtXNHoifPPnGGuI81wghRMtHNhns7f5qCFWYrlCb5tywDS18FsMAfmcJqJw0ufSigmmHXK6-RqIR4Rimdj9CkMTVaASx3eixzBFwjTcjMVjWZaP-eAxtcDg1ts-vGMfYRufVBleHKuLUGjbI-X9VLg/oKM5QOJAOeen-jo2TSfVCc-f2O3vjHFzrjYiI1gMSTg",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/nnyLa4ZRlE-Ik692XotFBA/CtXNHoifPPnGGuI81wghRMtHNhns7f5qCFWYrlCb5tywDS18FsMAfmcJqJw0ufSigmmHXK6-RqIR4Rimdj9CkMTVaASx3eixzBFwjTcjMVjWZaP-eAxtcDg1ts-vGMfYRufVBleHKuLUGjbI-X9VLg/oKM5QOJAOeen-jo2TSfVCc-f2O3vjHFzrjYiI1gMSTg",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/AZTQVqgTPKE6CZMxjUSQQg/Gb2a6gDAnM5pemkRU6oDGZVd36eDGLLQ_CXlR86Y01glYCCU2Cv0fJVfHa-emC0eDdRYZoF7bZzBv2GhqhV7HQdvUcleIsLMCdkpC3mJxORTJjywvqBn_z3TUsZt2OIllUdoDjiHqq6sqH6yQu5k2A/eKPhpN3j0oDmItLRPqvmqSykRUCXusXAKQ9bjZsJPDc",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/F9Lp7X2271W1PLl5Lq7lTQ/0hpR1Jdj4tEXF5aMk5usUffa1NfUwY_bZQWTLMWjVh0eMvB5VVja6VGGP7CTiCjlKCj5jYXecaNqBY3a_NT7eRP44VsHiJBQvkPvksZtL6sxHGXTeIXJ-UPp54fz7sJiru8q6lZ5YSq7xiAtonGEKw/JSup9FyHvw6BamnzPBMykrxJtjl9_T7QbvDCwbnYzKY",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/F9Lp7X2271W1PLl5Lq7lTQ/0hpR1Jdj4tEXF5aMk5usUffa1NfUwY_bZQWTLMWjVh0eMvB5VVja6VGGP7CTiCjlKCj5jYXecaNqBY3a_NT7eRP44VsHiJBQvkPvksZtL6sxHGXTeIXJ-UPp54fz7sJiru8q6lZ5YSq7xiAtonGEKw/JSup9FyHvw6BamnzPBMykrxJtjl9_T7QbvDCwbnYzKY",
     "has_photo": true,
     "review": "Very good! It is also a must since they offer a session for babies on tuesday morning :)",
     "overall_user_experience": 9.0,
@@ -9749,9 +9749,9 @@
     "room_for_stroller": "Yes",
     "site": "kerbberlin.de",
     "created_at": "2025-09-06",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/bNOrojRvkDTgoh_IfETvPQ/ayJO_wiZonpGa7muU4aFvM79MIPsbf3epP60o5oRfLCsqntztx7lOnqG6y6cd1V9ZjasyAq36Lz0LL2A5uEUhB8CPqGZmOln_GqbteAVq3gSMKeNiDAlc7xZGHItWeAimhYA-QI04wSm4H2pavdRIQ/zZHd1RrR8xIO7hlFjXcX5v25QK_5kWl4zZAWE1ZsdNs",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/bDSjO4_-8zfYnt-zAoPkJg/bjGWfoaOQ9nLp4vhSYBh_8r5U4JzDPCZe2vs-Ej_wyE1wtMDq4qblT2jOmsRBYuXhYdUCCcRGQAn7ThSdyQShoBgbfDRwAyOnMnDZtL6pW6zqmFY68RzNEUmaiNviL9B2wRgD61CfxhyW0_g6p-rfQ/Bri_f1TvmVXQF9zJ7NM2Rx3TzzvVOOK9rPKTBi0p6ow",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/bDSjO4_-8zfYnt-zAoPkJg/bjGWfoaOQ9nLp4vhSYBh_8r5U4JzDPCZe2vs-Ej_wyE1wtMDq4qblT2jOmsRBYuXhYdUCCcRGQAn7ThSdyQShoBgbfDRwAyOnMnDZtL6pW6zqmFY68RzNEUmaiNviL9B2wRgD61CfxhyW0_g6p-rfQ/Bri_f1TvmVXQF9zJ7NM2Rx3TzzvVOOK9rPKTBi0p6ow",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/YDHgTR_gtZLJ5asCF1CTDA/YtPwMYl2GFeizBrIem7Rq44CU82JDJOBKFMihUnoSziK3KIM9twxO84wDw-1DOcAEJ594LRNZ8rEICcx-s8rDEYcvsOymJCO8mTnGZY9ZZzjL6kVzkzP1Dva66qcoLBKKCDm2NA6ItZcluOTt7S3-w/281UL5IBkBY9qy1P-CFdllc7iTcMrqd-z8S2Zyu8rUo",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/Sov8mrBGt74m7ICHhMWF9g/rHmLlEiHwJZ2_jq7lXOI9dJEkl-EZ2YWuLNFclWYu2iFfLpzZIxJfrmvPv8cT9VEO1a5R0MW71n-jnRJIH43TpwFZxU7loY0ocb98MohmFYzUR12Vr_3n1M35Ph4CqTw43M561INokmdThpYKCRfFg/GSYxQ2qHAJDUAltHvNIrOfTfNL3pRBHYOoO5DgBR4dY",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/Sov8mrBGt74m7ICHhMWF9g/rHmLlEiHwJZ2_jq7lXOI9dJEkl-EZ2YWuLNFclWYu2iFfLpzZIxJfrmvPv8cT9VEO1a5R0MW71n-jnRJIH43TpwFZxU7loY0ocb98MohmFYzUR12Vr_3n1M35Ph4CqTw43M561INokmdThpYKCRfFg/GSYxQ2qHAJDUAltHvNIrOfTfNL3pRBHYOoO5DgBR4dY",
     "has_photo": true,
     "review": "The room/toilet could be better lit.",
     "overall_user_experience": 9.0,
@@ -9780,9 +9780,9 @@
     "room_for_stroller": "No",
     "site": "mcdonalds.com",
     "created_at": "2025-11-22",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/uB0y74fy8U7BnQvTe7BaSA/n-lOhkwG-Gl9ksSheb4tEyZkRJ5jIyX8TSraWtVhjYF2Xcow9UA962tjhKi0emJNX0yxMzOFFiV9_ACUNdJoL0yPBNCoJZBpLhq3-XE01SL9Edhsj9_ufpy8H6FXNYZ8bqaTF3ZT8Ch8ZbI90ztcng/Pe-9UMb2K7JY7UuLhcDtc9hGprLaw05ZhwOoGwEg2Eo",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/pZBKo4xc6e5nFXo5H2fM1w/FRdKOTOPxm2brIwKnoyNpd_UjoBMJ45O2is8uLG38WidsndnLhxFYlN1QvMPG7cOFQnv7aI7b4Nn0_JcREZ0h13_GlOpvk_RqtZ8sR6Qlaknu7HEbrsvnoA8jjlZDiHETYnRwYf7hD09qM4nsqfpdQ/66DeC6rV4nENU8VMrROWRX_pLqbaFEE5qOJVHWFnFEY",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/pZBKo4xc6e5nFXo5H2fM1w/FRdKOTOPxm2brIwKnoyNpd_UjoBMJ45O2is8uLG38WidsndnLhxFYlN1QvMPG7cOFQnv7aI7b4Nn0_JcREZ0h13_GlOpvk_RqtZ8sR6Qlaknu7HEbrsvnoA8jjlZDiHETYnRwYf7hD09qM4nsqfpdQ/66DeC6rV4nENU8VMrROWRX_pLqbaFEE5qOJVHWFnFEY",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/emZgwILnGxKFHCUs_QiNVA/zcrQqQo_4AIAg9tbzktvDhla5zrkRY3pskUBXdRDXXcjhCHUmW94nzcXwXpmixofOe9iMxeZEEVNUTNVrvpYV7oSoszZYEQDXgdRrVnX8f5klLgSwRTQR7kjx5MEO1m6D0vt4YKcXBPiKW-FcMkiGw/ry8SHHXid7Ewp_3hpm2hav6Ju2TwkfBs1Jea4c0neIU",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/O_6uTc4V0KZeW1UOv69_3A/JFij9tlWyTIrIsCdBdbtGswCszkJ6eR69_ikMC7fzy7Eafn0xJ-YzdP8bGnfTokUv1gmxGYdTddU8gEGeu3SNGYJj2Qaqhyw1CQUeyeEi7pCUb0zEm0Zz9AVjspcMyGRFR8zjFUvA1K7tAGqDlpSiA/Nz0yc1VkwlphpkOa9y81Y-HzwWCbxQEi0X2td_vcxek",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/O_6uTc4V0KZeW1UOv69_3A/JFij9tlWyTIrIsCdBdbtGswCszkJ6eR69_ikMC7fzy7Eafn0xJ-YzdP8bGnfTokUv1gmxGYdTddU8gEGeu3SNGYJj2Qaqhyw1CQUeyeEi7pCUb0zEm0Zz9AVjspcMyGRFR8zjFUvA1K7tAGqDlpSiA/Nz0yc1VkwlphpkOa9y81Y-HzwWCbxQEi0X2td_vcxek",
     "has_photo": true,
     "review": "Very good option for a change while travelling! Our stroller is small and did not fit in the room. There is even a warm lamp (see photo).",
     "overall_user_experience": 9.0,
@@ -9829,8 +9829,8 @@
     "city": "Berlin",
     "neighborhood": "Friedrichshain",
     "address": "Rigaer Straße 67",
-    "latitude": 52.5158676,
-    "longitude": 13.4686052,
+    "latitude": 52.5159393,
+    "longitude": 13.4684513,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -9904,9 +9904,9 @@
     "room_for_stroller": "Yes",
     "site": "spore-initiative.org",
     "created_at": "2026-04-09",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/mpv_LOVcKe6Pr1rBYR2PUg/d4mfjQA_3pTKXV_0pQct7a928h9N0BPlQZ5a8AeWaBc0b4DsFyNxdQqLZ99POCIYZYglRdGpeYLJE-X1jbXTFkQvaRAdZdLiv0HTkhmrNb0ZvjLe8HUUjzbQ6Q70thn0kcF2DsMqxRZk_BBXry67kQ/L1yMoIW1SCfAq-h_sTYtKEUOININXq1nXMzEYxB9DFc",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/7bN1VAJEKhrmW0VQF2MhyQ/7ABWABKFqVSUc2gUIyz9IAxIGeNDEAjQDocVw4LyZ3F8A5lIa006xxrPcR0oVGmRV1-iCzCObthvgKwlZ0bFJSoXu8PQR5Gjl_TCkXKWZHSH5fvLC8YVLB_1VQTT9N9t0VrgkWHuDWyWZoponbHm3A/sUIg0HAuc_Y7uFmU2cdQWaPB5ekgmJBPiPVNzcqN2EE",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/7bN1VAJEKhrmW0VQF2MhyQ/7ABWABKFqVSUc2gUIyz9IAxIGeNDEAjQDocVw4LyZ3F8A5lIa006xxrPcR0oVGmRV1-iCzCObthvgKwlZ0bFJSoXu8PQR5Gjl_TCkXKWZHSH5fvLC8YVLB_1VQTT9N9t0VrgkWHuDWyWZoponbHm3A/sUIg0HAuc_Y7uFmU2cdQWaPB5ekgmJBPiPVNzcqN2EE",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/01zsiX2xIbaK-pr6v1Kqeg/CbkCYdVjOf1rfYf3NI2pPCcajghCtbCgkCOyCq-6eeVUfDp7fe6xkGTpAUzUA5K1F_2h98bDAGY91NE0QnrpXL4H8ZcgYqKTjnfMR7176L2sIR1vKSJd1SdUv6Oh_gm504Nmb76WkcMEddMVflT8-Q/qYwR_PgXTnee3KAfz2Lno3z_IGyYypccaj2KJ2Yh_wE",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/Ilv9pKjaI7CZlUrZECLisQ/8fy7tDFIYJ1QckaPsyjqcyWW55qEtgEs4443QNwX97Z58SQUCxYhSR-QkQXOEh0OljvKODytGwTfWyP61usGL8f30IUFkxEdzZ1ng0ehhfladKyhpBfHfHSNqEUX6nfJwTsyMJOvFlYGme0gxaZlNQ/ZY07sCLmPEoDHpVGXNaLrmqSZpKwhKKenstbQGU1myw",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/Ilv9pKjaI7CZlUrZECLisQ/8fy7tDFIYJ1QckaPsyjqcyWW55qEtgEs4443QNwX97Z58SQUCxYhSR-QkQXOEh0OljvKODytGwTfWyP61usGL8f30IUFkxEdzZ1ng0ehhfladKyhpBfHfHSNqEUX6nfJwTsyMJOvFlYGme0gxaZlNQ/ZY07sCLmPEoDHpVGXNaLrmqSZpKwhKKenstbQGU1myw",
     "has_photo": true,
     "review": "Very good one!",
     "overall_user_experience": 10.0,
@@ -9962,9 +9962,9 @@
     "room_for_stroller": "Yes",
     "site": "fmz-imst.at",
     "created_at": "2025-08-20",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/pBaGHpUgqbYslm-8n-qLzA/2LhXclMHuXyC4xma95Y5qShx-C3DgYXlTYAs6S_eFgoZ9O5ZNJSHBb10hE_B8iG8A6sYCgdMFsnR5HFCwzfdgE8PMMQEQpbBeiDxvF79WKlY82M0KQXeRDYzLipEbUyIM3g7Wm4gVzpQU_64owQleA/Sl_AT--r-iaYpijYyn5NSO7WWhURWfGfIP7fmO6p3m0",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/QGaM7VkMzgOcFsrMXxR4tQ/O8pRkrP7LQCUr-bflWSEYcWtvKiSzcNBKx2X-gP1qI4EQVgIAccXIpHmvpS7qNA-ikItokAWtg0mD3rZXGEUW2jTfFSMAP_ro3mg_5g89y6evmDZX9E9U4lZ-srmU3CbyLeomGPqYAEXQ52AVwlVrA/r4K8KMz8E7EsWkpT3TyltY3_DlVlFK7C7wIHJt9iZmM",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/QGaM7VkMzgOcFsrMXxR4tQ/O8pRkrP7LQCUr-bflWSEYcWtvKiSzcNBKx2X-gP1qI4EQVgIAccXIpHmvpS7qNA-ikItokAWtg0mD3rZXGEUW2jTfFSMAP_ro3mg_5g89y6evmDZX9E9U4lZ-srmU3CbyLeomGPqYAEXQ52AVwlVrA/r4K8KMz8E7EsWkpT3TyltY3_DlVlFK7C7wIHJt9iZmM",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/iIj1VlUAJf2als5qsX3H8g/3z2HEKLWle04tkODy7--cBrR7OMCdbf6wWevYN3OnNlA3zZ6p_pvKNdiHsOKTYCv2vkPC0jhuxX1I5zRlgyUC1pbsVu8kRLfyL5YB-xLv7D2iP-IsgRRTf41UWY1I18GK-HhiorSve3312I3z5bVOg/91kANXiAH-7Bwgul7XSPNhUgZa9gwEwe3aUOLbQiOOQ",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/PNYFrqnxMJnBjtRiX5MTRQ/9tqy-10it6snO1OsrdG2GfU2K3l1mdjNzsm6CdgMHz3dFVX86xMiFUcoscV2tdXwJkolcSEjradd5Wrz-nq8EyNFajVH1uooc42rnMs96_9_A8bLO1CcORwtUKGtEU-45sUt8qMLVE__HrZjrClnIQ/FpEw7ElG6-e_cYS6YTpvJQ-GD9RX3I0M50tB4qVfY-s",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/PNYFrqnxMJnBjtRiX5MTRQ/9tqy-10it6snO1OsrdG2GfU2K3l1mdjNzsm6CdgMHz3dFVX86xMiFUcoscV2tdXwJkolcSEjradd5Wrz-nq8EyNFajVH1uooc42rnMs96_9_A8bLO1CcORwtUKGtEU-45sUt8qMLVE__HrZjrClnIQ/FpEw7ElG6-e_cYS6YTpvJQ-GD9RX3I0M50tB4qVfY-s",
     "has_photo": true,
     "review": "",
     "overall_user_experience": 8.0,
@@ -9992,9 +9992,9 @@
     "room_for_stroller": "Yes",
     "site": "https://maps.app.goo.gl/heJCPY4tvAPcqyHQ8?g_st=ipc",
     "created_at": "2025-11-19",
-    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/DnEPbITX1RGFvoEzLHhX4A/BzC1SJ_UhZxSUzAxUa5y0JLSzN68xi-QJVMUkjpMHur1IJuXIRcpVWgwPdae_ju-bfSlngTJHWT898Nnf3x-8Ot2Qla4jq7MSRLlrN0JAiZGlzERFgpFjAVDrdOutXSyeCuvEX3U5AunwV9hxWIdaQ/pv6Tev98Igb3k19EEEHoER2dBkkqnYOVNCmKcmVROrE",
-    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/Er7tUyRC9wU-s-g3n97YZA/GuT0xYJnyJ0-uyOtGUWUX_D4ChNDEI94Hy4m5PQ6824g5_oSofBPKPA8Pc5aab-dXbJbgeJvSL3ViSOzzQ4SDKjulI3G4JTTj23tsgP9SPBlpLK4muda2Ut_GPSaD61bq_Eum8e55vm_Qg639Pxksg/Xh2hF8-aNqQLPjuaQh6EVevT8StMS7Wpnxqb8Jap0w4",
-    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778119200000/Er7tUyRC9wU-s-g3n97YZA/GuT0xYJnyJ0-uyOtGUWUX_D4ChNDEI94Hy4m5PQ6824g5_oSofBPKPA8Pc5aab-dXbJbgeJvSL3ViSOzzQ4SDKjulI3G4JTTj23tsgP9SPBlpLK4muda2Ut_GPSaD61bq_Eum8e55vm_Qg639Pxksg/Xh2hF8-aNqQLPjuaQh6EVevT8StMS7Wpnxqb8Jap0w4",
+    "photo_small_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/P5asdynm1WoN7pzZZRZZog/il4xyRfzGnEbgNWUbdP4prBtwJG-dTA28uL1tbuy41fWiwHOcpna-vwOsRpfsLO2fDhRNj5zr7UdnP780YI0gz5-l5LcoE8OJfq7Juj4KZSQKkaxgyMKLE3W7EI98_B9cji_BWFn5UsNGhtu3bG_Yw/cdBGHrMLtnrgP9X5Cxd19_4yBhXOM_NJDW_5J9ljnhE",
+    "photo_large_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/PG4pzQesQTQwFdiQnS43pA/-vYdXnwVomtTxblY2sz_X9HScjNb2Kp7hGy0ZeW6hZzEROWXKfEWvYttbfp3Gm9hidNKmoI7Uv6WpRbjUBTjE-roUbKEqLx-RQG23BDISXmRVQhao1uffSR0cQGTxR-Hz3BaEY_Kih60BXv94vTpMg/O1lPqYGlFVOL-uXanBWCR7G7yAbQVSbG1MEtqlYpDlY",
+    "photo_url": "https://v5.airtableusercontent.com/v3/u/53/53/1778126400000/PG4pzQesQTQwFdiQnS43pA/-vYdXnwVomtTxblY2sz_X9HScjNb2Kp7hGy0ZeW6hZzEROWXKfEWvYttbfp3Gm9hidNKmoI7Uv6WpRbjUBTjE-roUbKEqLx-RQG23BDISXmRVQhao1uffSR0cQGTxR-Hz3BaEY_Kih60BXv94vTpMg/O1lPqYGlFVOL-uXanBWCR7G7yAbQVSbG1MEtqlYpDlY",
     "has_photo": true,
     "review": "The changing table is metal and I wasnt very sure if it would hold my baby. All well, but didnt have trust at first",
     "overall_user_experience": 6.0,
