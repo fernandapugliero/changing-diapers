@@ -471,6 +471,9 @@
 
   return candidates.filter(Boolean);
 }
+    function hasAnyPhoto(p){
+  return getPhotoCandidates(p).length > 0;
+}
 
     function getTags(p){
       const merged = [
