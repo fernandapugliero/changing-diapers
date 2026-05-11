@@ -22,7 +22,9 @@ jobs:
         run: pip install requests
 
       - name: Ensure Berlin images folder exists
-        run: mkdir -p images/berlin
+        run: |
+          rm -rf images/berlin
+          mkdir -p images/berlin
 
       - name: Fetch Airtable data
         env:
