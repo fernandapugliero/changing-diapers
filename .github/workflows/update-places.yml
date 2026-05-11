@@ -3,7 +3,7 @@ name: Update Places JSON from Airtable
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'  # Executa a cada 1 hora
+    - cron: '0 */3 * * *'
 
 jobs:
   build:
