@@ -4,11 +4,15 @@ import os
 import time
 import re
 from datetime import datetime
+from urllib.parse import urlparse
 
 AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
 BASE_ID = "appjWF7WnC8DRWaXM"
 TABLE_NAME = "FixMyDiaper"
 HEADERS = {"Authorization": f"Bearer {AIRTABLE_TOKEN}"}
+
+IMAGE_DIR = os.path.join("images", "berlin")
+os.makedirs(IMAGE_DIR, exist_ok=True)
 
 def to_list(v):
     if v is None:
@@ -41,9 +45,34 @@ def normalize_neighborhood(s):
         return ""
     return re.sub(r"\s*-\s*", "-", str(s).strip())
 
-def pick_photo_thumbs(photo_field):
+def slugify(value):
+    value = (value or "").strip().lower()
+    value = re.sub(r"[^\w\s-]", "", value, flags=re.UNICODE)
+    value = re.sub(r"[-\s]+", "-", value).strip("-")
+    return value or "place"
+
+def get_extension(url, filename=None):
+    if filename and "." in filename:
+        ext = filename.rsplit(".", 1)[-1].lower()
+        if ext in ["jpg", "jpeg", "png", "webp"]:
+            return "jpg" if ext == "jpeg" else ext
+
+    path = urlparse(url or "").path.lower()
+    if path.endswith(".png"):
+        return "png"
+    if path.endswith(".webp"):
+        return "webp"
+    return "jpg"
+
+def pick_photo_data(photo_field):
     if not isinstance(photo_field, list) or len(photo_field) == 0:
-        return (None, None)
+        return {
+            "small": None,
+            "large": None,
+            "original": None,
+            "attachment_id": None,
+            "filename": None
+        }
 
     first = photo_field[0] or {}
     thumbs = first.get("thumbnails") or {}
@@ -59,20 +88,51 @@ def pick_photo_thumbs(photo_field):
         if isinstance(lg, dict):
             large = lg.get("url")
 
-    original = first.get("url")
+    return {
+        "small": small,
+        "large": large,
+        "original": first.get("url"),
+        "attachment_id": first.get("id"),
+        "filename": first.get("filename")
+    }
 
-    if not small:
-        small = original
-    if not large:
-        large = original
+def download_berlin_photo(photo_data, name, record_id):
+    source_url = photo_data.get("large") or photo_data.get("original") or photo_data.get("small")
+    if not source_url:
+        return None
 
-    return (small, large)
+    attachment_id = photo_data.get("attachment_id") or "photo"
+    ext = get_extension(source_url, photo_data.get("filename"))
+    filename = f"{slugify(name)}-{record_id}-{attachment_id}.{ext}"
+    filepath = os.path.join(IMAGE_DIR, filename)
+
+    if os.path.exists(filepath):
+        return f"/images/berlin/{filename}"
+
+    try:
+        res = requests.get(source_url, timeout=30)
+        res.raise_for_status()
+
+        with open(filepath, "wb") as f:
+            f.write(res.content)
+
+        print(f"[📷] Saved image: {filepath}")
+        return f"/images/berlin/{filename}"
+
+    except Exception as e:
+        print(f"[!] Failed to download image for {name}: {e}")
+        return None
 
 def geocode_address(address):
     try:
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json", "limit": 1}
-        res = requests.get(url, params=params, headers={"User-Agent": "changing-diapers-mvp"})
+        res = requests.get(
+            url,
+            params=params,
+            headers={"User-Agent": "changing-diapers-mvp"},
+            timeout=30
+        )
         data = res.json()
         if data:
             print(f"[✓] Geocoded: {address}")
@@ -103,19 +163,22 @@ def dedupe_prefer_recent_with_photo(places):
         with_photo = [x for x in items if x.get("has_photo")]
 
         if with_photo:
-            with_photo.sort(key=lambda x: (parse_dt(x.get("created_at")) or datetime.min), reverse=True)
+            with_photo.sort(
+                key=lambda x: (parse_dt(x.get("created_at")) or datetime.min),
+                reverse=True
+            )
             out.append(with_photo[0])
         else:
-            items.sort(key=lambda x: (parse_dt(x.get("created_at")) or datetime.min), reverse=True)
+            items.sort(
+                key=lambda x: (parse_dt(x.get("created_at")) or datetime.min),
+                reverse=True
+            )
             out.append(items[0])
 
     print(f"[✅] Deduped: {len(places)} → {len(out)}")
     return out
 
 
-# -----------------------------
-# Airtable fetch
-# -----------------------------
 places_all = []
 places_berlin_raw = []
 
@@ -125,7 +188,7 @@ params = {"pageSize": 100}
 print("[...] Starting Airtable fetch...")
 
 while True:
-    res = requests.get(url, headers=HEADERS, params=params)
+    res = requests.get(url, headers=HEADERS, params=params, timeout=30)
     data = res.json()
 
     if "error" in data:
@@ -146,7 +209,6 @@ while True:
         country = fields.get("Country", "")
         created_at = fields.get("Created at") or record.get("createdTime")
 
-        # Geocode fallback
         if (not lat or not lon) and address:
             parts = [address, city, country]
             search_address = ", ".join(x for x in parts if x)
@@ -157,10 +219,9 @@ while True:
         if overall_score is not None:
             try:
                 overall_score = float(overall_score)
-            except:
+            except (TypeError, ValueError):
                 overall_score = None
 
-        # ✅ ROBUST PHOTO HANDLING
         photo_field = (
             fields.get("Photo")
             or fields.get("photo")
@@ -169,24 +230,26 @@ while True:
             or []
         )
 
-        review = (fields.get("Changing Table Review") or "").strip()
+        photo_data = pick_photo_data(photo_field)
 
-        photo_small_url, photo_large_url = pick_photo_thumbs(photo_field)
+        photo_small_url = photo_data["small"] or photo_data["original"]
+        photo_large_url = photo_data["large"] or photo_data["original"]
+        photo_url = photo_large_url or photo_small_url or photo_data["original"]
 
-        # 🔥 CRITICAL FALLBACK
-        photo_url = None
-        if isinstance(photo_field, list) and len(photo_field) > 0:
-            first = photo_field[0] or {}
-            original = first.get("url")
-            photo_url = photo_large_url or photo_small_url or original
-        else:
-            photo_url = photo_large_url or photo_small_url
+        photo_local_url = None
+        if city.lower() == "berlin" and photo_url:
+            photo_local_url = download_berlin_photo(
+                photo_data=photo_data,
+                name=name,
+                record_id=record.get("id")
+            )
 
-        has_photo = bool(photo_url)
+        has_photo = bool(photo_local_url or photo_url)
 
         if not has_photo:
             print(f"[⚠️ NO PHOTO] {name}")
 
+        review = (fields.get("Changing Table Review") or "").strip()
         neighborhood = normalize_neighborhood((fields.get("Neighborhood (Berlin)") or "").strip())
 
         place = {
@@ -210,6 +273,7 @@ while True:
             "photo_small_url": photo_small_url,
             "photo_large_url": photo_large_url,
             "photo_url": photo_url,
+            "photo_local_url": photo_local_url,
             "has_photo": has_photo,
 
             "review": review,
