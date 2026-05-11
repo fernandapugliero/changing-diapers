@@ -457,23 +457,20 @@
     function getReview(p){ return (p.review || "").trim(); }
 
     function getPhotoCandidates(p){
-      const candidates = [];
+  const candidates = [];
 
-      if (p.photo_url) candidates.push(p.photo_url);
-      if (p.photo_large_url && !candidates.includes(p.photo_large_url)) candidates.push(p.photo_large_url);
-      if (p.photo_small_url && !candidates.includes(p.photo_small_url)) candidates.push(p.photo_small_url);
+  if (p.photo_local_url) candidates.push(p.photo_local_url);
+  if (p.photo_url && !candidates.includes(p.photo_url)) candidates.push(p.photo_url);
+  if (p.photo_large_url && !candidates.includes(p.photo_large_url)) candidates.push(p.photo_large_url);
+  if (p.photo_small_url && !candidates.includes(p.photo_small_url)) candidates.push(p.photo_small_url);
 
-      if (Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url) {
-        const legacy = p.photo[0].url;
-        if (!candidates.includes(legacy)) candidates.push(legacy);
-      }
+  if (Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url) {
+    const legacy = p.photo[0].url;
+    if (!candidates.includes(legacy)) candidates.push(legacy);
+  }
 
-      return candidates.filter(Boolean);
-    }
-
-    function hasAnyPhoto(p){
-      return getPhotoCandidates(p).length > 0;
-    }
+  return candidates.filter(Boolean);
+}
 
     function getTags(p){
       const merged = [
