@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Kids-Friendly Cafés and Restaurants in Berlin | Fix My Diaper</title>
+  <meta name="description" content="Find kids-friendly cafés and restaurants in Berlin with play corners, kids areas, stroller-friendly spaces and baby changing facilities.">
+  <meta name="keywords" content="kids friendly cafes Berlin, restaurants with play area Berlin, cafes with kids corner Berlin, family friendly restaurants Berlin, baby friendly Berlin">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Kids-Friendly Cafés and Restaurants in Berlin | Fix My Diaper">
+  <meta property="og:description" content="Discover cafés and restaurants in Berlin with kids areas, play corners and baby-friendly facilities.">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com/kids-friendly-cafes-restaurants-berlin.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #333;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    nav img {
+      width: 30px;
+      height: auto;
+      margin-right: 30px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto 1.5rem auto;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+      margin-bottom: 2rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .place-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      min-height: 0;
+    }
+
+    .place-media {
+      width: 100%;
+      height: 240px;
+      border-radius: 8px;
+      background: #f6f6f6;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .5rem;
+    }
+
+    .place-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .no-photo {
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .place-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      text-align: left;
+      margin: 0.25rem 0 0.15rem 0;
+    }
+
+    .place-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.25rem;
+      text-align: left;
+      line-height: 1.35;
+    }
+
+    .place-quote {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.5rem 0 0.4rem 0;
+      text-align: left;
+      line-height: 1.35;
+    }
+
+    .tagline {
+      display: inline-block;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #eee;
+      color: #555;
+      background: #fafafa;
+      line-height: 1;
+      margin-top: 0.5rem;
+      width: fit-content;
+    }
+
+    .loading-box {
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px dashed rgba(0,0,0,0.2);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      color: #666;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .top5-explanation {
+      font-size: 0.85rem;
+      color: #555;
+      text-align: left;
+      margin-top: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      line-height: 1.4;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 430px) {
+      body {
+        padding: 1.8rem;
+      }
+
+      .place-media {
+        height: 230px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <nav>
+      <a href="/" aria-label="Fix My Diaper home">
+        <img src="images/logo.png" alt="Fix My Diaper Logo">
+      </a>
+      <a href="/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
+    </nav>
+
+    <h1>Kids-Friendly Cafés and Restaurants in Berlin</h1>
+
+    <p class="intro">
+      Discover cafés and restaurants in Berlin with kids’ corners, play areas, stroller-friendly spaces and baby changing facilities — so you can decide where to go with children before leaving the house.
+    </p>
+
+    <div id="loading" class="loading-box">Loading kids-friendly places…</div>
+
+    <section id="cardsGrid" class="cards-grid" style="display:none;" aria-label="Kids-friendly cafés and restaurants in Berlin"></section>
+
+    <section id="faq">
+      <h2 class="section-title">FAQ: Kids-Friendly Cafés and Restaurants in Berlin</h2>
+
+      <p class="top5-explanation">
+        <strong>Where can I find kids-friendly cafés in Berlin?</strong><br>
+        You can find kids-friendly cafés across Berlin, especially in family-oriented neighborhoods such as Prenzlauer Berg, Friedrichshain, Kreuzberg, Neukölln and Mitte. This list highlights places with kids’ corners, play areas or child-friendly spaces.
+      </p>
+
+      <p class="top5-explanation">
+        <strong>Which restaurants in Berlin have play areas for children?</strong><br>
+        Some restaurants in Berlin offer dedicated kids’ areas, play corners or enough space for children to move around. Fix My Diaper collects parent-submitted reviews and photos to make these places easier to find.
+      </p>
+
+      <p class="top5-explanation">
+        <strong>Are these places also baby-friendly?</strong><br>
+        Many of the places listed here also have baby changing facilities, stroller-friendly layouts or other family-friendly features. Each card includes details submitted by parents.
+      </p>
+
+      <p class="top5-explanation" style="border-bottom: none;">
+        <strong>Can I suggest a kids-friendly place?</strong><br>
+        Yes. Use the <a href="submit">Submit</a> page to add a café, restaurant or public place with a kids’ area, play corner or baby-friendly facilities.
+      </p>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I find kids-friendly cafés in Berlin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can find kids-friendly cafés across Berlin, especially in family-oriented neighborhoods such as Prenzlauer Berg, Friedrichshain, Kreuzberg, Neukölln and Mitte. This list highlights places with kids’ corners, play areas or child-friendly spaces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which restaurants in Berlin have play areas for children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some restaurants in Berlin offer dedicated kids’ areas, play corners or enough space for children to move around. Fix My Diaper collects parent-submitted reviews and photos to make these places easier to find."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these places also baby-friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many of the places listed here also have baby changing facilities, stroller-friendly layouts or other family-friendly features. Each card includes details submitted by parents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I suggest a kids-friendly place?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use the Submit page to add a café, restaurant or public place with a kids’ area, play corner or baby-friendly facilities."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <footer>
+      <a href="about">About</a> | 
+      <a href="submit">Submit a Location</a> |
+      <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
+      Made with ♥️ in Berlin<br />
+      Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
+    </footer>
+  </div>
+
+  <script>
+    const DATA_URL = "/places-berlin.json";
+
+    const el = {
+      loading: document.getElementById("loading"),
+      grid: document.getElementById("cardsGrid")
+    };
+
+    function isKidsAreaPlace(p) {
+      return p.kids_area === true || String(p.kids_area || "").toLowerCase() === "yes";
+    }
+
+    function getKidsAreaPhoto(p) {
+      const candidates = [];
+
+      if (p.kids_area_photo_local_url) candidates.push(p.kids_area_photo_local_url);
+      if (p.kids_area_photo_url && !candidates.includes(p.kids_area_photo_url)) candidates.push(p.kids_area_photo_url);
+
+      return candidates.filter(Boolean);
+    }
+
+    function escapeHtml(str) {
+      return String(str || "").replace(/[&<>"']/g, s => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[s]));
+    }
+
+    function buildCard(p, index) {
+      const card = document.createElement("article");
+      card.className = "place-card";
+
+      const media = document.createElement("div");
+      media.className = "place-media";
+
+      const photos = getKidsAreaPhoto(p);
+
+      if (photos.length > 0) {
+        const img = document.createElement("img");
+
+        if (index < 4) img.setAttribute("fetchpriority", "high");
+
+        img.loading = index < 4 ? "eager" : "lazy";
+        img.decoding = "async";
+        img.alt = `${p.name || "Place"} kids area in Berlin`;
+
+        let photoIndex = 0;
+        img.src = photos[photoIndex];
+
+        img.onerror = () => {
+          photoIndex += 1;
+
+          if (photoIndex < photos.length) {
+            img.src = photos[photoIndex];
+            return;
+          }
+
+          media.innerHTML = "";
+          const span = document.createElement("span");
+          span.className = "no-photo";
+          span.textContent = "Kids area photo coming soon";
+          media.appendChild(span);
+        };
+
+        media.appendChild(img);
+      } else {
+        const span = document.createElement("span");
+        span.className = "no-photo";
+        span.textContent = "Kids area photo coming soon";
+        media.appendChild(span);
+      }
+
+      const title = document.createElement("div");
+      title.className = "place-title";
+      title.textContent = p.name || "Unnamed place";
+
+      const meta = document.createElement("div");
+      meta.className = "place-meta";
+
+      const type = (p.type || "").toString().trim();
+      const address = (p.address || "").toString().trim();
+      const neighborhood = (p.neighborhood || "").toString().trim();
+
+      meta.innerHTML = `
+        ${escapeHtml(type || "Not specified")}
+        ${address ? "<br>" + escapeHtml(address) : ""}
+        ${neighborhood ? "<br>" + escapeHtml(neighborhood) : ""}
+      `;
+
+      const review = (p.kids_area_review || "").trim();
+      let quote = null;
+
+      if (review) {
+        quote = document.createElement("div");
+        quote.className = "place-quote";
+        quote.textContent = `“${review}”`;
+      }
+
+      const tag = document.createElement("span");
+      tag.className = "tagline";
+      tag.textContent = "Kids area";
+
+      card.appendChild(media);
+      card.appendChild(title);
+      card.appendChild(meta);
+      if (quote) card.appendChild(quote);
+      card.appendChild(tag);
+
+      return card;
+    }
+
+    async function load() {
+      try {
+        const res = await fetch(DATA_URL, { cache: "no-store" });
+        if (!res.ok) throw new Error("Could not load places.");
+
+        const data = await res.json();
+
+        const places = data
+          .filter(isKidsAreaPlace)
+          .sort((a, b) => {
+            const ap = getKidsAreaPhoto(a).length > 0 ? 1 : 0;
+            const bp = getKidsAreaPhoto(b).length > 0 ? 1 : 0;
+            if (bp !== ap) return bp - ap;
+
+            const ta = Date.parse(a.created_at || "") || 0;
+            const tb = Date.parse(b.created_at || "") || 0;
+            return tb - ta;
+          });
+
+        el.loading.style.display = "none";
+        el.grid.style.display = "grid";
+
+        if (places.length === 0) {
+          el.grid.innerHTML = `<div class="loading-box">No kids-friendly places listed yet.</div>`;
+          return;
+        }
+
+        const frag = document.createDocumentFragment();
+
+        places.forEach((p, index) => {
+          frag.appendChild(buildCard(p, index));
+        });
+
+        el.grid.appendChild(frag);
+
+      } catch (e) {
+        el.loading.textContent = e.message || "Could not load kids-friendly places.";
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>
