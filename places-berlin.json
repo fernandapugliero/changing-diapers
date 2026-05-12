@@ -158,8 +158,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Straße 645, 12049",
-    "latitude": 52.4767105,
-    "longitude": 13.4183497,
+    "latitude": 52.4773983,
+    "longitude": 13.418101,
     "type": "Public toilet",
     "changing_table_location": [
       "wheelchair restroom"
@@ -272,8 +272,8 @@
     "city": "Berlin",
     "neighborhood": "Mitte",
     "address": "Chausseestraße 55, 10115 Berlin",
-    "latitude": 52.5360351,
-    "longitude": 13.3765927,
+    "latitude": 52.5359273,
+    "longitude": 13.3767068,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -307,8 +307,8 @@
     "city": "Berlin",
     "neighborhood": "Steglitz-Zehlendorf",
     "address": "Albrechtstr. 52, 12167",
-    "latitude": 52.4478269,
-    "longitude": 13.3402974,
+    "latitude": 52.4478403,
+    "longitude": 13.3402283,
     "type": "Restaurant",
     "changing_table_location": [],
     "supplies_available": [],
@@ -518,8 +518,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Urbanstraße 70A, 10967",
-    "latitude": 52.4885506,
-    "longitude": 13.422899,
+    "latitude": 52.4881953,
+    "longitude": 13.4230643,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -1734,8 +1734,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Massower Str. 5, 10315",
-    "latitude": 52.507609,
-    "longitude": 13.5129018,
+    "latitude": 52.5075907,
+    "longitude": 13.5129797,
     "type": "Store",
     "changing_table_location": [],
     "supplies_available": [
@@ -1879,8 +1879,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Karl-Marx-Straße 66, 12043",
-    "latitude": 52.4820886,
-    "longitude": 13.4321513,
+    "latitude": 52.4819113,
+    "longitude": 13.4330348,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -1920,8 +1920,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Hermannstraße 211, 12049",
-    "latitude": 52.4778249,
-    "longitude": 13.4263721,
+    "latitude": 52.4778569,
+    "longitude": 13.4263351,
     "type": "Bakery",
     "changing_table_location": [
       "mixed restroom"
@@ -2097,8 +2097,8 @@
     "city": "Berlin",
     "neighborhood": "Kreuzberg",
     "address": "Pücklerstraße 34, 10997",
-    "latitude": 52.5021469,
-    "longitude": 13.4312004,
+    "latitude": 52.5024466,
+    "longitude": 13.4311003,
     "type": "Store",
     "changing_table_location": [
       "sales area"
@@ -2765,8 +2765,8 @@
     "city": "Berlin",
     "neighborhood": "Lichtenberg",
     "address": "Landsberger Allee 171C, 10369",
-    "latitude": 52.532487,
-    "longitude": 13.4694728,
+    "latitude": 52.5324512,
+    "longitude": 13.4694831,
     "type": "Restaurant",
     "changing_table_location": [
       "hallway"
@@ -2838,8 +2838,8 @@
     "city": "Berlin",
     "neighborhood": "Treptow-Köpenick",
     "address": "Bölschestraße 25, 12587",
-    "latitude": 52.4499026,
-    "longitude": 13.6249229,
+    "latitude": 52.4499782,
+    "longitude": 13.6249212,
     "type": "Ice cream shop",
     "changing_table_location": [
       "hallway"
@@ -2873,8 +2873,8 @@
     "city": "Berlin",
     "neighborhood": "Tempelhof-Schöneberg",
     "address": "Chamissopl. 7, 10965",
-    "latitude": 52.4881298,
-    "longitude": 13.3917754,
+    "latitude": 52.4881536,
+    "longitude": 13.3918234,
     "type": "Café",
     "changing_table_location": [
       "mixed restroom"
@@ -3010,8 +3010,8 @@
     "city": "Berlin",
     "neighborhood": "Neukölln",
     "address": "Karl-Marx-Straße 101, 12043",
-    "latitude": 52.4795552,
-    "longitude": 13.4382367,
+    "latitude": 52.4795197,
+    "longitude": 13.4375275,
     "type": "Food court",
     "changing_table_location": [
       "wheelchair restroom"
