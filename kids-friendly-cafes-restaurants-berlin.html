@@ -15,6 +15,11 @@
   <meta property="og:url" content="https://fixmydiaper.com/kids-friendly-cafes-restaurants-berlin.html">
   <meta property="og:type" content="website">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kids-Friendly Cafés and Restaurants in Berlin | Fix My Diaper">
+  <meta name="twitter:description" content="Discover cafés and restaurants in Berlin with kids areas, play corners and baby-friendly facilities.">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
+
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -222,10 +227,8 @@
 <body>
   <div class="page">
     <nav>
-      <a href="/" aria-label="Fix My Diaper home">
-        <img src="images/logo.png" alt="Fix My Diaper Logo">
-      </a>
-      <a href="/">Map</a>
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <a href="https://fixmydiaper.com/">Map</a>
       <a href="list">List</a>
       <a href="submit">Submit</a>
     </nav>
@@ -264,47 +267,6 @@
       </p>
     </section>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Where can I find kids-friendly cafés in Berlin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can find kids-friendly cafés across Berlin, especially in family-oriented neighborhoods such as Prenzlauer Berg, Friedrichshain, Kreuzberg, Neukölln and Mitte. This list highlights places with kids’ corners, play areas or child-friendly spaces."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which restaurants in Berlin have play areas for children?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Some restaurants in Berlin offer dedicated kids’ areas, play corners or enough space for children to move around. Fix My Diaper collects parent-submitted reviews and photos to make these places easier to find."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are these places also baby-friendly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Many of the places listed here also have baby changing facilities, stroller-friendly layouts or other family-friendly features. Each card includes details submitted by parents."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I suggest a kids-friendly place?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Use the Submit page to add a café, restaurant or public place with a kids’ area, play corner or baby-friendly facilities."
-          }
-        }
-      ]
-    }
-    </script>
-
     <footer>
       <a href="about">About</a> | 
       <a href="submit">Submit a Location</a> |
@@ -331,6 +293,8 @@
 
       if (p.kids_area_photo_local_url) candidates.push(p.kids_area_photo_local_url);
       if (p.kids_area_photo_url && !candidates.includes(p.kids_area_photo_url)) candidates.push(p.kids_area_photo_url);
+      if (p.kids_area_photo_large_url && !candidates.includes(p.kids_area_photo_large_url)) candidates.push(p.kids_area_photo_large_url);
+      if (p.kids_area_photo_small_url && !candidates.includes(p.kids_area_photo_small_url)) candidates.push(p.kids_area_photo_small_url);
 
       return candidates.filter(Boolean);
     }
