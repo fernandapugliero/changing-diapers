@@ -222,6 +222,7 @@ while True:
             except (TypeError, ValueError):
                 overall_score = None
 
+        # Main changing table photo
         photo_field = (
             fields.get("Photo")
             or fields.get("photo")
@@ -249,6 +250,31 @@ while True:
         if not has_photo:
             print(f"[⚠️ NO PHOTO] {name}")
 
+        # Kids area fields
+        kids_area_value = fields.get("Kids Area")
+        kids_area = str(kids_area_value or "").strip().lower() == "yes"
+
+        kids_area_photo_field = fields.get("Kids Area Photo") or []
+        kids_area_photo_data = pick_photo_data(kids_area_photo_field)
+
+        kids_area_photo_small_url = kids_area_photo_data["small"] or kids_area_photo_data["original"]
+        kids_area_photo_large_url = kids_area_photo_data["large"] or kids_area_photo_data["original"]
+        kids_area_photo_url = (
+            kids_area_photo_large_url
+            or kids_area_photo_small_url
+            or kids_area_photo_data["original"]
+        )
+
+        kids_area_photo_local_url = None
+        if city.lower() == "berlin" and kids_area and kids_area_photo_url:
+            kids_area_photo_local_url = download_berlin_photo(
+                photo_data=kids_area_photo_data,
+                name=f"{name}-kids-area",
+                record_id=record.get("id")
+            )
+
+        kids_area_review = (fields.get("Kids Area Review") or "").strip()
+
         review = (fields.get("Changing Table Review") or "").strip()
         neighborhood = normalize_neighborhood((fields.get("Neighborhood (Berlin)") or "").strip())
 
@@ -275,6 +301,13 @@ while True:
             "photo_url": photo_url,
             "photo_local_url": photo_local_url,
             "has_photo": has_photo,
+
+            "kids_area": kids_area,
+            "kids_area_photo_small_url": kids_area_photo_small_url,
+            "kids_area_photo_large_url": kids_area_photo_large_url,
+            "kids_area_photo_url": kids_area_photo_url,
+            "kids_area_photo_local_url": kids_area_photo_local_url,
+            "kids_area_review": kids_area_review,
 
             "review": review,
 
