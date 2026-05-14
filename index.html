@@ -333,6 +333,79 @@
       .recent-dots {
         display: none;
       }
+      /* ===== Ranking section ===== */
+.ranking-section {
+  margin-top: 3rem;
+}
+
+.ranking-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.ranking-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.ranking-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+}
+
+.ranking-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.ranking-content h3 {
+  font-size: 1rem;
+  margin: 0.45rem 0 0.2rem 0;
+  color: #333;
+}
+
+.ranking-content p {
+  font-size: 0.85rem;
+  color: #777;
+  text-align: left;
+  margin: 0;
+  line-height: 1.35;
+}
+
+@media (min-width: 768px) {
+  .ranking-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .ranking-card--first {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .ranking-card img {
+    height: 230px;
+  }
     }
   </style>
 </head>
@@ -428,20 +501,51 @@
       <div class="recent-dot"></div>
     </div>
 
-    <!-- Best places / Airtable -->
-    <h2 class="section-title">Best places to change a diaper in Berlin*</h2>
-    <p class="section-subtitle">
-      Help us make the list even better! <a href="submit.html">Submit a location</a> where you found a great diaper changing station.
-    </p>
+    <section class="ranking-section">
+  <h2 class="section-title">Best places to change a diaper in Berlin*</h2>
+  <p class="section-subtitle">
+    Parent-rated favorites from our community. <a href="/berlin">See the full Berlin list</a>.
+  </p>
 
-    <iframe class="airtable-embed"
-      src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shr42I0LCf48OO9G1?layout=card&viewControls=on"
-      frameborder="0"
-      style="background: transparent; border: 1px solid #ccc;"></iframe>
+  <div class="ranking-grid">
+    <article class="ranking-card ranking-card--first">
+      <div class="ranking-badge">1st</div>
+      <img src="images/east-side-mall.jpeg" alt="East Side Mall changing table">
+      <div class="ranking-content">
+        <div class="star-rating" style="--rating: 5.0;"></div>
+        <span class="star-note">5/5</span>
+        <h3>East Side Mall</h3>
+        <p>Tamara-Danz-Straße 11, 10243 Berlin</p>
+      </div>
+    </article>
 
-    <p class="top5-explanation">
-      *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience.
-    </p>
+    <article class="ranking-card">
+      <div class="ranking-badge">2nd</div>
+      <img src="images/il-ritrovo.jpeg" alt="Il Ritrovo changing table">
+      <div class="ranking-content">
+        <div class="star-rating" style="--rating: 4.5;"></div>
+        <span class="star-note">4.5/5</span>
+        <h3>Il Ritrovo</h3>
+        <p>Gabriel-Max-Straße 2, 10245 Berlin</p>
+      </div>
+    </article>
+
+    <article class="ranking-card">
+      <div class="ranking-badge">3rd</div>
+      <img src="images/tapiocaria.jpg" alt="Tapiocaria changing table">
+      <div class="ranking-content">
+        <div class="star-rating" style="--rating: 4.0;"></div>
+        <span class="star-note">4/5</span>
+        <h3>Tapiocaria</h3>
+        <p>Samariterstraße 34A, 10247 Berlin</p>
+      </div>
+    </article>
+  </div>
+
+  <p class="top5-explanation">
+    *The ranking is based on user-submitted ratings on cleanliness, accessibility and overall experience.
+  </p>
+</section>
 
     <section class="berlin-banner-min">
   <div class="berlin-banner-min__inner">
