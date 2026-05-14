@@ -170,9 +170,7 @@
       letter-spacing: 2px;
       margin-top: 4px;
     }
-    .star-rating.is-empty::after {
-      width: 0;
-    }
+    .star-rating.is-empty::after { width: 0; }
     .star-note {
       display: inline-block;
       font-size: 12px;
@@ -205,9 +203,8 @@
       -webkit-overflow-scrolling: touch;
       scroll-behavior: smooth;
     }
-    .recent-grid::-webkit-scrollbar {
-      display: none;
-    }
+    .recent-grid::-webkit-scrollbar { display: none; }
+
     .recent-card {
       scroll-snap-align: center;
       background: #fff;
@@ -264,12 +261,85 @@
       letter-spacing: 0.02em;
     }
 
-    #faq {
-      margin-top: 3rem;
+    .berlin-banner-min{
+      margin: 2.2rem 0 2.6rem 0;
     }
-    #faq p {
+
+    .berlin-banner-min .berlin-banner-min__inner{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.75);
+      border-radius: 16px;
+      padding: 24px 34px;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .berlin-banner-min .berlin-banner-min__left{
+      min-width: 0;
+    }
+
+    .berlin-banner-min .berlin-banner-min__title{
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.18;
+      font-weight: 600;
+      color: #111;
       text-align: left;
     }
+
+    .berlin-banner-min .hl{
+      position: relative;
+      display: inline;
+      padding: 0 2px;
+      z-index: 0;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .berlin-banner-min .hl::before{
+      content: "";
+      position: absolute;
+      left: -6px;
+      right: -6px;
+      bottom: 0.02em;
+      height: 0.95em;
+      background: rgba(255, 230, 80, 0.92);
+      border-radius: 14px 10px 16px 10px;
+      transform: rotate(-1.3deg) skewX(-3deg);
+      z-index: -1;
+    }
+
+    .berlin-banner-min .berlin-banner-min__right{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .berlin-banner-min .berlin-banner-min__cta{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      padding: 0 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f7f7f7;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .berlin-banner-min .berlin-banner-min__cta:hover{
+      background: #efefef;
+    }
+
+    #faq { margin-top: 3rem; }
+    #faq p { text-align: left; }
 
     footer {
       margin-top: 3rem;
@@ -285,21 +355,44 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      body {
-        padding: 2rem;
+    @media (max-width: 900px){
+      .berlin-banner-min .berlin-banner-min__inner{
+        grid-template-columns: 1fr;
+        padding: 20px 22px;
+        gap: 14px;
       }
-      #map {
-        height: 60vh;
+
+      .berlin-banner-min .berlin-banner-min__right{
+        justify-content: center;
+      }
+
+      .berlin-banner-min .berlin-banner-min__title{
+        font-size: 1.35rem;
+        line-height: 1.22;
+        text-align: center;
       }
     }
 
+    @media (max-width: 768px) {
+      body { padding: 2rem; }
+      #map { height: 60vh; }
+    }
+
     @media (max-width: 480px) {
-      .map-search button {
-        flex: 0 0 auto;
+      .map-search button { flex: 0 0 auto; }
+      #map { height: 55vh; }
+
+      .berlin-banner-min .berlin-banner-min__inner{
+        padding: 18px 18px;
+        border-radius: 14px;
       }
-      #map {
-        height: 55vh;
+
+      .berlin-banner-min .berlin-banner-min__title{
+        font-size: 1.25rem;
+      }
+
+      .berlin-banner-min .berlin-banner-min__cta{
+        width: auto;
       }
     }
 
@@ -320,6 +413,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <nav>
@@ -408,7 +502,7 @@
     </div>
 
     <section>
-      <h2 class="section-title">Best places to change a diaper in Berlin*</h2>
+      <h2 class="section-title">Best places to change a diaper*</h2>
       <p class="section-subtitle">
         Parent-rated favorites from our community. <a href="/berlin">See the full Berlin list</a>.
       </p>
@@ -420,7 +514,7 @@
           <div class="star-rating" style="--rating: 5.0;"></div>
           <span class="star-note">5/5</span>
           <p class="recent-quote">
-            “Clean, spacious and easy to use — one of the best changing setups in Berlin.”
+            Top-rated community pick for changing a diaper in Berlin.
           </p>
           <div class="recent-meta">
             <strong>Publix</strong><br>
@@ -434,7 +528,7 @@
           <div class="star-rating" style="--rating: 5.0;"></div>
           <span class="star-note">5/5</span>
           <p class="recent-quote">
-            “A very family-friendly place with a comfortable changing option and welcoming atmosphere.”
+            Parent-rated favorite with family-friendly facilities.
           </p>
           <div class="recent-meta">
             <strong>MaraLou</strong><br>
@@ -448,7 +542,7 @@
           <div class="star-rating" style="--rating: 4.5;"></div>
           <span class="star-note">4.5/5</span>
           <p class="recent-quote">
-            “Great option by the water, with a solid changing setup and enough space for families.”
+            Highly rated spot for parents around Friedrichshain.
           </p>
           <div class="recent-meta">
             <strong>Kap Frida</strong><br>
@@ -456,6 +550,12 @@
           </div>
         </article>
       </div>
+
+      <div class="recent-dots">
+      <div class="recent-dot"></div>
+      <div class="recent-dot"></div>
+      <div class="recent-dot"></div>
+    </div>
 
       <p class="top5-explanation">
         *The ranking is based on user-submitted ratings on cleanliness, accessibility and overall experience.
@@ -482,22 +582,12 @@
 
       <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
         <strong>Where can I find baby changing tables in Berlin?</strong><br>
-        You can find baby changing tables across Berlin: in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are more than 160 verified locations, with new ones added regularly by parents. Whether you are near Alexanderplatz, Tempelhofer Feld, or Tiergarten, there is likely a spot nearby where you can change your baby comfortably.
+        You can find baby changing tables across Berlin: in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are more than 160 verified locations, with new ones added regularly by parents.
       </p>
 
       <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
         <strong>Do Berlin cafés or restaurants usually have changing tables?</strong><br>
-        Some do, but it’s not universal. The good news is that Berlin is getting more family-friendly every year. On FixMyDiaper, you can type an address or use your current location, and the map will show nearby changing tables. It's perfect for emergencies or planning an outing with your baby.
-      </p>
-
-      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
-        <strong>How to find the nearest changing table?</strong><br>
-        Go to <a href="https://fixmydiaper.com">fixmydiaper.com</a>, type an address or use your location, and the map will instantly show baby-friendly places around you.
-      </p>
-
-      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
-        <strong>Are toilets in Berlin accessible for strollers?</strong><br>
-        Many are. Facilities in malls, museums, and restaurants often include spacious family restrooms where you can fit a stroller.
+        Some do, but it’s not universal. The good news is that Berlin is getting more family-friendly every year.
       </p>
 
       <p class="top5-explanation" style="margin-top: 1.2rem;">
