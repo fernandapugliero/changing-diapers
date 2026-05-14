@@ -17,7 +17,6 @@
   <meta name="twitter:description" content="Find the best baby-friendly places with changing tables in Berlin. Submit your favorite diaper-changing locations and help other parents.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,7 +32,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== Base ===== */
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -42,13 +40,11 @@
       color: #333;
     }
 
-    /* Container central */
     .page {
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    /* ===== Navegação ===== */
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
@@ -67,14 +63,13 @@
       color: inherit;
     }
 
-    /* ===== Títulos ===== */
     h1 {
       font-size: 2rem;
       margin: 0 0 0.5rem 0;
       text-align: center;
       line-height: 1.2;
     }
-    /* subtítulo da hero */
+
     h2 {
       font-size: 1.1rem;
       font-weight: 400;
@@ -84,7 +79,6 @@
       line-height: 1.4;
     }
 
-    /* grandes títulos de seção (Recently, Best places, FAQ) */
     .section-title {
       font-size: 1.3rem;
       font-weight: 600;
@@ -95,7 +89,6 @@
       line-height: 1.3;
     }
 
-    /* subtítulos de seção (texto logo abaixo do título) */
     .section-subtitle {
       font-size: 0.95rem;
       color: #555;
@@ -105,7 +98,6 @@
       line-height: 1.5;
     }
 
-    /* ===== Barra de busca ===== */
     .map-search {
       margin: 0 auto 1.5rem auto;
       max-width: 720px;
@@ -141,7 +133,6 @@
       background: #efefef;
     }
 
-    /* ===== Mapa ===== */
     #map {
       height: 70vh;
       border-radius: 8px;
@@ -149,16 +140,6 @@
       margin-bottom: 3rem;
     }
 
-    /* ===== Airtable embed ===== */
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: transparent;
-    }
-
-    /* ===== Parágrafos e notas ===== */
     p {
       font-size: 1rem;
       color: #555;
@@ -177,7 +158,6 @@
       line-height: 1.4;
     }
 
-    /* ===== ⭐ RATING STARS ===== */
     .star-rating {
       --rating: 0;
       --star-color: #e0e0e0;
@@ -216,7 +196,6 @@
       pointer-events: none;
     }
 
-    /* ===== Recent reviews section ===== */
     .recent-grid {
       display: flex;
       gap: 1rem;
@@ -273,7 +252,18 @@
       border-radius: 50%;
     }
 
-    /* ===== FAQ ===== */
+    .ranking-badge {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #111;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
     #faq {
       margin-top: 3rem;
     }
@@ -281,7 +271,6 @@
       text-align: left;
     }
 
-    /* ===== Rodapé ===== */
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -296,7 +285,6 @@
       text-decoration: underline;
     }
 
-    /* ===== Responsivo ===== */
     @media (max-width: 768px) {
       body {
         padding: 2rem;
@@ -304,10 +292,8 @@
       #map {
         height: 60vh;
       }
-      iframe {
-        height: 520px;
-      }
     }
+
     @media (max-width: 480px) {
       .map-search button {
         flex: 0 0 auto;
@@ -315,10 +301,8 @@
       #map {
         height: 55vh;
       }
-      iframe {
-        height: 480px;
-      }
     }
+
     @media (min-width: 768px) {
       .recent-grid {
         overflow-x: visible;
@@ -333,109 +317,7 @@
       .recent-dots {
         display: none;
       }
-      /* ===== Ranking section ===== */
-.ranking-section {
-  margin-top: 3rem;
-}
-
-.ranking-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1.25rem;
-}
-
-.ranking-card {
-  position: relative;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 14px;
-  padding: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.ranking-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
-  margin-bottom: 0.75rem;
-}
-
-.ranking-badge {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #333;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.ranking-content h3 {
-  font-size: 1rem;
-  margin: 0.45rem 0 0.2rem 0;
-  color: #333;
-}
-
-.ranking-content p {
-  font-size: 0.85rem;
-  color: #777;
-  text-align: left;
-  margin: 0;
-  line-height: 1.35;
-}
-
-@media (min-width: 768px) {
-  .ranking-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    align-items: start;
-  }
-
-  .ranking-card--first {
-    transform: translateY(-8px);
-  }
-}
-
-@media (max-width: 480px) {
-  .ranking-grid {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 0 1rem 1rem 1rem;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .ranking-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .ranking-card {
-    min-width: 85%;
-    max-width: 320px;
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-  }
-
-  .ranking-card--first {
-    transform: none;
-  }
-
-  .ranking-card img {
-    height: 240px;
-  }
-}
+    }
   </style>
 </head>
 <body>
@@ -459,29 +341,26 @@
     <div id="map"></div>
 
     <section class="berlin-banner-min">
-  <div class="berlin-banner-min__inner">
-    <div class="berlin-banner-min__left">
-      <h3 class="berlin-banner-min__title">
-        See <span class="hl">photos and reviews</span> of changing tables by <span class="hl">neighborhood</span> in
-        <span class="hl">Berlin</span>. Decide where to go before you leave the house.
-      </h3>
-    </div>
+      <div class="berlin-banner-min__inner">
+        <div class="berlin-banner-min__left">
+          <h3 class="berlin-banner-min__title">
+            See <span class="hl">photos and reviews</span> of changing tables by <span class="hl">neighborhood</span> in
+            <span class="hl">Berlin</span>. Decide where to go before you leave the house.
+          </h3>
+        </div>
 
-    <div class="berlin-banner-min__right">
-      <a class="berlin-banner-min__cta" href="/berlin">Explore Berlin locations</a>
-    </div>
-
-  </div>
-</section>
+        <div class="berlin-banner-min__right">
+          <a class="berlin-banner-min__cta" href="/berlin">Explore Berlin locations</a>
+        </div>
+      </div>
+    </section>
     
-    <!-- Recently added section -->
     <h2 class="section-title">Our favorites in Berlin ❤️</h2>
     <p class="section-subtitle">
       Photos and reviews from our community. <a href="submit.html">Submit a place</a> and help other parents.
     </p>
 
     <div class="recent-grid">
-      <!-- CARD 1 -->
       <article class="recent-card">
         <img src="images/east-side-mall.jpeg" alt="East Side Mall changing table">
         <div class="star-rating" style="--rating: 5.0;"></div>
@@ -495,7 +374,6 @@
         </div>
       </article>
 
-      <!-- CARD 2 -->
       <article class="recent-card">
         <img src="images/il-ritrovo.jpeg" alt="Il Ritrovo changing table">
         <div class="star-rating" style="--rating: 4.5;"></div>
@@ -509,7 +387,6 @@
         </div>
       </article>
 
-      <!-- CARD 3 -->
       <article class="recent-card">
         <img src="images/tapiocaria.jpg" alt="Tapiocaria changing table">
         <div class="star-rating" style="--rating: 4.0;"></div>
@@ -530,69 +407,76 @@
       <div class="recent-dot"></div>
     </div>
 
-    <section class="ranking-section">
-  <h2 class="section-title">Best places to change a diaper in Berlin*</h2>
-  <p class="section-subtitle">
-    Parent-rated favorites from our community. <a href="/berlin">See the full Berlin list</a>.
-  </p>
+    <section>
+      <h2 class="section-title">Best places to change a diaper in Berlin*</h2>
+      <p class="section-subtitle">
+        Parent-rated favorites from our community. <a href="/berlin">See the full Berlin list</a>.
+      </p>
 
-  <div class="ranking-grid">
-    <article class="ranking-card ranking-card--first">
-      <div class="ranking-badge">1st</div>
-      <img src="images/kapfrida.jpg" alt="Publix changing table">
-      <div class="ranking-content">
-        <div class="star-rating" style="--rating: 4.5;"></div>
-        <span class="star-note">5/5</span>
-        <h3>Publix</h3>
-        <p>Hermannstraße 90, 12051 Berlin</p>
+      <div class="recent-grid">
+        <article class="recent-card">
+          <div class="ranking-badge">🥇 1st Place</div>
+          <img src="images/publix.jpg" alt="Publix changing table">
+          <div class="star-rating" style="--rating: 5.0;"></div>
+          <span class="star-note">5/5</span>
+          <p class="recent-quote">
+            “Clean, spacious and easy to use — one of the best changing setups in Berlin.”
+          </p>
+          <div class="recent-meta">
+            <strong>Publix</strong><br>
+            Hermannstraße 90, 12051 Berlin
+          </div>
+        </article>
+
+        <article class="recent-card">
+          <div class="ranking-badge">🥈 2nd Place</div>
+          <img src="images/maralou.jpg" alt="MaraLou changing table">
+          <div class="star-rating" style="--rating: 5.0;"></div>
+          <span class="star-note">5/5</span>
+          <p class="recent-quote">
+            “A very family-friendly place with a comfortable changing option and welcoming atmosphere.”
+          </p>
+          <div class="recent-meta">
+            <strong>MaraLou</strong><br>
+            Richardplatz 2A, 12055 Berlin
+          </div>
+        </article>
+
+        <article class="recent-card">
+          <div class="ranking-badge">🥉 3rd Place</div>
+          <img src="images/kapfrida.jpg" alt="Kap Frida changing table">
+          <div class="star-rating" style="--rating: 4.5;"></div>
+          <span class="star-note">4.5/5</span>
+          <p class="recent-quote">
+            “Great option by the water, with a solid changing setup and enough space for families.”
+          </p>
+          <div class="recent-meta">
+            <strong>Kap Frida</strong><br>
+            Alt-Stralau 61, 10245 Berlin
+          </div>
+        </article>
       </div>
-    </article>
 
-    <article class="ranking-card">
-      <div class="ranking-badge">2nd</div>
-      <img src="images/maralou.jpg" alt="Maralou changing table">
-      <div class="ranking-content">
-        <div class="star-rating" style="--rating: 4.5;"></div>
-        <span class="star-note">5/5</span>
-        <h3>Maralou</h3>
-        <p>Richardpl. 2A, 12055 Berlin</p>
-      </div>
-    </article>
-
-    <article class="ranking-card">
-      <div class="ranking-badge">3rd</div>
-      <img src="images/kapfrida.jpg" alt="Kap Frida changing table">
-      <div class="ranking-content">
-        <div class="star-rating" style="--rating: 4.5;"></div>
-        <span class="star-note">4.5/5</span>
-        <h3>Kap Frida</h3>
-        <p>Alt-Stralau 61, 10245 Berlin</p>
-      </div>
-    </article>
-  </div>
-
-  <p class="top5-explanation">
-    *The ranking is based on user-submitted ratings on cleanliness, accessibility and overall experience.
-  </p>
-</section>
+      <p class="top5-explanation">
+        *The ranking is based on user-submitted ratings on cleanliness, accessibility and overall experience.
+      </p>
+    </section>
 
     <section class="berlin-banner-min">
-  <div class="berlin-banner-min__inner">
-    <div class="berlin-banner-min__left">
-      <h3 class="berlin-banner-min__title">
-        There is a <span class="hl">mom</span> behind this <span class="hl">map</span>.
-        These days she runs on a lot of <span class="hl">decaf cappuccinos</span>.
-      </h3>
-    </div>
+      <div class="berlin-banner-min__inner">
+        <div class="berlin-banner-min__left">
+          <h3 class="berlin-banner-min__title">
+            There is a <span class="hl">mom</span> behind this <span class="hl">map</span>.
+            These days she runs on a lot of <span class="hl">decaf cappuccinos</span>.
+          </h3>
+        </div>
 
-    <div class="berlin-banner-min__right">
-      <a class="berlin-banner-min__cta" href="https://buymeacoffee.com/fixmydiaper">Buy me a coffee</a>
-    </div>
+        <div class="berlin-banner-min__right">
+          <a class="berlin-banner-min__cta" href="https://buymeacoffee.com/fixmydiaper">Buy me a coffee</a>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
-
-    <!-- FAQ -->
     <section id="faq">
       <h2 class="section-title">FAQ: Changing Diapers in Berlin</h2>
 
@@ -608,120 +492,19 @@
 
       <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
         <strong>How to find the nearest changing table?</strong><br>
-        Go to <a href="https://fixmydiaper.com">fixmydiaper.com</a>, type an address or use your location, and the map will instantly show baby-friendly places around you. Each spot includes a short description, user reviews, and information on accessibility, so you can pick the best one for your needs.
+        Go to <a href="https://fixmydiaper.com">fixmydiaper.com</a>, type an address or use your location, and the map will instantly show baby-friendly places around you.
       </p>
 
       <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
         <strong>Are toilets in Berlin accessible for strollers?</strong><br>
-        Many are. Facilities in malls, museums, and restaurants often include spacious family restrooms where you can fit a stroller. On FixMyDiaper, users note whether a location is stroller-friendly, so you can plan ahead.
+        Many are. Facilities in malls, museums, and restaurants often include spacious family restrooms where you can fit a stroller.
       </p>
 
-      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+      <p class="top5-explanation" style="margin-top: 1.2rem;">
         <strong>Can I add a new location to FixMyDiaper?</strong><br>
-        Yes! FixMyDiaper is built by parents and caregivers. You can submit new locations directly on the website, adding the address, a short description, and (if possible) a photo. It takes a minute, but helps other parents all over Berlin.
-      </p>
-
-      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
-        <strong>Where can I find baby changing tables in Mitte?</strong><br>
-        Mitte has the largest number of changing tables listed on FixMyDiaper. Popular family-friendly spots include Humboldt Forum, Alexa Shopping Center, Dussmann Kulturkaufhaus, Manifesto Markt, L’Osteria, Zollpackhof, and Casalot Restaurant.
-      </p>
-
-      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
-        <strong>Are there baby changing facilities in Neukölln?</strong><br>
-        Yes! Neukölln has a growing number of family-friendly locations. You’ll find changing tables at KALLE HALLE Markthalle, K-Fetisch, La Maison, Engels, MaraLou Café, Mignon Sicilian Bakery, Nah am Wasser, and Gorilla.
-      </p>
-
-      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
-        <strong>Is Prenzlauer Berg baby-friendly?</strong><br>
-        Absolutely. Prenzlauer Berg has long been one of Berlin’s most family-oriented areas. FixMyDiaper lists several changing tables here, including Schönhauser Allee Arcaden, schim:Pause, Petit Brunch, Le Belford, I Due Forni, Brocca Café, and Trivitys.
-      </p>
-
-      <p class="top5-explanation" style="margin-top: 1.2rem;" lang="de">
-        <strong>Wo finde ich Wickeltische in Berlin?</strong><br>
-        In Berlin findest du Wickeltische an vielen unterschiedlichen Orten, zum Beispiel in Einkaufszentren, Cafés, Museen und öffentlichen Toiletten. Auf FixMyDiaper kannst du deine aktuelle Position oder eine Adresse eingeben und siehst sofort kinderfreundliche Orte mit Wickeltischen in deiner Nähe.
+        Yes! FixMyDiaper is built by parents and caregivers. You can submit new locations directly on the website.
       </p>
     </section>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Where can I find baby changing tables in Berlin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can find baby changing tables across Berlin — in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are more than 160 verified locations, with new ones added regularly by parents. Whether you’re near Alexanderplatz, Tempelhofer Feld, or Tiergarten, there’s likely a spot nearby where you can change your baby comfortably."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do Berlin cafés or restaurants usually have changing tables?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Some do, but it’s not universal. The good news is that Berlin is getting more family-friendly every year. On FixMyDiaper, you can type an address or use your current location, and the map will show nearby changing tables — perfect for emergencies or planning an outing with your baby."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to find the nearest changing table",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Go to fixmydiaper.com, type an address or use your location, and the map will instantly show baby-friendly places around you. Each spot includes a short description, user reviews, and information on accessibility, so you can pick the best one for your needs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are toilets in Berlin accessible for strollers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Many are. Facilities in malls, museums, and restaurants often include spacious family restrooms where you can fit a stroller. On FixMyDiaper, users note whether a location is stroller-friendly, so you can plan ahead."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I add a new location to FixMyDiaper?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! FixMyDiaper is built by parents and caregivers. You can submit new locations directly on the website, adding the address, a short description, and (if possible) a photo. It takes a minute, but helps other parents all over Berlin."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where can I find baby changing tables in Mitte?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Mitte has the largest number of changing tables listed on FixMyDiaper. Popular family-friendly spots include Humboldt Forum, Alexa Shopping Center, Dussmann Kulturkaufhaus, Manifesto Markt, L’Osteria, Zollpackhof, and Casalot Restaurant."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are there baby changing facilities in Neukölln?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! Neukölln has a growing number of family-friendly locations. You’ll find changing tables at KALLE HALLE Markthalle, K-Fetisch, La Maison, Engels, MaraLou Café, Mignon Sicilian Bakery, Nah am Wasser, and Gorilla."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Prenzlauer Berg baby-friendly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. Prenzlauer Berg has long been one of Berlin’s most family-oriented areas. FixMyDiaper lists several changing tables here, including Schönhauser Allee Arcaden, schim:Pause, Petit Brunch, Le Belford, I Due Forni, Brocca Café, and Trivitys."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wo finde ich Wickeltische in Berlin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In Berlin findest du Wickeltische an vielen unterschiedlichen Orten, zum Beispiel in Einkaufszentren, Cafés, Museen und öffentlichen Toiletten. Auf FixMyDiaper kannst du deine aktuelle Position oder eine Adresse eingeben und siehst sofort kinderfreundliche Orte mit Wickeltischen in deiner Nähe."
-          }
-        }
-      ]
-    }
-    </script>
 
     <footer>
       <a href="about">About</a> | 
