@@ -352,6 +352,8 @@
   border-radius: 14px;
   padding: 0.75rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .ranking-card img {
@@ -395,6 +397,7 @@
   .ranking-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    align-items: start;
   }
 
   .ranking-card--first {
@@ -403,10 +406,36 @@
 }
 
 @media (max-width: 480px) {
-  .ranking-card img {
-    height: 230px;
+  .ranking-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 1rem 1rem 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    -webkit-overflow-scrolling: touch;
   }
-    }
+
+  .ranking-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ranking-card {
+    min-width: 85%;
+    max-width: 320px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  .ranking-card--first {
+    transform: none;
+  }
+
+  .ranking-card img {
+    height: 240px;
+  }
+}
   </style>
 </head>
 <body>
