@@ -123,6 +123,38 @@ def download_berlin_photo(photo_data, name, record_id):
         print(f"[!] Failed to download image for {name}: {e}")
         return None
 
+def extract_lat_lon_from_google_maps_url(url):
+    if not url:
+        return None, None
+
+    try:
+        decoded = unquote(str(url))
+
+        # Pattern: @52.520008,13.404954,17z
+        match = re.search(r"@(-?\d+\.\d+),(-?\d+\.\d+)", decoded)
+        if match:
+            return float(match.group(1)), float(match.group(2))
+
+        # Pattern: !3d52.520008!4d13.404954
+        match = re.search(r"!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)", decoded)
+        if match:
+            return float(match.group(1)), float(match.group(2))
+
+        # Pattern: ?q=52.520008,13.404954
+        parsed = urlparse(decoded)
+        query = parse_qs(parsed.query)
+        for key in ["q", "query", "ll"]:
+            if key in query:
+                value = query[key][0]
+                match = re.search(r"(-?\d+\.\d+),\s*(-?\d+\.\d+)", value)
+                if match:
+                    return float(match.group(1)), float(match.group(2))
+
+    except Exception as e:
+        print(f"[!] Could not parse Google Maps URL: {e}")
+
+    return None, None
+
 def geocode_address(address):
     try:
         url = "https://nominatim.openstreetmap.org/search"
