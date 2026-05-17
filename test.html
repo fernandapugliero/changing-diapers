@@ -1,845 +1,410 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Changing Tables Around the World | Fix My Diaper</title>
-  <meta name="description" content="Discover parent-submitted baby changing tables around the world, with photos, reviews and practical details to help families decide where to go.">
-  <meta name="keywords" content="baby changing tables, diaper changing stations, changing table near me, baby-friendly places, family-friendly cafes, family-friendly restaurants">
-  <meta name="robots" content="index, follow">
-
-  <meta property="og:title" content="Changing Tables Around the World | Fix My Diaper">
-  <meta property="og:description" content="Explore parent-submitted baby changing tables around the world with photos, reviews and practical details.">
-  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
-  <meta property="og:url" content="https://fixmydiaper.com/list">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Changing Tables Around the World | Fix My Diaper">
-  <meta name="twitter:description" content="Explore parent-submitted baby changing tables around the world with photos, reviews and practical details.">
-  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
-
-  <link rel="icon" href="/images/favicon.ico" sizes="any">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #fff;
-      color: #333;
-    }
-
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    nav {
-      margin-bottom: 2rem;
-      padding-top: 1rem;
-      display: flex;
-      align-items: center;
-    }
-
-    nav img {
-      width: 30px;
-      height: auto;
-      margin-right: 30px;
-    }
-
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: 600;
-      color: inherit;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin: 0 0 0.5rem 0;
-      text-align: center;
-      line-height: 1.2;
-    }
-
-    .intro {
-      text-align: center;
-      max-width: 840px;
-      margin: 0 auto 1.5rem auto;
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .map-search {
-      margin: 0 auto 1.5rem auto;
-      max-width: 720px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .map-search input {
-      flex: 1 1 260px;
-      max-width: 420px;
-      height: 36px;
-      padding: 0 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 14px;
-      color: #333;
-      background: #fff;
-    }
-
-    .map-search button {
-      height: 36px;
-      padding: 0 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #f7f7f7;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .map-search button:hover {
-      background: #efefef;
-    }
-
-    .status-text {
-      text-align: center;
-      color: #666;
-      font-size: 0.9rem;
-      margin: 0.25rem auto 1.25rem auto;
-      line-height: 1.4;
-    }
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 0.6rem;
-      margin-bottom: 1.6rem;
-      align-items: start;
-    }
-
-    @media (min-width: 768px) {
-      .cards-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .place-card {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 0.75rem;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      display: flex;
-      flex-direction: column;
-      height: auto;
-      min-height: 0;
-    }
-
-    .place-media {
-      width: 100%;
-      height: 240px;
-      border-radius: 8px;
-      background: #f6f6f6;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: .5rem;
-    }
-
-    .place-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .no-photo {
-      font-size: 0.85rem;
-      color: #777;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .star-rating {
-      --rating: 0;
-      --star-color: #e0e0e0;
-      --star-fill: #f5c518;
-      position: relative;
-      display: inline-block;
-      font-size: 18px;
-      font-family: "Arial", "Helvetica", sans-serif;
-      line-height: 1;
-      letter-spacing: 2px;
-      margin-top: 4px;
-    }
-
-    .star-rating.is-empty::after {
-      width: 0;
-    }
-
-    .star-note {
-      display: inline-block;
-      font-size: 12px;
-      color: #777;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-
-    .star-rating::before {
-      content: "★★★★★";
-      color: var(--star-color);
-    }
-
-    .star-rating::after {
-      content: "★★★★★";
-      color: var(--star-fill);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: calc((var(--rating) / 5) * 100%);
-      overflow: hidden;
-      white-space: nowrap;
-      pointer-events: none;
-    }
-
-    .place-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #333;
-      text-align: left;
-      margin: 0.25rem 0 0.15rem 0;
-    }
-
-    .place-quote {
-      font-size: 0.85rem;
-      color: #555;
-      font-style: italic;
-      margin: 0.25rem 0 0.5rem 0;
-      text-align: left;
-      line-height: 1.35;
-    }
-
-    .place-meta {
-      font-size: 0.8rem;
-      color: #777;
-      margin-top: 0.25rem;
-      text-align: left;
-      line-height: 1.35;
-    }
-
-    .distance-note {
-      display: inline-block;
-      margin-top: 0.35rem;
-      font-size: 0.78rem;
-      color: #1f7ae0;
-      background: rgba(31, 122, 224, 0.08);
-      border: 1px solid rgba(31, 122, 224, 0.22);
-      border-radius: 999px;
-      padding: 5px 9px;
-      width: fit-content;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: .5rem;
-    }
-
-    .tag {
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid #eee;
-      color: #555;
-      background: #fafafa;
-      line-height: 1;
-    }
-
-    .loading-box {
-      max-width: 720px;
-      margin: 1.5rem auto 0 auto;
-      border: 1px dashed rgba(0,0,0,0.2);
-      border-radius: 12px;
-      padding: 12px;
-      text-align: center;
-      color: #666;
-    }
-
-    .error-box {
-      max-width: 720px;
-      margin: 1.5rem auto 0 auto;
-      border: 1px solid rgba(255,0,0,0.25);
-      background: rgba(255,0,0,0.05);
-      border-radius: 12px;
-      padding: 12px;
-      text-align: left;
-      color: #8a2b2b;
-    }
-
-    .results-bottom {
-      text-align: center;
-      margin: 1.8rem auto 0 auto;
-      color: #555;
-      font-size: 0.95rem;
-    }
-
-    .more-loader {
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-      margin: 0.5rem 0 0;
-      display: none;
-    }
-
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    footer a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 430px) {
-      body {
-        padding: 1.8rem;
-      }
-
-      .place-media {
-        height: 230px;
-      }
-
-      .map-search button {
-        flex: 0 0 auto;
-      }
-
-      .results-bottom {
-        font-size: 0.92rem;
-        margin-top: 1.2rem;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="page">
-    <nav>
-      <img src="images/logo.png" alt="Fix My Diaper Logo">
-      <a href="https://fixmydiaper.com/">Map</a>
-      <a href="list">List</a>
-      <a href="submit">Submit</a>
-    </nav>
-
-    <h1>Discover changing tables near you</h1>
-
-    <p class="intro">
-      Explore <strong id="placesCount">0</strong> parent-submitted changing tables around the world – with photos, reviews and practical details to help you decide where to go.
-    </p>
-
-    <div id="geo-search" class="map-search">
-      <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
-      <button id="geo-go" type="button">Go</button>
-      <button id="geo-me" type="button">Use my location</button>
-    </div>
-
-    <p id="statusText" class="status-text">
-      Newest places first, with photos and reviews prioritized. Search by location to sort by distance.
-    </p>
-
-    <div id="loading" class="loading-box">Loading changing tables…</div>
-    <div id="error" class="error-box" style="display:none;"></div>
-
-    <section id="cardsGrid" class="cards-grid" style="display:none;" aria-label="Changing tables list"></section>
-    <div id="moreLoader" class="more-loader">Loading more places…</div>
-
-    <div class="results-bottom" id="resultsBottom" style="display:none;">
-      <strong id="resultsCount">0</strong> places shown
-    </div>
-
-    <footer>
-      <a href="about">About</a> | 
-      <a href="submit">Submit a Location</a> |
-      <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
-      Made with ♥️ in Berlin<br />
-      Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
-    </footer>
-  </div>
-
-  <script>
-    const DATA_URL = "/places.json";
-
-    const state = {
-      all: [],
-      filtered: [],
-      userLocation: null
-    };
-
-    let visibleCount = 24;
-    const BATCH_SIZE = 24;
-
-    const el = {
-      count: document.getElementById("placesCount"),
-      grid: document.getElementById("cardsGrid"),
-      loading: document.getElementById("loading"),
-      error: document.getElementById("error"),
-      resultsBottom: document.getElementById("resultsBottom"),
-      resultsCount: document.getElementById("resultsCount"),
-      moreLoader: document.getElementById("moreLoader"),
-      statusText: document.getElementById("statusText"),
-      input: document.getElementById("geo-input"),
-      goBtn: document.getElementById("geo-go"),
-      meBtn: document.getElementById("geo-me")
-    };
-
-    function getReview(p) {
-      return (p.review || "").trim();
-    }
-
-    function getPhotoCandidates(p) {
-      const candidates = [];
-
-      if (p.photo_local_url) candidates.push(p.photo_local_url);
-      if (p.photo_url && !candidates.includes(p.photo_url)) candidates.push(p.photo_url);
-      if (p.photo_large_url && !candidates.includes(p.photo_large_url)) candidates.push(p.photo_large_url);
-      if (p.photo_small_url && !candidates.includes(p.photo_small_url)) candidates.push(p.photo_small_url);
-
-      if (Array.isArray(p.photo) && p.photo.length > 0 && p.photo[0] && p.photo[0].url) {
-        const legacy = p.photo[0].url;
-        if (!candidates.includes(legacy)) candidates.push(legacy);
-      }
-
-      return candidates.filter(Boolean);
-    }
-
-    function hasAnyPhoto(p) {
-      return getPhotoCandidates(p).length > 0;
-    }
-
-    function hasCoordinates(p) {
-      return Number.isFinite(Number(p.latitude)) && Number.isFinite(Number(p.longitude));
-    }
-
-    function haversineKm(lat1, lon1, lat2, lon2) {
-      const R = 6371;
-      const dLat = toRad(lat2 - lat1);
-      const dLon = toRad(lon2 - lon1);
-      const a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
-        Math.sin(dLon / 2) * Math.sin(dLon / 2);
-
-      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    }
-
-    function toRad(value) {
-      return value * Math.PI / 180;
-    }
-
-    function getDistanceKm(p) {
-      if (!state.userLocation || !hasCoordinates(p)) return null;
-
-      return haversineKm(
-        state.userLocation.lat,
-        state.userLocation.lon,
-        Number(p.latitude),
-        Number(p.longitude)
-      );
-    }
-
-    function sortPlaces() {
-      state.filtered = [...state.all];
-
-      state.filtered.sort((a, b) => {
-        const da = getDistanceKm(a);
-        const db = getDistanceKm(b);
-
-        if (da !== null && db !== null && da !== db) return da - db;
-        if (da !== null && db === null) return -1;
-        if (da === null && db !== null) return 1;
-
-        const ap = hasAnyPhoto(a) ? 1 : 0;
-        const bp = hasAnyPhoto(b) ? 1 : 0;
-        if (bp !== ap) return bp - ap;
-
-        const ar = getReview(a) ? 1 : 0;
-        const br = getReview(b) ? 1 : 0;
-        if (br !== ar) return br - ar;
-
-        const ta = Date.parse(a.created_at || "") || 0;
-        const tb = Date.parse(b.created_at || "") || 0;
-        if (tb !== ta) return tb - ta;
-
-        return (a.name || "").localeCompare(b.name || "");
-      });
-    }
-
-    function showLoading(on) {
-      el.loading.style.display = on ? "block" : "none";
-      el.grid.style.display = on ? "none" : "grid";
-      el.error.style.display = "none";
-      el.moreLoader.style.display = "none";
-    }
-
-    function showError(msg) {
-      el.error.style.display = "block";
-      el.error.textContent = msg;
-      el.grid.style.display = "none";
-      el.resultsBottom.style.display = "none";
-      el.moreLoader.style.display = "none";
-    }
-
-    function updateCount() {
-      el.resultsCount.textContent = String(Math.min(visibleCount, state.filtered.length));
-      el.resultsBottom.style.display = "block";
-    }
-
-    function renderCards() {
-      el.grid.innerHTML = "";
-      el.grid.style.display = "grid";
-      el.moreLoader.style.display = "none";
-
-      if (state.filtered.length === 0) {
-        el.grid.innerHTML = `<div class="loading-box">No changing tables found yet.</div>`;
-        return;
-      }
-
-      const frag = document.createDocumentFragment();
-      const items = state.filtered.slice(0, visibleCount);
-
-      items.forEach((p, idx) => {
-        frag.appendChild(buildCard(p, idx));
-      });
-
-      el.grid.appendChild(frag);
-      updateCount();
-    }
-
-    function appendMore() {
-      const already = el.grid.querySelectorAll(".place-card").length;
-      const next = state.filtered.slice(already, visibleCount);
-
-      if (next.length === 0) return;
-
-      const frag = document.createDocumentFragment();
-
-      next.forEach((p, idx) => {
-        frag.appendChild(buildCard(p, already + idx));
-      });
-
-      el.grid.appendChild(frag);
-      updateCount();
-    }
-
-    function buildCard(p, index) {
-      const card = document.createElement("article");
-      card.className = "place-card";
-
-      const media = document.createElement("div");
-      media.className = "place-media";
-
-      const photos = getPhotoCandidates(p);
-
-      if (photos.length > 0) {
-        const img = document.createElement("img");
-
-        if (index < 6) img.setAttribute("fetchpriority", "high");
-
-        img.loading = index < 6 ? "eager" : "lazy";
-        img.decoding = "async";
-        img.alt = `${p.name || "Place"} changing table`;
-
-        let photoIndex = 0;
-        img.src = photos[photoIndex];
-
-        img.onerror = () => {
-          photoIndex += 1;
-
-          if (photoIndex < photos.length) {
-            img.src = photos[photoIndex];
-            return;
-          }
-
-          media.innerHTML = "";
-          const span = document.createElement("span");
-          span.className = "no-photo";
-          span.textContent = "No photo yet";
-          media.appendChild(span);
-        };
-
-        media.appendChild(img);
-      } else {
-        const span = document.createElement("span");
-        span.className = "no-photo";
-        span.textContent = "No photo yet";
-        media.appendChild(span);
-      }
-
-      const stars = (typeof p.stars === "number") ? p.stars : null;
-      const starDiv = document.createElement("div");
-      starDiv.className = "star-rating";
-      starDiv.style.setProperty("--rating", stars || 0);
-      if (!stars) starDiv.classList.add("is-empty");
-
-      const note = document.createElement("span");
-      note.className = "star-note";
-      note.textContent = stars ? `${stars}/5` : "Not rated yet";
-
-      const starsWrap = document.createElement("div");
-      starsWrap.appendChild(starDiv);
-      starsWrap.appendChild(note);
-
-      const title = document.createElement("div");
-      title.className = "place-title";
-      title.textContent = p.name || "Unnamed place";
-
-      const meta = document.createElement("div");
-      meta.className = "place-meta";
-
-      const type = (p.type || "").toString().trim();
-      const address = (p.address || "").toString().trim();
-      const city = (p.city || "").toString().trim();
-      const country = (p.country || "").toString().trim();
-
-      const locationLine = [city, country].filter(Boolean).join(", ");
-
-      meta.innerHTML = `
-        ${escapeHtml(type || "Not specified")}
-        ${address ? "<br>" + escapeHtml(address) : ""}
-        ${locationLine ? "<br>" + escapeHtml(locationLine) : ""}
-      `;
-
-      const distance = getDistanceKm(p);
-
-      let distanceEl = null;
-      if (distance !== null) {
-        distanceEl = document.createElement("span");
-        distanceEl.className = "distance-note";
-        distanceEl.textContent = `${distance.toFixed(distance < 10 ? 1 : 0)} km away`;
-      }
-
-      const reviewText = getReview(p);
-      let quote = null;
-
-      if (reviewText) {
-        quote = document.createElement("div");
-        quote.className = "place-quote";
-        quote.textContent = `“${reviewText}”`;
-      }
-
-      const tags = getTags(p);
-      const tagsWrap = document.createElement("div");
-      tagsWrap.className = "tags";
-
-      tags.slice(0, 12).forEach(t => {
-        const tag = document.createElement("span");
-        tag.className = "tag";
-        tag.textContent = t;
-        tagsWrap.appendChild(tag);
-      });
-
-      card.appendChild(media);
-      card.appendChild(starsWrap);
-      card.appendChild(title);
-      card.appendChild(meta);
-      if (distanceEl) card.appendChild(distanceEl);
-      if (quote) card.appendChild(quote);
-      if (tags.length) card.appendChild(tagsWrap);
-
-      return card;
-    }
-
-    function getTags(p) {
-      const merged = [
-        ...(Array.isArray(p.changing_table_location) ? p.changing_table_location : (p.changing_table_location ? [p.changing_table_location] : [])),
-        ...(Array.isArray(p.supplies_available) ? p.supplies_available : (p.supplies_available ? [p.supplies_available] : [])),
-        ...(Array.isArray(p.changing_table_condition) ? p.changing_table_condition : (p.changing_table_condition ? [p.changing_table_condition] : [])),
-      ].map(x => String(x).trim()).filter(Boolean);
-
-      const seen = new Set();
-      const out = [];
-
-      for (const t of merged) {
-        const k = t.toLowerCase();
-        if (!seen.has(k)) {
-          seen.add(k);
-          out.push(t);
+import requests
+import json
+import os
+import time
+import re
+from datetime import datetime
+from urllib.parse import urlparse, parse_qs, unquote
+
+AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
+BASE_ID = "appjWF7WnC8DRWaXM"
+TABLE_NAME = "FixMyDiaper"
+HEADERS = {"Authorization": f"Bearer {AIRTABLE_TOKEN}"}
+
+IMAGE_DIR = os.path.join("images", "berlin")
+os.makedirs(IMAGE_DIR, exist_ok=True)
+
+def to_list(v):
+    if v is None:
+        return []
+    return v if isinstance(v, list) else [v]
+
+def stars_from_score10(score):
+    if score is None:
+        return None
+    try:
+        s = float(score) / 2.0
+    except (TypeError, ValueError):
+        return None
+    s = max(0.0, min(5.0, s))
+    return round(s * 2) / 2
+
+def parse_dt(value):
+    if not value:
+        return None
+    try:
+        s = str(value).strip()
+        if s.endswith("Z"):
+            s = s[:-1] + "+00:00"
+        return datetime.fromisoformat(s)
+    except Exception:
+        return None
+
+def normalize_neighborhood(s):
+    if not s:
+        return ""
+    return re.sub(r"\s*-\s*", "-", str(s).strip())
+
+def slugify(value):
+    value = (value or "").strip().lower()
+    value = re.sub(r"[^\w\s-]", "", value, flags=re.UNICODE)
+    value = re.sub(r"[-\s]+", "-", value).strip("-")
+    return value or "place"
+
+def get_extension(url, filename=None):
+    if filename and "." in filename:
+        ext = filename.rsplit(".", 1)[-1].lower()
+        if ext in ["jpg", "jpeg", "png", "webp"]:
+            return "jpg" if ext == "jpeg" else ext
+
+    path = urlparse(url or "").path.lower()
+    if path.endswith(".png"):
+        return "png"
+    if path.endswith(".webp"):
+        return "webp"
+    return "jpg"
+
+def pick_photo_data(photo_field):
+    if not isinstance(photo_field, list) or len(photo_field) == 0:
+        return {
+            "small": None,
+            "large": None,
+            "original": None,
+            "attachment_id": None,
+            "filename": None
         }
-      }
 
-      return out;
+    first = photo_field[0] or {}
+    thumbs = first.get("thumbnails") or {}
+
+    small = None
+    large = None
+
+    if isinstance(thumbs, dict):
+        sm = thumbs.get("small")
+        lg = thumbs.get("large")
+        if isinstance(sm, dict):
+            small = sm.get("url")
+        if isinstance(lg, dict):
+            large = lg.get("url")
+
+    return {
+        "small": small,
+        "large": large,
+        "original": first.get("url"),
+        "attachment_id": first.get("id"),
+        "filename": first.get("filename")
     }
 
-    async function geocodeSearch(query) {
-      const url = new URL("https://nominatim.openstreetmap.org/search");
-      url.searchParams.set("q", query);
-      url.searchParams.set("format", "json");
-      url.searchParams.set("limit", "1");
+def download_berlin_photo(photo_data, name, record_id):
+    source_url = photo_data.get("large") or photo_data.get("original") or photo_data.get("small")
+    if not source_url:
+        return None
 
-      const res = await fetch(url.toString(), {
-        headers: {
-          "Accept": "application/json"
+    attachment_id = photo_data.get("attachment_id") or "photo"
+    ext = get_extension(source_url, photo_data.get("filename"))
+    filename = f"{slugify(name)}-{record_id}-{attachment_id}.{ext}"
+    filepath = os.path.join(IMAGE_DIR, filename)
+
+    if os.path.exists(filepath):
+        return f"/images/berlin/{filename}"
+
+    try:
+        res = requests.get(source_url, timeout=30)
+        res.raise_for_status()
+
+        with open(filepath, "wb") as f:
+            f.write(res.content)
+
+        print(f"[📷] Saved image: {filepath}")
+        return f"/images/berlin/{filename}"
+
+    except Exception as e:
+        print(f"[!] Failed to download image for {name}: {e}")
+        return None
+
+def extract_lat_lon_from_google_maps_url(url):
+    if not url:
+        return None, None
+
+    try:
+        decoded = unquote(str(url))
+
+        match = re.search(r"@(-?\d+\.\d+),(-?\d+\.\d+)", decoded)
+        if match:
+            return float(match.group(1)), float(match.group(2))
+
+        match = re.search(r"!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)", decoded)
+        if match:
+            return float(match.group(1)), float(match.group(2))
+
+        parsed = urlparse(decoded)
+        query = parse_qs(parsed.query)
+
+        for key in ["q", "query", "ll"]:
+            if key in query:
+                value = query[key][0]
+                match = re.search(r"(-?\d+\.\d+),\s*(-?\d+\.\d+)", value)
+                if match:
+                    return float(match.group(1)), float(match.group(2))
+
+    except Exception as e:
+        print(f"[!] Could not parse Google Maps URL: {e}")
+
+    return None, None
+
+def geocode_address(address):
+    try:
+        url = "https://nominatim.openstreetmap.org/search"
+        params = {"q": address, "format": "json", "limit": 1}
+        res = requests.get(
+            url,
+            params=params,
+            headers={"User-Agent": "changing-diapers-mvp"},
+            timeout=30
+        )
+        data = res.json()
+
+        if data:
+            print(f"[✓] Geocoded: {address}")
+            return float(data[0]["lat"]), float(data[0]["lon"])
+
+        print(f"[!] No result for address: {address}")
+
+    except Exception as e:
+        print(f"[!] Geocode error for '{address}': {e}")
+
+    return None, None
+
+def dedupe_prefer_recent_with_photo(places):
+    grouped = {}
+
+    for p in places:
+        name = (p.get("name") or "").strip().lower()
+        address = (p.get("address") or "").strip().lower()
+
+        if not address:
+            key = f"{name}|__noaddr__|{(p.get('neighborhood') or '').strip().lower()}"
+        else:
+            key = f"{name}|{address}"
+
+        grouped.setdefault(key, []).append(p)
+
+    out = []
+
+    for items in grouped.values():
+        with_photo = [x for x in items if x.get("has_photo")]
+
+        if with_photo:
+            with_photo.sort(
+                key=lambda x: (parse_dt(x.get("created_at")) or datetime.min),
+                reverse=True
+            )
+            out.append(with_photo[0])
+        else:
+            items.sort(
+                key=lambda x: (parse_dt(x.get("created_at")) or datetime.min),
+                reverse=True
+            )
+            out.append(items[0])
+
+    print(f"[✅] Deduped: {len(places)} → {len(out)}")
+    return out
+
+def sort_places(places):
+    def score(p):
+        has_photo = bool(p.get("photo_local_url") or p.get("photo_url"))
+        has_review = bool((p.get("review") or "").strip())
+        created = parse_dt(p.get("created_at")) or datetime.min
+
+        return (
+            1 if has_photo else 0,
+            1 if has_review else 0,
+            created
+        )
+
+    return sorted(places, key=score, reverse=True)
+
+
+places_all = []
+places_berlin_raw = []
+
+url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
+params = {"pageSize": 100}
+
+print("[...] Starting Airtable fetch...")
+
+while True:
+    res = requests.get(url, headers=HEADERS, params=params, timeout=30)
+    data = res.json()
+
+    if "error" in data:
+        raise RuntimeError(f"Airtable API error: {data['error']}")
+
+    records = data.get("records", [])
+    print(f"[✓] Received {len(records)} records.")
+
+    for record in records:
+        fields = record.get("fields", {})
+        name = fields.get("Name", "Unnamed")
+        print(f"[🔍] Processing: {name}")
+
+        address = fields.get("Full Address", "")
+        city = (fields.get("City", "") or "").strip()
+        country = fields.get("Country", "")
+        created_at = fields.get("Created at") or record.get("createdTime")
+        google_maps_url = fields.get("Google Maps URL", "")
+
+        lat = None
+        lon = None
+
+        if address:
+            parts = [address, city, country]
+            search_address = ", ".join(
+                str(x).strip()
+                for x in parts
+                if x and str(x).strip()
+            )
+            lat, lon = geocode_address(search_address)
+            time.sleep(1)
+
+        if not lat or not lon:
+            lat_from_url, lon_from_url = extract_lat_lon_from_google_maps_url(google_maps_url)
+
+            if lat_from_url and lon_from_url:
+                lat, lon = lat_from_url, lon_from_url
+                print(f"[✓] Coordinates from Google Maps URL: {name} → {lat}, {lon}")
+
+        if not lat or not lon:
+            print(f"[⚠️ NO COORDINATES] {name} | {address}, {city}, {country}")
+
+        overall_score = fields.get("Overall user experience")
+        if overall_score is not None:
+            try:
+                overall_score = float(overall_score)
+            except (TypeError, ValueError):
+                overall_score = None
+
+        photo_field = (
+            fields.get("Photo")
+            or fields.get("photo")
+            or fields.get("Images")
+            or fields.get("images")
+            or []
+        )
+
+        photo_data = pick_photo_data(photo_field)
+
+        photo_small_url = photo_data["small"] or photo_data["original"]
+        photo_large_url = photo_data["large"] or photo_data["original"]
+        photo_url = photo_large_url or photo_small_url or photo_data["original"]
+
+        photo_local_url = None
+        if photo_url:
+            photo_local_url = download_berlin_photo(
+                photo_data=photo_data,
+                name=name,
+                record_id=record.get("id")
+            )
+
+        has_photo = bool(photo_local_url or photo_url)
+
+        if not has_photo:
+            print(f"[⚠️ NO PHOTO] {name}")
+
+        kids_area_value = fields.get("Kids Area")
+        kids_area = str(kids_area_value or "").strip().lower() == "yes"
+
+        kids_area_photo_field = fields.get("Kids Area Photo") or []
+        kids_area_photo_data = pick_photo_data(kids_area_photo_field)
+
+        kids_area_photo_small_url = kids_area_photo_data["small"] or kids_area_photo_data["original"]
+        kids_area_photo_large_url = kids_area_photo_data["large"] or kids_area_photo_data["original"]
+        kids_area_photo_url = (
+            kids_area_photo_large_url
+            or kids_area_photo_small_url
+            or kids_area_photo_data["original"]
+        )
+
+        kids_area_photo_local_url = None
+        if kids_area and kids_area_photo_url:
+            kids_area_photo_local_url = download_berlin_photo(
+                photo_data=kids_area_photo_data,
+                name=f"{name}-kids-area",
+                record_id=record.get("id")
+            )
+
+        kids_area_review = (fields.get("Kids Area Review") or "").strip()
+
+        review = (fields.get("Changing Table Review") or "").strip()
+        neighborhood = normalize_neighborhood((fields.get("Neighborhood (Berlin)") or "").strip())
+
+        place = {
+            "id": record.get("id"),
+            "name": name,
+            "city": city,
+            "country": country,
+            "neighborhood": neighborhood,
+            "address": address,
+            "google_maps_url": google_maps_url,
+            "latitude": lat,
+            "longitude": lon,
+            "type": fields.get("Type", ""),
+
+            "changing_table_location": to_list(fields.get("Changing Table Location")),
+            "supplies_available": to_list(fields.get("Available Supplies") or fields.get("Available Suppllies")),
+            "changing_table_condition": to_list(fields.get("Changing Table Condition")),
+
+            "room_for_stroller": fields.get("Room for a stroller", False),
+            "site": fields.get("Site", ""),
+            "created_at": created_at,
+
+            "photo_small_url": photo_small_url,
+            "photo_large_url": photo_large_url,
+            "photo_url": photo_url,
+            "photo_local_url": photo_local_url,
+            "has_photo": has_photo,
+
+            "kids_area": kids_area,
+            "kids_area_photo_small_url": kids_area_photo_small_url,
+            "kids_area_photo_large_url": kids_area_photo_large_url,
+            "kids_area_photo_url": kids_area_photo_url,
+            "kids_area_photo_local_url": kids_area_photo_local_url,
+            "kids_area_review": kids_area_review,
+
+            "review": review,
+
+            "overall_user_experience": overall_score,
+            "stars": stars_from_score10(overall_score),
+
+            "unique_entry": fields.get("Unique entry?", "")
         }
-      });
 
-      if (!res.ok) throw new Error("Could not search this location.");
+        places_all.append(place)
 
-      const data = await res.json();
+        if city.lower() == "berlin":
+            places_berlin_raw.append(place)
 
-      if (!Array.isArray(data) || data.length === 0) {
-        throw new Error("Location not found. Try a more specific address.");
-      }
+    if "offset" in data:
+        params["offset"] = data["offset"]
+        print("[⏭️] More pages...")
+    else:
+        break
 
-      return {
-        lat: Number(data[0].lat),
-        lon: Number(data[0].lon),
-        label: data[0].display_name
-      };
-    }
+print(f"[✅] Total places: {len(places_all)}")
+print(f"[✅] Berlin raw: {len(places_berlin_raw)}")
 
-    async function handleSearch() {
-      const query = el.input.value.trim();
+places_all = sort_places(places_all)
 
-      if (!query) {
-        el.statusText.textContent = "Type an address, ZIP code, city or neighborhood.";
-        return;
-      }
+places_berlin = dedupe_prefer_recent_with_photo(places_berlin_raw)
+places_berlin = sort_places(places_berlin)
 
-      el.statusText.textContent = "Searching location…";
+print(f"[✅] Berlin deduped: {len(places_berlin)}")
 
-      try {
-        const result = await geocodeSearch(query);
+with open("places.json", "w", encoding="utf-8") as f:
+    json.dump(places_all, f, ensure_ascii=False, indent=2)
 
-        state.userLocation = {
-          lat: result.lat,
-          lon: result.lon
-        };
+with open("places-berlin.json", "w", encoding="utf-8") as f:
+    json.dump(places_berlin, f, ensure_ascii=False, indent=2)
 
-        visibleCount = BATCH_SIZE;
-        sortPlaces();
-        renderCards();
-
-        el.statusText.textContent = `Showing closest changing tables to: ${result.label}`;
-
-      } catch (e) {
-        el.statusText.textContent = e.message || "Could not search this location.";
-      }
-    }
-
-    function handleUseMyLocation() {
-      if (!navigator.geolocation) {
-        el.statusText.textContent = "Your browser does not support location search.";
-        return;
-      }
-
-      el.statusText.textContent = "Getting your location…";
-
-      navigator.geolocation.getCurrentPosition(
-        position => {
-          state.userLocation = {
-            lat: position.coords.latitude,
-            lon: position.coords.longitude
-          };
-
-          visibleCount = BATCH_SIZE;
-          sortPlaces();
-          renderCards();
-
-          el.statusText.textContent = "Showing closest changing tables to your current location.";
-        },
-        () => {
-          el.statusText.textContent = "Could not access your location. You can type an address instead.";
-        },
-        {
-          enableHighAccuracy: true,
-          timeout: 10000,
-          maximumAge: 60000
-        }
-      );
-    }
-
-    async function load() {
-      showLoading(true);
-
-      try {
-        const res = await fetch(DATA_URL, { cache: "no-store" });
-        if (!res.ok) throw new Error(`Failed to load ${DATA_URL}: ${res.status} ${res.statusText}`);
-
-        const data = await res.json();
-        if (!Array.isArray(data)) throw new Error(`${DATA_URL} is not an array.`);
-
-        state.all = data;
-        el.count.textContent = String(data.length);
-
-        sortPlaces();
-        renderCards();
-
-        showLoading(false);
-
-      } catch (e) {
-        showLoading(false);
-        showError(e.message || String(e));
-      }
-    }
-
-    window.addEventListener("scroll", () => {
-      const nearBottom =
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 700;
-
-      if (!nearBottom) return;
-      if (visibleCount >= state.filtered.length) return;
-
-      el.moreLoader.style.display = "block";
-
-      visibleCount = Math.min(state.filtered.length, visibleCount + BATCH_SIZE);
-      appendMore();
-
-      setTimeout(() => {
-        el.moreLoader.style.display = "none";
-      }, 250);
-    });
-
-    function escapeHtml(str) {
-      return String(str || "").replace(/[&<>"']/g, s => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#039;"
-      }[s]));
-    }
-
-    el.goBtn.addEventListener("click", handleSearch);
-    el.meBtn.addEventListener("click", handleUseMyLocation);
-
-    el.input.addEventListener("keydown", event => {
-      if (event.key === "Enter") {
-        handleSearch();
-      }
-    });
-
-    load();
-  </script>
-</body>
-</html>
+print("[🎉] Export done!")
