@@ -211,6 +211,20 @@ def dedupe_prefer_recent_with_photo(places):
     print(f"[✅] Deduped: {len(places)} → {len(out)}")
     return out
 
+def sort_places(places):
+    def score(p):
+        created = parse_dt(p.get("created_at")) or datetime.min
+        has_photo = bool(p.get("photo_local_url") or p.get("photo_url"))
+        has_review = bool((p.get("review") or "").strip())
+
+        return (
+            created,
+            1 if has_photo else 0,
+            1 if has_review else 0
+        )
+
+    return sorted(places, key=score, reverse=True)
+
 
 places_all = []
 places_berlin_raw = []
@@ -244,7 +258,6 @@ while True:
         lat = None
         lon = None
 
-        # 1) comportamento antigo: tenta primeiro pelo endereço
         if address:
             parts = [address, city, country]
             search_address = ", ".join(
@@ -255,7 +268,6 @@ while True:
             lat, lon = geocode_address(search_address)
             time.sleep(1)
 
-        # 2) melhoria nova: se endereço falhou, tenta Google Maps URL
         if not lat or not lon:
             lat_from_url, lon_from_url = extract_lat_lon_from_google_maps_url(google_maps_url)
 
@@ -331,6 +343,7 @@ while True:
             "id": record.get("id"),
             "name": name,
             "city": city,
+            "country": country,
             "neighborhood": neighborhood,
             "address": address,
             "google_maps_url": google_maps_url,
@@ -381,7 +394,10 @@ while True:
 print(f"[✅] Total places: {len(places_all)}")
 print(f"[✅] Berlin raw: {len(places_berlin_raw)}")
 
+places_all = sort_places(places_all)
+
 places_berlin = dedupe_prefer_recent_with_photo(places_berlin_raw)
+places_berlin = sort_places(places_berlin)
 
 print(f"[✅] Berlin deduped: {len(places_berlin)}")
 
