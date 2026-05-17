@@ -130,19 +130,17 @@ def extract_lat_lon_from_google_maps_url(url):
     try:
         decoded = unquote(str(url))
 
-        # Pattern: @52.520008,13.404954,17z
         match = re.search(r"@(-?\d+\.\d+),(-?\d+\.\d+)", decoded)
         if match:
             return float(match.group(1)), float(match.group(2))
 
-        # Pattern: !3d52.520008!4d13.404954
         match = re.search(r"!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)", decoded)
         if match:
             return float(match.group(1)), float(match.group(2))
 
-        # Pattern: ?q=52.520008,13.404954
         parsed = urlparse(decoded)
         query = parse_qs(parsed.query)
+
         for key in ["q", "query", "ll"]:
             if key in query:
                 value = query[key][0]
@@ -166,13 +164,16 @@ def geocode_address(address):
             timeout=30
         )
         data = res.json()
+
         if data:
             print(f"[✓] Geocoded: {address}")
             return float(data[0]["lat"]), float(data[0]["lon"])
-        else:
-            print(f"[!] No result for address: {address}")
+
+        print(f"[!] No result for address: {address}")
+
     except Exception as e:
         print(f"[!] Geocode error for '{address}': {e}")
+
     return None, None
 
 def dedupe_prefer_recent_with_photo(places):
@@ -234,25 +235,18 @@ while True:
         name = fields.get("Name", "Unnamed")
         print(f"[🔍] Processing: {name}")
 
-        lat = fields.get("Latitude")
-        lon = fields.get("Longitude")
         address = fields.get("Full Address", "")
         city = (fields.get("City", "") or "").strip()
         country = fields.get("Country", "")
         created_at = fields.get("Created at") or record.get("createdTime")
         google_maps_url = fields.get("Google Maps URL", "")
 
-        # 1) Prefer manual coordinates from Google Maps URL when lat/lon are missing
-        if not lat or not lon:
-            lat_from_url, lon_from_url = extract_lat_lon_from_google_maps_url(google_maps_url)
+        lat = None
+        lon = None
 
-            if lat_from_url and lon_from_url:
-                lat, lon = lat_from_url, lon_from_url
-                print(f"[✓] Coordinates from Google Maps URL: {name} → {lat}, {lon}")
-
-        # 2) Fallback to geocoding address
-        if (not lat or not lon) and address:
-            parts = [name, address, city, country]
+        # 1) comportamento antigo: tenta primeiro pelo endereço
+        if address:
+            parts = [address, city, country]
             search_address = ", ".join(
                 str(x).strip()
                 for x in parts
@@ -261,6 +255,17 @@ while True:
             lat, lon = geocode_address(search_address)
             time.sleep(1)
 
+        # 2) melhoria nova: se endereço falhou, tenta Google Maps URL
+        if not lat or not lon:
+            lat_from_url, lon_from_url = extract_lat_lon_from_google_maps_url(google_maps_url)
+
+            if lat_from_url and lon_from_url:
+                lat, lon = lat_from_url, lon_from_url
+                print(f"[✓] Coordinates from Google Maps URL: {name} → {lat}, {lon}")
+
+        if not lat or not lon:
+            print(f"[⚠️ NO COORDINATES] {name} | {address}, {city}, {country}")
+
         overall_score = fields.get("Overall user experience")
         if overall_score is not None:
             try:
@@ -268,7 +273,6 @@ while True:
             except (TypeError, ValueError):
                 overall_score = None
 
-        # Main changing table photo
         photo_field = (
             fields.get("Photo")
             or fields.get("photo")
@@ -296,7 +300,6 @@ while True:
         if not has_photo:
             print(f"[⚠️ NO PHOTO] {name}")
 
-        # Kids area fields
         kids_area_value = fields.get("Kids Area")
         kids_area = str(kids_area_value or "").strip().lower() == "yes"
 
