@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Changing Tables Around the World | Fix My Diaper</title>
-
-  <meta
-    name="description"
-    content="Explore parent-submitted changing tables around the world. Find baby-friendly cafés, restaurants, museums and public spaces with photos, reviews and practical details."
-  />
-
-  <meta
-    name="keywords"
-    content="changing tables, baby changing stations, diaper changing, family friendly places, baby friendly cafes, changing table map"
-  />
-
+  <meta name="description" content="Discover parent-submitted baby changing tables around the world, with photos, reviews and details to help families decide where to go.">
+  <meta name="keywords" content="baby changing tables, diaper changing stations, changing table near me, baby-friendly places, family-friendly cafes, family-friendly restaurants">
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="Changing Tables Around the World | Fix My Diaper">
-  <meta property="og:description" content="Explore changing tables around the world with photos and reviews from parents.">
+  <meta property="og:description" content="Explore parent-submitted baby changing tables around the world with photos, reviews and details.">
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url" content="https://fixmydiaper.com/list">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Changing Tables Around the World | Fix My Diaper">
+  <meta name="twitter:description" content="Explore parent-submitted baby changing tables around the world with photos, reviews and details.">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <link rel="icon" href="/images/favicon.ico" sizes="any">
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -50,8 +43,6 @@
       padding-top: 1rem;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      padding-bottom: 1rem;
     }
 
     nav img {
@@ -115,57 +106,72 @@
       font-size: 13px;
       font-weight: 600;
       color: #333;
-      white-space: nowrap;
     }
 
     .map-search button:hover {
       background: #efefef;
     }
 
-    .list-intro {
+    .status-text {
       text-align: center;
       color: #666;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-      line-height: 1.5;
+      font-size: 0.9rem;
+      margin: 0.25rem auto 1.25rem auto;
+      line-height: 1.4;
     }
 
-    .results-grid {
+    .cards-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 0.6rem;
+      margin-bottom: 1.6rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .place-card {
       background: #fff;
       border: 1px solid #eee;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
+      height: auto;
+      min-height: 0;
     }
 
-    .place-card img {
+    .place-media {
       width: 100%;
-      height: 260px;
+      height: 240px;
+      border-radius: 8px;
+      background: #f6f6f6;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .5rem;
+    }
+
+    .place-media img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .place-content {
+    .no-photo {
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
       padding: 1rem;
-    }
-
-    .distance-tag {
-      display: inline-block;
-      background: #e8f1ff;
-      color: #2f80ed;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 5px 10px;
-      border-radius: 999px;
-      margin-bottom: 0.75rem;
     }
 
     .star-rating {
@@ -175,9 +181,22 @@
       position: relative;
       display: inline-block;
       font-size: 18px;
+      font-family: "Arial", "Helvetica", sans-serif;
       line-height: 1;
       letter-spacing: 2px;
       margin-top: 4px;
+    }
+
+    .star-rating.is-empty::after {
+      width: 0;
+    }
+
+    .star-note {
+      display: inline-block;
+      font-size: 12px;
+      color: #777;
+      margin-left: 6px;
+      vertical-align: middle;
     }
 
     .star-rating::before {
@@ -194,38 +213,102 @@
       width: calc((var(--rating) / 5) * 100%);
       overflow: hidden;
       white-space: nowrap;
+      pointer-events: none;
     }
 
-    .star-note {
-      display: inline-block;
-      font-size: 12px;
-      color: #777;
-      margin-left: 6px;
-      vertical-align: middle;
+    .place-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      text-align: left;
+      margin: 0.25rem 0 0.15rem 0;
     }
 
     .place-quote {
-      font-size: 0.92rem;
+      font-size: 0.85rem;
       color: #555;
       font-style: italic;
-      line-height: 1.5;
-      margin: 0.75rem 0 1rem 0;
-    }
-
-    .place-name {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
+      margin: 0.25rem 0 0.5rem 0;
+      text-align: left;
+      line-height: 1.35;
     }
 
     .place-meta {
-      font-size: 0.88rem;
+      font-size: 0.8rem;
       color: #777;
-      line-height: 1.4;
+      margin-top: 0.25rem;
+      text-align: left;
+      line-height: 1.35;
+    }
+
+    .distance-note {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: #1f7ae0;
+      background: rgba(31, 122, 224, 0.08);
+      border: 1px solid rgba(31, 122, 224, 0.22);
+      border-radius: 999px;
+      padding: 5px 9px;
+      width: fit-content;
+      font-weight: 600;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: .5rem;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #eee;
+      color: #555;
+      background: #fafafa;
+      line-height: 1;
+    }
+
+    .loading-box {
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px dashed rgba(0,0,0,0.2);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      color: #666;
+    }
+
+    .error-box {
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px solid rgba(255,0,0,0.25);
+      background: rgba(255,0,0,0.05);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: left;
+      color: #8a2b2b;
+    }
+
+    .results-bottom {
+      text-align: center;
+      margin: 1.8rem auto 0 auto;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .more-loader {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      margin: 0.5rem 0 0;
+      display: none;
     }
 
     footer {
-      margin-top: 4rem;
+      margin-top: 3rem;
       text-align: center;
       font-size: 0.9rem;
       color: #777;
@@ -240,284 +323,519 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 900px) {
-      .results-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
+    @media (max-width: 430px) {
       body {
-        padding: 1.25rem;
+        padding: 1.8rem;
       }
 
-      h1 {
-        font-size: 1.85rem;
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
-
-      .results-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .place-card img {
-        height: 240px;
-      }
-
-      .map-search {
-        flex-wrap: nowrap;
-      }
-
-      .map-search input {
-        min-width: 0;
+      .place-media {
+        height: 230px;
       }
 
       .map-search button {
         flex: 0 0 auto;
+      }
+
+      .results-bottom {
+        font-size: 0.92rem;
+        margin-top: 1.2rem;
       }
     }
   </style>
 </head>
 
 <body>
+  <div class="page">
+    <nav>
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <a href="https://fixmydiaper.com/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
+    </nav>
 
-<div class="page">
+    <h1>Discover changing tables near you</h1>
 
-  <nav>
-    <img src="images/logo.png" alt="Fix My Diaper Logo">
+    <h2>
+      Explore <strong id="placesCount">0</strong> parent-submitted changing tables around the world — with photos, reviews and details to help you decide where to go.
+    </h2>
 
-    <a href="/">Map</a>
-    <a href="/list">List</a>
-    <a href="/submit">Submit</a>
-  </nav>
+    <div id="geo-search" class="map-search">
+      <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
+      <button id="geo-go" type="button">Go</button>
+      <button id="geo-me" type="button">Use my location</button>
+    </div>
 
-  <h1>Need to change a diaper?</h1>
+    <p id="statusText" class="status-text">
+      Newest places first, with photos and reviews prioritized. Search by location to sort by distance.
+    </p>
 
-  <h2>
-    Explore <span id="places-count">342</span> parent-submitted changing tables around the world — with photos, reviews and details to help you decide where to go.
-  </h2>
+    <div id="loading" class="loading-box">Loading changing tables…</div>
+    <div id="error" class="error-box" style="display:none;"></div>
 
-  <div id="geo-search" class="map-search">
-    <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
+    <section id="cardsGrid" class="cards-grid" style="display:none;" aria-label="Changing tables list"></section>
+    <div id="moreLoader" class="more-loader">Loading more places…</div>
 
-    <button id="geo-go">Go</button>
+    <div class="results-bottom" id="resultsBottom" style="display:none;">
+      <strong id="resultsCount">0</strong> places shown
+    </div>
 
-    <button id="geo-me">Use my location</button>
+    <footer>
+      <a href="about">About</a> | 
+      <a href="submit">Submit a Location</a> |
+      <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
+      Made with ♥️ in Berlin<br />
+      Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
+    </footer>
   </div>
 
-  <p class="list-intro">
-    Newest places first, with photos and reviews prioritized. Search by location to sort by distance.
-  </p>
+  <script>
+    const DATA_URL = "/places.json";
 
-  <div id="results" class="results-grid"></div>
+    const state = {
+      all: [],
+      filtered: [],
+      userLocation: null
+    };
 
-  <footer>
-    <a href="about">About</a> |
-    <a href="submit">Submit a Location</a> |
-    <a href="https://www.instagram.com/fixmydiaper">Instagram</a>
+    let visibleCount = 24;
+    const BATCH_SIZE = 24;
 
-    <br><br>
+    const el = {
+      count: document.getElementById("placesCount"),
+      grid: document.getElementById("cardsGrid"),
+      loading: document.getElementById("loading"),
+      error: document.getElementById("error"),
+      resultsBottom: document.getElementById("resultsBottom"),
+      resultsCount: document.getElementById("resultsCount"),
+      moreLoader: document.getElementById("moreLoader"),
+      statusText: document.getElementById("statusText"),
+      input: document.getElementById("geo-input"),
+      goBtn: document.getElementById("geo-go"),
+      meBtn: document.getElementById("geo-me")
+    };
 
-    Made with ♥️ in Berlin
+    function getReview(p) {
+      return (p.review || "").trim();
+    }
 
-    <br>
+    function getPhotoCandidates(p) {
+      const candidates = [];
 
-    Created by
-    <a href="https://fernandapugliero.com" target="_blank">
-      Fernanda Pugliero
-    </a>
-  </footer>
+      if (p.photo_local_url) candidates.push(p.photo_local_url);
+      if (p.photo_url && !candidates.includes(p.photo_url)) candidates.push(p.photo_url);
+      if (p.photo_large_url && !candidates.includes(p.photo_large_url)) candidates.push(p.photo_large_url);
+      if (p.photo_small_url && !candidates.includes(p.photo_small_url)) candidates.push(p.photo_small_url);
 
-</div>
+      return candidates.filter(Boolean);
+    }
 
-<script>
-  let allPlaces = [];
+    function hasAnyPhoto(p) {
+      return getPhotoCandidates(p).length > 0;
+    }
 
-  function toRad(v) {
-    return (v * Math.PI) / 180;
-  }
+    function hasCoordinates(p) {
+      return Number.isFinite(Number(p.latitude)) && Number.isFinite(Number(p.longitude));
+    }
 
-  function distanceKm(lat1, lon1, lat2, lon2) {
-    const R = 6371;
+    function haversineKm(lat1, lon1, lat2, lon2) {
+      const R = 6371;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
 
-    const dLat = toRad(lat2 - lat1);
-    const dLon = toRad(lon2 - lon1);
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
 
-    const a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(toRad(lat1)) *
-      Math.cos(toRad(lat2)) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
 
-    return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
-  }
+    function getDistanceKm(p) {
+      if (!state.userLocation || !hasCoordinates(p)) return null;
 
-  function renderPlaces(places) {
-    const container = document.getElementById("results");
+      return haversineKm(
+        state.userLocation.lat,
+        state.userLocation.lon,
+        Number(p.latitude),
+        Number(p.longitude)
+      );
+    }
 
-    container.innerHTML = "";
+    function sortPlaces() {
+      state.filtered = [...state.all];
 
-    places.forEach(place => {
+      state.filtered.sort((a, b) => {
+        const da = getDistanceKm(a);
+        const db = getDistanceKm(b);
 
-      const photo =
-        place.photo_local_url ||
-        place.photo_url ||
-        "images/no-photo.jpg";
+        if (da !== null && db !== null && da !== db) return da - db;
+        if (da !== null && db === null) return -1;
+        if (da === null && db !== null) return 1;
 
-      const rating = place.stars || 0;
+        const ta = Date.parse(a.created_at || "") || 0;
+        const tb = Date.parse(b.created_at || "") || 0;
+        if (tb !== ta) return tb - ta;
 
-      const review =
-        place.review ||
-        "No review yet.";
+        const ap = hasAnyPhoto(a) ? 1 : 0;
+        const bp = hasAnyPhoto(b) ? 1 : 0;
+        if (bp !== ap) return bp - ap;
 
-      const distanceHtml = place.distance_km != null
-        ? `<div class="distance-tag">${place.distance_km.toFixed(1)} km away</div>`
-        : "";
+        const ar = getReview(a) ? 1 : 0;
+        const br = getReview(b) ? 1 : 0;
+        if (br !== ar) return br - ar;
 
-      const card = `
-        <article class="place-card">
+        return (a.name || "").localeCompare(b.name || "");
+      });
+    }
 
-          <img src="${photo}" alt="${place.name} changing table">
+    function showLoading(on) {
+      el.loading.style.display = on ? "block" : "none";
+      el.grid.style.display = on ? "none" : "grid";
+      el.error.style.display = "none";
+      el.moreLoader.style.display = "none";
+    }
 
-          <div class="place-content">
+    function showError(msg) {
+      el.error.style.display = "block";
+      el.error.textContent = msg;
+      el.grid.style.display = "none";
+      el.resultsBottom.style.display = "none";
+      el.moreLoader.style.display = "none";
+    }
 
-            ${distanceHtml}
+    function updateCount() {
+      el.resultsCount.textContent = String(Math.min(visibleCount, state.filtered.length));
+      el.resultsBottom.style.display = "block";
+    }
 
-            <div class="star-rating" style="--rating:${rating};"></div>
-            <span class="star-note">${rating}/5</span>
+    function renderCards() {
+      el.grid.innerHTML = "";
+      el.grid.style.display = "grid";
+      el.moreLoader.style.display = "none";
 
-            <p class="place-quote">
-              “${review}”
-            </p>
+      if (state.filtered.length === 0) {
+        el.grid.innerHTML = `<div class="loading-box">No changing tables found yet.</div>`;
+        return;
+      }
 
-            <div class="place-name">
-              ${place.name}
-            </div>
+      const frag = document.createDocumentFragment();
+      const items = state.filtered.slice(0, visibleCount);
 
-            <div class="place-meta">
-              ${place.address || ""}
-              <br>
-              ${place.city || ""}
-            </div>
+      items.forEach((p, idx) => {
+        frag.appendChild(buildCard(p, idx));
+      });
 
-          </div>
+      el.grid.appendChild(frag);
+      updateCount();
+    }
 
-        </article>
+    function appendMore() {
+      const already = el.grid.querySelectorAll(".place-card").length;
+      const next = state.filtered.slice(already, visibleCount);
+
+      if (next.length === 0) return;
+
+      const frag = document.createDocumentFragment();
+
+      next.forEach((p, idx) => {
+        frag.appendChild(buildCard(p, already + idx));
+      });
+
+      el.grid.appendChild(frag);
+      updateCount();
+    }
+
+    function buildCard(p, index) {
+      const card = document.createElement("article");
+      card.className = "place-card";
+
+      const media = document.createElement("div");
+      media.className = "place-media";
+
+      const photos = getPhotoCandidates(p);
+
+      if (photos.length > 0) {
+        const img = document.createElement("img");
+
+        if (index < 6) img.setAttribute("fetchpriority", "high");
+
+        img.loading = index < 6 ? "eager" : "lazy";
+        img.decoding = "async";
+        img.alt = `${p.name || "Place"} changing table`;
+
+        let photoIndex = 0;
+        img.src = photos[photoIndex];
+
+        img.onerror = () => {
+          photoIndex += 1;
+
+          if (photoIndex < photos.length) {
+            img.src = photos[photoIndex];
+            return;
+          }
+
+          media.innerHTML = "";
+          const span = document.createElement("span");
+          span.className = "no-photo";
+          span.textContent = "No photo yet";
+          media.appendChild(span);
+        };
+
+        media.appendChild(img);
+      } else {
+        const span = document.createElement("span");
+        span.className = "no-photo";
+        span.textContent = "No photo yet";
+        media.appendChild(span);
+      }
+
+      const stars = (typeof p.stars === "number") ? p.stars : null;
+      const starDiv = document.createElement("div");
+      starDiv.className = "star-rating";
+      starDiv.style.setProperty("--rating", stars || 0);
+      if (!stars) starDiv.classList.add("is-empty");
+
+      const note = document.createElement("span");
+      note.className = "star-note";
+      note.textContent = stars ? `${stars}/5` : "Not rated yet";
+
+      const starsWrap = document.createElement("div");
+      starsWrap.appendChild(starDiv);
+      starsWrap.appendChild(note);
+
+      const title = document.createElement("div");
+      title.className = "place-title";
+      title.textContent = p.name || "Unnamed place";
+
+      const meta = document.createElement("div");
+      meta.className = "place-meta";
+
+      const type = (p.type || "").toString().trim();
+      const address = (p.address || "").toString().trim();
+      const city = (p.city || "").toString().trim();
+      const country = (p.country || "").toString().trim();
+
+      const locationLine = [city, country].filter(Boolean).join(", ");
+
+      meta.innerHTML = `
+        ${escapeHtml(type || "Not specified")}
+        ${address ? "<br>" + escapeHtml(address) : ""}
+        ${locationLine ? "<br>" + escapeHtml(locationLine) : ""}
       `;
 
-      container.insertAdjacentHTML("beforeend", card);
-    });
-  }
+      const distance = getDistanceKm(p);
 
-  async function loadPlaces() {
-
-    const res = await fetch("/places.json");
-
-    const places = await res.json();
-
-    document.getElementById("places-count").textContent = places.length;
-
-    places.sort((a, b) => {
-      const aPhoto = a.has_photo ? 1 : 0;
-      const bPhoto = b.has_photo ? 1 : 0;
-
-      if (aPhoto !== bPhoto) {
-        return bPhoto - aPhoto;
+      let distanceEl = null;
+      if (distance !== null) {
+        distanceEl = document.createElement("span");
+        distanceEl.className = "distance-note";
+        distanceEl.textContent = `${distance.toFixed(distance < 10 ? 1 : 0)} km away`;
       }
 
-      return new Date(b.created_at) - new Date(a.created_at);
-    });
+      const reviewText = getReview(p);
+      let quote = null;
 
-    allPlaces = places;
-
-    renderPlaces(places);
-  }
-
-  async function geocode(query) {
-
-    const url =
-      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1`;
-
-    const res = await fetch(url);
-
-    const data = await res.json();
-
-    if (!data.length) return null;
-
-    return {
-      lat: parseFloat(data[0].lat),
-      lon: parseFloat(data[0].lon)
-    };
-  }
-
-  async function sortByLocation(query) {
-
-    const result = await geocode(query);
-
-    if (!result) return;
-
-    const { lat, lon } = result;
-
-    const enriched = allPlaces
-      .filter(p => p.latitude && p.longitude)
-      .map(p => ({
-        ...p,
-        distance_km: distanceKm(
-          lat,
-          lon,
-          parseFloat(p.latitude),
-          parseFloat(p.longitude)
-        )
-      }))
-      .sort((a, b) => a.distance_km - b.distance_km);
-
-    renderPlaces(enriched);
-  }
-
-  document.getElementById("geo-go")
-    .addEventListener("click", () => {
-
-      const value =
-        document.getElementById("geo-input").value.trim();
-
-      if (value) {
-        sortByLocation(value);
+      if (reviewText) {
+        quote = document.createElement("div");
+        quote.className = "place-quote";
+        quote.textContent = `“${reviewText}”`;
       }
-    });
 
-  document.getElementById("geo-me")
-    .addEventListener("click", () => {
+      const tags = getTags(p);
+      const tagsWrap = document.createElement("div");
+      tagsWrap.className = "tags";
 
-      navigator.geolocation.getCurrentPosition(pos => {
-
-        const lat = pos.coords.latitude;
-        const lon = pos.coords.longitude;
-
-        const enriched = allPlaces
-          .filter(p => p.latitude && p.longitude)
-          .map(p => ({
-            ...p,
-            distance_km: distanceKm(
-              lat,
-              lon,
-              parseFloat(p.latitude),
-              parseFloat(p.longitude)
-            )
-          }))
-          .sort((a, b) => a.distance_km - b.distance_km);
-
-        renderPlaces(enriched);
-
+      tags.slice(0, 12).forEach(t => {
+        const tag = document.createElement("span");
+        tag.className = "tag";
+        tag.textContent = t;
+        tagsWrap.appendChild(tag);
       });
+
+      card.appendChild(media);
+      card.appendChild(starsWrap);
+      card.appendChild(title);
+      card.appendChild(meta);
+      if (distanceEl) card.appendChild(distanceEl);
+      if (quote) card.appendChild(quote);
+      if (tags.length) card.appendChild(tagsWrap);
+
+      return card;
+    }
+
+    function getTags(p) {
+      const merged = [
+        ...(Array.isArray(p.changing_table_location) ? p.changing_table_location : (p.changing_table_location ? [p.changing_table_location] : [])),
+        ...(Array.isArray(p.supplies_available) ? p.supplies_available : (p.supplies_available ? [p.supplies_available] : [])),
+        ...(Array.isArray(p.changing_table_condition) ? p.changing_table_condition : (p.changing_table_condition ? [p.changing_table_condition] : [])),
+      ].map(x => String(x).trim()).filter(Boolean);
+
+      const seen = new Set();
+      const out = [];
+
+      for (const t of merged) {
+        const k = t.toLowerCase();
+        if (!seen.has(k)) {
+          seen.add(k);
+          out.push(t);
+        }
+      }
+
+      return out;
+    }
+
+    async function geocodeSearch(query) {
+      const url = new URL("https://nominatim.openstreetmap.org/search");
+      url.searchParams.set("q", query);
+      url.searchParams.set("format", "json");
+      url.searchParams.set("limit", "1");
+
+      const res = await fetch(url.toString(), {
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (!res.ok) throw new Error("Could not search this location.");
+
+      const data = await res.json();
+
+      if (!Array.isArray(data) || data.length === 0) {
+        throw new Error("Location not found. Try a more specific address.");
+      }
+
+      return {
+        lat: Number(data[0].lat),
+        lon: Number(data[0].lon),
+        label: data[0].display_name
+      };
+    }
+
+    async function handleSearch() {
+      const query = el.input.value.trim();
+
+      if (!query) {
+        el.statusText.textContent = "Type an address, ZIP code, city or neighborhood.";
+        return;
+      }
+
+      el.statusText.textContent = "Searching location…";
+
+      try {
+        const result = await geocodeSearch(query);
+
+        state.userLocation = {
+          lat: result.lat,
+          lon: result.lon
+        };
+
+        visibleCount = BATCH_SIZE;
+        sortPlaces();
+        renderCards();
+
+        el.statusText.textContent = `Showing closest changing tables to: ${result.label}`;
+
+      } catch (e) {
+        el.statusText.textContent = e.message || "Could not search this location.";
+      }
+    }
+
+    function handleUseMyLocation() {
+      if (!navigator.geolocation) {
+        el.statusText.textContent = "Your browser does not support location search.";
+        return;
+      }
+
+      el.statusText.textContent = "Getting your location…";
+
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          state.userLocation = {
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+          };
+
+          visibleCount = BATCH_SIZE;
+          sortPlaces();
+          renderCards();
+
+          el.statusText.textContent = "Showing closest changing tables to your current location.";
+        },
+        () => {
+          el.statusText.textContent = "Could not access your location. You can type an address instead.";
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 60000
+        }
+      );
+    }
+
+    async function load() {
+      showLoading(true);
+
+      try {
+        const res = await fetch(DATA_URL, { cache: "no-store" });
+        if (!res.ok) throw new Error(`Failed to load ${DATA_URL}: ${res.status} ${res.statusText}`);
+
+        const data = await res.json();
+        if (!Array.isArray(data)) throw new Error(`${DATA_URL} is not an array.`);
+
+        state.all = data;
+        el.count.textContent = String(data.length);
+
+        sortPlaces();
+        renderCards();
+
+        showLoading(false);
+
+      } catch (e) {
+        showLoading(false);
+        showError(e.message || String(e));
+      }
+    }
+
+    window.addEventListener("scroll", () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 700;
+
+      if (!nearBottom) return;
+      if (visibleCount >= state.filtered.length) return;
+
+      el.moreLoader.style.display = "block";
+
+      visibleCount = Math.min(state.filtered.length, visibleCount + BATCH_SIZE);
+      appendMore();
+
+      setTimeout(() => {
+        el.moreLoader.style.display = "none";
+      }, 250);
     });
 
-  loadPlaces();
-</script>
+    function escapeHtml(str) {
+      return String(str || "").replace(/[&<>"']/g, s => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[s]));
+    }
 
+    el.goBtn.addEventListener("click", handleSearch);
+    el.meBtn.addEventListener("click", handleUseMyLocation);
+
+    el.input.addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        handleSearch();
+      }
+    });
+
+    load();
+  </script>
 </body>
 </html>
