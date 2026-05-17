@@ -4,7 +4,7 @@ import os
 import time
 import re
 from datetime import datetime
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qs, unquote
 
 AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
 BASE_ID = "appjWF7WnC8DRWaXM"
