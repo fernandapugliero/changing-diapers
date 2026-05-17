@@ -288,7 +288,7 @@ while True:
         photo_url = photo_large_url or photo_small_url or photo_data["original"]
 
         photo_local_url = None
-        if city.lower() == "berlin" and photo_url:
+        if photo_url:
             photo_local_url = download_berlin_photo(
                 photo_data=photo_data,
                 name=name,
@@ -315,7 +315,7 @@ while True:
         )
 
         kids_area_photo_local_url = None
-        if city.lower() == "berlin" and kids_area and kids_area_photo_url:
+        if kids_area and kids_area_photo_url:
             kids_area_photo_local_url = download_berlin_photo(
                 photo_data=kids_area_photo_data,
                 name=f"{name}-kids-area",
