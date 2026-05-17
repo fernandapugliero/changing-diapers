@@ -240,21 +240,26 @@ while True:
         city = (fields.get("City", "") or "").strip()
         country = fields.get("Country", "")
         created_at = fields.get("Created at") or record.get("createdTime")
-
         google_maps_url = fields.get("Google Maps URL", "")
 
-if not lat or not lon:
-    lat_from_url, lon_from_url = extract_lat_lon_from_google_maps_url(google_maps_url)
+        # 1) Prefer manual coordinates from Google Maps URL when lat/lon are missing
+        if not lat or not lon:
+            lat_from_url, lon_from_url = extract_lat_lon_from_google_maps_url(google_maps_url)
 
-    if lat_from_url and lon_from_url:
-        lat, lon = lat_from_url, lon_from_url
-        print(f"[✓] Coordinates from Google Maps URL: {name} → {lat}, {lon}")
+            if lat_from_url and lon_from_url:
+                lat, lon = lat_from_url, lon_from_url
+                print(f"[✓] Coordinates from Google Maps URL: {name} → {lat}, {lon}")
 
-if (not lat or not lon) and address:
-    parts = [name, address, city, country]
-    search_address = ", ".join(str(x).strip() for x in parts if x and str(x).strip())
-    lat, lon = geocode_address(search_address)
-    time.sleep(1)
+        # 2) Fallback to geocoding address
+        if (not lat or not lon) and address:
+            parts = [name, address, city, country]
+            search_address = ", ".join(
+                str(x).strip()
+                for x in parts
+                if x and str(x).strip()
+            )
+            lat, lon = geocode_address(search_address)
+            time.sleep(1)
 
         overall_score = fields.get("Overall user experience")
         if overall_score is not None:
