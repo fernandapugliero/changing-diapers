@@ -325,6 +325,7 @@ if (not lat or not lon) and address:
             "city": city,
             "neighborhood": neighborhood,
             "address": address,
+            "google_maps_url": google_maps_url,
             "latitude": lat,
             "longitude": lon,
             "type": fields.get("Type", ""),
