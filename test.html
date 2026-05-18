@@ -74,6 +74,7 @@
       line-height: 1.4;
     }
 
+    /* same base as home */
     .map-search {
       margin: 0 auto 1.5rem auto;
       max-width: 720px;
@@ -94,6 +95,7 @@
       font-size: 14px;
       color: #333;
       background: #fff;
+      box-sizing: border-box;
     }
 
     .map-search button {
@@ -106,6 +108,7 @@
       font-size: 13px;
       font-weight: 600;
       color: #333;
+      box-sizing: border-box;
     }
 
     .map-search button:hover {
@@ -323,15 +326,29 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 480px) {
-      .map-search button {
-        flex: 0 0 auto;
-      }
-    }
-
     @media (max-width: 430px) {
       body {
         padding: 1.8rem;
+      }
+
+      /* Force input alone on first row, buttons below */
+      #geo-search.map-search {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      #geo-search.map-search input {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+      }
+
+      #geo-search.map-search button {
+        flex: 0 0 auto;
+        width: auto;
       }
 
       .place-media {
@@ -416,25 +433,6 @@
       meBtn: document.getElementById("geo-me")
     };
 
-    function parseCreatedAt(value) {
-      if (!value) return 0;
-
-      const raw = String(value).trim();
-
-      let t = Date.parse(raw);
-      if (!Number.isNaN(t)) return t;
-
-      const m = raw.match(/^(\d{1,2})[/.](\d{1,2})[/.](\d{4})/);
-      if (m) {
-        const day = Number(m[1]);
-        const month = Number(m[2]) - 1;
-        const year = Number(m[3]);
-        return new Date(year, month, day).getTime();
-      }
-
-      return 0;
-    }
-
     function getReview(p) {
       return String(p.review || "").trim();
     }
@@ -465,6 +463,34 @@
       if (photo && review) return 3;
       if (photo) return 2;
       return 1;
+    }
+
+    function parseSortDate(p) {
+      const raw =
+        p.date_yyyy_mm_dd ||
+        p.date ||
+        p["Date (YYYY-MM-DD)"] ||
+        p.created_at ||
+        "";
+
+      if (!raw) return 0;
+
+      const value = String(raw).trim();
+
+      // Best case: YYYY-MM-DD
+      const isoDay = value.match(/^(\d{4})-(\d{2})-(\d{2})/);
+      if (isoDay) {
+        return new Date(
+          Number(isoDay[1]),
+          Number(isoDay[2]) - 1,
+          Number(isoDay[3])
+        ).getTime();
+      }
+
+      const parsed = Date.parse(value);
+      if (!Number.isNaN(parsed)) return parsed;
+
+      return 0;
     }
 
     function hasCoordinates(p) {
@@ -514,12 +540,10 @@
 
         const ga = groupScore(a);
         const gb = groupScore(b);
-
         if (gb !== ga) return gb - ga;
 
-        const ta = parseCreatedAt(a.created_at);
-        const tb = parseCreatedAt(b.created_at);
-
+        const ta = parseSortDate(a);
+        const tb = parseSortDate(b);
         if (tb !== ta) return tb - ta;
 
         return String(a.name || "").localeCompare(String(b.name || ""));
