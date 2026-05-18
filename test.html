@@ -328,12 +328,24 @@
         padding: 1.8rem;
       }
 
-      .place-media {
-        height: 230px;
+      .map-search {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .map-search input {
+        flex: 1 0 100%;
+        max-width: none;
+        box-sizing: border-box;
       }
 
       .map-search button {
         flex: 0 0 auto;
+      }
+
+      .place-media {
+        height: 230px;
       }
 
       .results-bottom {
@@ -366,7 +378,7 @@
     </div>
 
     <p id="statusText" class="status-text">
-      Newest places first, with photos and reviews prioritized. Search by location to sort by distance.
+      Showing places with photos and reviews first, then newest submissions. Search by location to sort by distance.
     </p>
 
     <div id="loading" class="loading-box">Loading changing tables…</div>
@@ -433,6 +445,19 @@
       return getPhotoCandidates(p).length > 0;
     }
 
+    function hasReview(p) {
+      return Boolean(getReview(p));
+    }
+
+    function qualityScore(p) {
+      const photo = hasAnyPhoto(p);
+      const review = hasReview(p);
+
+      if (photo && review) return 2;
+      if (photo) return 1;
+      return 0;
+    }
+
     function hasCoordinates(p) {
       return Number.isFinite(Number(p.latitude)) && Number.isFinite(Number(p.longitude));
     }
@@ -471,21 +496,19 @@
         const da = getDistanceKm(a);
         const db = getDistanceKm(b);
 
-        if (da !== null && db !== null && da !== db) return da - db;
-        if (da !== null && db === null) return -1;
-        if (da === null && db !== null) return 1;
+        if (state.userLocation) {
+          if (da !== null && db !== null && da !== db) return da - db;
+          if (da !== null && db === null) return -1;
+          if (da === null && db !== null) return 1;
+        }
+
+        const qa = qualityScore(a);
+        const qb = qualityScore(b);
+        if (qb !== qa) return qb - qa;
 
         const ta = Date.parse(a.created_at || "") || 0;
         const tb = Date.parse(b.created_at || "") || 0;
         if (tb !== ta) return tb - ta;
-
-        const ap = hasAnyPhoto(a) ? 1 : 0;
-        const bp = hasAnyPhoto(b) ? 1 : 0;
-        if (bp !== ap) return bp - ap;
-
-        const ar = getReview(a) ? 1 : 0;
-        const br = getReview(b) ? 1 : 0;
-        if (br !== ar) return br - ar;
 
         return (a.name || "").localeCompare(b.name || "");
       });
@@ -694,9 +717,7 @@
       url.searchParams.set("limit", "1");
 
       const res = await fetch(url.toString(), {
-        headers: {
-          "Accept": "application/json"
-        }
+        headers: { "Accept": "application/json" }
       });
 
       if (!res.ok) throw new Error("Could not search this location.");
