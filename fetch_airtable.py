@@ -357,7 +357,8 @@ while True:
 
             "room_for_stroller": fields.get("Room for a stroller", False),
             "site": fields.get("Site", ""),
-            "created_at": created_at,
+            "created_at": fields.get("Created at", ""),
+            "date_yyyy_mm_dd": fields.get("Date (YYYY-MM-DD)", ""),
 
             "photo_small_url": photo_small_url,
             "photo_large_url": photo_large_url,
