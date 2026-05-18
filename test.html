@@ -488,28 +488,35 @@
     }
 
     function sortPlaces() {
-      state.filtered = [...state.all];
+  state.filtered = [...state.all];
 
-      state.filtered.sort((a, b) => {
-        const da = getDistanceKm(a);
-        const db = getDistanceKm(b);
+  state.filtered.sort((a, b) => {
+    const da = getDistanceKm(a);
+    const db = getDistanceKm(b);
 
-        if (state.userLocation) {
-          if (da !== null && db !== null && da !== db) return da - db;
-          if (da !== null && db === null) return -1;
-          if (da === null && db !== null) return 1;
-        }
+    if (state.userLocation) {
+      if (da !== null && db !== null && da !== db) return da - db;
+      if (da !== null && db === null) return -1;
+      if (da === null && db !== null) return 1;
+    }
 
-        const qa = qualityScore(a);
-        const qb = qualityScore(b);
-        if (qb !== qa) return qb - qa;
+    const aHasPhoto = hasAnyPhoto(a);
+    const bHasPhoto = hasAnyPhoto(b);
+    const aHasReview = Boolean(getReview(a));
+    const bHasReview = Boolean(getReview(b));
 
-        const ta = Date.parse(a.created_at || "") || 0;
-        const tb = Date.parse(b.created_at || "") || 0;
-        if (tb !== ta) return tb - ta;
+    const aGroup = aHasPhoto && aHasReview ? 3 : aHasPhoto ? 2 : 1;
+    const bGroup = bHasPhoto && bHasReview ? 3 : bHasPhoto ? 2 : 1;
 
-        return (a.name || "").localeCompare(b.name || "");
-      });
+    if (bGroup !== aGroup) return bGroup - aGroup;
+
+    const ta = Date.parse(a.created_at || "") || 0;
+    const tb = Date.parse(b.created_at || "") || 0;
+
+    if (tb !== ta) return tb - ta;
+
+    return (a.name || "").localeCompare(b.name || "");
+  });
     }
 
     function showLoading(on) {
