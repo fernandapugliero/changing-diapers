@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Changing Tables Around the World | Fix My Diaper</title>
-
   <meta name="description" content="Discover parent-submitted baby changing tables around the world, with photos, reviews and details to help families decide where to go.">
+  <meta name="keywords" content="baby changing tables, diaper changing stations, changing table near me, baby-friendly places, family-friendly cafes, family-friendly restaurants">
+  <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="Changing Tables Around the World | Fix My Diaper">
   <meta property="og:description" content="Explore parent-submitted baby changing tables around the world with photos, reviews and details.">
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url" content="https://fixmydiaper.com/list">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Changing Tables Around the World | Fix My Diaper">
+  <meta name="twitter:description" content="Explore parent-submitted baby changing tables around the world with photos, reviews and details.">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="style.css" />
@@ -40,6 +47,7 @@
 
     nav img {
       width: 30px;
+      height: auto;
       margin-right: 30px;
     }
 
@@ -86,7 +94,6 @@
       font-size: 14px;
       color: #333;
       background: #fff;
-      box-sizing: border-box;
     }
 
     .map-search button {
@@ -99,7 +106,6 @@
       font-size: 13px;
       font-weight: 600;
       color: #333;
-      flex: 0 0 auto;
     }
 
     .map-search button:hover {
@@ -119,6 +125,8 @@
       grid-template-columns: 1fr;
       gap: 1rem;
       margin-top: 0.6rem;
+      margin-bottom: 1.6rem;
+      align-items: start;
     }
 
     @media (min-width: 768px) {
@@ -134,6 +142,10 @@
       padding: 0.75rem;
       font-size: 0.9rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      min-height: 0;
     }
 
     .place-media {
@@ -142,6 +154,9 @@
       border-radius: 8px;
       background: #f6f6f6;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: .5rem;
     }
 
@@ -156,7 +171,7 @@
       font-size: 0.85rem;
       color: #777;
       text-align: center;
-      padding-top: 100px;
+      padding: 1rem;
     }
 
     .star-rating {
@@ -166,8 +181,22 @@
       position: relative;
       display: inline-block;
       font-size: 18px;
+      font-family: "Arial", "Helvetica", sans-serif;
+      line-height: 1;
       letter-spacing: 2px;
       margin-top: 4px;
+    }
+
+    .star-rating.is-empty::after {
+      width: 0;
+    }
+
+    .star-note {
+      display: inline-block;
+      font-size: 12px;
+      color: #777;
+      margin-left: 6px;
+      vertical-align: middle;
     }
 
     .star-rating::before {
@@ -184,46 +213,98 @@
       width: calc((var(--rating) / 5) * 100%);
       overflow: hidden;
       white-space: nowrap;
-    }
-
-    .star-note {
-      display: inline-block;
-      font-size: 12px;
-      color: #777;
-      margin-left: 6px;
+      pointer-events: none;
     }
 
     .place-title {
       font-size: 1rem;
       font-weight: 600;
-      margin-top: 0.4rem;
-    }
-
-    .place-meta {
-      font-size: 0.8rem;
-      color: #777;
-      line-height: 1.35;
-      margin-top: 0.3rem;
+      color:#333;
+      text-align:left;
+      margin: 0.25rem 0 0.15rem 0;
     }
 
     .place-quote {
       font-size: 0.85rem;
       color: #555;
       font-style: italic;
-      margin-top: 0.5rem;
+      margin: 0.25rem 0 0.5rem 0;
+      text-align:left;
+      line-height: 1.35;
+    }
+
+    .place-meta {
+      font-size: 0.8rem;
+      color:#777;
+      margin-top: 0.25rem;
+      text-align:left;
       line-height: 1.35;
     }
 
     .distance-note {
       display: inline-block;
-      margin-top: 0.45rem;
+      margin-top: 0.35rem;
       font-size: 0.78rem;
       color: #1f7ae0;
-      background: rgba(31,122,224,0.08);
-      border: 1px solid rgba(31,122,224,0.22);
+      background: rgba(31, 122, 224, 0.08);
+      border: 1px solid rgba(31, 122, 224, 0.22);
       border-radius: 999px;
       padding: 5px 9px;
+      width: fit-content;
       font-weight: 600;
+    }
+
+    .tags {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 6px;
+      margin-top: .5rem;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #eee;
+      color:#555;
+      background:#fafafa;
+      line-height: 1;
+    }
+
+    .loading-box {
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px dashed rgba(0,0,0,0.2);
+      border-radius: 12px;
+      padding: 12px;
+      text-align:center;
+      color:#666;
+    }
+
+    .error-box {
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px solid rgba(255,0,0,0.25);
+      background: rgba(255,0,0,0.05);
+      border-radius: 12px;
+      padding: 12px;
+      text-align:left;
+      color:#8a2b2b;
+    }
+
+    .results-bottom {
+      text-align:center;
+      margin: 1.8rem auto 0 auto;
+      color:#555;
+      font-size: 0.95rem;
+    }
+
+    .more-loader {
+      text-align:center;
+      color:#777;
+      font-size: 0.9rem;
+      margin: 0.5rem 0 0;
+      display:none;
     }
 
     footer {
@@ -238,27 +319,28 @@
       text-decoration: none;
     }
 
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 480px) {
+      .map-search button {
+        flex: 0 0 auto;
+      }
+    }
+
+    @media (max-width: 430px) {
       body {
         padding: 1.8rem;
       }
 
-      .map-search {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .map-search input {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .map-search button {
-        width: 100%;
-      }
-
       .place-media {
         height: 230px;
+      }
+
+      .results-bottom {
+        font-size: 0.92rem;
+        margin-top: 1.2rem;
       }
     }
   </style>
@@ -266,12 +348,11 @@
 
 <body>
   <div class="page">
-
     <nav>
       <img src="images/logo.png" alt="Fix My Diaper Logo">
-      <a href="/">Map</a>
-      <a href="/list">List</a>
-      <a href="/submit">Submit</a>
+      <a href="https://fixmydiaper.com/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
     </nav>
 
     <h1>Discover changing tables near you</h1>
@@ -282,26 +363,31 @@
 
     <div id="geo-search" class="map-search">
       <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
-      <button id="geo-go">Go</button>
-      <button id="geo-me">Use my location</button>
+      <button id="geo-go" type="button">Go</button>
+      <button id="geo-me" type="button">Use my location</button>
     </div>
 
     <p id="statusText" class="status-text">
-      Showing places with photos and reviews first, then newest submissions.
+      Showing places with photos and reviews first, then newest submissions. Search by location to sort by distance.
     </p>
 
-    <section id="cardsGrid" class="cards-grid"></section>
+    <div id="loading" class="loading-box">Loading changing tables…</div>
+    <div id="error" class="error-box" style="display:none;"></div>
+
+    <section id="cardsGrid" class="cards-grid" style="display:none;" aria-label="Changing tables list"></section>
+    <div id="moreLoader" class="more-loader">Loading more places…</div>
+
+    <div class="results-bottom" id="resultsBottom" style="display:none;">
+      <strong id="resultsCount">0</strong> places shown
+    </div>
 
     <footer>
       <a href="about">About</a> | 
       <a href="submit">Submit a Location</a> |
       <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
-
       Made with ♥️ in Berlin<br />
-
       Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
     </footer>
-
   </div>
 
   <script>
@@ -313,9 +399,17 @@
       userLocation: null
     };
 
+    let visibleCount = 24;
+    const BATCH_SIZE = 24;
+
     const el = {
       count: document.getElementById("placesCount"),
       grid: document.getElementById("cardsGrid"),
+      loading: document.getElementById("loading"),
+      error: document.getElementById("error"),
+      resultsBottom: document.getElementById("resultsBottom"),
+      resultsCount: document.getElementById("resultsCount"),
+      moreLoader: document.getElementById("moreLoader"),
       statusText: document.getElementById("statusText"),
       input: document.getElementById("geo-input"),
       goBtn: document.getElementById("geo-go"),
@@ -331,12 +425,10 @@
       if (!Number.isNaN(t)) return t;
 
       const m = raw.match(/^(\d{1,2})[/.](\d{1,2})[/.](\d{4})/);
-
       if (m) {
         const day = Number(m[1]);
         const month = Number(m[2]) - 1;
         const year = Number(m[3]);
-
         return new Date(year, month, day).getTime();
       }
 
@@ -351,19 +443,19 @@
       const candidates = [];
 
       if (p.photo_local_url) candidates.push(p.photo_local_url);
-      if (p.photo_url) candidates.push(p.photo_url);
-      if (p.photo_large_url) candidates.push(p.photo_large_url);
-      if (p.photo_small_url) candidates.push(p.photo_small_url);
+      if (p.photo_url && !candidates.includes(p.photo_url)) candidates.push(p.photo_url);
+      if (p.photo_large_url && !candidates.includes(p.photo_large_url)) candidates.push(p.photo_large_url);
+      if (p.photo_small_url && !candidates.includes(p.photo_small_url)) candidates.push(p.photo_small_url);
 
-      return [...new Set(candidates.filter(Boolean))];
-    }
-
-    function hasReview(p) {
-      return getReview(p).length > 0;
+      return candidates.filter(Boolean);
     }
 
     function hasAnyPhoto(p) {
       return getPhotoCandidates(p).length > 0;
+    }
+
+    function hasReview(p) {
+      return getReview(p).length > 0;
     }
 
     function groupScore(p) {
@@ -375,26 +467,29 @@
       return 1;
     }
 
+    function hasCoordinates(p) {
+      return Number.isFinite(Number(p.latitude)) && Number.isFinite(Number(p.longitude));
+    }
+
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
     function haversineKm(lat1, lon1, lat2, lon2) {
       const R = 6371;
-
-      const dLat = (lat2 - lat1) * Math.PI / 180;
-      const dLon = (lon2 - lon1) * Math.PI / 180;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
 
       const a =
         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(lat1 * Math.PI / 180) *
-        Math.cos(lat2 * Math.PI / 180) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
 
       return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     }
 
     function getDistanceKm(p) {
-      if (!state.userLocation) return null;
-
-      if (!p.latitude || !p.longitude) return null;
+      if (!state.userLocation || !hasCoordinates(p)) return null;
 
       return haversineKm(
         state.userLocation.lat,
@@ -408,7 +503,6 @@
       state.filtered = [...state.all];
 
       state.filtered.sort((a, b) => {
-
         const da = getDistanceKm(a);
         const db = getDistanceKm(b);
 
@@ -432,82 +526,328 @@
       });
     }
 
-    function buildCard(p) {
+    function showLoading(on) {
+      el.loading.style.display = on ? "block" : "none";
+      el.grid.style.display = on ? "none" : "grid";
+      el.error.style.display = "none";
+      el.moreLoader.style.display = "none";
+    }
 
-      const card = document.createElement("article");
-      card.className = "place-card";
+    function showError(msg) {
+      el.error.style.display = "block";
+      el.error.textContent = msg;
+      el.grid.style.display = "none";
+      el.resultsBottom.style.display = "none";
+      el.moreLoader.style.display = "none";
+    }
 
-      const photos = getPhotoCandidates(p);
-
-      let mediaHtml = `
-        <div class="place-media">
-          <div class="no-photo">No photo yet</div>
-        </div>
-      `;
-
-      if (photos.length > 0) {
-        mediaHtml = `
-          <div class="place-media">
-            <img src="${photos[0]}" alt="${p.name} changing table" loading="lazy">
-          </div>
-        `;
-      }
-
-      const review = getReview(p);
-
-      const distance = getDistanceKm(p);
-
-      card.innerHTML = `
-        ${mediaHtml}
-
-        <div>
-          <div class="star-rating" style="--rating:${p.stars || 0};"></div>
-          <span class="star-note">${p.stars ? p.stars + "/5" : "Not rated yet"}</span>
-        </div>
-
-        <div class="place-title">${escapeHtml(p.name || "Unnamed")}</div>
-
-        <div class="place-meta">
-          ${escapeHtml(p.address || "")}<br>
-          ${escapeHtml([p.city, p.country].filter(Boolean).join(", "))}
-        </div>
-
-        ${
-          distance !== null
-            ? `<div class="distance-note">${distance.toFixed(distance < 10 ? 1 : 0)} km away</div>`
-            : ""
-        }
-
-        ${
-          review
-            ? `<div class="place-quote">“${escapeHtml(review)}”</div>`
-            : ""
-        }
-      `;
-
-      return card;
+    function updateCount() {
+      el.resultsCount.textContent = String(Math.min(visibleCount, state.filtered.length));
+      el.resultsBottom.style.display = "block";
     }
 
     function renderCards() {
       el.grid.innerHTML = "";
+      el.grid.style.display = "grid";
+      el.moreLoader.style.display = "none";
 
-      state.filtered.forEach(place => {
-        el.grid.appendChild(buildCard(place));
+      if (state.filtered.length === 0) {
+        el.grid.innerHTML = `<div class="loading-box">No changing tables found yet.</div>`;
+        return;
+      }
+
+      const frag = document.createDocumentFragment();
+      const items = state.filtered.slice(0, visibleCount);
+
+      items.forEach((p, idx) => {
+        frag.appendChild(buildCard(p, idx));
       });
+
+      el.grid.appendChild(frag);
+      updateCount();
+    }
+
+    function appendMore() {
+      const already = el.grid.querySelectorAll(".place-card").length;
+      const next = state.filtered.slice(already, visibleCount);
+
+      if (next.length === 0) return;
+
+      const frag = document.createDocumentFragment();
+
+      next.forEach((p, idx) => {
+        frag.appendChild(buildCard(p, already + idx));
+      });
+
+      el.grid.appendChild(frag);
+      updateCount();
+    }
+
+    function buildCard(p, index) {
+      const card = document.createElement("article");
+      card.className = "place-card";
+
+      const media = document.createElement("div");
+      media.className = "place-media";
+
+      const photos = getPhotoCandidates(p);
+
+      if (photos.length > 0) {
+        const img = document.createElement("img");
+
+        if (index < 6) img.setAttribute("fetchpriority", "high");
+
+        img.loading = index < 6 ? "eager" : "lazy";
+        img.decoding = "async";
+        img.alt = `${p.name || "Place"} changing table`;
+
+        let photoIndex = 0;
+        img.src = photos[photoIndex];
+
+        img.onerror = () => {
+          photoIndex += 1;
+
+          if (photoIndex < photos.length) {
+            img.src = photos[photoIndex];
+            return;
+          }
+
+          media.innerHTML = "";
+          const span = document.createElement("span");
+          span.className = "no-photo";
+          span.textContent = "No photo yet";
+          media.appendChild(span);
+        };
+
+        media.appendChild(img);
+      } else {
+        const span = document.createElement("span");
+        span.className = "no-photo";
+        span.textContent = "No photo yet";
+        media.appendChild(span);
+      }
+
+      const stars = (typeof p.stars === "number") ? p.stars : null;
+
+      const starDiv = document.createElement("div");
+      starDiv.className = "star-rating";
+      starDiv.style.setProperty("--rating", stars || 0);
+      if (!stars) starDiv.classList.add("is-empty");
+
+      const note = document.createElement("span");
+      note.className = "star-note";
+      note.textContent = stars ? `${stars}/5` : "Not rated yet";
+
+      const starsWrap = document.createElement("div");
+      starsWrap.appendChild(starDiv);
+      starsWrap.appendChild(note);
+
+      const title = document.createElement("div");
+      title.className = "place-title";
+      title.textContent = p.name || "Unnamed place";
+
+      const meta = document.createElement("div");
+      meta.className = "place-meta";
+
+      const type = (p.type || "").toString().trim();
+      const address = (p.address || "").toString().trim();
+      const city = (p.city || "").toString().trim();
+      const country = (p.country || "").toString().trim();
+      const locationLine = [city, country].filter(Boolean).join(", ");
+
+      meta.innerHTML = `
+        ${escapeHtml(type || "Not specified")}
+        ${address ? "<br>" + escapeHtml(address) : ""}
+        ${locationLine ? "<br>" + escapeHtml(locationLine) : ""}
+      `;
+
+      const distance = getDistanceKm(p);
+
+      let distanceEl = null;
+      if (distance !== null) {
+        distanceEl = document.createElement("span");
+        distanceEl.className = "distance-note";
+        distanceEl.textContent = `${distance.toFixed(distance < 10 ? 1 : 0)} km away`;
+      }
+
+      const reviewText = getReview(p);
+
+      let quote = null;
+      if (reviewText) {
+        quote = document.createElement("div");
+        quote.className = "place-quote";
+        quote.textContent = `“${reviewText}”`;
+      }
+
+      const tags = getTags(p);
+      const tagsWrap = document.createElement("div");
+      tagsWrap.className = "tags";
+
+      tags.slice(0, 12).forEach(t => {
+        const tag = document.createElement("span");
+        tag.className = "tag";
+        tag.textContent = t;
+        tagsWrap.appendChild(tag);
+      });
+
+      card.appendChild(media);
+      card.appendChild(starsWrap);
+      card.appendChild(title);
+      card.appendChild(meta);
+      if (distanceEl) card.appendChild(distanceEl);
+      if (quote) card.appendChild(quote);
+      if (tags.length) card.appendChild(tagsWrap);
+
+      return card;
+    }
+
+    function getTags(p) {
+      const merged = [
+        ...(Array.isArray(p.changing_table_location) ? p.changing_table_location : (p.changing_table_location ? [p.changing_table_location] : [])),
+        ...(Array.isArray(p.supplies_available) ? p.supplies_available : (p.supplies_available ? [p.supplies_available] : [])),
+        ...(Array.isArray(p.changing_table_condition) ? p.changing_table_condition : (p.changing_table_condition ? [p.changing_table_condition] : [])),
+      ].map(x => String(x).trim()).filter(Boolean);
+
+      const seen = new Set();
+      const out = [];
+
+      for (const t of merged) {
+        const k = t.toLowerCase();
+        if (!seen.has(k)) {
+          seen.add(k);
+          out.push(t);
+        }
+      }
+
+      return out;
+    }
+
+    async function geocodeSearch(query) {
+      const url = new URL("https://nominatim.openstreetmap.org/search");
+      url.searchParams.set("q", query);
+      url.searchParams.set("format", "json");
+      url.searchParams.set("limit", "1");
+
+      const res = await fetch(url.toString(), {
+        headers: { "Accept": "application/json" }
+      });
+
+      if (!res.ok) throw new Error("Could not search this location.");
+
+      const data = await res.json();
+
+      if (!Array.isArray(data) || data.length === 0) {
+        throw new Error("Location not found. Try a more specific address.");
+      }
+
+      return {
+        lat: Number(data[0].lat),
+        lon: Number(data[0].lon),
+        label: data[0].display_name
+      };
+    }
+
+    async function handleSearch() {
+      const query = el.input.value.trim();
+
+      if (!query) {
+        el.statusText.textContent = "Type an address, ZIP code, city or neighborhood.";
+        return;
+      }
+
+      el.statusText.textContent = "Searching location…";
+
+      try {
+        const result = await geocodeSearch(query);
+
+        state.userLocation = {
+          lat: result.lat,
+          lon: result.lon
+        };
+
+        visibleCount = BATCH_SIZE;
+        sortPlaces();
+        renderCards();
+
+        el.statusText.textContent = `Showing closest changing tables to: ${result.label}`;
+
+      } catch (e) {
+        el.statusText.textContent = e.message || "Could not search this location.";
+      }
+    }
+
+    function handleUseMyLocation() {
+      if (!navigator.geolocation) {
+        el.statusText.textContent = "Your browser does not support location search.";
+        return;
+      }
+
+      el.statusText.textContent = "Getting your location…";
+
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          state.userLocation = {
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+          };
+
+          visibleCount = BATCH_SIZE;
+          sortPlaces();
+          renderCards();
+
+          el.statusText.textContent = "Showing closest changing tables to your current location.";
+        },
+        () => {
+          el.statusText.textContent = "Could not access your location. You can type an address instead.";
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 60000
+        }
+      );
     }
 
     async function load() {
+      showLoading(true);
 
-      const res = await fetch(DATA_URL);
-      const data = await res.json();
+      try {
+        const res = await fetch(DATA_URL, { cache: "no-store" });
+        if (!res.ok) throw new Error(`Failed to load ${DATA_URL}: ${res.status} ${res.statusText}`);
 
-      state.all = data;
+        const data = await res.json();
+        if (!Array.isArray(data)) throw new Error(`${DATA_URL} is not an array.`);
 
-      el.count.textContent = data.length;
+        state.all = data;
+        el.count.textContent = String(data.length);
 
-      sortPlaces();
-      renderCards();
+        sortPlaces();
+        renderCards();
+
+        showLoading(false);
+
+      } catch (e) {
+        showLoading(false);
+        showError(e.message || String(e));
+      }
     }
+
+    window.addEventListener("scroll", () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 700;
+
+      if (!nearBottom) return;
+      if (visibleCount >= state.filtered.length) return;
+
+      el.moreLoader.style.display = "block";
+
+      visibleCount = Math.min(state.filtered.length, visibleCount + BATCH_SIZE);
+      appendMore();
+
+      setTimeout(() => {
+        el.moreLoader.style.display = "none";
+      }, 250);
+    });
 
     function escapeHtml(str) {
       return String(str || "").replace(/[&<>"']/g, s => ({
@@ -519,8 +859,16 @@
       }[s]));
     }
 
+    el.goBtn.addEventListener("click", handleSearch);
+    el.meBtn.addEventListener("click", handleUseMyLocation);
+
+    el.input.addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        handleSearch();
+      }
+    });
+
     load();
   </script>
-
 </body>
 </html>
