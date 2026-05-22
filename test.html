@@ -81,7 +81,6 @@
       font-size: 14px;
       color: #333;
       background: #fff;
-      box-sizing: border-box;
     }
 
     .map-search button {
@@ -94,11 +93,16 @@
       font-size: 13px;
       font-weight: 600;
       color: #333;
-      white-space: nowrap;
     }
 
     .map-search button:hover {
       background: #efefef;
+    }
+
+    @media (max-width: 480px) {
+      .map-search button {
+        flex: 0 0 auto;
+      }
     }
 
     .status-text {
@@ -186,36 +190,6 @@
       line-height: 1.35;
     }
 
-    .distance-note {
-      display: inline-block;
-      margin-top: 0.35rem;
-      font-size: 0.78rem;
-      color: #1f7ae0;
-      background: rgba(31, 122, 224, 0.08);
-      border: 1px solid rgba(31, 122, 224, 0.22);
-      border-radius: 999px;
-      padding: 5px 9px;
-      width: fit-content;
-      font-weight: 600;
-    }
-
-    .tags {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 6px;
-      margin-top: .5rem;
-    }
-
-    .tag {
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid #eee;
-      color:#555;
-      background:#fafafa;
-      line-height: 1;
-    }
-
     .loading-box {
       max-width: 720px;
       margin: 1.5rem auto 0 auto;
@@ -249,34 +223,13 @@
       text-decoration: underline;
     }
 
-    /* MOBILE */
-    @media (max-width: 480px) {
-
-      .map-search {
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        gap: 8px;
-      }
-
-      .map-search input {
-        grid-column: 1 / -1;
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .map-search button {
-        width: auto;
+    @media (max-width: 430px) {
+      body {
+        padding: 1.8rem;
       }
 
       .place-media {
         height: 230px;
-      }
-    }
-
-    @media (max-width: 430px) {
-      body {
-        padding: 1.8rem;
       }
 
       .results-bottom {
@@ -303,20 +256,10 @@
       Explore <strong id="placesCount">0</strong> parent-submitted changing tables around the world — with photos, reviews and details to help you decide where to go.
     </h2>
 
-    <div class="map-search">
-      <input
-        id="geo-input"
-        type="text"
-        placeholder="Type a place, address, city, or country"
-      />
-
-      <button id="geo-go">
-        Go
-      </button>
-
-      <button id="geo-me">
-        Use my location
-      </button>
+    <div id="geo-search" class="map-search">
+      <input id="geo-input" type="text" placeholder="Type a place, address, city, or country" />
+      <button id="geo-go" type="button">Go</button>
+      <button id="geo-me" type="button">Use my location</button>
     </div>
 
     <p id="statusText" class="status-text">
@@ -327,15 +270,10 @@
       Loading changing tables…
     </div>
 
-    <section
-      id="cardsGrid"
-      class="cards-grid"
-      style="display:none;">
-    </section>
+    <section id="cardsGrid" class="cards-grid" style="display:none;"></section>
 
     <div class="results-bottom" id="resultsBottom" style="display:none;">
       <strong id="resultsCount">0</strong> places shown
-      <span id="resultsContext"></span>
     </div>
 
     <footer>
@@ -357,13 +295,10 @@
       filtered: []
     };
 
-    let visibleCount = 24;
-
     const el = {
       count: document.getElementById("placesCount"),
       grid: document.getElementById("cardsGrid"),
       loading: document.getElementById("loading"),
-      statusText: document.getElementById("statusText"),
       input: document.getElementById("geo-input"),
       goBtn: document.getElementById("geo-go"),
       resultsBottom: document.getElementById("resultsBottom"),
@@ -379,13 +314,7 @@
     }
 
     function getPhoto(p) {
-      return (
-        p.photo_local_url ||
-        p.photo_url ||
-        p.photo_large_url ||
-        p.photo_small_url ||
-        null
-      );
+      return p.photo_local_url || p.photo_url || p.photo_large_url || p.photo_small_url || null;
     }
 
     function hasPhoto(p) {
@@ -403,21 +332,13 @@
     }
 
     function parseSortDate(p) {
-      const raw =
-        p.record_created_time ||
-        p.created_at ||
-        p.date_yyyy_mm_dd ||
-        "";
-
+      const raw = p.record_created_time || p.created_at || p.date_yyyy_mm_dd || "";
       const parsed = Date.parse(raw);
       return Number.isNaN(parsed) ? 0 : parsed;
     }
 
     function duplicateKey(p) {
-      return [
-        normalizeText(p.name),
-        normalizeText(p.address)
-      ].join("|");
+      return [normalizeText(p.name), normalizeText(p.address)].join("|");
     }
 
     function dedupePlaces(places) {
@@ -433,17 +354,9 @@
 
         const current = map.get(key);
 
-        const currentScore = groupScore(current);
-        const nextScore = groupScore(p);
-
-        if (nextScore > currentScore) {
-          map.set(key, p);
-          return;
-        }
-
         if (
-          nextScore === currentScore &&
-          parseSortDate(p) > parseSortDate(current)
+          groupScore(p) > groupScore(current) ||
+          (groupScore(p) === groupScore(current) && parseSortDate(p) > parseSortDate(current))
         ) {
           map.set(key, p);
         }
@@ -454,13 +367,10 @@
 
     function sortDefault(places) {
       return [...places].sort((a, b) => {
-
         const scoreA = groupScore(a);
         const scoreB = groupScore(b);
 
-        if (scoreB !== scoreA) {
-          return scoreB - scoreA;
-        }
+        if (scoreB !== scoreA) return scoreB - scoreA;
 
         return parseSortDate(b) - parseSortDate(a);
       });
@@ -480,7 +390,6 @@
     }
 
     function textMatchScore(p, query) {
-
       const terms = textAliases(query);
 
       const country = normalizeText(p.country);
@@ -491,15 +400,11 @@
       let score = 0;
 
       terms.forEach(term => {
-
         if (country === term) score += 1000;
         if (city === term) score += 700;
-
         if (country.includes(term)) score += 300;
         if (city.includes(term)) score += 200;
-
         if (name.includes(term)) score += 120;
-
         if (address.includes(term)) score += 10;
       });
 
@@ -507,42 +412,26 @@
     }
 
     function textSearchResults(query) {
-
       return state.displayAll
-        .map(p => ({
-          place: p,
-          score: textMatchScore(p, query)
-        }))
+        .map(p => ({ place: p, score: textMatchScore(p, query) }))
         .filter(x => x.score > 0)
         .sort((a, b) => {
-
-          if (b.score !== a.score) {
-            return b.score - a.score;
-          }
+          if (b.score !== a.score) return b.score - a.score;
 
           const groupA = groupScore(a.place);
           const groupB = groupScore(b.place);
 
-          if (groupB !== groupA) {
-            return groupB - groupA;
-          }
+          if (groupB !== groupA) return groupB - groupA;
 
-          return (
-            parseSortDate(b.place) -
-            parseSortDate(a.place)
-          );
+          return parseSortDate(b.place) - parseSortDate(a.place);
         })
         .map(x => x.place);
     }
 
     function renderCards() {
-
       el.grid.innerHTML = "";
 
-      const items = state.filtered.slice(0, visibleCount);
-
-      items.forEach(place => {
-
+      state.filtered.forEach(place => {
         const card = document.createElement("article");
         card.className = "place-card";
 
@@ -557,23 +446,15 @@
             }
           </div>
 
-          <div class="place-title">
-            ${place.name || "Unnamed place"}
-          </div>
+          <div class="place-title">${place.name || "Unnamed place"}</div>
 
           <div class="place-meta">
             ${place.type || ""}
             ${place.address ? `<br>${place.address}` : ""}
-            ${(place.city || place.country)
-              ? `<br>${[place.city, place.country].filter(Boolean).join(", ")}`
-              : ""}
+            ${(place.city || place.country) ? `<br>${[place.city, place.country].filter(Boolean).join(", ")}` : ""}
           </div>
 
-          ${
-            place.review
-            ? `<div class="place-quote">“${place.review}”</div>`
-            : ""
-          }
+          ${place.review ? `<div class="place-quote">“${place.review}”</div>` : ""}
         `;
 
         el.grid.appendChild(card);
@@ -581,13 +462,11 @@
 
       el.loading.style.display = "none";
       el.grid.style.display = "grid";
-
       el.resultsBottom.style.display = "block";
       el.resultsCount.textContent = state.filtered.length;
     }
 
-    async function handleSearch() {
-
+    function handleSearch() {
       const query = el.input.value.trim();
 
       if (!query) {
@@ -596,22 +475,16 @@
         return;
       }
 
-      const matches = textSearchResults(query);
-
-      state.filtered = matches;
-
+      state.filtered = textSearchResults(query);
       renderCards();
     }
 
     async function load() {
-
       const res = await fetch(DATA_URL);
       const data = await res.json();
 
       state.all = data;
-
       state.displayAll = dedupePlaces(data);
-
       state.filtered = sortDefault(state.displayAll);
 
       el.count.textContent = data.length;
@@ -622,9 +495,7 @@
     el.goBtn.addEventListener("click", handleSearch);
 
     el.input.addEventListener("keydown", event => {
-      if (event.key === "Enter") {
-        handleSearch();
-      }
+      if (event.key === "Enter") handleSearch();
     });
 
     load();
