@@ -397,6 +397,7 @@
 
     const state = {
       all: [],
+      displayAll: [],
       filtered: [],
       userLocation: null,
       mode: "default",
@@ -550,22 +551,59 @@
       return [q, ...(aliases[q] || [])].filter(Boolean);
     }
 
-    function placeText(p) {
-      return normalizeText([
-        p.name,
-        p.type,
-        p.address,
-        p.city,
-        p.country,
-        p.neighborhood
-      ].filter(Boolean).join(" "));
+    function textMatchScore(p, query) {
+      const terms = textAliases(query);
+
+      const country = normalizeText(p.country);
+      const city = normalizeText(p.city);
+      const name = normalizeText(p.name);
+      const address = normalizeText(p.address);
+      const neighborhood = normalizeText(p.neighborhood);
+      const type = normalizeText(p.type);
+
+      let score = 0;
+
+      terms.forEach(term => {
+        if (!term) return;
+
+        if (country === term) score += 1000;
+        if (city === term) score += 700;
+        if (neighborhood === term) score += 500;
+
+        if (country.includes(term)) score += 300;
+        if (city.includes(term)) score += 220;
+        if (neighborhood.includes(term)) score += 180;
+
+        if (name.includes(term)) score += 120;
+        if (type.includes(term)) score += 60;
+
+        if (address.includes(term)) score += 10;
+      });
+
+      return score;
     }
 
-    function textMatchesPlace(p, query) {
-      const terms = textAliases(query);
-      const haystack = placeText(p);
+    function textSearchResults(query) {
+      return state.displayAll
+        .map(p => ({
+          place: p,
+          score: textMatchScore(p, query)
+        }))
+        .filter(x => x.score > 0)
+        .sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
 
-      return terms.some(term => haystack.includes(term));
+          const ga = groupScore(a.place);
+          const gb = groupScore(b.place);
+          if (gb !== ga) return gb - ga;
+
+          const ta = parseSortDate(a.place);
+          const tb = parseSortDate(b.place);
+          if (tb !== ta) return tb - ta;
+
+          return String(a.place.name || "").localeCompare(String(b.place.name || ""));
+        })
+        .map(x => x.place);
     }
 
     function hasCoordinates(p) {
@@ -851,19 +889,19 @@
         state.userLocation = null;
         state.mode = "default";
         state.contextText = "";
-        state.filtered = sortDefault(state.all);
+        state.filtered = sortDefault(state.displayAll);
         visibleCount = BATCH_SIZE;
         el.statusText.textContent = "Showing places with photos and reviews first, then newest submissions. Search by place, city, country, or address.";
         renderCards();
         return;
       }
 
-      const textMatches = state.all.filter(p => textMatchesPlace(p, query));
+      const textMatches = textSearchResults(query);
 
       if (textMatches.length > 0) {
         state.userLocation = null;
         state.mode = "text";
-        state.filtered = sortDefault(dedupePlaces(textMatches));
+        state.filtered = dedupePlaces(textMatches);
         state.contextText = `matching "${query}"`;
         visibleCount = BATCH_SIZE;
 
@@ -883,7 +921,7 @@
         };
 
         state.mode = "geocode";
-        state.filtered = sortByDistance(state.all);
+        state.filtered = sortByDistance(state.displayAll);
         state.contextText = `closest to "${query}"`;
         visibleCount = BATCH_SIZE;
 
@@ -914,7 +952,7 @@
             lon: position.coords.longitude
           };
 
-          const nearby = state.all
+          const nearby = state.displayAll
             .map(p => ({ ...p, distance_km: getDistanceKm(p) }))
             .filter(p => p.distance_km !== null && p.distance_km <= LOCATION_RADIUS_KM);
 
@@ -952,8 +990,9 @@
         const data = await res.json();
         if (!Array.isArray(data)) throw new Error(`${DATA_URL} is not an array.`);
 
-        state.all = dedupePlaces(data);
-        state.filtered = sortDefault(state.all);
+        state.all = data;
+        state.displayAll = dedupePlaces(data);
+        state.filtered = sortDefault(state.displayAll);
         state.contextText = "";
 
         el.count.textContent = String(state.all.length);
