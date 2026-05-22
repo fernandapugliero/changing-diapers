@@ -81,6 +81,7 @@
       font-size: 14px;
       color: #333;
       background: #fff;
+      box-sizing: border-box;
     }
 
     .map-search button {
@@ -248,12 +249,13 @@
       text-decoration: underline;
     }
 
-    /* MOBILE FIX */
+    /* MOBILE */
     @media (max-width: 480px) {
 
       .map-search {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
+        justify-content: center;
         gap: 8px;
       }
 
@@ -261,11 +263,10 @@
         grid-column: 1 / -1;
         width: 100%;
         max-width: 100%;
-        box-sizing: border-box;
       }
 
       .map-search button {
-        width: 100%;
+        width: auto;
       }
 
       .place-media {
@@ -349,13 +350,11 @@
 
   <script>
     const DATA_URL = "/places.json";
-    const LOCATION_RADIUS_KM = 10;
 
     const state = {
       all: [],
       displayAll: [],
-      filtered: [],
-      userLocation: null
+      filtered: []
     };
 
     let visibleCount = 24;
@@ -367,10 +366,8 @@
       statusText: document.getElementById("statusText"),
       input: document.getElementById("geo-input"),
       goBtn: document.getElementById("geo-go"),
-      meBtn: document.getElementById("geo-me"),
       resultsBottom: document.getElementById("resultsBottom"),
-      resultsCount: document.getElementById("resultsCount"),
-      resultsContext: document.getElementById("resultsContext")
+      resultsCount: document.getElementById("resultsCount")
     };
 
     function normalizeText(value) {
@@ -602,8 +599,6 @@
       const matches = textSearchResults(query);
 
       state.filtered = matches;
-
-      el.resultsContext.textContent = `matching "${query}"`;
 
       renderCards();
     }
