@@ -99,12 +99,6 @@
       background: #efefef;
     }
 
-    @media (max-width: 480px) {
-      .map-search button {
-        flex: 0 0 auto;
-      }
-    }
-
     .status-text {
       text-align: center;
       color: #666;
@@ -190,6 +184,19 @@
       line-height: 1.35;
     }
 
+    .distance-note {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: #1f7ae0;
+      background: rgba(31, 122, 224, 0.08);
+      border: 1px solid rgba(31, 122, 224, 0.22);
+      border-radius: 999px;
+      padding: 5px 9px;
+      width: fit-content;
+      font-weight: 600;
+    }
+
     .loading-box {
       max-width: 720px;
       margin: 1.5rem auto 0 auto;
@@ -223,6 +230,12 @@
       text-decoration: underline;
     }
 
+    @media (max-width: 480px) {
+      .map-search button {
+        flex: 0 0 auto;
+      }
+    }
+
     @media (max-width: 430px) {
       body {
         padding: 1.8rem;
@@ -245,9 +258,9 @@
 
     <nav>
       <img src="images/logo.png" alt="Fix My Diaper Logo">
-      <a href="/">Map</a>
-      <a href="/list">List</a>
-      <a href="/submit">Submit</a>
+      <a href="https://fixmydiaper.com/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
     </nav>
 
     <h1>Discover changing tables near you</h1>
@@ -266,43 +279,47 @@
       Showing places with photos and reviews first, then newest submissions.
     </p>
 
-    <div id="loading" class="loading-box">
-      Loading changing tables…
-    </div>
+    <div id="loading" class="loading-box">Loading changing tables…</div>
 
     <section id="cardsGrid" class="cards-grid" style="display:none;"></section>
 
     <div class="results-bottom" id="resultsBottom" style="display:none;">
       <strong id="resultsCount">0</strong> places shown
+      <span id="resultsContext"></span>
     </div>
 
     <footer>
-      <a href="/about">About</a> |
-      <a href="/submit">Submit a Location</a> |
-      <a href="https://www.instagram.com/fixmydiaper">Instagram</a>
-      <br><br>
-      Made with ♥️ in Berlin
+      <a href="about">About</a> | 
+      <a href="submit">Submit a Location</a> |
+      <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
+      Made with ♥️ in Berlin<br />
+      Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
     </footer>
 
   </div>
 
   <script>
     const DATA_URL = "/places.json";
+    const LOCATION_RADIUS_KM = 10;
 
     const state = {
       all: [],
       displayAll: [],
-      filtered: []
+      filtered: [],
+      userLocation: null
     };
 
     const el = {
       count: document.getElementById("placesCount"),
       grid: document.getElementById("cardsGrid"),
       loading: document.getElementById("loading"),
+      statusText: document.getElementById("statusText"),
       input: document.getElementById("geo-input"),
       goBtn: document.getElementById("geo-go"),
+      meBtn: document.getElementById("geo-me"),
       resultsBottom: document.getElementById("resultsBottom"),
-      resultsCount: document.getElementById("resultsCount")
+      resultsCount: document.getElementById("resultsCount"),
+      resultsContext: document.getElementById("resultsContext")
     };
 
     function normalizeText(value) {
@@ -338,7 +355,12 @@
     }
 
     function duplicateKey(p) {
-      return [normalizeText(p.name), normalizeText(p.address)].join("|");
+      const name = normalizeText(p.name);
+      const address = normalizeText(p.address);
+
+      if (name && address) return `${name}|${address}`;
+      if (address) return `address|${address}`;
+      return `name|${name}|${normalizeText(p.city)}|${normalizeText(p.country)}`;
     }
 
     function dedupePlaces(places) {
@@ -428,6 +450,54 @@
         .map(x => x.place);
     }
 
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function hasCoordinates(p) {
+      return Number.isFinite(Number(p.latitude)) && Number.isFinite(Number(p.longitude));
+    }
+
+    function haversineKm(lat1, lon1, lat2, lon2) {
+      const R = 6371;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function getDistanceKm(p) {
+      if (!state.userLocation || !hasCoordinates(p)) return null;
+
+      return haversineKm(
+        state.userLocation.lat,
+        state.userLocation.lon,
+        Number(p.latitude),
+        Number(p.longitude)
+      );
+    }
+
+    function sortByDistance(places) {
+      return [...places].sort((a, b) => {
+        const da = getDistanceKm(a);
+        const db = getDistanceKm(b);
+
+        if (da !== null && db !== null && da !== db) return da - db;
+
+        const scoreA = groupScore(a);
+        const scoreB = groupScore(b);
+
+        if (scoreB !== scoreA) return scoreB - scoreA;
+
+        return parseSortDate(b) - parseSortDate(a);
+      });
+    }
+
     function renderCards() {
       el.grid.innerHTML = "";
 
@@ -436,6 +506,7 @@
         card.className = "place-card";
 
         const photo = getPhoto(place);
+        const distance = getDistanceKm(place);
 
         card.innerHTML = `
           <div class="place-media">
@@ -454,6 +525,8 @@
             ${(place.city || place.country) ? `<br>${[place.city, place.country].filter(Boolean).join(", ")}` : ""}
           </div>
 
+          ${distance !== null ? `<span class="distance-note">${distance.toFixed(distance < 10 ? 1 : 0)} km away</span>` : ""}
+
           ${place.review ? `<div class="place-quote">“${place.review}”</div>` : ""}
         `;
 
@@ -469,18 +542,58 @@
     function handleSearch() {
       const query = el.input.value.trim();
 
+      state.userLocation = null;
+
       if (!query) {
         state.filtered = sortDefault(state.displayAll);
+        el.statusText.textContent = "Showing places with photos and reviews first, then newest submissions.";
+        el.resultsContext.textContent = "";
         renderCards();
         return;
       }
 
       state.filtered = textSearchResults(query);
+      el.statusText.textContent = `Showing places matching: ${query}`;
+      el.resultsContext.textContent = ` matching "${query}"`;
+
       renderCards();
     }
 
+    function handleUseMyLocation() {
+      if (!navigator.geolocation) {
+        el.statusText.textContent = "Your browser does not support location search.";
+        return;
+      }
+
+      el.statusText.textContent = "Getting your location…";
+
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          state.userLocation = {
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+          };
+
+          const nearby = state.displayAll
+            .filter(p => {
+              const distance = getDistanceKm(p);
+              return distance !== null && distance <= LOCATION_RADIUS_KM;
+            });
+
+          state.filtered = sortByDistance(nearby);
+          el.statusText.textContent = `Showing ${state.filtered.length} changing tables within ${LOCATION_RADIUS_KM} km of your current location.`;
+          el.resultsContext.textContent = ` within ${LOCATION_RADIUS_KM} km of your current location`;
+
+          renderCards();
+        },
+        () => {
+          el.statusText.textContent = "Could not access your location. You can type an address instead.";
+        }
+      );
+    }
+
     async function load() {
-      const res = await fetch(DATA_URL);
+      const res = await fetch(DATA_URL, { cache: "no-store" });
       const data = await res.json();
 
       state.all = data;
@@ -493,6 +606,7 @@
     }
 
     el.goBtn.addEventListener("click", handleSearch);
+    el.meBtn.addEventListener("click", handleUseMyLocation);
 
     el.input.addEventListener("keydown", event => {
       if (event.key === "Enter") handleSearch();
