@@ -362,13 +362,13 @@
     </h2>
 
     <div id="geo-search" class="map-search">
-      <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
+      <input id="geo-input" type="text" placeholder="Type a place, address, city, or country" />
       <button id="geo-go" type="button">Go</button>
       <button id="geo-me" type="button">Use my location</button>
     </div>
 
     <p id="statusText" class="status-text">
-      Showing places with photos and reviews first, then newest submissions. Search by location to sort by distance.
+      Showing places with photos and reviews first, then newest submissions. Search by place, city, country, or address.
     </p>
 
     <div id="loading" class="loading-box">Loading changing tables…</div>
@@ -379,6 +379,7 @@
 
     <div class="results-bottom" id="resultsBottom" style="display:none;">
       <strong id="resultsCount">0</strong> places shown
+      <span id="resultsContext"></span>
     </div>
 
     <footer>
@@ -392,11 +393,14 @@
 
   <script>
     const DATA_URL = "/places.json";
+    const LOCATION_RADIUS_KM = 10;
 
     const state = {
       all: [],
       filtered: [],
-      userLocation: null
+      userLocation: null,
+      mode: "default",
+      contextText: ""
     };
 
     let visibleCount = 24;
@@ -409,12 +413,21 @@
       error: document.getElementById("error"),
       resultsBottom: document.getElementById("resultsBottom"),
       resultsCount: document.getElementById("resultsCount"),
+      resultsContext: document.getElementById("resultsContext"),
       moreLoader: document.getElementById("moreLoader"),
       statusText: document.getElementById("statusText"),
       input: document.getElementById("geo-input"),
       goBtn: document.getElementById("geo-go"),
       meBtn: document.getElementById("geo-me")
     };
+
+    function normalizeText(value) {
+      return String(value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+    }
 
     function getReview(p) {
       return String(p.review || "").trim();
@@ -446,18 +459,113 @@
     }
 
     function parseSortDate(p) {
-      const raw = p.date_yyyy_mm_dd || p.created_at || "";
+      const raw = p.record_created_time || p.created_at || p.date_yyyy_mm_dd || "";
       if (!raw) return 0;
 
-      const value = String(raw).trim();
+      const parsed = Date.parse(String(raw).trim());
+      if (!Number.isNaN(parsed)) return parsed;
 
-      const iso = value.match(/^(\d{4})-(\d{2})-(\d{2})/);
+      const iso = String(raw).trim().match(/^(\d{4})-(\d{2})-(\d{2})/);
       if (iso) {
         return new Date(Number(iso[1]), Number(iso[2]) - 1, Number(iso[3])).getTime();
       }
 
-      const parsed = Date.parse(value);
-      return Number.isNaN(parsed) ? 0 : parsed;
+      return 0;
+    }
+
+    function duplicateKey(p) {
+      const name = normalizeText(p.name);
+      const address = normalizeText(p.address);
+
+      if (name && address) return `${name}|${address}`;
+      if (address) return `address|${address}`;
+      return `name|${name}|${normalizeText(p.city)}|${normalizeText(p.country)}`;
+    }
+
+    function betterDuplicate(a, b) {
+      const ga = groupScore(a);
+      const gb = groupScore(b);
+
+      if (gb !== ga) return gb > ga ? b : a;
+
+      const ta = parseSortDate(a);
+      const tb = parseSortDate(b);
+
+      if (tb !== ta) return tb > ta ? b : a;
+
+      return a;
+    }
+
+    function dedupePlaces(places) {
+      const map = new Map();
+
+      places.forEach(p => {
+        const key = duplicateKey(p);
+
+        if (!map.has(key)) {
+          map.set(key, p);
+          return;
+        }
+
+        map.set(key, betterDuplicate(map.get(key), p));
+      });
+
+      return Array.from(map.values());
+    }
+
+    function sortDefault(places) {
+      return [...places].sort((a, b) => {
+        const ga = groupScore(a);
+        const gb = groupScore(b);
+
+        if (gb !== ga) return gb - ga;
+
+        const ta = parseSortDate(a);
+        const tb = parseSortDate(b);
+
+        if (tb !== ta) return tb - ta;
+
+        return String(a.name || "").localeCompare(String(b.name || ""));
+      });
+    }
+
+    function textAliases(query) {
+      const q = normalizeText(query);
+
+      const aliases = {
+        espanha: ["spain", "espana", "españa"],
+        spain: ["spain", "espanha", "espana", "españa"],
+        alemanha: ["germany", "deutschland"],
+        germany: ["germany", "alemanha", "deutschland"],
+        franca: ["france"],
+        france: ["france", "franca"],
+        italia: ["italy", "italia"],
+        italy: ["italy", "italia"],
+        japao: ["japan"],
+        japan: ["japan", "japao"],
+        coreia: ["korea"],
+        korea: ["korea", "coreia"]
+      };
+
+      return [q, ...(aliases[q] || [])].filter(Boolean);
+    }
+
+    function placeText(p) {
+      return normalizeText([
+        p.name,
+        p.type,
+        p.address,
+        p.city,
+        p.country,
+        p.neighborhood
+      ].filter(Boolean).join(" "));
+    }
+
+    function textMatchesPlace(p, query) {
+      const terms = textAliases(query);
+      const haystack = placeText(p);
+
+      return terms.some(term => haystack.includes(term));
     }
 
     function hasCoordinates(p) {
@@ -492,18 +600,14 @@
       );
     }
 
-    function sortPlaces() {
-      state.filtered = [...state.all];
-
-      state.filtered.sort((a, b) => {
+    function sortByDistance(places) {
+      return [...places].sort((a, b) => {
         const da = getDistanceKm(a);
         const db = getDistanceKm(b);
 
-        if (state.userLocation) {
-          if (da !== null && db !== null && da !== db) return da - db;
-          if (da !== null && db === null) return -1;
-          if (da === null && db !== null) return 1;
-        }
+        if (da !== null && db !== null && da !== db) return da - db;
+        if (da !== null && db === null) return -1;
+        if (da === null && db !== null) return 1;
 
         const ga = groupScore(a);
         const gb = groupScore(b);
@@ -534,6 +638,7 @@
 
     function updateCount() {
       el.resultsCount.textContent = String(Math.min(visibleCount, state.filtered.length));
+      el.resultsContext.textContent = state.contextText ? ` ${state.contextText}` : "";
       el.resultsBottom.style.display = "block";
     }
 
@@ -543,7 +648,8 @@
       el.moreLoader.style.display = "none";
 
       if (state.filtered.length === 0) {
-        el.grid.innerHTML = `<div class="loading-box">No changing tables found yet.</div>`;
+        el.grid.innerHTML = `<div class="loading-box">No changing tables found.</div>`;
+        updateCount();
         return;
       }
 
@@ -742,7 +848,27 @@
       const query = el.input.value.trim();
 
       if (!query) {
-        el.statusText.textContent = "Type an address, ZIP code, city or neighborhood.";
+        state.userLocation = null;
+        state.mode = "default";
+        state.contextText = "";
+        state.filtered = sortDefault(state.all);
+        visibleCount = BATCH_SIZE;
+        el.statusText.textContent = "Showing places with photos and reviews first, then newest submissions. Search by place, city, country, or address.";
+        renderCards();
+        return;
+      }
+
+      const textMatches = state.all.filter(p => textMatchesPlace(p, query));
+
+      if (textMatches.length > 0) {
+        state.userLocation = null;
+        state.mode = "text";
+        state.filtered = sortDefault(dedupePlaces(textMatches));
+        state.contextText = `matching "${query}"`;
+        visibleCount = BATCH_SIZE;
+
+        el.statusText.textContent = `Showing ${state.filtered.length} places matching: ${query}`;
+        renderCards();
         return;
       }
 
@@ -756,14 +882,20 @@
           lon: result.lon
         };
 
+        state.mode = "geocode";
+        state.filtered = sortByDistance(state.all);
+        state.contextText = `closest to "${query}"`;
         visibleCount = BATCH_SIZE;
-        sortPlaces();
-        renderCards();
 
         el.statusText.textContent = `Showing closest changing tables to: ${result.label}`;
+        renderCards();
 
       } catch (e) {
+        state.filtered = [];
+        state.contextText = "";
+        visibleCount = BATCH_SIZE;
         el.statusText.textContent = e.message || "Could not search this location.";
+        renderCards();
       }
     }
 
@@ -782,11 +914,22 @@
             lon: position.coords.longitude
           };
 
-          visibleCount = BATCH_SIZE;
-          sortPlaces();
-          renderCards();
+          const nearby = state.all
+            .map(p => ({ ...p, distance_km: getDistanceKm(p) }))
+            .filter(p => p.distance_km !== null && p.distance_km <= LOCATION_RADIUS_KM);
 
-          el.statusText.textContent = "Showing closest changing tables to your current location.";
+          state.mode = "location";
+          state.filtered = sortByDistance(dedupePlaces(nearby));
+          state.contextText = `within ${LOCATION_RADIUS_KM} km of your current location`;
+          visibleCount = BATCH_SIZE;
+
+          if (state.filtered.length === 0) {
+            el.statusText.textContent = `No changing tables found within ${LOCATION_RADIUS_KM} km of your current location. Try searching by city or address.`;
+          } else {
+            el.statusText.textContent = `Showing ${state.filtered.length} changing tables within ${LOCATION_RADIUS_KM} km of your current location.`;
+          }
+
+          renderCards();
         },
         () => {
           el.statusText.textContent = "Could not access your location. You can type an address instead.";
@@ -809,12 +952,13 @@
         const data = await res.json();
         if (!Array.isArray(data)) throw new Error(`${DATA_URL} is not an array.`);
 
-        state.all = data;
-        el.count.textContent = String(data.length);
+        state.all = dedupePlaces(data);
+        state.filtered = sortDefault(state.all);
+        state.contextText = "";
 
-        sortPlaces();
+        el.count.textContent = String(state.all.length);
+
         renderCards();
-
         showLoading(false);
 
       } catch (e) {
