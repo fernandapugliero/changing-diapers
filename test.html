@@ -81,6 +81,7 @@
       font-size: 14px;
       color: #333;
       background: #fff;
+      box-sizing: border-box;
     }
 
     .map-search button {
@@ -93,6 +94,9 @@
       font-size: 13px;
       font-weight: 600;
       color: #333;
+      width: auto;
+      white-space: nowrap;
+      box-sizing: border-box;
     }
 
     .map-search button:hover {
@@ -231,8 +235,28 @@
     }
 
     @media (max-width: 480px) {
-      .map-search button {
-        flex: 0 0 auto;
+      #geo-search.map-search {
+        max-width: 420px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      #geo-search.map-search input {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 420px !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      #geo-search.map-search button {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        max-width: none !important;
+        white-space: nowrap !important;
       }
     }
 
