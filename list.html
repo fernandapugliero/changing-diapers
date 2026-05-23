@@ -3,21 +3,25 @@
 <head>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Top Locations | Fix My Diaper</title>
-  <meta name="description" content="Explore the best baby-friendly places with changing tables. View our community's top diaper-changing stations and submit your own locations.">
-  <meta name="keywords" content="top locations diaper changing, baby-friendly places, changing tables, diaper changing stations, family cafes, diaper changing locations in Berlin">
+
+  <title>Changing Tables Near You | Fix My Diaper</title>
+  <meta name="description" content="Find parent-submitted baby changing tables around the world. Search by place, city, country, address or your current location, with photos and reviews from families.">
+  <meta name="keywords" content="changing tables near me, baby changing stations, diaper changing tables, family friendly cafes, baby friendly places, changing tables map">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Top Locations | Fix My Diaper">
-  <meta property="og:description" content="Explore the best baby-friendly places with changing tables. View our community's top diaper-changing stations and submit your own locations.">
+
+  <link rel="canonical" href="https://fixmydiaper.com/list">
+
+  <meta property="og:title" content="Changing Tables Near You | Fix My Diaper">
+  <meta property="og:description" content="Search changing tables around the world with photos and reviews from parents.">
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url" content="https://fixmydiaper.com/list">
   <meta property="og:type" content="website">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Top Locations | Fix My Diaper">
-  <meta name="twitter:description" content="Explore the best baby-friendly places with changing tables. View our community's top diaper-changing stations and submit your own locations.">
+  <meta name="twitter:title" content="Changing Tables Near You | Fix My Diaper">
+  <meta name="twitter:description" content="Search changing tables around the world with photos and reviews from parents.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -25,13 +29,12 @@
     gtag('js', new Date());
     gtag('config', 'G-JGYVLDZQTM');
   </script>
-  
+
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Base igual às outras páginas */
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -45,18 +48,19 @@
       margin: 0 auto;
     }
 
-    /* Nav */
     nav {
       margin-bottom: 2rem;
       padding-top: 1rem;
       display: flex;
       align-items: center;
     }
+
     nav img {
       width: 30px;
       height: auto;
       margin-right: 30px;
     }
+
     nav a {
       margin-right: 20px;
       text-decoration: none;
@@ -64,40 +68,204 @@
       color: inherit;
     }
 
-    /* Títulos de seção (mesmo padrão do index) */
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin: 0 0 2rem 0;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .map-search {
+      margin: 0 auto 1.5rem auto;
+      max-width: 720px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .map-search input {
+      flex: 1 1 260px;
+      max-width: 420px;
+      height: 36px;
+      padding: 0 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #333;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .map-search button {
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f7f7f7;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+      width: auto;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+    .map-search button:hover {
+      background: #efefef;
+    }
+
+    .status-text {
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      margin: 0.25rem auto 1.25rem auto;
+      line-height: 1.4;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 0.6rem;
+      margin-bottom: 1.6rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .place-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .place-media {
+      width: 100%;
+      height: 240px;
+      border-radius: 8px;
+      background: #f6f6f6;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .5rem;
+    }
+
+    .place-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .no-photo {
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .place-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color:#333;
+      text-align:left;
+      margin: 0.25rem 0 0.15rem 0;
+    }
+
+    .place-quote {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.25rem 0 0.5rem 0;
+      text-align:left;
+      line-height: 1.35;
+    }
+
+    .place-meta {
+      font-size: 0.8rem;
+      color:#777;
+      margin-top: 0.25rem;
+      text-align:left;
+      line-height: 1.35;
+    }
+
+    .distance-note {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: #1f7ae0;
+      background: rgba(31, 122, 224, 0.08);
+      border: 1px solid rgba(31, 122, 224, 0.22);
+      border-radius: 999px;
+      padding: 5px 9px;
+      width: fit-content;
+      font-weight: 600;
+    }
+
+    .loading-box {
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px dashed rgba(0,0,0,0.2);
+      border-radius: 12px;
+      padding: 12px;
+      text-align:center;
+      color:#666;
+    }
+
+    .results-bottom {
+      text-align:center;
+      margin: 1.8rem auto 0 auto;
+      color:#555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
     .section-title {
       font-size: 1.3rem;
       font-weight: 600;
       color: #444;
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 3rem;
       margin-bottom: 0.75rem;
       line-height: 1.3;
     }
 
-    .section-subtitle {
-      font-size: 0.95rem;
+    .top5-explanation {
+      font-size: 0.85rem;
       color: #555;
       text-align: center;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
+      margin-top: 1rem;
+      line-height: 1.4;
     }
 
-    .section-subtitle a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-    .section-subtitle a:hover {
-      text-decoration: underline;
+    #faq {
+      margin-top: 3rem;
     }
 
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: transparent;
+    #faq p {
+      text-align: left;
     }
 
     footer {
@@ -106,33 +274,62 @@
       font-size: 0.9rem;
       color: #777;
     }
+
     footer a {
       color: #0070f3;
       text-decoration: none;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      body {
-        padding: 2rem;
+    @media (max-width: 480px) {
+      #geo-search.map-search {
+        max-width: 420px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        align-items: center !important;
       }
-      iframe {
-        height: 520px;
+
+      #geo-search.map-search input {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 420px !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      #geo-search.map-search button {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        max-width: none !important;
+        white-space: nowrap !important;
       }
     }
 
-    @media (max-width: 480px) {
-      iframe {
-        height: 480px;
+    @media (max-width: 430px) {
+      body {
+        padding: 1.8rem;
+      }
+
+      .place-media {
+        height: 230px;
+      }
+
+      .results-bottom {
+        font-size: 0.92rem;
+        margin-top: 1.2rem;
       }
     }
   </style>
-
 </head>
+
 <body>
   <div class="page">
+
     <nav>
       <img src="images/logo.png" alt="Fix My Diaper Logo">
       <a href="https://fixmydiaper.com/">Map</a>
@@ -140,18 +337,95 @@
       <a href="submit">Submit</a>
     </nav>
 
-    <h1 class="section-title">Latest places submitted by our community</h1>
-    <p class="section-subtitle">
-      Do you know a great diaper changing station? 
-      <a href="submit.html">Share it with us</a> and help our database grow.
+    <h1>Discover changing tables near you</h1>
+
+    <h2>
+      Explore <strong id="placesCount">0</strong> parent-submitted changing tables around the world — with photos, reviews and details to help you decide where to go.
+    </h2>
+
+    <div id="geo-search" class="map-search">
+      <input id="geo-input" type="text" placeholder="Type a place, address, city, country or venue name" />
+      <button id="geo-go" type="button">Go</button>
+      <button id="geo-me" type="button">Use my location</button>
+    </div>
+
+    <p id="statusText" class="status-text">
+      Showing places with photos and reviews first, then newest submissions.
     </p>
 
-    <iframe
-      id="airtable-iframe" 
-      src="https://airtable.com/embed/appjWF7WnC8DRWaXM/shrc9jpbTtiMEOI62?viewControls=on" 
-      frameborder="0"
-      class="airtable-embed">
-    </iframe>
+    <div id="loading" class="loading-box">Loading changing tables…</div>
+
+    <section id="cardsGrid" class="cards-grid" style="display:none;"></section>
+
+    <div class="results-bottom" id="resultsBottom" style="display:none;">
+      <strong id="resultsCount">0</strong> places shown
+      <span id="resultsContext"></span>
+    </div>
+
+    <section id="faq">
+      <h2 class="section-title">FAQ: Finding changing tables</h2>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>How can I find a changing table near me?</strong><br>
+        Use the search bar to type a place, address, city or country, or tap “Use my location” to see changing tables nearby.
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>Can I search by café or restaurant name?</strong><br>
+        Yes. You can search by the name of a café, restaurant, museum, mall or public place to check whether another parent has submitted a changing table there.
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>How are locations ranked?</strong><br>
+        We prioritize the most useful submissions first: places with photos and reviews, followed by newer community submissions.
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem;">
+        <strong>Looking for changing tables in Berlin?</strong><br>
+        Visit our dedicated <a href="/berlin">Berlin changing table guide</a> to browse locations by neighborhood, with photos and reviews.
+      </p>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can I find a changing table near me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the search bar to type a place, address, city or country, or tap Use my location to see changing tables nearby."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I search by café or restaurant name?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can search by the name of a café, restaurant, museum, mall or public place to check whether another parent has submitted a changing table there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are locations ranked?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fix My Diaper prioritizes useful submissions first: places with photos and reviews, followed by newer community submissions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find changing tables in Berlin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fix My Diaper has a dedicated Berlin changing table guide where parents can browse locations by neighborhood, with photos and reviews."
+          }
+        }
+      ]
+    }
+    </script>
 
     <footer>
       <a href="about">About</a> | 
@@ -160,6 +434,325 @@
       Made with ♥️ in Berlin<br />
       Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
     </footer>
+
   </div>
+
+  <script>
+    const DATA_URL = "/places.json";
+    const LOCATION_RADIUS_KM = 10;
+
+    const state = {
+      all: [],
+      displayAll: [],
+      filtered: [],
+      userLocation: null
+    };
+
+    const el = {
+      count: document.getElementById("placesCount"),
+      grid: document.getElementById("cardsGrid"),
+      loading: document.getElementById("loading"),
+      statusText: document.getElementById("statusText"),
+      input: document.getElementById("geo-input"),
+      goBtn: document.getElementById("geo-go"),
+      meBtn: document.getElementById("geo-me"),
+      resultsBottom: document.getElementById("resultsBottom"),
+      resultsCount: document.getElementById("resultsCount"),
+      resultsContext: document.getElementById("resultsContext")
+    };
+
+    function normalizeText(value) {
+      return String(value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+    }
+
+    function getPhoto(p) {
+      return p.photo_local_url || p.photo_url || p.photo_large_url || p.photo_small_url || null;
+    }
+
+    function hasPhoto(p) {
+      return !!getPhoto(p);
+    }
+
+    function hasReview(p) {
+      return !!String(p.review || "").trim();
+    }
+
+    function groupScore(p) {
+      if (hasPhoto(p) && hasReview(p)) return 3;
+      if (hasPhoto(p)) return 2;
+      return 1;
+    }
+
+    function parseSortDate(p) {
+      const raw = p.record_created_time || p.created_at || p.date_yyyy_mm_dd || "";
+      const parsed = Date.parse(raw);
+      return Number.isNaN(parsed) ? 0 : parsed;
+    }
+
+    function duplicateKey(p) {
+      const name = normalizeText(p.name);
+      const address = normalizeText(p.address);
+
+      if (name && address) return `${name}|${address}`;
+      if (address) return `address|${address}`;
+      return `name|${name}|${normalizeText(p.city)}|${normalizeText(p.country)}`;
+    }
+
+    function dedupePlaces(places) {
+      const map = new Map();
+
+      places.forEach(p => {
+        const key = duplicateKey(p);
+
+        if (!map.has(key)) {
+          map.set(key, p);
+          return;
+        }
+
+        const current = map.get(key);
+
+        if (
+          groupScore(p) > groupScore(current) ||
+          (groupScore(p) === groupScore(current) && parseSortDate(p) > parseSortDate(current))
+        ) {
+          map.set(key, p);
+        }
+      });
+
+      return Array.from(map.values());
+    }
+
+    function sortDefault(places) {
+      return [...places].sort((a, b) => {
+        const scoreA = groupScore(a);
+        const scoreB = groupScore(b);
+
+        if (scoreB !== scoreA) return scoreB - scoreA;
+
+        return parseSortDate(b) - parseSortDate(a);
+      });
+    }
+
+    function textAliases(query) {
+      const q = normalizeText(query);
+
+      const aliases = {
+        espanha: ["spain", "espana", "españa"],
+        spain: ["spain", "espanha", "espana", "españa"],
+        franca: ["france"],
+        france: ["france", "franca"]
+      };
+
+      return [q, ...(aliases[q] || [])];
+    }
+
+    function textMatchScore(p, query) {
+      const terms = textAliases(query);
+
+      const country = normalizeText(p.country);
+      const city = normalizeText(p.city);
+      const name = normalizeText(p.name);
+      const address = normalizeText(p.address);
+
+      let score = 0;
+
+      terms.forEach(term => {
+        if (country === term) score += 1000;
+        if (city === term) score += 700;
+        if (country.includes(term)) score += 300;
+        if (city.includes(term)) score += 200;
+        if (name.includes(term)) score += 120;
+        if (address.includes(term)) score += 10;
+      });
+
+      return score;
+    }
+
+    function textSearchResults(query) {
+      return state.displayAll
+        .map(p => ({ place: p, score: textMatchScore(p, query) }))
+        .filter(x => x.score > 0)
+        .sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+
+          const groupA = groupScore(a.place);
+          const groupB = groupScore(b.place);
+
+          if (groupB !== groupA) return groupB - groupA;
+
+          return parseSortDate(b.place) - parseSortDate(a.place);
+        })
+        .map(x => x.place);
+    }
+
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function hasCoordinates(p) {
+      return Number.isFinite(Number(p.latitude)) && Number.isFinite(Number(p.longitude));
+    }
+
+    function haversineKm(lat1, lon1, lat2, lon2) {
+      const R = 6371;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function getDistanceKm(p) {
+      if (!state.userLocation || !hasCoordinates(p)) return null;
+
+      return haversineKm(
+        state.userLocation.lat,
+        state.userLocation.lon,
+        Number(p.latitude),
+        Number(p.longitude)
+      );
+    }
+
+    function sortByDistance(places) {
+      return [...places].sort((a, b) => {
+        const da = getDistanceKm(a);
+        const db = getDistanceKm(b);
+
+        if (da !== null && db !== null && da !== db) return da - db;
+
+        const scoreA = groupScore(a);
+        const scoreB = groupScore(b);
+
+        if (scoreB !== scoreA) return scoreB - scoreA;
+
+        return parseSortDate(b) - parseSortDate(a);
+      });
+    }
+
+    function renderCards() {
+      el.grid.innerHTML = "";
+
+      state.filtered.forEach(place => {
+        const card = document.createElement("article");
+        card.className = "place-card";
+
+        const photo = getPhoto(place);
+        const distance = getDistanceKm(place);
+
+        card.innerHTML = `
+          <div class="place-media">
+            ${
+              photo
+              ? `<img src="${photo}" loading="lazy" alt="${place.name}">`
+              : `<span class="no-photo">No photo yet</span>`
+            }
+          </div>
+
+          <div class="place-title">${place.name || "Unnamed place"}</div>
+
+          <div class="place-meta">
+            ${place.type || ""}
+            ${place.address ? `<br>${place.address}` : ""}
+            ${(place.city || place.country) ? `<br>${[place.city, place.country].filter(Boolean).join(", ")}` : ""}
+          </div>
+
+          ${distance !== null ? `<span class="distance-note">${distance.toFixed(distance < 10 ? 1 : 0)} km away</span>` : ""}
+
+          ${place.review ? `<div class="place-quote">“${place.review}”</div>` : ""}
+        `;
+
+        el.grid.appendChild(card);
+      });
+
+      el.loading.style.display = "none";
+      el.grid.style.display = "grid";
+      el.resultsBottom.style.display = "block";
+      el.resultsCount.textContent = state.filtered.length;
+    }
+
+    function handleSearch() {
+      const query = el.input.value.trim();
+
+      state.userLocation = null;
+
+      if (!query) {
+        state.filtered = sortDefault(state.displayAll);
+        el.statusText.textContent = "Showing places with photos and reviews first, then newest submissions.";
+        el.resultsContext.textContent = "";
+        renderCards();
+        return;
+      }
+
+      state.filtered = textSearchResults(query);
+      el.statusText.textContent = `Showing places matching: ${query}`;
+      el.resultsContext.textContent = ` matching "${query}"`;
+
+      renderCards();
+    }
+
+    function handleUseMyLocation() {
+      if (!navigator.geolocation) {
+        el.statusText.textContent = "Your browser does not support location search.";
+        return;
+      }
+
+      el.statusText.textContent = "Getting your location…";
+
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          state.userLocation = {
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+          };
+
+          const nearby = state.displayAll
+            .filter(p => {
+              const distance = getDistanceKm(p);
+              return distance !== null && distance <= LOCATION_RADIUS_KM;
+            });
+
+          state.filtered = sortByDistance(nearby);
+          el.statusText.textContent = `Showing ${state.filtered.length} changing tables within ${LOCATION_RADIUS_KM} km of your current location.`;
+          el.resultsContext.textContent = ` within ${LOCATION_RADIUS_KM} km of your current location`;
+
+          renderCards();
+        },
+        () => {
+          el.statusText.textContent = "Could not access your location. You can type an address instead.";
+        }
+      );
+    }
+
+    async function load() {
+      const res = await fetch(DATA_URL, { cache: "no-store" });
+      const data = await res.json();
+
+      state.all = data;
+      state.displayAll = dedupePlaces(data);
+      state.filtered = sortDefault(state.displayAll);
+
+      el.count.textContent = data.length;
+
+      renderCards();
+    }
+
+    el.goBtn.addEventListener("click", handleSearch);
+    el.meBtn.addEventListener("click", handleUseMyLocation);
+
+    el.input.addEventListener("keydown", event => {
+      if (event.key === "Enter") handleSearch();
+    });
+
+    load();
+  </script>
+
 </body>
 </html>
