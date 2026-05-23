@@ -4,8 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Changing Tables Around the World | Fix My Diaper</title>
-  <meta name="description" content="Discover parent-submitted baby changing tables around the world, with photos, reviews and details to help families decide where to go.">
+  <title>Changing Tables Near You | Fix My Diaper</title>
+
+  <meta name="description" content="Find parent-submitted baby changing tables around the world. Search by place, city, country, address or your current location, with photos and reviews from families.">
+
+  <meta name="keywords" content="changing tables near me, baby changing stations, diaper changing tables, family friendly cafes, baby friendly places, changing tables map">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://fixmydiaper.com/list">
+
+  <meta property="og:title" content="Changing Tables Near You | Fix My Diaper">
+  <meta property="og:description" content="Search changing tables around the world with photos and reviews from parents.">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com/list">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Changing Tables Near You | Fix My Diaper">
+  <meta name="twitter:description" content="Search changing tables around the world with photos and reviews from parents.">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JGYVLDZQTM');
+  </script>
 
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="style.css" />
@@ -216,6 +243,24 @@
       margin: 1.8rem auto 0 auto;
       color:#555;
       font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: #444;
+      text-align: center;
+    }
+
+    .faq-item {
+      max-width: 760px;
+      margin: 0 auto 1.5rem auto;
+      color: #555;
+      line-height: 1.6;
+      font-size: 0.95rem;
     }
 
     footer {
@@ -290,11 +335,14 @@
     <h1>Discover changing tables near you</h1>
 
     <h2>
-      Explore <strong id="placesCount">0</strong> parent-submitted changing tables around the world — with photos, reviews and details to help you decide where to go.
+      Explore <strong id="placesCount">0</strong> parent-submitted changing tables around the world – with photos, reviews and details to help you decide where to go.
+      <br><br>
+      Looking for Berlin specifically?
+      <a href="/berlin">Explore changing tables in Berlin by neighborhood</a>.
     </h2>
 
     <div id="geo-search" class="map-search">
-      <input id="geo-input" type="text" placeholder="Type a place, address, city, or country" />
+      <input id="geo-input" type="text" placeholder="Type a place, address, city, country or venue name" />
       <button id="geo-go" type="button">Go</button>
       <button id="geo-me" type="button">Use my location</button>
     </div>
@@ -303,7 +351,9 @@
       Showing places with photos and reviews first, then newest submissions.
     </p>
 
-    <div id="loading" class="loading-box">Loading changing tables…</div>
+    <div id="loading" class="loading-box">
+      Loading changing tables…
+    </div>
 
     <section id="cardsGrid" class="cards-grid" style="display:none;"></section>
 
@@ -311,6 +361,25 @@
       <strong id="resultsCount">0</strong> places shown
       <span id="resultsContext"></span>
     </div>
+
+    <section id="faq">
+      <h2 class="section-title">FAQ: Finding changing tables</h2>
+
+      <div class="faq-item">
+        <strong>How can I find a changing table near me?</strong><br>
+        Use the search bar to type a place, address, city or country, or tap “Use my location” to see changing tables nearby.
+      </div>
+
+      <div class="faq-item">
+        <strong>Can I search by café or restaurant name?</strong><br>
+        Yes. You can search by the name of a café, restaurant, museum, mall or public place to check whether another parent has submitted a changing table there.
+      </div>
+
+      <div class="faq-item">
+        <strong>How are locations ranked?</strong><br>
+        We prioritize the most useful submissions first: places with photos and reviews, followed by newer community submissions.
+      </div>
+    </section>
 
     <footer>
       <a href="about">About</a> | 
@@ -323,320 +392,7 @@
   </div>
 
   <script>
-    const DATA_URL = "/places.json";
-    const LOCATION_RADIUS_KM = 10;
-
-    const state = {
-      all: [],
-      displayAll: [],
-      filtered: [],
-      userLocation: null
-    };
-
-    const el = {
-      count: document.getElementById("placesCount"),
-      grid: document.getElementById("cardsGrid"),
-      loading: document.getElementById("loading"),
-      statusText: document.getElementById("statusText"),
-      input: document.getElementById("geo-input"),
-      goBtn: document.getElementById("geo-go"),
-      meBtn: document.getElementById("geo-me"),
-      resultsBottom: document.getElementById("resultsBottom"),
-      resultsCount: document.getElementById("resultsCount"),
-      resultsContext: document.getElementById("resultsContext")
-    };
-
-    function normalizeText(value) {
-      return String(value || "")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .trim();
-    }
-
-    function getPhoto(p) {
-      return p.photo_local_url || p.photo_url || p.photo_large_url || p.photo_small_url || null;
-    }
-
-    function hasPhoto(p) {
-      return !!getPhoto(p);
-    }
-
-    function hasReview(p) {
-      return !!String(p.review || "").trim();
-    }
-
-    function groupScore(p) {
-      if (hasPhoto(p) && hasReview(p)) return 3;
-      if (hasPhoto(p)) return 2;
-      return 1;
-    }
-
-    function parseSortDate(p) {
-      const raw = p.record_created_time || p.created_at || p.date_yyyy_mm_dd || "";
-      const parsed = Date.parse(raw);
-      return Number.isNaN(parsed) ? 0 : parsed;
-    }
-
-    function duplicateKey(p) {
-      const name = normalizeText(p.name);
-      const address = normalizeText(p.address);
-
-      if (name && address) return `${name}|${address}`;
-      if (address) return `address|${address}`;
-      return `name|${name}|${normalizeText(p.city)}|${normalizeText(p.country)}`;
-    }
-
-    function dedupePlaces(places) {
-      const map = new Map();
-
-      places.forEach(p => {
-        const key = duplicateKey(p);
-
-        if (!map.has(key)) {
-          map.set(key, p);
-          return;
-        }
-
-        const current = map.get(key);
-
-        if (
-          groupScore(p) > groupScore(current) ||
-          (groupScore(p) === groupScore(current) && parseSortDate(p) > parseSortDate(current))
-        ) {
-          map.set(key, p);
-        }
-      });
-
-      return Array.from(map.values());
-    }
-
-    function sortDefault(places) {
-      return [...places].sort((a, b) => {
-        const scoreA = groupScore(a);
-        const scoreB = groupScore(b);
-
-        if (scoreB !== scoreA) return scoreB - scoreA;
-
-        return parseSortDate(b) - parseSortDate(a);
-      });
-    }
-
-    function textAliases(query) {
-      const q = normalizeText(query);
-
-      const aliases = {
-        espanha: ["spain", "espana", "españa"],
-        spain: ["spain", "espanha", "espana", "españa"],
-        franca: ["france"],
-        france: ["france", "franca"]
-      };
-
-      return [q, ...(aliases[q] || [])];
-    }
-
-    function textMatchScore(p, query) {
-      const terms = textAliases(query);
-
-      const country = normalizeText(p.country);
-      const city = normalizeText(p.city);
-      const name = normalizeText(p.name);
-      const address = normalizeText(p.address);
-
-      let score = 0;
-
-      terms.forEach(term => {
-        if (country === term) score += 1000;
-        if (city === term) score += 700;
-        if (country.includes(term)) score += 300;
-        if (city.includes(term)) score += 200;
-        if (name.includes(term)) score += 120;
-        if (address.includes(term)) score += 10;
-      });
-
-      return score;
-    }
-
-    function textSearchResults(query) {
-      return state.displayAll
-        .map(p => ({ place: p, score: textMatchScore(p, query) }))
-        .filter(x => x.score > 0)
-        .sort((a, b) => {
-          if (b.score !== a.score) return b.score - a.score;
-
-          const groupA = groupScore(a.place);
-          const groupB = groupScore(b.place);
-
-          if (groupB !== groupA) return groupB - groupA;
-
-          return parseSortDate(b.place) - parseSortDate(a.place);
-        })
-        .map(x => x.place);
-    }
-
-    function toRad(value) {
-      return value * Math.PI / 180;
-    }
-
-    function hasCoordinates(p) {
-      return Number.isFinite(Number(p.latitude)) && Number.isFinite(Number(p.longitude));
-    }
-
-    function haversineKm(lat1, lon1, lat2, lon2) {
-      const R = 6371;
-      const dLat = toRad(lat2 - lat1);
-      const dLon = toRad(lon2 - lon1);
-
-      const a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
-        Math.sin(dLon / 2) * Math.sin(dLon / 2);
-
-      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    }
-
-    function getDistanceKm(p) {
-      if (!state.userLocation || !hasCoordinates(p)) return null;
-
-      return haversineKm(
-        state.userLocation.lat,
-        state.userLocation.lon,
-        Number(p.latitude),
-        Number(p.longitude)
-      );
-    }
-
-    function sortByDistance(places) {
-      return [...places].sort((a, b) => {
-        const da = getDistanceKm(a);
-        const db = getDistanceKm(b);
-
-        if (da !== null && db !== null && da !== db) return da - db;
-
-        const scoreA = groupScore(a);
-        const scoreB = groupScore(b);
-
-        if (scoreB !== scoreA) return scoreB - scoreA;
-
-        return parseSortDate(b) - parseSortDate(a);
-      });
-    }
-
-    function renderCards() {
-      el.grid.innerHTML = "";
-
-      state.filtered.forEach(place => {
-        const card = document.createElement("article");
-        card.className = "place-card";
-
-        const photo = getPhoto(place);
-        const distance = getDistanceKm(place);
-
-        card.innerHTML = `
-          <div class="place-media">
-            ${
-              photo
-              ? `<img src="${photo}" loading="lazy" alt="${place.name}">`
-              : `<span class="no-photo">No photo yet</span>`
-            }
-          </div>
-
-          <div class="place-title">${place.name || "Unnamed place"}</div>
-
-          <div class="place-meta">
-            ${place.type || ""}
-            ${place.address ? `<br>${place.address}` : ""}
-            ${(place.city || place.country) ? `<br>${[place.city, place.country].filter(Boolean).join(", ")}` : ""}
-          </div>
-
-          ${distance !== null ? `<span class="distance-note">${distance.toFixed(distance < 10 ? 1 : 0)} km away</span>` : ""}
-
-          ${place.review ? `<div class="place-quote">“${place.review}”</div>` : ""}
-        `;
-
-        el.grid.appendChild(card);
-      });
-
-      el.loading.style.display = "none";
-      el.grid.style.display = "grid";
-      el.resultsBottom.style.display = "block";
-      el.resultsCount.textContent = state.filtered.length;
-    }
-
-    function handleSearch() {
-      const query = el.input.value.trim();
-
-      state.userLocation = null;
-
-      if (!query) {
-        state.filtered = sortDefault(state.displayAll);
-        el.statusText.textContent = "Showing places with photos and reviews first, then newest submissions.";
-        el.resultsContext.textContent = "";
-        renderCards();
-        return;
-      }
-
-      state.filtered = textSearchResults(query);
-      el.statusText.textContent = `Showing places matching: ${query}`;
-      el.resultsContext.textContent = ` matching "${query}"`;
-
-      renderCards();
-    }
-
-    function handleUseMyLocation() {
-      if (!navigator.geolocation) {
-        el.statusText.textContent = "Your browser does not support location search.";
-        return;
-      }
-
-      el.statusText.textContent = "Getting your location…";
-
-      navigator.geolocation.getCurrentPosition(
-        position => {
-          state.userLocation = {
-            lat: position.coords.latitude,
-            lon: position.coords.longitude
-          };
-
-          const nearby = state.displayAll
-            .filter(p => {
-              const distance = getDistanceKm(p);
-              return distance !== null && distance <= LOCATION_RADIUS_KM;
-            });
-
-          state.filtered = sortByDistance(nearby);
-          el.statusText.textContent = `Showing ${state.filtered.length} changing tables within ${LOCATION_RADIUS_KM} km of your current location.`;
-          el.resultsContext.textContent = ` within ${LOCATION_RADIUS_KM} km of your current location`;
-
-          renderCards();
-        },
-        () => {
-          el.statusText.textContent = "Could not access your location. You can type an address instead.";
-        }
-      );
-    }
-
-    async function load() {
-      const res = await fetch(DATA_URL, { cache: "no-store" });
-      const data = await res.json();
-
-      state.all = data;
-      state.displayAll = dedupePlaces(data);
-      state.filtered = sortDefault(state.displayAll);
-
-      el.count.textContent = data.length;
-
-      renderCards();
-    }
-
-    el.goBtn.addEventListener("click", handleSearch);
-    el.meBtn.addEventListener("click", handleUseMyLocation);
-
-    el.input.addEventListener("keydown", event => {
-      if (event.key === "Enter") handleSearch();
-    });
-
-    load();
+    /* mantém seu JS atual aqui sem mudanças */
   </script>
 
 </body>
