@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Wickeltische in Berlin finden | Fix My Diaper</title>
+  <meta name="description" content="Finde babyfreundliche Orte mit Wickeltischen in Berlin. Suche nach Cafés, Restaurants, Museen und öffentlichen Orten mit Wickelmöglichkeiten – mit Fotos und Bewertungen von Eltern.">
+  <meta name="keywords" content="Wickeltisch Berlin, Wickeltische Berlin, Wickelraum Berlin, Wickelplatz Berlin, babyfreundliche Cafés Berlin, kinderfreundliche Restaurants Berlin, Wickelmöglichkeiten Berlin">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://fixmydiaper.com/wickeltische-berlin">
+  <link rel="alternate" hreflang="en" href="https://fixmydiaper.com/">
+  <link rel="alternate" hreflang="de" href="https://fixmydiaper.com/wickeltische-berlin">
+  <link rel="alternate" hreflang="x-default" href="https://fixmydiaper.com/">
+
+  <meta property="og:title" content="Wickeltische in Berlin finden | Fix My Diaper">
+  <meta property="og:description" content="Finde babyfreundliche Orte mit Wickeltischen in Berlin – mit Fotos, Bewertungen und Tipps von Eltern.">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com/wickeltische-berlin">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wickeltische in Berlin finden | Fix My Diaper">
+  <meta name="twitter:description" content="Finde babyfreundliche Orte mit Wickeltischen in Berlin – mit Fotos, Bewertungen und Tipps von Eltern.">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JGYVLDZQTM');
+  </script>
+  
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #333;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    nav img {
+      width: 30px;
+      height: auto;
+      margin-right: 30px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin: 0 0 2rem 0;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .map-search {
+      margin: 0 auto 1.5rem auto;
+      max-width: 720px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .map-search input {
+      flex: 1 1 260px;
+      max-width: 420px;
+      height: 36px;
+      padding: 0 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #333;
+      background: #fff;
+    }
+
+    .map-search button {
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f7f7f7;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .map-search button:hover {
+      background: #efefef;
+    }
+
+    #map {
+      height: 70vh;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    p strong {
+      font-weight: 600;
+    }
+
+    .top5-explanation {
+      font-size: 0.85rem;
+      color: #555;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+
+    .star-rating {
+      --rating: 0;
+      --star-color: #e0e0e0;
+      --star-fill: #f5c518;
+      position: relative;
+      display: inline-block;
+      font-size: 18px;
+      font-family: "Arial", "Helvetica", sans-serif;
+      line-height: 1;
+      letter-spacing: 2px;
+      margin-top: 4px;
+    }
+
+    .star-rating.is-empty::after {
+      width: 0;
+    }
+
+    .star-note {
+      display: inline-block;
+      font-size: 12px;
+      color: #777;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .star-rating::before {
+      content: "★★★★★";
+      color: var(--star-color);
+    }
+
+    .star-rating::after {
+      content: "★★★★★";
+      color: var(--star-fill);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc((var(--rating) / 5) * 100%);
+      overflow: hidden;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .recent-grid {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0 1rem 1rem 1rem;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    .recent-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .recent-card {
+      scroll-snap-align: center;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 0.75rem;
+      min-width: 85%;
+      max-width: 320px;
+      flex: 0 0 auto;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .recent-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .recent-quote {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.25rem 0 0.5rem 0;
+    }
+
+    .recent-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.25rem;
+    }
+
+    .recent-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 0.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .recent-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    #faq {
+      margin-top: 3rem;
+    }
+
+    #faq p {
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 2rem;
+      }
+
+      #map {
+        height: 60vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .map-search button {
+        flex: 0 0 auto;
+      }
+
+      #map {
+        height: 55vh;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .recent-grid {
+        overflow-x: visible;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0;
+      }
+
+      .recent-card {
+        min-width: 0;
+        flex: 0 0 calc(33.333% - 1rem);
+      }
+
+      .recent-dots {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <nav>
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <a href="https://fixmydiaper.com/">Karte</a>
+      <a href="list">Liste</a>
+      <a href="submit">Eintragen</a>
+    </nav>
+
+    <h1>Musst du dein Baby wickeln?</h1>
+    <h2>Finde babyfreundliche Orte mit Wickeltischen in deiner Nähe – Cafés, Restaurants, Museen und mehr.</h2>
+    
+    <div id="geo-search" class="map-search">
+      <input id="geo-input" type="text" placeholder="Adresse, PLZ oder Stadt eingeben" />
+      <button id="geo-go">Suchen</button>
+      <button id="geo-me">Meinen Standort verwenden</button>
+    </div>
+
+    <div id="map"></div>
+
+    <h2 class="section-title">Die besten Wickeltische in Berlin*</h2>
+    <p class="section-subtitle">
+      Von Eltern getestet. Von der Community bewertet. Sieh dir unsere <a href="/berlin">Berlin-Liste</a> an und finde deinen Favoriten.
+    </p>
+
+    <div class="recent-grid">
+      <article class="recent-card">
+        <img src="images/publix.jpg" alt="Wickeltisch bei Publix">
+        <div class="star-rating" style="--rating: 5.0;"></div>
+        <span class="star-note">5/5</span>
+        <p class="recent-quote">
+          „Viel Platz, sehr sauber, mit Aufzug zum unteren Bereich – auch mit Kinderwagen gut erreichbar. Sehr empfehlenswert.“
+        </p>
+        <div class="recent-meta">
+          <strong>Publix</strong><br>
+          Hermannstraße 90, 12051 Berlin
+        </div>
+      </article>
+
+      <article class="recent-card">
+        <img src="images/maralou.jpg" alt="Wickeltisch bei Maralou">
+        <div class="star-rating" style="--rating: 5.0;"></div>
+        <span class="star-note">5/5</span>
+        <p class="recent-quote">
+          „Wunderschön! Man merkt, dass viel Liebe in dieses Bad gesteckt wurde. Der Wickelplatz ist einfach, aber sehr süß.“
+        </p>
+        <div class="recent-meta">
+          <strong>Maralou</strong><br>
+          Richardpl. 2A, 12055 Berlin
+        </div>
+      </article>
+
+      <article class="recent-card">
+        <img src="images/kapfrida.jpg" alt="Wickeltisch bei Kap Frida">
+        <div class="star-rating" style="--rating: 4.5;"></div>
+        <span class="star-note">4.5/5</span>
+        <p class="recent-quote">
+          „Sehr schön, sauber und neu. Es gibt auch ein niedriges Waschbecken für Kinder – richtig praktisch.“
+        </p><br><br>
+        <div class="recent-meta">
+          <strong>Kap Frida</strong><br>
+          Alt-Stralau 61, 10245 Berlin
+        </div>
+      </article>
+    </div>
+
+    <div class="recent-dots">
+      <div class="recent-dot"></div>
+      <div class="recent-dot"></div>
+      <div class="recent-dot"></div>
+    </div>
+
+    <p class="top5-explanation">
+      *Das Ranking basiert auf Bewertungen aus der Community, unter anderem zu Sauberkeit, Zugänglichkeit und Gesamterlebnis.
+    </p>
+
+    <section class="berlin-banner-min">
+      <div class="berlin-banner-min__inner">
+        <div class="berlin-banner-min__left">
+          <h3 class="berlin-banner-min__title">
+            Sieh dir <span class="hl">Fotos und Bewertungen</span> von Wickeltischen nach <span class="hl">Kiez</span> in
+            <span class="hl">Berlin</span> an. Entscheide, wohin du gehst, bevor du das Haus verlässt.
+          </h3>
+        </div>
+
+        <div class="berlin-banner-min__right">
+          <a class="berlin-banner-min__cta" href="/berlin">Berliner Orte ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Unsere Favoriten in Berlin ❤️</h2>
+    <p class="section-subtitle">
+      Fotos und Bewertungen aus unserer Community. <a href="submit.html">Trage einen Ort ein</a> und hilf anderen Eltern.
+    </p>
+
+    <div class="recent-grid">
+      <article class="recent-card">
+        <img src="images/east-side-mall.jpeg" alt="Wickeltisch in der East Side Mall">
+        <div class="star-rating" style="--rating: 5.0;"></div>
+        <span class="star-note">5/5</span>
+        <p class="recent-quote">
+          „Wenn du oben bist, etwas Privatsphäre brauchst oder dich zum Füttern hinsetzen möchtest, ist das eine tolle Option. Sehr sauber, groß und in gutem Zustand.“
+        </p>
+        <div class="recent-meta">
+          <strong>East Side Mall</strong><br>
+          Tamara-Danz-Straße 11, 10243
+        </div>
+      </article>
+
+      <article class="recent-card">
+        <img src="images/il-ritrovo.jpeg" alt="Wickeltisch bei Il Ritrovo">
+        <div class="star-rating" style="--rating: 4.5;"></div>
+        <span class="star-note">4.5/5</span>
+        <p class="recent-quote">
+          „Auf den ersten Blick wirkt es etwas chaotisch, aber eigentlich ist es sehr sauber und es gibt viel Platz für Baby, Kinderwagen und Taschen.“
+        </p>
+        <div class="recent-meta">
+          <strong>Il Ritrovo</strong><br>
+          Gabriel-Max-Straße 2, 10245
+        </div>
+      </article>
+
+      <article class="recent-card">
+        <img src="images/tapiocaria.jpg" alt="Wickeltisch bei Tapiocaria">
+        <div class="star-rating" style="--rating: 4.0;"></div>
+        <span class="star-note">4/5</span>
+        <p class="recent-quote">
+          „Ordentlich und sauber, aber sehr eng und etwas zu hoch angebracht. Für kleinere Eltern nicht ideal.“
+        </p><br><br>
+        <div class="recent-meta">
+          <strong>Tapiocaria</strong><br>
+          Samariterstraße 34A, 10247
+        </div>
+      </article>
+    </div>
+
+    <div class="recent-dots">
+      <div class="recent-dot"></div>
+      <div class="recent-dot"></div>
+      <div class="recent-dot"></div>
+    </div>
+
+    <section class="berlin-banner-min">
+      <div class="berlin-banner-min__inner">
+        <div class="berlin-banner-min__left">
+          <h3 class="berlin-banner-min__title">
+            Hinter dieser <span class="hl">Karte</span> steckt eine <span class="hl">Mama</span>.
+            Im Moment läuft sie vor allem mit sehr viel <span class="hl">Decaf Cappuccino</span>.
+          </h3>
+        </div>
+
+        <div class="berlin-banner-min__right">
+          <a class="berlin-banner-min__cta" href="https://buymeacoffee.com/fixmydiaper">Spendier mir einen Kaffee</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2 class="section-title">FAQ: Wickeln in Berlin</h2>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>Wo finde ich Wickeltische in Berlin?</strong><br>
+        In Berlin findest du Wickeltische in Einkaufszentren, Cafés, Restaurants, Museen und öffentlichen Toiletten. Auf Fix My Diaper kannst du deine aktuelle Position oder eine Adresse eingeben und babyfreundliche Orte mit Wickeltisch in deiner Nähe finden.
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>Haben Cafés und Restaurants in Berlin Wickeltische?</strong><br>
+        Manche ja, aber leider nicht alle. Deshalb sammeln Eltern auf Fix My Diaper Orte mit Wickeltischen, Fotos, Bewertungen und praktischen Hinweisen.
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>Wie finde ich den nächsten Wickeltisch?</strong><br>
+        Gib eine Adresse ein oder nutze deinen aktuellen Standort. Die Karte zeigt dir Orte in der Nähe, an denen andere Eltern Wickelmöglichkeiten gefunden haben.
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <strong>Sind Toiletten in Berlin mit Kinderwagen zugänglich?</strong><br>
+        Viele Orte, besonders Einkaufszentren, Museen und größere Restaurants, haben geräumige Toiletten oder Familienräume. In den Einträgen findest du Hinweise dazu, ob genug Platz für einen Kinderwagen vorhanden ist.
+      </p>
+
+      <p class="top5-explanation" style="margin-top: 1.2rem;">
+        <strong>Kann ich einen neuen Ort eintragen?</strong><br>
+        Ja! Fix My Diaper lebt von Beiträgen aus der Community. Du kannst einen Ort mit Adresse, kurzer Bewertung und optional Foto eintragen und so anderen Eltern helfen.
+      </p>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wo finde ich Wickeltische in Berlin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Berlin findest du Wickeltische in Einkaufszentren, Cafés, Restaurants, Museen und öffentlichen Toiletten. Auf Fix My Diaper kannst du deine aktuelle Position oder eine Adresse eingeben und babyfreundliche Orte mit Wickeltisch in deiner Nähe finden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Haben Cafés und Restaurants in Berlin Wickeltische?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manche Cafés und Restaurants in Berlin haben Wickeltische, aber nicht alle. Fix My Diaper sammelt Orte mit Wickeltischen, Fotos, Bewertungen und praktischen Hinweisen von Eltern."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie finde ich den nächsten Wickeltisch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gib eine Adresse ein oder nutze deinen aktuellen Standort. Die Karte zeigt dir Orte in der Nähe, an denen andere Eltern Wickelmöglichkeiten gefunden haben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich einen neuen Ort eintragen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Du kannst einen Ort mit Adresse, kurzer Bewertung und optional Foto eintragen und so anderen Eltern helfen."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <footer>
+      <a href="about">Über uns</a> | 
+      <a href="submit">Ort eintragen</a> |
+      <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
+      Made with ♥️ in Berlin<br />
+      Erstellt von <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
