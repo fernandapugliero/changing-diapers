@@ -1,1 +1,144 @@
+.btn-primary {
+  display: inline-block;
+  padding: 11px 16px;
+  border-radius: 999px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 0;
+}
 
+.btn-primary:hover {
+  background: #111;
+}
+
+.section {
+  margin-top: 3.5rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.5;
+  max-width: 760px;
+}
+
+.soft-statement {
+  margin: 3rem auto;
+  max-width: 920px;
+  text-align: center;
+}
+
+.soft-statement__inner {
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 2rem 1rem;
+}
+
+.soft-statement p {
+  margin: 0 auto;
+  max-width: 720px;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 0 0 0.4rem 0;
+  color: #333;
+  line-height: 1.3;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.clean-list {
+  max-width: 760px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.clean-list__item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.clean-list__item strong {
+  color: #333;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .soft-statement p {
+    font-size: 1.15rem;
+  }
+
+  .clean-list__item {
+    display: block;
+  }
+
+  .clean-list__item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+}
