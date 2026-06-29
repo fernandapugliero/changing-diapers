@@ -6,7 +6,6 @@
 
   <title>Partner with Fix My Diaper | Family-Friendly Berlin Platform</title>
   <meta name="description" content="Partner with Fix My Diaper, a growing Berlin-based platform helping families discover baby-friendly places, changing tables and local activities.">
-  <meta name="keywords" content="family-friendly Berlin, baby-friendly places Berlin, parents in Berlin, Berlin families, family-friendly businesses, changing tables Berlin, local partnerships Berlin, brand collaborations, baby and toddler activities Berlin">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fixmydiaper.com/partnerships">
 
@@ -15,11 +14,6 @@
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url" content="https://fixmydiaper.com/partnerships">
   <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Partnerships | Fix My Diaper">
-  <meta name="twitter:description" content="A Berlin-based platform helping families discover baby-friendly places, changing tables and local activities.">
-  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
   <script>
@@ -30,10 +24,353 @@
   </script>
 
   <link rel="icon" href="/images/favicon.ico" sizes="any">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/components.css">
-  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #333;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    nav img {
+      width: 30px;
+      height: auto;
+      margin-right: 30px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+      line-height: 1.4;
+      max-width: 760px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .hero {
+      padding: 2.25rem 0 1.5rem 0;
+      text-align: center;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 1rem auto 0 auto;
+      text-align: center;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary:hover {
+      background: #111;
+    }
+
+    .section {
+      margin-top: 3.5rem;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.5;
+      max-width: 760px;
+    }
+
+    .soft-statement {
+      margin: 3rem auto;
+      max-width: 920px;
+      text-align: center;
+    }
+
+    .soft-statement__inner {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 2rem 1rem;
+    }
+
+    .soft-statement p {
+      margin: 0 auto;
+      max-width: 720px;
+      font-size: 1.35rem;
+      line-height: 1.35;
+      color: #333;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .founder-grid {
+        grid-template-columns: 40% 60%;
+        gap: 2rem;
+      }
+    }
+
+    .founder-photo {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #eee;
+      background: #f6f6f6;
+      min-height: 320px;
+    }
+
+    .founder-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .founder-copy p,
+    .text-block p {
+      text-align: left;
+      margin: 0 0 1rem 0;
+    }
+
+    .text-block {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-5 { grid-template-columns: repeat(5, 1fr); }
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin: 0 0 0.4rem 0;
+      color: #333;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .stat-card {
+      text-align: center;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.35rem;
+      color: #333;
+      margin-bottom: 0.3rem;
+      line-height: 1.1;
+    }
+
+    .stat-card span {
+      display: block;
+      font-size: 0.82rem;
+      color: #666;
+      line-height: 1.35;
+    }
+
+    .small-note {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #777;
+      margin-top: 0.75rem;
+    }
+
+    .clean-list {
+      max-width: 760px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .clean-list__item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .clean-list__item strong {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .case-study {
+      max-width: 920px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 1.5rem 0;
+    }
+
+    .case-study h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .case-intro {
+      margin: 0 0 1rem 0;
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .case-media {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .case-media img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .case-media {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    .contact-box {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .contact-box p {
+      text-align: center;
+      margin: 0 0 1rem 0;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .soft-statement p {
+        font-size: 1.15rem;
+      }
+
+      .clean-list__item {
+        display: block;
+      }
+
+      .clean-list__item strong {
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -46,8 +383,8 @@
     </nav>
 
     <main>
-      <section class="partnerships-hero">
-        <h1>Partner with Fix My Diaper</h1>
+      <section class="hero">
+        <h1>Work with us</h1>
         <h2>Helping families discover baby-friendly places, changing tables and activities in Berlin.</h2>
 
         <p>
@@ -86,9 +423,7 @@
 
       <section class="section">
         <h2 class="section-title">Community at a glance</h2>
-        <p class="section-subtitle">
-          A focused local community of Berlin families and parents in Germany.
-        </p>
+        <p class="section-subtitle">A focused local community of Berlin families and parents in Germany.</p>
 
         <div class="grid grid-5">
           <div class="card stat-card"><strong>80K+</strong><span>monthly Instagram views</span></div>
@@ -102,65 +437,30 @@
       </section>
 
       <section class="section">
-        <h2 class="section-title">A focused local audience</h2>
-
-        <div class="text-block">
-          <p>
-            Fix My Diaper reaches parents, especially mothers, who are actively looking for places to go,
-            things to do and services that make family life in Berlin easier.
-          </p>
-
-          <p>
-            This is a highly specific audience: families with babies and young children, mostly based in Germany,
-            interested in practical local recommendations.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
         <h2 class="section-title">What we create</h2>
-        <p class="section-subtitle">
-          Useful content that helps families choose places with confidence.
-        </p>
+        <p class="section-subtitle">Useful formats that help families choose places with confidence.</p>
 
-        <div class="clean-list">
-          <div class="clean-list__item">
-            <strong>Instagram Reels</strong>
-            <span>Short-form video recommendations showing baby-friendly places and activities in Berlin.</span>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Local guides</h3>
+            <p>Saveable guides for neighbourhoods, activities and family-friendly places in Berlin.</p>
           </div>
 
-          <div class="clean-list__item">
-            <strong>Neighbourhood Guides</strong>
-            <span>Saveable carousel guides with curated things to do with babies and toddlers in specific Berlin neighbourhoods.</span>
+          <div class="card">
+            <h3>Short-form video</h3>
+            <p>Reels and Stories showing real places, practical details and parent-tested recommendations.</p>
           </div>
 
-          <div class="clean-list__item">
-            <strong>Stories</strong>
-            <span>Timely recommendations, polls, community questions and behind-the-scenes discoveries.</span>
-          </div>
-
-          <div class="clean-list__item">
-            <strong>Interactive Map</strong>
-            <span>A community-driven map of changing tables and family-friendly places.</span>
-          </div>
-
-          <div class="clean-list__item">
-            <strong>Curated Recommendations</strong>
-            <span>Useful, honest and parent-tested recommendations that help families decide where to go.</span>
-          </div>
-
-          <div class="clean-list__item">
-            <strong>Newsletter</strong>
-            <span>Coming soon: weekly family-friendly finds in Berlin.</span>
+          <div class="card">
+            <h3>Discovery tools</h3>
+            <p>An interactive map, website guides and soon a newsletter for family-friendly finds.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
         <h2 class="section-title">Content people save and share</h2>
-        <p class="section-subtitle">
-          Useful local content, not traditional advertising.
-        </p>
+        <p class="section-subtitle">Useful local content, not traditional advertising.</p>
 
         <article class="case-study">
           <h3>Neukölln Family Guide</h3>
@@ -170,8 +470,8 @@
           </p>
 
           <div class="case-media">
-            <img src="/images/partnerships/neukolln-tips.png" alt="Neukölln Family Guide Instagram post preview">
-            <img src="/images/partnerships/post-insights.png" alt="Instagram insights for the Neukölln Family Guide">
+            <img src="/images/partnerships/Neukolln_tips.png" alt="Neukölln Family Guide Instagram post preview">
+            <img src="/images/partnerships/post_insights.png" alt="Instagram insights for the Neukölln Family Guide">
           </div>
 
           <div class="grid grid-3">
@@ -180,89 +480,52 @@
             <div class="card stat-card"><strong>58</strong><span>shares</span></div>
             <div class="card stat-card"><strong>120</strong><span>new followers</span></div>
             <div class="card stat-card"><strong>5</strong><span>local places featured</span></div>
-            <div class="card stat-card"><strong>1</strong><span>collaboration accepted on the post</span></div>
-          </div>
-
-          <div class="clean-list" style="margin-top:1.5rem;">
-            <div class="clean-list__item">
-              <strong>Content format</strong>
-              <span>Instagram carousel designed to be saved, shared and used when planning a local outing.</span>
-            </div>
-
-            <div class="clean-list__item">
-              <strong>Community response</strong>
-              <span>Parents saved, shared and asked for more neighbourhood recommendations.</span>
-            </div>
-
-            <div class="clean-list__item">
-              <strong>Partner visibility</strong>
-              <span>Local businesses were integrated naturally into content that was genuinely useful for families.</span>
-            </div>
+            <div class="card stat-card"><strong>1</strong><span>collaboration accepted</span></div>
           </div>
         </article>
       </section>
 
       <section class="section">
-        <h2 class="section-title">Useful content first, partner visibility second</h2>
+        <h2 class="section-title">Why brands collaborate with us</h2>
+        <p class="section-subtitle">
+          Families do not need more ads. They need better recommendations.
+        </p>
 
         <div class="text-block">
           <p>
-            Fix My Diaper does not create traditional ads. Collaborations are integrated into content that families actually want to save, share and use.
+            Collaborations are integrated naturally into content that families actually want to save, share and use.
+            A café, hotel, shop or family space becomes part of a useful recommendation, not a traditional advertisement.
           </p>
-
-          <p>
-            The goal is always to help parents discover places, products and services that make life with babies and toddlers easier.
-          </p>
-        </div>
-
-        <div class="clean-list" style="margin-top:1.5rem;">
-          <div class="clean-list__item"><strong>Community-first</strong><span>Recommendations are built around what families genuinely need.</span></div>
-          <div class="clean-list__item"><strong>Local audience</strong><span>Berlin families and parents looking for practical places, services and activities.</span></div>
-          <div class="clean-list__item"><strong>Saveable content</strong><span>Guides and videos designed for planning real outings.</span></div>
-          <div class="clean-list__item"><strong>Beyond Instagram</strong><span>Visibility through the website, interactive map and local guides.</span></div>
         </div>
       </section>
 
       <section class="section">
-        <h2 class="section-title">Ideal partners</h2>
+        <h2 class="section-title">Who we work with</h2>
         <p class="section-subtitle">
           We work best with places and brands that genuinely make family life easier.
         </p>
 
-        <div class="clean-list">
-          <div class="clean-list__item"><strong>Family cafés</strong><span>Welcoming places where parents can feel comfortable.</span></div>
-          <div class="clean-list__item"><strong>Play cafés</strong><span>Spaces designed around children, parents and connection.</span></div>
-          <div class="clean-list__item"><strong>Baby and kids stores</strong><span>Useful local shops parents are already looking for.</span></div>
-          <div class="clean-list__item"><strong>Museums & libraries</strong><span>Accessible, calm and community-oriented places for families.</span></div>
-          <div class="clean-list__item"><strong>Family events</strong><span>Activities parents can actually plan around.</span></div>
-          <div class="clean-list__item"><strong>Hotels and family stays</strong><span>Family-friendly stays and travel recommendations.</span></div>
-          <div class="clean-list__item"><strong>Baby and toddler activities</strong><span>Classes, workshops and experiences for young families.</span></div>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Places families visit</h3>
+            <p>Family cafés, play cafés, museums, libraries, hotels and family-friendly stays.</p>
+          </div>
+
+          <div class="card">
+            <h3>Activities and events</h3>
+            <p>Baby and toddler classes, workshops, family events and local experiences.</p>
+          </div>
+
+          <div class="card">
+            <h3>Useful parent services</h3>
+            <p>Baby and kids stores, local services and brands that support everyday family life.</p>
+          </div>
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">More than an Instagram post</h2>
-        <p class="section-subtitle">
-          Fix My Diaper is building a small ecosystem for families in Berlin.
-        </p>
-
-        <div class="clean-list">
-          <div class="clean-list__item"><strong>Instagram</strong><span>Discovery, guides, recommendations and community conversations.</span></div>
-          <div class="clean-list__item"><strong>Interactive Map</strong><span>A practical tool families can use when they are already out.</span></div>
-          <div class="clean-list__item"><strong>Website</strong><span>Searchable pages and guides that can live beyond a single post.</span></div>
-          <div class="clean-list__item"><strong>Local Guides</strong><span>Saveable recommendations around neighbourhoods and family needs.</span></div>
-          <div class="clean-list__item"><strong>Newsletter</strong><span>Coming soon: weekly family-friendly finds in Berlin.</span></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">Interested in working together?</h2>
-
-        <div class="contact-box">
-          <p>
-            If your business helps make life easier, more fun or more accessible for families in Berlin, I’d love to hear from you.
-          </p>
-
+      <section class="soft-statement">
+        <div class="soft-statement__inner">
+          <p>Have another kind of collaboration in mind? Managing a family-friendly business and not sure where to start? Let’s talk.</p>
           <a class="btn-primary" href="mailto:fixmydiaper@gmail.com?subject=Partnership%20with%20Fix%20My%20Diaper">
             Get in touch
           </a>
