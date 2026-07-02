@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>The Fix My Diaper Guide | Discover Berlin with Your Baby</title>
-  <meta name="description" content="Join the waitlist for a monthly guide featuring family-friendly places, activities, hidden gems and changing tables around Berlin.">
+  <meta name="description" content="Join the waitlist for a monthly guide featuring family-friendly places, hidden gems, activities and changing tables around Berlin.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fixmydiaper.com/newsletter">
 
   <meta property="og:title" content="Discover Berlin with Your Baby | Fix My Diaper">
-  <meta property="og:description" content="Join the waitlist for a monthly guide featuring family-friendly places, activities, hidden gems and changing tables around Berlin.">
+  <meta property="og:description" content="Join the waitlist for a monthly guide featuring family-friendly places, hidden gems, activities and changing tables around Berlin.">
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url" content="https://fixmydiaper.com/newsletter">
   <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
     gtag('js', new Date());
     gtag('config', 'G-JGYVLDZQTM');
   </script>
-
+  
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -72,25 +72,33 @@
       font-size: 1.1rem;
       font-weight: 400;
       color: #666;
-      margin: 0 auto 2rem auto;
+      margin: 0 0 2rem 0;
       text-align: center;
       line-height: 1.4;
-      max-width: 760px;
     }
 
-    .hero {
-      padding: 2.25rem 0 1.5rem 0;
-      text-align: center;
-    }
-
-    .signup-wrap {
-      max-width: 560px;
+    .newsletter-wrap {
+      max-width: 720px;
       margin: 0 auto;
+    }
+
+    .form-card {
+      max-width: 560px;
+      margin: 0 auto 1rem auto;
+      padding: 1rem;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      box-sizing: border-box;
     }
 
     .beehiiv-embed {
       width: 100%;
       margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      overflow: visible;
     }
 
     .beehiiv-embed,
@@ -101,13 +109,37 @@
       box-sizing: border-box !important;
     }
 
+    .beehiiv-embed iframe,
+    [data-beehiiv-form] iframe {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      border: 0 !important;
+      border-radius: 8px !important;
+      display: block !important;
+    }
+
+    .beehiiv-embed form,
+    [data-beehiiv-form] form {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      display: flex !important;
+      gap: 8px !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+    }
+
     .beehiiv-embed input,
     .beehiiv-embed input[type="email"],
     .beehiiv-embed input[type="text"],
     [data-beehiiv-form] input,
     [data-beehiiv-form] input[type="email"],
     [data-beehiiv-form] input[type="text"] {
-      height: 38px !important;
+      flex: 1 1 260px !important;
+      max-width: 420px !important;
+      height: 36px !important;
       padding: 0 10px !important;
       border: 1px solid #ddd !important;
       border-radius: 8px !important;
@@ -122,31 +154,24 @@
     .beehiiv-embed input[type="submit"],
     [data-beehiiv-form] button,
     [data-beehiiv-form] input[type="submit"] {
-      min-height: 38px !important;
-      padding: 0 14px !important;
-      border: 1px solid #333 !important;
-      border-radius: 999px !important;
-      background: #333 !important;
-      color: #fff !important;
+      height: 36px !important;
+      padding: 0 12px !important;
+      border: 1px solid #ddd !important;
+      border-radius: 8px !important;
+      background: #f7f7f7 !important;
       cursor: pointer !important;
       font-size: 13px !important;
       font-weight: 600 !important;
+      color: #333 !important;
       box-shadow: none !important;
+      white-space: nowrap !important;
     }
 
     .beehiiv-embed button:hover,
     .beehiiv-embed input[type="submit"]:hover,
     [data-beehiiv-form] button:hover,
     [data-beehiiv-form] input[type="submit"]:hover {
-      background: #111 !important;
-      border-color: #111 !important;
-    }
-
-    .beehiiv-embed iframe,
-    [data-beehiiv-form] iframe {
-      max-width: 100% !important;
-      border: 0 !important;
-      border-radius: 12px !important;
+      background: #efefef !important;
     }
 
     .reassurance {
@@ -157,16 +182,12 @@
       margin: 1rem auto 0 auto;
     }
 
-    .section {
-      margin-top: 3.5rem;
-    }
-
     .section-title {
       font-size: 1.3rem;
       font-weight: 600;
       color: #444;
       text-align: center;
-      margin-top: 0;
+      margin-top: 3rem;
       margin-bottom: 0.75rem;
       line-height: 1.3;
     }
@@ -175,9 +196,9 @@
       font-size: 0.95rem;
       color: #555;
       text-align: center;
-      margin: 0 auto 1.5rem auto;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
       line-height: 1.5;
-      max-width: 760px;
     }
 
     .guide-grid {
@@ -242,14 +263,26 @@
     }
 
     @media (max-width: 480px) {
-      .hero {
-        padding-top: 2rem;
+      .form-card {
+        padding: 0.75rem;
+      }
+
+      .beehiiv-embed input,
+      .beehiiv-embed input[type="email"],
+      .beehiiv-embed input[type="text"],
+      [data-beehiiv-form] input,
+      [data-beehiiv-form] input[type="email"],
+      [data-beehiiv-form] input[type="text"] {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
 
       .beehiiv-embed button,
       .beehiiv-embed input[type="submit"],
       [data-beehiiv-form] button,
       [data-beehiiv-form] input[type="submit"] {
+        flex: 0 0 auto !important;
         width: auto !important;
       }
     }
@@ -266,61 +299,60 @@
     </nav>
 
     <main>
-      <section class="hero">
-        <h1>Discover Berlin with your baby.</h1>
+      <h1>Discover Berlin with your baby.</h1>
 
-        <h2>
-          Join the waitlist for a monthly guide featuring family-friendly places,
-          activities, hidden gems and changing tables around Berlin.
-        </h2>
+      <h2>
+        Join the waitlist for a monthly guide featuring family-friendly places,
+        hidden gems, activities and changing tables around Berlin.
+      </h2>
 
-        <div class="signup-wrap">
+      <div class="newsletter-wrap">
+        <div class="form-card">
           <div class="beehiiv-embed">
             <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="59aac14a-0203-4680-bd56-d26c6157a79f"></script>
           </div>
-
-          <p class="reassurance">
-            One email per month. No spam. Just useful discoveries for families in Berlin.
-          </p>
         </div>
-      </section>
 
-      <section class="section">
-        <h2 class="section-title">What you’ll receive</h2>
-        <p class="section-subtitle">
-          A small monthly guide to help you plan easier days out with your baby.
+        <p class="reassurance">
+          One email per month. No spam. Just useful discoveries for families in Berlin.
         </p>
+      </div>
 
-        <div class="guide-grid">
-          <div class="guide-card">
-            <strong>Baby-friendly places</strong>
-            <span>Cafés, restaurants and spaces that feel welcoming.</span>
-          </div>
+      <h2 class="section-title">What you’ll receive</h2>
+      <p class="section-subtitle">
+        A small monthly guide to help you plan easier days out with your baby.
+      </p>
 
-          <div class="guide-card">
-            <strong>Activities & events</strong>
-            <span>Things to do with babies and toddlers in Berlin.</span>
-          </div>
-
-          <div class="guide-card">
-            <strong>New changing tables</strong>
-            <span>Fresh community submissions from around the city.</span>
-          </div>
-
-          <div class="guide-card">
-            <strong>Hidden gems</strong>
-            <span>Small discoveries that make family life easier.</span>
-          </div>
-
-          <div class="guide-card">
-            <strong>Monthly Berlin discoveries</strong>
-            <span>Useful finds, sent once a month.</span>
-          </div>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <strong>📍 Baby-friendly places</strong>
+          <span>Cafés, restaurants and spaces that feel welcoming.</span>
         </div>
-      </section>
+
+        <div class="guide-card">
+          <strong>🎠 Activities & events</strong>
+          <span>Things to do with babies and toddlers in Berlin.</span>
+        </div>
+
+        <div class="guide-card">
+          <strong>🚼 New changing tables</strong>
+          <span>Fresh community submissions from around the city.</span>
+        </div>
+
+        <div class="guide-card">
+          <strong>💎 Hidden gems</strong>
+          <span>Small discoveries that make family life easier.</span>
+        </div>
+
+        <div class="guide-card">
+          <strong>🗺️ Monthly discoveries</strong>
+          <span>Useful finds, sent once a month.</span>
+        </div>
+      </div>
 
       <p class="footer-note">
-        The Fix My Diaper Guide is coming soon.
+        Be among the first families to receive it.<br>
+        One email per month. That’s it.
       </p>
     </main>
 
