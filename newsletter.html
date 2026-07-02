@@ -83,21 +83,27 @@
     }
 
     .form-card {
-      max-width: 560px;
+      max-width: 640px;
       margin: 0 auto 1rem auto;
-      padding: 1rem;
+      padding: 1.4rem;
       border: 1px solid #eee;
       border-radius: 12px;
       background: #fff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
     }
 
     .beehiiv-embed {
       width: 100%;
+      max-width: 540px;
       margin: 0 auto;
       display: flex;
       justify-content: center;
+      align-items: center;
       overflow: visible;
     }
 
@@ -109,10 +115,17 @@
       box-sizing: border-box !important;
     }
 
+    .beehiiv-embed > div,
+    [data-beehiiv-form] > div {
+      width: 100% !important;
+      max-width: 540px !important;
+      margin: 0 auto !important;
+    }
+
     .beehiiv-embed iframe,
     [data-beehiiv-form] iframe {
       width: 100% !important;
-      max-width: 100% !important;
+      max-width: 540px !important;
       margin: 0 auto !important;
       border: 0 !important;
       border-radius: 8px !important;
@@ -122,7 +135,7 @@
     .beehiiv-embed form,
     [data-beehiiv-form] form {
       width: 100% !important;
-      max-width: 100% !important;
+      max-width: 540px !important;
       margin: 0 auto !important;
       display: flex !important;
       gap: 8px !important;
@@ -264,7 +277,21 @@
 
     @media (max-width: 480px) {
       .form-card {
-        padding: 0.75rem;
+        padding: 0.9rem;
+        max-width: 100%;
+      }
+
+      .beehiiv-embed {
+        max-width: 100%;
+      }
+
+      .beehiiv-embed > div,
+      [data-beehiiv-form] > div,
+      .beehiiv-embed iframe,
+      [data-beehiiv-form] iframe,
+      .beehiiv-embed form,
+      [data-beehiiv-form] form {
+        max-width: 100% !important;
       }
 
       .beehiiv-embed input,
