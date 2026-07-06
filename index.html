@@ -407,6 +407,26 @@
     height: 230px;
   }
     }
+      .newsletter-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-wrap > div,
+.beehiiv-embed {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.beehiiv-embed iframe {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  border: 0 !important;
+}
   </style>
 </head>
 <body>
@@ -436,17 +456,15 @@
       Discover family-friendly places, hidden gems, activities and changing tables in Berlin.
     </p>
 
-      <center></center><div class="newsletter-wrap">
-        <div class="form-card">
-          <div class="beehiiv-embed">
-            <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="59aac14a-0203-4680-bd56-d26c6157a79f"></script>
-          </div></center>
-        </div>
+    <div class="newsletter-wrap">
+  <div class="beehiiv-embed">
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="59aac14a-0203-4680-bd56-d26c6157a79f"></script>
+  </div>
 
-        <p class="top5-explanation">
-          One email per month. No spam. Just useful discoveries for families in Berlin.
-        </p>
-      </div>
+  <p class="top5-explanation">
+    One email per month. No spam. Just useful discoveries for families in Berlin.
+  </p>
+</div>
 
      <h2 class="section-title">Best changing tables in Berlin*</h2>
     <p class="section-subtitle">
