@@ -136,19 +136,19 @@
 
     .soft-statement {
       margin: 3rem auto;
-      max-width: 1040px;
+      max-width: 920px;
       text-align: center;
     }
 
     .soft-statement__inner {
       border-top: 1px solid rgba(0,0,0,0.08);
       border-bottom: 1px solid rgba(0,0,0,0.08);
-      padding: 2.5rem 1rem;
+      padding: 2rem 1rem;
     }
 
     .soft-statement p {
       margin: 0 auto;
-      max-width: 760px;
+      max-width: 720px;
       font-size: 1.35rem;
       line-height: 1.35;
       color: #333;
@@ -167,8 +167,8 @@
 
     @media (min-width: 768px) {
       .founder-grid {
-        grid-template-columns: 42% 58%;
-        gap: 2.25rem;
+        grid-template-columns: 380px 1fr;
+        gap: 2.5rem;
       }
     }
 
@@ -178,6 +178,8 @@
       border: 1px solid #eee;
       background: #f6f6f6;
       min-height: 320px;
+      max-width: 380px;
+      margin: 0 auto;
     }
 
     .founder-photo img {
@@ -260,8 +262,30 @@
       margin-top: 0.75rem;
     }
 
+    .clean-list {
+      max-width: 760px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .clean-list__item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .clean-list__item strong {
+      color: #333;
+      font-weight: 600;
+    }
+
     .case-study {
-      max-width: 1100px;
+      max-width: 920px;
       margin: 0 auto 2.25rem auto;
       border-top: 1px solid rgba(0,0,0,0.08);
       border-bottom: 1px solid rgba(0,0,0,0.08);
@@ -280,20 +304,21 @@
       font-size: 0.95rem;
       line-height: 1.5;
       text-align: left;
-      max-width: 900px;
     }
 
     .case-layout {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
-      margin: 1rem 0;
+      margin: 1rem 0 0 0;
       align-items: start;
     }
 
     @media (min-width: 768px) {
       .case-layout {
-        grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+        grid-template-columns: minmax(0, 460px) minmax(220px, 280px);
+        justify-content: center;
+        gap: 1.5rem;
       }
     }
 
@@ -306,13 +331,13 @@
 
     .case-stats {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 0.75rem;
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 767px) {
       .case-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -320,14 +345,14 @@
       background: #fff;
       border: 1px solid #eee;
       border-radius: 12px;
-      padding: 1rem;
+      padding: 0.85rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       text-align: center;
     }
 
     .case-stat strong {
       display: block;
-      font-size: 1.45rem;
+      font-size: 1.3rem;
       color: #333;
       margin-bottom: 0.25rem;
       line-height: 1.1;
@@ -335,30 +360,9 @@
 
     .case-stat span {
       display: block;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: #666;
       line-height: 1.35;
-    }
-
-    .chips {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .chip {
-      display: inline-block;
-      border: 1px solid #eee;
-      border-radius: 999px;
-      padding: 0.7rem 0.95rem;
-      color: #555;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-      font-size: 0.92rem;
-      line-height: 1.2;
     }
 
     .contact-box {
@@ -397,8 +401,13 @@
         font-size: 1.15rem;
       }
 
-      .case-stats {
-        grid-template-columns: 1fr;
+      .clean-list__item {
+        display: block;
+      }
+
+      .clean-list__item strong {
+        display: block;
+        margin-bottom: 0.25rem;
       }
     }
   </style>
@@ -440,8 +449,12 @@
 
         <div class="founder-copy">
           <h2 class="section-title" style="text-align:left;">Built by a parent, for parents</h2>
-          <p>Hi, my name is Fernanda.</p>
-          <p>I created Fix My Diaper with my son when he was 3 months old.</p>
+          <p>
+            Hi, my name is Fernanda. 
+          </p>
+          <p>
+            I created Fix My Diaper with my son when he was 3 months old.
+          </p>
           <p>
             After becoming a parent in Berlin, I realized I had to rediscover the city from scratch.
             Places I had known for years suddenly became new again: Can I enter with a stroller?
@@ -459,11 +472,11 @@
         <p class="section-subtitle">A focused local community of Berlin families and parents in Germany.</p>
 
         <div class="grid grid-5">
-          <div class="card stat-card"><strong>130K+</strong><span>Monthly<br>Instagram views</span></div>
-          <div class="card stat-card"><strong>1080+</strong><span>Engaged<br>followers</span></div>
-          <div class="card stat-card"><strong>80%</strong><span>Women</span></div>
-          <div class="card stat-card"><strong>85%</strong><span>Aged<br>25–44</span></div>
-          <div class="card stat-card"><strong>86%</strong><span>Based in<br>Germany</span></div>
+          <div class="card stat-card"><strong>130K+</strong><span>monthly Instagram views</span></div>
+          <div class="card stat-card"><strong>1080+</strong><span>engaged followers</span></div>
+          <div class="card stat-card"><strong>80%</strong><span>women</span></div>
+          <div class="card stat-card"><strong>85%</strong><span>aged 25–44</span></div>
+          <div class="card stat-card"><strong>86%</strong><span>based in Germany</span></div>
         </div>
 
         <p class="small-note">Numbers are updated regularly as the community grows.</p>
@@ -476,17 +489,17 @@
         <div class="grid grid-3">
           <div class="card">
             <h3>Local guides</h3>
-            <p>Neighbourhood recommendations for families.</p>
+            <p>Saveable guides for neighbourhoods, activities and family-friendly places in Berlin.</p>
           </div>
 
           <div class="card">
             <h3>Short-form video</h3>
-            <p>Real places, practical tips and honest reviews.</p>
+            <p>Reels and Stories showing real places, practical details and parent-tested recommendations.</p>
           </div>
 
           <div class="card">
             <h3>Discovery tools</h3>
-            <p>Interactive map, website and newsletter.</p>
+            <p>An interactive map, website guides and soon a newsletter for family-friendly finds.</p>
           </div>
         </div>
       </section>
@@ -511,8 +524,6 @@
               <div class="case-stat"><strong>11.5K+</strong><span>views</span></div>
               <div class="case-stat"><strong>299</strong><span>saves</span></div>
               <div class="case-stat"><strong>77</strong><span>shares</span></div>
-              <div class="case-stat"><strong>212</strong><span>profile visits</span></div>
-              <div class="case-stat"><strong>120</strong><span>new followers</span></div>
             </div>
           </div>
         </article>
@@ -520,8 +531,7 @@
         <article class="case-study">
           <h3>Exploring Humboldt Forum with Kids</h3>
           <p class="case-intro">
-            A short-form video showcasing free family-friendly spaces and activities inside Berlin's Humboldt Forum,
-            helping parents discover a cultural destination that's accessible with babies and young children.
+            A short-form video showcasing free family-friendly spaces and activities inside Berlin's Humboldt Forum, helping parents discover a cultural destination that's accessible with babies and young children.
           </p>
 
           <div class="case-layout">
@@ -532,9 +542,7 @@
             <div class="case-stats">
               <div class="case-stat"><strong>34.8K+</strong><span>views</span></div>
               <div class="case-stat"><strong>1.1K</strong><span>saves</span></div>
-              <div class="case-stat"><strong>1,264</strong><span>shares</span></div>
-              <div class="case-stat"><strong>397</strong><span>profile visits</span></div>
-              <div class="case-stat"><strong>187</strong><span>new followers</span></div>
+              <div class="case-stat"><strong>1264</strong><span>shares</span></div>
             </div>
           </div>
         </article>
@@ -560,15 +568,21 @@
           We work best with places and brands that genuinely make family life easier.
         </p>
 
-        <div class="chips">
-          <span class="chip">Family cafés</span>
-          <span class="chip">Hotels</span>
-          <span class="chip">Kids stores</span>
-          <span class="chip">Museums</span>
-          <span class="chip">Libraries</span>
-          <span class="chip">Family events</span>
-          <span class="chip">Baby classes</span>
-          <span class="chip">Local services</span>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Places families visit</h3>
+            <p>Family cafés, play cafés, museums, libraries, hotels and family-friendly stays.</p>
+          </div>
+
+          <div class="card">
+            <h3>Activities and events</h3>
+            <p>Baby and toddler classes, workshops, family events and local experiences.</p>
+          </div>
+
+          <div class="card">
+            <h3>Useful parent services</h3>
+            <p>Baby and kids stores, local services and brands that support everyday family life.</p>
+          </div>
         </div>
       </section>
 
