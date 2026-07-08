@@ -158,10 +158,10 @@
 
     .founder-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      grid-template-columns:340px 1fr;
+      gap: 2rem;
       align-items: center;
-      max-width: 1080px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -178,7 +178,7 @@
       border: 1px solid #eee;
       background: #f6f6f6;
       min-height: 320px;
-      max-width: 380px;
+      max-width: 340px;
       margin: 0 auto;
     }
 
@@ -308,10 +308,19 @@
 
     .case-layout {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin: 1rem 0 0 0;
+      grid-template-columns:360px 220px;
+      gap: 1.5rem;
+      justify-content:center;
       align-items: start;
+    }
+    .case-image{
+     max-width:360px;
+     margin:0 auto;
+    }
+
+    .case-image img{
+     width:100%;
+     display:block;
     }
 
     @media (min-width: 768px) {
@@ -345,14 +354,14 @@
       background: #fff;
       border: 1px solid #eee;
       border-radius: 12px;
-      padding: 0.85rem;
+      padding: 0.75rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       text-align: center;
     }
 
     .case-stat strong {
       display: block;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #333;
       margin-bottom: 0.25rem;
       line-height: 1.1;
@@ -360,7 +369,7 @@
 
     .case-stat span {
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #666;
       line-height: 1.35;
     }
