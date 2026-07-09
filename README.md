@@ -4,7 +4,7 @@
 
 A simple map to help parents find public places with baby changing tables.
 
-Built during my maternity leave — with the help of GitHub, open tools, ChatGPT, and a very patient baby.
+Built during my maternity leave – with the help of GitHub, open tools, ChatGPT, and a very patient baby.
 
 ---
 
