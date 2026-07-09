@@ -30,7 +30,7 @@ You can help other families by submitting a new location.
 
 ## Read the story behind Fix My Diaper
 
-I documented the entire journey of building this project in public—from the first MVP to the first collaborations.
+I documented the entire journey of building this project in public – from the first MVP to the first collaborations.
 
 - [Part 1: How GitHub & AI Helped Me Do It](https://medium.com/@fernandapugliero/the-story-behind-fixmydiaper-part-1-how-github-ai-helped-me-do-it-148b0d6ab965)
 - [Part 2: Okay, I Launched It. Now What?](https://medium.com/@fernandapugliero/the-story-behind-fixmydiaper-part-2-okay-i-launched-it-now-what-1d6a66730980)
