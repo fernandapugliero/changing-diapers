@@ -6,7 +6,7 @@
 
 What started as a collaborative map of changing tables has grown into a local guide for parents looking for cafés, activities, hidden gems and places that truly welcome families.
 
-Built during my maternity leave — with the help of GitHub, open tools, ChatGPT, and a very patient baby.
+Built during my maternity leave – with the help of GitHub, open tools, ChatGPT, and a very patient baby.
 
 🌍 **Website:** https://fixmydiaper.com
 
