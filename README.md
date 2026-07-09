@@ -1,4 +1,4 @@
-# 🍼 FixMyDiaper
+# FixMyDiaper
 
 [![Made with AI](https://img.shields.io/badge/Made%20with-AI-6f42c1?style=flat-square&logo=OpenAI&logoColor=white)](https://openai.com/chatgpt)
 
