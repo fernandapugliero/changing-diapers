@@ -423,6 +423,65 @@
         margin-bottom: 0.25rem;
       }
     }
+
+    /* ===== Supported by the community ===== */
+    .community-support-section {
+      max-width: 960px;
+      margin: 3.5rem auto 0 auto;
+      text-align: center;
+    }
+
+    .community-support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem 1.5rem;
+      align-items: center;
+      margin: 2rem auto 1.25rem auto;
+      max-width: 840px;
+    }
+
+    .community-support-logo {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .community-support-logo img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 150px;
+      max-height: 62px;
+      object-fit: contain;
+    }
+
+    .community-support-note {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #777;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .community-support-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .community-support-logo {
+        min-height: 104px;
+      }
+
+      .community-support-logo img {
+        max-width: 170px;
+        max-height: 68px;
+      }
+    }
+
   </style>
 </head>
 
@@ -495,6 +554,73 @@
         <p class="small-note">Numbers are updated regularly as the community grows.</p>
       </section>
       
+
+      <section class="community-support-section" aria-labelledby="community-support-title">
+        <h2 id="community-support-title" class="section-title">
+          Supported by the community
+        </h2>
+
+        <p class="section-subtitle">
+          Local businesses, family spaces and community initiatives that have collaborated with,
+          supported or featured Fix My Diaper.
+        </p>
+
+        <div class="community-support-grid">
+          <div class="community-support-logo">
+            <img
+              src="/images/partners/maralou.png"
+              alt="Maralou"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="community-support-logo">
+            <img
+              src="/images/partners/wickelboard.png"
+              alt="Wickelboard"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="community-support-logo">
+            <img
+              src="/images/partners/cafe-cutie-pie.png"
+              alt="Café Cutie Pie"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="community-support-logo">
+            <img
+              src="/images/partners/ludotheke.png"
+              alt="Ludotheke"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="community-support-logo">
+            <img
+              src="/images/partners/fair-play.png"
+              alt="Fair Play"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="community-support-logo">
+            <img
+              src="/images/partners/handpicked.png"
+              alt="Handpicked Berlin"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+        <p class="community-support-note">
+          Includes shared posts, editorial features, reposts and other forms of community support.
+          No paid partnerships are represented here.
+        </p>
+      </section>
+
       <section class="section">
         <h2 class="section-title">What we create</h2>
         <p class="section-subtitle">Useful formats that help families choose places with confidence.</p>
