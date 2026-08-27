@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Family-Friendly Places in Berlin | Fix My Diaper</title>
+  <meta name="description" content="Discover what makes a place family-friendly in Berlin and apply to become Fix My Diaper Approved.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fixmydiaper.com/family-friendly">
+
+  <meta property="og:title" content="Family-Friendly Places | Fix My Diaper">
+  <meta property="og:description" content="A simple standard for places that genuinely make life easier for families in Berlin.">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com/family-friendly">
+  <meta property="og:type" content="website">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JGYVLDZQTM');
+  </script>
+
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       SAME VISUAL BASE AS /partnerships
+       ========================================================= */
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #333;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    nav img {
+      width: 30px;
+      height: auto;
+      margin-right: 30px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+      line-height: 1.4;
+      max-width: 760px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .hero {
+      padding: 2.25rem 0 1.5rem 0;
+      text-align: center;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 1rem auto 0 auto;
+      text-align: center;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .hero .btn-primary {
+      margin-top: 0;
+    }
+
+    .btn-primary:hover {
+      background: #111;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #444;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .btn-secondary:hover {
+      background: #fafafa;
+    }
+
+    .section {
+      margin-top: 3.5rem;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.5;
+      max-width: 760px;
+    }
+
+    .soft-statement {
+      margin: 3rem auto;
+      max-width: 920px;
+      text-align: center;
+    }
+
+    .soft-statement__inner {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 2rem 1rem;
+    }
+
+    .soft-statement p {
+      margin: 0 auto;
+      max-width: 720px;
+      font-size: 1.35rem;
+      line-height: 1.35;
+      color: #333;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .soft-statement .btn-primary {
+      margin-top: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-4 { grid-template-columns: repeat(4, 1fr); }
+      .grid-5 { grid-template-columns: repeat(5, 1fr); }
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin: 0 0 0.4rem 0;
+      color: #333;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .clean-list {
+      max-width: 760px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .clean-list__item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .clean-list__item strong {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .small-note {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #777;
+      margin-top: 0.75rem;
+    }
+
+    /* =========================================================
+       FAMILY-FRIENDLY PAGE ADDITIONS
+       Kept intentionally simple so the page feels native.
+       ========================================================= */
+
+    .badge-section {
+      max-width: 900px;
+      margin: 3.5rem auto 0 auto;
+    }
+
+    .badge-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .badge-layout {
+        grid-template-columns: 320px 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    .badge-image {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .badge-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Neutral fallback while the Canva badge is not uploaded */
+    .badge-placeholder {
+      aspect-ratio: 1;
+      border: 1px solid #eee;
+      border-radius: 50%;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .badge-placeholder strong {
+      display: block;
+      font-size: 1.5rem;
+      line-height: 1.1;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge-placeholder span {
+      display: block;
+      font-size: 0.75rem;
+      line-height: 1.4;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-copy p {
+      text-align: left;
+      margin: 0 0 1rem 0;
+    }
+
+    .criteria-intro {
+      max-width: 760px;
+      margin: 0 auto 1.5rem auto;
+      text-align: center;
+    }
+
+    .criteria-intro p {
+      margin: 0;
+      text-align: center;
+    }
+
+    .bonus {
+      display: block;
+      margin-top: 0.45rem;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .contact-box {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .application-form {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .form-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-field label,
+    .form-group-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 0.75rem 0.8rem;
+      background: #fff;
+      color: #333;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .form-field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: #999;
+    }
+
+    .checkbox-list {
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 0.75rem;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      color: #555;
+    }
+
+    .checkbox-item input {
+      margin-top: 0.2rem;
+    }
+
+    .form-actions {
+      margin-top: 1.25rem;
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .soft-statement p {
+        font-size: 1.15rem;
+      }
+
+      .clean-list__item {
+        display: block;
+      }
+
+      .clean-list__item strong {
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+
+      body {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- EXACT SAME NAV STRUCTURE AS /partnerships -->
+    <nav>
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <a href="https://fixmydiaper.com/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
+    </nav>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <h1>Family-friendly, for real.</h1>
+        <h2>
+          A simple standard for places that genuinely make life easier for families in Berlin.
+        </h2>
+
+        <p>
+          Fix My Diaper helps parents discover places they can actually enjoy with babies and young children.
+          Now we are highlighting the venues that go a little further to make families feel welcome,
+          comfortable and included.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#apply">Become Fix My Diaper Approved</a>
+          <a class="btn-secondary" href="#criteria">See the criteria</a>
+        </div>
+      </section>
+
+      <!-- STATEMENT -->
+      <section class="soft-statement">
+        <div class="soft-statement__inner">
+          <p>Family-friendly should mean more than “children are allowed here.”</p>
+        </div>
+      </section>
+
+      <!-- BADGE -->
+      <section class="badge-section">
+        <div class="badge-layout">
+
+          <div class="badge-image">
+            <!--
+              WHEN YOUR CANVA BADGE IS READY:
+              1. export it as PNG or SVG
+              2. save it as /images/family-friendly/approved-badge.png
+              3. delete the placeholder below
+              4. uncomment this:
+
+              <img
+                src="/images/family-friendly/approved-badge.png"
+                alt="Approved by Fix My Diaper — Family-Friendly Place"
+              >
+            -->
+
+            <div class="badge-placeholder">
+              <div>
+                <strong>Fix My Diaper<br>Approved</strong>
+                <span>Family-friendly place · Berlin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="badge-copy">
+            <h2 class="section-title" style="text-align:left;">A sign families can trust</h2>
+
+            <p>
+              The Fix My Diaper Approved badge recognises places that make a practical effort
+              to welcome families — not just places that call themselves family-friendly.
+            </p>
+
+            <p>
+              Approved venues can display the badge so parents know that bringing a baby,
+              toddler or stroller has already been considered.
+            </p>
+
+            <p>
+              It is a small signal with a simple message: families are welcome here.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CRITERIA -->
+      <section class="section" id="criteria">
+        <h2 class="section-title">What makes a place family-friendly?</h2>
+
+        <p class="section-subtitle">
+          We look at five practical things. None of them need to be fancy.
+          What matters is whether they make an outing easier for a family.
+        </p>
+
+        <div class="clean-list">
+
+          <div class="clean-list__item">
+            <strong>1. Family-friendly vibe</strong>
+            <span>
+              Families feel welcome from the moment they arrive. Staff are friendly,
+              patient and practical — whether that means helping with a stroller,
+              finding a comfortable place to sit with a baby or simply treating
+              children as part of the experience rather than a problem.
+            </span>
+          </div>
+
+          <div class="clean-list__item">
+            <strong>2. Changing option</strong>
+            <span>
+              A changing table, dedicated changing area or another clean and safe
+              surface where a baby can be changed comfortably.
+              <span class="bonus">
+                Bonus points for diapers, wet wipes or other useful changing amenities.
+              </span>
+            </span>
+          </div>
+
+          <div class="clean-list__item">
+            <strong>3. High chair or similar</strong>
+            <span>
+              Babies and toddlers may need to eat during the visit. A high chair
+              or another secure seating option gives them a safe place to sit
+              and makes meals much easier for everyone.
+            </span>
+          </div>
+
+          <div class="clean-list__item">
+            <strong>4. Stroller-friendly</strong>
+            <span>
+              A stroller should not become a problem at the door. Ideally it can
+              enter the venue. If that is not possible, there should be a safe place
+              to leave it while keeping it accessible whenever the family needs it.
+            </span>
+          </div>
+
+          <div class="clean-list__item">
+            <strong>5. Something to do</strong>
+            <span>
+              Toys, books, building blocks, drawing materials or a simple game can
+              keep children engaged for a little while — giving parents a chance
+              to eat, talk, relax and enjoy being out too.
+            </span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MID-PAGE CTA -->
+      <section class="soft-statement">
+        <div class="soft-statement__inner">
+          <p>Already doing these things? We want families in Berlin to know.</p>
+          <a class="btn-primary" href="#apply">Apply for approval</a>
+        </div>
+      </section>
+
+      <!-- APPLICATION -->
+      <section class="section" id="apply">
+        <h2 class="section-title">Become Fix My Diaper Approved</h2>
+
+        <p class="section-subtitle">
+          Tell us a little about your venue and how you support families.
+          We will review the application and get in touch.
+        </p>
+
+        <div class="contact-box">
+          <!--
+            CONNECT THIS FORM TO YOUR PREFERRED FORM HANDLER.
+            For now action="#" keeps it front-end only.
+          -->
+          <form class="application-form" action="#" method="post">
+
+            <div class="form-grid form-grid-2">
+              <div class="form-field">
+                <label for="venue-name">Venue name *</label>
+                <input id="venue-name" name="venue_name" type="text" required>
+              </div>
+
+              <div class="form-field">
+                <label for="venue-type">Type of place *</label>
+                <select id="venue-type" name="venue_type" required>
+                  <option value="">Choose one</option>
+                  <option>Café</option>
+                  <option>Restaurant</option>
+                  <option>Shop</option>
+                  <option>Museum / cultural venue</option>
+                  <option>Hotel / accommodation</option>
+                  <option>Family space</option>
+                  <option>Activity / class</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid form-grid-2" style="margin-top:1rem;">
+              <div class="form-field">
+                <label for="address">Address *</label>
+                <input id="address" name="address" type="text" required>
+              </div>
+
+              <div class="form-field">
+                <label for="neighbourhood">Neighbourhood</label>
+                <input id="neighbourhood" name="neighbourhood" type="text" placeholder="e.g. Neukölln">
+              </div>
+            </div>
+
+            <div class="form-grid form-grid-2" style="margin-top:1rem;">
+              <div class="form-field">
+                <label for="website">Website or Instagram</label>
+                <input id="website" name="website" type="url" placeholder="https://">
+              </div>
+
+              <div class="form-field">
+                <label for="email">Contact email *</label>
+                <input id="email" name="email" type="email" required>
+              </div>
+            </div>
+
+            <div style="margin-top:1.25rem;">
+              <div class="form-group-title">What do you currently offer?</div>
+
+              <div class="checkbox-list">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="criteria[]" value="vibe">
+                  <span>A welcoming, family-friendly environment</span>
+                </label>
+
+                <label class="checkbox-item">
+                  <input type="checkbox" name="criteria[]" value="changing">
+                  <span>A safe place to change a diaper</span>
+                </label>
+
+                <label class="checkbox-item">
+                  <input type="checkbox" name="criteria[]" value="high-chair">
+                  <span>A high chair or similar safe seating option</span>
+                </label>
+
+                <label class="checkbox-item">
+                  <input type="checkbox" name="criteria[]" value="stroller">
+                  <span>Stroller-friendly access or safe stroller storage</span>
+                </label>
+
+                <label class="checkbox-item">
+                  <input type="checkbox" name="criteria[]" value="activities">
+                  <span>Toys, books, games or another activity for children</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-top:1.25rem;">
+              <label for="details">Tell us more</label>
+              <textarea
+                id="details"
+                name="details"
+                placeholder="What should families know about your place?"
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn-primary" type="submit">Send application</button>
+            </div>
+
+            <p class="small-note">
+              By submitting this form, you agree that Fix My Diaper may contact
+              you about your application.
+            </p>
+
+          </form>
+        </div>
+      </section>
+
+      <!-- FUTURE GUIDE NOTE -->
+      <section class="section">
+        <h2 class="section-title">Want to become more family-friendly?</h2>
+        <p class="section-subtitle">
+          We are working on practical resources for venues that want to improve
+          the experience they offer parents, babies and young children.
+        </p>
+        <p class="small-note">
+          More soon.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <a href="about">About</a> |
+      <a href="newsletter">Newsletter</a> |
+      <a href="partnerships">For Brands</a> |
+      <a href="https://www.instagram.com/fixmydiaper"
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram
+      </a><br><br>
+
+      Made with ♥️ in Berlin<br />
+
+      Created by
+      <a href="https://fernandapugliero.com"
+         target="_blank"
+         rel="noopener noreferrer">
+        Fernanda Pugliero
+      </a>
+      & son
+    </footer>
+
+  </div>
+</body>
+</html>
