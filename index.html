@@ -333,7 +333,9 @@
       .recent-dots {
         display: none;
       }
-      /* ===== Ranking section ===== */
+    }
+
+    /* ===== Ranking section ===== */
 .ranking-section {
   margin-top: 3rem;
 }
@@ -427,6 +429,132 @@
   max-width: 100% !important;
   border: 0 !important;
 }
+
+
+    /* ===== Consistent section rhythm ===== */
+    #map {
+      margin-bottom: 0;
+    }
+
+    .home-section {
+      margin: 5rem 0 0;
+    }
+
+    .home-section > .section-title,
+    #faq > .section-title {
+      margin-top: 0;
+    }
+
+    .home-section > .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 760px;
+    }
+
+    /* The shared stylesheet may supply the grey outline: override it here. */
+    .page section.berlin-banner-min {
+      margin: 5rem auto;
+      border: 0 !important;
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .page section.berlin-banner-min .berlin-banner-min__inner,
+    .page section.berlin-banner-min .berlin-banner-min__left,
+    .page section.berlin-banner-min .berlin-banner-min__right,
+    .page section.berlin-banner-min .berlin-banner-min__title {
+      border: 0 !important;
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Prevent decorative pseudo-elements from redrawing grey rules. */
+    .page section.berlin-banner-min::before,
+    .page section.berlin-banner-min::after,
+    .page section.berlin-banner-min .berlin-banner-min__inner::before,
+    .page section.berlin-banner-min .berlin-banner-min__inner::after {
+      content: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    #faq {
+      margin-top: 5rem;
+    }
+
+    footer {
+      margin-top: 5rem;
+    }
+
+    /* ===== Primary CTAs: same design as Partnerships ===== */
+    .map-search button.cta-button,
+    .berlin-banner-min a.berlin-banner-min__cta.cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      height: auto;
+      min-height: 42px;
+      margin: 0;
+      padding: 11px 16px;
+      border: 0;
+      border-radius: 999px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.25;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .map-search button.cta-button:hover,
+    .berlin-banner-min a.berlin-banner-min__cta.cta-button:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .map-search button.cta-button:focus-visible,
+    .berlin-banner-min a.berlin-banner-min__cta.cta-button:focus-visible {
+      outline: 3px solid #777;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .home-section {
+        margin-top: 4rem;
+      }
+
+      .page section.berlin-banner-min {
+        margin: 4rem auto;
+      }
+
+      #faq,
+      footer {
+        margin-top: 4rem;
+      }
+    }
+
+    /* Mobile search: full-width input, clearly separated from the CTA row. */
+    @media (max-width: 600px) {
+      #geo-search.map-search {
+        column-gap: 12px;
+        row-gap: 12px;
+      }
+
+      #geo-search.map-search #geo-input {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        height: 44px;
+        margin-bottom: 8px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -443,13 +571,14 @@
     
     <div id="geo-search" class="map-search">
       <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
-      <button id="geo-go">Go</button>
-      <button id="geo-me">Use my location</button>
+      <button id="geo-go" class="cta-button" type="button">Go</button>
+      <button id="geo-me" class="cta-button" type="button">Use my location</button>
     </div>
 
     <div id="map"></div>
 
-    <h2 class="section-title">
+    <section class="home-section" aria-labelledby="newsletter-heading">
+    <h2 class="section-title" id="newsletter-heading">
         Our monthly guide in your inbox
       </h2>
     <p class="section-subtitle">
@@ -465,8 +594,10 @@
     One email per month. No spam. Just useful discoveries for families in Berlin.
   </p>
 </div>
+    </section>
 
-     <h2 class="section-title">Best changing tables in Berlin*</h2>
+    <section class="home-section" aria-labelledby="best-heading">
+     <h2 class="section-title" id="best-heading">Best changing tables in Berlin*</h2>
     <p class="section-subtitle">
       Tested by parents. Rated by the community. See our <a href="/berlin">Berlin list</a> and find your favorite.
     </p>
@@ -524,6 +655,7 @@
      <p class="top5-explanation">
       *The ranking is based on user-submitted ratings on a variety of factors, such as cleanliness, accessibility and overall experience.
     </p>
+    </section>
 
     <section class="berlin-banner-min">
   <div class="berlin-banner-min__inner">
@@ -535,13 +667,14 @@
     </div>
 
     <div class="berlin-banner-min__right">
-      <a class="berlin-banner-min__cta" href="/berlin">Explore Berlin locations</a>
+      <a class="berlin-banner-min__cta cta-button" href="/berlin">Explore Berlin locations</a>
     </div>
 
   </div>
 </section>
 
-    <h2 class="section-title">Our favorites in Berlin ❤️</h2>
+    <section class="home-section" aria-labelledby="favorites-heading">
+    <h2 class="section-title" id="favorites-heading">Our favorites in Berlin ❤️</h2>
     <p class="section-subtitle">
       Photos and reviews from our community. <a href="submit.html">Submit a place</a> and help other parents.
     </p>
@@ -595,6 +728,7 @@
       <div class="recent-dot"></div>
       <div class="recent-dot"></div>
     </div>
+    </section>
 
     <section class="berlin-banner-min">
   <div class="berlin-banner-min__inner">
@@ -606,7 +740,7 @@
     </div>
 
     <div class="berlin-banner-min__right">
-      <a class="berlin-banner-min__cta" href="https://buymeacoffee.com/fixmydiaper">Buy me a coffee</a>
+      <a class="berlin-banner-min__cta cta-button" href="https://buymeacoffee.com/fixmydiaper">Buy me a coffee</a>
     </div>
 
   </div>
@@ -618,7 +752,7 @@
 
       <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
         <strong>Where can I find baby changing tables in Berlin?</strong><br>
-        You can find baby changing tables across Berlin: in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are more than 380 verified locations, with new ones added regularly by parents. Whether you are near Alexanderplatz, Tempelhofer Feld, or Tiergarten, there is likely a spot nearby where you can change your baby comfortably.
+        You can find baby changing tables across Berlin: in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are 437 verified locations, with new ones added regularly by parents. Whether you are near Alexanderplatz, Tempelhofer Feld, or Tiergarten, there is likely a spot nearby where you can change your baby comfortably.
       </p>
 
       <p class="top5-explanation" style="margin-top: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
@@ -672,7 +806,7 @@
           "name": "Where can I find baby changing tables in Berlin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can find baby changing tables across Berlin — in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are more than 160 verified locations, with new ones added regularly by parents. Whether you’re near Alexanderplatz, Tempelhofer Feld, or Tiergarten, there’s likely a spot nearby where you can change your baby comfortably."
+            "text": "You can find baby changing tables across Berlin — in shopping malls, restaurants, museums, and public restrooms. On FixMyDiaper, there are 437 verified locations, with new ones added regularly by parents. Whether you’re near Alexanderplatz, Tempelhofer Feld, or Tiergarten, there’s likely a spot nearby where you can change your baby comfortably."
           }
         },
         {
