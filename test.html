@@ -437,7 +437,7 @@
     }
 
     .home-section {
-      margin: 4.5rem 0 0;
+      margin: 5rem 0 0;
     }
 
     .home-section > .section-title,
@@ -451,23 +451,39 @@
       max-width: 760px;
     }
 
-    .berlin-banner-min {
-      margin: 4.5rem auto;
-      border: 0;
-      box-shadow: none;
+    /* The shared stylesheet may supply the grey outline: override it here. */
+    .page section.berlin-banner-min {
+      margin: 5rem auto;
+      border: 0 !important;
+      outline: 0 !important;
+      box-shadow: none !important;
     }
 
-    .berlin-banner-min__inner {
-      border: 0;
-      box-shadow: none;
+    .page section.berlin-banner-min .berlin-banner-min__inner,
+    .page section.berlin-banner-min .berlin-banner-min__left,
+    .page section.berlin-banner-min .berlin-banner-min__right,
+    .page section.berlin-banner-min .berlin-banner-min__title {
+      border: 0 !important;
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Prevent decorative pseudo-elements from redrawing grey rules. */
+    .page section.berlin-banner-min::before,
+    .page section.berlin-banner-min::after,
+    .page section.berlin-banner-min .berlin-banner-min__inner::before,
+    .page section.berlin-banner-min .berlin-banner-min__inner::after {
+      content: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
     }
 
     #faq {
-      margin-top: 4.5rem;
+      margin-top: 5rem;
     }
 
     footer {
-      margin-top: 4.5rem;
+      margin-top: 5rem;
     }
 
     /* ===== Primary CTAs: same design as Partnerships ===== */
@@ -509,16 +525,34 @@
 
     @media (max-width: 768px) {
       .home-section {
-        margin-top: 3.25rem;
+        margin-top: 4rem;
       }
 
-      .berlin-banner-min {
-        margin: 3.25rem auto;
+      .page section.berlin-banner-min {
+        margin: 4rem auto;
       }
 
       #faq,
       footer {
-        margin-top: 3.25rem;
+        margin-top: 4rem;
+      }
+    }
+
+    /* Mobile search: full-width input, clearly separated from the CTA row. */
+    @media (max-width: 600px) {
+      #geo-search.map-search {
+        column-gap: 12px;
+        row-gap: 12px;
+      }
+
+      #geo-search.map-search #geo-input {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        height: 44px;
+        margin-bottom: 8px;
       }
     }
   </style>
