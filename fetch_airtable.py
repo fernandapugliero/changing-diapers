@@ -7,7 +7,10 @@ from datetime import datetime
 from urllib.parse import urlparse, parse_qs, unquote
 
 AIRTABLE_TOKEN = os.environ.get("AIRTABLE_PAT")
-BASE_ID = "appjWF7WnC8DRWaXM"
+BASE_IDS = [
+    "appjWF7WnC8DRWaXM",  # Original: FixMyDiaper
+    "appSQEoBDSbHzPIS2",  # Nova: FixMyDiaper2
+]
 TABLE_NAME = "FixMyDiaper"
 HEADERS = {"Authorization": f"Bearer {AIRTABLE_TOKEN}"}
 
@@ -226,21 +229,36 @@ def sort_places(places):
     return sorted(places, key=score, reverse=True)
 
 
+def iter_airtable_pages():
+    """Lê todas as páginas de todas as bases, mantendo a tabela igual."""
+    for base_id in BASE_IDS:
+        print(f"[...] Fetching base: {base_id}")
+        url = f"https://api.airtable.com/v0/{base_id}/{TABLE_NAME}"
+        params = {"pageSize": 100}
+
+        while True:
+            res = requests.get(url, headers=HEADERS, params=params, timeout=30)
+            data = res.json()
+
+            if "error" in data:
+                raise RuntimeError(f"Airtable API error in {base_id}: {data['error']}")
+            res.raise_for_status()
+
+            yield data
+
+            if "offset" in data:
+                params["offset"] = data["offset"]
+                print("[⏭️] More pages...")
+            else:
+                break
+
+
 places_all = []
 places_berlin_raw = []
 
-url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
-params = {"pageSize": 100}
-
 print("[...] Starting Airtable fetch...")
 
-while True:
-    res = requests.get(url, headers=HEADERS, params=params, timeout=30)
-    data = res.json()
-
-    if "error" in data:
-        raise RuntimeError(f"Airtable API error: {data['error']}")
-
+for data in iter_airtable_pages():
     records = data.get("records", [])
     print(f"[✓] Received {len(records)} records.")
 
@@ -385,12 +403,6 @@ while True:
 
         if city.lower() == "berlin":
             places_berlin_raw.append(place)
-
-    if "offset" in data:
-        params["offset"] = data["offset"]
-        print("[⏭️] More pages...")
-    else:
-        break
 
 print(f"[✅] Total places: {len(places_all)}")
 print(f"[✅] Berlin raw: {len(places_berlin_raw)}")
