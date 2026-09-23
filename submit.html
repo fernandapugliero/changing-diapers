@@ -93,10 +93,10 @@
     }
 
     /* Visual crop: hides the Airtable title and description without changing its content.
-       Adjust --airtable-header-crop if the first field is clipped or the title remains. */
+       Desktop height is adjusted independently from mobile/tablet height. */
     .airtable-frame {
       --airtable-header-crop: 165px;
-      height: calc(3600px - var(--airtable-header-crop));
+      height: calc(3200px - var(--airtable-header-crop));
       overflow: hidden;
       border: 0 !important;
       border-radius: 0;
@@ -108,7 +108,7 @@
       display: block;
       box-sizing: border-box;
       width: 100%;
-      height: 3600px;
+      height: 3200px;
       margin-top: calc(-1 * var(--airtable-header-crop));
       border: 0 !important;
       border-radius: 0;
@@ -136,6 +136,8 @@
     @media (max-width: 768px) {
       .airtable-frame {
         --airtable-header-crop: 180px;
+        /* Keep the approved mobile/tablet height unchanged. */
+        height: calc(3600px - var(--airtable-header-crop));
       }
       body {
         padding: 2rem;
