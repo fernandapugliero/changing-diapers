@@ -48,9 +48,10 @@
       margin: 0 auto;
     }
 
-    /* ===== Navigation: original 30px logo + stable overlay drawer ===== */
+    /* ===== Navegação: logo original e dropdown mobile compacto ===== */
     .page .site-header {
       position: relative;
+      z-index: 1100; /* acima do mapa Leaflet */
       margin-bottom: 2.5rem;
       border-bottom: 1px solid #e8e8e8;
     }
@@ -71,10 +72,9 @@
       color: #333;
       text-decoration: none;
     }
-    /* Same discreet logo size as the original navigation, on ALL screens. */
     .page .site-brand img {
       display: block;
-      width: 30px;
+      width: 30px; /* tamanho discreto original */
       height: auto;
       margin: 0;
     }
@@ -146,8 +146,8 @@
       outline-offset: 3px;
     }
     .page .site-menu-toggle,
-    .page .site-mobile-backdrop,
     .page .site-mobile-panel { display: none; }
+    .page .site-mobile-panel[hidden] { display: none !important; }
 
     @media (max-width: 900px) {
       .page .site-header { margin-bottom: 2rem; }
@@ -176,98 +176,65 @@
         border-radius: 2px;
         background: currentColor;
       }
-      /* Overlay is always out of layout; only opacity/transform animate. */
-      .page .site-mobile-backdrop {
-        position: fixed;
-        inset: 0;
-        z-index: 10000;
-        display: block;
-        visibility: hidden;
-        opacity: 0;
-        background: rgba(0, 0, 0, 0.35);
-        transition: opacity 220ms ease, visibility 220ms ease;
+      /* A mesma area do hamburger vira X sem reposicionar o logo. */
+      .page .site-menu-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
       }
-      .page .site-mobile-panel {
-        position: fixed;
-        top: 0;
+      .page .site-menu-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+      }
+      .page .site-menu-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+      /* Dropdown, não drawer: sem backdrop e sem deslocar o documento. */
+      .page .site-mobile-panel:not([hidden]) {
+        position: absolute;
+        top: calc(100% - 1px);
         right: 0;
-        bottom: 0;
-        z-index: 10001;
+        z-index: 1101;
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
-        width: min(360px, calc(100vw - 34px));
-        height: 100vh;
-        height: 100dvh;
+        width: min(240px, calc(100vw - 4rem));
         margin: 0;
-        padding: 1.25rem 1.4rem 2rem;
-        overflow-y: auto;
-        overscroll-behavior: contain;
+        padding: 0.6rem 0.85rem 0.9rem;
+        border: 1px solid #e8e8e8;
+        border-radius: 10px;
         background: #fff;
-        box-shadow: -12px 0 35px rgba(0, 0, 0, 0.12);
-        visibility: hidden;
-        transform: translateX(105%);
-        transition: transform 260ms ease, visibility 260ms ease;
-      }
-      .page .site-mobile-backdrop.is-open {
-        visibility: visible;
-        opacity: 1;
-      }
-      .page .site-mobile-panel.is-open {
-        visibility: visible;
-        transform: translateX(0);
-      }
-      /* No second logo inside the drawer: original logo never moves/scales. */
-      .page .site-mobile-panel-heading {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        min-height: 46px;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid #eee;
-      }
-      .page .site-menu-close {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 44px;
-        height: 44px;
-        padding: 0;
-        border: 0;
-        background: transparent;
-        color: #333;
-        font: 400 2rem/1 'Inter', sans-serif;
-        cursor: pointer;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
       }
       .page .site-mobile-panel > a:not(.site-submit-link) {
         display: block;
         margin: 0;
-        padding: 1rem 0.4rem;
-        border-bottom: 1px solid #eee;
+        padding: 0.75rem 0.4rem;
         color: #333;
+        font-size: 0.95rem;
         font-weight: 600;
         text-decoration: none;
       }
-      .page .site-mobile-panel > a[aria-current="page"] { color: #111; }
+      .page .site-mobile-panel > a:not(.site-submit-link):hover {
+        background: #fafafa;
+      }
+      .page .site-mobile-panel > a[aria-current="page"] {
+        color: #111;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
       .page .site-mobile-panel .site-submit-link {
         align-self: stretch;
-        margin-top: 1.4rem;
+        margin-top: 0.5rem;
       }
       .page .site-mobile-language {
         display: flex;
         align-items: center;
-        margin-top: 1.6rem;
-        padding: 1.25rem 0.4rem 0;
+        justify-content: center;
+        margin-top: 0.8rem;
+        padding: 0.8rem 0 0;
         border-top: 1px solid #eee;
       }
       .page .site-mobile-language .site-language-switch a {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .page .site-mobile-backdrop,
-      .page .site-mobile-panel { transition: none; }
     }
 
     /* ===== Títulos ===== */
@@ -786,12 +753,7 @@
         </button>
       </nav>
 
-      <div class="site-mobile-backdrop" id="site-mobile-backdrop" aria-hidden="true"></div>
-      <div id="site-mobile-menu" class="site-mobile-panel" role="dialog"
-           aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
-        <div class="site-mobile-panel-heading">
-          <button class="site-menu-close" type="button" aria-label="Close menu">&times;</button>
-        </div>
+      <nav id="site-mobile-menu" class="site-mobile-panel" aria-label="Mobile navigation" hidden>
         <a href="/" aria-current="page">Map</a>
         <a href="/list">List</a>
         <a href="/about">About</a>
@@ -803,7 +765,7 @@
             <a href="/de/" lang="de">DE</a>
           </span>
         </div>
-      </div>
+      </nav>
     </header>
 
     <h1>Going out with your baby?</h1>
@@ -1135,82 +1097,37 @@
 
 
   <script>
-    // Accessible, fixed drawer: no duplicated logo or page-width jump.
+    // Dropdown compacto: sem sombrear o fundo ou bloquear a rolagem.
     (() => {
       const toggle = document.querySelector('.site-menu-toggle');
       const menu = document.getElementById('site-mobile-menu');
-      const backdrop = document.getElementById('site-mobile-backdrop');
-      const closeButton = document.querySelector('.site-menu-close');
-      if (!toggle || !menu || !backdrop || !closeButton) return;
+      if (!toggle || !menu) return;
 
-      let previousFocus = null;
-      let previousBodyOverflow = '';
-      let previousBodyPaddingRight = '';
-      let isOpen = false;
-
-      function closeMenu() {
-        if (!isOpen) return;
-        isOpen = false;
-        menu.classList.remove('is-open');
-        backdrop.classList.remove('is-open');
-        menu.setAttribute('aria-hidden', 'true');
-        menu.inert = true;
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-        document.body.style.overflow = previousBodyOverflow;
-        document.body.style.paddingRight = previousBodyPaddingRight;
-        (previousFocus && previousFocus.isConnected ? previousFocus : toggle).focus({ preventScroll: true });
+      function setMenuOpen(open) {
+        menu.hidden = !open;
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       }
 
-      function openMenu() {
-        if (isOpen) return;
-        previousFocus = document.activeElement;
-        previousBodyOverflow = document.body.style.overflow;
-        previousBodyPaddingRight = document.body.style.paddingRight;
-        // Reserve disappearing scrollbar width before locking body scroll.
-        // This keeps the header/logo and the page in the exact same spot.
-        const scrollbarWidth = Math.max(0, window.innerWidth - document.documentElement.clientWidth);
-        if (scrollbarWidth) {
-          const currentPadding = parseFloat(getComputedStyle(document.body).paddingRight) || 0;
-          document.body.style.paddingRight = `${currentPadding + scrollbarWidth}px`;
-        }
-        document.body.style.overflow = 'hidden';
-        isOpen = true;
-        menu.inert = false;
-        menu.setAttribute('aria-hidden', 'false');
-        menu.classList.add('is-open');
-        backdrop.classList.add('is-open');
-        toggle.setAttribute('aria-expanded', 'true');
-        toggle.setAttribute('aria-label', 'Close menu');
-        closeButton.focus({ preventScroll: true });
-      }
+      toggle.addEventListener('click', () => {
+        setMenuOpen(menu.hidden);
+      });
 
-      toggle.addEventListener('click', () => isOpen ? closeMenu() : openMenu());
-      closeButton.addEventListener('click', closeMenu);
-      backdrop.addEventListener('click', closeMenu);
-
-      document.addEventListener('keydown', (event) => {
-        if (!isOpen) return;
-        if (event.key === 'Escape') {
-          event.preventDefault();
-          closeMenu();
-        }
-        if (event.key === 'Tab') {
-          const focusable = [...menu.querySelectorAll('a[href], button:not([disabled])')];
-          const first = focusable[0];
-          const last = focusable[focusable.length - 1];
-          if (event.shiftKey && document.activeElement === first) {
-            event.preventDefault();
-            last.focus();
-          } else if (!event.shiftKey && document.activeElement === last) {
-            event.preventDefault();
-            first.focus();
-          }
+      document.addEventListener('pointerdown', event => {
+        if (!menu.hidden && !menu.contains(event.target) && !toggle.contains(event.target)) {
+          setMenuOpen(false);
         }
       });
 
-      window.matchMedia('(min-width: 901px)').addEventListener('change', (event) => {
-        if (event.matches) closeMenu();
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !menu.hidden) {
+          setMenuOpen(false);
+          toggle.focus({ preventScroll: true });
+        }
+      });
+
+      window.matchMedia('(min-width: 901px)').addEventListener('change', event => {
+        if (event.matches) setMenuOpen(false);
       });
     })();
   </script>
