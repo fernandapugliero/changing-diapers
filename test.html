@@ -48,7 +48,7 @@
       margin: 0 auto;
     }
 
-    /* ===== Site navigation — same visual system as Partnerships ===== */
+    /* ===== Navigation: original 30px logo + stable overlay drawer ===== */
     .page .site-header {
       position: relative;
       margin-bottom: 2.5rem;
@@ -71,9 +71,10 @@
       color: #333;
       text-decoration: none;
     }
+    /* Same discreet logo size as the original navigation, on ALL screens. */
     .page .site-brand img {
       display: block;
-      width: 42px;
+      width: 30px;
       height: auto;
       margin: 0;
     }
@@ -147,13 +148,10 @@
     .page .site-menu-toggle,
     .page .site-mobile-backdrop,
     .page .site-mobile-panel { display: none; }
-    .page .site-mobile-backdrop[hidden],
-    .page .site-mobile-panel[hidden] { display: none !important; }
 
     @media (max-width: 900px) {
       .page .site-header { margin-bottom: 2rem; }
       .page .site-nav { min-height: 64px; }
-      .page .site-brand img { width: 38px; }
       .page .site-nav-links { display: none; }
       .page .site-menu-toggle {
         display: inline-flex;
@@ -178,15 +176,18 @@
         border-radius: 2px;
         background: currentColor;
       }
-      /* Fixed overlay: opening the drawer NEVER changes the page layout. */
-      .page .site-mobile-backdrop:not([hidden]) {
+      /* Overlay is always out of layout; only opacity/transform animate. */
+      .page .site-mobile-backdrop {
         position: fixed;
         inset: 0;
         z-index: 10000;
         display: block;
+        visibility: hidden;
+        opacity: 0;
         background: rgba(0, 0, 0, 0.35);
+        transition: opacity 220ms ease, visibility 220ms ease;
       }
-      .page .site-mobile-panel:not([hidden]) {
+      .page .site-mobile-panel {
         position: fixed;
         top: 0;
         right: 0;
@@ -204,21 +205,27 @@
         overscroll-behavior: contain;
         background: #fff;
         box-shadow: -12px 0 35px rgba(0, 0, 0, 0.12);
+        visibility: hidden;
+        transform: translateX(105%);
+        transition: transform 260ms ease, visibility 260ms ease;
       }
+      .page .site-mobile-backdrop.is-open {
+        visibility: visible;
+        opacity: 1;
+      }
+      .page .site-mobile-panel.is-open {
+        visibility: visible;
+        transform: translateX(0);
+      }
+      /* No second logo inside the drawer: original logo never moves/scales. */
       .page .site-mobile-panel-heading {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
         min-height: 46px;
         margin-bottom: 1rem;
         padding-bottom: 1rem;
         border-bottom: 1px solid #eee;
-      }
-      .page .site-mobile-panel-heading img {
-        width: 36px;
-        height: auto;
-        display: block;
-        margin: 0;
       }
       .page .site-menu-close {
         display: inline-flex;
@@ -257,6 +264,10 @@
       .page .site-mobile-language .site-language-switch a {
         font-size: 0.95rem;
       }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .page .site-mobile-backdrop,
+      .page .site-mobile-panel { transition: none; }
     }
 
     /* ===== Títulos ===== */
@@ -754,7 +765,7 @@
     <header class="site-header">
       <nav class="site-nav" aria-label="Main navigation">
         <a class="site-brand" href="/" aria-label="Fix My Diaper — homepage">
-          <img src="images/logo.png" alt="Fix My Diaper" width="42">
+          <img src="/images/logo.png" alt="Fix My Diaper" width="30">
         </a>
 
         <div class="site-nav-links">
@@ -775,13 +786,10 @@
         </button>
       </nav>
 
-      <div class="site-mobile-backdrop" id="site-mobile-backdrop" hidden></div>
+      <div class="site-mobile-backdrop" id="site-mobile-backdrop" aria-hidden="true"></div>
       <div id="site-mobile-menu" class="site-mobile-panel" role="dialog"
-           aria-modal="true" aria-label="Mobile navigation" hidden>
+           aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
         <div class="site-mobile-panel-heading">
-          <a href="/" aria-label="Fix My Diaper — homepage">
-            <img src="images/logo.png" alt="Fix My Diaper" width="36">
-          </a>
           <button class="site-menu-close" type="button" aria-label="Close menu">&times;</button>
         </div>
         <a href="/" aria-current="page">Map</a>
@@ -1127,7 +1135,7 @@
 
 
   <script>
-    // Mobile right-side overlay. Does not modify the map or search code.
+    // Accessible, fixed drawer: no duplicated logo or page-width jump.
     (() => {
       const toggle = document.querySelector('.site-menu-toggle');
       const menu = document.getElementById('site-mobile-menu');
@@ -1136,38 +1144,53 @@
       if (!toggle || !menu || !backdrop || !closeButton) return;
 
       let previousFocus = null;
-      let previousOverflow = '';
+      let previousBodyOverflow = '';
+      let previousBodyPaddingRight = '';
+      let isOpen = false;
 
       function closeMenu() {
-        if (menu.hidden) return;
-        menu.hidden = true;
-        backdrop.hidden = true;
+        if (!isOpen) return;
+        isOpen = false;
+        menu.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        menu.setAttribute('aria-hidden', 'true');
+        menu.inert = true;
         toggle.setAttribute('aria-expanded', 'false');
         toggle.setAttribute('aria-label', 'Open menu');
-        document.body.style.overflow = previousOverflow;
-        (previousFocus || toggle).focus();
+        document.body.style.overflow = previousBodyOverflow;
+        document.body.style.paddingRight = previousBodyPaddingRight;
+        (previousFocus && previousFocus.isConnected ? previousFocus : toggle).focus({ preventScroll: true });
       }
 
       function openMenu() {
+        if (isOpen) return;
         previousFocus = document.activeElement;
-        previousOverflow = document.body.style.overflow;
-        menu.hidden = false;
-        backdrop.hidden = false;
+        previousBodyOverflow = document.body.style.overflow;
+        previousBodyPaddingRight = document.body.style.paddingRight;
+        // Reserve disappearing scrollbar width before locking body scroll.
+        // This keeps the header/logo and the page in the exact same spot.
+        const scrollbarWidth = Math.max(0, window.innerWidth - document.documentElement.clientWidth);
+        if (scrollbarWidth) {
+          const currentPadding = parseFloat(getComputedStyle(document.body).paddingRight) || 0;
+          document.body.style.paddingRight = `${currentPadding + scrollbarWidth}px`;
+        }
+        document.body.style.overflow = 'hidden';
+        isOpen = true;
+        menu.inert = false;
+        menu.setAttribute('aria-hidden', 'false');
+        menu.classList.add('is-open');
+        backdrop.classList.add('is-open');
         toggle.setAttribute('aria-expanded', 'true');
         toggle.setAttribute('aria-label', 'Close menu');
-        document.body.style.overflow = 'hidden';
-        closeButton.focus();
+        closeButton.focus({ preventScroll: true });
       }
 
-      toggle.addEventListener('click', () => {
-        if (menu.hidden) openMenu();
-        else closeMenu();
-      });
+      toggle.addEventListener('click', () => isOpen ? closeMenu() : openMenu());
       closeButton.addEventListener('click', closeMenu);
       backdrop.addEventListener('click', closeMenu);
 
       document.addEventListener('keydown', (event) => {
-        if (menu.hidden) return;
+        if (!isOpen) return;
         if (event.key === 'Escape') {
           event.preventDefault();
           closeMenu();
