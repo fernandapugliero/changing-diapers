@@ -48,14 +48,12 @@
       margin: 0 auto;
     }
 
-    /* ===== New site navigation: scoped so the shared style.css cannot
-       accidentally style the logo, mobile menu or primary CTA. ===== */
+    /* ===== Site navigation — same visual system as Partnerships ===== */
     .page .site-header {
       position: relative;
       margin-bottom: 2.5rem;
       border-bottom: 1px solid #e8e8e8;
     }
-
     .page .site-nav {
       display: flex;
       align-items: center;
@@ -65,42 +63,20 @@
       padding: 0;
       margin: 0;
     }
-
     .page .site-brand {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      min-width: 0;
       flex-shrink: 0;
       margin: 0;
-      text-decoration: none;
       color: #333;
+      text-decoration: none;
     }
-
     .page .site-brand img {
-      width: 36px;
-      height: auto;
       display: block;
+      width: 42px;
+      height: auto;
       margin: 0;
-      flex-shrink: 0;
     }
-
-    .site-brand-copy { display: flex; flex-direction: column; gap: 0.15rem; }
-    .site-brand-name {
-      font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: -0.025em;
-      line-height: 1.2;
-      white-space: nowrap;
-    }
-    .site-brand-tagline {
-      font-size: 0.7rem;
-      font-weight: 400;
-      color: #777;
-      white-space: nowrap;
-      line-height: 1.4;
-    }
-
     .page .site-nav-links {
       display: flex;
       align-items: center;
@@ -108,108 +84,159 @@
       gap: clamp(0.85rem, 2vw, 1.65rem);
       margin-left: auto;
     }
-    .page .site-nav-links a:not(.site-submit-link) {
+    .page .site-nav-links a:not(.site-submit-link),
+    .page .site-language-switch a {
+      margin: 0;
+      color: #444;
       font-size: 0.92rem;
       font-weight: 600;
-      color: #444;
       text-decoration: none;
-      margin: 0;
+      white-space: nowrap;
+    }
+    .page .site-nav-links > a:not(.site-submit-link) {
       padding: 0.7rem 0 0.55rem;
       border-bottom: 2px solid transparent;
-      white-space: nowrap;
     }
-    .page .site-nav-links a[aria-current="page"] {
+    .page .site-nav-links > a[aria-current="page"] {
+      color: #111;
       border-bottom-color: #333;
-      color: #111;
     }
-    .page .site-nav-links a:not(.site-submit-link):hover {
-      color: #111;
-    }
-    .site-language {
-      font-size: 0.8rem;
-      color: #666;
+    .page .site-nav-links a:not(.site-submit-link):hover,
+    .page .site-language-switch a:hover { color: #111; }
+    .page .site-language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
       white-space: nowrap;
-      border: 1px solid #e5e5e5;
-      border-radius: 999px;
-      padding: 0.45rem 0.65rem;
-      cursor: default;
+      font-size: 0.85rem;
+      color: #999;
     }
-    /* EN is informative, not an inactive language-selection button.
-       Add a real control once German pages exist. */
+    .page .site-language-switch a {
+      color: #777;
+      font-size: 0.85rem;
+    }
+    .page .site-language-switch a[aria-current="page"] { color: #222; }
     .page .site-nav-links .site-submit-link,
     .page .site-mobile-panel .site-submit-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       box-sizing: border-box;
+      min-height: 42px;
       margin: 0;
       padding: 11px 16px;
-      min-height: 42px;
-      color: #fff;
-      background: #333;
       border: 0;
       border-radius: 999px;
-      text-decoration: none;
+      background: #333;
+      color: #fff;
       font: 600 0.95rem/1.25 'Inter', sans-serif;
+      text-align: center;
+      text-decoration: none;
       white-space: nowrap;
     }
     .page .site-nav-links .site-submit-link:hover,
-    .page .site-mobile-panel .site-submit-link:hover { background: #111; color: #fff; }
+    .page .site-mobile-panel .site-submit-link:hover {
+      background: #111;
+      color: #fff;
+    }
     .page .site-header a:focus-visible,
     .page .site-header button:focus-visible {
       outline: 3px solid #777;
       outline-offset: 3px;
     }
-
     .page .site-menu-toggle,
+    .page .site-mobile-backdrop,
     .page .site-mobile-panel { display: none; }
+    .page .site-mobile-backdrop[hidden],
     .page .site-mobile-panel[hidden] { display: none !important; }
 
     @media (max-width: 900px) {
       .page .site-header { margin-bottom: 2rem; }
-      .page .site-nav { min-height: 64px; gap: 0.75rem; }
-      .site-brand-tagline { display: none; }
-      .page .site-brand img { width: 32px; }
-      .site-brand-name { font-size: 1.05rem; }
+      .page .site-nav { min-height: 64px; }
+      .page .site-brand img { width: 38px; }
       .page .site-nav-links { display: none; }
       .page .site-menu-toggle {
-        width: 44px;
-        height: 44px;
-        padding: 0;
-        margin-left: auto;
         display: inline-flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        margin-left: auto;
         border: 0;
         border-radius: 8px;
         background: transparent;
         color: #333;
         cursor: pointer;
       }
-      .site-menu-toggle span {
+      .page .site-menu-toggle span {
         display: block;
         width: 21px;
         height: 2px;
         border-radius: 2px;
         background: currentColor;
-        transition: transform 0.2s ease, opacity 0.2s ease;
       }
-      .site-menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(7px) rotate(45deg); }
-      .site-menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-      .site-menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-7px) rotate(-45deg); }
+      /* Fixed overlay: opening the drawer NEVER changes the page layout. */
+      .page .site-mobile-backdrop:not([hidden]) {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: block;
+        background: rgba(0, 0, 0, 0.35);
+      }
       .page .site-mobile-panel:not([hidden]) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10001;
         display: flex;
         flex-direction: column;
-        padding: 0.6rem 0 1.25rem;
-        border-top: 1px solid #eee;
+        box-sizing: border-box;
+        width: min(360px, calc(100vw - 34px));
+        height: 100vh;
+        height: 100dvh;
+        margin: 0;
+        padding: 1.25rem 1.4rem 2rem;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        background: #fff;
+        box-shadow: -12px 0 35px rgba(0, 0, 0, 0.12);
+      }
+      .page .site-mobile-panel-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 46px;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+      }
+      .page .site-mobile-panel-heading img {
+        width: 36px;
+        height: auto;
+        display: block;
+        margin: 0;
+      }
+      .page .site-menu-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: #333;
+        font: 400 2rem/1 'Inter', sans-serif;
+        cursor: pointer;
       }
       .page .site-mobile-panel > a:not(.site-submit-link) {
         display: block;
-        padding: 0.95rem 0.4rem;
         margin: 0;
+        padding: 1rem 0.4rem;
         border-bottom: 1px solid #eee;
         color: #333;
         font-weight: 600;
@@ -218,19 +245,18 @@
       .page .site-mobile-panel > a[aria-current="page"] { color: #111; }
       .page .site-mobile-panel .site-submit-link {
         align-self: stretch;
-        margin-top: 1rem;
+        margin-top: 1.4rem;
       }
-      .site-mobile-language {
-        margin-top: 1.25rem;
-        padding: 1rem 0.4rem 0;
-        border-top: 1px solid #eee;
+      .page .site-mobile-language {
         display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-        color: #666;
-        font-size: 0.9rem;
+        align-items: center;
+        margin-top: 1.6rem;
+        padding: 1.25rem 0.4rem 0;
+        border-top: 1px solid #eee;
       }
-      .site-mobile-language strong { color: #333; font-weight: 600; }
+      .page .site-mobile-language .site-language-switch a {
+        font-size: 0.95rem;
+      }
     }
 
     /* ===== Títulos ===== */
@@ -728,18 +754,18 @@
     <header class="site-header">
       <nav class="site-nav" aria-label="Main navigation">
         <a class="site-brand" href="/" aria-label="Fix My Diaper — homepage">
-          <img src="images/logo.png" alt="" width="36">
-          <span class="site-brand-copy">
-            <span class="site-brand-name">Fix My Diaper</span>
-            <span class="site-brand-tagline">Changing tables &amp; baby-friendly places</span>
-          </span>
+          <img src="images/logo.png" alt="Fix My Diaper" width="42">
         </a>
 
         <div class="site-nav-links">
           <a href="/" aria-current="page">Map</a>
           <a href="/list">List</a>
           <a href="/about">About</a>
-          <span class="site-language" aria-label="Current language: English. German coming soon" title="Deutsch coming soon">EN</span>
+          <span class="site-language-switch" aria-label="Choose language">
+            <a href="/" lang="en" aria-current="page">EN</a>
+            <span aria-hidden="true">/</span>
+            <a href="/de/" lang="de">DE</a>
+          </span>
           <a class="site-submit-link" href="/submit">Submit a place</a>
         </div>
 
@@ -749,14 +775,25 @@
         </button>
       </nav>
 
-      <div id="site-mobile-menu" class="site-mobile-panel" hidden>
+      <div class="site-mobile-backdrop" id="site-mobile-backdrop" hidden></div>
+      <div id="site-mobile-menu" class="site-mobile-panel" role="dialog"
+           aria-modal="true" aria-label="Mobile navigation" hidden>
+        <div class="site-mobile-panel-heading">
+          <a href="/" aria-label="Fix My Diaper — homepage">
+            <img src="images/logo.png" alt="Fix My Diaper" width="36">
+          </a>
+          <button class="site-menu-close" type="button" aria-label="Close menu">&times;</button>
+        </div>
         <a href="/" aria-current="page">Map</a>
         <a href="/list">List</a>
         <a href="/about">About</a>
         <a class="site-submit-link" href="/submit">Submit a place</a>
         <div class="site-mobile-language">
-          <span>Language</span>
-          <span><strong>English</strong> · Deutsch coming soon</span>
+          <span class="site-language-switch" aria-label="Choose language">
+            <a href="/" lang="en" aria-current="page">EN</a>
+            <span aria-hidden="true">/</span>
+            <a href="/de/" lang="de">DE</a>
+          </span>
         </div>
       </div>
     </header>
@@ -1090,39 +1127,66 @@
 
 
   <script>
-    // Mobile navigation; does not change the map or search logic.
+    // Mobile right-side overlay. Does not modify the map or search code.
     (() => {
       const toggle = document.querySelector('.site-menu-toggle');
       const menu = document.getElementById('site-mobile-menu');
-      const header = document.querySelector('.site-header');
-      if (!toggle || !menu || !header) return;
+      const backdrop = document.getElementById('site-mobile-backdrop');
+      const closeButton = document.querySelector('.site-menu-close');
+      if (!toggle || !menu || !backdrop || !closeButton) return;
 
-      const closeMenu = () => {
+      let previousFocus = null;
+      let previousOverflow = '';
+
+      function closeMenu() {
+        if (menu.hidden) return;
         menu.hidden = true;
+        backdrop.hidden = true;
         toggle.setAttribute('aria-expanded', 'false');
         toggle.setAttribute('aria-label', 'Open menu');
-      };
+        document.body.style.overflow = previousOverflow;
+        (previousFocus || toggle).focus();
+      }
+
+      function openMenu() {
+        previousFocus = document.activeElement;
+        previousOverflow = document.body.style.overflow;
+        menu.hidden = false;
+        backdrop.hidden = false;
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
+        document.body.style.overflow = 'hidden';
+        closeButton.focus();
+      }
 
       toggle.addEventListener('click', () => {
-        const opening = menu.hidden;
-        menu.hidden = !opening;
-        toggle.setAttribute('aria-expanded', String(opening));
-        toggle.setAttribute('aria-label', opening ? 'Close menu' : 'Open menu');
+        if (menu.hidden) openMenu();
+        else closeMenu();
       });
+      closeButton.addEventListener('click', closeMenu);
+      backdrop.addEventListener('click', closeMenu);
 
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && !menu.hidden) {
+        if (menu.hidden) return;
+        if (event.key === 'Escape') {
+          event.preventDefault();
           closeMenu();
-          toggle.focus();
+        }
+        if (event.key === 'Tab') {
+          const focusable = [...menu.querySelectorAll('a[href], button:not([disabled])')];
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
         }
       });
 
-      document.addEventListener('click', (event) => {
-        if (!menu.hidden && !header.contains(event.target)) closeMenu();
-      });
-
-      const desktop = window.matchMedia('(min-width: 901px)');
-      desktop.addEventListener('change', (event) => {
+      window.matchMedia('(min-width: 901px)').addEventListener('change', (event) => {
         if (event.matches) closeMenu();
       });
     })();
