@@ -555,81 +555,55 @@
         margin-bottom: 8px;
       }
     }
-    /* ===== Kids-friendly cafés & restaurants feature ===== */
-    .page section.fmd-play-feature {
+
+    /* ===== New family-friendly café feature (isolated styles) ===== */
+    .page .play-feature {
       display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-      grid-template-areas:
-        "copy photos"
-        "action photos";
-      column-gap: 2.5rem;
-      row-gap: 1.25rem;
-      align-content: center;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
       align-items: center;
-      margin: 5rem 0 0;
-      padding: clamp(1.5rem, 3.5vw, 3rem);
-      border: 0;
-      border-radius: 16px;
-      background: #fbece9;
-      box-shadow: none;
-    }
-
-    .fmd-play-feature__copy {
-      grid-area: copy;
-      align-self: end;
-    }
-
-    .fmd-play-feature .section-title {
-      text-align: left;
-      margin: 0 0 0.75rem;
-    }
-
-    .fmd-play-feature__description {
-      font-size: 0.95rem;
-      color: #555;
-      text-align: left;
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .fmd-play-feature__photos {
-      grid-area: photos;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.85rem;
-      min-width: 0;
-    }
-
-    .fmd-play-feature__photo {
+      gap: clamp(18px, 3vw, 44px);
       position: relative;
-      margin: 0;
-      aspect-ratio: 4 / 5;
-      min-width: 0;
-      border-radius: 12px;
+      isolation: isolate;
       overflow: hidden;
-      background: #eed9d3;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      min-height: 355px;
+      box-sizing: border-box;
+      padding: clamp(28px, 3.6vw, 50px);
+      margin: 5rem 0 0;
+      background: #fbece9;
+      border-radius: 20px;
     }
-
-    .fmd-play-feature__photo:nth-child(2) {
-      background: #e9d5ce;
-    }
-
-    .fmd-play-feature__photo img {
-      position: relative;
+    .play-feature__content { position: relative; z-index: 2; min-width: 0; }
+    .play-feature__eyebrow {
       display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      color: #a35e55;
+      font-family: 'Inter', sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .055em;
+      line-height: 1.4;
+      margin: 0 0 18px;
     }
-
-    .fmd-play-feature__action {
-      grid-area: action;
-      align-self: start;
+    .play-feature__title {
+      color: #333;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1.65rem, 2.65vw, 2.25rem);
+      font-weight: 600;
+      letter-spacing: -.025em;
+      line-height: 1.18;
+      text-align: left;
+      margin: 0 0 18px;
     }
-
-    /* Same black pill-button styling as the existing homepage CTAs. */
-    .fmd-play-feature__cta {
+    .play-feature__description {
+      color: #555;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.55;
+      text-align: left;
+      max-width: 440px;
+      margin: 0 0 24px;
+    }
+    .play-feature__cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -641,50 +615,97 @@
       background: #333;
       color: #fff;
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
+      font-size: .95rem;
       font-weight: 600;
       line-height: 1.25;
       text-align: center;
       text-decoration: none;
-      transition: background-color 0.2s ease;
+      transition: background-color .2s ease;
     }
-
-    .fmd-play-feature__cta:hover {
-      background: #111;
-      color: #fff;
+    .play-feature__cta:hover { background: #111; color: #fff; }
+    .play-feature__cta:focus-visible { outline: 3px solid #777; outline-offset: 3px; }
+    .play-feature__photos { position: relative; width: 100%; height: 330px; min-width: 0; isolation: isolate; }
+    .play-feature__photo {
+      position: absolute;
+      box-sizing: border-box;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 6px 19px rgba(65, 40, 36, .13);
     }
-
-    .fmd-play-feature__cta:focus-visible {
-      outline: 3px solid #777;
-      outline-offset: 3px;
+    .play-feature__photo--large {
+      z-index: 1;
+      width: 67%;
+      height: 96%;
+      left: 1%;
+      top: 0;
+      object-position: center 61%;
+      border-radius: 44% 56% 47% 53% / 47% 48% 52% 53%;
     }
-
+    .play-feature__photo--small {
+      z-index: 2;
+      width: 50%;
+      height: 69%;
+      right: 0;
+      bottom: 0;
+      object-position: center 58%;
+      border: 5px solid #fff;
+      border-radius: 53% 47% 48% 52% / 46% 56% 44% 54%;
+    }
+    .play-feature__rays {
+      position: absolute;
+      z-index: 3;
+      width: 48px;
+      height: 48px;
+      fill: none;
+      stroke: #ea8f8a;
+      stroke-width: 6;
+      stroke-linecap: round;
+      pointer-events: none;
+    }
+    .play-feature__rays--left { left: 1%; top: -8px; transform: rotate(-15deg); }
+    .play-feature__rays--right { right: -6px; top: 28%; transform: rotate(20deg); }
     @media (max-width: 768px) {
-      .page section.fmd-play-feature {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-areas:
-          "copy"
-          "photos"
-          "action";
-        gap: 1.25rem;
+      .page .play-feature {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-height: 0;
         margin-top: 4rem;
-        padding: 1.4rem;
+        padding: 28px 20px 25px;
+        border-radius: 17px;
       }
-
-      .fmd-play-feature .section-title,
-      .fmd-play-feature__description {
+      .play-feature__content { display: contents; }
+      .play-feature__eyebrow { order: 1; text-align: center; font-size: .7rem; margin: 0; }
+      .play-feature__title {
+        order: 2;
         text-align: center;
+        font-size: clamp(1.65rem, 6vw, 1.95rem);
+        margin: -5px 0 0;
       }
-
-      .fmd-play-feature__photos {
-        gap: 0.65rem;
-      }
-
-      .fmd-play-feature__action {
+      .play-feature__description {
+        order: 3;
         text-align: center;
+        font-size: .95rem;
+        line-height: 1.5;
+        margin: -3px 0 0;
       }
+      .play-feature__photos {
+        order: 4;
+        width: min(100%, 410px);
+        height: clamp(210px, 66vw, 295px);
+        margin: 0 auto;
+      }
+      .play-feature__photo--large { width: 66%; height: 95%; }
+      .play-feature__photo--small { width: 50%; height: 69%; }
+      .play-feature__rays { width: 36px; height: 36px; }
+      .play-feature__rays--left { top: -2px; }
+      .play-feature__rays--right { right: 0; }
+      .play-feature__cta { order: 5; align-self: center; margin: 5px 0 0; max-width: 100%; }
     }
-
+    @media (max-width: 360px) {
+      .page .play-feature { padding-inline: 15px; }
+      .play-feature__photos { height: 208px; }
+    }
   </style>
 </head>
 <body>
@@ -803,6 +824,32 @@
   </div>
 </section>
 
+    <!-- Featured family-friendly cafés and restaurants -->
+    <section class="play-feature" aria-labelledby="play-feature-heading">
+      <div class="play-feature__content">
+        <span class="play-feature__eyebrow">KIDS-FRIENDLY CAFÉS &amp; RESTAURANTS</span>
+        <h2 class="play-feature__title" id="play-feature-heading">Happy kids, happy life.</h2>
+        <p class="play-feature__description">Discover cafés and restaurants in Berlin with play areas — and maybe enjoy a coffee while it's still hot.</p>
+        <a href="/kids-friendly-cafes-restaurants-berlin" class="play-feature__cta">Explore cafés &amp; restaurants →</a>
+      </div>
+      <div class="play-feature__photos">
+        <img class="play-feature__photo play-feature__photo--large"
+             src="images/kiezkind-play-area.jpg"
+             alt="Indoor sand play area with toys at Kiezkind in Berlin"
+             width="1050" height="1450" loading="lazy" decoding="async">
+        <img class="play-feature__photo play-feature__photo--small"
+             src="images/kap-frida-play-area.jpg"
+             alt="Wooden children's play corner at Kap Frida in Berlin"
+             width="1050" height="1450" loading="lazy" decoding="async">
+        <svg class="play-feature__rays play-feature__rays--left" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <path d="M12 45 L3 36 M27 32 L23 11 M43 35 L52 19"/>
+        </svg>
+        <svg class="play-feature__rays play-feature__rays--right" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <path d="M12 45 L3 36 M27 32 L23 11 M43 35 L52 19"/>
+        </svg>
+      </div>
+    </section>
+
     <section class="home-section" aria-labelledby="favorites-heading">
     <h2 class="section-title" id="favorites-heading">Our favorites in Berlin ❤️</h2>
     <p class="section-subtitle">
@@ -858,35 +905,6 @@
       <div class="recent-dot"></div>
       <div class="recent-dot"></div>
     </div>
-    </section>
-
-    <!-- Kids-friendly cafés & restaurants: two fixed photos (no carousel) -->
-    <section class="fmd-play-feature" aria-labelledby="play-feature-heading">
-      <div class="fmd-play-feature__copy">
-        <h2 class="section-title" id="play-feature-heading">Cafés &amp; restaurants with play areas</h2>
-        <p class="fmd-play-feature__description">
-          Discover spots in Berlin where little ones can play while you enjoy a coffee or a meal.
-        </p>
-      </div>
-
-      <div class="fmd-play-feature__photos">
-        <figure class="fmd-play-feature__photo">
-          <img src="images/kiezkind-play-area.jpg"
-               alt="Sand play area with toys at Kiezkind in Berlin"
-               width="840" height="1050" loading="lazy" decoding="async">
-        </figure>
-        <figure class="fmd-play-feature__photo">
-          <img src="images/maralou-play-area.jpg"
-               alt="Wooden slide and play corner at MaraLou café in Berlin"
-               width="840" height="1050" loading="lazy" decoding="async">
-        </figure>
-      </div>
-
-      <div class="fmd-play-feature__action">
-        <a class="fmd-play-feature__cta" href="/kids-friendly-cafes-restaurants-berlin">
-          Explore cafés &amp; restaurants &rarr;
-        </a>
-      </div>
     </section>
 
     <section class="berlin-banner-min">
