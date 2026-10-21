@@ -71,14 +71,36 @@
       margin: 0 0 0.5rem 0;
       text-align: center;
       line-height: 1.2;
-    }
-    .intro {
+      }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin: 0 0 2rem 0;
       text-align: center;
+      line-height: 1.4;
+    }
+
+    /* ===== Intro divider and neighborhood heading ===== */
+    .hero-divider {
+      border: 0;
+      border-top: 1px solid rgba(0,0,0,0.08);
       max-width: 840px;
-      margin: 0 auto 1.25rem auto;
+      margin: 0 auto 1rem;
+    }
+
+    /* Exactly the same type style for the neighborhood label and the result count */
+    .filters-heading,
+    .results-bottom {
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
+      font-weight: 400;
       color: #555;
-      line-height: 1.5;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .filters-heading {
+      margin: 0 auto 0.75rem;
     }
 
     /* ===== Section styles (from index) ===== */
@@ -136,15 +158,15 @@
     /* ===== Filters ===== */
     .filters-wrap{
       max-width: 980px;
-      margin: 0 auto 1.25rem auto;
+      margin: 0 auto 0.75rem auto;
     }
     .chip-grid{
       display:flex;
       flex-wrap: wrap;
       gap: 8px;
       justify-content: center;
-      margin-top: 0.5rem;
-      margin-bottom: 1.15rem;
+      margin-top: 0;
+      margin-bottom: 0.55rem;
     }
     .chip{
       display:flex;
@@ -177,28 +199,47 @@
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 0;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
-    .btn-small{
-      height: 36px;
-      padding: 0 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #f7f7f7;
-      cursor: pointer;
-      font-size: 13px;
+
+    /* Identical design to the black Go / Use my location CTAs on index.html */
+    .btn-small {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      height: auto;
+      min-height: 42px;
+      margin: 0;
+      padding: 11px 16px;
+      border: 0;
+      border-radius: 999px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
       font-weight: 600;
-      color: #333;
+      line-height: 1.25;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
     }
-    .btn-small:hover{ background:#efefef; }
+    .btn-small:hover {
+      background: #111;
+      color: #fff;
+    }
+    .btn-small:focus-visible {
+      outline: 3px solid #777;
+      outline-offset: 3px;
+    }
 
     /* iPhone-ish tuning */
     @media (max-width: 430px){
-      body { padding: 1.8rem; }
-      .chip-grid{ gap: 6px; margin-bottom: 1.05rem; }
+      .chip-grid{ gap: 6px; margin-bottom: 0.55rem; }
       .chip{ padding: 9px 12px; font-size: 13px; }
-      .filters-actions{ gap: 12px; margin-bottom: 0.85rem; }
-      .btn-small{ height: 36px; font-size: 13px; padding: 0 12px; }
+      .filters-actions{ gap: 12px; margin-bottom: 0.5rem; }
+      .filters-heading, .results-bottom{ font-size: 0.92rem; }
     }
 
     /* ===== Cards ===== */
@@ -207,7 +248,7 @@
       grid-template-columns: 1fr;
       gap: 1rem;
       margin-top: 0.6rem;
-      margin-bottom: 1.6rem; /* ✅ prevents overlap with counter */
+      margin-bottom: 1.6rem;
       align-items: start;
     }
     @media (min-width: 768px){
@@ -304,14 +345,9 @@
       color:#8a2b2b;
     }
 
+    /* Result count sits immediately under the blue neighborhood chips. */
     .results-bottom{
-      text-align:center;
-      margin: 1.8rem auto 0 auto;
-      color:#555;
-      font-size: 0.95rem;
-    }
-    @media (max-width: 430px){
-      .results-bottom{ font-size: 0.92rem; margin-top: 1.2rem; }
+      margin: 0 auto 0.75rem;
     }
 
     /* Infinite scroll small loader */
@@ -349,13 +385,19 @@
     </nav>
 
     <h1>Changing Tables in Berlin</h1>
+    <h2>Your guide to exploring Berlin with a baby – from cozy cafés to family-friendly spots, all with changing tables.</h2>
 
-    <p class="intro">
-      Find baby-friendly places with changing tables across Berlin.
-    </p>
+    <hr class="hero-divider" aria-hidden="true">
 
     <section class="filters-wrap" aria-label="Neighborhood filters">
+      <p class="filters-heading">Select a neighborhood</p>
+      
       <div class="chip-grid" id="neighborhoodChips"></div>
+
+      <div class="results-bottom" id="resultsBottom" style="display:none;" aria-live="polite">
+        <strong id="resultsCount">0</strong> places
+        <span id="activeFiltersText"></span>
+      </div>
 
       <div class="filters-actions">
         <button class="btn-small" id="selectAllBtn" type="button">Select all</button>
@@ -368,11 +410,6 @@
 
     <section id="cardsGrid" class="cards-grid" style="display:none;" aria-label="Places list"></section>
     <div id="moreLoader" class="more-loader">Loading more places…</div>
-
-    <div class="results-bottom" id="resultsBottom" style="display:none;">
-      <strong id="resultsCount">0</strong> places
-      <span id="activeFiltersText"></span>
-    </div>
 
     <section id="faq">
       <h2 class="section-title">FAQ: Changing Tables in Berlin</h2>
