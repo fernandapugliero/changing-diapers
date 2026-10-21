@@ -81,28 +81,6 @@
       line-height: 1.4;
     }
 
-    /* ===== Intro divider and neighborhood heading ===== */
-    .hero-divider {
-      border: 0;
-      border-top: 1px solid rgba(0,0,0,0.08);
-      max-width: 840px;
-      margin: 0 auto 1rem;
-    }
-
-    /* Exactly the same type style for the neighborhood label and the result count */
-    .filters-heading,
-    .results-bottom {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: #555;
-      text-align: center;
-      line-height: 1.4;
-    }
-    .filters-heading {
-      margin: 0 auto 0.75rem;
-    }
-
     /* ===== Section styles (from index) ===== */
     .section-title {
       font-size: 1.3rem;
@@ -168,29 +146,41 @@
       margin-top: 0;
       margin-bottom: 0.55rem;
     }
-    .chip{
-      display:flex;
-      align-items:center;
-      border: 1px solid #ddd;
+    /* Neighborhood chips: same dimensions and typography as the black buttons. */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      height: auto;
+      min-height: 42px;
+      margin: 0;
+      padding: 11px 16px;
+      border: 0;
       border-radius: 999px;
-      padding: 10px 14px;
       background: #f7f7f7;
-      cursor:pointer;
-      font: inherit;
+      box-shadow: inset 0 0 0 1px #ddd;
       color: #333;
-      user-select:none;
-      transition: background .15s ease, border-color .15s ease, color .15s ease;
-      font-size: 14px;
-      line-height: 1;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.25;
+      text-align: center;
       white-space: nowrap;
+      user-select: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
     }
-    .chip:hover{ background:#efefef; }
-
-    /* ✅ selected color (soft blue) */
-    .chip[data-selected="true"]{
+    .chip:hover { background: #efefef; }
+    .chip[data-selected="true"] {
       background: #4da3ff;
-      border-color: #4da3ff;
+      box-shadow: none;
       color: #fff;
+    }
+    .chip[data-selected="true"]:hover { background: #368fe9; }
+    .chip:focus-visible {
+      outline: 3px solid #777;
+      outline-offset: 3px;
     }
 
     .filters-actions{
@@ -234,12 +224,10 @@
       outline-offset: 3px;
     }
 
-    /* iPhone-ish tuning */
+    /* iPhone-ish tuning: keep chip sizing equal to the black buttons. */
     @media (max-width: 430px){
       .chip-grid{ gap: 6px; margin-bottom: 0.55rem; }
-      .chip{ padding: 9px 12px; font-size: 13px; }
       .filters-actions{ gap: 12px; margin-bottom: 0.5rem; }
-      .filters-heading, .results-bottom{ font-size: 0.92rem; }
     }
 
     /* ===== Cards ===== */
@@ -345,9 +333,18 @@
       color:#8a2b2b;
     }
 
-    /* Result count sits immediately under the blue neighborhood chips. */
-    .results-bottom{
-      margin: 0 auto 0.75rem;
+    /* Results counter: below the places list, just before the FAQ. */
+    .results-bottom {
+      text-align: center;
+      margin: 1.8rem auto 0;
+      color: #555;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    @media (max-width: 430px){
+      .results-bottom{ font-size: 0.92rem; margin-top: 1.2rem; }
     }
 
     /* Infinite scroll small loader */
@@ -385,19 +382,10 @@
     </nav>
 
     <h1>Changing Tables in Berlin</h1>
-    <h2>Your guide to exploring Berlin with a baby – from cozy cafés to family-friendly spots, all with changing tables.</h2>
-
-    <hr class="hero-divider" aria-hidden="true">
+    <h2>Your guide to exploring Berlin with a baby, neighborhood by neighborhood.</h2>
 
     <section class="filters-wrap" aria-label="Neighborhood filters">
-      <p class="filters-heading">Select a neighborhood</p>
-      
       <div class="chip-grid" id="neighborhoodChips"></div>
-
-      <div class="results-bottom" id="resultsBottom" style="display:none;" aria-live="polite">
-        <strong id="resultsCount">0</strong> places
-        <span id="activeFiltersText"></span>
-      </div>
 
       <div class="filters-actions">
         <button class="btn-small" id="selectAllBtn" type="button">Select all</button>
@@ -410,6 +398,11 @@
 
     <section id="cardsGrid" class="cards-grid" style="display:none;" aria-label="Places list"></section>
     <div id="moreLoader" class="more-loader">Loading more places…</div>
+
+    <div class="results-bottom" id="resultsBottom" style="display:none;" aria-live="polite">
+      <strong id="resultsCount">0</strong> places
+      <span id="activeFiltersText"></span>
+    </div>
 
     <section id="faq">
       <h2 class="section-title">FAQ: Changing Tables in Berlin</h2>
