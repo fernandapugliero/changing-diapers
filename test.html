@@ -570,19 +570,9 @@
       padding: clamp(28px, 3.6vw, 50px);
       margin: 5rem 0 0;
       background: #fbece9;
-      border-radius: 20px;
+      border-radius: 12px;
     }
     .play-feature__content { position: relative; z-index: 2; min-width: 0; }
-    .play-feature__eyebrow {
-      display: block;
-      color: #a35e55;
-      font-family: 'Inter', sans-serif;
-      font-size: .75rem;
-      font-weight: 600;
-      letter-spacing: .055em;
-      line-height: 1.4;
-      margin: 0 0 18px;
-    }
     .play-feature__title {
       color: #333;
       font-family: 'Inter', sans-serif;
@@ -639,7 +629,7 @@
       left: 1%;
       top: 0;
       object-position: center 61%;
-      border-radius: 44% 56% 47% 53% / 47% 48% 52% 53%;
+      border-radius: 28% 18% 24% 17% / 20% 24% 18% 23%;
     }
     .play-feature__photo--small {
       z-index: 2;
@@ -649,7 +639,7 @@
       bottom: 0;
       object-position: center 58%;
       border: 5px solid #fff;
-      border-radius: 53% 47% 48% 52% / 46% 56% 44% 54%;
+      border-radius: 22% 27% 18% 24% / 25% 19% 23% 18%;
     }
     .play-feature__rays {
       position: absolute;
@@ -671,26 +661,28 @@
         gap: 16px;
         min-height: 0;
         margin-top: 4rem;
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
         padding: 28px 20px 25px;
-        border-radius: 17px;
+        border-radius: 10px;
       }
       .play-feature__content { display: contents; }
-      .play-feature__eyebrow { order: 1; text-align: center; font-size: .7rem; margin: 0; }
       .play-feature__title {
-        order: 2;
+        order: 1;
         text-align: center;
         font-size: clamp(1.65rem, 6vw, 1.95rem);
-        margin: -5px 0 0;
+        margin: 0;
       }
       .play-feature__description {
-        order: 3;
+        order: 2;
         text-align: center;
         font-size: .95rem;
         line-height: 1.5;
         margin: -3px 0 0;
       }
       .play-feature__photos {
-        order: 4;
+        order: 3;
         width: min(100%, 410px);
         height: clamp(210px, 66vw, 295px);
         margin: 0 auto;
@@ -700,7 +692,7 @@
       .play-feature__rays { width: 36px; height: 36px; }
       .play-feature__rays--left { top: -2px; }
       .play-feature__rays--right { right: 0; }
-      .play-feature__cta { order: 5; align-self: center; margin: 5px 0 0; max-width: 100%; }
+      .play-feature__cta { order: 4; align-self: center; margin: 5px 0 0; max-width: 100%; }
     }
     @media (max-width: 360px) {
       .page .play-feature { padding-inline: 15px; }
@@ -718,7 +710,7 @@
     </nav>
 
     <h1>Looking for a place to go with a baby?</h1>
-    <h2>Find baby-friendly cafés, restaurants, and more – all with changing tables.</h2>
+    <h2>Find baby-friendly cafes, restaurants, and more – all with changing tables.</h2>
     
     <div id="geo-search" class="map-search">
       <input id="geo-input" type="text" placeholder="Type an address, ZIP code, or city" />
@@ -827,10 +819,9 @@
     <!-- Featured family-friendly cafés and restaurants -->
     <section class="play-feature" aria-labelledby="play-feature-heading">
       <div class="play-feature__content">
-        
-        <h2 class="play-feature__title" id="play-feature-heading">Happy kids, happy life</h2>
-        <p class="play-feature__description">Discover cafes and restaurants in Berlin with play areas – and maybe enjoy a coffee or a meal while it's still hot :)</p>
-        <a href="/kids-friendly-cafes-restaurants-berlin" class="play-feature__cta">Explore cafés &amp; restaurants</a>
+        <h2 class="play-feature__title" id="play-feature-heading">Happy baby, happy life</h2>
+        <p class="play-feature__description">Discover cafés and restaurants in Berlin with play areas — and maybe enjoy a coffee while it's still hot.</p>
+        <a href="/kids-friendly-cafes-restaurants-berlin" class="play-feature__cta">Explore cafés &amp; restaurants →</a>
       </div>
       <div class="play-feature__photos">
         <img class="play-feature__photo play-feature__photo--large"
