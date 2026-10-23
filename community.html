@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Community | Fix My Diaper</title>
-  <meta name="description" content="Share projects, events, useful links and parent-tested tips with the Fix My Diaper community in Berlin." />
-  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Share projects, events, useful links and parent-tested recommendations with the Fix My Diaper community in Berlin.">
+  <meta name="robots" content="index, follow">
 
-  <meta property="og:title" content="Community | Fix My Diaper" />
-  <meta property="og:description" content="Share something worth knowing with other parents in Berlin." />
-  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png" />
-  <meta property="og:url" content="https://fixmydiaper.com/community" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Community | Fix My Diaper">
+  <meta property="og:description" content="Got something worth sharing with other parents in Berlin?">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com/community">
+  <meta property="og:type" content="website">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Community | Fix My Diaper" />
-  <meta name="twitter:description" content="Share something worth knowing with other parents in Berlin." />
-  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Community | Fix My Diaper">
+  <meta name="twitter:description" content="Got something worth sharing with other parents in Berlin?">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
@@ -28,12 +28,12 @@
     gtag('config', 'G-JGYVLDZQTM');
   </script>
 
-  <link rel="icon" href="/images/favicon.ico" sizes="any" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Same foundations as the /submit page */
+    /* BASE — SAME AS /SUBMIT */
 
     body {
       font-family: 'Inter', sans-serif;
@@ -68,7 +68,7 @@
       color: inherit;
     }
 
-    /* Hero */
+    /* HERO */
 
     .community-hero h1 {
       font-size: 2rem;
@@ -87,7 +87,7 @@
       max-width: 760px;
     }
 
-    /* Community sections */
+    /* COMMUNITY SECTIONS */
 
     .community-options {
       max-width: 760px;
@@ -147,7 +147,7 @@
       transform: rotate(45deg);
     }
 
-    /* Embedded forms */
+    /* FORM CONTENT */
 
     .form-panel {
       padding: 0 0 1.8rem;
@@ -155,10 +155,24 @@
 
     .form-intro {
       font-size: 0.95rem;
-      color: #666;
-      line-height: 1.5;
+      color: #555;
+      line-height: 1.6;
+      margin: 0 0 1.5rem;
+    }
+
+    .form-intro p {
       margin: 0 0 1rem;
     }
+
+    .form-intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-intro strong {
+      color: #333;
+    }
+
+    /* AIRTABLE EMBEDS */
 
     .form-container {
       width: 100%;
@@ -170,12 +184,14 @@
       box-sizing: border-box;
       width: 100%;
       border: 0;
+      outline: 0;
+      box-shadow: none;
       background: transparent;
     }
 
     .form-unavailable {
       font-size: 0.95rem;
-      color: #666;
+      color: #777;
       padding: 1.25rem 0;
     }
 
@@ -193,15 +209,26 @@
       text-decoration: underline;
     }
 
+    /* PRIVACY NOTE */
+
     .submission-note {
       max-width: 760px;
       margin: 1.5rem auto 0;
       font-size: 0.85rem;
-      line-height: 1.5;
+      line-height: 1.6;
       color: #777;
     }
 
-    /* Same footer as /submit */
+    .submission-note a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    .submission-note a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER — SAME AS /SUBMIT */
 
     footer {
       margin-top: 3rem;
@@ -219,7 +246,7 @@
       text-decoration: underline;
     }
 
-    /* Mobile */
+    /* MOBILE */
 
     @media (max-width: 768px) {
       body {
@@ -227,7 +254,7 @@
       }
 
       .form-container iframe {
-        min-height: 2300px;
+        height: 1800px;
       }
     }
 
@@ -246,9 +273,10 @@
 <body>
   <div class="page">
 
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
+
     <nav>
-      <img src="images/logo.png" alt="Fix My Diaper Logo" />
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
       <a href="https://fixmydiaper.com/">Map</a>
       <a href="list">List</a>
       <a href="submit">Submit</a>
@@ -256,25 +284,29 @@
 
     <main>
 
-      <!-- Hero -->
+      <!-- HERO -->
+
       <header class="community-hero">
-        <h1>A little space for the community.</h1>
+        <h1>A little space for the community</h1>
 
         <p class="hero-subtitle">
-          Some of the best discoveries come from other parents in Berlin.
           Got something worth sharing? I'd love to hear about it.
         </p>
       </header>
 
-      <!-- Community contribution options -->
-      <section class="community-options" aria-label="Ways to contribute">
+      <!-- COMMUNITY OPTIONS -->
 
-        <!-- Form 1 -->
+      <section
+        class="community-options"
+        aria-label="Ways to contribute">
+
+        <!-- FROM THE COMMUNITY -->
+
         <details
           class="community-option"
           id="community"
-          data-form="community"
-        >
+          data-form="community">
+
           <summary>
             <span>
               <span class="option-title">
@@ -282,8 +314,8 @@
               </span>
 
               <span class="option-description">
-                An app, an event, a small business, a useful link
-                or something else other Berlin parents should know about.
+                Apps, events, small businesses, useful links
+                and other things Berlin parents should know about.
               </span>
             </span>
 
@@ -291,11 +323,31 @@
           </summary>
 
           <div class="form-panel">
-            <p class="form-intro">
-              Tell me what you'd like to share.
-              Submissions are reviewed for possible inclusion
-              in the newsletter.
-            </p>
+
+            <div class="form-intro">
+
+              <p>
+                Working on something? Organising an event?
+                Found a resource other Berlin parents should know about?
+              </p>
+
+              <p>
+                From apps and small businesses to meetups,
+                second-hand finds and useful links, this is a space
+                to share things worth knowing about.
+              </p>
+
+              <p>
+                <strong>Before submitting</strong><br>
+                Submissions are reviewed and selected by Fix My Diaper.
+                Not everything submitted will be published, and
+                descriptions may be edited for clarity and length.
+                I'll get in touch if I need more information.
+              </p>
+
+            </div>
+
+            <!-- PUBLIC AIRTABLE FORM -->
 
             <div
               class="form-container"
@@ -307,15 +359,17 @@
               data-external="community"
               hidden>
             </p>
+
           </div>
         </details>
 
-        <!-- Form 2 -->
+        <!-- PARENT PICKS -->
+
         <details
           class="community-option"
           id="picks"
-          data-form="picks"
-        >
+          data-form="picks">
+
           <summary>
             <span>
               <span class="option-title">
@@ -332,10 +386,37 @@
           </summary>
 
           <div class="form-panel">
-            <p class="form-intro">
-              Answer one question or all five —
-              whatever you'd like to share.
-            </p>
+
+            <div class="form-intro">
+
+              <p>
+                Every parent has a few discoveries
+                they'd love to pass on.
+              </p>
+
+              <p>
+                A favourite place, a tip that actually helped,
+                something worth buying or an experience
+                you still think about.
+              </p>
+
+              <p>
+                Answer one question or all five —
+                whatever you'd like to share.
+                Short answers are absolutely fine.
+              </p>
+
+              <p>
+                <strong>Before submitting</strong><br>
+                Selected responses may be featured in the
+                Fix My Diaper newsletter, website or social channels.
+                Answers may be edited for clarity and length.
+                Publication isn't guaranteed.
+              </p>
+
+            </div>
+
+            <!-- SECOND AIRTABLE FORM: COMING SOON -->
 
             <div
               class="form-container"
@@ -347,20 +428,25 @@
               data-external="picks"
               hidden>
             </p>
+
           </div>
         </details>
 
       </section>
 
+      <!-- PRIVACY NOTE -->
+
       <p class="submission-note">
-        Submissions are selected editorially and aren't
-        guaranteed publication.
-        Please don't include personal information about children.
+        We use Airtable, a third-party service, to collect
+        and store form submissions. For more information
+        about how personal data is handled, see our
+        <a href="about">Privacy Policy</a>.
       </p>
 
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
+
     <footer>
       <a href="about">About</a> |
       <a href="newsletter">Newsletter</a> |
@@ -369,7 +455,7 @@
          target="_blank"
          rel="noopener noreferrer">Instagram</a><br><br>
 
-      Made with ♥️ in Berlin<br />
+      Made with ♥️ in Berlin<br>
 
       Created by
       <a href="https://fernandapugliero.com"
@@ -382,60 +468,75 @@
 
   <script>
     /*
-      ADD YOUR AIRTABLE FORM LINKS HERE
+      AIRTABLE FORM LINKS
 
-      Example:
-      community: 'https://airtable.com/embed/...',
-      picks: 'https://airtable.com/embed/...'
+      Form 1: From the Community — connected
+      Form 2: Parent Picks — awaiting embed link
     */
 
     const FORM_URLS = {
-      community: '',
+      community: 'https://airtable.com/embed/appuXhcqk3mRGh9hc/shrmcsoe5inUeXeZ8',
       picks: ''
     };
 
-    function getEmbedUrl(raw) {
+    /*
+      Check the Airtable public form URL.
+    */
+
+    function getFormUrl(raw) {
       if (!raw) return null;
 
       try {
         const url = new URL(raw.trim());
 
+        const validHost =
+          url.hostname === 'airtable.com' ||
+          url.hostname === 'www.airtable.com';
+
+        const validPath =
+          /^\/embed\/app[a-zA-Z0-9]+\/shr[a-zA-Z0-9]+$/.test(
+            url.pathname
+          );
+
         if (
           url.protocol !== 'https:' ||
-          url.hostname !== 'airtable.com'
+          !validHost ||
+          !validPath
         ) {
           return null;
         }
 
-        if (!url.pathname.startsWith('/embed/')) {
-          url.pathname = '/embed' + url.pathname;
-        }
-
         return url.toString();
-      } catch {
+
+      } catch (error) {
         return null;
       }
     }
+
+    /*
+      Load a form when its section opens.
+    */
 
     function loadForm(type) {
       const container = document.querySelector(
         '[data-frame="' + type + '"]'
       );
 
-      if (!container || container.dataset.loaded === 'true') {
+      if (
+        !container ||
+        container.dataset.loaded === 'true'
+      ) {
         return;
       }
 
       container.dataset.loaded = 'true';
 
-      const url = getEmbedUrl(FORM_URLS[type]);
+      const url = getFormUrl(FORM_URLS[type]);
 
       if (!url) {
         const notice = document.createElement('p');
-
         notice.className = 'form-unavailable';
         notice.textContent = 'This form is coming soon.';
-
         container.appendChild(notice);
         return;
       }
@@ -443,19 +544,27 @@
       const iframe = document.createElement('iframe');
 
       iframe.title = type === 'community'
-        ? 'From the Community form'
-        : 'Parent Picks form';
+        ? 'From the Community submission form'
+        : 'Parent Picks submission form';
 
       iframe.src = url;
       iframe.loading = 'lazy';
-
-      iframe.style.height = type === 'community'
-        ? '1900px'
-        : '2600px';
-
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
 
+      /*
+        Initial heights. Adjust after visually testing
+        the completed forms on desktop and mobile.
+      */
+
+      iframe.style.height = type === 'community'
+        ? '1500px'
+        : '2200px';
+
       container.appendChild(iframe);
+
+      /*
+        Fallback link to the original Airtable form.
+      */
 
       const external = document.querySelector(
         '[data-external="' + type + '"]'
@@ -464,17 +573,9 @@
       if (external) {
         const link = document.createElement('a');
 
-        const shareUrl = new URL(url);
-
-        shareUrl.pathname = shareUrl.pathname.replace(
-          /^\/embed/,
-          ''
-        );
-
-        link.href = shareUrl.toString();
+        link.href = url.replace('/embed/', '/');
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-
         link.textContent =
           'Trouble seeing the form? Open it in a new tab.';
 
@@ -484,7 +585,8 @@
     }
 
     /*
-      Open the selected section and close the other one.
+      Accordion behaviour:
+      opening one section closes the other.
     */
 
     const sections = Array.from(
@@ -506,7 +608,7 @@
     });
 
     /*
-      Direct links from the newsletter:
+      Newsletter deep links:
 
       /community?form=community
       /community?form=picks
@@ -516,13 +618,18 @@
       window.location.search
     ).get('form');
 
-    const chosen =
-      formParam === 'community'
-        ? 'community'
-        : formParam === 'picks' ||
-          formParam === 'parent-picks'
-        ? 'picks'
-        : null;
+    let chosen = null;
+
+    if (formParam === 'community') {
+      chosen = 'community';
+    }
+
+    if (
+      formParam === 'picks' ||
+      formParam === 'parent-picks'
+    ) {
+      chosen = 'picks';
+    }
 
     if (chosen) {
       const section = document.getElementById(chosen);
