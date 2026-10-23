@@ -5,38 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Community | Fix My Diaper</title>
-
-  <meta name="description"
-        content="Share projects, events, useful links and parent-tested recommendations with the Fix My Diaper community in Berlin.">
-
+  <meta name="description" content="Share projects, events, useful links and parent-tested recommendations with the Fix My Diaper community in Berlin.">
   <meta name="robots" content="index, follow">
 
-  <meta property="og:title"
-        content="Community | Fix My Diaper">
-
-  <meta property="og:description"
-        content="Got something worth sharing with other parents in Berlin?">
-
-  <meta property="og:image"
-        content="https://fixmydiaper.com/images/logo.png">
-
-  <meta property="og:url"
-        content="https://fixmydiaper.com/community">
-
+  <meta property="og:title" content="Community | Fix My Diaper">
+  <meta property="og:description" content="Got something worth sharing with other parents in Berlin?">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com/community">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Community | Fix My Diaper">
-  <meta name="twitter:description"
-        content="Got something worth sharing with other parents in Berlin?">
-  <meta name="twitter:image"
-        content="https://fixmydiaper.com/images/logo.png">
+  <meta name="twitter:description" content="Got something worth sharing with other parents in Berlin?">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
   <!-- Google Analytics -->
-  <script async
-    src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM">
-  </script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -56,6 +40,7 @@
     rel="stylesheet">
 
   <style>
+
     /* BASE — SAME AS /SUBMIT */
 
     body {
@@ -164,6 +149,7 @@
       color: #666;
       font-size: 1.4rem;
       font-weight: 400;
+      transition: transform 0.2s;
     }
 
     .community-option[open] .option-toggle {
@@ -191,20 +177,66 @@
       margin-bottom: 0;
     }
 
+    /* EDITORIAL NOTE ABOVE FORM */
+
+    .editorial-note {
+      font-size: 0.85rem;
+      color: #777;
+      line-height: 1.6;
+      margin: 0 0 1.5rem;
+    }
+
+    .editorial-note strong {
+      color: #555;
+      font-weight: 600;
+    }
+
     /* AIRTABLE EMBEDS */
 
     .form-container {
+
+      /*
+        Change these values if necessary:
+
+        --form-height:
+        Total iframe height.
+
+        --airtable-header-crop:
+        How much of the Airtable title/header
+        is hidden at the top.
+      */
+
+      --form-height: 2250px;
+      --airtable-header-crop: 165px;
+
       width: 100%;
+
+      height: calc(
+        var(--form-height) - var(--airtable-header-crop)
+      );
+
       overflow: hidden;
+      border: 0;
+    }
+
+    .form-container[data-frame="picks"] {
+      --form-height: 2750px;
     }
 
     .form-container iframe {
       display: block;
       box-sizing: border-box;
+
       width: 100%;
-      border: 0;
+      height: var(--form-height);
+
+      margin-top: calc(
+        -1 * var(--airtable-header-crop)
+      );
+
+      border: 0 !important;
       outline: 0;
-      box-shadow: none;
+      box-shadow: none !important;
       background: transparent;
     }
 
@@ -226,20 +258,6 @@
 
     .form-external a:hover {
       text-decoration: underline;
-    }
-
-    /* EDITORIAL NOTE BELOW FORMS */
-
-    .editorial-note {
-      font-size: 0.85rem;
-      color: #777;
-      line-height: 1.6;
-      margin: 1.5rem 0 0;
-    }
-
-    .editorial-note strong {
-      color: #555;
-      font-weight: 600;
     }
 
     /* PRIVACY NOTE */
@@ -282,16 +300,24 @@
     /* MOBILE */
 
     @media (max-width: 768px) {
+
       body {
         padding: 2rem;
       }
 
-      .form-container iframe {
-        height: 1800px !important;
+      .form-container {
+        --form-height: 2300px;
+        --airtable-header-crop: 130px;
       }
+
+      .form-container[data-frame="picks"] {
+        --form-height: 3000px;
+      }
+
     }
 
     @media (max-width: 480px) {
+
       .option-title {
         font-size: 1.1rem;
       }
@@ -299,7 +325,9 @@
       .option-description {
         font-size: 0.9rem;
       }
+
     }
+
   </style>
 </head>
 
@@ -310,6 +338,7 @@
 
     <nav>
       <img src="images/logo.png" alt="Fix My Diaper Logo">
+
       <a href="https://fixmydiaper.com/">Map</a>
       <a href="list">List</a>
       <a href="submit">Submit</a>
@@ -320,11 +349,13 @@
       <!-- HERO -->
 
       <header class="community-hero">
+
         <h1>A little space for the community</h1>
 
         <p class="hero-subtitle">
           Got something worth sharing? I'd love to hear about it.
         </p>
+
       </header>
 
       <!-- COMMUNITY OPTIONS -->
@@ -341,23 +372,30 @@
           data-form="community">
 
           <summary>
+
             <span>
+
               <span class="option-title">
                 From the Community
               </span>
 
               <span class="option-description">
-                Apps, events, small businesses, useful links
-                and other things Berlin parents should know about.
+                Apps, events, small businesses,
+                useful links and other things
+                Berlin parents should know about.
               </span>
+
             </span>
 
-            <span class="option-toggle" aria-hidden="true">+</span>
+            <span
+              class="option-toggle"
+              aria-hidden="true">+</span>
+
           </summary>
 
           <div class="form-panel">
 
-            <!-- INTRODUCTION ABOVE FORM -->
+            <!-- INTRODUCTION -->
 
             <div class="form-intro">
 
@@ -376,7 +414,21 @@
 
             </div>
 
-            <!-- AIRTABLE FORM 1 -->
+            <!-- EDITORIAL NOTE: NOW ABOVE THE FORM -->
+
+            <p class="editorial-note">
+
+              <strong>A note on submissions</strong><br>
+
+              Submissions are reviewed and selected by
+              Fix My Diaper. Not everything submitted
+              will be published, and descriptions may be
+              edited for clarity and length. I'll get
+              in touch if I need more information.
+
+            </p>
+
+            <!-- AIRTABLE FORM -->
 
             <div
               class="form-container"
@@ -389,18 +441,8 @@
               hidden>
             </p>
 
-            <!-- EDITORIAL NOTE BELOW FORM -->
-
-            <p class="editorial-note">
-              <strong>A note on submissions</strong><br>
-              Submissions are reviewed and selected by
-              Fix My Diaper. Not everything submitted
-              will be published, and descriptions may be
-              edited for clarity and length. I'll get
-              in touch if I need more information.
-            </p>
-
           </div>
+
         </details>
 
         <!-- PARENT PICKS -->
@@ -411,7 +453,9 @@
           data-form="picks">
 
           <summary>
+
             <span>
+
               <span class="option-title">
                 Parent Picks
               </span>
@@ -421,14 +465,18 @@
                 trips and activities you've loved
                 with your little one.
               </span>
+
             </span>
 
-            <span class="option-toggle" aria-hidden="true">+</span>
+            <span
+              class="option-toggle"
+              aria-hidden="true">+</span>
+
           </summary>
 
           <div class="form-panel">
 
-            <!-- INTRODUCTION ABOVE FORM -->
+            <!-- INTRODUCTION -->
 
             <div class="form-intro">
 
@@ -451,7 +499,21 @@
 
             </div>
 
-            <!-- AIRTABLE FORM 2: COMING SOON -->
+            <!-- EDITORIAL NOTE: NOW ABOVE THE FORM -->
+
+            <p class="editorial-note">
+
+              <strong>A note on submissions</strong><br>
+
+              Selected responses may be featured in
+              the Fix My Diaper newsletter, website
+              or social channels. Answers may be
+              edited for clarity and length.
+              Publication isn't guaranteed.
+
+            </p>
+
+            <!-- AIRTABLE FORM -->
 
             <div
               class="form-container"
@@ -464,18 +526,8 @@
               hidden>
             </p>
 
-            <!-- EDITORIAL NOTE BELOW FORM -->
-
-            <p class="editorial-note">
-              <strong>A note on submissions</strong><br>
-              Selected responses may be featured in
-              the Fix My Diaper newsletter, website
-              or social channels. Answers may be edited
-              for clarity and length.
-              Publication isn't guaranteed.
-            </p>
-
           </div>
+
         </details>
 
       </section>
@@ -483,11 +535,13 @@
       <!-- PRIVACY NOTE -->
 
       <p class="submission-note">
+
         We use Airtable, a third-party service,
         to collect and store form submissions.
         For more information about how personal
         data is handled, see our
         <a href="about">Privacy Policy</a>.
+
       </p>
 
     </main>
@@ -495,31 +549,38 @@
     <!-- FOOTER -->
 
     <footer>
+
       <a href="about">About</a> |
       <a href="newsletter">Newsletter</a> |
       <a href="partnerships">For Brands</a> |
-      <a href="https://www.instagram.com/fixmydiaper"
-         target="_blank"
-         rel="noopener noreferrer">Instagram</a><br><br>
+
+      <a
+        href="https://www.instagram.com/fixmydiaper"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <br><br>
 
       Made with ♥️ in Berlin<br>
 
       Created by
-      <a href="https://fernandapugliero.com"
-         target="_blank"
-         rel="noopener noreferrer">Fernanda Pugliero</a>
+      <a
+        href="https://fernandapugliero.com"
+        target="_blank"
+        rel="noopener noreferrer">
+        Fernanda Pugliero
+      </a>
       &amp; son
+
     </footer>
 
   </div>
 
-  <script>
-    /*
-      AIRTABLE FORM LINKS
+  <!-- FORM CONFIGURATION -->
 
-      Form 1: From the Community — connected
-      Form 2: Parent Picks — awaiting embed link
-    */
+  <script>
 
     const FORM_URLS = {
       community: 'https://airtable.com/embed/appuXhcqk3mRGh9hc/shrhXKAgLdSVInYXZ',
@@ -531,9 +592,11 @@
     */
 
     function getFormUrl(raw) {
+
       if (!raw) return null;
 
       try {
+
         const url = new URL(raw.trim());
 
         const validHost =
@@ -556,15 +619,19 @@
         return url.toString();
 
       } catch (error) {
+
         return null;
+
       }
+
     }
 
     /*
-      Load each form when its section opens.
+      Load a form when its section opens.
     */
 
     function loadForm(type) {
+
       const container = document.querySelector(
         '[data-frame="' + type + '"]'
       );
@@ -581,13 +648,18 @@
       const url = getFormUrl(FORM_URLS[type]);
 
       if (!url) {
+
         const notice = document.createElement('p');
 
         notice.className = 'form-unavailable';
-        notice.textContent = 'This form is coming soon.';
+
+        notice.textContent =
+          'This form is coming soon.';
 
         container.appendChild(notice);
+
         return;
+
       }
 
       const iframe = document.createElement('iframe');
@@ -597,22 +669,17 @@
         : 'Parent Picks submission form';
 
       iframe.src = url;
+
       iframe.loading = 'lazy';
-      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
 
-      /*
-        Provisional iframe heights.
-        Adjust after testing on desktop and mobile.
-      */
-
-      iframe.style.height = type === 'community'
-        ? '1500px'
-        : '2200px';
+      iframe.referrerPolicy =
+        'strict-origin-when-cross-origin';
 
       container.appendChild(iframe);
 
       /*
-        Link to open the form directly if needed.
+        Fallback link to open the form
+        outside the embedded page.
       */
 
       const external = document.querySelector(
@@ -620,9 +687,10 @@
       );
 
       if (external) {
+
         const link = document.createElement('a');
 
-        link.href = url.replace('/embed/', '/');
+        link.href = url;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
 
@@ -630,8 +698,11 @@
           'Trouble seeing the form? Open it in a new tab.';
 
         external.appendChild(link);
+
         external.hidden = false;
+
       }
+
     }
 
     /*
@@ -643,17 +714,23 @@
     );
 
     sections.forEach(section => {
+
       section.addEventListener('toggle', () => {
+
         if (!section.open) return;
 
         sections.forEach(other => {
+
           if (other !== section) {
             other.open = false;
           }
+
         });
 
         loadForm(section.dataset.form);
+
       });
+
     });
 
     /*
@@ -681,12 +758,15 @@
     }
 
     if (chosen) {
+
       const section = document.getElementById(chosen);
 
       if (section) {
         section.open = true;
       }
+
     }
+
   </script>
 
 </body>
