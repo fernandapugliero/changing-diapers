@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="Got something worth sharing with other parents in Berlin?">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!-- Prepare the Airtable connection -->
+  <!-- Prepare Airtable connection -->
   <link rel="preconnect" href="https://airtable.com" crossorigin>
   <link rel="dns-prefetch" href="//airtable.com">
 
@@ -27,9 +27,11 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
+
     function gtag() {
       dataLayer.push(arguments);
     }
+
     gtag('js', new Date());
     gtag('config', 'G-JGYVLDZQTM');
   </script>
@@ -164,7 +166,7 @@
       font-size: 0.95rem;
       color: #555;
       line-height: 1.6;
-      margin: 0 0 1.5rem;
+      margin: 0 0 1rem;
     }
 
     .form-intro p {
@@ -189,25 +191,19 @@
       font-weight: 600;
     }
 
-    /*
-      AIRTABLE EMBEDS
-
-      The form is inside an iframe.
-
-      --form-height:
-      Height of the iframe, including its hidden header.
-
-      --airtable-header-crop:
-      Amount removed from the top of the iframe.
-
-      Adjust these values independently for desktop/mobile.
-    */
+    /* AIRTABLE EMBEDS */
 
     .form-container {
       --form-height: 1800px;
-      --airtable-header-crop: 185px;
+
+      /*
+        Desktop: reduced from 185px to 150px
+        to reveal the first question.
+      */
+      --airtable-header-crop: 150px;
 
       width: 100%;
+
       height: calc(
         var(--form-height) - var(--airtable-header-crop)
       );
@@ -223,7 +219,6 @@
     .form-container iframe {
       display: block;
       box-sizing: border-box;
-
       width: 100%;
       height: var(--form-height);
 
@@ -374,36 +369,26 @@
               </span>
             </span>
 
-            <span class="option-toggle" aria-hidden="true">
-              +
-            </span>
+            <span class="option-toggle" aria-hidden="true">+</span>
           </summary>
 
           <div class="form-panel">
 
+            <!-- SHORTER INTRODUCTION -->
             <div class="form-intro">
               <p>
                 Working on something? Organising an event?
-                Found a resource other Berlin parents
-                should know about?
-              </p>
-
-              <p>
-                From apps and small businesses to meetups,
-                second-hand finds and useful links,
-                this is a space to share things worth
-                knowing about.
+                Found something worth sharing?
               </p>
             </div>
 
+            <!-- SHORTER EDITORIAL NOTE -->
             <p class="editorial-note">
-              <strong>A note on submissions</strong><br>
-
-              Submissions are reviewed and selected by
-              Fix My Diaper. Not everything submitted
-              will be published, and descriptions may be
-              edited for clarity and length. I'll get
-              in touch if I need more information.
+              <strong>Note:</strong>
+              Submissions are reviewed by Fix My Diaper.
+              Publication isn't guaranteed, and descriptions
+              may be edited for clarity or length.
+              I'll get in touch if needed.
             </p>
 
             <!-- AIRTABLE FORM -->
@@ -440,9 +425,7 @@
               </span>
             </span>
 
-            <span class="option-toggle" aria-hidden="true">
-              +
-            </span>
+            <span class="option-toggle" aria-hidden="true">+</span>
           </summary>
 
           <div class="form-panel">
@@ -468,7 +451,6 @@
 
             <p class="editorial-note">
               <strong>A note on submissions</strong><br>
-
               Selected responses may be featured in
               the Fix My Diaper newsletter, website
               or social channels. Answers may be
@@ -620,16 +602,13 @@
       iframe.referrerPolicy =
         'strict-origin-when-cross-origin';
 
-      // Start loading immediately.
       iframe.loading = 'eager';
-
       iframe.src = url;
 
       container.appendChild(iframe);
 
       /*
-        Link to open the form directly
-        if the embed doesn't work.
+        Fallback link to open the form directly.
       */
 
       const external = document.querySelector(
@@ -675,7 +654,7 @@
     });
 
     /*
-      Direct newsletter links:
+      Newsletter deep links:
 
       /community?form=community
       /community?form=picks
@@ -707,13 +686,7 @@
     }
 
     /*
-      Preload the first form.
-
-      This starts the Airtable request before
-      the visitor opens the accordion.
-
-      Some browsers may still deprioritise
-      content inside a closed <details>.
+      Preload the first Airtable form.
     */
 
     loadForm('community');
