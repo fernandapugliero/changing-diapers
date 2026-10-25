@@ -41,6 +41,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+
     /* BASE — SAME AS /SUBMIT */
 
     body {
@@ -191,19 +192,23 @@
       font-weight: 600;
     }
 
-    /* AIRTABLE EMBEDS */
+    /*
+      AIRTABLE EMBEDS
+
+      Each form has independent height settings.
+
+      From the Community:
+      Approved desktop and mobile measurements.
+
+      Parent Picks:
+      Provisional measurements to test.
+    */
 
     .form-container {
       --form-height: 1840px;
-
-      /*
-        Desktop: reduced from 185px to 150px
-        to reveal the first question.
-      */
       --airtable-header-crop: 120px;
 
       width: 100%;
-
       height: calc(
         var(--form-height) - var(--airtable-header-crop)
       );
@@ -212,8 +217,16 @@
       border: 0;
     }
 
+    /*
+      PARENT PICKS — DESKTOP
+
+      Adjust independently without changing
+      From the Community.
+    */
+
     .form-container[data-frame="picks"] {
-      --form-height: 2750px;
+      --form-height: 2840px;
+      --airtable-header-crop: 120px;
     }
 
     .form-container iframe {
@@ -301,13 +314,22 @@
         padding: 2rem;
       }
 
+      /*
+        FROM THE COMMUNITY — APPROVED
+      */
+
       .form-container {
         --form-height: 2100px;
         --airtable-header-crop: 145px;
       }
 
+      /*
+        PARENT PICKS — PROVISIONAL
+      */
+
       .form-container[data-frame="picks"] {
-        --form-height: 3000px;
+        --form-height: 3200px;
+        --airtable-header-crop: 145px;
       }
     }
 
@@ -320,6 +342,7 @@
         font-size: 0.9rem;
       }
     }
+
   </style>
 </head>
 
@@ -327,6 +350,7 @@
   <div class="page">
 
     <!-- NAVIGATION -->
+
     <nav>
       <img src="images/logo.png" alt="Fix My Diaper Logo">
       <a href="https://fixmydiaper.com/">Map</a>
@@ -337,20 +361,25 @@
     <main>
 
       <!-- HERO -->
+
       <header class="community-hero">
+
         <h1>A little space for the community</h1>
 
         <p class="hero-subtitle">
           Got something worth sharing? We'd love to hear about it.
         </p>
+
       </header>
 
       <!-- COMMUNITY OPTIONS -->
+
       <section
         class="community-options"
         aria-label="Ways to contribute">
 
         <!-- FROM THE COMMUNITY -->
+
         <details
           class="community-option"
           id="community"
@@ -358,6 +387,7 @@
 
           <summary>
             <span>
+
               <span class="option-title">
                 From the Community
               </span>
@@ -367,6 +397,7 @@
                 useful links and other things
                 Berlin parents should know about.
               </span>
+
             </span>
 
             <span class="option-toggle" aria-hidden="true">+</span>
@@ -374,7 +405,8 @@
 
           <div class="form-panel">
 
-            <!-- SHORTER INTRODUCTION -->
+            <!-- INTRODUCTION -->
+
             <div class="form-intro">
               <p>
                 Working on something? Organising an event?
@@ -382,7 +414,8 @@
               </p>
             </div>
 
-            <!-- SHORTER EDITORIAL NOTE -->
+            <!-- EDITORIAL NOTE -->
+
             <p class="editorial-note">
               <strong>Note:</strong>
               Submissions are reviewed by Fix My Diaper.
@@ -391,7 +424,8 @@
               I'll get in touch if needed.
             </p>
 
-            <!-- AIRTABLE FORM -->
+            <!-- AIRTABLE FORM 1 -->
+
             <div
               class="form-container"
               data-frame="community">
@@ -407,6 +441,7 @@
         </details>
 
         <!-- PARENT PICKS -->
+
         <details
           class="community-option"
           id="picks"
@@ -414,6 +449,7 @@
 
           <summary>
             <span>
+
               <span class="option-title">
                 Parent Picks
               </span>
@@ -423,6 +459,7 @@
                 trips and activities you've loved
                 with your little one.
               </span>
+
             </span>
 
             <span class="option-toggle" aria-hidden="true">+</span>
@@ -430,35 +467,30 @@
 
           <div class="form-panel">
 
+            <!-- SHORT INTRODUCTION -->
+
             <div class="form-intro">
               <p>
                 Every parent has a few discoveries
-                they'd love to pass on.
-              </p>
-
-              <p>
-                A favourite place, a tip that actually
-                helped, something worth buying or an
-                experience you still think about.
-              </p>
-
-              <p>
-                Answer one question or all five —
-                whatever you'd like to share.
-                Short answers are absolutely fine.
+                worth passing on. Answer one question
+                or all five — whatever you'd like
+                to share.
               </p>
             </div>
 
+            <!-- EDITORIAL NOTE -->
+
             <p class="editorial-note">
-              <strong>A note on submissions</strong><br>
-              Selected responses may be featured in
-              the Fix My Diaper newsletter, website
-              or social channels. Answers may be
-              edited for clarity and length.
-              Publication isn't guaranteed.
+              <strong>Note:</strong>
+              Selected responses may appear in the
+              Fix My Diaper newsletter, website
+              or social channels. Publication isn't
+              guaranteed, and answers may be edited
+              for clarity or length.
             </p>
 
-            <!-- SECOND FORM -->
+            <!-- AIRTABLE FORM 2 -->
+
             <div
               class="form-container"
               data-frame="picks">
@@ -476,6 +508,7 @@
       </section>
 
       <!-- PRIVACY NOTE -->
+
       <p class="submission-note">
         We use Airtable, a third-party service,
         to collect and store form submissions.
@@ -487,6 +520,7 @@
     </main>
 
     <!-- FOOTER -->
+
     <footer>
       <a href="about">About</a> |
       <a href="newsletter">Newsletter</a> |
@@ -516,15 +550,21 @@
   </div>
 
   <script>
+
     /*
       AIRTABLE FORM LINKS
+
+      Both forms are now connected.
     */
 
     const FORM_URLS = {
+
       community:
         'https://airtable.com/embed/appuXhcqk3mRGh9hc/shrhXKAgLdSVInYXZ',
 
-      picks: ''
+      picks:
+        'https://airtable.com/embed/appuXhcqk3mRGh9hc/shrXzOXmmOuPs7pFE'
+
     };
 
     /*
@@ -532,9 +572,11 @@
     */
 
     function getFormUrl(raw) {
+
       if (!raw) return null;
 
       try {
+
         const url = new URL(raw.trim());
 
         const validHost =
@@ -557,15 +599,25 @@
         return url.toString();
 
       } catch (error) {
+
         return null;
+
       }
     }
 
     /*
       Load each form only once.
+
+      From the Community:
+      Preloaded when the page opens.
+
+      Parent Picks:
+      Loaded when the visitor opens
+      the corresponding section.
     */
 
     function loadForm(type) {
+
       const container = document.querySelector(
         '[data-frame="' + type + '"]'
       );
@@ -582,14 +634,18 @@
       const url = getFormUrl(FORM_URLS[type]);
 
       if (!url) {
+
         container.classList.add('is-empty');
 
         const notice = document.createElement('p');
 
         notice.className = 'form-unavailable';
-        notice.textContent = 'This form is coming soon.';
+
+        notice.textContent =
+          'This form is coming soon.';
 
         container.appendChild(notice);
+
         return;
       }
 
@@ -603,12 +659,14 @@
         'strict-origin-when-cross-origin';
 
       iframe.loading = 'eager';
+
       iframe.src = url;
 
       container.appendChild(iframe);
 
       /*
-        Fallback link to open the form directly.
+        Fallback link to open the form
+        directly on Airtable.
       */
 
       const external = document.querySelector(
@@ -616,23 +674,28 @@
       );
 
       if (external) {
+
         const link = document.createElement('a');
 
         link.href = url.replace('/embed/', '/');
+
         link.target = '_blank';
+
         link.rel = 'noopener noreferrer';
 
         link.textContent =
           'Trouble seeing the form? Open it in a new tab.';
 
         external.appendChild(link);
+
         external.hidden = false;
       }
     }
 
     /*
-      Accordion:
-      opening one section closes the other.
+      Accordion behaviour.
+
+      Opening one section closes the other.
     */
 
     const sections = Array.from(
@@ -640,21 +703,26 @@
     );
 
     sections.forEach(section => {
+
       section.addEventListener('toggle', () => {
+
         if (!section.open) return;
 
         sections.forEach(other => {
+
           if (other !== section) {
             other.open = false;
           }
+
         });
 
         loadForm(section.dataset.form);
+
       });
     });
 
     /*
-      Newsletter deep links:
+      Direct newsletter links:
 
       /community?form=community
       /community?form=picks
@@ -678,6 +746,7 @@
     }
 
     if (chosen) {
+
       const section = document.getElementById(chosen);
 
       if (section) {
@@ -686,7 +755,10 @@
     }
 
     /*
-      Preload the first Airtable form.
+      Preload the first form.
+
+      The second form is loaded only
+      when its section is opened.
     */
 
     loadForm('community');
