@@ -19,9 +19,11 @@
   <meta name="twitter:description" content="Got something worth sharing with other parents in Berlin?">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!-- Prepare Airtable connection -->
+  <!-- Prepare connections used by Airtable -->
   <link rel="preconnect" href="https://airtable.com" crossorigin>
+  <link rel="preconnect" href="https://static.airtable.com" crossorigin>
   <link rel="dns-prefetch" href="//airtable.com">
+  <link rel="dns-prefetch" href="//static.airtable.com">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGYVLDZQTM"></script>
@@ -38,7 +40,10 @@
 
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
 
   <style>
 
@@ -195,13 +200,11 @@
     /*
       AIRTABLE EMBEDS
 
-      Each form has independent height settings.
-
       From the Community:
-      Approved desktop and mobile measurements.
+      Approved measurements — unchanged.
 
       Parent Picks:
-      Provisional measurements to test.
+      Reduced height to remove excess blank space.
     */
 
     .form-container {
@@ -209,6 +212,7 @@
       --airtable-header-crop: 120px;
 
       width: 100%;
+
       height: calc(
         var(--form-height) - var(--airtable-header-crop)
       );
@@ -220,18 +224,21 @@
     /*
       PARENT PICKS — DESKTOP
 
-      Adjust independently without changing
-      From the Community.
+      Previous height: 2840px
+      New height: 2220px
+
+      Header crop remains unchanged.
     */
 
     .form-container[data-frame="picks"] {
-      --form-height: 2840px;
+      --form-height: 2220px;
       --airtable-header-crop: 120px;
     }
 
     .form-container iframe {
       display: block;
       box-sizing: border-box;
+
       width: 100%;
       height: var(--form-height);
 
@@ -315,7 +322,7 @@
       }
 
       /*
-        FROM THE COMMUNITY — APPROVED
+        FROM THE COMMUNITY — UNCHANGED
       */
 
       .form-container {
@@ -324,11 +331,14 @@
       }
 
       /*
-        PARENT PICKS — PROVISIONAL
+        PARENT PICKS — MOBILE
+
+        Previous height: 3200px
+        New height: 2630px
       */
 
       .form-container[data-frame="picks"] {
-        --form-height: 3200px;
+        --form-height: 2630px;
         --airtable-header-crop: 145px;
       }
     }
@@ -387,7 +397,6 @@
 
           <summary>
             <span>
-
               <span class="option-title">
                 From the Community
               </span>
@@ -397,10 +406,11 @@
                 useful links and other things
                 Berlin parents should know about.
               </span>
-
             </span>
 
-            <span class="option-toggle" aria-hidden="true">+</span>
+            <span class="option-toggle" aria-hidden="true">
+              +
+            </span>
           </summary>
 
           <div class="form-panel">
@@ -449,7 +459,6 @@
 
           <summary>
             <span>
-
               <span class="option-title">
                 Parent Picks
               </span>
@@ -459,10 +468,11 @@
                 trips and activities you've loved
                 with your little one.
               </span>
-
             </span>
 
-            <span class="option-toggle" aria-hidden="true">+</span>
+            <span class="option-toggle" aria-hidden="true">
+              +
+            </span>
           </summary>
 
           <div class="form-panel">
@@ -553,18 +563,14 @@
 
     /*
       AIRTABLE FORM LINKS
-
-      Both forms are now connected.
     */
 
     const FORM_URLS = {
-
       community:
         'https://airtable.com/embed/appuXhcqk3mRGh9hc/shrhXKAgLdSVInYXZ',
 
       picks:
         'https://airtable.com/embed/appuXhcqk3mRGh9hc/shrXzOXmmOuPs7pFE'
-
     };
 
     /*
@@ -572,11 +578,9 @@
     */
 
     function getFormUrl(raw) {
-
       if (!raw) return null;
 
       try {
-
         const url = new URL(raw.trim());
 
         const validHost =
@@ -599,25 +603,19 @@
         return url.toString();
 
       } catch (error) {
-
         return null;
-
       }
     }
 
     /*
       Load each form only once.
 
-      From the Community:
-      Preloaded when the page opens.
-
-      Parent Picks:
-      Loaded when the visitor opens
-      the corresponding section.
+      This prevents reloading the form when
+      someone closes and reopens a section,
+      preserving any partially completed answers.
     */
 
     function loadForm(type) {
-
       const container = document.querySelector(
         '[data-frame="' + type + '"]'
       );
@@ -634,18 +632,14 @@
       const url = getFormUrl(FORM_URLS[type]);
 
       if (!url) {
-
         container.classList.add('is-empty');
 
         const notice = document.createElement('p');
 
         notice.className = 'form-unavailable';
-
-        notice.textContent =
-          'This form is coming soon.';
+        notice.textContent = 'This form is coming soon.';
 
         container.appendChild(notice);
-
         return;
       }
 
@@ -659,14 +653,12 @@
         'strict-origin-when-cross-origin';
 
       iframe.loading = 'eager';
-
       iframe.src = url;
 
       container.appendChild(iframe);
 
       /*
-        Fallback link to open the form
-        directly on Airtable.
+        Fallback link to the original Airtable form.
       */
 
       const external = document.querySelector(
@@ -674,28 +666,39 @@
       );
 
       if (external) {
-
         const link = document.createElement('a');
 
         link.href = url.replace('/embed/', '/');
-
         link.target = '_blank';
-
         link.rel = 'noopener noreferrer';
 
         link.textContent =
           'Trouble seeing the form? Open it in a new tab.';
 
         external.appendChild(link);
-
         external.hidden = false;
       }
     }
 
     /*
-      Accordion behaviour.
+      ACCORDION BEHAVIOUR
 
-      Opening one section closes the other.
+      IMPORTANT CHANGE:
+
+      Sections now open independently.
+
+      Previously, opening Parent Picks would
+      automatically close From the Community.
+
+      That removed a large amount of content
+      above the visitor's current position,
+      causing the page to jump.
+
+      By leaving the first section untouched,
+      the second form expands downwards
+      without collapsing content above it.
+
+      Both sections can remain open.
     */
 
     const sections = Array.from(
@@ -703,18 +706,9 @@
     );
 
     sections.forEach(section => {
-
       section.addEventListener('toggle', () => {
 
         if (!section.open) return;
-
-        sections.forEach(other => {
-
-          if (other !== section) {
-            other.open = false;
-          }
-
-        });
 
         loadForm(section.dataset.form);
 
@@ -722,10 +716,40 @@
     });
 
     /*
-      Direct newsletter links:
+      PERFORMANCE
+
+      When a visitor is about to interact
+      with Parent Picks, begin loading its
+      iframe slightly earlier.
+
+      This doesn't make Airtable itself
+      faster, but may reduce click-to-form
+      waiting time on desktop.
+    */
+
+    const picksSection = document.getElementById('picks');
+    const picksSummary = picksSection.querySelector('summary');
+
+    picksSummary.addEventListener(
+      'pointerenter',
+      () => loadForm('picks'),
+      { once: true }
+    );
+
+    picksSummary.addEventListener(
+      'focusin',
+      () => loadForm('picks'),
+      { once: true }
+    );
+
+    /*
+      DIRECT NEWSLETTER LINKS
 
       /community?form=community
       /community?form=picks
+
+      Prioritise the requested form
+      instead of loading both at once.
     */
 
     const formParam = new URLSearchParams(
@@ -752,17 +776,24 @@
       if (section) {
         section.open = true;
       }
+
+      // Load the form the visitor actually requested.
+      loadForm(chosen);
+
+    } else {
+
+      /*
+        Regular page visit:
+
+        Start loading From the Community
+        in advance, as in the previous version.
+      */
+
+      loadForm('community');
+
     }
 
-    /*
-      Preload the first form.
-
-      The second form is loaded only
-      when its section is opened.
-    */
-
-    loadForm('community');
-
   </script>
+
 </body>
 </html>
