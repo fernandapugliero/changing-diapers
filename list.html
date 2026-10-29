@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -323,6 +323,7 @@
         margin-top: 1.2rem;
       }
     }
+
     /* ===== Primary CTAs: same design as Partnerships ===== */
     #geo-search.map-search button.cta-button {
       display: inline-flex;
@@ -473,18 +474,18 @@
     </script>
 
     <footer>
-      <a href="about">About</a> | 
+      <a href="about">About</a> |
       <a href="newsletter">Newsletter</a> |
       <a href="partnerships">Partnerships</a> |
       <a href="https://www.instagram.com/fixmydiaper"
-   target="_blank"
-   rel="noopener noreferrer">
-  Instagram</a><br><br> 
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram</a><br><br>
       Made with ♥️ in Berlin<br />
       Created by <a href="https://fernandapugliero.com"
-   target="_blank"
-   rel="noopener noreferrer">
-  Fernanda Pugliero</a> & son
+         target="_blank"
+         rel="noopener noreferrer">
+        Fernanda Pugliero</a> & son
     </footer>
 
   </div>
@@ -507,10 +508,7 @@
       statusText: document.getElementById("statusText"),
       input: document.getElementById("geo-input"),
       goBtn: document.getElementById("geo-go"),
-      meBtn: document.getElementById("geo-me"),
-      resultsBottom: document.getElementById("resultsBottom"),
-      resultsCount: document.getElementById("resultsCount"),
-      resultsContext: document.getElementById("resultsContext")
+      meBtn: document.getElementById("geo-me")
     };
 
     function normalizeText(value) {
@@ -646,7 +644,14 @@
     }
 
     function hasCoordinates(p) {
-      return Number.isFinite(Number(p.latitude)) && Number.isFinite(Number(p.longitude));
+      return p.latitude !== null &&
+        p.latitude !== undefined &&
+        p.latitude !== "" &&
+        p.longitude !== null &&
+        p.longitude !== undefined &&
+        p.longitude !== "" &&
+        Number.isFinite(Number(p.latitude)) &&
+        Number.isFinite(Number(p.longitude));
     }
 
     function haversineKm(lat1, lon1, lat2, lon2) {
@@ -703,8 +708,8 @@
           <div class="place-media">
             ${
               photo
-              ? `<img src="${photo}" loading="lazy" alt="${place.name}">`
-              : `<span class="no-photo">No photo yet</span>`
+                ? `<img src="${photo}" loading="lazy" alt="${place.name}">`
+                : `<span class="no-photo">No photo yet</span>`
             }
           </div>
 
@@ -726,8 +731,6 @@
 
       el.loading.style.display = "none";
       el.grid.style.display = "grid";
-      el.resultsBottom.style.display = "block";
-      el.resultsCount.textContent = state.filtered.length;
     }
 
     function handleSearch() {
@@ -738,14 +741,12 @@
       if (!query) {
         state.filtered = sortDefault(state.displayAll);
         el.statusText.textContent = "Showing places with photos and reviews first, then newest submissions.";
-        el.resultsContext.textContent = "";
         renderCards();
         return;
       }
 
       state.filtered = textSearchResults(query);
       el.statusText.textContent = `Showing places matching: ${query}`;
-      el.resultsContext.textContent = ` matching "${query}"`;
 
       renderCards();
     }
@@ -773,7 +774,6 @@
 
           state.filtered = sortByDistance(nearby);
           el.statusText.textContent = `Showing ${state.filtered.length} changing tables within ${LOCATION_RADIUS_KM} km of your current location.`;
-          el.resultsContext.textContent = ` within ${LOCATION_RADIUS_KM} km of your current location`;
 
           renderCards();
         },
