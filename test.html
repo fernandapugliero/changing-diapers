@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Submit a Location | Fix My Diaper</title>
-
   <meta name="description" content="Submit your favorite baby-friendly places with changing tables and help other parents find the best diaper-changing locations in Berlin and beyond.">
   <meta name="keywords" content="submit diaper changing location, diaper changing, baby-friendly places, family-friendly cafes, diaper changing stations">
   <meta name="robots" content="index, follow">
@@ -21,7 +20,7 @@
   <meta name="twitter:description" content="Submit your favorite baby-friendly places with changing tables and help other parents find the best diaper-changing locations in Berlin and beyond.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!-- Airtable connection -->
+  <!-- Performance: prepare Airtable connection early -->
   <link rel="preconnect" href="https://airtable.com" crossorigin>
   <link rel="dns-prefetch" href="//airtable.com">
 
@@ -39,9 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-
-    /* ORIGINAL SITE STYLING - UNCHANGED */
-
+    /* Base: same as the index */
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -75,8 +72,7 @@
       color: inherit;
     }
 
-    /* ORIGINAL HERO - UNCHANGED */
-
+    /* Hero: original typography and spacing */
     .submit-hero h1 {
       font-size: 2rem;
       margin: 0 0 0.5rem 0;
@@ -103,7 +99,13 @@
       text-decoration: underline;
     }
 
-    /* AIRTABLE EMBED - DYNAMIC HEIGHT */
+    /*
+      AIRTABLE FRAME
+
+      Keep original visual crop.
+      Remove fixed wrapper height.
+      Allow Airtable to adjust iframe height.
+    */
 
     .airtable-frame {
       --airtable-header-crop: 165px;
@@ -119,7 +121,9 @@
       display: block;
       box-sizing: border-box;
       width: 100%;
+      max-width: 100%;
 
+      /* Visual crop of Airtable header */
       margin-top: calc(-1 * var(--airtable-header-crop));
 
       border: 0 !important;
@@ -129,14 +133,7 @@
       background: transparent;
     }
 
-    /* MOBILE FORM ACCESS */
-
-    .mobile-form-access {
-      display: none;
-    }
-
-    /* ORIGINAL FOOTER - UNCHANGED */
-
+    /* Original footer */
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -153,80 +150,22 @@
       text-decoration: underline;
     }
 
-    /* MOBILE: ONLY AIRTABLE BEHAVIOR CHANGES */
-
+    /* Original mobile styling */
     @media (max-width: 768px) {
+      .airtable-frame {
+        --airtable-header-crop: 130px;
+      }
 
       body {
         padding: 2rem;
       }
-
-      /*
-        The Airtable iframe is hidden on mobile
-        because attachment uploads may fail inside it.
-      */
-
-      .airtable-frame {
-        display: none;
-      }
-
-      .mobile-form-access {
-        display: block;
-        text-align: center;
-        margin: 1rem auto 3rem;
-        max-width: 500px;
-      }
-
-      .mobile-form-access p {
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        line-height: 1.5;
-        color: #666;
-        margin: 0 0 1.5rem;
-      }
-
-      .mobile-form-button {
-        display: inline-block;
-        box-sizing: border-box;
-        max-width: 100%;
-
-        background: #0070f3;
-        color: #fff;
-
-        padding: 14px 24px;
-
-        border-radius: 6px;
-        text-decoration: none;
-
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        font-weight: 600;
-
-        text-align: center;
-      }
-
-      .mobile-form-button:hover,
-      .mobile-form-button:focus-visible {
-        background: #005fcc;
-        color: #fff;
-      }
-
-      .mobile-form-access .mobile-note {
-        margin-top: 1rem;
-        font-size: 0.85rem;
-        color: #777;
-      }
-
     }
 
   </style>
 </head>
 
 <body>
-
   <div class="page">
-
-    <!-- ORIGINAL NAVIGATION - UNCHANGED -->
 
     <nav>
       <img src="images/logo.png" alt="Fix My Diaper Logo">
@@ -236,27 +175,18 @@
     </nav>
 
     <main>
-
-      <!-- ORIGINAL HEADER - UNCHANGED -->
-
       <header class="submit-hero">
-
         <h1>Submit a location</h1>
 
         <p class="hero-subtitle">
           Know a great spot with changing table? Add it now using the form below.
         </p>
-
       </header>
 
-      <!-- AIRTABLE DYNAMIC HEIGHT SCRIPT -->
-
+      <!-- Airtable automatic height adjustment -->
       <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
 
-      <!-- DESKTOP AIRTABLE FORM -->
-
       <div class="airtable-frame">
-
         <iframe
           class="airtable-embed airtable-dynamic-height"
           title="Submit a location to Fix My Diaper"
@@ -266,66 +196,26 @@
           loading="eager"
           frameborder="0">
         </iframe>
-
-      </div>
-
-      <!-- MOBILE FORM -->
-
-      <div class="mobile-form-access">
-
-        <p>
-          Ready to share a baby-friendly location?
-          Open the form to add all the details
-          and upload your photos.
-        </p>
-
-        <a
-          class="mobile-form-button"
-          href="https://airtable.com/appSQEoBDSbHzPIS2/shrdTkqA8gM7VLkoR"
-          target="_blank"
-          rel="noopener noreferrer">
-          Open submission form
-        </a>
-
-        <p class="mobile-note">
-          The form opens in a new tab
-          for a better mobile experience.
-        </p>
-
       </div>
 
     </main>
 
-    <!-- ORIGINAL FOOTER - UNCHANGED -->
-
     <footer>
-
       <a href="about">About</a> |
       <a href="newsletter">Newsletter</a> |
       <a href="partnerships">Partnerships</a> |
-      <a
-        href="https://www.instagram.com/fixmydiaper"
-        target="_blank"
-        rel="noopener noreferrer">
-        Instagram
-      </a>
-
-      <br><br>
+      <a href="https://www.instagram.com/fixmydiaper"
+         target="_blank"
+         rel="noopener noreferrer">Instagram</a><br><br>
 
       Made with ♥️ in Berlin<br />
 
       Created by
-      <a
-        href="https://fernandapugliero.com"
-        target="_blank"
-        rel="noopener noreferrer">
-        Fernanda Pugliero
-      </a>
-      &amp; son
-
+      <a href="https://fernandapugliero.com"
+         target="_blank"
+         rel="noopener noreferrer">Fernanda Pugliero</a> & son
     </footer>
 
   </div>
-
 </body>
 </html>
