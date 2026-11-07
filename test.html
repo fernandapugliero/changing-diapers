@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Submit your favorite baby-friendly places with changing tables and help other parents find the best diaper-changing locations in Berlin and beyond.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!-- Performance: prepare Airtable connection early -->
+  <!-- Airtable connection -->
   <link rel="preconnect" href="https://airtable.com" crossorigin>
   <link rel="dns-prefetch" href="//airtable.com">
 
@@ -38,7 +38,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Base: same as the index */
+    /* ORIGINAL SITE STYLING - UNCHANGED */
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -72,7 +73,8 @@
       color: inherit;
     }
 
-    /* Hero: original typography and spacing */
+    /* ORIGINAL HERO - UNCHANGED */
+
     .submit-hero h1 {
       font-size: 2rem;
       margin: 0 0 0.5rem 0;
@@ -100,37 +102,35 @@
     }
 
     /*
-      AIRTABLE - DESKTOP
+      AIRTABLE IFRAME
 
-      Dynamic height with original header crop.
+      Uses the working behavior from the old site:
+      - Fixed, responsive iframe height
+      - No automatic resizing
+      - No negative margin
+      - No clipping
+      - Internal scrolling enabled
+
+      The border is removed to integrate visually
+      with the current website design.
     */
-
-    .airtable-frame {
-      --airtable-header-crop: 165px;
-
-      overflow: hidden;
-      border: 0 !important;
-      border-radius: 0;
-      box-shadow: none !important;
-      outline: 0;
-    }
 
     iframe.airtable-embed {
       display: block;
       box-sizing: border-box;
       width: 100%;
-      max-width: 100%;
-
-      margin-top: calc(-1 * var(--airtable-header-crop));
+      height: 600px;
 
       border: 0 !important;
       border-radius: 0;
       box-shadow: none !important;
       outline: 0;
+
       background: transparent;
     }
 
-    /* Original footer */
+    /* ORIGINAL FOOTER - UNCHANGED */
+
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -147,43 +147,24 @@
       text-decoration: underline;
     }
 
-    /*
-      MOBILE - POPUP FIX TEST
-
-      Limit iframe height to the visible screen.
-      Disable the Airtable header crop.
-      Allow scrolling inside the Airtable form.
-    */
+    /* TABLET - ONLY IFRAME HEIGHT CHANGES */
 
     @media (max-width: 768px) {
-
       body {
         padding: 2rem;
       }
 
-      .airtable-frame {
-        --airtable-header-crop: 0px;
-
-        height: 80vh;
-        height: 80dvh;
-
-        overflow: hidden;
-      }
-
       iframe.airtable-embed {
-        display: block;
-
-        width: 100%;
-
-        height: 80vh !important;
-        height: 80dvh !important;
-
-        margin-top: 0 !important;
-
-        overflow: auto;
-        border: 0 !important;
+        height: 520px;
       }
+    }
 
+    /* SMALL MOBILE - ONLY IFRAME HEIGHT CHANGES */
+
+    @media (max-width: 480px) {
+      iframe.airtable-embed {
+        height: 480px;
+      }
     }
 
   </style>
@@ -203,7 +184,7 @@
 
     <main>
 
-      <!-- ORIGINAL HEADER -->
+      <!-- ORIGINAL HERO -->
 
       <header class="submit-hero">
         <h1>Submit a location</h1>
@@ -213,32 +194,22 @@
         </p>
       </header>
 
-      <!-- AIRTABLE DYNAMIC HEIGHT SCRIPT -->
+      <!-- CURRENT AIRTABLE FORM -->
 
-      <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-
-      <!-- AIRTABLE FORM -->
-
-      <div class="airtable-frame">
-
-        <iframe
-          class="airtable-embed airtable-dynamic-height"
-          title="Submit a location to Fix My Diaper"
-          src="https://airtable.com/embed/appSQEoBDSbHzPIS2/shrdTkqA8gM7VLkoR"
-          width="100%"
-          height="3200"
-          loading="eager"
-          frameborder="0">
-        </iframe>
-
-      </div>
+      <iframe
+        class="airtable-embed"
+        title="Submit a location to Fix My Diaper"
+        src="https://airtable.com/embed/appSQEoBDSbHzPIS2/shrdTkqA8gM7VLkoR"
+        loading="eager"
+        frameborder="0">
+      </iframe>
 
     </main>
 
     <!-- ORIGINAL FOOTER -->
 
     <footer>
-      <a href="about">About</a> | 
+      <a href="about">About</a> |
       <a href="newsletter">Newsletter</a> |
       <a href="partnerships">Partnerships</a> |
       <a href="https://www.instagram.com/fixmydiaper"
