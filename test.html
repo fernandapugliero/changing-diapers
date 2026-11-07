@@ -20,8 +20,9 @@
   <meta name="twitter:description" content="Submit your favorite baby-friendly places with changing tables and help other parents find the best diaper-changing locations in Berlin and beyond.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!-- Performance: Airtable connection -->
+  <!-- Performance: connect to Airtable early -->
   <link rel="preconnect" href="https://airtable.com" crossorigin>
+  <link rel="preconnect" href="https://static.airtable.com" crossorigin>
   <link rel="dns-prefetch" href="//airtable.com">
 
   <!-- Google tag (gtag.js) -->
@@ -104,21 +105,21 @@
     /*
       AIRTABLE FRAME
 
-      Fixed iframe height preserves the behavior
-      of the old working version.
+      Fixed iframe height to preserve attachment
+      popup behavior.
 
-      Only the upper portion is visually cropped.
-      No dynamic-height script.
+      Slightly increased visible area.
 
-      Important:
-      Cropping may affect popups near the very top,
-      so attachment upload must be tested again.
+      No automatic height resizing.
+      No additional JavaScript.
+
+      Airtable header remains visually hidden.
     */
 
     .airtable-frame {
       --airtable-header-crop: 165px;
 
-      height: calc(600px - var(--airtable-header-crop));
+      height: calc(720px - var(--airtable-header-crop));
 
       overflow: hidden;
 
@@ -132,7 +133,7 @@
       box-sizing: border-box;
 
       width: 100%;
-      height: 600px;
+      height: 720px;
 
       margin-top: calc(-1 * var(--airtable-header-crop));
 
@@ -165,8 +166,8 @@
     /*
       TABLET
 
-      Fixed 520px iframe.
-      Crop only its top 130px.
+      Fixed 640px iframe.
+      Keep original 130px header crop.
     */
 
     @media (max-width: 768px) {
@@ -178,29 +179,29 @@
       .airtable-frame {
         --airtable-header-crop: 130px;
 
-        height: calc(520px - var(--airtable-header-crop));
+        height: calc(640px - var(--airtable-header-crop));
       }
 
       iframe.airtable-embed {
-        height: 520px;
+        height: 640px;
       }
     }
 
     /*
       SMALL MOBILE
 
-      Fixed 480px iframe.
-      Preserve the same 130px crop.
+      Fixed 600px iframe.
+      Keep original 130px header crop.
     */
 
     @media (max-width: 480px) {
 
       .airtable-frame {
-        height: calc(480px - var(--airtable-header-crop));
+        height: calc(600px - var(--airtable-header-crop));
       }
 
       iframe.airtable-embed {
-        height: 480px;
+        height: 600px;
       }
     }
 
@@ -252,7 +253,7 @@
     <!-- ORIGINAL FOOTER -->
 
     <footer>
-      <a href="about">About</a> |
+      <a href="about">About</a> | 
       <a href="newsletter">Newsletter</a> |
       <a href="partnerships">Partnerships</a> |
       <a href="https://www.instagram.com/fixmydiaper"
