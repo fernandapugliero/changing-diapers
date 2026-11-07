@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Submit your favorite baby-friendly places with changing tables and help other parents find the best diaper-changing locations in Berlin and beyond.">
   <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!-- Airtable connection -->
+  <!-- Performance: Airtable connection -->
   <link rel="preconnect" href="https://airtable.com" crossorigin>
   <link rel="dns-prefetch" href="//airtable.com">
 
@@ -102,24 +102,39 @@
     }
 
     /*
-      AIRTABLE IFRAME
+      AIRTABLE FRAME
 
-      Uses the working behavior from the old site:
-      - Fixed, responsive iframe height
-      - No automatic resizing
-      - No negative margin
-      - No clipping
-      - Internal scrolling enabled
+      Fixed iframe height preserves the behavior
+      of the old working version.
 
-      The border is removed to integrate visually
-      with the current website design.
+      Only the upper portion is visually cropped.
+      No dynamic-height script.
+
+      Important:
+      Cropping may affect popups near the very top,
+      so attachment upload must be tested again.
     */
+
+    .airtable-frame {
+      --airtable-header-crop: 165px;
+
+      height: calc(600px - var(--airtable-header-crop));
+
+      overflow: hidden;
+
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
 
     iframe.airtable-embed {
       display: block;
       box-sizing: border-box;
+
       width: 100%;
       height: 600px;
+
+      margin-top: calc(-1 * var(--airtable-header-crop));
 
       border: 0 !important;
       border-radius: 0;
@@ -147,11 +162,23 @@
       text-decoration: underline;
     }
 
-    /* TABLET - ONLY IFRAME HEIGHT CHANGES */
+    /*
+      TABLET
+
+      Fixed 520px iframe.
+      Crop only its top 130px.
+    */
 
     @media (max-width: 768px) {
+
       body {
         padding: 2rem;
+      }
+
+      .airtable-frame {
+        --airtable-header-crop: 130px;
+
+        height: calc(520px - var(--airtable-header-crop));
       }
 
       iframe.airtable-embed {
@@ -159,9 +186,19 @@
       }
     }
 
-    /* SMALL MOBILE - ONLY IFRAME HEIGHT CHANGES */
+    /*
+      SMALL MOBILE
+
+      Fixed 480px iframe.
+      Preserve the same 130px crop.
+    */
 
     @media (max-width: 480px) {
+
+      .airtable-frame {
+        height: calc(480px - var(--airtable-header-crop));
+      }
+
       iframe.airtable-embed {
         height: 480px;
       }
@@ -187,22 +224,28 @@
       <!-- ORIGINAL HERO -->
 
       <header class="submit-hero">
+
         <h1>Submit a location</h1>
 
         <p class="hero-subtitle">
           Know a great spot with changing table? Add it now using the form below.
         </p>
+
       </header>
 
       <!-- CURRENT AIRTABLE FORM -->
 
-      <iframe
-        class="airtable-embed"
-        title="Submit a location to Fix My Diaper"
-        src="https://airtable.com/embed/appSQEoBDSbHzPIS2/shrdTkqA8gM7VLkoR"
-        loading="eager"
-        frameborder="0">
-      </iframe>
+      <div class="airtable-frame">
+
+        <iframe
+          class="airtable-embed"
+          title="Submit a location to Fix My Diaper"
+          src="https://airtable.com/embed/appSQEoBDSbHzPIS2/shrdTkqA8gM7VLkoR"
+          loading="eager"
+          frameborder="0">
+        </iframe>
+
+      </div>
 
     </main>
 
