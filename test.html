@@ -90,8 +90,11 @@
       margin: 0 auto;
     }
 
+    /* UPDATED: narrower card to fit the beehiiv form */
+
     .form-card {
-      max-width: 560px;
+      width: 100%;
+      max-width: 440px;
       margin: 0 auto 1rem auto;
       padding: 1rem;
       border: 1px solid #eee;
@@ -106,6 +109,7 @@
       margin: 0 auto;
       display: flex;
       justify-content: center;
+      align-items: center;
       overflow: visible;
     }
 
@@ -297,7 +301,7 @@
 
 
     /* ========================================
-       BEHIND THE NEWSLETTER
+       UPDATED: BEHIND THE NEWSLETTER
        ======================================== */
 
     .editorial-section {
@@ -314,15 +318,47 @@
       margin: 0 0 1.5rem;
     }
 
-    .editorial-section p {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: #555;
-      margin: 0 0 1.2rem;
+    .editorial-points {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+      margin-top: 1.5rem;
     }
 
-    .editorial-section p:last-child {
-      margin-bottom: 0;
+    .editorial-point {
+      border-top: 1px solid #e8e8e8;
+      padding-top: 1.1rem;
+    }
+
+    .editorial-point h3 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #333;
+      line-height: 1.4;
+      margin: 0 0 0.5rem;
+    }
+
+    .editorial-point p {
+      font-size: 0.91rem;
+      line-height: 1.7;
+      color: #555;
+      margin: 0;
+    }
+
+    .editorial-closing {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #333;
+      font-weight: 600;
+      margin: 2.5rem 0 0;
+    }
+
+    @media (min-width: 768px) {
+      .editorial-points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 2rem;
+        row-gap: 2rem;
+      }
     }
 
 
@@ -515,25 +551,54 @@
 
         <h2>Behind the newsletter</h2>
 
-        <p>
-          Having a baby didn't make me want to stop going out.
-          So my son and I keep exploring Berlin: especially its
-          cafés and restaurants, but also museums, classes,
-          playgrounds and services. We try things, notice what
-          works with a little one (and what really doesn't),
-          and share what we find.
-        </p>
+        <div class="editorial-points">
 
-        <p>
-          It's not just a list of places. I also write about
-          local trends, how families experience the city,
-          policies that affect parents, and our trips beyond Berlin.
-          There are tips and discoveries from other local parents, too.
-        </p>
+          <div class="editorial-point">
+            <h3>Actually tried, not just bookmarked.</h3>
 
-        <p>
-          Because having a child shouldn't mean giving up the city —
-          or the things you used to love doing in it.
+            <p>
+              My son and I visit cafés, restaurants,
+              museums and playgrounds, and try classes
+              and services ourselves. I share what works
+              with a little one — and what doesn't.
+            </p>
+          </div>
+
+          <div class="editorial-point">
+            <h3>More than places to go.</h3>
+
+            <p>
+              I write about local trends, family life
+              in Berlin, and the decisions and policies
+              that affect children and parents.
+            </p>
+          </div>
+
+          <div class="editorial-point">
+            <h3>Tips from other Berlin parents.</h3>
+
+            <p>
+              Reader recommendations introduce us to
+              new neighbourhoods, local projects and
+              places we might otherwise miss.
+            </p>
+          </div>
+
+          <div class="editorial-point">
+            <h3>Beyond Berlin, too.</h3>
+
+            <p>
+              We travel with our little one and share
+              the discoveries, practical lessons and
+              experiences we pick up along the way.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="editorial-closing">
+          Because having a baby shouldn't mean giving up
+          the city — or the things you used to love doing in it.
         </p>
 
       </section>
@@ -686,7 +751,6 @@
             </div>
 
           </a>
-
 
         </div>
 
