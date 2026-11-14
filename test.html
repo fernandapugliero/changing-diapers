@@ -90,8 +90,6 @@
       margin: 0 auto;
     }
 
-    /* UPDATED: narrower card to fit the beehiiv form */
-
     .form-card {
       width: 100%;
       max-width: 440px;
@@ -301,7 +299,7 @@
 
 
     /* ========================================
-       UPDATED: BEHIND THE NEWSLETTER
+       EDITORIAL POINTS
        ======================================== */
 
     .editorial-section {
@@ -309,20 +307,11 @@
       margin: 5rem auto 0;
     }
 
-    .editorial-section h2 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #333;
-      text-align: left;
-      line-height: 1.35;
-      margin: 0 0 1.5rem;
-    }
-
     .editorial-points {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.8rem;
-      margin-top: 1.5rem;
+      margin-top: 0;
     }
 
     .editorial-point {
@@ -345,19 +334,45 @@
       margin: 0;
     }
 
-    .editorial-closing {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: #333;
-      font-weight: 600;
-      margin: 2.5rem 0 0;
-    }
-
     @media (min-width: 768px) {
       .editorial-points {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         column-gap: 2rem;
         row-gap: 2rem;
+      }
+    }
+
+
+    /* ========================================
+       SOFT STATEMENT
+       EXACT STYLE FROM PARTNERSHIPS
+       ======================================== */
+
+    .soft-statement {
+      margin: 5rem auto;
+      max-width: 920px;
+      text-align: center;
+    }
+
+    .soft-statement__inner {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 2rem 1rem;
+    }
+
+    .soft-statement p {
+      margin: 0 auto;
+      max-width: 720px;
+      font-size: 1.35rem;
+      line-height: 1.35;
+      color: #333;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .soft-statement p {
+        font-size: 1.15rem;
       }
     }
 
@@ -545,9 +560,11 @@
       </div>
 
 
-      <!-- BEHIND THE NEWSLETTER -->
+      <!-- EDITORIAL POINTS -->
 
-      <section class="editorial-section">
+      <section class="editorial-section" aria-label="Why subscribe">
+
+        <div class="editorial-points">
 
           <div class="editorial-point">
             <h3>Actually tried, not just bookmarked.</h3>
@@ -556,7 +573,7 @@
               My son and I visit cafés, restaurants,
               museums and playgrounds, and try classes
               and services ourselves. I share what works
-              with a little one – and what doesn't.
+              with a little one — and what doesn't.
             </p>
           </div>
 
@@ -592,11 +609,18 @@
 
         </div>
 
-        <p class="editorial-closing">
-          Because having a baby shouldn't mean giving up
-          the city — or the things you used to love doing in it.
-        </p>
+      </section>
 
+
+      <!-- SOFT STATEMENT: SAME AS PARTNERSHIPS -->
+
+      <section class="soft-statement">
+        <div class="soft-statement__inner">
+          <p>
+            Having a baby shouldn't mean giving up the city —
+            or the things you used to love doing in it.
+          </p>
+        </div>
       </section>
 
 
