@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>The Fix My Diaper Guide | Discover Berlin with Your Baby</title>
-  <meta name="description" content="Sign up for the Fix My Diaper newsletter: family-friendly places, activities, changing tables and useful discoveries for parents of babies and toddlers in Berlin.">
+  <title>Life beyond the playground. | Fix My Diaper Newsletter</title>
+
+  <meta name="description" content="An independent newsletter about exploring Berlin with a little one — where we go, what we try, and what's really worth knowing.">
+
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fixmydiaper.com/newsletter">
 
-  <meta property="og:title" content="Discover Berlin with Your Baby | Fix My Diaper">
-  <meta property="og:description" content="Family-friendly places, activities, changing tables and useful Berlin discoveries for parents of babies and toddlers. Sign up for the Fix My Diaper newsletter.">
+  <meta property="og:title" content="Life beyond the playground. | Fix My Diaper">
+  <meta property="og:description" content="An independent newsletter about exploring Berlin with a little one — where we go, what we try, and what's really worth knowing.">
   <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url" content="https://fixmydiaper.com/newsletter">
   <meta property="og:type" content="website">
@@ -24,10 +26,16 @@
   </script>
 
   <link rel="icon" href="/images/favicon.ico" sizes="any">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+
+    /* ========================================
+       ORIGINAL FMD STYLES
+       ======================================== */
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -83,7 +91,8 @@
     }
 
     .form-card {
-      max-width: 560px;
+      width: 100%;
+      max-width: 440px;
       margin: 0 auto 1rem auto;
       padding: 1rem;
       border: 1px solid #eee;
@@ -98,6 +107,7 @@
       margin: 0 auto;
       display: flex;
       justify-content: center;
+      align-items: center;
       overflow: visible;
     }
 
@@ -286,69 +296,490 @@
         width: auto !important;
       }
     }
+
+
+    /* ========================================
+       EDITORIAL POINTS
+       ======================================== */
+
+    .editorial-section {
+      max-width: 720px;
+      margin: 5rem auto 0;
+    }
+
+    .editorial-points {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+      margin-top: 0;
+    }
+
+    .editorial-point {
+      border-top: 1px solid #e8e8e8;
+      padding-top: 1.1rem;
+    }
+
+    .editorial-point h3 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #333;
+      line-height: 1.4;
+      margin: 0 0 0.5rem;
+    }
+
+    .editorial-point p {
+      font-size: 0.91rem;
+      line-height: 1.7;
+      color: #555;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      .editorial-points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 2rem;
+        row-gap: 2rem;
+      }
+    }
+
+
+    /* ========================================
+       SOFT STATEMENT
+       EXACT STYLE FROM PARTNERSHIPS
+       ======================================== */
+
+    .soft-statement {
+      margin: 5rem auto;
+      max-width: 920px;
+      text-align: center;
+    }
+
+    .soft-statement__inner {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 2rem 1rem;
+    }
+
+    .soft-statement p {
+      margin: 0 auto;
+      max-width: 720px;
+      font-size: 1.35rem;
+      line-height: 1.35;
+      color: #333;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .soft-statement p {
+        font-size: 1.15rem;
+      }
+    }
+
+
+    /* ========================================
+       PREVIOUS EDITIONS
+       ======================================== */
+
+    .archive-section {
+      max-width: 860px;
+      margin: 5rem auto 0;
+    }
+
+    .archive-section h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+      line-height: 1.3;
+      margin: 0 0 0.75rem;
+    }
+
+    .archive-intro {
+      max-width: 650px;
+      margin: 0 auto 2rem;
+      color: #666;
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .issue-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .issue-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .issue-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+    }
+
+    .issue-cover {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      position: relative;
+      background: #f4f4f4;
+      overflow: hidden;
+      border-bottom: 1px solid #eee;
+    }
+
+    .issue-cover img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .issue-number {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: inline-block;
+      padding: 0.4rem 0.55rem;
+      background: #fff;
+      border-radius: 3px;
+      color: #222;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+    }
+
+    .issue-details {
+      padding: 1.1rem;
+    }
+
+    .issue-month {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    .issue-details h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.45;
+      color: #333;
+      margin: 0 0 0.5rem;
+    }
+
+    .issue-details p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #666;
+      margin: 0 0 1rem;
+    }
+
+    .issue-link {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #333;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (min-width: 768px) {
+      .issue-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767px) {
+      .editorial-section,
+      .archive-section {
+        margin-top: 3.5rem;
+      }
+    }
+
   </style>
 </head>
 
 <body>
   <div class="page">
+
+    <!-- HEADER: ORIGINAL FMD NAVIGATION -->
+
     <nav>
-      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <img src="/images/logo.png" alt="Fix My Diaper Logo">
       <a href="https://fixmydiaper.com/">Map</a>
-      <a href="list">List</a>
-      <a href="submit">Submit</a>
+      <a href="/list">List</a>
+      <a href="/submit">Submit</a>
     </nav>
 
     <main>
-      <h1>Good finds, delivered.</h1>
+
+      <!-- HERO -->
+
+      <h1>Life beyond the playground.</h1>
 
       <h2>
-        Family-friendly places, things to do, changing tables and useful discoveries for parents of babies and toddlers.
+        An independent newsletter about exploring Berlin with a little one –
+        where we go, what we try, and what's really worth knowing.
       </h2>
 
+
+      <!-- NEWSLETTER SIGNUP -->
+
       <div class="newsletter-wrap">
+
         <div class="form-card">
           <div class="beehiiv-embed">
-            <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="59aac14a-0203-4680-bd56-d26c6157a79f"></script>
+
+            <script
+              async
+              src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+              data-beehiiv-form="59aac14a-0203-4680-bd56-d26c6157a79f">
+            </script>
+
           </div>
         </div>
 
         <p class="reassurance">
           One or two emails a month. No spam.
         </p>
+
       </div>
 
-      <h2 class="section-title">What you’ll receive</h2>
-      <p class="section-subtitle">
-        Ideas, recommendations and practical tips to make exploring with little ones a little easier.
-      </p>
 
-      <div class="guide-grid">
-        <div class="guide-card">
-          <strong>📍 Baby-friendly places</strong>
-          <span>Cafés, restaurants and spaces worth visiting.</span>
+      <!-- EDITORIAL POINTS -->
+
+      <section class="editorial-section" aria-label="Why subscribe">
+
+        <div class="editorial-points">
+
+          <div class="editorial-point">
+            <h3>Actually tried, not just bookmarked.</h3>
+
+            <p>
+              My son and I visit cafés, restaurants,
+              museums and playgrounds, and try classes
+              and services ourselves. I share what works
+              with a little one – and what doesn't.
+            </p>
+          </div>
+
+          <div class="editorial-point">
+            <h3>More than places to go.</h3>
+
+            <p>
+              I write about local trends, family life
+              in Berlin, and the decisions and policies
+              that affect children and parents.
+            </p>
+          </div>
+
+          <div class="editorial-point">
+            <h3>Tips from other Berlin parents.</h3>
+
+            <p>
+              Reader recommendations introduce us to
+              new neighbourhoods, local projects and
+              places we might otherwise miss.
+            </p>
+          </div>
+
+          <div class="editorial-point">
+            <h3>Beyond Berlin, too.</h3>
+
+            <p>
+              We travel with our little one and share
+              the discoveries, practical lessons and
+              experiences we pick up along the way.
+            </p>
+          </div>
+
         </div>
 
-        <div class="guide-card">
-          <strong>🎠 Activities & events</strong>
-          <span>Things to do with babies and toddlers.</span>
+      </section>
+
+
+      <!-- SOFT STATEMENT: SAME AS PARTNERSHIPS -->
+
+      <section class="soft-statement">
+        <div class="soft-statement__inner">
+          <p>
+            Having a baby shouldn't mean giving up the city –
+            or the things you used to love doing in it.
+          </p>
+        </div>
+      </section>
+
+
+      <!-- PREVIOUS EDITIONS -->
+
+      <section class="archive-section">
+
+        <h2>Previous editions</h2>
+
+        <p class="archive-intro">
+          Curious what lands in your inbox?
+          Here's a look at the places, stories and observations
+          from our first three editions.
+        </p>
+
+        <div class="issue-grid">
+
+
+          <!-- OCTOBER 2026 -->
+
+          <a
+            class="issue-card"
+            href="https://fixmydiaper.beehiiv.com/p/3-october-2026"
+            aria-label="Read the October 2026 newsletter"
+          >
+
+            <div class="issue-cover">
+
+              <img
+                src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/866f8507-76fe-4475-8b5e-dffe182aa215/playground_poland.jpg?t=1793481154"
+                alt="Playground discovered during a trip to Poland"
+                loading="lazy"
+              >
+
+              <span class="issue-number">#03</span>
+
+            </div>
+
+            <div class="issue-details">
+
+              <span class="issue-month">
+                October 2026
+              </span>
+
+              <h3>
+                Swimming classes, cafés and life with a baby beyond Berlin
+              </h3>
+
+              <p>
+                An honest take on baby swimming, the return of
+                Kap Frida, playground discoveries in Poland
+                and a rainy-day lesson from ANOHA.
+              </p>
+
+              <span class="issue-link">
+                Read this edition →
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- SEPTEMBER 2026 -->
+
+          <a
+            class="issue-card"
+            href="https://fixmydiaper.beehiiv.com/p/september-2026"
+            aria-label="Read the September 2026 newsletter"
+          >
+
+            <div class="issue-cover">
+
+              <img
+                src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/0ddb7e89-04c6-442c-8cb1-5c3dd71cf91f/britzergarten.jpg?t=1790375790"
+                alt="Britzer Garten in Berlin"
+                loading="lazy"
+              >
+
+              <span class="issue-number">#02</span>
+
+            </div>
+
+            <div class="issue-details">
+
+              <span class="issue-month">
+                September 2026
+              </span>
+
+              <h3>
+                Why eating out with kids should be easier
+              </h3>
+
+              <p>
+                What Berlin parents say about restaurants,
+                a visit to Britzer Garten, family-friendly
+                biergartens and local family policies.
+              </p>
+
+              <span class="issue-link">
+                Read this edition →
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- AUGUST 2026 -->
+
+          <a
+            class="issue-card"
+            href="https://fixmydiaper.beehiiv.com/p/august-2026"
+            aria-label="Read the August 2026 newsletter"
+          >
+
+            <div class="issue-cover">
+
+              <img
+                src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/9ec8380f-ce43-4619-ba2b-9e2f12813e85/9ze6gu.JPG?t=1787844440"
+                alt="Photo from the first Fix My Diaper newsletter"
+                loading="lazy"
+              >
+
+              <span class="issue-number">#01</span>
+
+            </div>
+
+            <div class="issue-details">
+
+              <span class="issue-month">
+                August 2026
+              </span>
+
+              <h3>
+                A summer of small Berlin discoveries
+              </h3>
+
+              <p>
+                Vito Café, Fair Play im Park, family-friendly
+                places and a closer look at Kita and Elterngeld.
+              </p>
+
+              <span class="issue-link">
+                Read this edition →
+              </span>
+
+            </div>
+
+          </a>
+
         </div>
 
-        <div class="guide-card">
-          <strong>🚼 New changing tables</strong>
-          <span>Newly mapped changing spots.</span>
-        </div>
+      </section>
 
-        <div class="guide-card">
-          <strong>💎 Hidden gems</strong>
-          <span>Discoveries that make family life easier.</span>
-        </div>
-
-        <div class="guide-card">
-          <strong>💬 Parent picks</strong>
-          <span>Favourite places, tips and recommendations from other parents.</span>
-        </div>
-      </div>
     </main>
+
+
+    <!-- FOOTER: ORIGINAL FMD FOOTER -->
 
     <footer>
       Made with ♥️ in Berlin<br />
@@ -357,6 +788,7 @@
    rel="noopener noreferrer">
   Fernanda Pugliero</a> & son
     </footer>
+
   </div>
 </body>
 </html>
