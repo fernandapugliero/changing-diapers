@@ -1,867 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+<head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>
-    Family-Friendly Restaurants & Cafés in Berlin
-    | Where to Eat With Kids
-  </title>
+  <title>Family-Friendly Restaurants and Cafés in Berlin | Fix My Diaper</title>
+  <meta name="description" content="Looking for family-friendly restaurants and cafés in Berlin? Learn what makes a place genuinely welcoming for babies, toddlers and parents.">
+  <meta name="keywords" content="family friendly restaurants Berlin, kid friendly cafes Berlin, restaurants with play area Berlin, Berlin with toddlers">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fixmydiaper.com/family-friendly-restaurants-berlin.html">
 
-  <meta name="description"
-    content="Discover family-friendly restaurants and cafés in Berlin, including places with play areas, relaxed brunch spots and tips for eating out with kids.">
+  <meta property="og:title" content="Family-Friendly Restaurants and Cafés in Berlin | Fix My Diaper">
+  <meta property="og:description" content="A parent-focused guide to eating out in Berlin with babies and toddlers: play areas, stroller access and practical things to check.">
+  <meta property="og:image" content="https://fixmydiaper.com/images/logo.png">
+  <meta property="og:url" content="https://fixmydiaper.com/family-friendly-restaurants-berlin.html">
+  <meta property="og:type" content="website">
 
-  <meta name="robots"
-        content="index, follow, max-image-preview:large">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Family-Friendly Restaurants and Cafés in Berlin | Fix My Diaper">
+  <meta name="twitter:description" content="A parent-focused guide to eating out in Berlin with babies and toddlers: play areas, stroller access and practical things to check.">
+  <meta name="twitter:image" content="https://fixmydiaper.com/images/logo.png">
 
-  <!--
-    Set canonical to your real domain before publishing.
-    Example:
-    https://YOUR-DOMAIN.com/family-friendly-restaurants-berlin
-  -->
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --ink: #24352c;
-      --muted: #59675d;
-      --green: #315c44;
-      --cream: #faf9f5;
-      --soft: #eef3ec;
-      --border: #dfe6dc;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
     body {
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font-family: system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.75;
+      padding: 2rem;
+      background: #fff;
+      color: #333;
     }
 
-    .container {
-      width: min(100% - 36px, 850px);
-      margin: auto;
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    header.hero {
-      padding: 78px 0 55px;
-      background: var(--soft);
+    nav {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
     }
 
-    .eyebrow {
-      color: var(--green);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      font-size: 12px;
+    nav img {
+      width: 30px;
+      height: auto;
+      margin-right: 30px;
     }
 
-    h1, h2, h3 {
-      line-height: 1.25;
-      letter-spacing: -.025em;
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: inherit;
     }
 
     h1 {
-      font-size: clamp(34px, 5vw, 54px);
-      max-width: 780px;
-      margin: 14px 0 20px;
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      line-height: 1.2;
     }
 
-    h2 {
-      font-size: clamp(26px, 4vw, 34px);
-      margin: 52px 0 18px;
+    .intro {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto 1.5rem auto;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
     }
 
-    h3 {
-      font-size: 23px;
-      margin: 30px 0 12px;
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+      margin-bottom: 2rem;
+      align-items: start;
     }
 
-    p { margin: 0 0 18px; }
-
-    .lead {
-      font-size: 20px;
-      max-width: 730px;
-      color: var(--muted);
+    @media (min-width: 768px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
-    .meta {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 24px;
-    }
-
-    main { padding: 44px 0 85px; }
-
-    .answer {
-      border-left: 4px solid var(--green);
-      background: white;
-      padding: 24px 28px;
-      margin-bottom: 36px;
-    }
-
-    .answer p:last-child { margin-bottom: 0; }
-
-    .toc {
-      background: white;
-      border: 1px solid var(--border);
+    .place-card {
+      background: #fff;
+      border: 1px solid #eee;
       border-radius: 12px;
-      padding: 25px 30px;
-      margin: 35px 0 50px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      min-height: 0;
     }
 
-    .toc h2 {
-      font-size: 20px;
-      margin: 0 0 12px;
-    }
-
-    .toc ul { margin-bottom: 0; }
-
-    .toc li { margin: 8px 0; }
-
-    a {
-      color: var(--green);
-      text-underline-offset: 3px;
-    }
-
-    .place {
-      padding: 26px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .place h3 { margin-top: 0; }
-
-    .tag {
-      display: inline-block;
-      background: var(--soft);
-      padding: 4px 11px;
-      border-radius: 20px;
-      color: var(--green);
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .details {
-      background: white;
-      padding: 15px 20px;
-      border-radius: 8px;
-      margin-top: 18px;
-    }
-
-    .details p {
-      margin: 5px 0;
-      font-size: 15px;
-    }
-
-    .tip {
-      background: var(--soft);
-      padding: 22px 26px;
-      border-radius: 10px;
-      margin: 26px 0;
-    }
-
-    .comparison {
+    .place-media {
       width: 100%;
-      border-collapse: collapse;
-      margin: 25px 0;
-      background: white;
-      font-size: 15px;
+      height: 240px;
+      border-radius: 8px;
+      background: #f6f6f6;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .5rem;
     }
 
-    .comparison th,
-    .comparison td {
-      padding: 14px;
-      border-bottom: 1px solid var(--border);
+    .place-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .no-photo {
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .place-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
       text-align: left;
-      vertical-align: top;
+      margin: 0.25rem 0 0.15rem 0;
     }
 
-    .comparison th { background: var(--soft); }
-
-    .table-scroll { overflow-x: auto; }
-
-    .faq-item {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border);
+    .place-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.25rem;
+      text-align: left;
+      line-height: 1.35;
     }
 
-    .faq-item h3 {
-      font-size: 19px;
-      margin: 0 0 9px;
+    .place-quote {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.5rem 0 0.4rem 0;
+      text-align: left;
+      line-height: 1.35;
     }
 
-    .faq-item p { margin-bottom: 0; }
-
-    .methodology {
-      font-size: 14px;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      margin-top: 65px;
-      padding-top: 25px;
+    .tagline {
+      display: inline-block;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #eee;
+      color: #555;
+      background: #fafafa;
+      line-height: 1;
+      margin-top: 0.5rem;
+      width: fit-content;
     }
 
-    @media (max-width: 600px) {
-      header.hero { padding: 52px 0 40px; }
-      .answer, .toc { padding: 20px; }
-      .comparison { font-size: 13px; }
-      .comparison th, .comparison td {
-        padding: 10px;
+    .loading-box {
+      max-width: 720px;
+      margin: 1.5rem auto 0 auto;
+      border: 1px dashed rgba(0,0,0,0.2);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      color: #666;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .top5-explanation {
+      font-size: 0.85rem;
+      color: #555;
+      text-align: left;
+      margin-top: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      line-height: 1.4;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    footer a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 430px) {
+      body {
+        padding: 1.8rem;
+      }
+
+      .place-media {
+        height: 230px;
       }
     }
   </style>
 </head>
 
 <body>
+  <div class="page">
+    <nav>
+      <img src="images/logo.png" alt="Fix My Diaper Logo">
+      <a href="https://fixmydiaper.com/">Map</a>
+      <a href="list">List</a>
+      <a href="submit">Submit</a>
+    </nav>
 
-<header class="hero">
-  <div class="container">
-    <p class="eyebrow">Berlin With Kids · Food & Drink</p>
+    <h1>Family-Friendly Restaurants and Cafés in Berlin</h1>
 
-    <h1>
-      Best Family-Friendly Restaurants
-      & Cafés in Berlin
-    </h1>
-
-    <p class="lead">
-      Looking for somewhere to eat in Berlin with kids?
-      Discover welcoming cafés, restaurants with
-      play areas, family brunch spots and places
-      where parents can enjoy a meal while
-      little ones stay entertained.
+    <p class="intro">
+      Eating out in Berlin with a baby or toddler can be wonderful — but a café that looks family-friendly online does not always work in real life. Here are the details worth checking before you go, from stroller space to play corners and baby-changing facilities.
     </p>
 
-    <p class="meta">
-      A practical Berlin family dining guide
-    </p>
+    <section aria-label="What makes a place family-friendly">
+      <h2 class="section-title">What actually makes a place family-friendly?</h2>
+      <p class="top5-explanation">
+        A children's menu or a high chair can help, but neither tells the whole story. For parents, a comfortable outing often comes down to practical details: room for a stroller, somewhere to change a baby, a relaxed atmosphere and a space where children feel welcome.
+      </p>
+
+      <div class="cards-grid" aria-label="Things to look for when eating out with kids">
+        <article class="place-card">
+          <h3 class="place-title">Space for strollers</h3>
+          <p class="place-meta">Before you go</p>
+          <p class="place-quote">Is there enough room to enter, park a stroller and move around without blocking the passage?</p>
+          <span class="tagline">Practical comfort</span>
+        </article>
+
+        <article class="place-card">
+          <h3 class="place-title">A kids' corner or play area</h3>
+          <p class="place-meta">Different from venue to venue</p>
+          <p class="place-quote">A small play corner can make a big difference — but check the age range, location and whether access costs extra.</p>
+          <span class="tagline">Play space</span>
+        </article>
+
+        <article class="place-card">
+          <h3 class="place-title">Baby-changing facilities</h3>
+          <p class="place-meta">Not always guaranteed</p>
+          <p class="place-quote">A changing table, accessible bathroom and space for a diaper bag can turn a stressful stop into an easy one.</p>
+          <span class="tagline">Baby-friendly</span>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="Choosing a family-friendly cafe in Berlin">
+      <h2 class="section-title">How to choose a café or restaurant with kids in Berlin</h2>
+
+      <p class="top5-explanation">
+        <strong>With a baby:</strong> Prioritize stroller access, a changing station and a comfortable place to feed your child. If a venue is small or has stairs, check accessibility before visiting.
+      </p>
+
+      <p class="top5-explanation">
+        <strong>With a toddler:</strong> A dedicated play corner can help, but it is worth checking whether the space is visible from the tables and suitable for your child's age.
+      </p>
+
+      <p class="top5-explanation">
+        <strong>On a rainy day:</strong> Look specifically for indoor kids' areas, not just restaurants near a playground. The German search terms <em>Kindercafé</em> and <em>Spielecke</em> can be useful.
+      </p>
+
+      <p class="top5-explanation" style="border-bottom: none;">
+        <strong>For a relaxed meal:</strong> Check opening hours, reservations and current facilities directly with the venue. What works for one family may not be ideal for another.
+      </p>
+    </section>
+
+    <section aria-label="Explore Fix My Diaper">
+      <h2 class="section-title">Discover more with Fix My Diaper</h2>
+
+      <p class="top5-explanation" style="border-bottom: none;">
+        Fix My Diaper helps parents find practical family-friendly information around Berlin. Start with the <a href="/">map</a>, explore the <a href="list">location list</a>, or <a href="submit">submit a place</a> to help other parents. More first-hand tips and personal recommendations will be shared through the <a href="/newsletter">newsletter</a>.
+      </p>
+    </section>
+
+    <section id="faq">
+      <h2 class="section-title">FAQ: Family-Friendly Restaurants and Cafés in Berlin</h2>
+
+      <p class="top5-explanation">
+        <strong>Are there cafés with play areas for children in Berlin?</strong><br>
+        Yes. Some cafés have indoor play corners or dedicated kids' areas, while others are better suited to a family meal without a play space. Check the facilities for each place before visiting.
+      </p>
+
+      <p class="top5-explanation">
+        <strong>What is a Kindercafé?</strong><br>
+        A <em>Kindercafé</em> is a café geared towards families with children. Depending on the venue, it may have an indoor play area, activities or a small play corner. Rules, opening times and fees vary.
+      </p>
+
+      <p class="top5-explanation">
+        <strong>Are family-friendly restaurants in Berlin also baby-friendly?</strong><br>
+        Not necessarily. A place may welcome children but lack baby-changing facilities or easy stroller access. Always check the features you need.
+      </p>
+
+      <p class="top5-explanation" style="border-bottom: none;">
+        <strong>Can I recommend a family-friendly location?</strong><br>
+        Yes. Use the <a href="submit">Submit</a> page to share a café, restaurant or public place with family-friendly facilities.
+      </p>
+    </section>
+
+    <footer>
+      <a href="about">About</a> | 
+      <a href="submit">Submit a Location</a> |
+      <a href="https://www.instagram.com/fixmydiaper">Instagram</a><br><br>
+      Made with ♥️ in Berlin<br />
+      Created by <a href="https://fernandapugliero.com" target="_blank">Fernanda Pugliero</a>
+    </footer>
   </div>
-</header>
-
-<main class="container">
-
-  <section class="answer"
-           aria-label="Quick answer">
-    <strong>Quick answer:</strong>
-
-    <p>
-      Berlin has a variety of family-friendly cafés
-      and restaurants, from dedicated children's
-      cafés with indoor play areas to casual
-      restaurants near parks and playgrounds.
-      Families looking for play-focused cafés can
-      explore places such as Kindercafé Spielzimmer
-      and Mini Me Kindercafé. For a more relaxed
-      café or restaurant visit, Café Blume and
-      Brachvogel are other options worth considering.
-    </p>
-
-    <p>
-      The best choice depends on your children's ages,
-      the weather, your neighbourhood and whether
-      you want a proper meal or a coffee break.
-    </p>
-  </section>
-
-  <nav class="toc" aria-label="On this page">
-    <h2>In this guide</h2>
-
-    <ul>
-      <li>
-        <a href="#top-places">
-          Family-friendly cafés and restaurants
-        </a>
-      </li>
-      <li>
-        <a href="#comparison">
-          Quick comparison
-        </a>
-      </li>
-      <li>
-        <a href="#play-areas">
-          Cafés with play areas
-        </a>
-      </li>
-      <li>
-        <a href="#neighbourhoods">
-          Where to eat with kids by neighbourhood
-        </a>
-      </li>
-      <li>
-        <a href="#tips">
-          Practical tips for parents
-        </a>
-      </li>
-      <li>
-        <a href="#faq">
-          Frequently asked questions
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <section id="top-places">
-    <h2>
-      Family-Friendly Cafés and Restaurants
-      in Berlin
-    </h2>
-
-    <p>
-      Not every family needs the same kind of
-      restaurant. Some parents are looking for
-      somewhere with space for a stroller, while
-      others want an indoor play area where young
-      children can spend time between snacks.
-    </p>
-
-    <p>
-      These Berlin venues offer different ways
-      to combine family time with food and drink.
-    </p>
-
-    <article class="place" id="spielzimmer">
-      <span class="tag">Indoor play café</span>
-
-      <h3>1. Kindercafé Spielzimmer</h3>
-
-      <p>
-        Kindercafé Spielzimmer is a family-oriented
-        café in Prenzlauer Berg, known for combining
-        a café visit with dedicated indoor play.
-      </p>
-
-      <p>
-        It is particularly worth investigating if
-        you are visiting Berlin with younger
-        children and want an alternative to a
-        conventional café, especially when the
-        weather makes outdoor activities difficult.
-      </p>
-
-      <div class="details">
-        <p><strong>Area:</strong> Prenzlauer Berg</p>
-        <p><strong>Best for:</strong> Families looking
-          for an indoor play café</p>
-        <p><strong>Good to know:</strong> Check current
-          opening times, age guidance and any play
-          admission requirements before visiting.</p>
-      </div>
-    </article>
-
-    <article class="place" id="mini-me">
-      <span class="tag">Indoor play area</span>
-
-      <h3>2. Mini Me Kindercafé</h3>
-
-      <p>
-        Mini Me Kindercafé is another option for
-        families who want more than a standard
-        coffee stop. The café is known for an
-        indoor play area with multiple levels.
-      </p>
-
-      <p>
-        This type of venue can be particularly
-        useful during colder months, when
-        families want to spend time indoors
-        without planning a full museum visit.
-      </p>
-
-      <div class="details">
-        <p><strong>Best for:</strong> A play-focused
-          family café visit</p>
-        <p><strong>Play facilities:</strong>
-          Multi-level indoor play area</p>
-        <p><strong>Good to know:</strong> Confirm
-          current access conditions and opening
-          times before making the trip.</p>
-      </div>
-    </article>
-
-    <article class="place" id="cafe-blume">
-      <span class="tag">Relaxed café</span>
-
-      <h3>3. Café Blume</h3>
-
-      <p>
-        Café Blume in Neukölln offers a different
-        kind of family outing. Rather than being
-        primarily a children's play café, it is
-        a relaxed place to enjoy breakfast,
-        coffee or something to eat.
-      </p>
-
-      <p>
-        Its family-friendly atmosphere and
-        outdoor terrace make it worth considering
-        for a leisurely break, especially when
-        exploring the surrounding neighbourhood.
-      </p>
-
-      <div class="details">
-        <p><strong>Area:</strong> Neukölln</p>
-        <p><strong>Best for:</strong> Breakfast or a
-          relaxed family café stop</p>
-        <p><strong>Good to know:</strong> Outdoor
-          seating is particularly appealing
-          during warmer weather.</p>
-      </div>
-    </article>
-
-    <article class="place" id="brachvogel">
-      <span class="tag">Outdoor family outing</span>
-
-      <h3>4. Brachvogel</h3>
-
-      <p>
-        Brachvogel in Kreuzberg is an option for
-        families looking for food and outdoor
-        activities in the same outing.
-      </p>
-
-      <p>
-        Its spacious beer garden and mini-golf
-        make it different from a traditional
-        café. It is worth considering for a
-        family meal with an activity attached,
-        particularly in suitable weather.
-      </p>
-
-      <div class="details">
-        <p><strong>Area:</strong> Kreuzberg</p>
-        <p><strong>Best for:</strong> Families who
-          want food and outdoor recreation</p>
-        <p><strong>Activity:</strong> Mini-golf</p>
-        <p><strong>Good to know:</strong> Check
-          seasonal availability and operating
-          conditions before visiting.</p>
-      </div>
-    </article>
-
-    <article class="place" id="rudi-rosa">
-      <span class="tag">Family-friendly café</span>
-
-      <h3>5. Café Rudi & Rosa</h3>
-
-      <p>
-        Located within Berlin's ufaFabrik cultural
-        centre, Café Rudi & Rosa is a family-friendly
-        café and restaurant option.
-      </p>
-
-      <p>
-        The wider cultural setting makes it an
-        interesting choice for families looking
-        to combine a café stop with another
-        activity in Berlin.
-      </p>
-
-      <div class="details">
-        <p><strong>Area:</strong> Tempelhof</p>
-        <p><strong>Setting:</strong> ufaFabrik</p>
-        <p><strong>Best for:</strong> A family café
-          visit in a cultural setting</p>
-        <p><strong>Good to know:</strong> Check
-          the venue's current programme and
-          opening arrangements.</p>
-      </div>
-    </article>
-  </section>
-
-  <section id="comparison">
-    <h2>
-      Quick Comparison: Where Should
-      You Go With Kids?
-    </h2>
-
-    <p>
-      Choosing the right place becomes easier
-      when you start with the kind of outing
-      your family wants.
-    </p>
-
-    <div class="table-scroll">
-      <table class="comparison">
-        <thead>
-          <tr>
-            <th scope="col">Place</th>
-            <th scope="col">Type</th>
-            <th scope="col">Why consider it?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Kindercafé Spielzimmer</td>
-            <td>Play café</td>
-            <td>Indoor play-focused visit</td>
-          </tr>
-          <tr>
-            <td>Mini Me Kindercafé</td>
-            <td>Play café</td>
-            <td>Multi-level indoor play area</td>
-          </tr>
-          <tr>
-            <td>Café Blume</td>
-            <td>Café</td>
-            <td>Relaxed breakfast or café break</td>
-          </tr>
-          <tr>
-            <td>Brachvogel</td>
-            <td>Restaurant / beer garden</td>
-            <td>Outdoor space and mini-golf</td>
-          </tr>
-          <tr>
-            <td>Café Rudi & Rosa</td>
-            <td>Café / restaurant</td>
-            <td>ufaFabrik cultural setting</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p>
-      These are different types of venues,
-      rather than a ranking based on customer
-      ratings. Availability and facilities
-      may change.
-    </p>
-  </section>
-
-  <section id="play-areas">
-    <h2>
-      Restaurants and Cafés With Play Areas
-      in Berlin
-    </h2>
-
-    <p>
-      If a play area is your main priority,
-      search for a <em>Kindercafé</em> or
-      <em>Eltern-Kind-Café</em>. These German
-      terms are commonly used for cafés
-      designed with families in mind.
-    </p>
-
-    <p>
-      Some have dedicated indoor play
-      facilities. Others offer a small
-      children's corner, or are situated
-      near outdoor playgrounds.
-    </p>
-
-    <div class="tip">
-      <strong>Parent tip:</strong>
-      An indoor play café is not the same
-      as a restaurant next to a playground.
-      Check whether the play area is inside
-      the venue, outdoors, or simply nearby.
-    </div>
-
-    <h3>What to check before you go</h3>
-
-    <ul>
-      <li>Whether the play area is currently open</li>
-      <li>Any entrance or play session fees</li>
-      <li>Age restrictions or recommended ages</li>
-      <li>Whether advance booking is required</li>
-      <li>Food and drink options for children</li>
-      <li>Stroller access and baby-changing facilities</li>
-    </ul>
-  </section>
-
-  <section id="neighbourhoods">
-    <h2>
-      Where to Eat With Kids in Berlin,
-      by Neighbourhood
-    </h2>
-
-    <h3>Prenzlauer Berg</h3>
-
-    <p>
-      Prenzlauer Berg is a useful starting
-      point for families looking for cafés
-      alongside a neighbourhood outing.
-      Kindercafé Spielzimmer is one example
-      of a play-focused option in this area.
-    </p>
-
-    <h3>Kreuzberg</h3>
-
-    <p>
-      Kreuzberg offers a mix of casual
-      eateries, restaurants and outdoor
-      spaces. Brachvogel may suit families
-      planning a meal around an outdoor activity.
-    </p>
-
-    <h3>Neukölln</h3>
-
-    <p>
-      In Neukölln, Café Blume is an option
-      for a relaxed family café stop.
-      The surrounding area also makes it
-      possible to combine food with time
-      outdoors.
-    </p>
-
-    <h3>Tempelhof</h3>
-
-    <p>
-      Families interested in combining
-      food with a cultural outing can
-      explore the ufaFabrik setting and
-      Café Rudi & Rosa.
-    </p>
-  </section>
-
-  <section id="tips">
-    <h2>
-      Practical Tips for Eating Out
-      in Berlin With Children
-    </h2>
-
-    <h3>1. Check the age suitability</h3>
-    <p>
-      A café designed for toddlers may
-      not offer enough activities for
-      older children. Choose based on
-      your family's ages and interests.
-    </p>
-
-    <h3>2. Think about the weather</h3>
-    <p>
-      Indoor play cafés are useful
-      options for rainy or cold days.
-      In warmer weather, restaurants
-      with gardens and outdoor
-      activities may be more appealing.
-    </p>
-
-    <h3>3. Don't assume every café has
-      high chairs</h3>
-    <p>
-      Family-friendly can mean different
-      things. Confirm high chairs, stroller
-      access and changing facilities if
-      you need them.
-    </p>
-
-    <h3>4. Check busy periods</h3>
-    <p>
-      Weekend brunch times may be busier
-      than weekday mornings. For dedicated
-      play cafés, check whether you need
-      to reserve a time slot.
-    </p>
-
-    <h3>5. Combine food with an activity</h3>
-    <p>
-      One of the easiest ways to enjoy
-      Berlin with children is to build
-      your meal around a nearby park,
-      playground or family attraction.
-    </p>
-  </section>
-
-  <section id="faq">
-    <h2>
-      Frequently Asked Questions About
-      Family-Friendly Restaurants in Berlin
-    </h2>
-
-    <div class="faq-item">
-      <h3>
-        Are there restaurants with play areas
-        in Berlin?
-      </h3>
-      <p>
-        Yes. Berlin has dedicated children's
-        cafés with indoor play facilities,
-        as well as restaurants with outdoor
-        recreation or nearby playgrounds.
-        The type of play area varies by venue.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>
-        Where can I find kid-friendly cafés
-        in Berlin?
-      </h3>
-      <p>
-        Family cafés can be found across
-        Berlin. Prenzlauer Berg, Neukölln,
-        Kreuzberg and other neighbourhoods
-        offer different options for parents
-        visiting with children.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>
-        What is a Kindercafé in Berlin?
-      </h3>
-      <p>
-        A Kindercafé is a children's café.
-        Many are designed for families with
-        young children and offer some form
-        of play space alongside food and
-        drinks. Facilities and rules differ
-        between venues.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>
-        Are there indoor cafés for toddlers
-        in Berlin?
-      </h3>
-      <p>
-        Yes. Dedicated indoor play cafés
-        are an option for families with
-        toddlers and younger children.
-        Always check the individual venue's
-        age recommendations before visiting.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>
-        Do family-friendly restaurants
-        in Berlin provide high chairs?
-      </h3>
-      <p>
-        Some do, but availability is not
-        guaranteed. Contact the restaurant
-        in advance if a high chair,
-        stroller space or changing table
-        is essential for your visit.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>
-        Should I reserve a table at a
-        family-friendly restaurant in Berlin?
-      </h3>
-      <p>
-        Reservations can be helpful
-        for weekend brunch or larger
-        family groups. Dedicated play
-        cafés may have separate booking
-        arrangements or play sessions.
-      </p>
-    </div>
-  </section>
-
-  <aside class="tip">
-    <h2 style="margin-top:0">
-      Planning More Family Activities in Berlin?
-    </h2>
-
-    <p>
-      A café stop can be part of a full
-      family day out. Explore playgrounds,
-      indoor attractions and outdoor
-      activities to plan around your
-      children's ages and interests.
-    </p>
-
-    <!--
-      Add verified internal links here:
-      - Berlin playground guide
-      - Indoor activities with kids
-      - Things to do in Berlin with toddlers
-      - Family-friendly Berlin neighbourhoods
-    -->
-  </aside>
-
-  <section class="methodology">
-    <h2 style="font-size:22px;margin-top:0">
-      About This Guide
-    </h2>
-
-    <p>
-      This guide brings together family-friendly
-      cafés and restaurants in Berlin based on
-      their reported family facilities, setting
-      and suitability for different types of
-      outings. It does not imply that every venue
-      has been personally visited.
-    </p>
-
-    <p>
-      Venue details may change. Before visiting,
-      confirm opening hours, facilities,
-      prices and booking conditions directly
-      with the business.
-    </p>
-
-    <p>
-      Background references:
-      <a href="https://www.visitberlin.de/en/family-cafes">
-        visitBerlin family cafés guide
-      </a>
-      and
-      <a href="https://www.top10berlin.de/en/cat/family-276/child-friendly-restaurants-and-cafes-playground-2724">
-        Top10 Berlin family-friendly venues
-      </a>.
-    </p>
-  </section>
-
-</main>
-
-<!--
-  Structured data.
-
-  Replace example URLs with the actual published
-  domain and add the publisher details only when
-  they are available.
-
-  Do not publish placeholder URLs as real URLs.
--->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Family-Friendly Cafés and Restaurants in Berlin",
-  "itemListOrder": "https://schema.org/ItemListOrderAscending",
-  "numberOfItems": 5,
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Kindercafé Spielzimmer"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Mini Me Kindercafé"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Café Blume"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Brachvogel"
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "name": "Café Rudi & Rosa"
-    }
-  ]
-}
-</script>
 
 </body>
 </html>
