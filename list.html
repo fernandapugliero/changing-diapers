@@ -129,8 +129,17 @@
       text-align: center;
       color: #666;
       font-size: 0.9rem;
-      margin: 0.25rem auto 1.25rem auto;
+      margin: 0.25rem auto 0.3rem auto;
       line-height: 1.4;
+    }
+
+    .latest-addition {
+      display: none;
+      text-align: center;
+      color: #777;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      margin: 0 auto 1.25rem auto;
     }
 
     .cards-grid {
@@ -403,6 +412,7 @@
     <p id="statusText" class="status-text">
       Showing places with photos and reviews first, then newest submissions.
     </p>
+    <p id="latestAddition" class="latest-addition" aria-live="polite"></p>
 
     <div id="loading" class="loading-box">Loading changing tables…</div>
 
@@ -506,6 +516,7 @@
       grid: document.getElementById("cardsGrid"),
       loading: document.getElementById("loading"),
       statusText: document.getElementById("statusText"),
+      latestAddition: document.getElementById("latestAddition"),
       input: document.getElementById("geo-input"),
       goBtn: document.getElementById("geo-go"),
       meBtn: document.getElementById("geo-me")
@@ -792,6 +803,22 @@
       state.filtered = sortDefault(state.displayAll);
 
       el.count.textContent = data.length;
+
+      const newestDate = state.displayAll.reduce(
+        (latest, place) => Math.max(latest, parseSortDate(place)), 0
+      );
+
+      if (newestDate > 0) {
+        const dateLabel = new Intl.DateTimeFormat("en-GB", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          timeZone: "UTC"
+        }).format(new Date(newestDate));
+
+        el.latestAddition.textContent = `Latest addition: ${dateLabel}`;
+        el.latestAddition.style.display = "block";
+      }
 
       renderCards();
     }
