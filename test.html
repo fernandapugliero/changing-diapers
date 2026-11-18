@@ -7,7 +7,7 @@
   <title>Family-friendly cafés & restaurants in Berlin | Fix My Diaper</title>
 
   <meta name="description"
-    content="Discover family-friendly cafés, restaurants and free indoor spots for babies and toddlers in Berlin. Photos, parent reviews and local tips.">
+    content="Discover family-friendly cafés, restaurants with play areas and free indoor spots for babies and toddlers in Berlin. Real reviews and local tips.">
 
   <meta name="robots" content="index, follow">
 
@@ -28,7 +28,7 @@
   <meta name="twitter:title"
     content="Family-friendly cafés & restaurants in Berlin | Fix My Diaper">
   <meta name="twitter:description"
-    content="Discover cafés with play areas, restaurants and free indoor spots for kids in Berlin.">
+    content="Discover cafés with play areas, family-friendly restaurants and free indoor spots for kids in Berlin.">
   <meta name="twitter:image"
     content="https://fixmydiaper.com/images/logo.png">
 
@@ -44,7 +44,6 @@
     rel="stylesheet">
 
   <style>
-
     /* ===== BASE: SAME AS INDEX ===== */
 
     body {
@@ -152,26 +151,33 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
-    .recent-card img {
+    /* Photo format:
+       Desktop 4:3
+       Mobile 4:5 */
+
+    .recent-card img,
+    .photo-placeholder {
       width: 100%;
-      height: 240px;
-      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      height: auto;
       border-radius: 8px;
       margin-bottom: 0.5rem;
       display: block;
     }
 
+    .recent-card img {
+      object-fit: cover;
+      object-position: center;
+    }
+
     .photo-placeholder {
-      width: 100%;
-      height: 240px;
       background: #f6f6f6;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       color: #999;
       font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
     .recent-quote {
@@ -191,12 +197,21 @@
       text-align: left;
     }
 
-    /* Desktop: three cards side by side */
+    /* Desktop: 3 cards side by side */
 
     @media (min-width: 768px) {
       .recent-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.5rem;
+      }
+    }
+
+    /* Mobile: vertical photos, stacked cards */
+
+    @media (max-width: 767px) {
+      .recent-card img,
+      .photo-placeholder {
+        aspect-ratio: 4 / 5;
       }
     }
 
@@ -286,7 +301,6 @@
         margin-top: 4rem;
       }
     }
-
   </style>
 </head>
 
@@ -336,12 +350,16 @@
           </div>
 
           <p class="recent-quote">
-            [Add your short review of Kiezkind Berlin.]
+            “One of the coolest cafés for kids in Berlin!
+            There's a large sandpit and toys scattered
+            throughout the café. In summer, Bobby Cars
+            are parked outside for little ones to ride.
+            No entrance fee — you only pay for what you order.”
           </p>
 
           <div class="recent-meta">
             <strong>Kiezkind Berlin</strong><br>
-            [Neighbourhood], Berlin
+            Prenzlauer Berg, Berlin
           </div>
 
         </article>
@@ -351,17 +369,23 @@
 
         <article class="recent-card">
 
-          <div class="photo-placeholder">
-            Kap Frida photo
-          </div>
+          <img
+            src="images/kapfrida.jpg"
+            alt="Kap Frida in Berlin"
+            loading="lazy">
 
           <p class="recent-quote">
-            [Add your short review of Kap Frida.]
+            “A two-level play area with lots of books
+            and building toys. The café is small, but
+            the play area is usually quiet on weekdays.
+            There's room to bring your stroller inside
+            and park it safely. And the changing table
+            is absolutely wonderful!”
           </p>
 
           <div class="recent-meta">
             <strong>Kap Frida</strong><br>
-            [Neighbourhood], Berlin
+            Halbinsel Stralau, Berlin
           </div>
 
         </article>
@@ -376,12 +400,17 @@
           </div>
 
           <p class="recent-quote">
-            [Add your short review of Le Brot.]
+            “Both Le Brot locations in Neukölln have
+            a small play area. At the Nansenstraße location,
+            there's a little playhouse with removable parts,
+            children's books and a box full of toys.
+            Perfect for enjoying a croissant while your
+            little one stays entertained.”
           </p>
 
           <div class="recent-meta">
             <strong>Le Brot</strong><br>
-            [Neighbourhood], Berlin
+            Neukölln, Berlin
           </div>
 
         </article>
@@ -414,12 +443,20 @@
           </div>
 
           <p class="recent-quote">
-            [Add your short review of Block House.]
+            “This place really knows how to welcome
+            families with young children! There's space
+            to park your stroller next to the table,
+            high chairs, a kids' menu, a changing table
+            and toys brought over by the staff.
+            Before you even order, your child gets crayons
+            and a colouring sheet. After the meal,
+            there's often another little surprise to
+            take home, like a teddy bear or a puzzle.”
           </p>
 
           <div class="recent-meta">
             <strong>Block House</strong><br>
-            [Location], Berlin
+            Friedrichshain, Berlin
           </div>
 
         </article>
@@ -434,12 +471,16 @@
           </div>
 
           <p class="recent-quote">
-            [Add your short review of The Playce.]
+            “The newly redesigned Hape Kids Zone
+            reopened on October 30, 2026,
+            at The Playce in Potsdamer Platz.
+            A dedicated indoor space where kids
+            can play and explore.”
           </p>
 
           <div class="recent-meta">
             <strong>The Playce</strong><br>
-            [Location], Berlin
+            Mitte, Berlin
           </div>
 
         </article>
@@ -459,7 +500,7 @@
 
           <div class="recent-meta">
             <strong>Luisenbräu</strong><br>
-            [Neighbourhood], Berlin
+            Charlottenburg, Berlin
           </div>
 
         </article>
@@ -517,7 +558,7 @@
 
           <div class="recent-meta">
             <strong>Humboldt Forum</strong><br>
-            [Neighbourhood], Berlin
+            Mitte, Berlin
           </div>
 
         </article>
@@ -552,12 +593,13 @@
     <section class="home-section" aria-labelledby="ebook-heading">
 
       <h2 class="section-title" id="ebook-heading">
-        The Berlin family guide is coming! ♥
+        The Berlin family guide is coming! ❤️
       </h2>
 
       <p class="section-subtitle">
-        More family-friendly spots, personal reviews and practical tips.
-        Join the waitlist for early access and a special pre-launch price.
+        More family-friendly spots, personal reviews
+        and practical tips. Join the waitlist for
+        early access and a special pre-launch price.
       </p>
 
       <div class="waitlist-wrap">
@@ -567,9 +609,9 @@
           <!--
             TALLY EMBED GOES HERE
 
-            Paste the real embed code generated by Tally.
+            Paste the embed code generated by Tally.
 
-            Recommended Tally design:
+            Recommended design:
 
             Background: #FFFFFF
             Text: #333333
@@ -585,13 +627,15 @@
             - Consent checkbox (required)
 
             Consent:
-            "I agree to receive emails from Fix My Diaper
-            about the Berlin family guide, including
-            early access and a special pre-launch offer.
+            "I agree to receive emails from
+            Fix My Diaper about the Berlin family
+            guide, including early access and
+            a special pre-launch offer.
             I can unsubscribe at any time."
 
-            Configure double opt-in and the privacy
-            policy before collecting addresses.
+            Use double opt-in, and make sure
+            your privacy policy covers the
+            waitlist and its email provider.
           -->
 
         </div>
@@ -618,32 +662,32 @@
           Where can I find cafés with play areas in Berlin?
         </strong><br>
         Look for Kindercafés or cafés with a Spielecke
-        (kids' play corner). Places such as Kiezkind Berlin,
-        Kap Frida and Le Brot are included in our selection.
-        Play areas and facilities may vary.
+        (kids' play corner). Kiezkind Berlin,
+        Kap Frida and Le Brot are included in our
+        selection. Facilities may vary by location.
       </p>
 
       <p class="top5-explanation">
         <strong>
           Are there family-friendly restaurants in Berlin?
         </strong><br>
-        Yes. Some restaurants offer children's menus,
-        high chairs or room for strollers. Always check
-        the facilities at the specific location before visiting.
+        Yes. Some restaurants offer high chairs,
+        children's menus, room for strollers
+        and changing tables. Check facilities
+        at the specific location before visiting.
       </p>
 
       <p class="top5-explanation">
         <strong>
           Where can I go with a toddler in Berlin on a rainy day?
         </strong><br>
-        Berlin has libraries, cultural spaces and family centres
-        with indoor areas or activities for young children.
-        Check opening hours, admission conditions and
-        age suitability before visiting.
+        Libraries, cultural spaces and family centres
+        can offer indoor activities for young children.
+        Check opening hours, admission conditions
+        and age suitability before visiting.
       </p>
 
-      <p class="top5-explanation"
-         style="border-bottom:none;">
+      <p class="top5-explanation" style="border-bottom:none;">
         <strong>
           Can I recommend a family-friendly place?
         </strong><br>
