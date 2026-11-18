@@ -7,7 +7,7 @@
   <title>Family-Friendly Cafés & Restaurants in Berlin | Fix My Diaper</title>
 
   <meta name="description"
-    content="Explore family-friendly cafés, restaurants and free indoor spots for babies and toddlers in Berlin. Real tips from parents, plus an upcoming Berlin family guide.">
+    content="Discover family-friendly cafés, restaurants with kids' play areas, and free indoor spots for babies and toddlers in Berlin. Photos, reviews and local tips.">
 
   <meta name="robots" content="index, follow">
 
@@ -17,7 +17,7 @@
   <meta property="og:title"
     content="Family-Friendly Cafés & Restaurants in Berlin | Fix My Diaper">
   <meta property="og:description"
-    content="Kid-friendly cafés, restaurants and indoor spots in Berlin, with photos and parent reviews.">
+    content="Cafés with play areas, family-friendly restaurants and free indoor spots for kids in Berlin.">
   <meta property="og:image"
     content="https://fixmydiaper.com/images/logo.png">
   <meta property="og:url"
@@ -26,13 +26,18 @@
 
   <link rel="icon" href="/images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="style.css">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
     rel="stylesheet">
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap"
+    rel="stylesheet">
+
   <style>
-    /* Original page styling retained.
-       Heading typography comes from style.css. */
+
+    /* ===== BASE: SAME AS INDEX ===== */
 
     body {
       font-family: 'Inter', sans-serif;
@@ -46,6 +51,8 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+
+    /* ===== NAVIGATION ===== */
 
     nav {
       margin-bottom: 2rem;
@@ -67,120 +74,204 @@
       color: inherit;
     }
 
+    /* ===== HEADINGS: SAME AS INDEX ===== */
+
     h1 {
+      font-size: 2rem;
       margin: 0 0 0.5rem 0;
       text-align: center;
       line-height: 1.2;
     }
 
-    .intro {
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      margin: 0 0 2rem 0;
       text-align: center;
-      max-width: 840px;
-      margin: 0 auto 1.5rem auto;
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.2rem;
-      margin-bottom: 2rem;
-      align-items: start;
-    }
-
-    @media (min-width: 768px) {
-      .cards-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .place-card {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 0.75rem;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      display: flex;
-      flex-direction: column;
-      height: auto;
-      min-height: 0;
-    }
-
-    .place-media {
-      width: 100%;
-      height: 240px;
-      border-radius: 8px;
-      background: #f6f6f6;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: .5rem;
-    }
-
-    .place-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .no-photo {
-      font-size: 0.85rem;
-      color: #777;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .place-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #333;
-      text-align: left;
-      margin: 0.25rem 0 0.15rem 0;
-    }
-
-    .place-meta {
-      font-size: 0.8rem;
-      color: #777;
-      margin-top: 0.25rem;
-      text-align: left;
-      line-height: 1.35;
-    }
-
-    .place-quote {
-      font-size: 0.85rem;
-      color: #555;
-      font-style: italic;
-      margin: 0.5rem 0 0.4rem 0;
-      text-align: left;
-      line-height: 1.35;
-    }
-
-    .tagline {
-      display: inline-block;
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid #eee;
-      color: #555;
-      background: #fafafa;
-      line-height: 1;
-      margin-top: 0.5rem;
-      width: fit-content;
+      line-height: 1.4;
     }
 
     .section-title {
+      font-size: 1.3rem;
       font-weight: 600;
       color: #444;
       text-align: center;
       margin-top: 3rem;
       margin-bottom: 0.75rem;
       line-height: 1.3;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    /* ===== SECTION SPACING ===== */
+
+    .home-section {
+      margin: 5rem 0 0;
+    }
+
+    .home-section > .section-title,
+    #faq > .section-title {
+      margin-top: 0;
+    }
+
+    /* ===== CARDS: SAME AS INDEX ===== */
+
+    .recent-grid {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0 1rem 1rem 1rem;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    .recent-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .recent-card {
+      scroll-snap-align: center;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 0.75rem;
+      min-width: 85%;
+      max-width: 320px;
+      flex: 0 0 auto;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .recent-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    /* Placeholder until real photos are inserted */
+
+    .photo-placeholder {
+      width: 100%;
+      height: 240px;
+      background: #f6f6f6;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #999;
+      font-size: 0.85rem;
+    }
+
+    .recent-quote {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.25rem 0 0.5rem 0;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .recent-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.25rem;
+      line-height: 1.4;
+    }
+
+    .recent-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 0.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .recent-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    @media (min-width: 768px) {
+
+      .recent-grid {
+        overflow-x: visible;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0;
+      }
+
+      .recent-card {
+        min-width: 0;
+        flex: 0 0 calc(33.333% - 1rem);
+      }
+
+      .recent-dots {
+        display: none;
+      }
+
+    }
+
+    /* ===== TALLY WAITLIST ===== */
+
+    .waitlist-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .waitlist-wrap > div {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .tally-embed {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .tally-embed iframe {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      border: 0;
+      background: transparent;
+    }
+
+    .waitlist-note {
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+
+    /* ===== FAQ: SAME AS INDEX ===== */
+
+    #faq {
+      margin-top: 5rem;
+    }
+
+    #faq p {
+      text-align: left;
     }
 
     .top5-explanation {
@@ -193,8 +284,10 @@
       line-height: 1.4;
     }
 
+    /* ===== FOOTER: SAME AS INDEX ===== */
+
     footer {
-      margin-top: 3rem;
+      margin-top: 5rem;
       text-align: center;
       font-size: 0.9rem;
       color: #777;
@@ -209,573 +302,437 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 430px) {
+    /* ===== MOBILE ===== */
+
+    @media (max-width: 768px) {
       body {
-        padding: 1.8rem;
+        padding: 2rem;
       }
 
-      .place-media {
-        height: 230px;
+      .home-section {
+        margin-top: 4rem;
+      }
+
+      #faq,
+      footer {
+        margin-top: 4rem;
       }
     }
 
-    /* Only new styles: ebook waitlist */
-
-    .ebook-signup {
-      max-width: 650px;
-      margin: 3rem auto 1rem;
-      padding: 1.5rem;
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .ebook-signup .section-title {
-      margin-top: 0;
-    }
-
-    .ebook-signup p {
-      font-size: 0.9rem;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .signup-form {
-      margin-top: 1.2rem;
-    }
-
-    .signup-form input[type="email"] {
-      box-sizing: border-box;
-      width: 100%;
-      padding: 0.85rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: white;
-      font-family: inherit;
-      font-size: 0.9rem;
-    }
-
-    .signup-form button {
-      margin-top: 0.75rem;
-      width: 100%;
-      padding: 0.85rem;
-      background: #333;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .signup-form button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    .signup-consent {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      text-align: left;
-      margin-top: 1rem;
-      font-size: 0.75rem;
-      color: #666;
-      line-height: 1.5;
-    }
-
-    .signup-consent input {
-      margin-top: 0.2rem;
-    }
-
-    .signup-note {
-      font-size: 0.75rem !important;
-      color: #777 !important;
-    }
   </style>
 </head>
 
 <body>
-  <div class="page">
+<div class="page">
 
-    <!-- ORIGINAL NAVIGATION -->
+  <!-- NAVIGATION -->
 
-    <nav>
-      <img src="images/logo.png" alt="Fix My Diaper Logo">
-      <a href="https://fixmydiaper.com/">Map</a>
-      <a href="list">List</a>
-      <a href="submit">Submit</a>
-    </nav>
+  <nav>
+    <img src="images/logo.png" alt="Fix My Diaper Logo">
+    <a href="https://fixmydiaper.com/">Map</a>
+    <a href="list">List</a>
+    <a href="submit">Submit</a>
+  </nav>
 
-    <main>
+  <main>
 
-      <h1>Family-Friendly Cafés & Restaurants in Berlin</h1>
+    <!-- HERO -->
 
-      <p class="intro">
-        Looking for a café with a play area, a restaurant
-        that welcomes kids, or somewhere free to spend
-        a rainy afternoon with your toddler?
-        Here are a few family-friendly spots in Berlin.
+    <h1>Family-Friendly Cafés & Restaurants in Berlin</h1>
+
+    <h2>
+      Play areas, kid-friendly dining and free indoor spots for little ones.
+    </h2>
+
+
+    <!-- SECTION 1: CAFÉS -->
+
+    <section class="home-section" aria-labelledby="cafes-title">
+
+      <h2 class="section-title" id="cafes-title">
+        Cafés with Play Areas
+      </h2>
+
+      <p class="section-subtitle">
+        Coffee for you, playtime for them.
       </p>
 
+      <div class="recent-grid">
 
-      <!-- SECTION 1: CAFES WITH PLAY AREAS -->
+        <!-- CAFÉ 1 -->
 
-      <section aria-labelledby="cafes-title">
+        <article class="recent-card">
 
-        <h2 class="section-title" id="cafes-title">
-          Cafés with Play Areas
-        </h2>
+          <div class="photo-placeholder">
+            Café 1 photo
+          </div>
 
-        <p class="intro">
-          Coffee for you, room to play for them.
-        </p>
+          <p class="recent-quote">
+            “[Short real review about the play area,
+            atmosphere or what makes this café special.]”
+          </p>
 
-        <div class="cards-grid">
+          <div class="recent-meta">
+            <strong>[Café 1 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
 
-          <article class="place-card">
-            <div class="place-media">
-              <!-- Replace with actual local photo -->
-              <span class="no-photo">
-                Café 1 photo
-              </span>
-            </div>
-
-            <h3 class="place-title">
-              [Café 1 name]
-            </h3>
-
-            <p class="place-meta">
-              [Neighbourhood] · Café
-            </p>
-
-            <p class="place-quote">
-              “[Short, genuine review about the play area
-              and what makes this café special.]”
-            </p>
-
-            <span class="tagline">
-              Kids area
-            </span>
-          </article>
+        </article>
 
 
-          <article class="place-card">
-            <div class="place-media">
-              <span class="no-photo">
-                Café 2 photo
-              </span>
-            </div>
+        <!-- CAFÉ 2 -->
 
-            <h3 class="place-title">
-              [Café 2 name]
-            </h3>
+        <article class="recent-card">
 
-            <p class="place-meta">
-              [Neighbourhood] · Café
-            </p>
+          <div class="photo-placeholder">
+            Café 2 photo
+          </div>
 
-            <p class="place-quote">
-              “[A short review describing the atmosphere
-              and children's play space.]”
-            </p>
+          <p class="recent-quote">
+            “[Short real review about this café
+            and its facilities for children.]”
+          </p>
 
-            <span class="tagline">
-              Kids area
-            </span>
-          </article>
+          <div class="recent-meta">
+            <strong>[Café 2 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
 
 
-          <article class="place-card">
-            <div class="place-media">
-              <span class="no-photo">
-                Café 3 photo
-              </span>
-            </div>
+        <!-- CAFÉ 3 -->
 
-            <h3 class="place-title">
-              [Café 3 name]
-            </h3>
+        <article class="recent-card">
 
-            <p class="place-meta">
-              [Neighbourhood] · Café
-            </p>
+          <div class="photo-placeholder">
+            Café 3 photo
+          </div>
 
-            <p class="place-quote">
-              “[A short parent review explaining why
-              this is a good place to visit with kids.]”
-            </p>
+          <p class="recent-quote">
+            “[Short real review about the
+            children's space or experience.]”
+          </p>
 
-            <span class="tagline">
-              Kids area
-            </span>
-          </article>
+          <div class="recent-meta">
+            <strong>[Café 3 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
+
+      </div>
+
+      <div class="recent-dots" aria-hidden="true">
+        <div class="recent-dot"></div>
+        <div class="recent-dot"></div>
+        <div class="recent-dot"></div>
+      </div>
+
+    </section>
+
+
+    <!-- SECTION 2: RESTAURANTS -->
+
+    <section class="home-section" aria-labelledby="restaurants-title">
+
+      <h2 class="section-title" id="restaurants-title">
+        Family-Friendly Restaurants
+      </h2>
+
+      <p class="section-subtitle">
+        Good food, happy kids, less stress.
+      </p>
+
+      <div class="recent-grid">
+
+        <!-- RESTAURANT 1 -->
+
+        <article class="recent-card">
+
+          <div class="photo-placeholder">
+            Restaurant 1 photo
+          </div>
+
+          <p class="recent-quote">
+            “[Short genuine review about the food,
+            service or family-friendly atmosphere.]”
+          </p>
+
+          <div class="recent-meta">
+            <strong>[Restaurant 1 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
+
+
+        <!-- RESTAURANT 2 -->
+
+        <article class="recent-card">
+
+          <div class="photo-placeholder">
+            Restaurant 2 photo
+          </div>
+
+          <p class="recent-quote">
+            “[Short review highlighting why this
+            restaurant works well with children.]”
+          </p>
+
+          <div class="recent-meta">
+            <strong>[Restaurant 2 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
+
+
+        <!-- RESTAURANT 3 -->
+
+        <article class="recent-card">
+
+          <div class="photo-placeholder">
+            Restaurant 3 photo
+          </div>
+
+          <p class="recent-quote">
+            “[Short review about a useful detail
+            or memorable family experience.]”
+          </p>
+
+          <div class="recent-meta">
+            <strong>[Restaurant 3 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
+
+      </div>
+
+      <div class="recent-dots" aria-hidden="true">
+        <div class="recent-dot"></div>
+        <div class="recent-dot"></div>
+        <div class="recent-dot"></div>
+      </div>
+
+    </section>
+
+
+    <!-- SECTION 3: FREE INDOOR SPOTS -->
+
+    <section class="home-section" aria-labelledby="indoor-title">
+
+      <h2 class="section-title" id="indoor-title">
+        Free Indoor Spots for Kids
+      </h2>
+
+      <p class="section-subtitle">
+        Rainy or cold? Free places for babies and toddlers.
+      </p>
+
+      <div class="recent-grid">
+
+        <!-- INDOOR SPOT 1 -->
+
+        <article class="recent-card">
+
+          <div class="photo-placeholder">
+            Indoor spot 1 photo
+          </div>
+
+          <p class="recent-quote">
+            “[Short review about the space,
+            activities and suitable ages.]”
+          </p>
+
+          <div class="recent-meta">
+            <strong>[Indoor spot 1 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
+
+
+        <!-- INDOOR SPOT 2 -->
+
+        <article class="recent-card">
+
+          <div class="photo-placeholder">
+            Indoor spot 2 photo
+          </div>
+
+          <p class="recent-quote">
+            “[Short review about why this is
+            a good spot for a rainy day.]”
+          </p>
+
+          <div class="recent-meta">
+            <strong>[Indoor spot 2 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
+
+
+        <!-- INDOOR SPOT 3 -->
+
+        <article class="recent-card">
+
+          <div class="photo-placeholder">
+            Indoor spot 3 photo
+          </div>
+
+          <p class="recent-quote">
+            “[Short review highlighting
+            what little ones can do here.]”
+          </p>
+
+          <div class="recent-meta">
+            <strong>[Indoor spot 3 name]</strong><br>
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
+
+      </div>
+
+      <div class="recent-dots" aria-hidden="true">
+        <div class="recent-dot"></div>
+        <div class="recent-dot"></div>
+        <div class="recent-dot"></div>
+      </div>
+
+    </section>
+
+
+    <!-- EBOOK WAITLIST -->
+
+    <section class="home-section" aria-labelledby="ebook-heading">
+
+      <h2 class="section-title" id="ebook-heading">
+        The Berlin Family Guide Is Coming! ♥
+      </h2>
+
+      <p class="section-subtitle">
+        More family-friendly spots, personal reviews and
+        practical tips. Join the waitlist for early access
+        and a special pre-launch price.
+      </p>
+
+      <div class="waitlist-wrap">
+
+        <div class="tally-embed">
+
+          <!--
+            TALLY EMBED GOES HERE
+
+            Create your ebook waitlist form on Tally.
+
+            In the Tally design settings, use:
+
+            Background: #FFFFFF
+            Text: #333333
+            Font: Inter (if available)
+            Button background: #333333
+            Button text: #FFFFFF
+            Rounded button corners
+            No form cover image
+            No repeated form heading
+
+            Then replace this comment with
+            the embed code generated by Tally.
+          -->
 
         </div>
-      </section>
 
-
-      <!-- SECTION 2: FAMILY-FRIENDLY RESTAURANTS -->
-
-      <section aria-labelledby="restaurants-title">
-
-        <h2 class="section-title" id="restaurants-title">
-          Family-Friendly Restaurants
-        </h2>
-
-        <p class="intro">
-          Places where eating out with little ones
-          feels a little easier.
+        <p class="waitlist-note">
+          Ebook launch updates only. No spam.
         </p>
 
-        <div class="cards-grid">
-
-          <article class="place-card">
-            <div class="place-media">
-              <span class="no-photo">
-                Restaurant 1 photo
-              </span>
-            </div>
-
-            <h3 class="place-title">
-              [Restaurant 1 name]
-            </h3>
-
-            <p class="place-meta">
-              [Neighbourhood] · Restaurant
-            </p>
-
-            <p class="place-quote">
-              “[Short review about the food, family
-              atmosphere or practical kids' facilities.]”
-            </p>
-
-            <span class="tagline">
-              Family friendly
-            </span>
-          </article>
-
-
-          <article class="place-card">
-            <div class="place-media">
-              <span class="no-photo">
-                Restaurant 2 photo
-              </span>
-            </div>
-
-            <h3 class="place-title">
-              [Restaurant 2 name]
-            </h3>
-
-            <p class="place-meta">
-              [Neighbourhood] · Restaurant
-            </p>
-
-            <p class="place-quote">
-              “[Short review describing what parents
-              can expect when visiting with children.]”
-            </p>
-
-            <span class="tagline">
-              Family friendly
-            </span>
-          </article>
-
-
-          <article class="place-card">
-            <div class="place-media">
-              <span class="no-photo">
-                Restaurant 3 photo
-              </span>
-            </div>
-
-            <h3 class="place-title">
-              [Restaurant 3 name]
-            </h3>
-
-            <p class="place-meta">
-              [Neighbourhood] · Restaurant
-            </p>
-
-            <p class="place-quote">
-              “[Short review highlighting one useful
-              or memorable detail for families.]”
-            </p>
-
-            <span class="tagline">
-              Family friendly
-            </span>
-          </article>
-
-        </div>
-      </section>
-
-
-      <!-- SECTION 3: FREE INDOOR SPOTS -->
-
-      <section aria-labelledby="indoor-title">
-
-        <h2 class="section-title" id="indoor-title">
-          Free Indoor Spots for Kids
-        </h2>
-
-        <p class="intro">
-          Rainy or freezing outside? These free indoor
-          spots are worth knowing about when you're
-          out with babies or toddlers in Berlin.
-        </p>
-
-        <div class="cards-grid">
-
-          <article class="place-card">
-            <div class="place-media">
-              <span class="no-photo">
-                Indoor spot 1 photo
-              </span>
-            </div>
-
-            <h3 class="place-title">
-              [Indoor spot 1 name]
-            </h3>
-
-            <p class="place-meta">
-              [Neighbourhood] · Indoor activity
-            </p>
-
-            <p class="place-quote">
-              “[Short review about what little ones
-              can do here and why it's worth a visit.]”
-            </p>
-
-            <span class="tagline">
-              Free entry
-            </span>
-          </article>
-
-
-          <article class="place-card">
-            <div class="place-media">
-              <span class="no-photo">
-                Indoor spot 2 photo
-              </span>
-            </div>
-
-            <h3 class="place-title">
-              [Indoor spot 2 name]
-            </h3>
-
-            <p class="place-meta">
-              [Neighbourhood] · Indoor activity
-            </p>
-
-            <p class="place-quote">
-              “[Short review explaining the space,
-              suitable ages and best part for kids.]”
-            </p>
-
-            <span class="tagline">
-              Free entry
-            </span>
-          </article>
-
-
-          <article class="place-card">
-            <div class="place-media">
-              <span class="no-photo">
-                Indoor spot 3 photo
-              </span>
-            </div>
-
-            <h3 class="place-title">
-              [Indoor spot 3 name]
-            </h3>
-
-            <p class="place-meta">
-              [Neighbourhood] · Indoor activity
-            </p>
-
-            <p class="place-quote">
-              “[Short review about why this is a
-              good stop on a cold or rainy day.]”
-            </p>
-
-            <span class="tagline">
-              Free entry
-            </span>
-          </article>
-
-        </div>
-      </section>
-
-
-      <!-- EBOOK WAITLIST: AFTER FREE CONTENT -->
-
-      <section class="ebook-signup"
-               aria-labelledby="ebook-title">
-
-        <h2 class="section-title" id="ebook-title">
-          More Berlin Family Spots? ♥
-        </h2>
-
-        <p>
-          I'm putting together a curated guide to
-          family-friendly cafés, restaurants and
-          hidden gems in Berlin, with practical
-          tips and personal reviews.
-        </p>
-
-        <p>
-          <strong>
-            Join the waitlist for early access
-            and a special pre-launch price!
-          </strong>
-        </p>
-
-        <!--
-          WAITLIST INTEGRATION REQUIRED
-
-          This is a separate ebook interest list,
-          NOT an automatic newsletter signup.
-
-          Connect to a real subscription endpoint
-          before enabling submission.
-
-          Record email, consent, source and date.
-          Use double opt-in and store confirmation.
-
-          Do not send addresses to an unconfigured
-          endpoint or display a false success message.
-        -->
-
-        <form class="signup-form">
-
-          <label for="ebook-email"
-            style="display:block;text-align:left;font-size:0.85rem;margin-bottom:0.5rem;">
-            Your email address
-          </label>
-
-          <input
-            id="ebook-email"
-            type="email"
-            name="email"
-            placeholder="you@example.com"
-            autocomplete="email"
-            required
-            disabled
-          >
-
-          <label class="signup-consent">
-            <input
-              type="checkbox"
-              name="ebook_consent"
-              required
-              disabled
-            >
-            <span>
-              I'd like to receive emails about the
-              Fix My Diaper Berlin Family Guide,
-              including early access and the
-              special pre-launch offer.
-              I can unsubscribe at any time.
-            </span>
-          </label>
-
-          <button type="submit" disabled>
-            Get Early Access
-          </button>
-
-        </form>
-
-        <p class="signup-note">
-          Ebook launch updates only.
-          No automatic newsletter subscription.
-        </p>
-
-      </section>
-
-
-      <!-- RELATED INTERNAL LINK -->
-
-      <section aria-labelledby="map-title">
-
-        <h2 class="section-title" id="map-title">
-          Exploring Berlin with a Baby?
-        </h2>
-
-        <p class="intro">
-          Find nearby changing tables, photos
-          and reviews from parents on the
-          <a href="https://fixmydiaper.com/">
-            Fix My Diaper map
-          </a>.
-        </p>
-
-      </section>
-
-
-      <!-- SHORT FAQ -->
-
-      <section id="faq">
-
-        <h2 class="section-title">
-          FAQ
-        </h2>
-
-        <p class="top5-explanation">
-          <strong>
-            Where can I find cafés with play areas in Berlin?
-          </strong><br>
-          Look for Kindercafés or cafés with a
-          Spielecke (kids' play corner).
-          Play areas and age suitability vary by venue.
-        </p>
-
-        <p class="top5-explanation">
-          <strong>
-            Are there free indoor activities for toddlers in Berlin?
-          </strong><br>
-          Yes. Some family centres, libraries and
-          community spaces offer free indoor activities.
-          Check age requirements, opening hours
-          and registration rules before visiting.
-        </p>
-
-        <p class="top5-explanation"
-           style="border-bottom:none;">
-          <strong>
-            Can I recommend a family-friendly place?
-          </strong><br>
-          Yes! You can
-          <a href="submit">submit a location</a>
-          and help other parents discover useful
-          places around Berlin.
-        </p>
-
-      </section>
-
-    </main>
-
-
-    <!-- ORIGINAL FOOTER -->
-
-    <footer>
-      <a href="about">About</a> |
-      <a href="submit">Submit a Location</a> |
-      <a href="https://www.instagram.com/fixmydiaper">
-        Instagram
-      </a><br><br>
-
-      Made with ♥️ in Berlin<br>
-
-      Created by
-      <a href="https://fernandapugliero.com"
-         target="_blank" rel="noopener noreferrer">
-        Fernanda Pugliero
-      </a>
-    </footer>
-
-  </div>
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section id="faq">
+
+      <h2 class="section-title">
+        FAQ: Family-Friendly Places in Berlin
+      </h2>
+
+      <p class="top5-explanation">
+        <strong>
+          Where can I find cafés with play areas in Berlin?
+        </strong><br>
+        Look for Kindercafés or cafés with a Spielecke
+        (kids' play corner). Some have dedicated indoor
+        play areas, while others offer smaller spaces
+        for children.
+      </p>
+
+      <p class="top5-explanation">
+        <strong>
+          Are there family-friendly restaurants in Berlin?
+        </strong><br>
+        Yes. Many restaurants welcome families, but
+        facilities vary. Play areas, high chairs,
+        stroller access and changing tables are
+        worth checking before visiting.
+      </p>
+
+      <p class="top5-explanation">
+        <strong>
+          Where can I go with a toddler in Berlin on a rainy day?
+        </strong><br>
+        Libraries, family centres and some community
+        spaces offer indoor activities for young children.
+        Check opening hours, age limits and whether
+        registration is required.
+      </p>
+
+      <p class="top5-explanation"
+         style="border-bottom:none;">
+        <strong>
+          Can I recommend a family-friendly place?
+        </strong><br>
+        Yes! You can
+        <a href="submit">submit a location</a>
+        and help other parents discover useful
+        places around Berlin.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER: SAME AS INDEX -->
+
+  <footer>
+
+    <a href="about">About</a> |
+    <a href="newsletter">Newsletter</a> |
+    <a href="partnerships">Partnerships</a> |
+    <a href="https://www.instagram.com/fixmydiaper"
+       target="_blank"
+       rel="noopener noreferrer">
+      Instagram
+    </a><br><br>
+
+    Made with ♥️ in Berlin<br>
+
+    Created by
+    <a href="https://fernandapugliero.com"
+       target="_blank"
+       rel="noopener noreferrer">
+      Fernanda Pugliero
+    </a> & son
+
+  </footer>
+
+</div>
 </body>
 </html>
