@@ -44,6 +44,7 @@
     rel="stylesheet">
 
   <style>
+
     /* ===== BASE: SAME AS INDEX ===== */
 
     body {
@@ -113,12 +114,9 @@
       font-size: 0.95rem;
       color: #555;
       text-align: center;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
+      margin: 0 auto 1.5rem;
       line-height: 1.5;
       max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     /* ===== SECTION SPACING ===== */
@@ -132,7 +130,7 @@
       margin-top: 0;
     }
 
-    /* ===== STATIC CARDS ===== */
+    /* ===== GRID ===== */
 
     .recent-grid {
       display: grid;
@@ -143,13 +141,14 @@
       padding: 0;
     }
 
+    /* ===== STANDARD CARDS ===== */
+
     .recent-card {
       background: #fff;
       border: 1px solid #eee;
       border-radius: 12px;
       padding: 0.75rem;
       min-width: 0;
-      max-width: none;
       font-size: 0.9rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
@@ -161,11 +160,11 @@
 
     .recent-card img,
     .photo-placeholder {
+      display: block;
       width: 100%;
       aspect-ratio: 4 / 3;
       height: auto;
       border-radius: 8px;
-      display: block;
     }
 
     .recent-card img {
@@ -183,14 +182,78 @@
       text-align: center;
     }
 
+    .recent-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0.1rem 0 0.35rem;
+      line-height: 1.3;
+      text-align: left;
+    }
+
+    .recent-quote {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.25rem 0 0.5rem;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .recent-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.25rem;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    /* ===== FAVORITE PHOTO SECTION ===== */
+
+    .favorites-grid {
+      margin-top: 0;
+    }
+
+    .favorite-photo {
+      position: relative;
+      min-width: 0;
+    }
+
+    .favorite-photo img,
+    .favorite-photo .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* Yellow star sticker */
+
     .fav-badge {
       position: absolute;
       top: 12px;
       right: 12px;
-      width: 88px;
-      height: 88px;
+      width: 96px;
+      height: 96px;
+      padding: 14px;
+      box-sizing: border-box;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
       background: #f5c518;
       color: #333;
+
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: 0.03em;
+
       clip-path: polygon(
         50% 0%,
         61% 13%,
@@ -217,43 +280,9 @@
         24% 7%,
         39% 13%
       );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 10px;
-      box-sizing: border-box;
-      font-size: 0.72rem;
-      font-weight: 700;
-      line-height: 1.05;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
 
-    .recent-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #333;
-      margin: 0.1rem 0 0.35rem 0;
-      line-height: 1.3;
-      text-align: left;
-    }
-
-    .recent-quote {
-      font-size: 0.85rem;
-      color: #555;
-      font-style: italic;
-      margin: 0.25rem 0 0.5rem 0;
-      text-align: left;
-      line-height: 1.4;
-    }
-
-    .recent-meta {
-      font-size: 0.8rem;
-      color: #777;
-      margin-top: 0.25rem;
-      line-height: 1.4;
-      text-align: left;
-    }
+    /* ===== DESKTOP ===== */
 
     @media (min-width: 768px) {
       .recent-grid {
@@ -262,16 +291,20 @@
       }
     }
 
+    /* ===== MOBILE ===== */
+
     @media (max-width: 767px) {
       .recent-card img,
-      .photo-placeholder {
+      .recent-card .photo-placeholder,
+      .favorite-photo img,
+      .favorite-photo .photo-placeholder {
         aspect-ratio: 4 / 5;
       }
 
       .fav-badge {
-        width: 78px;
-        height: 78px;
-        font-size: 0.68rem;
+        width: 86px;
+        height: 86px;
+        font-size: 0.78rem;
       }
     }
 
@@ -307,7 +340,7 @@
       line-height: 1.4;
     }
 
-    /* ===== FAQ ===== */
+    /* ===== FAQ: SAME AS INDEX ===== */
 
     #faq {
       margin-top: 5rem;
@@ -327,7 +360,7 @@
       line-height: 1.4;
     }
 
-    /* ===== FOOTER ===== */
+    /* ===== FOOTER: SAME AS INDEX ===== */
 
     footer {
       margin-top: 5rem;
@@ -345,8 +378,6 @@
       text-decoration: underline;
     }
 
-    /* ===== MOBILE ===== */
-
     @media (max-width: 768px) {
       body {
         padding: 2rem;
@@ -361,11 +392,14 @@
         margin-top: 4rem;
       }
     }
+
   </style>
 </head>
 
 <body>
 <div class="page">
+
+  <!-- NAVIGATION -->
 
   <nav>
     <img src="images/logo.png" alt="Fix My Diaper Logo">
@@ -376,100 +410,176 @@
 
   <main>
 
+    <!-- HERO -->
+
     <h1>Family-friendly cafés & restaurants in Berlin</h1>
 
     <h2>
       Play areas, kid-friendly dining and free indoor spots for little ones.
     </h2>
 
-    <!-- FAVORITES -->
 
-    <section class="home-section" aria-labelledby="favorites-title">
+    <!-- TOP 3 FAVORITE PHOTOS -->
+    <!-- No section heading, no descriptions -->
 
-      <h2 class="section-title" id="favorites-title">
-        Our favorite spots in Berlin
+    <section aria-label="Our favorite spots in Berlin">
+
+      <div class="recent-grid favorites-grid">
+
+        <!-- FAVORITE PHOTO 1 -->
+
+        <div class="favorite-photo">
+          <div class="photo-placeholder">
+            Favorite photo 1
+          </div>
+
+          <div class="fav-badge" aria-label="Our favorite">
+            OUR<br>FAV
+          </div>
+        </div>
+
+        <!-- FAVORITE PHOTO 2 -->
+
+        <div class="favorite-photo">
+          <div class="photo-placeholder">
+            Favorite photo 2
+          </div>
+
+          <div class="fav-badge" aria-label="Our favorite">
+            OUR<br>FAV
+          </div>
+        </div>
+
+        <!-- FAVORITE PHOTO 3 -->
+
+        <div class="favorite-photo">
+          <div class="photo-placeholder">
+            Favorite photo 3
+          </div>
+
+          <div class="fav-badge" aria-label="Our favorite">
+            OUR<br>FAV
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SECTION 1: CAFÉS WITH PLAY AREAS -->
+
+    <section class="home-section"
+             aria-labelledby="cafes-title">
+
+      <h2 class="section-title" id="cafes-title">
+        Cafés with play areas
       </h2>
 
       <p class="section-subtitle">
-        Three places we really love going to with kids.
+        Coffee for you, playtime for them.
       </p>
 
       <div class="recent-grid">
 
+        <!-- KIEZKIND BERLIN -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <div class="photo-placeholder">
               Kiezkind Berlin photo
             </div>
-            <div class="fav-badge">Our fav<br>in Berlin</div>
           </div>
 
-          <div class="recent-title">Kiezkind Berlin</div>
+          <div class="recent-title">
+            Kiezkind Berlin
+          </div>
 
           <p class="recent-quote">
-            “One of the coolest cafés for kids in Berlin! There's a large sandpit
-            and toys scattered throughout the café. In summer, Bobby Cars are
-            parked outside for little ones to ride. No entrance fee — you only
-            pay for what you order.”
+            “One of the coolest cafés for kids in Berlin!
+            There's a large sandpit and toys scattered
+            throughout the café. In summer, Bobby Cars
+            are parked outside for little ones to ride.
+            No entrance fee — you only pay for what you order.”
           </p>
 
           <div class="recent-meta">
             Prenzlauer Berg, Berlin
           </div>
+
         </article>
 
+
+        <!-- KAP FRIDA -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <img
               src="images/kapfrida.jpg"
-              alt="Kap Frida in Berlin"
+              alt="Kap Frida café in Berlin"
               loading="lazy">
-            <div class="fav-badge">Our fav<br>in Berlin</div>
           </div>
 
-          <div class="recent-title">Kap Frida</div>
+          <div class="recent-title">
+            Kap Frida
+          </div>
 
           <p class="recent-quote">
-            “A two-level play area with lots of books and building toys. The café
-            is small, but the play area is usually quiet on weekdays. There's room
-            to bring your stroller inside and park it safely. And the changing
-            table is absolutely wonderful!”
+            “A two-level play area with lots of books
+            and building toys. The café is small, but
+            the play area is usually quiet on weekdays.
+            There's room to bring your stroller inside
+            and park it safely. And the changing table
+            is absolutely wonderful!”
           </p>
 
           <div class="recent-meta">
             Halbinsel Stralau, Berlin
           </div>
+
         </article>
 
+
+        <!-- LE BROT -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <div class="photo-placeholder">
               Le Brot photo
             </div>
-            <div class="fav-badge">Our fav<br>in Berlin</div>
           </div>
 
-          <div class="recent-title">Le Brot</div>
+          <div class="recent-title">
+            Le Brot
+          </div>
 
           <p class="recent-quote">
-            “Both Le Brot locations in Neukölln have a small play area. At the
-            Nansenstraße location, there's a little playhouse with removable parts,
-            children's books and a box full of toys. Perfect for enjoying a
-            croissant while your little one stays entertained.”
+            “Both Le Brot locations in Neukölln have
+            a small play area. At the Nansenstraße location,
+            there's a little playhouse with removable parts,
+            children's books and a box full of toys.
+            Perfect for enjoying a croissant while your
+            little one stays entertained.”
           </p>
 
           <div class="recent-meta">
             Neukölln, Berlin
           </div>
+
         </article>
 
       </div>
 
     </section>
 
-    <!-- FAMILY-FRIENDLY RESTAURANTS -->
 
-    <section class="home-section" aria-labelledby="restaurants-title">
+    <!-- SECTION 2: FAMILY-FRIENDLY RESTAURANTS -->
+
+    <section class="home-section"
+             aria-labelledby="restaurants-title">
 
       <h2 class="section-title" id="restaurants-title">
         Family-friendly restaurants
@@ -481,74 +591,113 @@
 
       <div class="recent-grid">
 
+        <!-- BLOCK HOUSE -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <div class="photo-placeholder">
               Block House photo
             </div>
           </div>
 
-          <div class="recent-title">Block House</div>
+          <div class="recent-title">
+            Block House
+          </div>
 
           <p class="recent-quote">
-            “This place really knows how to welcome families with young children!
-            There's space to park your stroller next to the table, high chairs,
-            a kids' menu, a changing table and toys brought over by the staff.
-            Before you even order, your child gets crayons and a colouring sheet.
-            After the meal, there's often another little surprise to take home,
-            like a teddy bear or a puzzle.”
+            “This place really knows how to welcome
+            families with young children! There's space
+            to park your stroller next to the table,
+            high chairs, a kids' menu, a changing table
+            and toys brought over by the staff.
+            Before you even order, your child gets crayons
+            and a colouring sheet. After the meal,
+            there's often another little surprise to
+            take home, like a teddy bear or a puzzle.”
           </p>
 
           <div class="recent-meta">
             Friedrichshain, Berlin
           </div>
+
         </article>
 
+
+        <!-- THE PLAYCE -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <div class="photo-placeholder">
               The Playce photo
             </div>
           </div>
 
-          <div class="recent-title">The Playce</div>
+          <div class="recent-title">
+            The Playce
+          </div>
 
           <p class="recent-quote">
-            “The newly redesigned Hape Kids Zone reopened on October 30, 2026,
-            at The Playce in Potsdamer Platz. A dedicated indoor space where kids
-            can play and explore.”
+            “The Playce is actually a food court with
+            14 restaurants to choose from. Tucked away
+            under the stairs, there's a surprisingly
+            spacious kids' play area. It was completely
+            redesigned and reopened on October 30, 2026,
+            so everything is still brand new!”
           </p>
 
           <div class="recent-meta">
             Mitte, Berlin
           </div>
+
         </article>
 
+
+        <!-- LUISENBRÄU -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <div class="photo-placeholder">
               Luisenbräu photo
             </div>
           </div>
 
-          <div class="recent-title">Luisenbräu</div>
+          <div class="recent-title">
+            Luisenbräu
+          </div>
 
           <p class="recent-quote">
-            [Add your short review of Luisenbräu.]
+            “A friend recommended this place, and she
+            couldn't stop talking about it! The food
+            is delicious, the portions are generous,
+            and the staff is incredibly welcoming.
+            ‘I thought it would be a tourist trap,
+            but the quality surprised me. Our baby
+            was asleep when we arrived, and the staff
+            started speaking quietly so they wouldn't
+            wake her. When she woke up, they even
+            played with her!’ There's also a pretty
+            spacious kids' play area with lots of
+            toys, including a mini kitchen.”
           </p>
 
           <div class="recent-meta">
             Charlottenburg, Berlin
           </div>
+
         </article>
 
       </div>
 
     </section>
 
-    <!-- FREE INDOOR SPOTS -->
 
-    <section class="home-section" aria-labelledby="indoor-title">
+    <!-- SECTION 3: FREE INDOOR SPOTS -->
+
+    <section class="home-section"
+             aria-labelledby="indoor-title">
 
       <h2 class="section-title" id="indoor-title">
         Free indoor spots for kids
@@ -560,14 +709,19 @@
 
       <div class="recent-grid">
 
+        <!-- SPORE -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <div class="photo-placeholder">
               Spore photo
             </div>
           </div>
 
-          <div class="recent-title">Spore</div>
+          <div class="recent-title">
+            Spore
+          </div>
 
           <p class="recent-quote">
             [Add your short review of Spore.]
@@ -576,16 +730,23 @@
           <div class="recent-meta">
             [Neighbourhood], Berlin
           </div>
+
         </article>
 
+
+        <!-- HUMBOLDT FORUM -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <div class="photo-placeholder">
               Humboldt Forum photo
             </div>
           </div>
 
-          <div class="recent-title">Humboldt Forum</div>
+          <div class="recent-title">
+            Humboldt Forum
+          </div>
 
           <p class="recent-quote">
             [Add your short review of Humboldt Forum.]
@@ -594,16 +755,23 @@
           <div class="recent-meta">
             Mitte, Berlin
           </div>
+
         </article>
 
+
+        <!-- LUDOTHEK GLOBAL -->
+
         <article class="recent-card">
+
           <div class="recent-media">
             <div class="photo-placeholder">
               Ludothek Global photo
             </div>
           </div>
 
-          <div class="recent-title">Ludothek Global</div>
+          <div class="recent-title">
+            Ludothek Global
+          </div>
 
           <p class="recent-quote">
             [Add your short review of Ludothek Global.]
@@ -612,47 +780,74 @@
           <div class="recent-meta">
             [Neighbourhood], Berlin
           </div>
+
         </article>
 
       </div>
 
     </section>
 
-    <!-- WAITLIST -->
 
-    <section class="home-section" aria-labelledby="ebook-heading">
+    <!-- EBOOK WAITLIST -->
+
+    <section class="home-section"
+             aria-labelledby="ebook-heading">
 
       <h2 class="section-title" id="ebook-heading">
         The Berlin family guide is coming! ❤️
       </h2>
 
       <p class="section-subtitle">
-        More family-friendly spots, personal reviews and practical tips.
-        Join the waitlist for early access and a special pre-launch price.
+        More family-friendly spots, personal reviews
+        and practical tips. Join the waitlist for
+        early access and a special pre-launch price.
       </p>
 
       <div class="waitlist-wrap">
-        <div class="tally-embed">
-          <!--
-            Paste your Tally embed code here.
 
-            Suggested form fields:
-            - Email address
-            - Consent checkbox
+        <div class="tally-embed">
+
+          <!--
+            TALLY EMBED GOES HERE
+
+            Paste the embed code generated by Tally.
+
+            Recommended design:
+
+            Background: #FFFFFF
+            Text: #333333
+            Font: Inter (if available)
+            Button background: #333333
+            Button text: #FFFFFF
+            Rounded button corners
+            No cover image
+            No repeated heading
+
+            Form fields:
+            - Email address (required)
+            - Consent checkbox (required)
 
             Suggested consent:
-            "I agree to receive emails from Fix My Diaper about
-            the Berlin family guide, including early access and
-            a special pre-launch offer. I can unsubscribe at any time."
+
+            "I agree to receive emails from Fix My Diaper
+            about the Berlin family guide, including early
+            access and a special pre-launch offer.
+            I can unsubscribe at any time."
+
+            Configure double opt-in and update the
+            privacy policy before collecting emails.
           -->
+
         </div>
 
         <p class="waitlist-note">
           Ebook launch updates only. No spam.
         </p>
+
       </div>
 
     </section>
+
 
     <!-- FAQ -->
 
@@ -663,35 +858,55 @@
       </h2>
 
       <p class="top5-explanation">
-        <strong>Where can I find cafés with play areas in Berlin?</strong><br>
-        Look for Kindercafés or cafés with a Spielecke (kids' play corner).
-        Kiezkind Berlin, Kap Frida and Le Brot are some great options to start with.
+        <strong>
+          Where can I find cafés with play areas in Berlin?
+        </strong><br>
+        Look for Kindercafés or cafés with a Spielecke
+        (kids' play corner). Kiezkind Berlin, Kap Frida
+        and Le Brot are some great options to start with.
       </p>
 
       <p class="top5-explanation">
-        <strong>Are there family-friendly restaurants in Berlin?</strong><br>
-        Yes. Some restaurants offer high chairs, children's menus, room for strollers
-        and changing tables. Check facilities at the specific location before visiting.
+        <strong>
+          Are there family-friendly restaurants in Berlin?
+        </strong><br>
+        Yes. Some restaurants offer high chairs,
+        children's menus, room for strollers
+        and changing tables. Check facilities
+        at the specific location before visiting.
       </p>
 
       <p class="top5-explanation">
-        <strong>Where can I go with a toddler in Berlin on a rainy day?</strong><br>
-        Libraries, cultural spaces and family centres can offer indoor activities
-        for young children. Check opening hours, admission conditions and age
-        suitability before visiting.
+        <strong>
+          Where can I go with a toddler in Berlin
+          on a rainy day?
+        </strong><br>
+        Libraries, cultural spaces and family centres
+        can offer indoor activities for young children.
+        Check opening hours, admission conditions
+        and age suitability before visiting.
       </p>
 
-      <p class="top5-explanation" style="border-bottom:none;">
-        <strong>Can I recommend a family-friendly place?</strong><br>
-        Yes! You can <a href="submit">submit a location</a> and help other parents
-        discover useful places around Berlin.
+      <p class="top5-explanation"
+         style="border-bottom:none;">
+        <strong>
+          Can I recommend a family-friendly place?
+        </strong><br>
+        Yes! You can
+        <a href="submit">submit a location</a>
+        and help other parents discover useful
+        places around Berlin.
       </p>
 
     </section>
 
   </main>
 
+
+  <!-- FOOTER -->
+
   <footer>
+
     <a href="about">About</a> |
     <a href="newsletter">Newsletter</a> |
     <a href="partnerships">Partnerships</a> |
@@ -709,6 +924,7 @@
        rel="noopener noreferrer">
       Fernanda Pugliero
     </a> & son
+
   </footer>
 
 </div>
