@@ -158,24 +158,23 @@
       margin-bottom: 0.5rem;
     }
 
-    .recent-card img,
-    .photo-placeholder {
-      display: block;
+    .recent-media img {
       width: 100%;
       aspect-ratio: 4 / 3;
       height: auto;
-      border-radius: 8px;
-    }
-
-    .recent-card img {
       object-fit: cover;
       object-position: center;
+      border-radius: 8px;
+      display: block;
     }
 
     .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 3;
       background: #f6f6f6;
       color: #999;
       font-size: 0.85rem;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -208,7 +207,7 @@
       text-align: left;
     }
 
-    /* ===== FAVORITE PHOTO SECTION ===== */
+    /* ===== FAVORITE PHOTOS ===== */
 
     .favorites-grid {
       margin-top: 0;
@@ -219,12 +218,12 @@
       min-width: 0;
     }
 
-    .favorite-photo img,
-    .favorite-photo .photo-placeholder {
+    .favorite-photo img {
       width: 100%;
       aspect-ratio: 4 / 3;
       height: auto;
       object-fit: cover;
+      object-position: center;
       border-radius: 12px;
       display: block;
     }
@@ -241,6 +240,7 @@
       box-sizing: border-box;
 
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -294,10 +294,9 @@
     /* ===== MOBILE ===== */
 
     @media (max-width: 767px) {
-      .recent-card img,
-      .recent-card .photo-placeholder,
-      .favorite-photo img,
-      .favorite-photo .photo-placeholder {
+      .recent-media img,
+      .photo-placeholder,
+      .favorite-photo img {
         aspect-ratio: 4 / 5;
       }
 
@@ -420,42 +419,45 @@
 
 
     <!-- TOP 3 FAVORITE PHOTOS -->
-    <!-- No section heading, no descriptions -->
+    <!-- Only images and yellow badges -->
 
     <section aria-label="Our favorite spots in Berlin">
 
       <div class="recent-grid favorites-grid">
 
-        <!-- FAVORITE PHOTO 1 -->
+        <!-- MARALOU -->
 
         <div class="favorite-photo">
-          <div class="images/family-friendly-berlin/maralou.jpeg">
-            Favorite photo 1
-          </div>
+          <img
+            src="/images/family-friendly-berlin/maralou.jpeg"
+            alt="MaraLou, one of our favorite family-friendly places in Berlin"
+            loading="eager">
 
           <div class="fav-badge" aria-label="Our favorite">
             OUR<br>FAV
           </div>
         </div>
 
-        <!-- FAVORITE PHOTO 2 -->
+        <!-- VITO -->
 
         <div class="favorite-photo">
-          <div class="images/family-friendly-berlin/baubau.jpeg">
-            Favorite photo 2
-          </div>
+          <img
+            src="/images/family-friendly-berlin/vito.jpeg"
+            alt="Vito, one of our favorite family-friendly places in Berlin"
+            loading="eager">
 
           <div class="fav-badge" aria-label="Our favorite">
             OUR<br>FAV
           </div>
         </div>
 
-        <!-- FAVORITE PHOTO 3 -->
+        <!-- PUBLIX -->
 
         <div class="favorite-photo">
-          <div class="images/family-friendly-berlin/publix.jpeg">
-            Favorite photo 3
-          </div>
+          <img
+            src="/images/family-friendly-berlin/publix.jpeg"
+            alt="Publix, one of our favorite family-friendly places in Berlin"
+            loading="eager">
 
           <div class="fav-badge" aria-label="Our favorite">
             OUR<br>FAV
@@ -482,30 +484,32 @@
 
       <div class="recent-grid">
 
-        <!-- KIEZKIND BERLIN -->
+        <!-- LE BROT -->
 
         <article class="recent-card">
 
           <div class="recent-media">
-            <div class="photo-placeholder">
-              Kiezkind Berlin photo
-            </div>
+            <img
+              src="/images/family-friendly-berlin/lebrot1.jpeg"
+              alt="Le Brot play area in Neukölln, Berlin"
+              loading="lazy">
           </div>
 
           <div class="recent-title">
-            Kiezkind Berlin
+            Le Brot
           </div>
 
           <p class="recent-quote">
-            “One of the coolest cafés for kids in Berlin!
-            There's a large sandpit and toys scattered
-            throughout the café. In summer, Bobby Cars
-            are parked outside for little ones to ride.
-            No entrance fee — you only pay for what you order.”
+            “Both Le Brot locations in Neukölln have
+            a small play area. At the Nansenstraße location,
+            there's a little playhouse with removable parts,
+            children's books and a box full of toys.
+            Perfect for enjoying a croissant while your
+            little one stays entertained.”
           </p>
 
           <div class="recent-meta">
-            Prenzlauer Berg, Berlin
+            Neukölln, Berlin
           </div>
 
         </article>
@@ -517,8 +521,8 @@
 
           <div class="recent-media">
             <img
-              src="images/family-friendly-berlin/kapfrida.jpeg"
-              alt="Kap Frida café in Berlin"
+              src="/images/family-friendly-berlin/kapfrida.jpeg"
+              alt="Kap Frida play area in Halbinsel Stralau, Berlin"
               loading="lazy">
           </div>
 
@@ -542,31 +546,31 @@
         </article>
 
 
-        <!-- LE BROT -->
+        <!-- KIEZKIND BERLIN -->
 
         <article class="recent-card">
 
           <div class="recent-media">
-            <div class="images/family-friendly-berlin/lebrot1.jpeg">
-              Le Brot photo
-            </div>
+            <img
+              src="/images/family-friendly-berlin/kiezkind.jpeg"
+              alt="Kiezkind Berlin café with kids' sandpit and play area"
+              loading="lazy">
           </div>
 
           <div class="recent-title">
-            Le Brot
+            Kiezkind Berlin
           </div>
 
           <p class="recent-quote">
-            “Both Le Brot locations in Neukölln have
-            a small play area. At the Nansenstraße location,
-            there's a little playhouse with removable parts,
-            children's books and a box full of toys.
-            Perfect for enjoying a croissant while your
-            little one stays entertained.”
+            “One of the coolest cafés for kids in Berlin!
+            There's a large sandpit and toys scattered
+            throughout the café. In summer, Bobby Cars
+            are parked outside for little ones to ride.
+            No entrance fee — you only pay for what you order.”
           </p>
 
           <div class="recent-meta">
-            Neukölln, Berlin
+            Prenzlauer Berg, Berlin
           </div>
 
         </article>
@@ -596,9 +600,10 @@
         <article class="recent-card">
 
           <div class="recent-media">
-            <div class="images/family-friendly-berlin/blockhouse.jpeg">
-              Block House photo
-            </div>
+            <img
+              src="/images/family-friendly-berlin/blockhouse.jpeg"
+              alt="Block House family-friendly restaurant in Friedrichshain, Berlin"
+              loading="lazy">
           </div>
 
           <div class="recent-title">
@@ -624,44 +629,15 @@
         </article>
 
 
-        <!-- THE PLAYCE -->
-
-        <article class="recent-card">
-
-          <div class="recent-media">
-            <div class="images/family-friendly-berlin/theplayce.jpeg">
-              The Playce photo
-            </div>
-          </div>
-
-          <div class="recent-title">
-            The Playce
-          </div>
-
-          <p class="recent-quote">
-            “The Playce is actually a food court with
-            14 restaurants to choose from. Tucked away
-            under the stairs, there's a surprisingly
-            spacious kids' play area. It was completely
-            redesigned and reopened on October 30, 2026,
-            so everything is still brand new!”
-          </p>
-
-          <div class="recent-meta">
-            Mitte, Berlin
-          </div>
-
-        </article>
-
-
         <!-- LUISENBRÄU -->
 
         <article class="recent-card">
 
           <div class="recent-media">
-            <div class="images/family-friendly-berlin/luisenbrau.jpeg">
-              Luisenbräu photo
-            </div>
+            <img
+              src="/images/family-friendly-berlin/luisenbrau.jpeg"
+              alt="Luisenbräu family-friendly restaurant in Charlottenburg, Berlin"
+              loading="lazy">
           </div>
 
           <div class="recent-title">
@@ -689,6 +665,37 @@
 
         </article>
 
+
+        <!-- THE PLAYCE -->
+        <!-- Photo not uploaded yet -->
+
+        <article class="recent-card">
+
+          <div class="recent-media">
+            <div class="photo-placeholder">
+              The Playce photo coming soon
+            </div>
+          </div>
+
+          <div class="recent-title">
+            The Playce
+          </div>
+
+          <p class="recent-quote">
+            “The Playce is actually a food court with
+            14 restaurants to choose from. Tucked away
+            under the stairs, there's a surprisingly
+            spacious kids' play area. It was completely
+            redesigned and reopened on October 30, 2026,
+            so everything is still brand new!”
+          </p>
+
+          <div class="recent-meta">
+            Mitte, Berlin
+          </div>
+
+        </article>
+
       </div>
 
     </section>
@@ -709,39 +716,15 @@
 
       <div class="recent-grid">
 
-        <!-- SPORE -->
-
-        <article class="recent-card">
-
-          <div class="recent-media">
-            <div class="images/family-friendly-berlin/spore.jpeg">
-              Spore photo
-            </div>
-          </div>
-
-          <div class="recent-title">
-            Spore
-          </div>
-
-          <p class="recent-quote">
-            [Add your short review of Spore.]
-          </p>
-
-          <div class="recent-meta">
-            [Neighbourhood], Berlin
-          </div>
-
-        </article>
-
-
         <!-- HUMBOLDT FORUM -->
 
         <article class="recent-card">
 
           <div class="recent-media">
-            <div class="images/family-friendly-berlin/humboldt_forum.jpeg">
-              Humboldt Forum photo
-            </div>
+            <img
+              src="/images/family-friendly-berlin/humboldt_forum.jpeg"
+              alt="Humboldt Forum indoor family-friendly space in Berlin"
+              loading="lazy">
           </div>
 
           <div class="recent-title">
@@ -759,14 +742,41 @@
         </article>
 
 
+        <!-- SPORE -->
+
+        <article class="recent-card">
+
+          <div class="recent-media">
+            <img
+              src="/images/family-friendly-berlin/spore.jpeg"
+              alt="Spore indoor family-friendly space in Berlin"
+              loading="lazy">
+          </div>
+
+          <div class="recent-title">
+            Spore
+          </div>
+
+          <p class="recent-quote">
+            [Add your short review of Spore.]
+          </p>
+
+          <div class="recent-meta">
+            [Neighbourhood], Berlin
+          </div>
+
+        </article>
+
+
         <!-- LUDOTHEK GLOBAL -->
 
         <article class="recent-card">
 
           <div class="recent-media">
-            <div class="images/family-friendly-berlin/ludothek.jpeg">
-              Ludothek Global photo
-            </div>
+            <img
+              src="/images/family-friendly-berlin/ludothek.jpeg"
+              alt="Ludothek Global indoor play space for children in Berlin"
+              loading="lazy">
           </div>
 
           <div class="recent-title">
@@ -778,7 +788,7 @@
           </p>
 
           <div class="recent-meta">
-            Neukölln, Berlin
+            [Neighbourhood], Berlin
           </div>
 
         </article>
@@ -903,7 +913,7 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- FOOTER: SAME AS INDEX -->
 
   <footer>
 
