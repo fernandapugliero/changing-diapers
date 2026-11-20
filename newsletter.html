@@ -510,15 +510,52 @@
       object-fit: contain;
     }
 
-    /* DESKTOP */
+    /* ========================================
+       BOTTOM NEWSLETTER SIGNUP
+       ======================================== */
+
+    .bottom-signup {
+      max-width: 720px;
+      margin: 5rem auto 0;
+      text-align: center;
+    }
+
+    .bottom-signup h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+      line-height: 1.3;
+      margin: 0 0 2rem;
+    }
+
+    /* ========================================
+       DESKTOP
+       ======================================== */
 
     @media (min-width: 768px) {
 
       .preview-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(6, minmax(0, 1fr));
         column-gap: 1.5rem;
         row-gap: 2.5rem;
         align-items: start;
+      }
+
+      /* First row: three equal cards */
+
+      .preview-card {
+        grid-column: span 2;
+      }
+
+      /* Second row: two equal cards, centered */
+
+      .preview-card:nth-child(4) {
+        grid-column: 2 / span 2;
+      }
+
+      .preview-card:nth-child(5) {
+        grid-column: 4 / span 2;
       }
 
       .preview-media {
@@ -529,31 +566,17 @@
         aspect-ratio: auto;
       }
 
-      .preview-card--meme {
-        grid-column: span 2;
-      }
-
-      .preview-card--meme .preview-media {
-        max-width: 470px;
-        width: 100%;
-        margin: 0 auto;
-        border-top: 0;
-      }
-
-      .preview-card--meme .preview-header {
-        max-width: 470px;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0 auto;
-      }
     }
 
-    /* MOBILE */
+    /* ========================================
+       MOBILE
+       ======================================== */
 
     @media (max-width: 767px) {
 
       .editorial-section,
-      .archive-section {
+      .archive-section,
+      .bottom-signup {
         margin-top: 3.5rem;
       }
 
@@ -843,7 +866,7 @@
 
           <!-- 05. HUMOUR AND PERSONALITY -->
 
-          <article class="preview-card preview-card--meme">
+          <article class="preview-card">
 
             <div class="preview-header">
 
@@ -876,6 +899,44 @@
 
           </article>
 
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================
+           BOTTOM NEWSLETTER SIGNUP
+           =================================== -->
+
+      <section
+        class="bottom-signup"
+        aria-labelledby="bottom-signup-title"
+      >
+
+        <h2 id="bottom-signup-title">
+          Get on the list now 👇
+        </h2>
+
+        <div class="newsletter-wrap">
+
+          <div class="form-card">
+
+            <div class="beehiiv-embed">
+
+              <script
+                async
+                src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+                data-beehiiv-form="59aac14a-0203-4680-bd56-d26c6157a79f">
+              </script>
+
+            </div>
+
+          </div>
+
+          <p class="reassurance">
+            One or two emails a month. No spam.
+          </p>
 
         </div>
 
