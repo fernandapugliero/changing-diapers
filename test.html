@@ -379,10 +379,11 @@
 
     /* ========================================
        NEWSLETTER PREVIEWS
+       Mirrors the favorite-photo layout on the cafés page.
        ======================================== */
 
     .archive-section {
-      max-width: 920px;
+      max-width: 1200px;
       margin: 5rem auto 0;
     }
 
@@ -407,25 +408,23 @@
     .preview-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 1.5rem;
+      margin: 1.2rem auto 2rem;
     }
 
-    .preview-card {
-      background: #fff;
-      border: 1px solid #eee;
+    .preview-item {
+      min-width: 0;
+    }
+
+    .preview-media {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      background: #f6f6f6;
     }
 
-    .preview-shot {
-      height: 270px;
-      background: #f4f4f4;
-      overflow: hidden;
-      border-bottom: 1px solid #eee;
-    }
-
-    .preview-shot img {
+    .preview-media img {
       display: block;
       width: 100%;
       height: 100%;
@@ -433,34 +432,40 @@
       object-position: top center;
     }
 
-    .preview-copy {
-      padding: 0.95rem 1rem 1rem;
+    .preview-media--meme img {
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
     }
 
-    .preview-copy p {
-      margin: 0;
+    .preview-caption {
+      font-family: 'Inter', sans-serif;
       font-size: 0.85rem;
-      line-height: 1.45;
-      color: #666;
+      font-weight: 400;
+      color: #555;
+      text-align: center;
+      line-height: 1.4;
+      margin: 0.65rem 0 0;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
-    .preview-copy strong {
+    .preview-caption strong {
       font-weight: 600;
       color: #333;
     }
 
+    /* Same breakpoint and three-column grid as the cafés page. */
     @media (min-width: 768px) {
       .preview-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.25rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
       }
 
-      .preview-shot {
-        height: 340px;
+      .preview-media {
+        aspect-ratio: 4 / 5;
       }
     }
 
@@ -594,98 +599,49 @@
 
         <div class="preview-grid">
 
-          <!-- EVENTS AND ACTIVITIES -->
-
-          <article class="preview-card">
-            <div class="preview-shot">
-              <img
-                src="/images/newsletter-preview-1.jpg"
-                alt="Newsletter excerpt with upcoming activities and events for Berlin families"
-                loading="lazy"
-              >
+          <article class="preview-item">
+            <div class="preview-media">
+              <img src="/images/newsletter-preview-1.jpg"
+                   alt="Newsletter excerpt with Berlin family events and classes"
+                   loading="lazy">
             </div>
-            <div class="preview-copy">
-              <p>
-                <strong>What's happening.</strong>
-                Classes, events and seasonal ideas for your family calendar.
-              </p>
-            </div>
+            <p class="preview-caption"><strong>What's happening.</strong> Classes, events and seasonal ideas for your family calendar.</p>
           </article>
 
-
-          <!-- PLACES ACTUALLY VISITED -->
-
-          <article class="preview-card">
-            <div class="preview-shot">
-              <img
-                src="/images/newsletter-preview-2.jpg"
-                alt="Britzer Garten photograph and recommendation from the newsletter"
-                loading="lazy"
-              >
+          <article class="preview-item">
+            <div class="preview-media">
+              <img src="/images/newsletter-preview-2.jpg"
+                   alt="Newsletter photo and review of Britzer Garten"
+                   loading="lazy">
             </div>
-            <div class="preview-copy">
-              <p>
-                <strong>Places we've actually tried.</strong>
-                Parks, cafés and outings worth discovering with kids.
-              </p>
-            </div>
+            <p class="preview-caption"><strong>Places we've actually tried.</strong> Parks, cafés and outings worth discovering with kids.</p>
           </article>
 
-
-          <!-- EDITORIAL AND OPINIONS -->
-
-          <article class="preview-card">
-            <div class="preview-shot">
-              <img
-                src="/images/newsletter-preview-3.jpg"
-                alt="Newsletter excerpt about a survey of family-friendly restaurants in Berlin"
-                loading="lazy"
-              >
+          <article class="preview-item">
+            <div class="preview-media">
+              <img src="/images/newsletter-preview-3.jpg"
+                   alt="Newsletter excerpt discussing parents and restaurants in Berlin"
+                   loading="lazy">
             </div>
-            <div class="preview-copy">
-              <p>
-                <strong>Beyond recommendations.</strong>
-                Opinions, surveys and questions about family life in Berlin.
-              </p>
-            </div>
+            <p class="preview-caption"><strong>Beyond recommendations.</strong> Opinions, surveys and questions about family life in Berlin.</p>
           </article>
 
-
-          <!-- PARENT RECOMMENDATIONS -->
-
-          <article class="preview-card">
-            <div class="preview-shot">
-              <img
-                src="/images/newsletter-preview-4.jpg"
-                alt="Newsletter excerpt sharing local parents' café recommendations in Stralau"
-                loading="lazy"
-              >
+          <article class="preview-item">
+            <div class="preview-media">
+              <img src="/images/newsletter-preview-4.jpg"
+                   alt="Newsletter excerpt with tips about Kap Frida and cafés in Stralau"
+                   loading="lazy">
             </div>
-            <div class="preview-copy">
-              <p>
-                <strong>Tips from other parents.</strong>
-                Local discoveries and practical details you might miss.
-              </p>
-            </div>
+            <p class="preview-caption"><strong>Tips from other parents.</strong> Local discoveries and practical details you might miss.</p>
           </article>
 
-
-          <!-- HUMOUR AND PERSONALITY -->
-
-          <article class="preview-card">
-            <div class="preview-shot">
-              <img
-                src="/images/newsletter-preview-5.jpg"
-                alt="Humorous meme from the newsletter about changing diapers while out with a baby"
-                loading="lazy"
-              >
+          <article class="preview-item">
+            <div class="preview-media preview-media--meme">
+              <img src="/images/newsletter-preview-5.jpg"
+                   alt="Humorous meme about finding a changing table while out with a baby"
+                   loading="lazy">
             </div>
-            <div class="preview-copy">
-              <p>
-                <strong>A little humour, too.</strong>
-                Because parenting in Berlin has its funny moments.
-              </p>
-            </div>
+            <p class="preview-caption"><strong>A little humour, too.</strong> Because parenting in Berlin has its funny moments.</p>
           </article>
 
         </div>
@@ -699,11 +655,10 @@
 
     <footer>
       Made with ♥️ in Berlin<br />
-      Created by <a
-        href="https://fernandapugliero.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Fernanda Pugliero</a> & son
+      Created by <a href="https://fernandapugliero.com"
+   target="_blank"
+   rel="noopener noreferrer">
+  Fernanda Pugliero</a> & son
     </footer>
 
   </div>
