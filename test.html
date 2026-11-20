@@ -379,9 +379,7 @@
 
     /* ========================================
        NEWSLETTER PREVIEWS
-
-       PROMISE ABOVE SCREENSHOT
-       EDITORIAL SPACING
+       NUMBERED CARDS
        MOBILE FIRST
        ======================================== */
 
@@ -408,46 +406,12 @@
       line-height: 1.6;
     }
 
-    /* GRID */
-
     .preview-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
       gap: 3rem;
       margin: 0 auto 2rem;
     }
-
-    .preview-item {
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* TEXT ABOVE IMAGE */
-
-    .preview-copy {
-      text-align: center;
-      margin: 0 0 1.5rem;
-      padding: 0 0.25rem;
-    }
-
-    .preview-copy h3 {
-      font-size: 0.98rem;
-      font-weight: 600;
-      line-height: 1.4;
-      color: #333;
-      margin: 0 0 0.5rem;
-    }
-
-    .preview-copy p {
-      font-size: 0.85rem;
-      font-weight: 400;
-      line-height: 1.45;
-      color: #666;
-      margin: 0;
-    }
-
-    /* SCREENSHOT CARD */
 
     .preview-card {
       min-width: 0;
@@ -456,13 +420,57 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
     }
+
+    /* NUMBER + PROMISE */
+
+    .preview-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 1.15rem 1.5rem;
+      background: #fff;
+    }
+
+    .preview-number {
+      flex: 0 0 auto;
+      font-size: 1.15rem;
+      line-height: 1.3;
+      font-weight: 600;
+      color: #999;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .preview-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .preview-copy h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #333;
+      margin: 0 0 0.5rem;
+    }
+
+    .preview-copy p {
+      font-size: 0.85rem;
+      line-height: 1.45;
+      color: #666;
+      margin: 0;
+    }
+
+    /* SCREENSHOTS */
 
     .preview-media {
       width: 100%;
       aspect-ratio: 4 / 5;
       background: #f7f7f7;
       overflow: hidden;
+      border-top: 1px solid #eee;
     }
 
     .preview-media img {
@@ -474,7 +482,7 @@
     }
 
     /* OPINION SCREENSHOT
-       ZOOMED OUT FOR CONSISTENCY */
+       LESS ZOOM, MORE VISIBLE TEXT */
 
     .preview-media--opinion {
       padding: 1.1rem;
@@ -487,8 +495,8 @@
       object-position: center top;
     }
 
-    /* COMPLETE MEME SCREENSHOT
-       INCLUDES TEXT ABOVE IMAGE */
+    /* MEME:
+       FULL SCREENSHOT, INCLUDING TEXT ABOVE */
 
     .preview-media--meme {
       aspect-ratio: auto;
@@ -509,7 +517,7 @@
       .preview-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 1.5rem;
-        row-gap: 3rem;
+        row-gap: 2.5rem;
         align-items: start;
       }
 
@@ -521,22 +529,23 @@
         aspect-ratio: auto;
       }
 
-      .preview-item--meme {
+      .preview-card--meme {
         grid-column: span 2;
       }
 
-      .preview-item--meme .preview-card {
+      .preview-card--meme .preview-media {
         max-width: 470px;
         width: 100%;
         margin: 0 auto;
+        border-top: 0;
       }
 
-      .preview-item--meme .preview-copy {
+      .preview-card--meme .preview-header {
         max-width: 470px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
       }
-
     }
 
     /* MOBILE */
@@ -550,10 +559,6 @@
 
       .preview-grid {
         row-gap: 3rem;
-      }
-
-      .preview-copy {
-        margin-bottom: 1.5rem;
       }
 
     }
@@ -689,164 +694,183 @@
           parenting in Berlin.
         </p>
 
-
         <div class="preview-grid">
 
 
-          <!-- 1. EVENTS AND ACTIVITIES -->
+          <!-- 01. EVENTS AND ACTIVITIES -->
 
-          <article class="preview-item">
+          <article class="preview-card">
 
-            <div class="preview-copy">
+            <div class="preview-header">
 
-              <h3>What's happening.</h3>
+              <span class="preview-number" aria-hidden="true">
+                01
+              </span>
 
-              <p>
-                Classes, events and seasonal ideas
-                for your family calendar.
-              </p>
+              <div class="preview-copy">
+
+                <h3>What's happening</h3>
+
+                <p>
+                  Classes, events and seasonal ideas
+                  for your family calendar.
+                </p>
+
+              </div>
 
             </div>
 
-            <div class="preview-card">
+            <div class="preview-media">
 
-              <div class="preview-media">
-
-                <img
-                  src="/images/newsletter-preview-1.jpg"
-                  alt="Newsletter excerpt about upcoming events and activities for Berlin families"
-                  loading="lazy"
-                >
-
-              </div>
+              <img
+                src="/images/newsletter-preview-1.jpg"
+                alt="Newsletter excerpt about upcoming events and activities for Berlin families"
+                loading="lazy"
+              >
 
             </div>
 
           </article>
 
 
-          <!-- 2. PLACES WE'VE TRIED -->
+          <!-- 02. PLACES WE'VE TRIED -->
 
-          <article class="preview-item">
+          <article class="preview-card">
 
-            <div class="preview-copy">
+            <div class="preview-header">
 
-              <h3>Places we've actually tried.</h3>
+              <span class="preview-number" aria-hidden="true">
+                02
+              </span>
 
-              <p>
-                Parks, cafés and outings worth
-                discovering with kids.
-              </p>
+              <div class="preview-copy">
+
+                <h3>Places we've actually tried</h3>
+
+                <p>
+                  Parks, cafés and outings worth
+                  discovering with kids.
+                </p>
+
+              </div>
 
             </div>
 
-            <div class="preview-card">
+            <div class="preview-media">
 
-              <div class="preview-media">
-
-                <img
-                  src="/images/newsletter-preview-2.jpg"
-                  alt="Newsletter excerpt featuring a family outing to Britzer Garten"
-                  loading="lazy"
-                >
-
-              </div>
+              <img
+                src="/images/newsletter-preview-2.jpg"
+                alt="Newsletter excerpt featuring a family outing to Britzer Garten"
+                loading="lazy"
+              >
 
             </div>
 
           </article>
 
 
-          <!-- 3. OPINIONS AND FAMILY LIFE -->
+          <!-- 03. OPINIONS AND FAMILY LIFE -->
 
-          <article class="preview-item">
+          <article class="preview-card">
 
-            <div class="preview-copy">
+            <div class="preview-header">
 
-              <h3>Beyond recommendations.</h3>
+              <span class="preview-number" aria-hidden="true">
+                03
+              </span>
 
-              <p>
-                Opinions, surveys and questions
-                about family life in Berlin.
-              </p>
+              <div class="preview-copy">
+
+                <h3>Beyond recommendations</h3>
+
+                <p>
+                  Opinions, surveys and questions
+                  about family life in Berlin.
+                </p>
+
+              </div>
 
             </div>
 
-            <div class="preview-card">
+            <div class="preview-media preview-media--opinion">
 
-              <div class="preview-media preview-media--opinion">
-
-                <img
-                  src="/images/newsletter-preview-3.jpg"
-                  alt="Newsletter excerpt discussing family-friendly restaurants and the experience of Berlin parents"
-                  loading="lazy"
-                >
-
-              </div>
+              <img
+                src="/images/newsletter-preview-3.jpg"
+                alt="Newsletter excerpt discussing family-friendly restaurants and the experience of Berlin parents"
+                loading="lazy"
+              >
 
             </div>
 
           </article>
 
 
-          <!-- 4. TIPS FROM OTHER PARENTS -->
+          <!-- 04. TIPS FROM OTHER PARENTS -->
 
-          <article class="preview-item">
+          <article class="preview-card">
 
-            <div class="preview-copy">
+            <div class="preview-header">
 
-              <h3>Tips from other parents.</h3>
+              <span class="preview-number" aria-hidden="true">
+                04
+              </span>
 
-              <p>
-                Local discoveries and practical
-                details you might miss.
-              </p>
+              <div class="preview-copy">
+
+                <h3>Tips from other parents</h3>
+
+                <p>
+                  Local discoveries and practical
+                  details you might miss.
+                </p>
+
+              </div>
 
             </div>
 
-            <div class="preview-card">
+            <div class="preview-media">
 
-              <div class="preview-media">
-
-                <img
-                  src="/images/newsletter-preview-4.jpg"
-                  alt="Newsletter excerpt with recommendations about Kap Frida and cafés in Stralau"
-                  loading="lazy"
-                >
-
-              </div>
+              <img
+                src="/images/newsletter-preview-4.jpg"
+                alt="Newsletter excerpt with recommendations about Kap Frida and cafés in Stralau"
+                loading="lazy"
+              >
 
             </div>
 
           </article>
 
 
-          <!-- 5. HUMOUR AND PERSONALITY -->
+          <!-- 05. HUMOUR AND PERSONALITY -->
 
-          <article class="preview-item preview-item--meme">
+          <article class="preview-card preview-card--meme">
 
-            <div class="preview-copy">
+            <div class="preview-header">
 
-              <h3>A little humour, too.</h3>
+              <span class="preview-number" aria-hidden="true">
+                05
+              </span>
 
-              <p>
-                Because parenting in Berlin
-                has its funny moments.
-              </p>
+              <div class="preview-copy">
+
+                <h3>A little humour, too</h3>
+
+                <p>
+                  Because parenting in Berlin
+                  has its funny moments.
+                </p>
+
+              </div>
 
             </div>
 
-            <div class="preview-card">
+            <div class="preview-media preview-media--meme">
 
-              <div class="preview-media preview-media--meme">
-
-                <img
-                  src="/images/newsletter-preview-5.jpg"
-                  alt="Complete One last thing newsletter excerpt about La Maison, followed by a humorous parenting meme"
-                  loading="lazy"
-                >
-
-              </div>
+              <img
+                src="/images/newsletter-preview-5.jpg"
+                alt="Complete One last thing newsletter excerpt about La Maison, followed by a humorous parenting meme"
+                loading="lazy"
+              >
 
             </div>
 
