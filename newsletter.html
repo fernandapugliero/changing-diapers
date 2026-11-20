@@ -378,11 +378,11 @@
 
 
     /* ========================================
-       PREVIOUS EDITIONS
+       NEWSLETTER PREVIEWS — INDIVIDUAL FRAMING
        ======================================== */
 
     .archive-section {
-      max-width: 860px;
+      max-width: 1100px;
       margin: 5rem auto 0;
     }
 
@@ -404,102 +404,102 @@
       line-height: 1.6;
     }
 
-    .issue-grid {
+    .preview-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
+      margin: 1.2rem auto 2rem;
     }
 
-    .issue-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
+    .preview-card {
+      min-width: 0;
       background: #fff;
-      border: 1px solid #eee;
+      border: 1px solid #ececec;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
 
-    .issue-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.09);
-    }
-
-    .issue-cover {
+    .preview-media {
       width: 100%;
-      aspect-ratio: 4 / 3;
-      position: relative;
-      background: #f4f4f4;
+      aspect-ratio: 4 / 5;
+      background: #f7f7f7;
       overflow: hidden;
       border-bottom: 1px solid #eee;
     }
 
-    .issue-cover img {
+    .preview-media img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: top center;
     }
 
-    .issue-number {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      display: inline-block;
-      padding: 0.4rem 0.55rem;
-      background: #fff;
-      border-radius: 3px;
-      color: #222;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      line-height: 1.2;
-    }
-
-    .issue-details {
+    /* Smaller perceived typography: show more of this excerpt. */
+    .preview-media--opinion {
       padding: 1.1rem;
+      box-sizing: border-box;
+      background: #fff;
     }
 
-    .issue-month {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #777;
+    .preview-media--opinion img {
+      object-fit: contain;
+      object-position: center top;
     }
 
-    .issue-details h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      line-height: 1.45;
-      color: #333;
-      margin: 0 0 0.5rem;
+    /* Meme is a full excerpt, not a crop: image and text remain visible. */
+    .preview-media--meme {
+      aspect-ratio: auto;
+      border-bottom: 1px solid #eee;
+      background: #fff;
     }
 
-    .issue-details p {
+    .preview-media--meme img {
+      height: auto;
+      object-fit: contain;
+    }
+
+    .preview-caption {
       font-size: 0.85rem;
-      line-height: 1.6;
       color: #666;
-      margin: 0 0 1rem;
+      line-height: 1.45;
+      text-align: center;
+      margin: 0;
+      padding: 0.85rem 0.85rem 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    .issue-link {
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: 600;
+    .preview-caption strong {
       color: #333;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      font-weight: 600;
     }
 
     @media (min-width: 768px) {
-      .issue-grid {
+      .preview-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .preview-media {
+        aspect-ratio: 3 / 4;
+      }
+
+      .preview-media--meme {
+        aspect-ratio: auto;
+      }
+
+      .preview-card--meme {
+        grid-column: span 2;
+      }
+
+      .preview-card--meme .preview-media {
+        max-width: 470px;
+        margin: 0 auto;
+        border-bottom: 0;
       }
     }
 
@@ -620,155 +620,63 @@
       </section>
 
 
-      <!-- PREVIOUS EDITIONS -->
+      <!-- NEWSLETTER PREVIEWS -->
 
-      <section class="archive-section">
-
-        <h2>Previous editions</h2>
-
+      <section class="archive-section" aria-labelledby="newsletter-preview-title">
+        <h2 id="newsletter-preview-title">What you'll receive</h2>
         <p class="archive-intro">
-          Curious what lands in your inbox?
-          Here's a taste of what you'll receive every month.
+          A little peek inside: real finds, useful tips, honest opinions
+          and a bit of humour about parenting in Berlin.
         </p>
 
-        <div class="issue-grid">
+        <div class="preview-grid">
 
-
-          <!-- OCTOBER 2026 -->
-
-          <a
-            class="issue-card"
-            href="https://fixmydiaper.beehiiv.com/p/3-october-2026"
-            aria-label="Read the October 2026 newsletter"
-          >
-
-            <div class="issue-cover">
-
-              <img
-                src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/866f8507-76fe-4475-8b5e-dffe182aa215/playground_poland.jpg?t=1793481154"
-                alt="Playground discovered during a trip to Poland"
-                loading="lazy"
-              >
-
-              <span class="issue-number">#03</span>
-
+          <article class="preview-card">
+            <div class="preview-media">
+              <img src="/images/newsletter-preview-1.jpg"
+                   alt="Newsletter excerpt with Berlin family events and classes"
+                   loading="lazy">
             </div>
+            <p class="preview-caption"><strong>What's happening.</strong> Classes, events and seasonal ideas for your family calendar.</p>
+          </article>
 
-            <div class="issue-details">
-
-              <span class="issue-month">
-                October 2026
-              </span>
-
-              <h3>
-                Swimming classes, cafés and life beyond Berlin
-              </h3>
-
-              <p>
-                An honest take on baby swimming, the return of
-                Kap Frida, playground discoveries in Poland
-                and a rainy-day lesson from ANOHA.
-              </p>
-
-              <span class="issue-link">
-                Read this edition →
-              </span>
-
+          <article class="preview-card">
+            <div class="preview-media">
+              <img src="/images/newsletter-preview-2.jpg"
+                   alt="Newsletter photo and review of Britzer Garten"
+                   loading="lazy">
             </div>
+            <p class="preview-caption"><strong>Places we've actually tried.</strong> Parks, cafés and outings worth discovering with kids.</p>
+          </article>
 
-          </a>
-
-
-          <!-- SEPTEMBER 2026 -->
-
-          <a
-            class="issue-card"
-            href="https://fixmydiaper.beehiiv.com/p/september-2026"
-            aria-label="Read the September 2026 newsletter"
-          >
-
-            <div class="issue-cover">
-
-              <img
-                src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/0ddb7e89-04c6-442c-8cb1-5c3dd71cf91f/britzergarten.jpg?t=1790375790"
-                alt="Britzer Garten in Berlin"
-                loading="lazy"
-              >
-
-              <span class="issue-number">#02</span>
-
+          <article class="preview-card">
+            <div class="preview-media preview-media--opinion">
+              <img src="/images/newsletter-preview-3.jpg"
+                   alt="Newsletter excerpt discussing parents and restaurants in Berlin"
+                   loading="lazy">
             </div>
+            <p class="preview-caption"><strong>Beyond recommendations.</strong> Opinions, surveys and questions about family life in Berlin.</p>
+          </article>
 
-            <div class="issue-details">
-
-              <span class="issue-month">
-                September 2026
-              </span>
-
-              <h3>
-                Why eating out with kids should be easier
-              </h3>
-
-              <p>
-                What Berlin parents say about restaurants,
-                a visit to Britzer Garten, family-friendly
-                biergartens and local family policies.
-              </p>
-
-              <span class="issue-link">
-                Read this edition →
-              </span>
-
+          <article class="preview-card">
+            <div class="preview-media">
+              <img src="/images/newsletter-preview-4.jpg"
+                   alt="Newsletter excerpt with tips about Kap Frida and cafés in Stralau"
+                   loading="lazy">
             </div>
+            <p class="preview-caption"><strong>Tips from other parents.</strong> Local discoveries and practical details you might miss.</p>
+          </article>
 
-          </a>
-
-
-          <!-- AUGUST 2026 -->
-
-          <a
-            class="issue-card"
-            href="https://fixmydiaper.beehiiv.com/p/august-2026"
-            aria-label="Read the August 2026 newsletter"
-          >
-
-            <div class="issue-cover">
-
-              <img
-                src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/9ec8380f-ce43-4619-ba2b-9e2f12813e85/9ze6gu.JPG?t=1787844440"
-                alt="Photo from the first Fix My Diaper newsletter"
-                loading="lazy"
-              >
-
-              <span class="issue-number">#01</span>
-
+          <article class="preview-card preview-card--meme">
+            <div class="preview-media preview-media--meme">
+              <img src="/images/newsletter-preview-5.jpg"
+                   alt="Complete One last thing excerpt about La Maison's changing table, followed by a humorous parenting meme"
+                   loading="lazy">
             </div>
-
-            <div class="issue-details">
-
-              <span class="issue-month">
-                August 2026
-              </span>
-
-              <h3>
-                A summer of small Berlin discoveries
-              </h3>
-
-              <p>
-                Vito Café, Fair Play im Park, family-friendly
-                places and a closer look at Kita and Elterngeld.
-              </p>
-
-              <span class="issue-link">
-                Read this edition →
-              </span>
-
-            </div>
-
-          </a>
+            <p class="preview-caption"><strong>A little humour, too.</strong> Because parenting in Berlin has its funny moments.</p>
+          </article>
 
         </div>
-
       </section>
 
     </main>
