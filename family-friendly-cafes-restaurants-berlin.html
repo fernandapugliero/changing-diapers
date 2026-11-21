@@ -315,7 +315,9 @@
       }
     }
 
-    /* ===== AIRTABLE WAITLIST ===== */
+    /* ========================================
+       BEEHIIV EBOOK SIGNUP
+       ======================================== */
 
     .waitlist-wrap {
       max-width: 720px;
@@ -323,21 +325,32 @@
       text-align: center;
     }
 
-    .airtable-embed {
+    .ebook-form-card {
       width: 100%;
-      max-width: 100%;
+      max-width: 440px;
       margin: 0 auto;
-      text-align: center;
+      padding: 1rem;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      box-sizing: border-box;
     }
 
-    .airtable-embed iframe {
-      display: block;
+    .ebook-beehiiv-embed {
       width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      border: 0;
-      border-radius: 8px;
-      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ebook-beehiiv-embed iframe {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      border: 0 !important;
+      border-radius: 8px !important;
     }
 
     .waitlist-note {
@@ -837,7 +850,9 @@
     </section>
 
 
-   <!-- EBOOK WAITLIST -->
+    <!-- ========================================
+         EBOOK WAITLIST + NEWSLETTER
+         ======================================== -->
 
     <section class="home-section"
              aria-labelledby="ebook-heading">
@@ -847,38 +862,31 @@
       </h2>
 
       <p class="section-subtitle">
-        More family-friendly spots, personal reviews and
-        practical tips. Join the waitlist for early access
-        and a special pre-launch price.
+        Get early access to our upcoming guide, a special
+        pre-launch offer and the free Fix My Diaper newsletter —
+        with family-friendly finds, honest reviews and
+        practical tips from Berlin.
       </p>
 
       <div class="waitlist-wrap">
 
-        <div class="airtable-embed">
+        <div class="ebook-form-card">
 
-          <!--
-            AIRTABLE FORM EMBED GOES HERE.
+          <div class="ebook-beehiiv-embed">
 
-            Paste the real Airtable embed code here.
+            <script
+              async
+              src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+              data-beehiiv-form="4678ec10-dcac-4b40-9545-881dc393fb1b">
+            </script>
 
-            Suggested fields:
-            - Email address (required)
-            - Consent checkbox (required)
-
-            Consent text:
-            "I agree to receive emails from Fix My Diaper
-            about the Berlin family guide, including early
-            access and a special pre-launch offer.
-            I can unsubscribe at any time."
-
-            Configure confirmation, privacy policy
-            and unsubscribe handling before collecting emails.
-          -->
+          </div>
 
         </div>
 
         <p class="waitlist-note">
-          Ebook launch updates only. No spam.
+          Newsletter + ebook launch updates. No spam.
+          Unsubscribe anytime.
         </p>
 
       </div>
@@ -927,6 +935,8 @@
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
     <a href="about">About</a> |
     <a href="newsletter">Newsletter</a> |
@@ -940,7 +950,8 @@
 
     Created by
     <a href="https://fernandapugliero.com"
-       target="_blank" rel="noopener noreferrer">
+       target="_blank"
+       rel="noopener noreferrer">
       Fernanda Pugliero
     </a> & son
   </footer>
